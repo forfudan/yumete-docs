@@ -1,0 +1,33 @@
+{
+  "name": "yumete-docs",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.3.0",
+  "description": "Documentation site for yumete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forFudan/yumete-docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "preview": "vitepress preview src"
+  },
+  "devDependencies": {
+    "@types/markdown-it-footnote": "^3.0.4",
+    "@types/node": "^20.19.30",
+    "autoprefixer": "^10.4.23",
+    "daisyui": "^4.12.24",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mathjax3": "^4.3.2",
+    "medium-zoom": "^1.1.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.27"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.11.1"
+  }
+}

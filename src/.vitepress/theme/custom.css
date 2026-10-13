@@ -1,0 +1,45 @@
+/*
+ * A CJK paragraph wants more leading than a Latin one, and this site will hold
+ * both. Everything else is VitePress's default theme.
+ */
+:root {
+  --vp-c-brand-1: #8a6a3a;
+  --vp-c-brand-2: #a9814a;
+  --vp-c-brand-3: #c49a5e;
+}
+
+.dark {
+  --vp-c-brand-1: #c9a467;
+  --vp-c-brand-2: #b8945c;
+  --vp-c-brand-3: #a07f4d;
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.8;
+}
+
+/* A keyboard key: write `<kbd>gw</kbd>` in Markdown, or let KeyTable draw it. */
+kbd {
+  display: inline-block;
+  padding: 0.1em 0.45em;
+  border: 1px solid var(--vp-c-divider);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--vp-c-bg-soft);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.85em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* A page still to be written says so, once, at the top. */
+.vp-doc .unwritten {
+  margin: 0 0 2rem;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+}
