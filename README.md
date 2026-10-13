@@ -57,9 +57,12 @@ sidebar and nav under `/zht/` or `/zhs/`. Nothing else changes.
 `.github/workflows/deploy.yml` runs on every push to `main` and publishes to
 GitHub Pages. Nothing to press.
 
-The site is served from `https://forfudan.github.io/yumete-docs/`, which is why
-the build sets `GITHUB_PAGES=true` — that is what puts `base` at
-`/yumete-docs/` instead of `/`.
+The site is served from **<https://zhuyuhao.com/yumete-docs/>** — this account's
+GitHub Pages already answers on `zhuyuhao.com` (the `forfudan.github.io` repo),
+so every other repository's Pages site hangs off that domain rather than off
+`forfudan.github.io`. Either way it sits under the repository name, which is why
+the build sets `GITHUB_PAGES=true`: that is what puts `base` at `/yumete-docs/`
+instead of `/`.
 
 ### Moving it to a domain of its own
 
@@ -74,7 +77,7 @@ Two steps, and the second is DNS:
 - `echo docs.example.com > src/public/CNAME` and commit it. Anything in
   `src/public/` is copied to the root of the build, so GitHub Pages reads it.
 - At the DNS provider, for a subdomain: a `CNAME` record from `docs` to
-  `forfudan.github.io`. For an apex domain: four `A` records to `185.199.108.153`,
+  `forfudan.github.io` (the GitHub target, not `zhuyuhao.com`). For an apex domain: four `A` records to `185.199.108.153`,
   `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
 - In the repository's **Settings → Pages**, put the domain in *Custom domain*
   and tick *Enforce HTTPS* once the certificate is issued.
