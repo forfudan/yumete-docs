@@ -2,15 +2,9 @@
 
 <div class="unwritten">This page has not been written yet.</div>
 
-The table below is the `KeyTable` component: it filters as you type, and the
-`helix` / `vim` buttons switch which keymap it answers in. Its rows come from
-`src/public/data/keymap.json`, which is four sample rows at the moment —
-replace that file and this page follows.
-
-<KeyTable />
-
-One group at a time is `<KeyTable group="Movement" />`, and a table built from
-some other file is `<KeyTable src="/data/other.json" />`.
+Each table below filters as you type, and the `helix` / `vim` buttons switch
+which keymap it answers in; the choice is remembered across the page. Only the
+match group is written so far.
 
 ## Match: `m`
 
@@ -19,7 +13,7 @@ other bracket, select inside or around something, and add, delete or replace a
 pair. Each step shows a menu of what it takes, so you can press `m` and read on.
 Under the vim keymap the same things are vim-surround's keys.
 
-<KeyTable src="/data/match.json" />
+<KeyTable group="Match" />
 
 ### What `mi` and `ma` take
 

@@ -1,22 +1,32 @@
 [
   {
-    "group": "Movement",
-    "keys": { "helix": "w", "vim": "w" },
-    "desc": { "en": "SAMPLE ROW — replace this file. The next word." }
+    "group": "Match",
+    "keys": { "helix": "mm", "vim": "%" },
+    "desc": { "en": "Go to the other half of the bracket pair under the cursor." }
   },
   {
-    "group": "Movement",
-    "keys": { "helix": "ge", "vim": "G" },
-    "desc": { "en": "SAMPLE ROW — the last line. helix has no bare G." }
+    "group": "Match",
+    "keys": { "helix": "mi", "vim": "vi" },
+    "desc": { "en": "Select inside an object or a pair: a word, a sentence, the nearest pair, brackets, quotes. The next key says which." }
   },
   {
-    "group": "Movement",
-    "keys": { "vim": "0" },
-    "desc": { "en": "SAMPLE ROW — a row with no helix key is hidden under helix." }
+    "group": "Match",
+    "keys": { "helix": "ma", "vim": "va" },
+    "desc": { "en": "Select around it: the pair or the marks come along." }
   },
   {
-    "group": "Vertical layout",
-    "keys": { "helix": "h", "vim": "h" },
-    "desc": { "en": "SAMPLE ROW — on a vertical page, the next column." }
+    "group": "Match",
+    "keys": { "helix": "ms", "vim": "ys" },
+    "desc": { "en": "Surround the selection with a pair. Under vim, after a motion: ysiw( wraps the word." }
+  },
+  {
+    "group": "Match",
+    "keys": { "helix": "md", "vim": "ds" },
+    "desc": { "en": "Delete the pair around the cursor." }
+  },
+  {
+    "group": "Match",
+    "keys": { "helix": "mr", "vim": "cs" },
+    "desc": { "en": "Replace the pair around the cursor: first the one to replace, then the new one." }
   }
 ]
