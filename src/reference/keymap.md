@@ -46,8 +46,10 @@ Markdown marks are `k`, for mar*k*up. On `a **bc** d` with the cursor on `b`:
 whole lines: the lines the change bar marks against git's `HEAD`. In a file
 git does not track it says so.
 
-In code, four more: on `fn add(a: i32, b: i32) -> i32 { a + b }`, with the
-cursor on the parameter `b`:
+In code, four more — in a code file, and in a Markdown file inside the
+```` ``` ```` fence the cursor is in, read in that fence's language. On
+`fn add(a: i32, b: i32) -> i32 { a + b }`, with the cursor on the parameter
+`b`:
 
 | Keys | Object | Selects |
 | --- | --- | --- |
