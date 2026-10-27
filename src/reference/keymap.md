@@ -42,6 +42,10 @@ Markdown marks are `k`, for mar*k*up. On `a **bc** d` with the cursor on `b`:
 `k` also takes `*italic*`, `~~struck~~`, `==marked==`, `` `code` ``, links and
 `[[wiki links]]`.
 
+`mi g` (or `ma g`, the same) selects the change the cursor's line is in, as
+whole lines: the lines the change bar marks against git's `HEAD`. In a file
+git does not track it says so.
+
 In code, four more: on `fn add(a: i32, b: i32) -> i32 { a + b }`, with the
 cursor on the parameter `b`:
 
