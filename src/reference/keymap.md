@@ -25,12 +25,23 @@ examples use one sentence, with the cursor on 期:
 | Keys | Object | Selects |
 | --- | --- | --- |
 | `mi w` | word | 星期三 |
+| `mi W` | everything up to a space (helix's WORD) | 他说：「今天（星期三）要下雨，记得带伞。」然后就走了。 |
 | `mi s` | sentence | 他说：「今天（星期三）要下雨，记得带伞。」 |
+| `mi u` | clause: up to any punctuation mark | 星期三 |
 | `mi p` | paragraph | the whole paragraph |
 | `mi m` | the nearest pair, whichever kind | 星期三 |
 | `ma m` | …with the pair | （星期三） |
 | `mi (` | inside the parentheses (`(` covers `（）` too) | 星期三 |
 | `mi 「` | inside the Chinese brackets | 今天（星期三）要下雨，记得带伞。 |
+
+`mi u` stops at every punctuation mark, brackets and quotes too; with the
+cursor on 雨 it selects 要下雨. A mark inside a word does not count: on
+`Well, it's 3.14 today; don't go.` with the cursor on `today` it selects
+`it's 3.14 today`. `W` is the one for URLs, paths and version numbers, which
+have no spaces inside.
+
+In a table, `mi l` (cel*l*) selects the cell the cursor is in, so `mi l c`
+replaces it.
 
 Markdown marks are `k`, for mar*k*up. On `a **bc** d` with the cursor on `b`:
 
@@ -55,7 +66,7 @@ In code, four more — in a code file, and in a Markdown file inside the
 | --- | --- | --- |
 | `mi f` | function | the whole `fn add(…) { a + b }` |
 | `mi a` | parameter | `b: i32` |
-| `mi c` | comment (in a table: this cell) | the comment the cursor is in |
+| `mi c` | comment | the comment the cursor is in |
 | `mi t` | type definition | the `struct` or `enum` the cursor is in |
 
 Three more, for tests, data and markup:
