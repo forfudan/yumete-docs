@@ -57,6 +57,11 @@ sidebar and nav under `/zht/` or `/zhs/`. Nothing else changes.
 `.github/workflows/deploy.yml` runs on every push to `main` and publishes to
 GitHub Pages. Nothing to press.
 
+Cloudflare builds it too (`pnpm run build`, then `npx wrangler deploy`).
+`wrangler.jsonc` tells wrangler the pages are in `dist/`: left to guess, it
+looks in `docs/.vitepress/dist`, finds nothing, and the deploy fails after a
+build that succeeded. There `GITHUB_PAGES` is unset, so `base` is `/`.
+
 The site is served from **<https://zhuyuhao.com/yumete-docs/>** — this account's
 GitHub Pages already answers on `zhuyuhao.com` (the `forfudan.github.io` repo),
 so every other repository's Pages site hangs off that domain rather than off
