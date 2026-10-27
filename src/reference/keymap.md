@@ -58,6 +58,14 @@ In code, four more — in a code file, and in a Markdown file inside the
 | `mi c` | comment (in a table: this cell) | the comment the cursor is in |
 | `mi t` | type definition | the `struct` or `enum` the cursor is in |
 
+Three more, for tests, data and markup:
+
+| Keys | Object | Example |
+| --- | --- | --- |
+| `mi T` | test function | in `#[test] fn adds_two() { … }`: the whole `fn adds_two() { … }`. Also `def test_…` (Python), `func Test…` (Go), `it(…)` / `test(…)` / `describe(…)` (JavaScript), `@Test` (Java) |
+| `mi e` | key and value | in `{"name": "x", "version": 13}` on `13`: `"version": 13`; in TOML `remember = false`. Also YAML, Rust and Go struct fields, Python and JavaScript dictionary entries |
+| `mi x` | HTML element | in `<p>今天<b>下雨</b></p>` on 雨: `<b>下雨</b>` |
+
 Any character that is not a letter or a digit works as a pair: `mi $` on
 `$xy$` selects `xy`.
 
