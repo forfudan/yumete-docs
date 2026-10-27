@@ -77,6 +77,10 @@ and `md` takes `k` for Markdown marks.
 In every example the cursor stands inside the pair. Under the vim keymap,
 `ds(` is `md (`, `cs([` is `mr ( [`, and `ysiw(` surrounds the word.
 
+`ms` then `Enter` puts the selection on lines of its own: on `foo bar` with
+`foo` selected, it gives `foo` on a line between two line breaks, and the
+selection takes in both.
+
 ### `mr` shows the pair first
 
 After `mr` and the pair to replace, the two characters it found are selected,
