@@ -62,7 +62,9 @@ Cloudflare builds it too (`pnpm run build`, then `npx wrangler deploy`).
 looks in `docs/.vitepress/dist`, finds nothing, and the deploy fails after a
 build that succeeded. There `GITHUB_PAGES` is unset, so `base` is `/`.
 
-The site is served from **<https://zhuyuhao.com/yumete-docs/>** — this account's
+The site is served from **<https://yumete.shurufa.app/>**, which Cloudflare
+builds and serves at the root. GitHub Pages serves the same pages at
+<https://zhuyuhao.com/yumete-docs/> — this account's
 GitHub Pages already answers on `zhuyuhao.com` (the `forfudan.github.io` repo),
 so every other repository's Pages site hangs off that domain rather than off
 `forfudan.github.io`. Either way it sits under the repository name, which is why
