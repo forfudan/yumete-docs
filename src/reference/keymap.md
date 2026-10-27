@@ -77,6 +77,26 @@ and `md` takes `k` for Markdown marks.
 In every example the cursor stands inside the pair. Under the vim keymap,
 `ds(` is `md (`, `cs([` is `mr ( [`, and `ysiw(` surrounds the word.
 
+### Counts
+
+A count is pairs out. On `f(a(b)c)` with the cursor on `b`:
+
+| Keys | Result |
+| --- | --- |
+| `2mi(` then `d` | `f()` |
+| `2md(` | `fa(b)c` |
+| `2mr([` | `f[a(b)c]` |
+| `3md(` | unchanged: there is no third pair |
+
+With `m` the count-th pair of any kind is taken: on `f[a(b)c]`, `2mim` then
+`d` gives `f[]`.
+
+### Outside a pair
+
+With the cursor outside any pair, `mi(` and `ma(` take nothing under the
+helix keymap, as in helix. Under the vim keymap they reach ahead to the next
+pair, as vim does: at the start of `ab (cd) ef`, `da(` gives `ab  ef`.
+
 ### Several selections
 
 Each selection takes its own pair, and the whole change is one undo step. With
