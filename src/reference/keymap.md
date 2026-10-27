@@ -76,3 +76,18 @@ and `md` takes `k` for Markdown marks.
 
 In every example the cursor stands inside the pair. Under the vim keymap,
 `ds(` is `md (`, `cs([` is `mr ( [`, and `ysiw(` surrounds the word.
+
+### Several selections
+
+Each selection takes its own pair, and the whole change is one undo step. With
+a cursor on each line's `b`:
+
+| Text | Keys | Result |
+| --- | --- | --- |
+| `a b c` / `a b c` | `ms (` | `a (b) c` / `a (b) c` |
+| `a (b) c` / `a (b) c` | `md (` | `a b c` / `a b c` |
+| `a (b) c` / `a (b) c` | `mr ( [` | `a [b] c` / `a [b] c` |
+
+`md` and `mr` change nothing when a cursor has no pair around it, or when two
+cursors are inside the same pair: taking it off once per cursor would take off
+the pair outside it as well.
