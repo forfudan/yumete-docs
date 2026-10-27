@@ -1,0 +1,17 @@
+// Cloudflare Workers static-assets deploy for the site.
+//
+// Wrangler guesses the output folder when there is no config, and it guessed
+// `docs/.vitepress/dist` — the VitePress default layout, not this one. This
+// site keeps its pages in `src/` and `config.mts` sets `outDir: "../dist"`,
+// so the build lands in `dist/` at the repository root.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "yumete-docs",
+  "compatibility_date": "2026-10-23",
+  "assets": {
+    "directory": "./dist",
+    // `cleanUrls` is on, so /reference/keymap has to find keymap.html.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
