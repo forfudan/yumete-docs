@@ -7,7 +7,7 @@
   {
     "group": "Match",
     "keys": { "helix": "mi", "vim": "vi" },
-    "desc": { "en": "Select inside an object or a pair: a word, a sentence, the nearest pair, brackets, quotes. The next key says which." }
+    "desc": { "en": "Select inside an object or a pair: a word, a sentence, a clause, the nearest pair, brackets, quotes. The next key says which." }
   },
   {
     "group": "Match",
