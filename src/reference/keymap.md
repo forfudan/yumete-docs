@@ -77,6 +77,13 @@ and `md` takes `k` for Markdown marks.
 In every example the cursor stands inside the pair. Under the vim keymap,
 `ds(` is `md (`, `cs([` is `mr ( [`, and `ysiw(` surrounds the word.
 
+### `mr` shows the pair first
+
+After `mr` and the pair to replace, the two characters it found are selected,
+so you can see which pair the next key will change. That key, or `Esc` to
+change nothing, gives your selection back. On `a (bc) d` with the cursor on
+`b`, `mr(` selects the `(` and the `)`; `[` then makes `a [bc] d`.
+
 ### Counts
 
 A count is pairs out. On `f(a(b)c)` with the cursor on `b`:
