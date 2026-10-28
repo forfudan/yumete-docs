@@ -43,6 +43,25 @@ have no spaces inside.
 In a table, `mi l` (cel*l*) selects the cell the cursor is in, so `mi l c`
 replaces it.
 
+#### Which pairs each key covers
+
+One ASCII key covers a whole family, by shape, so a Chinese bracket is never far
+from the key your hand goes to. Either half works, and the full-width, half-width
+and vertical forms come with it (the menu shows them as `…`):
+
+| Key | Covers |
+| --- | --- |
+| `(` | `()` `（）` `︵︶` |
+| `[` | `[]` `［］` `﹇﹈` `「」` `｢｣` `﹁﹂` `【】` `︻︼` `〔〕` `︹︺` |
+| `{` | `{}` `｛｝` `︷︸` `『』` `﹃﹄` `〖〗` `︗︘` |
+| `<` | `<>` `«»` `〈〉` `︿﹀` `《》` `︽︾` |
+| `"` | `""` `＂＂` `“”` `〝〞` |
+| `'` | `''` `＇＇` `‘’` |
+| `` ` `` | `` `` `` `｀｀` |
+
+When a family is nested in itself, the innermost pair is taken. Any other
+character pairs with itself.
+
 Markdown marks are `k`, for mar*k*up. On `a **bc** d` with the cursor on `b`:
 
 | Keys | Selects |
