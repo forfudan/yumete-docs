@@ -1,0 +1,61 @@
+/* Written by scripts/palette.mjs from src/.vitepress/theme/ink.json. Do not edit. */
+.light {
+  --bg: #F1EBD9;
+  --fg: #2A2923;
+  --sidebar-bg: #e7e1d0;
+  --sidebar-fg: #2A2923;
+  --sidebar-non-existant: #979487;
+  --sidebar-active: #6B5426;
+  --sidebar-spacer: #d1ccbc;
+  --scrollbar: #b5b1a2;
+  --icons: #848075;
+  --icons-hover: #2A2923;
+  --links: #6B5426;
+  --inline-code-color: #B3241B;
+  --theme-popup-bg: #e9e3d2;
+  --theme-popup-border: #c1bcad;
+  --theme-hover: #ddd8c7;
+  --quote-bg: #e7e1d0;
+  --quote-border: #d1ccbc;
+  --table-border-color: #d1ccbc;
+  --table-header-bg: #e1dbca;
+  --table-alternate-bg: #ebe5d4;
+  --searchbar-border-color: #c1bcad;
+  --searchbar-bg: #F1EBD9;
+  --searchbar-fg: #2A2923;
+  --searchbar-shadow-color: #d1ccbc;
+  --searchresults-header-fg: #7a776c;
+  --searchresults-border-color: #d1ccbc;
+  --searchresults-li-bg: #e7e1d0;
+  --search-mark-bg: #c9c4b5;
+}
+.coal {
+  --bg: #181A1D;
+  --fg: #D2CEC4;
+  --sidebar-bg: #212325;
+  --sidebar-fg: #D2CEC4;
+  --sidebar-non-existant: #6c6b68;
+  --sidebar-active: #D8C99A;
+  --sidebar-spacer: #363738;
+  --scrollbar: #50504f;
+  --icons: #7e7d79;
+  --icons-hover: #D2CEC4;
+  --links: #D8C99A;
+  --inline-code-color: #EC5D4B;
+  --theme-popup-bg: #1f2124;
+  --theme-popup-border: #454545;
+  --theme-hover: #2b2c2e;
+  --quote-bg: #212325;
+  --quote-border: #363738;
+  --table-border-color: #363738;
+  --table-header-bg: #27282a;
+  --table-alternate-bg: #1e1f22;
+  --searchbar-border-color: #454545;
+  --searchbar-bg: #181A1D;
+  --searchbar-fg: #D2CEC4;
+  --searchbar-shadow-color: #363738;
+  --searchresults-header-fg: #888681;
+  --searchresults-border-color: #363738;
+  --searchresults-li-bg: #212325;
+  --search-mark-bg: #3d3e3e;
+}

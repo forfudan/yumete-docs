@@ -1,0 +1,5 @@
+{
+  "_source": "yumete's factory theme, ink (墨香): crates/yumete-config/src/lib.rs, impl Default for ThemeConfig",
+  "light": { "ink": "#2A2923", "paper": "#F1EBD9", "gold": "#6B5426", "mark": "#B3241B", "green": "#18794E", "azure": "#1F5C8A" },
+  "dark": { "ink": "#D2CEC4", "paper": "#181A1D", "gold": "#D8C99A", "mark": "#EC5D4B", "green": "#8FC9A0", "azure": "#6FB4D9" }
+}

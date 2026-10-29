@@ -2,6 +2,7 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 import mdFootnote from "markdown-it-footnote";
 import path from "node:path";
 import tailwind from "tailwindcss";
+import PAGES from "./pages.json";
 import autoprefixer from "autoprefixer";
 
 // Where the site is served from.
@@ -24,39 +25,10 @@ const LIVE = { zht: false, zhs: false };
 // language: a translation is the same tree of pages under its own prefix.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const GUIDE = [
-  { text: "Installation", link: "/guide/installation" },
-  { text: "Getting started", link: "/guide/getting-started" },
-  { text: "Configuration", link: "/guide/configuration" },
-  { text: "Themes", link: "/guide/themes" },
-  { text: "Language servers", link: "/guide/languages" },
-];
-
-const REFERENCE = [
-  { text: "Keymap", link: "/reference/keymap" },
-  { text: "Commands", link: "/reference/commands" },
-  { text: "Settings", link: "/reference/settings" },
-];
-
-const WRITING = [
-  { text: "Vertical layout", link: "/writing/vertical" },
-  { text: "CJK motions", link: "/writing/cjk" },
-  { text: "The input method", link: "/writing/ime" },
-  { text: "Tables", link: "/writing/tables" },
-  { text: "Ruby and annotations", link: "/writing/ruby" },
-];
-
-const FROM = [
-  { text: "Coming from helix", link: "/from/helix" },
-  { text: "Coming from vim", link: "/from/vim" },
-];
-
-const ALL = [
-  { text: "Guide", items: GUIDE },
-  { text: "Reference", items: REFERENCE },
-  { text: "Writing CJK", items: WRITING },
-  { text: "Coming from", items: FROM },
-];
+// The list lives in `pages.json` so the book view (`scripts/book.mjs`) reads
+// the same one: the two renderings can never disagree about which pages exist
+// or in what order.
+const ALL: { text: string; items: { text: string; link: string }[] }[] = PAGES;
 
 /** Every page this site has, as a flat list of links under `prefix`. */
 function pagesUnder(prefix: string): string[] {
@@ -75,7 +47,7 @@ function nav(prefix: string): DefaultTheme.NavItem[] {
   return [
     { text: "Guide", link: prefix + "/guide/installation", activeMatch: "/guide/" },
     { text: "Reference", link: prefix + "/reference/keymap", activeMatch: "/reference/" },
-    { text: "Writing CJK", link: prefix + "/writing/vertical", activeMatch: "/writing/" },
+    { text: "Writing", link: prefix + "/writing/page", activeMatch: "/writing/" },
     { text: "FAQ", link: prefix + "/faq" },
   ];
 }
@@ -127,6 +99,9 @@ export default defineConfig({
   lang: "en",
   base: BASE,
   outDir: "../dist",
+  // Generated tables (`ye --docgen`) are included into pages, not pages of
+  // their own.
+  srcExclude: ["generated/**"],
   cleanUrls: true,
   lastUpdated: true,
   locales,

@@ -1,0 +1,26 @@
+# The book view of the site: the same pages, rendered by mdBook under /book/.
+#
+# `scripts/book.mjs` stages the pages into `.book/src` (front matter off,
+# includes inlined, `SUMMARY.md` written from `src/.vitepress/pages.json`) and
+# then runs `mdbook build`, so this file never lists a page itself.
+[book]
+title = "yumete"
+authors = ["ZHU Yuhao"]
+language = "en"
+src = ".book/src"
+
+[build]
+build-dir = "dist/book"
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "coal"
+additional-css = ["book-theme/ink.css", "book-theme/book.css"]
+additional-js = ["book-theme/twin.js"]
+git-repository-url = "https://github.com/forFudan/yumete-docs"
+edit-url-template = "https://github.com/forFudan/yumete-docs/edit/main/src/{path}"
+site-url = "/book/"
+
+[output.html.search]
+enable = true

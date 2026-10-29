@@ -11,8 +11,10 @@
   },
   "scripts": {
     "dev": "vitepress dev src",
-    "build": "vitepress build src",
-    "preview": "vitepress preview src"
+    "build": "node scripts/palette.mjs && vitepress build src && node scripts/book.mjs",
+    "preview": "vitepress preview src",
+    "book": "node scripts/book.mjs",
+    "palette": "node scripts/palette.mjs"
   },
   "devDependencies": {
     "@types/markdown-it-footnote": "^3.0.4",
