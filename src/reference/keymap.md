@@ -1,168 +1,24 @@
 # Keymap
 
-<div class="unwritten">This page has not been written yet.</div>
+These are the keys of the default keymap, which is helix's. The tables are
+written by the editor itself (`ye --docgen`) from the same lists its key menus
+are drawn from, so a key listed here is a key the editor has.
 
-Each table below filters as you type, and the `helix` / `vim` buttons switch
-which keymap it answers in; the choice is remembered across the page. Only the
-match group is written so far.
+`C-w` is Ctrl and `w`. `Space f` is the space bar, then `f`. Two keys written
+together, such as `gg`, are pressed one after the other. A key that starts a
+group, such as `g`, `m` or `Space`, opens a menu of what can follow, so you
+need not learn these tables by heart: press the first key and read.
 
-## Match: `m`
+The first two tables are the keys a writer uses in the first hour. They are
+the ones `:help` lists first. The rest are the groups, one table per menu.
 
-`m` is the group for pairs and the text between them, as in helix: go to the
-other bracket, select inside or around something, and add, delete or replace a
-pair. Each step shows a menu of what it takes, so you can press `m` and read on.
-Under the vim keymap the same things are vim-surround's keys.
+Under the vim keymap (`:keymap vim`), vim's keys sit on top of these: `x`
+deletes a character, `dd` a line, `%` goes to the matching bracket. Every key
+not taken that way still does what it does here. See
+[Coming from vim](../from/vim.md) for the full list of differences, and
+[Match mode](match.md) for what the `m` group takes.
 
-<KeyTable group="Match" />
+To change a key, see [Key remapping](../guide/remapping.md). For every `:`
+command, see [Commands](commands.md).
 
-### What `mi` and `ma` take
-
-`mi` selects the inside, `ma` the inside with whatever surrounds it. The
-examples use one sentence, with the cursor on 期:
-
-> 他说：「今天（星**期**三）要下雨，记得带伞。」然后就走了。
-
-| Keys | Object | Selects |
-| --- | --- | --- |
-| `mi w` | word | 星期三 |
-| `mi W` | everything up to a space (helix's WORD) | 他说：「今天（星期三）要下雨，记得带伞。」然后就走了。 |
-| `mi s` | sentence | 他说：「今天（星期三）要下雨，记得带伞。」 |
-| `mi u` | clause: up to any punctuation mark | 星期三 |
-| `mi p` | paragraph | the whole paragraph |
-| `mi m` | the nearest pair, whichever kind | 星期三 |
-| `ma m` | …with the pair | （星期三） |
-| `mi (` | inside the parentheses (`(` covers `（）` too) | 星期三 |
-| `mi 「` | inside the Chinese brackets | 今天（星期三）要下雨，记得带伞。 |
-
-`mi u` stops at every punctuation mark, brackets and quotes too; with the
-cursor on 雨 it selects 要下雨. A mark inside a word does not count: on
-`Well, it's 3.14 today; don't go.` with the cursor on `today` it selects
-`it's 3.14 today`. `W` is the one for URLs, paths and version numbers, which
-have no spaces inside.
-
-In a table, `mi l` (cel*l*) selects the cell the cursor is in, so `mi l c`
-replaces it.
-
-#### Which pairs each key covers
-
-One ASCII key covers a whole family, by shape, so a Chinese bracket is never far
-from the key your hand goes to. Either half works, and the full-width, half-width
-and vertical forms come with it (the menu shows them as `…`):
-
-| Key | Covers |
-| --- | --- |
-| `(` | `()` `（）` `︵︶` |
-| `[` | `[]` `［］` `﹇﹈` `「」` `｢｣` `﹁﹂` `【】` `︻︼` `〔〕` `︹︺` |
-| `{` | `{}` `｛｝` `︷︸` `『』` `﹃﹄` `〖〗` `︗︘` |
-| `<` | `<>` `«»` `〈〉` `︿﹀` `《》` `︽︾` |
-| `"` | `""` `＂＂` `“”` `〝〞` |
-| `'` | `''` `＇＇` `‘’` |
-| `` ` `` | `` `` `` `｀｀` |
-
-When a family is nested in itself, the innermost pair is taken. Any other
-character pairs with itself.
-
-Markdown marks are `k`, for mar*k*up. On `a **bc** d` with the cursor on `b`:
-
-| Keys | Selects |
-| --- | --- |
-| `mi k` | `bc` |
-| `ma k` | `**bc**` |
-
-`k` also takes `*italic*`, `~~struck~~`, `==marked==`, `` `code` ``, links and
-`[[wiki links]]`.
-
-`mi g` (or `ma g`, the same) selects the change the cursor's line is in, as
-whole lines: the lines the change bar marks against git's `HEAD`. In a file
-git does not track it says so.
-
-In code, four more — in a code file, and in a Markdown file inside the
-```` ``` ```` fence the cursor is in, read in that fence's language. On
-`fn add(a: i32, b: i32) -> i32 { a + b }`, with the cursor on the parameter
-`b`:
-
-| Keys | Object | Selects |
-| --- | --- | --- |
-| `mi f` | function | the whole `fn add(…) { a + b }` |
-| `mi a` | parameter | `b: i32` |
-| `mi c` | comment | the comment the cursor is in |
-| `mi t` | type definition | the `struct` or `enum` the cursor is in |
-
-Three more, for tests, data and markup:
-
-| Keys | Object | Example |
-| --- | --- | --- |
-| `mi T` | test function | in `#[test] fn adds_two() { … }`: the whole `fn adds_two() { … }`. Also `def test_…` (Python), `func Test…` (Go), `it(…)` / `test(…)` / `describe(…)` (JavaScript), `@Test` (Java) |
-| `mi e` | key and value | in `{"name": "x", "version": 13}` on `13`: `"version": 13`; in TOML `remember = false`. Also YAML, Rust and Go struct fields, Python and JavaScript dictionary entries |
-| `mi x` | HTML element | in `<p>今天<b>下雨</b></p>` on 雨: `<b>下雨</b>` |
-
-Any character that is not a letter or a digit works as a pair: `mi $` on
-`$xy$` selects `xy`.
-
-### What `ms`, `md` and `mr` take
-
-A bracket (either half), a quote, a Chinese bracket, or any other character,
-which then pairs with itself. `md` and `mr` also take `m` for the nearest pair,
-and `md` takes `k` for Markdown marks.
-
-| Text | Keys | Result |
-| --- | --- | --- |
-| `foo bar`, `foo` selected | `ms (` | `(foo) bar` |
-| `foo bar`, `foo` selected | `ms 「` | `「foo」 bar` |
-| `foo bar`, `foo` selected | `ms *` | `*foo* bar` |
-| `a (bc) d` | `md (` | `a bc d` |
-| `a *x* b` | `md *` | `a x b` |
-| `这是 **一句话** 的例子` | `md k` | `这是 一句话 的例子` |
-| `这是 [字](http://a) 的例子` | `md k` | `这是 字 的例子` |
-| `这是 [字](http://a) 的例子` | `md m` | `这是 字(http://a) 的例子`, as helix does |
-| `f(a)` | `mr ( [` | `f[a]` |
-| `a $x$ b` | `mr $ (` | `a (x) b` |
-
-In every example the cursor stands inside the pair. Under the vim keymap,
-`ds(` is `md (`, `cs([` is `mr ( [`, and `ysiw(` surrounds the word.
-
-`ms` then `Enter` puts the selection on lines of its own: on `foo bar` with
-`foo` selected, it gives `foo` on a line between two line breaks, and the
-selection takes in both.
-
-### `mr` shows the pair first
-
-After `mr` and the pair to replace, the two characters it found are selected,
-so you can see which pair the next key will change. That key, or `Esc` to
-change nothing, gives your selection back. On `a (bc) d` with the cursor on
-`b`, `mr(` selects the `(` and the `)`; `[` then makes `a [bc] d`.
-
-### Counts
-
-A count is pairs out. On `f(a(b)c)` with the cursor on `b`:
-
-| Keys | Result |
-| --- | --- |
-| `2mi(` then `d` | `f()` |
-| `2md(` | `fa(b)c` |
-| `2mr([` | `f[a(b)c]` |
-| `3md(` | unchanged: there is no third pair |
-
-With `m` the count-th pair of any kind is taken: on `f[a(b)c]`, `2mim` then
-`d` gives `f[]`.
-
-### Outside a pair
-
-With the cursor outside any pair, `mi(` and `ma(` take nothing under the
-helix keymap, as in helix. Under the vim keymap they reach ahead to the next
-pair, as vim does: at the start of `ab (cd) ef`, `da(` gives `ab  ef`.
-
-### Several selections
-
-Each selection takes its own pair, and the whole change is one undo step. With
-a cursor on each line's `b`:
-
-| Text | Keys | Result |
-| --- | --- | --- |
-| `a b c` / `a b c` | `ms (` | `a (b) c` / `a (b) c` |
-| `a (b) c` / `a (b) c` | `md (` | `a b c` / `a b c` |
-| `a (b) c` / `a (b) c` | `mr ( [` | `a [b] c` / `a [b] c` |
-
-`md` and `mr` change nothing when a cursor has no pair around it, or when two
-cursors are inside the same pair: taking it off once per cursor would take off
-the pair outside it as well.
+<!--@include: ../generated/en/keys.md-->

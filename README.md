@@ -17,28 +17,38 @@ pnpm preview
 | --- | --- |
 | `src/*.md`, `src/guide/`, `src/reference/`, `src/writing/`, `src/from/` | the English pages |
 | `src/zht/`, `src/zhs/` | the translations, same tree of pages under their own prefix |
-| `src/.vitepress/config.mts` | the sidebar, the nav, the languages, the base path |
-| `src/.vitepress/theme/components/` | Vue components any page can use |
-| `src/public/` | files served as-is: `data/keymap.json`, images, `CNAME` |
+| `src/.vitepress/pages.json` | the page list: the sidebar, the nav and the book's table of contents |
+| `src/.vitepress/config.mts` | the languages, the base path, the search |
+| `src/.vitepress/theme/ink.json` | the ink palette; `scripts/palette.mjs` writes both views' CSS from it |
+| `src/generated/` | tables written by `ye --docgen` (see below); never edited by hand |
+| `book.toml`, `book-theme/`, `scripts/book.mjs` | the book view (mdBook) at `/book/` |
+| `src/public/` | files served as-is: images, `CNAME` |
 
-**Adding a page is two steps**: write the `.md`, then add it to the list at the
-top of `config.mts`. That one list builds the sidebar and the nav for every
-language, so a page added once appears everywhere.
+**Adding a page is two steps**: write the `.md`, then add it to
+`pages.json`. That one list builds the sidebar, the nav and the book's
+contents, so a page added once appears in both views.
 
-## Writing a page that does something
+## Two views of the same pages
 
-A page is Markdown, and a Markdown page here can hold a Vue component. The one
-shipped is `KeyTable`:
+`pnpm build` builds the site twice from the same Markdown: VitePress at the
+root and mdBook at `/book/`, both in ink's colours. Each page links to its twin
+in the other view. Since mdBook reads plain Markdown, a page keeps to what both
+can draw: no Vue components, no VitePress-only containers. Includes
+(`<!--@include: ../generated/en/keys.md-->`) are fine; `scripts/book.mjs`
+inlines them for mdBook.
 
-```md
-<KeyTable />
-<KeyTable group="Movement" />
+## Generated tables
+
+The commands, the keys, the settings and the languages are written by the
+editor itself, in all three languages:
+
+```sh
+ye --docgen=src/generated
 ```
 
-It filters as the reader types and switches between the `helix` and `vim`
-keymaps, reading its rows from `src/public/data/keymap.json`. Register a new
-component in `src/.vitepress/theme/index.ts` and every page in every language
-can use it.
+A page includes them rather than copying them, so the docs cannot list a key
+or a command the editor does not have. yumete's CI regenerates them and fails
+when they differ from what is committed here.
 
 ## The other two languages
 

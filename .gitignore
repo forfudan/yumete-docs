@@ -4,3 +4,5 @@ src/.vitepress/cache/
 src/.vitepress/dist/
 .DS_Store
 *.log
+.book/
+.cache/

@@ -1,0 +1,52 @@
+[
+  {
+    "text": "Guide",
+    "items": [
+      { "text": "Installation", "link": "/guide/installation" },
+      { "text": "Getting started", "link": "/guide/getting-started" },
+      { "text": "Search and pickers", "link": "/guide/search" },
+      { "text": "Windows and the sidebar", "link": "/guide/windows" },
+      { "text": "Files, saving and changes", "link": "/guide/files" },
+      { "text": "Configuration", "link": "/guide/configuration" },
+      { "text": "Key remapping", "link": "/guide/remapping" },
+      { "text": "Themes", "link": "/guide/themes" },
+      { "text": "Language servers", "link": "/guide/languages" }
+    ]
+  },
+  {
+    "text": "Writing",
+    "items": [
+      { "text": "The page", "link": "/writing/page" },
+      { "text": "CJK motions", "link": "/writing/cjk" },
+      { "text": "Vertical layout", "link": "/writing/vertical" },
+      { "text": "Ruby and annotations", "link": "/writing/ruby" },
+      { "text": "The input method", "link": "/writing/ime" },
+      { "text": "Tables", "link": "/writing/tables" },
+      { "text": "Checks and counts", "link": "/writing/checks" },
+      { "text": "A book of many files", "link": "/writing/book" },
+      { "text": "Export", "link": "/writing/export" }
+    ]
+  },
+  {
+    "text": "Reference",
+    "items": [
+      { "text": "Keymap", "link": "/reference/keymap" },
+      { "text": "Match mode", "link": "/reference/match" },
+      { "text": "Registers", "link": "/reference/registers" },
+      { "text": "Jumplist", "link": "/reference/jumplist" },
+      { "text": "Commands", "link": "/reference/commands" },
+      { "text": "Settings", "link": "/reference/settings" }
+    ]
+  },
+  {
+    "text": "Coming from",
+    "items": [
+      { "text": "Coming from helix", "link": "/from/helix" },
+      { "text": "Coming from vim", "link": "/from/vim" }
+    ]
+  },
+  {
+    "text": "Help",
+    "items": [{ "text": "FAQ", "link": "/faq" }]
+  }
+]
