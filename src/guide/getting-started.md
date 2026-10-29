@@ -70,7 +70,7 @@ selection. The cursor is a selection one character wide.
 
 | Keys | What it does |
 | --- | --- |
-| `x` | select the whole line. In prose, a line is usually a paragraph |
+| `x` | select the whole line. In a text file, a line is usually a paragraph |
 | `v` | start extending the selection with motions |
 | `d` | delete the selection |
 | `c` | delete the selection and start typing in its place |

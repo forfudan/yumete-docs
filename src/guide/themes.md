@@ -73,14 +73,14 @@ On top of the greys, each colour has one job:
 
 | Colour | Config key | Used for |
 | --- | --- | --- |
-| gold | `gold` | headings, table headers, labels in panels: text that is not the prose |
+| gold | `gold` | headings, table headers, labels in panels: text that is not the body text |
 | red | `mark` | something wrong: a footnote marker, a table row with the wrong number of cells, a merge conflict |
 | purple | `purple` | inline code and code blocks |
 | green | `green` | quotations |
 | blue | `azure` | links |
 | yellow | `amber` | `::: warning` blocks, and types in code |
 
-Bold, italic and plain prose get no colour of their own. The order of the colours follows
+Bold, italic and plain body text get no colour of their own. The order of the colours follows
 the ranks of official robes in imperial China: gold for the writer's own headings,
 purple for code where not one character may change, green for other people's words,
 blue for an address. Red never marks emphasis; it always means "this is wrong". Your
@@ -106,7 +106,7 @@ The five callouts each take one colour: `::: note` blue, `::: tip` green,
 too: `::: info` and `::: details` are drawn as note, `::: danger` as caution.
 
 `bw` has no hue at all. It shows what gold and red show in `ink` by brightness instead:
-gold text is brighter than the prose, and red is brighter still.
+gold text is brighter than the body text, and red is brighter still.
 
 ## The `[theme]` keys
 

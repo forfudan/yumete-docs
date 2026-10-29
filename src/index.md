@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: yumete
-  text: A terminal editor for CJK prose
-  tagline: Vertical layout, word motions that know where a Chinese word ends, and an input method that lives in the editor.
+  text: A terminal text editor for CJK users
+  tagline: Helix and vim keys, cursor motions by Chinese word, vertical editing, and the Yume input method built in.
   actions:
     - theme: brand
       text: Get started

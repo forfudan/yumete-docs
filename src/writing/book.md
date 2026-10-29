@@ -136,7 +136,7 @@ What the wiki does:
 
 - **Entry names become words.** `w` steps over a name in one go.
   One-character entries are not words.
-- **Names are marked** in the prose, in gold by default. `:wiki-mark line` uses
+- **Names are marked** in the text, in gold by default. `:wiki-mark line` uses
   a dotted underline, `:wiki-mark off` nothing. Names inside code or notes are
   not marked.
 - **The entry floats beside the cursor** when you stand on a name, and folds

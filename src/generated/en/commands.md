@@ -46,7 +46,7 @@
 | `:wiki-global` |  | open the global wiki.md — what a whole series shares |
 | `:keymap-yumete-flavor` | `on｜off｜toggle` | the Yumete keymap flavour: a small set of departures over helix/vim. Bare reports it |
 | `:wiki-panel` | `on｜off｜toggle` | keep the entry in the sidebar — while it is open it no longer floats |
-| `:wiki-mark` | `color｜line｜off` | how a wiki name is marked in the prose: 金, an underline, or not at all |
+| `:wiki-mark` | `color｜line｜off` | how a wiki name is marked in the text: 金, an underline, or not at all |
 | `:wiki-where` |  | where the wiki looked: which files were read, how many entries each, what cannot be marked |
 | `:wiki-reload` |  | read the wiki and every file it includes again |
 | `:word-list` |  | which word list is in force |
@@ -57,7 +57,7 @@
 | `:word-discover` |  | mine this file's own words: the names no dictionary has |
 | `:word-discover-working` |  | mine the working directory's own words |
 | `:word-discover-project` |  | mine the project's own words |
-| `:word-habit` |  | habit words: what this one says far more than prose does |
+| `:word-habit` |  | habit words: what this one says far more than ordinary text does |
 | `:vertical` |  | turn this page down |
 | `:horizontal` |  | turn this page across |
 | `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | whether hjkl follow the text or the screen when the page runs down |

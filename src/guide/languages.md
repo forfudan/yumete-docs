@@ -55,7 +55,7 @@ The column is only drawn in code files, and only while line numbers are on.
 Rename and code actions can change files you have not opened. Those files are opened,
 each gets one undo step, and nothing is saved until you save it.
 
-`gd` on prose follows footnotes and links instead; see [the page](../writing/page.md).
+`gd` in a text file follows footnotes and links instead; see [the page](../writing/page.md).
 
 ## Configuring a server
 
@@ -118,7 +118,7 @@ names each running server and where its program is.
 A project's own `.yumete/config.toml` can set `[lsp.<name>]` too, so a repository can
 choose its servers for everyone who opens it.
 
-## Servers for prose
+## Servers for text files
 
 Markdown, Typst and plain text have no server by default. Name one and it is attached,
 for example a spelling and grammar checker such as `harper-ls`:
@@ -133,7 +133,7 @@ command = "harper-ls"
 args = ["--stdio"]
 ```
 
-The prose names are `markdown`, `typst` and `text`. The server's complaints are under
+The text-file names are `markdown`, `typst` and `text`. The server's complaints are under
 `Space d` and `]d`, and its fixes under `Space a`.
 
 ## Formatting and other commands
