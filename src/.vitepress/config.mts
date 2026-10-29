@@ -1,9 +1,7 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 import mdFootnote from "markdown-it-footnote";
 import path from "node:path";
-import tailwind from "tailwindcss";
 import PAGES from "./pages.json";
-import autoprefixer from "autoprefixer";
 
 // Where the site is served from.
 //
@@ -65,7 +63,7 @@ function themeFor(prefix: string): DefaultTheme.Config {
     socialLinks: [{ icon: "github", link: "https://github.com/forFudan/yumete" }],
     search: { provider: "local" },
     footer: {
-      message: "yumete is released under the MIT License.",
+      message: "yumete is released under the Apache License 2.0.",
       copyright: "© 2026 ZHU Yuhao",
     },
   };
@@ -112,11 +110,12 @@ export default defineConfig({
       md.use(mdFootnote as any);
     },
   },
-  head: [["meta", { name: "theme-color", content: "#8a6a3a" }]],
+  head: [
+    ["meta", { name: "theme-color", content: "#8a6a3a" }],
+    // The face for code blocks with 漢字 in them (book-theme/cells.js).
+    ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" }],
+  ],
   vite: {
-    css: {
-      postcss: { plugins: [tailwind(), autoprefixer()] },
-    },
     resolve: {
       alias: { "@": path.resolve(__dirname, "../../components") },
     },

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap");
 /* What the book view needs beside the colours: the same reading measure and
    leading as the site, and the same look for a key. */
 .content main { max-width: 46em; }
@@ -15,3 +16,21 @@ kbd {
 }
 .twin { font-size: 0.9em; margin-inline-end: 1em; color: var(--icons); text-decoration: none; }
 .twin:hover { color: var(--icons-hover); }
+
+/* Terminal cells in code blocks: see cells.js. */
+pre .cell1,
+pre .cell2 {
+  display: inline-block;
+  text-align: center;
+  transform-origin: left center;
+}
+pre .cell1 { width: 1ch; }
+pre .cell2 { width: 2ch; }
+/* A frame of box lines is drawn at the terminal's line height, so `│` joins. */
+pre.frame,
+pre.frame code { line-height: 1.2; }
+pre.cjk,
+pre.cjk code {
+  /* mdBook sets its code font with !important, so this one has to say it too. */
+  font-family: "LXGW WenKai Mono TC", var(--mono-font, monospace) !important;
+}

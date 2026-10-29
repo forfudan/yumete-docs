@@ -33,3 +33,20 @@ kbd {
   font-size: 0.9em;
   color: var(--vp-c-text-2);
 }
+
+/* Terminal cells in code blocks: see book-theme/cells.js. */
+.vp-doc pre .cell1,
+.vp-doc pre .cell2 {
+  display: inline-block;
+  text-align: center;
+  transform-origin: left center;
+}
+.vp-doc pre .cell1 { width: 1ch; }
+.vp-doc pre .cell2 { width: 2ch; }
+/* A frame of box lines is drawn at the terminal's line height, so `│` joins. */
+.vp-doc pre.frame,
+.vp-doc pre.frame code { line-height: 1.2; }
+.vp-doc pre.cjk,
+.vp-doc pre.cjk code {
+  font-family: "LXGW WenKai Mono TC", var(--vp-font-family-mono);
+}

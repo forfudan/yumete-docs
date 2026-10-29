@@ -19,13 +19,9 @@
   "devDependencies": {
     "@types/markdown-it-footnote": "^3.0.4",
     "@types/node": "^20.19.30",
-    "autoprefixer": "^10.4.23",
-    "daisyui": "^4.12.24",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.19",
     "vitepress": "^1.6.4",
     "vue": "^3.5.27"
   },
