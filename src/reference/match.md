@@ -142,7 +142,7 @@ When pairs of one family are nested, the innermost is taken.
 
 `m` as an object means the nearest pair whose two halves differ: brackets, and
 quotes such as `“”` and `「」`. A straight `"` or `'` is left out, since in
-prose it is as often an apostrophe; name it with `"` or `'`.
+text it is as often an apostrophe; name it with `"` or `'`.
 
 ## Surround: `ms`, `md` and `mr`
 
@@ -241,7 +241,7 @@ Under the vim keymap (`:keymap vim`) the same work is spelled the vim and
 vim-surround way: `di(` for `mi(` then `d`, `viw` for `mi w`, `ysiw(` to wrap
 a word, `ds(` for `md(`, `cs([` for `mr([`.
 
-After `d`, `c`, `y`, `vi` and `va`, the prose objects work as above: `w`, `W`,
+After `d`, `c`, `y`, `vi` and `va`, the text objects work as above: `w`, `W`,
 `s`, `u`, `p`, `m`, `k`, and every pair. `b` and `B` are vim's names for `(`
 and `{`. The code objects, the cell `l` and the change `g` have no vim
 spelling. See [Coming from vim](../from/vim.md).

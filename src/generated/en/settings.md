@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | `[editor] layout` | `"horizontal"` | **layout** — whether the page runs across or down (`horizontal` across, `vertical` down) |
 | `[editor] vertical_keys` | `"visual"` | **hjkl when the page runs down** — in vertical layout, whether hjkl follow the text or the screen (`logical` logical: h l by character, j k by line, `visual` visual: j k down/up, h l left/right) |
-| `[editor] zong_length` | `0` | **column length** — characters to a column when set down; prose reads well up to about 32 (8–64) |
+| `[editor] zong_length` | `0` | **column length** — characters to a column when set down; text reads well up to about 32 (8–64) |
 | `[editor] zong_gap` | `0` | **column gap** — half-width cells between one column and the next (0–4) |
 | `[editor] pages_vertical` | `1` | **pages, vertical** — how many bands a set-down page is cut into across (1–4) |
 | `[editor] pages_horizontal` | `1` | **pages, horizontal** — how many columns the horizontal page is cut into, side by side (1–4) |

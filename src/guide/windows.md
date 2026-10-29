@@ -131,7 +131,7 @@ A window narrower than 36 columns has no room for a sidebar at all.
 So pressing `Space s` twice always brings you back to where you started.
 
 The outline lists Markdown headings (`#` followed by a space) and Typst
-headings (`=`). In prose it shows at the right edge how much each heading's
+headings (`=`). In a text file it shows at the right edge how much each heading's
 section holds, its subsections included. `h` folds the sections under a heading and `l`
 opens them again; `h` on a heading with nothing under it folds its parent. In
 a Typst file, the outline also reads the files the document `#include`s, and

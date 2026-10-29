@@ -294,7 +294,7 @@ Under the vim keymap, `d`, `c` and `y` wait for a second key, as in vim: `cc`,
 ### Inside a cell
 
 Inside, the cell behaves like a small document. `h` `l`, `w` `b` `e`, the
-operators, and selections all mean what they mean in prose, with the cell's edges
+operators, and selections all mean what they mean outside a table, with the cell's edges
 as the walls:
 
 - `gg` and `ge` go to the first and last character of the cell. `0` `$`, `Home`
@@ -307,7 +307,7 @@ as the walls:
 - `j` and `k` step through the lines of a cell that has several (a wrapped cell,
   or one with a line break in it), and leave the cell at its last line.
 - `o` and `O` open a new line inside the cell, not a new row.
-- `t` is till again, as in prose. To reach the table menu from inside, use
+- `t` is till again, as outside a table. To reach the table menu from inside, use
   `Space t`.
 
 ### Typing
@@ -530,7 +530,7 @@ apple,3,red
 pear,5,green
 plum,2,purple
 
-More prose.
+More text.
 ```
 
 yumete finds the table like this:
@@ -546,7 +546,7 @@ yumete finds the table like this:
   wide as its widest line. If they do not agree, yumete does not draw a table.
 - **The first row is data.** The columns are named 1, 2, 3.
 
-Such a table is somebody else's data in the middle of your prose, so yumete reads
+Such a table is somebody else's data in the middle of your text, so yumete reads
 it but does not restructure it. You can move by cell, search its columns, sort it,
 go to a cell, and copy or paste a column (`Space t p` stops at the table's last
 line). The keys that add, delete or move rows and columns are not offered. To do
@@ -657,7 +657,7 @@ fits, nothing changes and the status line asks you to name it:
 are hard to type on the command line. yumete never guesses a space by itself,
 because a space also joins the words of a sentence; you can still name one.
 
-The guess only checks that every line has the same count. Two lines of prose that
+The guess only checks that every line has the same count. Two lines of ordinary text that
 each happen to contain one comma will become a two-column table. `u` undoes it.
 
 ### Taking a table apart

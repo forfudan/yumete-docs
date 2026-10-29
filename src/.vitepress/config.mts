@@ -95,7 +95,7 @@ if (LIVE.zhs) {
 
 export default defineConfig({
   title: "yumete",
-  description: "A terminal text editor for writing CJK prose.",
+  description: "A terminal text editor for CJK users, with Helix and vim keys and the Yume input method built in.",
   lang: "en",
   base: BASE,
   outDir: "../dist",

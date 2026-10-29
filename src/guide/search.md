@@ -169,7 +169,7 @@ step to the next state.
 | `6` | In | the scope, see below |
 | `7` | skip | `hidden+ignored`, `hidden`, `ignored`, `nothing` |
 
-Matching is literal by default: in prose you look for `(注)` or `A.B` more
+Matching is literal by default: in ordinary text you look for `(注)` or `A.B` more
 often than for a pattern. "Whole word" only works on Latin words; Chinese has
 no word boundaries, so with it on a Chinese search finds nothing. The
 switches last until you quit; `[editor] fuzzy_search = true` starts on fuzzy.
@@ -178,7 +178,7 @@ switches last until you quit; `[editor] fuzzy_search = true` starts on fuzzy.
 
 Fuzzy finds the characters you typed, in order and close together: `他説`
 finds 他輕輕地説. The whole match must fit in twice the number of characters
-you typed, plus four, or nearly every long line of prose would match. This is
+you typed, plus four, or nearly every long line of text would match. This is
 not the file picker's fuzzy matching, which ranks short names and ignores
 case.
 
@@ -326,7 +326,7 @@ ch2.md
 On a terminal, hits are grouped under their file, as `rg` prints them. In a
 pipe each hit is one line, `file:line:column:text`, so `awk` and `xargs` can
 read it. `--heading` and `--no-heading` choose one. The text is sixty
-characters either side of the match, since a line of prose can be a whole
+characters either side of the match, since a line of text can be a whole
 paragraph. The exit code is 0 if anything was found, 1 if nothing was, and 2
 if the pattern was wrong.
 

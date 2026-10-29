@@ -110,12 +110,12 @@ usage_groups = ["阿嬌 阿姣", "落霞鎮 落霞鄉"]
 
 ## Words you lean on: `:word-habit`
 
-`:word-habit` lists the words this file uses more often than ordinary prose
+`:word-habit` lists the words this file uses more often than ordinary text
 does, ranked by how much they stand out and how often they occur. A common word
 such as 的 is never listed, because every text uses it at the usual rate.
 
 ```
-12: 「然後」 47× — 4.2 times more often than prose
+12: 「然後」 47× — 4.2 times more often than ordinary text
 ```
 
 The line number is where the word first appears. Names the frequency table does
