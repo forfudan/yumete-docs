@@ -24,7 +24,7 @@ has it under Editing.
 | --- | --- |
 | `off` | nothing |
 | `basic` (default) | helix's six: `( )` `[ ]` `{ }` `' '` `" "` and two backticks |
-| `full` | everything the `m` group knows as a pair |
+| `full` | everything the `m` group knows as a pair, but `< >` |
 
 What `full` pairs, beyond the six:
 
@@ -34,7 +34,10 @@ What `full` pairs, beyond the six:
 | Chinese brackets | `「 」` `『 』` `【 】` `〔 〕` `〖 〗` `〈 〉` `《 》` |
 | Curly quotes | `“ ”` `‘ ’` `〝 〞` |
 | Full-width quotes | `＂ ＂` `＇ ＇` `｀ ｀` |
-| Others | `< >` `« »` `｢ ｣` |
+| Others | `« »` `｢ ｣` |
+
+`< >` is left out even under `full`: in code, `a < b` would come out as
+`a <> b`.
 
 When a pair is not written:
 
