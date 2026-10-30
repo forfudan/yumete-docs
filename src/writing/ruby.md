@@ -174,9 +174,10 @@ hand is never overwritten.
 A novel with a reading on every character reads like a textbook. Usually you
 want readings only where a reader would stop, and that is `:ruby-auto-rare`.
 
-It annotates a word only if one of its characters is in neither the mainland
-通用規範漢字表 nor the traditional counterpart of that list. A character either
-of them has is not rare. When a word has a rare character, the whole word gets readings,
+It annotates a word only if one of its characters is in none of the four
+character standards in daily use: the mainland 通用規範漢字表, its traditional
+counterpart, Taiwan's and Hong Kong's. If any one of them has the character, it
+is not rare. When a word has a rare character, the whole word gets readings,
 not only that character.
 
 ## Emphasis dots

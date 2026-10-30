@@ -166,6 +166,10 @@ Punctuation is drawn in its vertical form:
 Only the screen changes. Copying, searching and saving all see the original
 characters.
 
+How much turns follows `:render`: under `off` the marks are drawn as the file
+has them; `basic`, the default, turns the marks above; `full` also sets the
+curly quotes, `“”` as `﹃﹄` and `‘’` as `﹁﹂`.
+
 The vertical forms live at U+FE10–FE48. Fonts with CJK coverage have them:
 Source Han and Noto CJK, Sarasa Gothic, LXGW WenKai Mono. A font with only Latin
 glyphs shows boxes instead.
