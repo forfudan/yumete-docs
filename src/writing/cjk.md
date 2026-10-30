@@ -15,7 +15,7 @@ learns the names in your book.
 | `e` | to the end of the clause |
 | `b` | back to the start of the clause |
 | `W` `B` `E` | the same, split on spaces only |
-| `H` `L` | to the previous / next sentence |
+| `H` `L` | to the previous / next sentence; right after `L`, `H` first re-selects the same sentence backwards, as helix's `b` does after `w` |
 | `{` `}` | to the previous / next paragraph |
 
 On `我們明天去圖書館借書。` with the cursor on 我, `w` selects 我們, then 明天,
@@ -25,7 +25,8 @@ the `。`.
 **`w` takes a word, `e` takes a clause.** With a dictionary, a `w` and an `e`
 that both stopped at word ends would do almost the same thing, so `e` runs to
 the next punctuation mark instead. `b` is `e`'s partner and walks back to where
-an `e` would have started. Each punctuation mark is a stop of its own.
+an `e` would have started. A run of punctuation marks such as `：「` is one
+stop, as it is in vim and helix.
 
 **Under the vim keymap** `w`, `b` and `e` all go by dictionary word, as vim's
 do by English word, and the sentence motions are `(` and `)`. As in vim, `w`

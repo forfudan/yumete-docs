@@ -30,7 +30,7 @@
 | `[editor] diff_gutter` | `true` | **改動條** — 行號旁邊那一格用底色説哪幾行跟 git 裏的不一樣 |
 | `[editor] word_level` | `"balanced"` | **分詞鬆緊** — 多容易把幾個字併成一個詞。嚴：只認没爭議的；松：詞典説是就是 (`strict` 嚴格, `balanced` 適中, `full` 寬松) |
 | `[editor] word_mark` | `"color"` | **分詞標記** — 分詞標記用哪一種畫法 (`off` 不畫, `color` 不同顔色, `ink` 不同明度, `tint` 不同底色, `line` 下劃線) |
-| `[editor] code_highlight` | `true` | **代碼上色** — 圍欄裏的代碼按它自己的語法上色(九種語言)；關掉則整塊一種紫 |
+| `[editor] code_highlight` | `true` | **代碼上色** — 圍欄裏的代碼按它自己的語法上色；關掉則整塊一種紫 |
 | `[editor] show_ruby` | `false` | **排出注音** — 把注音排在字的旁邊。默認關：文件裏是什麽，畫面上就是什麽 |
 | `[editor] indent_hint` | `"none"` | **段首記號** — 竪排時段落開頭畫一個記號，長段落裏找得到分段在哪 (`none` 不畫, `symbol` 畫符號, `color` 換顔色) |
 | `[editor] indent_symbol` | `"↵"` | **段首那個符號** — 段首記號畫成什麽字。段首記號設成「畫符號」時才用得上 |
@@ -64,7 +64,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[ime] scheme` | `"lingming"` | **輸入方案** — 用哪一張碼表。只有靈明自帶，其餘要先裝 (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 拼音) |
+| `[ime] scheme` | `"lingming"` | **輸入方案** — 用哪一套輸入方案（靈明和星陳自帶精華版），其他方案需安裝 (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 拼音) |
 | `[ime] commit` | `"default"` | **上屏方式** — 碼打完了什麽時候上屏：等下一鍵、只有一個候選就上，還是攢成整句 (`default` 預設, `delayed` 延遲(頂字), `unique` 唯一, `fluency` 整句) |
 | `[ime] start` | `false` | **啓動就載入碼表** — 默認不載入——分詞模型照常載入，碼表等你第一次打字 |
 | `[ime] system` | `"auto"` | **NORMAL模式下屏蔽系統版宇夢輸入法** — Normal 模態下請系統輸入法讓開，免得按鍵被它吃掉 (`auto` 自動, `keep` 不管它) |

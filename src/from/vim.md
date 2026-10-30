@@ -52,7 +52,12 @@ ends a paragraph. A `>` quote marker, and in code a comment leader such as
 `//` or `#`, is written again on each filled line, and a list item's lines
 hang under its text. A run of Chinese has no spaces to break at, so `gq`
 leaves it whole, as vim does. Two lines joined between Chinese characters get
-no space.
+no space. A line that opens with the two-square indent (U+3000) is a paragraph
+of its own: it is never joined to the line before it, and the lines filled
+after it carry no indent.
+
+`v` or `V` and then `Esc` leaves nothing selected, with the cursor where it
+stood, as in vim.
 
 ## Counts
 

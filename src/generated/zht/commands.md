@@ -20,7 +20,7 @@
 | `:count-target` | `<字數>｜off` | 每天要寫多少字；`:count-target off` 不再算 |
 | `:check-usage` |  | 查用字：全文寫了兩種寫法的(裏/裡、為/爲、你自己配的人名)，列出少數那一邊 |
 | `:check-config` |  | 查配置檔：哪一行讓整份失效，哪一行寫了没人讀 |
-| `:check-names` |  | 查專名：稿子裏把百科的名字寫錯了一個同音字的地方(醉翁亭寫成醉翁停) |
+| `:check-names` |  | 查專名：文件裏把百科的名字寫錯了一個同音字的地方(醉翁亭寫成醉翁停) |
 | `:diagnostics-all` |  | 語言服務器説過的全部問題，排成一張 gf 跳得了的單子 |
 | `:check-charset` |  | 查字集：不在通用規範/臺灣/香港/古籍裏的字，排版社的字體多半也没有 |
 | `:check-merge` |  | 列出這份文件裏的合併衝突 |
@@ -42,7 +42,7 @@
 | `:word` `:wd` |  | 分詞：哪一份詞表、標記、粒度 |
 | `:word-mark` | `off｜color｜ink｜tint｜line｜字色｜墨色` | 分詞標記 |
 | `:wiki` | `<詞條名>` | 查一個詞條：打名字，打錯了、順序反了也找得到 |
-| `:wiki-edit` |  | 打開這本書的 .yumete/wiki.md，没有就建一個 |
+| `:wiki-edit` |  | 打開本項目的 .yumete/wiki.md，没有就建一個 |
 | `:wiki-global` |  | 打開全局的 wiki.md——整個系列共用的設定 |
 | `:keymap-yumete-flavor` | `on｜off｜toggle` | Yumete 鍵位風味：在 helix/vim 鍵位之上的一小組改動。不帶參數報當前狀態 |
 | `:wiki-panel` | `on｜off｜toggle` | 把詞條固定在邊欄——開着的時候不再浮出來 |
@@ -50,9 +50,9 @@
 | `:wiki-where` |  | 百科到哪裏找的：讀了哪些檔、各幾條、哪些標不出來 |
 | `:wiki-reload` |  | 重讀百科和它引到的每一個檔 |
 | `:word-list` |  | 此刻用的是哪一份詞表 |
-| `:word-list-local` |  | 開本書的詞表 .yumete/words.txt——人名、地名 |
+| `:word-list-local` |  | 開項目的詞表 .yumete/words.txt——人名、地名 |
 | `:word-list-global` |  | 開全域詞表 segmentation.txt |
-| `:word-list-reload` |  | 重讀兩份詞表(本書的 ＋ 全域的) |
+| `:word-list-reload` |  | 重讀兩份詞表(項目的 ＋ 全域的) |
 | `:word-level` | `off｜strict｜balanced｜full` | 分詞粒度：多少個字算一個詞 |
 | `:word-discover` |  | 挖掘這一篇的用戶詞語：人名地名，字典裏没有的 |
 | `:word-discover-working` |  | 在工作路徑中挖掘用戶詞語 |
@@ -68,11 +68,11 @@
 | `:keymap` | `helix｜vim` | 鍵位預設：helix(出廠)或 vim——把 vim 的 x s dd ^ $ 翻過來 |
 | `:keymap-actions` |  | 列出每個能綁的動作名 |
 | `:info` |  | 這份文檔：位置、大小、行字數、語言、哪幾個服務器同它關聯 |
-| `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息：即時顯示哪一種(record/diagnostics/dictionary/wiki/docs；不寫就按稿子算) |
+| `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息：即時顯示哪一種(record/diagnostics/dictionary/wiki/docs；不寫就按文件算) |
 | `:rules` | `<欄>…｜off` | 在指定的欄上鋪一道底紋：`:rules 80 100 120`；不寫數字就是 80 和 100，`off` 關掉 |
 | `:theme-fill` | `on｜off｜toggle` | 代碼、引用要不要坐在底色上(出廠不坐) |
 | `:shot` | `screen｜png｜html｜txt <路徑>` | 截圖：默認進剪貼板，png/html/txt 則存成文件(進下載文件夾) |
-| `:yume` `:y` | `on｜off` | 宇夢輸入引擎開關：on 中文、off 關閉、abc 英文模式 |
+| `:yume` `:y` | `on｜off` | 宇夢輸入引擎開關：on 打開、off 關閉 |
 | `:yume-where` |  | 碼表和字料之數據源及回退順序 |
 | `:yume-which` |  | 現在用的是哪個方案、碼表打哪來 |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始打字：載入一個方案(不寫名字就用配置裏那個) |

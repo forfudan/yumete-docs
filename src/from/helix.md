@@ -98,7 +98,8 @@ These differ:
 `Space /` opens the search panel in the sidebar. It starts on this file; its
 **In** row switches it to the whole project. The panel also chooses
 case, whole words, regex, and whether pinyin and simplified or traditional
-characters count as a match.
+characters count as a match. `s`, `S`, `K` and `A-K` read a regex whatever that
+setting says, as helix's do.
 
 - `:search-project` (`:sp`) opens the panel already on the project.
 - `:replace-project` (`:rp`) opens it with a replace row.

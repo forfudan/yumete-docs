@@ -173,7 +173,8 @@
 | `Space t d / Space t D` | delete this row / column |
 | `Space t j / Space t k` | move this row down / up |
 | `Space t h / Space t l` | move this column left / right |
-| `Space t y / Space t p` | yank / paste this column |
+| `Space t y / Space t p / Space t P` | yank this column / paste it to the right / to the left |
+| `Space t v` | write the yanked column over this one |
 | `Space t 1s / Space t 1S` | sort by column, ascending / descending (␣t1s; ␣t1a2d8as for several) |
 | `Space t < / Space t = / Space t >` | this column left / centre / right |
 | `Space t F` | line it up again |

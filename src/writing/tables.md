@@ -24,7 +24,7 @@ editing, rows and columns, sorting, searching, checking, and converting.
 do not have to ask.
 
 **Opening any other file whose lines all split the same way** opens it in the
-basic table view. yumete tries tab, comma, semicolon and space, and takes the
+basic table view. yumete tries tab, comma and semicolon, and takes the
 first one that appears the same number of times on every line and gives at least
 two columns. The status line says what it guessed:
 
@@ -375,7 +375,8 @@ in.
 | `Space t h` | move this column left |
 | `Space t l` | move this column right |
 | `Space t y` | copy this whole column |
-| `Space t p` | paste a copied column over this one |
+| `Space t p` `Space t P` | put a copied column in to the right / left of this one |
+| `Space t v` | write a copied column over this one |
 | `Space t <` `Space t =` `Space t >` | align this column left, centre or right |
 | `Space t F` | line the table up in the file |
 | `Space t H` | switch whether the first row is a heading |
@@ -548,8 +549,9 @@ yumete finds the table like this:
 
 Such a table is somebody else's data in the middle of your text, so yumete reads
 it but does not restructure it. You can move by cell, search its columns, sort it,
-go to a cell, and copy or paste a column (`Space t p` stops at the table's last
-line). The keys that add, delete or move rows and columns are not offered. To do
+go to a cell, and copy a column or write one over another (`Space t v` stops at
+the table's last line). The keys that add, delete or move rows and columns are
+not offered. To do
 those, convert it into a real table first with `:convert-table pipe`.
 
 When the cursor walks out of the stretch, the table view ends. Run the command
@@ -794,12 +796,14 @@ What a schema adds:
 - `hidden` columns stop taking space.
 
 **`Space t e`** (or `:table-schema`) opens the schema of the current table file in
-the second editor region. If there is none, yumete writes one first, into `.yumete/tables/`
-beside the data, describing exactly what you see now: the delimiter it guessed, the
-column names from the first line, and the heading setting. Opening and saving it
-unchanged changes nothing. Edit it, save, then press `Space t o` and `Space t b`
-(or run `:table-render off` and `:table-render basic`) to read the table the new
-way. An existing schema file is never overwritten.
+the second editor region. If there is none, yumete drafts one, describing exactly
+what you see now: the delimiter it guessed, the column names from the first line,
+and the heading setting. The draft is an unsaved buffer bound to
+`.yumete/tables/<name>.toml` under the project root (beside the data when the
+file lies outside a project); nothing is on disk until you `:w` it, and `:w`
+makes that folder. Edit it, save, then press `Space t o` and `Space t b` (or run
+`:table-render off` and `:table-render basic`) to read the table the new way. An
+existing schema file is never overwritten.
 
 A schema with an error is not ignored silently: yumete reports the file and what is
 wrong with it. Schemas are for whole table files. A pipe table or a stretch inside a

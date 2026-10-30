@@ -5,7 +5,7 @@
 | Key | What it does |
 | --- | --- |
 | `h j k l` | 左下上右；竖排里是沿着纵走 |
-| `w b e` | 下一词首、上一词首、词尾——认得汉字的词 |
+| `w b e` | 下一词首、上一词首、词尾；汉字中 b 和 e 按小句走 |
 | `3w 5j` | 数字在前是次数 |
 | `g30g / 30G` | 去第 30 行 |
 | `gg ge` | 文件开头/末尾 |
@@ -30,7 +30,7 @@
 | `} {` | 下一段/上一段 |
 | `y p` | 复制/粘贴 |
 | `u U` | 撤销/重做 |
-| `.` | 再做一次刚才那次改动 |
+| `.` | 重复上一次输入；vim 键位下是上一次改动 |
 | `Q q` | 录一段按键/放一遍 |
 | `> <` | 缩进/退缩进 |
 
@@ -173,7 +173,8 @@
 | `Space t d / Space t D` | 删这行/这栏 |
 | `Space t j / Space t k` | 这行下移/上移 |
 | `Space t h / Space t l` | 这栏左移/右移 |
-| `Space t y / Space t p` | 复制/粘贴该栏 |
+| `Space t y / Space t p / Space t P` | 复制该栏/贴到右边/贴到左边 |
+| `Space t v` | 用复制的栏盖掉该栏 |
 | `Space t 1s / Space t 1S` | 按列升序/降序排列(␣t1s; 1a2d8as 多列排序) |
 | `Space t < / Space t = / Space t >` | 这栏靠左/居中/靠右 |
 | `Space t F` | 重排对齐 |
@@ -220,7 +221,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `Space z z` | 中 / ABC / 关 |
+| `Space z z` | 输入法开/关 |
 | `Space z m` | 上屏方式 |
 | `Space z p` | 候选栏画在哪 |
 | `Space z e` | 正在打的那一段写在哪 |
@@ -229,7 +230,7 @@
 | `Space z n` | 下一个方案 |
 | `Space z 3-9` | 一页几条 |
 | `Space z /` | 候选旁的拆分注解 |
-| `Space z t` | 换码表源 |
+| `Space z t` | 改用安装版码表 |
 | `Space z w` | 查看码表源 |
 | `Space z W` | 查看数据位置 |
 
