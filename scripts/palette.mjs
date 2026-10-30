@@ -78,7 +78,8 @@ fs.writeFileSync(
   head + block(":root", vitepress(palette.light)) + block(".dark", vitepress(palette.dark)),
 );
 // mdBook: its `light` theme and its `coal` (the dark one it picks for a dark
-// system) both wear ink; the other built-in themes stay as they are.
+// system) both wear ink, and the theme menu (book-theme/index.hbs) offers
+// only those two, named Ink and Ink dark.
 fs.writeFileSync(
   path.join(root, "book-theme/ink.css"),
   head + block(".light", mdbook(palette.light)) + block(".coal", mdbook(palette.dark)),

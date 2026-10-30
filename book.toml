@@ -1,4 +1,5 @@
-# The book view of the site: the same pages, rendered by mdBook under /book/.
+# The book view of the site: the same pages, rendered by mdBook at the root
+# (2026-10-30, as readers asked); the VitePress rendering sits under /site/.
 #
 # `scripts/book.mjs` stages the pages into `.book/src` (front matter off,
 # includes inlined, `SUMMARY.md` written from `src/.vitepress/pages.json`) and
@@ -10,17 +11,20 @@ language = "en"
 src = ".book/src"
 
 [build]
-build-dir = "dist/book"
+build-dir = "dist"
 create-missing = false
 
 [output.html]
+# The template is mdBook's own with two edits: a theme menu of Ink and Ink
+# dark only, and a Keymap link in the top bar (book-theme/index.hbs).
+theme = "book-theme"
 default-theme = "light"
 preferred-dark-theme = "coal"
 additional-css = ["book-theme/ink.css", "book-theme/book.css"]
 additional-js = ["book-theme/twin.js", "book-theme/cells.js"]
 git-repository-url = "https://github.com/forFudan/yumete-docs"
 edit-url-template = "https://github.com/forFudan/yumete-docs/edit/main/src/{path}"
-site-url = "/book/"
+site-url = "/"
 
 [output.html.search]
 enable = true

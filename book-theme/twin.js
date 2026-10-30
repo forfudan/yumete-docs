@@ -1,17 +1,15 @@
-// "Site view": the same page in the VitePress rendering (2026-10-29).
-// `/book/guide/search.html` is `/guide/search` there; the book's own index
-// is the site's home.
+// "Site view": the same page in the VitePress rendering, which sits under
+// /site/ beside this book (2026-10-30; it was the other way round before).
+// The link stands at the foot of the sidebar: switching renderings is a
+// once-in-a-while thing, and the top bar's slot went to the keymap.
 (function () {
-  // Whatever comes before /book/ is the site's base (/yumete-docs on GitHub
-  // Pages, nothing locally).
-  var base = location.pathname.replace(/\/book\/.*$/, "");
-  var here = location.pathname.replace(/^.*?\/book\//, "/");
-  var there = here.replace(/(index)?\.html$/, "");
-  if (there === "/introduction") there = "/";
+  // mdBook's own template sets `path_to_root` on the page.
+  var root = new URL(typeof path_to_root === "string" ? path_to_root || "./" : "./", location.href).pathname;
+  var here = location.pathname.slice(root.length).replace(/(index|introduction)?\.html$/, "");
   var a = document.createElement("a");
   a.className = "twin";
-  a.href = base + there;
+  a.href = root + "site/" + here;
   a.textContent = "Site view";
-  var bar = document.querySelector(".right-buttons");
-  if (bar) bar.prepend(a);
+  var sidebar = document.querySelector(".sidebar-scrollbox");
+  if (sidebar) sidebar.appendChild(a);
 })();
