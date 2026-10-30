@@ -43,7 +43,9 @@ mean leaving, and that is `:q`.
 
 `C-w s` opens a second editor region below the first, showing the same file.
 `C-w j` and `C-w k` move between the two, and `C-w q` closes the one you are
-in.
+in. `:q` does the same while the window is split: it closes this region and
+leaves the file open, changes and all. In the last region `:q` works as
+usual (see [Saving and quitting](./files.md#saving-and-quitting)).
 
 Some commands use this region to show you something without moving you:
 

@@ -37,12 +37,14 @@ motion is told so.
 and `p` after `dw` puts the word back.
 
 `w`, `b` and `e` go through a Chinese segmenter, so in Chinese they stop at
-word edges rather than at spaces. See [CJK motions](../writing/cjk.md).
+word edges rather than at spaces. See [CJK motions](../writing/cjk.md). As in
+vim, `w` `W` `b` `B` stop on an empty line, and `e` passes it by.
 
 ### Case and fill operators
 
 `gu`, `gU` and `g~` change case and wait for a motion: `guw` lowers a word,
-`gUU` raises the whole line.
+`gUU` raises the whole line. `gUgU`, `gugu`, `g~g~` and `gqgq` are the line
+too, as in vim.
 
 `gq` fills lines to 79 columns, as vim's `gq` does with its factory settings:
 `gqip` a paragraph, `gqq` a line, `gq` on a visual selection. A blank line
@@ -57,6 +59,10 @@ no space.
 A count can go before the operator, before the motion, or both: `3dw` and
 `d3w` delete three words, and `2d3w` deletes six. `3dd` deletes three lines
 and `2x` two characters.
+
+Other keys take a count too. `3p` pastes three copies as one piece. `3rx`
+writes `x` over three characters, and changes nothing when the line has fewer
+left. `3~` changes the case of three characters.
 
 A count before `i`, `a`, `I`, `A`, `o` or `O` types the text that many times:
 `5ix` then `Esc` gives five `x`, and `3o甲` then `Esc` gives three lines of
@@ -89,6 +95,14 @@ selection again. In visual mode `o` goes to the other end, `d` or `x` deletes,
 `c` or `s` changes, `u` `U` `~` change case, and `p` replaces the selection
 with the register.
 
+A count before `.` replaces the count the change was made with: after `rx`,
+`3.` writes `x` over three characters, and a bare `.` after that writes three
+again.
+
+`J`, `gJ`, `r`, `>` and `<` in visual mode return to Normal mode afterwards, as in
+vim. `>` and `<` keep the cursor's column, as nvim's do. `.` repeats a visual
+`J`, `>` or `<` on as many lines.
+
 `C-v` starts blockwise visual. The motions grow a rectangle, and the status
 line says `SEL`.
 
@@ -113,12 +127,12 @@ the last insert, as helix's does.
 | `x` `X` | cut the character under or before the cursor |
 | `s` `S` | change one character, change the whole line |
 | `D` `C` `Y` | delete, change, yank to the end of the line (`Y` as in Neovim) |
-| `r` | replace the character; with the input method on, pick a Chinese one |
+| `r` | replace the character; with the input method on, pick a Chinese one. A count writes over that many; `r` `Enter` breaks the line, in the file's own line ending |
 | `R` | overwrite mode until `Esc`; `Backspace` gives back what was covered |
 | `u` `C-r` `U` | undo, redo, undo all recent changes on the line |
 | `J` `gJ` | join lines; `gJ` adds no space at all |
 | `0` `^` `$` | start of line, first character, end of line |
-| `%` | the matching bracket |
+| `%` | the matching bracket; off a bracket, the partner of the first one further along the line, and `d%` deletes from the cursor to there |
 | `*` `#` | the word under the cursor, forward or back |
 | `n` `N`, `gn` `gN` | the next or previous match |
 | `m` *a*, `'` *a* | set mark *a*, go back to its line, across files; `` ` `` *a* does the same |
@@ -126,7 +140,9 @@ the last insert, as helix's does.
 | `H` `M` `L` | top, middle, bottom of the screen |
 | `(` `)` | previous, next sentence |
 | `g;` `g,` | older and newer places you changed |
+| `gi` | insert again where the last Insert stopped |
 | `C-o` in insert mode | run one Normal command and come back |
+| `C-u` `C-w` in insert mode | delete to the start of the line, the word before; each first stops where this Insert began |
 | `K` | the documentation for the thing under the cursor |
 | `q`, `Q` | record a macro (`q` again stops), play it |
 | `ZZ` `ZQ` | save and quit, quit without saving |
@@ -152,7 +168,8 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 - vim-surround's visual `S` is not there. Use `ys` with a motion.
 - `gh` and `gl` do nothing; use `0` and `$`.
 - `:sp` is `:search-project`, not a split. Split with `C-w s`; there is no
-  vertical split.
+  vertical split. With the window split, `:q` closes the region you are in,
+  as vim's `:q` closes a window.
 - `:set` opens the settings panel. It does not take `option=value`; each
   option is its own command or config key. See
   [Settings](../reference/settings.md).

@@ -76,7 +76,7 @@ selection. The cursor is a selection one character wide.
 | `c` | delete the selection and start typing in its place |
 | `y` `p` `P` | copy, paste after, paste before |
 | `u` `U` | undo, redo |
-| `.` | repeat the last change |
+| `.` | repeat the last insert (under the vim keymap, the last change) |
 
 So `w` then `d` deletes a word, and `x` then `c` rewrites a paragraph. If your
 hands know vim instead, see [Vim keys](#vim-keys) below.
@@ -112,9 +112,12 @@ is. The full story is in [The input method](../writing/ime.md).
 status line. A `[+]` after the file name on the status line means unsaved
 changes.
 
+With the window split (`C-w s`), `:q` closes only the region you are in, and
+the file stays open. See [Windows and the sidebar](./windows.md).
+
 Nothing is lost if the terminal closes before you save. yumete keeps a rescue
-copy of every unsaved change, and the next time you open the file it offers it
-back with `:recover`.
+copy of every unsaved change. The next time you open the file it asks whether
+to recover it, and `:recover` asks again.
 
 ## When you forget a key
 

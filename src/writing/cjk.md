@@ -28,7 +28,8 @@ the next punctuation mark instead. `b` is `e`'s partner and walks back to where
 an `e` would have started. Each punctuation mark is a stop of its own.
 
 **Under the vim keymap** `w`, `b` and `e` all go by dictionary word, as vim's
-do by English word, and the sentence motions are `(` and `)`.
+do by English word, and the sentence motions are `(` and `)`. As in vim, `w`
+and `b` stop on an empty line, and `e` passes it by.
 
 `W`, `B` and `E` split on whitespace and nothing else, so a run of Chinese with
 no spaces in it is one unit. Use them for URLs, paths and version numbers.

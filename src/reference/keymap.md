@@ -9,6 +9,9 @@ together, such as `gg`, are pressed one after the other. A key that starts a
 group, such as `g`, `m` or `Space`, opens a menu of what can follow, so you
 need not learn these tables by heart: press the first key and read.
 
+The editor's own messages write the space bar as `␣`, so `␣t o` is Space, `t`,
+`o`.
+
 The first two tables are the keys a writer uses in the first hour. They are
 the ones `:help` lists first. The rest are the groups, one table per menu.
 

@@ -2,7 +2,8 @@
 
 A register holds text you have yanked or deleted, ready to paste. yumete keeps one
 unnamed register, any number of named ones, and a history of what the unnamed one held.
-The system clipboard is separate and has its own keys.
+The system clipboard is separate: it is the `+` and `*` registers, and it has its own
+keys.
 
 ## The unnamed register
 
@@ -13,13 +14,18 @@ With no register named, these keys use the unnamed one:
 | `y` | yank the selection |
 | `d` / `c` | delete / change the selection, keeping what was removed |
 | `A-d` / `A-c` | delete / change the selection, leaving the register as it is |
-| `p` / `P` | paste after / before the selection |
-| `R` | replace the selection with the register (helix keymap; under vim, `R` in Normal mode is vim's replace mode) |
+| `p` / `P` | paste after / before the selection; a count (`3p`) pastes that many copies as one piece |
+| `R` | replace the selection with the register; `2R` replaces it with two copies (helix keymap; under vim, `R` in Normal mode is vim's replace mode) |
 | `C-r "` (Insert) | insert the register's text at the cursor |
 
 If you would rather `d` and `c` left the register alone, `:keymap-yumete-flavor on`
 swaps them with `A-d` and `A-c`. Set `flavor = true` under `[keys]` to make that the
 default.
+
+Under the vim keymap a paste leaves a cursor, not the pasted text selected. The cursor
+goes to the last character pasted when the text is part of one line, to the first
+character pasted when it spans lines, and to the first non-blank of the first pasted
+line when whole lines were pasted.
 
 With several selections, each yanks its own piece, and pasting into as many
 selections puts each piece back in its place.
@@ -42,6 +48,10 @@ vim:
 - `#` reads as the selection's number, so `"#P` with three cursors writes `1`, `2`
   and `3`.
 
+Under the vim keymap, `"0` holds the last yank, as in vim: a delete fills the unnamed
+register, and `"0p` still pastes what you yanked. A delete of a line or more also
+goes into `"1`, and the older ones move down to `"2` … `"9`.
+
 ## Earlier yanks
 
 Every yank or delete into the unnamed register replaces what was there, but the last 16
@@ -51,7 +61,9 @@ are kept. `Space "` or `:clipboard` opens a picker of everything that can be pas
 - the unnamed register's history, newest first, numbered from `0`
 - the named registers, as `"a`, `"b` and so on
 
-Pick one and it is pasted after the selection.
+Pick one and it is pasted after the selection. The picker's numbers are its own: the
+row `0` is the newest yank or delete, not the `"0` register, which has a row of its
+own under the named registers.
 
 ## The system clipboard
 

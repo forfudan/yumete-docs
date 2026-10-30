@@ -16,11 +16,15 @@ work, and the tools that show what you have changed.
 | `:write-quit` (`:wq`) | save, then quit |
 | `:exit` (`:x`, `:xit`) | save only if changed, then quit |
 | `:write-quit-all` (`:wqa`, `:xa`) | save every file that changed, then quit |
-| `:quit` (`:q`) | close this file; quit when it was the last one |
+| `:quit` (`:q`) | close this file; quit when it was the last one; in a split, close this region |
 | `:quit-all` (`:qa`) | close every file and quit |
 
 A `!` after `:q` or `:qa` throws away unsaved changes. Without it, quitting
 with unsaved changes stops and says so.
+
+With the window split, `:q`, `:q!`, `:wq` and `:x` close only the region you
+are in. The file stays open with its changes, so `:q!` throws nothing away
+there. In the last region they work as above.
 
 `:w` always writes, even when nothing changed, and that moves the file's
 modification time. Build tools and sync programs read that time, so an idle
@@ -119,6 +123,10 @@ every few seconds, at most five, and also when you stop typing. The copy of
 number identifies the running yumete, so two yumetes never write over each
 other's copy. Saving or quitting
 normally deletes it, so you only see it after something went wrong.
+
+On macOS and Linux, closing the terminal window (`SIGHUP`) or a `SIGTERM`
+makes yumete write the copy of every unsaved file on the way out, so nothing
+typed since the last copy is lost.
 
 If yumete, the terminal or the machine stops before you saved, the next time
 you open the file it asks:
@@ -243,6 +251,9 @@ $ ye -r
 already open. At most 24 files are kept. Files that have moved or been
 deleted since are skipped quietly. Quitting with no file open leaves the last
 session alone.
+
+The session is written whenever the open files change, not only when you
+quit, so `-r` also brings them back after a crash.
 
 The session also keeps how the page looked: the layout, the `:view-*`
 settings and the theme, where they differ from your config. `:reload-config`
