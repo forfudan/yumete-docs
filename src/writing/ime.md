@@ -344,7 +344,7 @@ leave it out, or write `"default"`, to let each scheme decide.
 Prediction (輸入預測) offers candidates before the code is complete.
 `:yume-autocompletion on` and `:yume-autocompletion off` set it,
 `:yume-autocompletion toggle` flips it, and `:yume-autocompletion` alone says
-whether it is on. `Space z y` also asks.
+whether it is on. `Space z y` flips it.
 
 ### Candidates on a page
 
@@ -732,7 +732,7 @@ do not need a table.
 `:yume-which` (or `Space z w`) answers in one line:
 
 ```text
-靈明 · 碼表 ~/Library/Input Methods/Yume.app/Contents/Resources/schemes/lingming.ytab · chaifen off · commit delayed (頂字)
+靈明 · 碼表 ~/Library/Input Methods/Yume.app/Contents/Resources/schemes/lingming.ytab · 拆分 off · commit delayed (頂字)
 ```
 
 That is the scheme, the table file it is reading, whether the 拆分 annotation is

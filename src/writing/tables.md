@@ -226,7 +226,7 @@ three ways to draw it, and works only in the window view:
 
 Moving onto a folded cell does not unfold it, so the layout does not jump while
 you walk across the table. To read a folded cell, open the record panel
-(`Space t i`), which shows the whole value; or press `i` to start typing in it,
+in the sidebar (`Space t I`), which wraps the whole value; or press `i` to start typing in it,
 which unfolds that one cell until you press `Esc`. While you type in a folded
 cell, it scrolls sideways under the cursor, and a `<` at its start shows that part
 of it is out of view.
@@ -487,7 +487,7 @@ covers only those. Otherwise it covers every column, and says so.
 
 ```
 :table-find row Lin        line by line, like /
-:table-find column Lin     down the columns, like Space t /
+:table-find column Lin     down the columns, like Space t ? (in the second region)
 :table-find Lin            no direction: line by line
 ```
 
@@ -727,8 +727,9 @@ another row it empties until you ask again.
 
 - **Every column is listed, empty ones too**, with its number. Often the question
   you opened it for is "is this field empty?".
-- **A long field wraps** instead of being cut, so this is the place to read a cell
-  that is folded in the grid.
+- **In the sidebar, a long field wraps** instead of being cut, so this is the place
+  to read a cell that is folded in the grid. The floating panel cuts it short
+  with `…`.
 - **A computed field** from a schema has a `*` after its name, as a reminder that
   the file has no such column.
 - **In a link column** (see [Schemas](#schemas)), the panel lists at the top each

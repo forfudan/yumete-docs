@@ -20,8 +20,8 @@ even though other commands begin with those letters.
 
 **A hyphen makes a family.** `:buffer-close` is a kind of `:buffer`, `:view-wrap` a kind
 of `:view`; the list folds each family under its head (`:view- +17`) and opens it as you
-type. Only some commands have a short form, and where there is one it is the
-initials and nothing else: `:bc`, `:qa`, `:wa`. A space where
+type. Only some commands have a short form, and where there is one it is usually the
+initials: `:bc`, `:qa`, `:wa`. A space where
 a hyphen belongs is refused with the right spelling, so `:write all` is not read as a
 file called `all`.
 

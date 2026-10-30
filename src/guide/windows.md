@@ -128,7 +128,7 @@ A window narrower than 36 columns has no room for a sidebar at all.
 - open on the outline, keys in the text: go back into it;
 - already in the outline: close it.
 
-So pressing `Space s` twice always brings you back to where you started.
+From a closed sidebar, pressing `Space s` twice brings you back to where you started; from any other state the second press closes the sidebar.
 
 The outline lists Markdown headings (`#` followed by a space) and Typst
 headings (`=`). In a text file it shows at the right edge how much each heading's

@@ -55,10 +55,10 @@ By default a column is as long as the window is tall. To set your own length:
 ```text
 :view-wrap-vertical 24      24 characters to a column
 :view-wrap-vertical 0       as long as the window again
-:view-wrap-vertical         say what it is now
+:view-wrap-vertical         the same as 0
 ```
 
-The length can be 8 to 64; a smaller number is raised to 8. The setting is
+The length can be 8 to 64; a smaller number is raised to 8 and a larger one lowered to 64. The setting is
 `zong_length` under `[editor]` (`0` follows the window). A column never runs
 past the bottom of the window, whatever number you give. `:view-wrap` is the
 horizontal measure and does nothing to a vertical page.
