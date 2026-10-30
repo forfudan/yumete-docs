@@ -169,7 +169,7 @@
 | `:ruby` |  | 編輯此處注音 |
 | `:ruby-render` | `off｜basic｜full` | 注音渲染模式：顯示源碼、顔色渲染、夾行顯示。無參數時，報告當前模式名 |
 | `:ruby-auto` |  | 按詞自動注音(選中的，或者整份) |
-| `:ruby-auto-rare` |  | 只注通用規範漢字表以外的那些字 |
+| `:ruby-auto-rare` |  | 只注陸、臺、港常用字表都沒有的字 |
 | `:ruby-html` | `on｜off｜toggle` | 認 `<ruby>` 這一種 |
 | `:ruby-typst` | `on｜off｜toggle` | 認 `#ruby(…)` 這一種 |
 | `:ruby-format` | `html｜typst` | 把注音改寫成另一種寫法 |
