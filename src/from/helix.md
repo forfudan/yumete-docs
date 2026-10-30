@@ -46,7 +46,7 @@ sees it.
 | `H` `L` | not bound | previous and next sentence |
 | `M` `'` | not bound | `M a` names this place, `' a` goes back to it, across files |
 | `C-c` | comment | not bound; use `Space c` |
-| `C-w` | window mode | regions, also `Space w`: `w` next, `h` `j` `k` `l` move, `s` split, `q` close, `o` only, `e` `i` show or hide the left and right sidebar, `E` `I` go into it |
+| `C-w` | window mode | regions, also `Space w`: `w` next, `h` `j` `k` `l` move, `s` `v` split, `n s` `n v` blank split, `q` close, `o` only, `e` `i` show or hide the left and right sidebar, `E` `I` go into it |
 | `gd` `gD` | definition, declaration | definition, and definition in the other window |
 | `gy` `gi` `gm` | type definition, implementation, last modified file | not bound |
 | `=` `$` | format, keep by shell command | not bound |

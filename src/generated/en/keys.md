@@ -152,8 +152,16 @@
 | `C-w E / C-w I` | go into the left / right sidebar |
 | `C-w s` | a window below |
 | `C-w v` | a window beside |
+| `C-w n` | a blank window |
 | `C-w q` | close this one |
 | `C-w o` | keep only this one |
+
+### a blank window (`C-w n`)
+
+| Key | What it does |
+| --- | --- |
+| `C-w n s` | a blank window below |
+| `C-w n v` | a blank window beside |
 
 ### t table (`Space t`)
 

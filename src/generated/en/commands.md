@@ -6,6 +6,8 @@
 | `:pwd` |  | show the working directory |
 | `:vsplit` `:vs` | `<path>` | a window beside this one (as C-w v); with a file, open it there |
 | `:hsplit` `:hs` `:split` | `<path>` | a window below this one (as C-w s); with a file, open it there |
+| `:vnew` |  | a blank window beside this one (as C-w n v) |
+| `:hnew` |  | a blank window below this one (as C-w n s) |
 | `:open` `:o` `:e` `:edit` | `<path>` | open a file |
 | `:new` `:enew` |  | start an empty buffer |
 | `:write` `:w` | `<path>` | save; a path writes a copy, `:write-as` moves to it |
