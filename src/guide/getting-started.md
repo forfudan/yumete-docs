@@ -83,12 +83,13 @@ hands know vim instead, see [Vim keys](#vim-keys) below.
 
 ## Typing Chinese
 
-The input method is part of the editor. In Insert mode, tap Shift on its own to
-switch between Chinese and ABC. The status line shows which one is on: the name
+The input method is part of the editor, and it starts off. Turn it on with
+`:yume` (`:y`) or `Space z z`, or set `[ime] start = true` in the config. Once it
+is on, tap Shift on its own in Insert mode to switch between Chinese and ABC. The status line shows which one is on: the name
 of the scheme in brackets for Chinese, `[ABC]` for Latin letters. Type a code,
 and a bar of candidates appears; `Space` takes the first.
 
-`Space z z` in Normal mode turns the input method on and off.
+`Space z z` in Normal mode turns it off again.
 
 A tap of Shift needs a terminal that reports Shift on its own. On one that does
 not, `C-^` switches instead; the setting `language_key` changes which key that

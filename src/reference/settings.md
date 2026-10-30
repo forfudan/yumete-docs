@@ -81,7 +81,8 @@ A few keys are not on the settings panel. Each is explained on the page that own
 | `[editor] usage_groups` | [Checks and counts](../writing/checks.md#two-spellings-of-one-word-check-usage) |
 | `[editor] screenshot` | [Configuration](../guide/configuration.md#what-a-project-file-cannot-set) |
 | `[export] page` | [Export](../writing/export.md) |
-| `[syntax]` | [The page](../writing/page.md#markdown-typst-or-plain-text-syntax) |
+| `[syntax]`, `[editor] syntax` | [The page](../writing/page.md#markdown-typst-or-plain-text-syntax) |
+| `[editor] ruby_dialects` | [Ruby and annotations](../writing/ruby.md) |
 | `[language.*]` and `[lsp.*]` | [Language servers](../guide/languages.md) |
 | `[keys.normal]` | [Key remapping](../guide/remapping.md) |
 | the theme colours | [Themes](../guide/themes.md#changing-the-colours) |

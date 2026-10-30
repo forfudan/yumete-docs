@@ -72,6 +72,9 @@ txt = "typst"              # every .txt here is Typst
 "notes.txt" = "markdown"   # except this one
 ```
 
+`[editor] syntax = "typst"` says the same for every file whose name does not
+say, without listing extensions.
+
 A chapter you open with `gf` from a Typst `#include` line is read as Typst
 whatever it is called.
 
@@ -168,7 +171,7 @@ draws that indent without changing the file.
 :indent full     indent every paragraph and fold away the blank line between them
 :indent basic    indent, and keep the blank lines
 :indent off      no indent (default)
-:indent 2        the width in squares, up to 8; leaves the level alone
+:indent 2        the width in squares, up to 8; turns the indent on if it was off
 :indent          tell me the current level and width
 ```
 

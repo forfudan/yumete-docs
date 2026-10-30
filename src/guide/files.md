@@ -31,7 +31,7 @@ modification time. Build tools and sync programs read that time, so an idle
 ### What a save writes
 
 Files are read and written as UTF-8. A byte-order mark at the start is
-dropped when the file is read. A file in another encoding, such as Big5 or
+kept out of the text you edit, and saving puts it back. A file in another encoding, such as Big5 or
 GB18030, is refused with a note to convert it first, for example with
 `iconv -f big5 -t utf-8`.
 
@@ -115,7 +115,9 @@ reload_auto = false
 
 While a file has unsaved changes, yumete writes a copy of it beside the file
 every few seconds, at most five, and also when you stop typing. The copy of
-`chapter.md` is the hidden file `.chapter.md.yumete`. Saving or quitting
+`chapter.md` is a hidden file beside it, `.chapter.md.yumete.<number>`, where the
+number identifies the running yumete, so two yumetes never write over each
+other's copy. Saving or quitting
 normally deletes it, so you only see it after something went wrong.
 
 If yumete, the terminal or the machine stops before you saved, the next time

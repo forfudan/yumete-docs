@@ -18,7 +18,7 @@
 | `:count` `:wc` |  | how much has been written; `progress` for today, `target` for a daily goal |
 | `:count-progress` |  | how much was written today, and how far the target still is |
 | `:count-target` | `<字數>｜off` | how many 字 a day; `:count-target off` stops counting against one |
-| `:check-usage` |  | check 用字: where the manuscript wrote the other spelling of something it usually spells one way |
+| `:check-usage` |  | check 用字: where the text wrote the other spelling of something it usually spells one way |
 | `:check-config` |  | check the config: the line that voids the whole file, and the keys nobody reads |
 | `:check-names` |  | check names: a wiki name written with one homophone out of place |
 | `:diagnostics-all` |  | everything the language servers have complained about, as a listing gf can walk |
@@ -42,7 +42,7 @@
 | `:word` `:wd` |  | words: which list, the mark, the level |
 | `:word-mark` | `off｜color｜ink｜tint｜line｜字色｜墨色` | word mark |
 | `:wiki` | `<詞條名>` | look an entry up by name — misspelt or out of order still finds it |
-| `:wiki-edit` |  | open this book's .yumete/wiki.md, existing or not |
+| `:wiki-edit` |  | open this project's .yumete/wiki.md, existing or not |
 | `:wiki-global` |  | open the global wiki.md — what a whole series shares |
 | `:keymap-yumete-flavor` | `on｜off｜toggle` | the Yumete keymap flavour: a small set of departures over helix/vim. Bare reports it |
 | `:wiki-panel` | `on｜off｜toggle` | keep the entry in the sidebar — while it is open it no longer floats |
@@ -50,9 +50,9 @@
 | `:wiki-where` |  | where the wiki looked: which files were read, how many entries each, what cannot be marked |
 | `:wiki-reload` |  | read the wiki and every file it includes again |
 | `:word-list` |  | which word list is in force |
-| `:word-list-local` |  | open this book's word list, .yumete/words.txt — names of people and places |
+| `:word-list-local` |  | open this project's word list, .yumete/words.txt — names of people and places |
 | `:word-list-global` |  | open the global word list, segmentation.txt |
-| `:word-list-reload` |  | reread both word lists, this book's and the global one |
+| `:word-list-reload` |  | reread both word lists, this project's and the global one |
 | `:word-level` | `off｜strict｜balanced｜full` | word level: how readily characters join into words |
 | `:word-discover` |  | mine this file's own words: the names no dictionary has |
 | `:word-discover-working` |  | mine the working directory's own words |
@@ -72,7 +72,7 @@
 | `:rules` | `<欄>…｜off` | tint these columns: :rules 80 100 120; bare is 80 and 100, off clears them |
 | `:theme-fill` | `on｜off｜toggle` | whether code and quotations sit on a ground (they do not by default) |
 | `:shot` | `screen｜png｜html｜txt <path>` | a picture: the clipboard by default, or a file with `png`/`html`/`txt` |
-| `:yume` `:y` | `on｜off` | the Yume input engine's switch: on 中文, off, abc English |
+| `:yume` `:y` | `on｜off` | the Yume input engine's switch: on (中文) or off |
 | `:yume-where` |  | where the yume data is located and the fallback path |
 | `:yume-which` |  | which scheme is in use, and where its 碼表 came from |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | start typing: load a scheme (with no name, the configured one) |
@@ -127,7 +127,7 @@
 | `:pipe-after` | `<命令>` | run a terminal command and put its output after the selection |
 | `:read` | `<path>` | put a file's contents after the selection |
 | `:pipe-to` | `<命令>` | send the selection through a terminal command and keep nothing back |
-| `:yuhao` |  | open Yuhao IME website |
+| `:yuhao` |  | open the Yuhao input method website |
 | `:search` `:s` `:grep` | `<path>` | search: open the search panel — across files, with more options |
 | `:search-buffers` `:sb` |  | search every open buffer |
 | `:search-working` `:sw` |  | search the working directory |
@@ -136,7 +136,7 @@
 | `:table-detail` | `on｜off｜toggle` | the record panel: on, off, or a width |
 | `:table-numbers` | `on｜off｜toggle` | the row of column numbers — what ␣t3/ and ␣t20,20g count with |
 | `:table-header` | `on｜off｜toggle` | whether the first row names the columns or is a row like any other |
-| `:table-schema` |  | open this table's schema in the other area — writing a starting one if there is none |
+| `:table-schema` |  | open this table's schema in the other region — writing a starting one if there is none |
 | `:table-jump` | `<列名>` | go to the row this table names (`:table-jump 木`) |
 | `:table-find` | `row｜column｜<字符串> <字符串>` | search: `row` runs across (that is `/`), `column` runs down (that is Enter in a table) |
 | `:paste-table` | `<格式> [<格式>]` | paste the clipboard's table as the named format; with two words the first is the source |
