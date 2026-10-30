@@ -132,6 +132,31 @@ them, and a path outside the book is not read.
 A second, global wiki lives in the data directory as `wiki.md`, for what a
 whole series shares. Both are read, this book's first.
 
+### A folder of entries
+
+A wiki can also be a folder, one file per entry, as an Obsidian vault is.
+`.yumete/wiki/` is read whenever it is there, with or without a `wiki.md`
+beside it: `.yumete/wiki/安寧.md` is the entry 安寧, its own headings are its
+sub-entries, and a sub-folder is the group above its files, as a `#` heading
+is in `wiki.md`. Front matter with `aliases: [小寧, 寧兒]` gives the entry
+more names.
+
+Another folder is named from `wiki.md`, either way:
+
+```markdown
+---
+wiki: ../百科/
+---
+<!-- [yumete] ../地理/ -->
+```
+
+A `[yumete]` line ending in `/` reads a folder rather than a file; paths are
+from the file that names them, so `../` is the project itself. Naming the
+project makes every file's name an entry — the chapters, the notes, all of
+them — and so marks every one of them in gold wherever it is written. Hidden
+folders (`.yumete/`, `.git/`) are left out. `:wiki-where` lists each folder
+with how many files and entries it gave.
+
 What the wiki does:
 
 - **Entry names become words.** `w` steps over a name in one go.

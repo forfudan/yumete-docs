@@ -45,6 +45,9 @@
 | `:wiki-edit` |  | 打开本项目的 .yumete/wiki.md，没有就建一个 |
 | `:wiki-global` |  | 打开全局的 wiki.md——整个系列共用的设定 |
 | `:keymap-yumete-flavor` | `on｜off｜toggle` | Yumete 键位风味：在 helix/vim 键位之上的一小组改动。不带参数报当前状态 |
+| `:links` | `list｜graph｜off` | 开链接面板：哪些文件 [[链]] 到这里、这里链到哪里；list 列表、graph 图、off 关掉 |
+| `:links-export` |  | 把整个项目的链接图写成 .yumete/graph.html，并在浏览器打开 |
+| `:links-reindex` |  | 重读整个项目的 [[链接]] |
 | `:wiki-panel` | `on｜off｜toggle` | 把词条固定在边栏——开着的时候不再浮出来 |
 | `:wiki-mark` | `color｜line｜off` | 正文里怎么给词条名做记号：金色、下划线，或者不做 |
 | `:wiki-where` |  | 百科到哪里找的：读了哪些文件、各几条、哪些标不出来 |
@@ -132,7 +135,7 @@
 | `:search-buffers` `:sb` |  | 在缓冲区(打开的每一个文件)搜索 |
 | `:search-working` `:sw` |  | 在工作路径搜索 |
 | `:search-project` `:sp` |  | 在项目路径搜索 |
-| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜info` | 边栏：不写就说开着哪几扇，`off` 关掉，写名字就开那一扇 |
+| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | 边栏：不写就说开着哪几扇，`off` 关掉，写名字就开那一扇 |
 | `:table-detail` | `on｜off｜toggle` | 记录那一格：开、关，或者给个宽度 |
 | `:table-numbers` | `on｜off｜toggle` | 栏号那一行：␣t3/、␣t20,20g 用的就是它 |
 | `:table-header` | `on｜off｜toggle` | 第一行是栏名，还是跟别的行一样是数据 |

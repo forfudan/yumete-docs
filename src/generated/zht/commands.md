@@ -45,6 +45,9 @@
 | `:wiki-edit` |  | 打開本項目的 .yumete/wiki.md，没有就建一個 |
 | `:wiki-global` |  | 打開全局的 wiki.md——整個系列共用的設定 |
 | `:keymap-yumete-flavor` | `on｜off｜toggle` | Yumete 鍵位風味：在 helix/vim 鍵位之上的一小組改動。不帶參數報當前狀態 |
+| `:links` | `list｜graph｜off` | 開鏈接面板：哪些文件 [[鏈]] 到這裏、這裏鏈到哪裏；list 列表、graph 圖、off 關掉 |
+| `:links-export` |  | 把整個項目的鏈接圖寫成 .yumete/graph.html，並在瀏覽器打開 |
+| `:links-reindex` |  | 重讀整個項目的 [[鏈接]] |
 | `:wiki-panel` | `on｜off｜toggle` | 把詞條固定在邊欄——開着的時候不再浮出來 |
 | `:wiki-mark` | `color｜line｜off` | 正文裏怎麼給詞條名做記號：金色、下劃線，或者不做 |
 | `:wiki-where` |  | 百科到哪裏找的：讀了哪些檔、各幾條、哪些標不出來 |
@@ -132,7 +135,7 @@
 | `:search-buffers` `:sb` |  | 在緩衝區(打開的每一個文件)搜索 |
 | `:search-working` `:sw` |  | 在工作路徑搜索 |
 | `:search-project` `:sp` |  | 在項目路徑搜索 |
-| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜info` | 邊欄：不寫就說開着哪幾扇，`off` 關掉，寫名字就開那一扇 |
+| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | 邊欄：不寫就說開着哪幾扇，`off` 關掉，寫名字就開那一扇 |
 | `:table-detail` | `on｜off｜toggle` | 記錄那一格：開、關，或者給個寬度 |
 | `:table-numbers` | `on｜off｜toggle` | 欄號那一行：␣t3/、␣t20,20g 用的就是它 |
 | `:table-header` | `on｜off｜toggle` | 第一行是欄名，還是跟别的行一樣是數據 |
