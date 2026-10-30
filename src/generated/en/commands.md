@@ -114,6 +114,7 @@
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | how a paragraph opens: `off` / `basic` (indented, blank line kept) / `full` (the blank line folded too), or a width |
 | `:indent-tab` | `spaces｜tab` | what Tab types: spaces or a tab (Shift-Tab types the other) |
 | `:indent-width` | `<幾格，1–16>` | indent width: the spaces Tab types, and how far > and < shift |
+| `:hard-wrap` | `<幾欄>` | re-fill to a width without changing meaning: the selection or the unit under the cursor; 0 joins each into one line; bare uses the hard_wrap setting |
 | `:reflow` | `<幾欄>` | refill the selection to a width (80 columns by default) |
 | `:auto-pairs` | `off｜basic｜full` | type an opening bracket and its closer comes too: off, basic, full; bare says which it is now |
 | `:indent-hint` | `none｜color｜symbol` | what is drawn in a paragraph's opening squares |

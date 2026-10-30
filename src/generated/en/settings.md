@@ -12,6 +12,7 @@
 | `[editor] pages_horizontal` | `1` | **pages, horizontal** — how many columns the horizontal page is cut into, side by side (1–4) |
 | `[editor] indent` | `0` | **indent** — cells at the head of a paragraph; the Chinese convention is 2 (0–8) |
 | `[editor] measure` | `0` | **measure** — the line really breaks here; what is right of it is margin (0–400) |
+| `[editor] hard_wrap` | `0` | **hard-wrap width** — what a bare :hard-wrap fills to; it rewrites the file's line breaks, not the display (1–400) |
 | `[editor] ruler` | `0` | **ruler** — a line, not a break: what runs past it changes colour (0–400) |
 | `[editor] insert_final_newline` | `true` | **add a final line ending** — on save, add the line ending this file's own lines use when the last one is missing it; an empty file stays empty |
 | `[editor] soft_wrap` | `true` | **soft wrap** — long lines fold when set across; off, they run past the right edge |

@@ -46,7 +46,9 @@ vim, `w` `W` `b` `B` stop on an empty line, and `e` passes it by.
 `gUU` raises the whole line. `gUgU`, `gugu`, `g~g~` and `gqgq` are the line
 too, as in vim.
 
-`gq` fills lines to 79 columns, as vim's `gq` does with its factory settings:
+`gq` fills lines to 79 columns, as vim's `gq` does with its factory settings
+(for a filler that knows what Markdown, Typst and code comments mean, see
+[`:hard-wrap`](../writing/page#hard-wrap-hard-wrap)):
 `gqip` a paragraph, `gqq` a line, `gq` on a visual selection. A blank line
 ends a paragraph. A `>` quote marker, and in code a comment leader such as
 `//` or `#`, is written again on each filled line, and a list item's lines

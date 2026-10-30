@@ -114,6 +114,7 @@
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行縮進：`off`/`basic`(縮進，空行留着)/`full`(連段間空行一起收)，或幾格 |
 | `:indent-tab` | `spaces｜tab` | Tab 鍵打什麼：空格還是製表符(Shift-Tab 打另一種) |
 | `:indent-width` | `<幾格，1–16>` | 縮進寬度：Tab 打幾個空格、> 和 < 挪幾格 |
+| `:hard-wrap` | `<幾欄>` | 按寬度重排硬換行，不改意思：選區，或光標所在的那一段；0 = 每段併成一行；不帶數字照 hard_wrap 設置 |
 | `:reflow` | `<幾欄>` | 選區按寬度重排（默認 80 欄） |
 | `:auto-pairs` | `off｜basic｜full` | 輸入左括號時自動補上右括號：關、基本、完整。無參數時，報告當前檔位 |
 | `:indent-hint` | `none｜color｜symbol` | 縮進的那兩格上畫什麼 |
