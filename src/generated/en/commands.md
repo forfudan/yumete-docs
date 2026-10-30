@@ -116,7 +116,7 @@
 | `:indent-hint` | `none｜color｜symbol` | what is drawn in a paragraph's opening squares |
 | `:table` | `<行>x<欄>` | an empty table: `:table 3 4` is three rows by four columns, the first row the headings; only on a blank line |
 | `:table-render` | `off｜basic｜window` | how much of a table is drawn: the source, basic, or window view; bare says which it is now |
-| `:table-check` |  | look the whole table over: repeated row names, components with no row, rows of the wrong width |
+| `:table-check` |  | look the whole table over: repeated row names, rows of the wrong width, characters outside the standards |
 | `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | column rules: how the columns are told apart |
 | `:table-sort` | `<欄> a｜d …` | sort by these columns: `sort 1 a 2 d` is column 1 ascending, then column 2 descending |
 | `:replace` `:r` | `<path>` | search and replace |
@@ -136,7 +136,10 @@
 | `:table-detail` | `on｜off｜toggle` | the record panel: on, off, or a width |
 | `:table-numbers` | `on｜off｜toggle` | the row of column numbers — what ␣t3/ and ␣t20,20g count with |
 | `:table-header` | `on｜off｜toggle` | whether the first row names the columns or is a row like any other |
-| `:table-schema` |  | open this table's schema in the other region — writing a starting one if there is none |
+| `:table-schema` | `write` | say how this table is read; write puts it into the datapackage.json beside the data |
+| `:table-delimiter` | `<分隔符>` | read this file as a grid cut by that character, and remember it (tab, space, comma, semicolon or the character) |
+| `:table-hide` | `<欄號>` | hide column N (drawn at no width, still read and written), and remember it |
+| `:table-show` | `<欄號>` | draw hidden column N again |
 | `:table-jump` | `<列名>` | go to the row this table names (`:table-jump 木`) |
 | `:table-find` | `row｜column｜<字符串> <字符串>` | search: `row` runs across (that is `/`), `column` runs down (that is Space t / in a table) |
 | `:paste-table` | `<格式> [<格式>]` | paste the clipboard's table as the named format; with two words the first is the source |

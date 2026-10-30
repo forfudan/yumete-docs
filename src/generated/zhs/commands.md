@@ -116,7 +116,7 @@
 | `:indent-hint` | `none｜color｜symbol` | 缩进的那两格上画什么 |
 | `:table` | `<行>x<欄>` | 一张空表：`:table 3 4` 是三行四栏，首行是栏名。只能在空行上用 |
 | `:table-render` | `off｜basic｜window` | 表格渲染模式：源码视图、基本视图、全窗视图。无参数时，报告当前模式名 |
-| `:table-check` |  | 从头看一遍：重复的行名、查无此行的部件、栏数不对的行、超出字集的字 |
+| `:table-check` |  | 从头看一遍：重复的行名、栏数不对的行、超出字集的字 |
 | `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | 栏线：栏与栏之间怎么分开 |
 | `:table-sort` | `<欄> a｜d …` | 照这几栏排：`sort 1 a 2 d` 是先第一栏顺排、再第二栏倒排 |
 | `:replace` `:r` | `<路径>` | 找了换：面板里打找什么、换成什么 |
@@ -136,7 +136,10 @@
 | `:table-detail` | `on｜off｜toggle` | 记录那一格：开、关，或者给个宽度 |
 | `:table-numbers` | `on｜off｜toggle` | 栏号那一行：␣t3/、␣t20,20g 用的就是它 |
 | `:table-header` | `on｜off｜toggle` | 第一行是栏名，还是跟别的行一样是数据 |
-| `:table-schema` |  | 把这张表的规格开在另一半——没有就先写一份 |
+| `:table-schema` | `write` | 说这张表是怎么读的；write 写进旁边的 datapackage.json |
+| `:table-delimiter` | `<分隔符>` | 照这个分隔符把文件读成表格，并记住(tab、space、comma、semicolon 或那个字符) |
+| `:table-hide` | `<欄號>` | 把第 N 栏藏起来(只是不画，照样读写)，并记住 |
+| `:table-show` | `<欄號>` | 把藏起来的第 N 栏再画出来 |
 | `:table-jump` | `<列名>` | 跳到表格里叫这个名字的那一行(`:table-jump 木`) |
 | `:table-find` | `row｜column｜<字符串> <字符串>` | 找：`row` 一行一行(就是 `/`)，`column` 一栏一栏(表格里 t/ t? 就是它) |
 | `:paste-table` | `<格式> [<格式>]` | 将剪贴板中表格贴作目标格式；两个参数时第一个为源格式 |
