@@ -4,8 +4,8 @@
 
 | Key | What it does |
 | --- | --- |
-| `h j k l` | left, down, up, right — down the column in 竪排 |
-| `w b e` | next word (漢字 words come from the dictionary) / back to a clause start / on to a clause end |
+| `h j k l` | left, down, up, right — down the column in vertical layout |
+| `w b e` | next word / back to a word start / on to a word end (in 漢字 text, b and e go by clause) |
 | `3w 5j` | a number in front is a count |
 | `g30g / 30G` | go to line 30 |
 | `gg ge` | start / end of the file |
@@ -25,12 +25,12 @@
 | `o O` | open a line below/above and start typing |
 | `d c` | delete the selection / change it (and you are typing) |
 | `x` | select the whole line — in Chinese text a line is usually a paragraph |
-| `v ;` | extend mode on-off / collapse to one character; Esc also leaves extend |
+| `v ;` | Select mode on-off / collapse to one character; Esc also leaves Select mode |
 | `L H` | next sentence / previous sentence |
 | `} {` | next paragraph / previous paragraph |
 | `y p` | yank / put |
 | `u U` | undo / redo |
-| `.` | do that edit again |
+| `.` | repeat the last insert (vim keymap: the last change) |
 | `Q q` | record keys / play them back |
 | `> <` | indent / unindent |
 
@@ -47,18 +47,18 @@
 | `Space p` | paste from the system clipboard |
 | `Space P` | paste before, from the system clipboard |
 | `Space s` | show outline |
-| `Space n` | show info of character (float) |
-| `Space N` | show info of character (sidebar) |
-| `Space k` | show docs of definition (float) |
-| `Space K` | show docs of definition (sidebar) |
+| `Space n` | character info (floating) |
+| `Space N` | character info (sidebar) |
+| `Space k` | documentation (floating) |
+| `Space K` | documentation (sidebar) |
 | `Space d` | show diagnostics (float) |
 | `Space D` | show diagnostics (sidebar) |
 | `Space x` | show the change (float) |
 | `Space X` | show the change (sidebar) |
 | `Space r` | rename it everywhere |
 | `Space a` | code actions |
-| `Space i` | show row record of table (float) |
-| `Space I` | show row record of table (sidebar) |
+| `Space i` | this row's record (floating) |
+| `Space I` | this row's record (sidebar) |
 | `Space w` | region |
 | `Space t` | table operations |
 | `Space "` | registers |
@@ -87,7 +87,7 @@
 | `gx` | two letters to locate a word |
 | `gz` | more letters to locate a char |
 | `ga` | back to the buffer before this one |
-| `gn / gp` | to next or previous buffer |
+| `gn / gp` | the next or previous buffer |
 | `gd` | go to definition |
 | `gD` | go to definition in the other region |
 | `gr` | every place it is used |
@@ -149,7 +149,7 @@
 | `C-w w` | next |
 | `C-w h / C-w j / C-w k / C-w l` | go that way |
 | `C-w e / C-w i` | toggle the left / right bar |
-| `C-w E / C-w I` | go into the left / right bar |
+| `C-w E / C-w I` | go into the left / right sidebar |
 | `C-w s` | split in two |
 | `C-w q` | close this one |
 | `C-w o` | keep only this one |
@@ -224,12 +224,12 @@
 | `Space z m` | when a word commits |
 | `Space z p` | where the candidates are drawn |
 | `Space z e` | where what you are typing is written |
-| `Space z y` | prediction on or off |
+| `Space z y` | prediction (autocompletion) on or off |
 | `Space z i` | pick a scheme |
 | `Space z n` | the next scheme |
 | `Space z 3-9` | candidates on a page |
 | `Space z /` | the 拆分 beside a candidate |
 | `Space z t` | switch to the installed 碼表 |
-| `Space z w` | which scheme source |
+| `Space z w` | where the 碼表 came from |
 | `Space z W` | where the data is |
 

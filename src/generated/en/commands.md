@@ -15,16 +15,16 @@
 | `:reload-auto` | `on｜off｜toggle` | re-read by itself when the file changes outside — a warning, not a re-read, when you have changes of your own |
 | `:readonly` `:ro` | `on｜off｜toggle` | read-only: lock this one against editing |
 | `:goto` | `<行號>` | go to a line (`:42` will do) |
-| `:count` `:wc` |  | how much has been written; `progress` for today, `target` for a daily goal |
+| `:count` `:wc` |  | how much has been written; `:count-progress` for today, `:count-target` for a daily goal |
 | `:count-progress` |  | how much was written today, and how far the target still is |
-| `:count-target` | `<字數>｜off` | how many 字 a day; `:count-target off` stops counting against one |
-| `:check-usage` |  | check 用字: where the text wrote the other spelling of something it usually spells one way |
+| `:count-target` | `<字數>｜off` | how many words a day; `:count-target off` stops counting against one |
+| `:check-usage` |  | check usage: where the text wrote the other spelling of something it usually spells one way |
 | `:check-config` |  | check the config: the line that voids the whole file, and the keys nobody reads |
 | `:check-names` |  | check names: a wiki name written with one homophone out of place |
 | `:diagnostics-all` |  | everything the language servers have complained about, as a listing gf can walk |
-| `:check-charset` |  | check 字集: characters no current standard carries — the ones a typesetter's font will not have |
+| `:check-charset` |  | check the character set: characters no current standard carries — the ones a typesetter's font will not have |
 | `:check-merge` |  | list the merge conflicts in this file |
-| `:check-punct` |  | check 標點: half-width marks in Chinese, `...` for ……, and the 「 nothing closes |
+| `:check-punct` |  | check punctuation: half-width marks in Chinese, `...` for ……, and a 「 nothing closes |
 | `:convert` | `s｜t｜tw｜hk｜jp｜c｜g s｜t｜tw｜hk｜jp｜c｜g` | 簡繁 conversion, run by opencc — :convert lists the pairs it can do |
 | `:convert-opencc` |  | whether opencc is installed, where, and which version |
 | `:convert-opencc-install` |  | install opencc — run here on macOS, printed for you elsewhere |
@@ -73,12 +73,12 @@
 | `:theme-fill` | `on｜off｜toggle` | whether code and quotations sit on a ground (they do not by default) |
 | `:shot` | `screen｜png｜html｜txt <path>` | a picture: the clipboard by default, or a file with `png`/`html`/`txt` |
 | `:yume` `:y` | `on｜off` | the Yume input engine's switch: on (中文) or off |
-| `:yume-where` |  | where the yume data is located and the fallback path |
+| `:yume-where` |  | where the 碼表 and other data are looked for, in order |
 | `:yume-which` |  | which scheme is in use, and where its 碼表 came from |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | start typing: load a scheme (with no name, the configured one) |
 | `:yume-chaifen` | `on｜off｜toggle` | the 拆分 annotation beside the candidates |
-| `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | commit method: default (the scheme's own), delayed (頂字), unique, whole-sentence |
-| `:yume-panel` | `box｜bottom｜inline` | where the candidates are drawn: box by the caret, bottom the command row, inline the line under the caret |
+| `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | commit method: default (the scheme's own), delayed (頂字), unique, fluency (whole sentence) |
+| `:yume-panel` | `box｜bottom｜inline` | where the candidates are drawn: box by the caret, bottom on the bottom line, inline on the line under the caret |
 | `:yume-inline-preedit` | `off｜composition｜preview` | where the composition shows: off in the candidate bar, composition or preview in the text |
 | `:yume-menu-size` | `<1–9>` | how many candidates a page holds (1-9, 6 by default) |
 | `:yume-autocompletion` | `on｜off｜toggle` | autocompletion: offer candidates before the code is finished |
@@ -96,11 +96,11 @@
 | `:view-pages-horizontal` | `<1–4>` | pages, horizontal: side-by-side columns, the text running on from the left one to the right |
 | `:view-pages-vertical` | `<1–4>` | pages, vertical: divide the vertical page across — top right to top left, then bottom right to bottom left |
 | `:view-sentence` | `on｜off｜toggle` | one sentence to a column — a view of the page, not an edit |
-| `:view-hanging` | `on｜off｜toggle` | hung punctuation: 句讀 sit in the margin |
+| `:view-hanging` | `on｜off｜toggle` | hanging punctuation: 句讀 sit in the margin |
 | `:view-numbers-fill` | `on｜off｜toggle` | whether the line-number band has a ground of its own (no by default, in both layouts) |
 | `:view-diff` | `on｜off｜toggle` | change bar: the cell beside the line number says which lines differ from git |
 | `:view-typewriter` | `on｜off｜toggle` | typewriter: the row you are writing stays in the middle and the paper moves |
-| `:view-focus` | `on｜off｜toggle` | focus: the 段 you are writing stays lit and the rest of the page stands back |
+| `:view-focus` | `on｜off｜toggle` | focus: the paragraph you are writing stays lit and the rest of the page stands back |
 | `:view-meter` | `on｜off｜toggle` | 平仄: the tone class of every character in the margin, 韻腳 at the end of a 句 |
 | `:view-punct` | `on｜off｜toggle` | punctuation hints: the full-width mark a half-width one should have been |
 | `:view-code` | `on｜off｜toggle` | code colours: code in a fence, coloured by its own grammar |
@@ -138,7 +138,7 @@
 | `:table-header` | `on｜off｜toggle` | whether the first row names the columns or is a row like any other |
 | `:table-schema` |  | open this table's schema in the other region — writing a starting one if there is none |
 | `:table-jump` | `<列名>` | go to the row this table names (`:table-jump 木`) |
-| `:table-find` | `row｜column｜<字符串> <字符串>` | search: `row` runs across (that is `/`), `column` runs down (that is Enter in a table) |
+| `:table-find` | `row｜column｜<字符串> <字符串>` | search: `row` runs across (that is `/`), `column` runs down (that is Space t / in a table) |
 | `:paste-table` | `<格式> [<格式>]` | paste the clipboard's table as the named format; with two words the first is the source |
 | `:convert-table` | `<格式> [<格式>]` | convert to the named format (csv, tsv, pipe); with two words the first is the source |
 | `:wheel` | `<幾行，1–10>` | how far one notch of the wheel moves; `:wheel 1` is the terminal's own |
