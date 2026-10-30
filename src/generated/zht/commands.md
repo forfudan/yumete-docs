@@ -116,7 +116,7 @@
 | `:indent-hint` | `none｜color｜symbol` | 縮進的那兩格上畫什麼 |
 | `:table` | `<行>x<欄>` | 一張空表：`:table 3 4` 是三行四欄，首行是欄名。只能在空行上用 |
 | `:table-render` | `off｜basic｜window` | 表格渲染模式：源碼視圖、基本視圖、全窗視圖。無參數時，報告當前模式名 |
-| `:table-check` |  | 從頭看一遍：重複的行名、欄數不對的行、超出字集的字 |
+| `:table-check` |  | 檢查整張表：行名重複、欄數不對、字不在字集裡 |
 | `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | 欄線：欄與欄之間怎麼分開 |
 | `:table-sort` | `<欄> a｜d …` | 照這幾欄排：`sort 1 a 2 d` 是先第一欄順排、再第二欄倒排 |
 | `:replace` `:r` | `<路徑>` | 找了換：面板裏打找什麼、換成什麼 |
