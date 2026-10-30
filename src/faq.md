@@ -35,7 +35,7 @@ sets that key. See [The input method](writing/ime.md).
 ## yumete crashed. Where is my work?
 
 While a file has unsaved changes, yumete keeps a recovery copy beside it, as a
-hidden file: `chapter.md` gets `.chapter.md.yumete`. It is removed when you save
+hidden file: `chapter.md` gets `.chapter.md.yumete.<number>`. It is removed when you save
 or quit normally. After a crash, open the file again and yumete asks whether to
 recover the copy, throw it away, or leave it for later. `:recover` asks again.
 Typing in an unnamed buffer is kept too, in the data directory, and comes back

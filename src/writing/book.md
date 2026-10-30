@@ -140,8 +140,8 @@ What the wiki does:
   a dotted underline, `:wiki-mark off` nothing. Names inside code or notes are
   not marked.
 - **The entry floats beside the cursor** when you stand on a name, and folds
-  away when you leave. `:wiki-panel on` shows it in the sidebar instead; `C-w`
-  moves into the sidebar to scroll it, `q` comes back.
+  away when you leave. `:wiki-panel on` shows it in the right sidebar instead;
+  `C-w l` moves into the sidebar to scroll it, and `q` comes back.
 - **`gd` on a name** opens the file the entry lives in, at its heading. `C-o`
   comes back.
 

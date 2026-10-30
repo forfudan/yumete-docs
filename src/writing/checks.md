@@ -52,15 +52,17 @@ same number.
 :count-target off      stop measuring against a target; the log goes on
 ```
 
-`:count-progress` opens a list with one line per day, newest first, and a bar
+`:count-progress` opens a list with one line per day, oldest first, and a bar
 for that day's share:
 
 ```
-2026-09-06  1830 字  ███████████
-2026-09-05  2440 字  ████████████＋
 2026-09-04  -260 字  －
-1830/2000 字 today (91%), 62480 in the book, 3 days running
+2026-09-05  2440 字  ████████████＋
+2026-09-06  1830 字  ███████████
 ```
+
+The line under the status line sums it up: `1830/2000 字 today (91%), 62480 in
+the book, 3 days running`.
 
 `＋` marks a day over target. `－` marks a day you cut more than you wrote.
 Without a target the bars are measured against your best day.
@@ -120,9 +122,9 @@ such as 的 is never listed, because every text uses it at the usual rate.
 
 The line number is where the word first appears. Names the frequency table does
 not know, single characters, and words used fewer than three times are left
-out. The check needs a word-frequency table. With yumete's own small table it
-finds less than with the full data installed (see
-[The input method](ime.md)); with no frequencies at all it says so.
+out. The check needs a word-frequency table, which comes with the 宇浩 data (see
+[The input method](ime.md)). yumete's built-in word list has no frequencies, so
+without that data the check says so and lists nothing.
 
 ## Punctuation: `:check-punct`
 
@@ -181,7 +183,7 @@ on `PATH`.
 | `t` | OpenCC's plain traditional |
 | `tw` | Taiwan |
 | `hk` | Hong Kong |
-| `jp` | Japanese shinjitai (to and from `t` only) |
+| `jp` | Japanese shinjitai (converts with `t`, `c` and `g`; not with `s`, `tw` or `hk`) |
 | `c` | mainland standard traditional forms |
 | `g` | standard forms for classical texts |
 

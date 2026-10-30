@@ -33,10 +33,14 @@ Type `"` and a character before a yank, delete or paste to use that register ins
 - `"bd` deletes the selection into register `b`.
 - `C-r a` in Insert mode inserts register `a`.
 
-Any character can name a register. `_` and `+` are ordinary ones: `"_d` does not
-discard and `"+y` does not reach the clipboard; use `A-d` and `Space y`. The one
-special name is `#`, which reads as the selection's number, so `"#P` with three cursors
-writes `1`, `2` and `3`.
+Any character can name a register, and three names are special, as in helix and
+vim:
+
+- `_` keeps nothing. `"_d` deletes without changing what `p` pastes.
+- `+` and `*` are the system clipboard. `"+y` copies the selection out of the
+  editor, and `"+p`, `"+P` and `"+R` paste or replace from it.
+- `#` reads as the selection's number, so `"#P` with three cursors writes `1`, `2`
+  and `3`.
 
 ## Earlier yanks
 

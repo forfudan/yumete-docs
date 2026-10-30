@@ -24,7 +24,7 @@
 | `i a` | start typing before/after the cursor |
 | `o O` | open a line below/above and start typing |
 | `d c` | delete the selection / change it (and you are typing) |
-| `x` | select the whole line — in a novel a line is a paragraph |
+| `x` | select the whole line — in Chinese text a line is usually a paragraph |
 | `v ;` | extend mode on-off / collapse to one character; Esc also leaves extend |
 | `L H` | next sentence / previous sentence |
 | `} {` | next paragraph / previous paragraph |

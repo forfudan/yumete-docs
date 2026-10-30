@@ -65,7 +65,13 @@ lays out readings along with all the other markup.
 
 To stop reading one kind of markup, `:ruby-html off` or `:ruby-typst off`.
 `:ruby-html on` or `:ruby-typst on` reads it again and lays it out. With no
-word after it, either command says which kinds are being read.
+word after it, either command says which kinds are being read. To have a kind
+turned on at every start, list it in the config:
+
+```toml
+[editor]
+ruby_dialects = ["html", "typst"]
+```
 
 ### On a horizontal page
 
