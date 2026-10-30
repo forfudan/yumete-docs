@@ -143,6 +143,30 @@ The line number is printed only on the first row of a paragraph.
 Wrap is for horizontal layout. A vertical column has its own length, set with
 `:view-wrap-vertical`; see [Vertical layout](vertical.md).
 
+## Line numbers: `:line-numbers`
+
+The gutter can number lines three ways:
+
+```
+:line-numbers absolute   each line its own number
+:line-numbers relative   the cursor line its own number; every other line
+                         how far it is from the cursor
+:line-numbers none       no gutter
+:line-numbers            which is on
+```
+
+Relative numbers are for counted jumps: the line four above the cursor
+says `4`, so `4k` goes there, and `6j` goes to the line that says `6`
+below. The cursor line keeps its own number, flush left, so you still know
+where you are in the file. With a selection the count runs from the head,
+the end that moves; with several cursors it runs from the primary one.
+The vertical page numbers its columns the same way, the digits stacked
+above each column.
+
+The command holds for the session; `[editor] line_numbers` in the config
+sets the starting point. Vim calls this `number` with `relativenumber`,
+helix `line-number = "relative"`.
+
 ## Hard wrap: `:hard-wrap`
 
 Soft wrap folds long lines on screen and leaves the file alone. `:hard-wrap`

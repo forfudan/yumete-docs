@@ -95,6 +95,7 @@
 | `:sh` | `<命令>` | 跑一條命令，輸出收進一個緩衝區 |
 | `:!command` |  | 讓出終端跑一條命令，直接看它跑(vi 的寫法) |
 | `:which-wrap` | `<字母>` | 哪些按鍵會跨越行尾(vim 功能)。只允許 b h l < > ~ |
+| `:line-numbers` `:ln` | `absolute｜relative｜none` | 行號顯示方式。absolute 絶對行號。relative 同光標位置之相對行號。none 不顯示。無參數時報告當前模式 |
 | `:view-wrap` | `on｜off｜0｜<幾欄>` | 長段落折到下一行；`:view-wrap 50` 定寬度，`off` 不折 |
 | `:view-wrap-vertical` | `0｜<幾字>` | 竖排一列寫幾個字；`:view-wrap-vertical 30` 定長度，`0` 跟着窗口 |
 | `:view-margin` | `never｜dense｜loose｜always` | 邊欄：注音、旁置標點、着重號、平仄那一格留不留 |
