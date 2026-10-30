@@ -19,22 +19,22 @@
 | `[editor] margin` | `"dense"` | **interlinear lane** — when to show the lane that carries readings, emphasis and 平仄 (`never` never, `dense` when dense, `loose` when loose, `always` always) |
 | `[editor] tatechuyoko` | `4` | **tatechuyoko** — half-width characters set across inside one cell, so a year is not one digit to a row (2–8) |
 | `[editor] paper_ticks` | `0` | **paper ticks** — a faint tick in the margin every so many cells, the way squared paper has (0–64) |
-| `[editor] ambiguous_width` | `"auto"` | **ambiguous width** — ambiguous width (`auto` ambiguous width.auto, `wide` ambiguous width.wide, `narrow` ambiguous width.narrow) |
+| `[editor] ambiguous_width` | `"auto"` | **ambiguous width** — ambiguous width (`auto` ask the terminal, `wide` two cells, `narrow` one cell) |
 
 ### marks
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] line_numbers` | `"absolute"` | **line numbers** — line numbers (`absolute` line numbers.absolute, `relative` line numbers.relative, `none` line numbers.none) |
+| `[editor] line_numbers` | `"absolute"` | **line numbers** — line numbers (`absolute` absolute, `relative` relative, `none` none) |
 | `[editor] line_number_fill` | `false` | **line number fill** — line number fill |
 | `[editor] diff_gutter` | `true` | **diff gutter** — diff gutter |
-| `[editor] word_level` | `"balanced"` | **word level** — word level (`strict` word level.strict, `balanced` word level.balanced, `full` word level.full) |
-| `[editor] word_mark` | `"color"` | **word mark** — word mark (`off` word mark.off, `color` word mark.color, `ink` word mark.ink, `tint` word mark.tint, `line` word mark.line) |
+| `[editor] word_level` | `"balanced"` | **word level** — word level (`strict` strict, `balanced` balanced, `full` loose) |
+| `[editor] word_mark` | `"color"` | **word mark** — word mark (`off` none, `color` colour, `ink` brightness, `tint` tint, `line` underline) |
 | `[editor] code_highlight` | `true` | **code highlight** — code highlight |
 | `[editor] show_ruby` | `false` | **show ruby** — show ruby |
-| `[editor] indent_hint` | `"none"` | **indent hint** — indent hint (`none` indent hint.none, `symbol` indent hint.symbol, `color` indent hint.color) |
+| `[editor] indent_hint` | `"none"` | **indent hint** — indent hint (`none` none, `symbol` a mark, `color` colour) |
 | `[editor] indent_symbol` | `"↵"` | **indent symbol** — indent symbol |
-| `[editor] table_rules` | `"line dash"` | **table rules** — table rules (`line dash` table rules.line dash, `line` table rules.line, `line double` table rules.line double, `color` table rules.color, `off` table rules.off) |
+| `[editor] table_rules` | `"line dash"` | **table rules** — table rules (`line dash` table rules.line dash, `line` lines, `line double` table rules.line double, `color` colour, `off` none) |
 | `[editor] char_info` | `true` | **char info** — char info |
 | `[editor] status_count` | `"text"` | **count on the status line** — how long the file is, on the status line, and the selection too when there is one (`text` text files, `all` every file, `off` off) |
 | `[editor] unicode_alarm` | `true` | **suspicious characters** — tint the cell after a zero-width or bidi control, and any space that is not a plain space |
@@ -45,19 +45,19 @@
 | --- | --- | --- |
 | `[editor] scrolloff` | `3` | **scrolloff** — scrolloff (0–20) |
 | `[editor] wheel_step` | `3` | **wheel step** — wheel step (1–10) |
-| `[editor] tabs` | `"auto"` | **tabs** — tabs (`auto` tabs.auto, `always` tabs.always, `never` tabs.never) |
+| `[editor] tabs` | `"auto"` | **tabs** — tabs (`auto` two or more, `always` always, `never` never) |
 | `[editor] command_line` | `true` | **command line** — command line |
 | `[panel] rounded` | `true` | **rounded** — rounded |
-| `[editor] language` | `"auto"` | **language** — interface language (`auto` the system's, `zh` language.zh, `zhs` language.zhs, `en` language.en) |
+| `[editor] language` | `"auto"` | **language** — interface language (`auto` the system's, `zh` 繁體, `zhs` 简体, `en` English) |
 
 ### colours
 
 | Setting | Default | What it does |
 | --- | --- | --- |
 | `[theme] name` | `"ink"` | **name** — name (`ink` moxiang: black, white-gold, gold and red ink; every other shade computed, `one-dark` one-dark: the scheme most VS Code users know; dark only, `github` github: GitHub's own scheme, as on the site and in VS Code; light and dark, `monokai` monokai: the classic Sublime Text scheme; dark only, `dracula` dracula: the purple-toned dark scheme; dark only, `tokyo-night` tokyo-night: soft blue-purple tones; light and dark, `catppuccin` catppuccin: pastels; Mocha dark, Latte light, `gruvbox` gruvbox: retro colours on warm brown; light and dark, `bw` heibai: black, white and grey only — weight says it, colour says nothing, `morandi` morandi: muted, greyed colours; light and dark) |
-| `[theme] mode` | `"auto"` | **mode** — mode (`auto` mode.auto, `dark` mode.dark, `light` mode.light) |
-| `[theme] ground` | `"paint"` | **ground** — ground (`paint` ground.paint, `terminal` ground.terminal) |
-| `[theme] status_bar` | `"sunken"` | **status bar** — status bar (`sunken` status bar.sunken, `raised` status bar.raised) |
+| `[theme] mode` | `"auto"` | **mode** — mode (`auto` ask the terminal, `dark` dark, `light` light) |
+| `[theme] ground` | `"paint"` | **ground** — ground (`paint` paint the paper, `terminal` the terminal's own) |
+| `[theme] status_bar` | `"sunken"` | **status bar** — status bar (`sunken` sunken, `raised` raised) |
 | `[theme] fill` | `false` | **fill** — fill |
 
 ### input
@@ -67,9 +67,9 @@
 | `[ime] scheme` | `"lingming"` | **scheme** — scheme (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 拼音) |
 | `[ime] commit` | `"default"` | **commit method** — when a finished code goes to the page (`default` the scheme's own, `delayed` delayed (頂字), `unique` unique, `fluency` whole-sentence) |
 | `[ime] start` | `false` | **start** — start |
-| `[ime] system` | `"auto"` | **system** — system (`auto` system.auto, `keep` system.keep) |
-| `[panel] display` | `"box"` | **display** — display (`box` display.box, `bottom` display.bottom, `inline` display.inline) |
-| `[panel] inline_preedit` | `"off"` | **preedit** — preedit (`off` inline-preedit.off, `composition` preedit.code, `preview` preedit.top) |
+| `[ime] system` | `"auto"` | **system** — system (`auto` auto, `keep` leave it) |
+| `[panel] display` | `"box"` | **display** — display (`box` box, `bottom` bottom line, `inline` in the line) |
+| `[panel] inline_preedit` | `"off"` | **preedit** — preedit (`off` inline-preedit.off, `composition` the code in the text, `preview` the first candidate in the text) |
 | `[panel] page_size` | `6` | **page size** — page size (1–9) |
 | `[panel] markers` | `"１２３４５６７８９"` | **markers** — markers |
 | `[editor] show_chaifen` | `false` | **show chaifen** — show chaifen |
@@ -83,7 +83,7 @@
 | `[editor] completion_page_size` | `6` | **completion page size** — How many items the word, code and shell completion lists show at once (1–20) |
 | `[editor] indent_width` | `4` | **indent width** — indent width (1–16) |
 | `[editor] tab_width` | `8` | **tab width** — tab width (1–16) |
-| `[editor] tab_inserts` | `"spaces"` | **tab inserts** — tab inserts (`spaces` tab inserts.spaces, `tab` tab inserts.tab) |
+| `[editor] tab_inserts` | `"spaces"` | **tab inserts** — tab inserts (`spaces` spaces, `tab` a tab) |
 | `[editor] smart_case` | `true` | **smart case** — searching: no capital in the pattern ignores case, one capital respects it |
 | `[editor] fuzzy_search` | `false` | **fuzzy search** — fuzzy search |
 
