@@ -83,6 +83,27 @@ reads it, so a hard-wrapped English paragraph comes out as one paragraph.
 `:export csv` and `:export tsv` write only the table under the cursor, not the
 whole document, and leave the buffer as it is. See [Tables](tables.md).
 
+## From the command line
+
+`ye --export` does the same without opening the editor, and writes over a
+file that is already there, as a compiler would:
+
+```
+ye --export html ch1.md            ch1.md → ch1.html, beside it
+ye --export typst ch1.md           ch1.md → ch1.typ
+ye --export pdf book.typ           book.typ → book.pdf
+ye --export pdf ch1.md             Markdown → Typst → PDF
+ye --export tsv parts.csv          a table file in the other format
+ye --export html --out out/a.html ch1.md
+```
+
+The path written is printed, one a line, so a script can pick it up; several
+files may be named at once. `pdf` needs the [Typst](https://typst.app)
+compiler on the PATH (`brew install typst`): a `.typ` file is compiled as it
+is, with `#include` and images resolved from its own folder; a Markdown file
+goes through the Typst export above first. Your config's paper, layout and
+ruby settings apply, as they do in the editor.
+
 ## Seeing it before you export
 
 `:view-preview` shows the typeset result in a browser while you write: a live
