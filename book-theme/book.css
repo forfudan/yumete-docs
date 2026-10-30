@@ -14,8 +14,6 @@ kbd {
   line-height: 1.5;
   white-space: nowrap;
 }
-.twin { font-size: 0.9em; margin-inline-end: 1em; color: var(--icons); text-decoration: none; }
-.twin:hover { color: var(--icons-hover); }
 
 /* Terminal cells in code blocks: see cells.js. */
 pre .cell1,
@@ -33,4 +31,30 @@ pre.cjk,
 pre.cjk code {
   /* mdBook sets its code font with !important, so this one has to say it too. */
   font-family: "LXGW WenKai Mono TC", var(--mono-font, monospace) !important;
+}
+
+/* Keymap in the top bar (2026-10-30): a word, not an icon, because it is the
+   one page a reader comes back to. */
+.right-buttons .keymap-link {
+  display: inline-block;
+  margin: 0 0.6em;
+  font-size: 0.9em;
+  line-height: var(--menu-bar-height);
+  color: var(--icons);
+  text-decoration: none;
+}
+.right-buttons .keymap-link:hover {
+  color: var(--icons-hover);
+}
+/* The switch to the site rendering, at the foot of the sidebar. */
+.sidebar-scrollbox .twin {
+  display: block;
+  margin: 1.5em 0 1em;
+  padding-inline-start: 1.5em;
+  font-size: 0.85em;
+  color: var(--sidebar-non-existant);
+  text-decoration: none;
+}
+.sidebar-scrollbox .twin:hover {
+  color: var(--sidebar-active);
 }
