@@ -554,7 +554,7 @@ keys, so you do not have to remember them.
 | `Space z e` then `o` `c` `p` | code shown: off, composition, preview | `:yume-inline-preedit` |
 | `Space z y` | turn prediction on or off | `:yume-autocompletion toggle` |
 | `Space z i` | pick a scheme from the list | `:yume-scheme` |
-| `Space z n` | switch to the next scheme | |
+| `Space z n` | switch to the next scheme that can load, installed or built in; the rest are skipped | |
 | `Space z 3`–`9` | candidates on a page | `:yume-menu-size` |
 | `Space z /` | show or hide the 拆分 beside each candidate | `:yume-chaifen toggle` |
 | `Space z t` | use the installed table | `:yume-installed` |
@@ -565,6 +565,9 @@ Where 宇浩 has a Control-Shift shortcut for the same thing, the letter after
 `Space z` is the same letter: `m` for ⌃⇧M (commit method), `y` for ⌃⇧Y
 (prediction), `n` for ⌃⇧N (next scheme), and the digits for ⌃⇧3 to ⌃⇧9 (page size). If you know one, you
 know the other.
+
+`Space z m`, `Space z y` and `Space z /` run the `:yume-*` commands beside
+them, so without a loaded 碼表 they are refused the same way the commands are.
 
 `Esc` closes the menu. A key it does not know shows the list again.
 
@@ -613,12 +616,13 @@ so yumete standing it aside does not mute it in your browser.
 
 yumete gives the keyboard back:
 
-- when you quit, including after a crash;
+- when you quit, including after a crash, and on macOS when the terminal
+  window closes;
 - when `:!` hands the screen to another program;
 - when the terminal loses focus, so that typing in another window works.
 
-If yumete is killed without a chance to say so (for example, you close the
-terminal window), 宇浩 on macOS notices that the program is gone and resumes on
+If yumete is killed without a chance to say so (for example, with `kill -9`),
+宇浩 on macOS notices that the program is gone and resumes on
 its own.
 
 Losing focus depends on the terminal reporting it. Most modern terminals do.

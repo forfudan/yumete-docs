@@ -29,7 +29,7 @@ first one that appears the same number of times on every line and gives at least
 two columns. The status line says what it guessed:
 
 ```
-this file looks Tab-delimited, so it opens as a table; t o for the source
+this file looks Tab-delimited, so it opens as a table; ␣t o for the source
 ```
 
 If the guess is wrong, press `Space t o` once. yumete remembers that choice for

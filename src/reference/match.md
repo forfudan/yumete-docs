@@ -25,6 +25,10 @@ stands on a bracket, its partner is highlighted, so you can see where `mm`
 will land before you press it. Quotes are not matched this way: a `"` looks
 the same at both ends, so there is no telling which way to go.
 
+With the cursor off a bracket, `mm` does not move. Under the vim keymap `%`
+looks along the line instead, as vim's does: it jumps to the partner of the
+first bracket further along the line.
+
 In a table, a bracket is only matched inside its own cell.
 
 ## Select inside and around: `mi` and `ma`

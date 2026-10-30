@@ -157,7 +157,7 @@ There is one line per character, not per place, with the first place it
 appears, how many times in all, and its Unicode block:
 
 ```
-37: 「𠮷」 is in no standard (CJK-B), 412 times in all
+37: 「𠮷」 is in no standard (CJK-B), occurrences in the file: 412
 ```
 
 The check reads the character sets from the input method's data, so it needs a
