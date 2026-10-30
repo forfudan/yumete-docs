@@ -409,7 +409,9 @@ heading off, edit row 1 like any other row, and turn it back on.
 ### Lining up a Markdown table in the file
 
 The basic view draws a Markdown table lined up on screen, but the file keeps the
-spaces you typed. `Space t F` writes the alignment into the file, so the table also
+spaces you typed. A table written without its outer pipes (`a | b` over
+`--- | ---`, which GitHub allows) is read as one too, and `Space t F` writes the
+pipes in. `Space t F` writes the alignment into the file, so the table also
 looks right on GitHub or in another editor. The widths are measured in terminal
 columns, so a column of Chinese lines up too. If the table has no `| --- |` row
 yet, yumete adds one.
