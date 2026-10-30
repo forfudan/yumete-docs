@@ -1,61 +1,80 @@
 # Windows and the sidebar
 
-The screen holds up to four **regions**:
+The screen is divided into **regions** of two kinds:
 
-- the main editor region, where you write;
-- a second editor region below it, when you split;
-- the left sidebar;
-- the right sidebar.
+- **windows**, where you write — one to start with, as many as you split;
+- the two **sidebars**, left and right, each holding one panel at a time.
 
-Editor regions and sidebars are moved between, opened and closed with one
-group of keys. The group has two doors, `C-w` and `Space w`, with the same
-letters after either, as in helix.
+Windows and sidebars are moved between, opened and closed with one group of
+keys. The group has two doors, `C-w` and `Space w`, with the same letters
+after either, as in helix.
 
 ## Region keys
 
 | Key | Action |
 | --- | --- |
-| `C-w w` | go to the next open region |
-| `C-w h` `C-w l` | go to the left / right sidebar, if it is open |
-| `C-w k` `C-w j` | go to the main / second editor region, if it is open |
+| `C-w w` | go to the next open region: the windows in order, then the left sidebar, then the right |
+| `C-w h` `C-w j` `C-w k` `C-w l` | go to the region in that direction, if there is one |
+| `C-w v` | open a window beside this one and go there |
+| `C-w s` | open a window below this one and go there |
 | `C-w e` `C-w i` | open or close the left / right sidebar; the keys stay where they are |
 | `C-w E` `C-w I` | open the left / right sidebar and go into it |
-| `C-w s` `C-w v` | split: open the second editor region and go there |
 | `C-w q` | close the region you are in |
-| `C-w o` | keep only this editor region; close the rest |
+| `C-w o` | keep only this window; close every other window and both sidebars |
 
 You can keep `Ctrl` held: `C-w C-w` is the same as `C-w w`, and so on for the
 other letters. The arrow keys work in place of `h` `j` `k` `l`.
 
-Going and opening are separate. `C-w w` and `C-w h` `j` `k` `l` only move
-among regions that are open; where nothing is open, they do nothing. To open
-a sidebar use `C-w e` or `C-w E`, and to open a second editor region use
+Going and opening are separate. `C-w w` and the direction keys only move
+among regions that are open; where nothing lies that way, they do nothing. To
+open a sidebar use `C-w e` or `C-w E`, and to open a window use `C-w v` or
 `C-w s`.
 
 Lower case leaves the keys where they are. `C-w e` folds the left sidebar
 away or brings it back while you keep typing in the text. Upper case `C-w E`
 opens the sidebar and moves into it, and never closes it.
 
-`C-w q` in the only region left does nothing but say so: closing it would
+`C-w q` in the only window left does nothing but say so: closing it would
 mean leaving, and that is `:q`.
 
-## The second editor region
+## Windows
 
-`C-w s` opens a second editor region below the first, showing the same file.
-`C-w j` and `C-w k` move between the two, and `C-w q` closes the one you are
-in. `:q` does the same while the window is split: it closes this region and
-leaves the file open, changes and all. In the last region `:q` works as
-usual (see [Saving and quitting](./files.md#saving-and-quitting)).
+A new window opens on the file you are in, at the place you are at, and
+takes the keys. From then on it is its own: `:open`, the file picker, the
+Explorer and the Buffers panel change the file in the window you are in and
+no other, so two windows can show two files, or two places in one.
 
-Some commands use this region to show you something without moving you:
+```
+C-w v             a window beside this one
+C-w s             a window below this one
+:vsplit ch2.md    a window beside, with that file in it
+:hsplit notes.md  a window below, with that file in it
+```
+
+The words are positions, not directions: on a vertical page, where the text
+itself runs down the columns, "beside" still means side by side and "below"
+still means under. On a vertical page a window beside opens on the left,
+the way the reading runs.
+
+Every split halves the room the window had, and you may go on splitting
+until a window would be too narrow for its text. `C-w q` and `:q` close the
+window you are in and give its room back to the one next to it; the file
+stays open, changes and all. In the last window `:q` works as usual (see
+[Saving and quitting](./files.md#saving-and-quitting)). `C-w o` keeps the
+window you are in and closes the rest.
+
+The rule between two windows one above the other carries the name of the
+file in the window you are not in. Each window keeps its own scroll, and
+long lines fold to each window's own width.
+
+Some commands use another window to show you something without moving you:
 
 - `g?` shows the next match of the word under the cursor there (see
   [Search and pickers](./search.md));
 - `:git-show` opens the committed copy of the file there, read-only (see
   [Files, saving and changes](./files.md)).
 
-`C-w v` does the same as `C-w s` for now: the second region always sits below
-the first.
+They use the window next to yours, opening one below if there is none.
 
 ## Sidebars
 
