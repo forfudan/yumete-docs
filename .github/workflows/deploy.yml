@@ -43,14 +43,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build with VitePress
+      # Both views: VitePress at the root, mdBook under /book/ (scripts/book.mjs
+      # fetches a pinned mdBook on this runner).
+      - name: Build the site and the book
         env:
           NODE_ENV: production
           # The two together are what puts the site under /yumete-docs/.
           # Serving it from a domain of its own means dropping this line; see
           # README.md.
           GITHUB_PAGES: true
-        run: pnpm exec vitepress build src
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -80,5 +80,11 @@ function mdbook() {
   return bin;
 }
 
-execFileSync(mdbook(), ["build", root], { stdio: "inherit" });
+// The book's own address, for its 404 page: under the site's base on GitHub
+// Pages (the same condition config.mts reads), at /book/ locally.
+const base = process.env.NODE_ENV === "production" && process.env.GITHUB_PAGES ? "/yumete-docs/" : "/";
+execFileSync(mdbook(), ["build", root], {
+  stdio: "inherit",
+  env: { ...process.env, MDBOOK_OUTPUT__HTML__SITE_URL: base + "book/" },
+});
 console.log("book: dist/book written");
