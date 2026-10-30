@@ -16,9 +16,9 @@
 | `[editor] insert_final_newline` | `true` | **add a final line ending** — on save, add the line ending this file's own lines use when the last one is missing it; an empty file stays empty |
 | `[editor] soft_wrap` | `true` | **soft wrap** — long lines fold when set across; off, they run past the right edge |
 | `[editor] hanging_punctuation` | `false` | **hanging punctuation** — 。，、？！：；「」 hang in the margin instead of taking a cell |
-| `[editor] margin` | `"dense"` | **interlinear lane** — when to show the lane that carries readings, emphasis and 平仄 (`never` never, `dense` when dense, `loose` when loose, `always` always) |
+| `[editor] margin` | `"dense"` | **margin** — when to show the lane that carries readings, emphasis and 平仄 (`never` never, `dense` when dense, `loose` when loose, `always` always) |
 | `[editor] tatechuyoko` | `4` | **tatechuyoko** — half-width characters set across inside one cell, so a year is not one digit to a row (2–8) |
-| `[editor] paper_ticks` | `0` | **paper ticks** — a faint tick in the margin every so many cells, the way squared paper has (0–64) |
+| `[editor] paper_ticks` | `0` | **paper ticks** — a faint tick in the margin every so many cells, the way squared paper does (0–64) |
 | `[editor] ambiguous_width` | `"auto"` | **ambiguous width** — whether East Asian ambiguous-width characters such as — and … take one cell or two; change it if the caret sits off its character (`auto` ask the terminal, `wide` two cells, `narrow` one cell) |
 
 ### marks
@@ -28,7 +28,7 @@
 | `[editor] line_numbers` | `"absolute"` | **line numbers** — the column on the left that numbers the lines; relative numbers count from the caret, which makes jumps easy to type (`absolute` absolute, `relative` relative, `none` none) |
 | `[editor] line_number_fill` | `false` | **line number fill** — fill the line-number column with a faint ground, not just the number |
 | `[editor] diff_gutter` | `true` | **diff gutter** — the cell beside the line number marks lines that differ from git, or from the saved file outside git |
-| `[editor] word_level` | `"balanced"` | **word level** — how readily characters are joined into a word: strict takes only the certain ones, loose whatever the dictionary has (`strict` strict, `balanced` balanced, `full` loose) |
+| `[editor] word_level` | `"balanced"` | **word level** — how readily characters are joined into a word: strict takes only the certain ones, loose whatever the dictionary has (`strict` strict, `balanced` balanced, `full` full (loose)) |
 | `[editor] word_mark` | `"color"` | **word mark** — how word boundaries are shown (`off` none, `color` colour, `ink` brightness, `tint` tint, `line` underline) |
 | `[editor] code_highlight` | `true` | **code highlight** — code in a fence is coloured by its own language; off, the whole block is one colour |
 | `[editor] show_ruby` | `false` | **show ruby** — lay readings out beside their characters. Off by default: what is in the file is what is on the page |
@@ -67,20 +67,20 @@
 | `[ime] scheme` | `"lingming"` | **scheme** — which 碼表 to type with. 靈明 and 星陳 come built in; the others need the data installed (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 拼音) |
 | `[ime] commit` | `"default"` | **commit method** — when a finished code goes to the page (`default` the scheme's own, `delayed` delayed (頂字), `unique` unique, `fluency` whole-sentence) |
 | `[ime] start` | `false` | **load the 碼表 at start** — off by default: the word model loads as usual, and the 碼表 waits for the first Chinese you type |
-| `[ime] system` | `"auto"` | **move the system input method aside in Normal mode** — in Normal mode, ask the system's input method to step aside, so it does not eat your keys (`auto` auto, `keep` leave it) |
+| `[ime] system` | `"auto"` | **move the system input method aside in Normal mode** — while yumete reads the keys itself (Normal mode, the command line), ask the system's input method to step aside, so it does not eat them (`auto` auto, `keep` leave it) |
 | `[panel] display` | `"box"` | **where candidates go** — where the candidates are drawn while you type: a box by the caret, the bottom line of the window, or the line under the caret (`box` box, `bottom` bottom line, `inline` in the line) |
 | `[panel] inline_preedit` | `"off"` | **preedit** — whether what you are typing is written in the candidate bar or in the text, and if in the text, the code or the first candidate (`off` in the candidate bar, `composition` the code in the text, `preview` the first candidate in the text) |
 | `[panel] page_size` | `6` | **page size** — how many candidates a page lists (1–9) |
 | `[panel] markers` | `"１２３４５６７８９"` | **markers** — the characters the nine candidate numbers are drawn as |
-| `[editor] show_chaifen` | `false` | **show chaifen** — while typing, show each candidate's 拆分 beside it |
+| `[editor] show_chaifen` | `false` | **show 拆分** — while typing, show each candidate's 拆分 beside it |
 
 ### editing
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] word_completion` | `4` | **word completion** — After this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20) |
-| `[editor] auto_pairs` | `"basic"` | **auto-pairs** — Typing an opening bracket or quote adds its closer; typing the closer then steps over it (`off` off, `basic` basic, `full` full) |
-| `[editor] completion_page_size` | `6` | **completion page size** — How many items the word, code and shell completion lists show at once (1–20) |
+| `[editor] word_completion` | `4` | **word completion** — after this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20) |
+| `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it (`off` off, `basic` basic, `full` full) |
+| `[editor] completion_page_size` | `6` | **completion page size** — how many items the word, code and shell completion lists show at once (1–20) |
 | `[editor] indent_width` | `4` | **indent width** — how many columns > adds and < takes away, and how many spaces Tab types (1–16) |
 | `[editor] tab_width` | `8` | **tab width** — how far a tab character reaches: to the next multiple of this. Code tables line up by it (1–16) |
 | `[editor] tab_inserts` | `"spaces"` | **tab inserts** — what Tab types in Insert mode; Shift-Tab types the other (`spaces` spaces, `tab` a tab) |
@@ -103,5 +103,5 @@
 | `[editor] which_wrap` | `"b"` | **which wrap** — which keys cross a line end, spelled as in vim: b h l < > ~ — vim keys only |
 | `[editor] language_key` | `"C-^"` | **language key** — the key that switches 中/ABC on a terminal that cannot report a lone Shift |
 | `[keys] flavor` | `false` | **Yumete keymap flavour** — with this on, `d` and `c` only delete and `A-d`/`A-c` are the ones that cut, so a tidy-up between a copy and a paste cannot eat the copy. `[keys.normal]` still wins |
-| `[keys] preset` | `"helix"` | **key preset** — whether the keys follow helix or vim (`helix` helix, `vim` vim) |
+| `[keys] preset` | `"helix"` | **keymap** — whether the keys follow helix or vim (`helix` helix, `vim` vim) |
 
