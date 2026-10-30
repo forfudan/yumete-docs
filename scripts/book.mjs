@@ -1,7 +1,7 @@
 // The book view (2026-10-29): the site's pages rendered by mdBook — at the
-// root since 2026-10-30, with the VitePress rendering under /site/, as readers
-// asked. mdBook empties its build directory, so it builds first and the site
-// is written into dist/site afterwards (package.json).
+// root since 2026-10-30, with the VitePress rendering under /web/, as readers
+// asked. mdBook empties its build directory, so it builds first and the web
+// rendering is written into dist/web afterwards (package.json).
 //
 // The pages are written once, in `src/`, for both renderings. mdBook needs
 // three things VitePress does not: no YAML front matter (it would print it),
@@ -95,13 +95,14 @@ execFileSync(mdbook(), ["build", root], {
 // and bookmarks still point there. Cloudflare reads `_redirects`; a static
 // page covers the one address a host without it is most likely to get.
 const dist = path.join(root, "dist");
-fs.writeFileSync(path.join(dist, "_redirects"), `${base}book ${base} 301
-${base}book/* ${base}:splat 301
-`);
+fs.writeFileSync(
+  path.join(dist, "_redirects"),
+  `${base}book ${base} 301\n${base}book/* ${base}:splat 301\n${base}site/* ${base}web/:splat 301\n`,
+);
 fs.mkdirSync(path.join(dist, "book"), { recursive: true });
 fs.writeFileSync(
   path.join(dist, "book/index.html"),
   `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${base}"><title>yumete</title><a href="${base}">The book has moved to the root.</a>
 `,
 );
-console.log("book: dist written (the site follows under dist/site)");
+console.log("book: dist written (the web rendering follows under dist/web)");

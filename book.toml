@@ -1,5 +1,5 @@
 # The book view of the site: the same pages, rendered by mdBook at the root
-# (2026-10-30, as readers asked); the VitePress rendering sits under /site/.
+# (2026-10-30, as readers asked); the VitePress rendering sits under /web/.
 #
 # `scripts/book.mjs` stages the pages into `.book/src` (front matter off,
 # includes inlined, `SUMMARY.md` written from `src/.vitepress/pages.json`) and
