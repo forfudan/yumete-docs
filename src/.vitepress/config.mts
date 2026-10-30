@@ -8,12 +8,12 @@ import PAGES from "./pages.json";
 // GitHub Pages puts it under the repository name; a domain of its own would
 // serve it at the root. Moving it is this one line plus a `src/public/CNAME`
 // holding the domain — nothing else in the repo knows the path. See README.md.
-// The site rendering sits under /site/ (2026-10-30, as readers asked); the
+// The web rendering sits under /web/ (2026-10-30, as readers asked); the
 // book rendering has the root. On GitHub Pages both sit under the repository.
 const BASE =
   process.env.NODE_ENV === "production" && process.env.GITHUB_PAGES
-    ? "/yumete-docs/site/"
-    : "/site/";
+    ? "/yumete-docs/web/"
+    : "/web/";
 
 // Translations are written in `src/zht/` and `src/zhs/`. They stay out of the
 // language menu until there is enough of one to be worth switching to: flip a
@@ -98,7 +98,7 @@ export default defineConfig({
   description: "A terminal text editor for CJK users, with Helix and vim keys and the Yume input method built in.",
   lang: "en",
   base: BASE,
-  outDir: "../dist/site",
+  outDir: "../dist/web",
   // Generated tables (`ye --docgen`) are included into pages, not pages of
   // their own.
   srcExclude: ["generated/**"],

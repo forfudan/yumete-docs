@@ -1,16 +1,16 @@
 <script setup lang="ts">
 // "Book view": the same page in the mdBook rendering, which has the root
-// since 2026-10-30 (this rendering sits under /site/).
+// since 2026-10-30 (this rendering sits under /web/).
 import { computed } from "vue";
 import { useData, useRoute } from "vitepress";
 
 const route = useRoute();
 const { site } = useData();
 const href = computed(() => {
-  // The route carries the site's base (/site/, or /yumete-docs/site/ on
+  // The route carries the site's base (/web/, or /yumete-docs/web/ on
   // GitHub Pages); the book is one step above it.
   const base = site.value.base;
-  const root = base.replace(/site\/$/, "");
+  const root = base.replace(/web\/$/, "");
   const path = route.path.startsWith(base) ? "/" + route.path.slice(base.length) : route.path;
   const here = path.replace(/^\/(zht|zhs)\//, "/").replace(/\.html$/, "");
   const page = here === "/" ? "introduction" : here.replace(/^\//, "").replace(/\/$/, "");
