@@ -143,6 +143,53 @@ The line number is printed only on the first row of a paragraph.
 Wrap is for horizontal layout. A vertical column has its own length, set with
 `:view-wrap-vertical`; see [Vertical layout](vertical.md).
 
+## Hard wrap: `:hard-wrap`
+
+Soft wrap folds long lines on screen and leaves the file alone. `:hard-wrap`
+rewrites the file's own line breaks, like vim's `gq`, but it reads the text
+first and never changes what it means:
+
+```
+:hard-wrap 50     the selected lines, or the paragraph under the cursor,
+                  re-filled to fifty cells
+:hard-wrap 0      each paragraph joined into one line
+:hard-wrap        the width from [editor] hard_wrap; unset, it says so
+```
+
+With nothing selected it takes the unit the cursor is in — a paragraph, a
+list item, a block of comments — and nothing else; `%` first takes the whole
+file. One `u` takes it back.
+
+What it respects, by syntax:
+
+- **Markdown**: a line ending in two spaces or a `\` is a hard break and
+  stays exactly as written; code fences and what is in them, indented code,
+  tables, headings, a setext underline and the line above it, rules, HTML
+  blocks, front matter and reference definitions are not touched; quotes keep
+  their `>`, list items and footnotes hang under their marker. A continuation
+  line never begins with something that would open a block there, such as `-`
+  or `1.`; code spans, `[[links]]` and `[text](url)` are never broken inside.
+- **Typst**: headings, `#` code lines, raw blocks, display maths and block
+  comments are left alone; `\` at the end of a line is a hard break; items
+  hang; `//` comments re-fill behind their marker.
+- **Code**: only comments. A run of lines with the same indent and marker is
+  one unit and the marker is written again on every line; `///`, `//!` and
+  `//` are never merged into one another. A block comment's ` * ` rail is
+  kept, its opening and closing lines are left alone. Every line of code, and
+  a comment that follows code on the same line, is left as it is. A Python or
+  Mojo docstring, the `"""` right after a `def` or `class` or at the top of
+  the file, is documentation and re-fills; every other string is never
+  touched. A comment's body is read as Markdown in turn, so a fenced example
+  inside a `///` is skipped.
+- **Chinese**: width is counted in cells, so fifty is twenty-five characters.
+  A line breaks between any two characters, but never starts with `。，、」）`
+  and never ends with `「（`; a word or a number is never split. Two lines
+  joined across Chinese take no space between them, and a space where a letter
+  is on either side, as `J` joins them.
+
+`gq` and `:reflow` stay what vim's and helix's are: plain fillers that know
+nothing of the text, for when that is what you want.
+
 ## The measure
 
 A measure writes the page narrow. `:view-wrap 50` wraps every line at column 50
