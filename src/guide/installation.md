@@ -90,7 +90,8 @@ You need:
 - a stable Rust toolchain (`rustup` is the usual way to get one);
 - a checkout of the `yume` repository (the input method engine)
   **beside** this one, as `../yume`. The input method crate depends on it by
-  path, so nothing builds without it. Set `YUME_ROOT` if it lives elsewhere.
+  that path, fixed in `Cargo.toml`, so nothing builds without it there.
+  (`YUME_ROOT` only tells `scripts/build.sh` where yume's source tables are.)
 
 The `yume` repository is not public. If you cannot clone it, use one of the
 packages above.
@@ -112,7 +113,7 @@ warning if that directory is not on your `PATH`.
 | `--no-link` | leave the global commands alone |
 | `YUMETE_BIN_DIR=/usr/local/bin` | link there instead of `~/.local/bin` |
 
-The script never replaces a real file at either path. If `~/.local/bin/ye`
+On macOS and Linux the script never replaces a real file at either path. If `~/.local/bin/ye`
 belongs to another program, it says so and skips that name.
 
 The first build downloads the 靈明 and 星陳 tables it carries and caches them in
@@ -125,7 +126,8 @@ are online.
 Run the same script under Git Bash (it comes with Git for Windows) or MSYS2, not
 PowerShell. The binary is `yumete.exe`, data goes to `%APPDATA%\yumete`, and the
 global `yumete` and `ye` are copies rather than links, since a link needs
-Developer Mode. A copy is only as new as the last build that made it.
+Developer Mode, and each build overwrites them. A copy is only as new as the
+last build that made it.
 
 ## Next
 

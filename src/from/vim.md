@@ -26,7 +26,8 @@ motion is told so.
 | --- | --- |
 | words | `w` `W` `b` `B` `e` `E` `ge` `gE` |
 | in the line | `0` `^` `$`, `h` `l` |
-| whole lines | `j` `k` `G` `gg`, and `H` `M` `L` |
+| whole lines | `j` `k` `G` `gg` `+` `-` `Enter`, and `H` `M` `L` |
+| brackets | `%`: to the other half, inclusive, looking along the line when the cursor is not on one |
 | paragraphs, sentences | `{` `}`, `(` `)` |
 | find a character | `f` `F` `t` `T`, and `;` `,` to repeat the last one |
 | text objects | `i` and `a` with an object: `diw`, `ci"`, `ya(`, `dap` |
@@ -146,8 +147,6 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 - There are no named macros: `qa`…`q` and `@a` are not there. There is one
   macro, the last one recorded; `q` records it and `Q` plays it. See
   [Registers](../reference/registers.md).
-- `%`, `+`, `-` and `Enter` move the cursor but are not motions after an
-  operator, so `d%` and `d+` do nothing.
 - The code objects (functions, parameters, tests, HTML elements) have no vim
   spelling, and neither has vim's tag object `it`.
 - vim-surround's visual `S` is not there. Use `ys` with a motion.

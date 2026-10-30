@@ -150,7 +150,7 @@ back, so editing it does nothing. To keep a word for good, copy it into
 Three keys jump to a place on the screen. `C-o` takes you back.
 
 **`gw`: any clause.** Every clause on the screen gets a letter label on its first
-character; type the label to jump there. Fewer than 26 places and each label is
+character; type the label to jump there. Up to 26 places and each label is
 one letter; more, and labels take two. The places are the units `e` stops at,
 so `那年冬天，雪下得早。` gets two labels, not one per character. It works the same on a
 vertical page, one label to a column.
