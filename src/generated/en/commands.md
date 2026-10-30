@@ -45,6 +45,9 @@
 | `:wiki-edit` |  | open this project's .yumete/wiki.md, existing or not |
 | `:wiki-global` |  | open the global wiki.md — what a whole series shares |
 | `:keymap-yumete-flavor` | `on｜off｜toggle` | the Yumete keymap flavour: a small set of departures over helix/vim. Bare reports it |
+| `:links` | `list｜graph｜off` | the links panel: what [[links]] here and what this links to — list, graph, or off |
+| `:links-export` |  | write the whole project's link graph to .yumete/graph.html and open it in the browser |
+| `:links-reindex` |  | read the project's [[links]] again |
 | `:wiki-panel` | `on｜off｜toggle` | keep the entry in the sidebar — while it is open it no longer floats |
 | `:wiki-mark` | `color｜line｜off` | how a wiki name is marked in the text: 金, an underline, or not at all |
 | `:wiki-where` |  | where the wiki looked: which files were read, how many entries each, what cannot be marked |
@@ -132,7 +135,7 @@
 | `:search-buffers` `:sb` |  | search every open buffer |
 | `:search-working` `:sw` |  | search the working directory |
 | `:search-project` `:sp` |  | search the project |
-| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜info` | the sidebar: bare says what is open, `off` closes it, a name opens that panel |
+| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | the sidebar: bare says what is open, `off` closes it, a name opens that panel |
 | `:table-detail` | `on｜off｜toggle` | the record panel: on, off, or a width |
 | `:table-numbers` | `on｜off｜toggle` | the row of column numbers — what ␣t3/ and ␣t20,20g count with |
 | `:table-header` | `on｜off｜toggle` | whether the first row names the columns or is a row like any other |
