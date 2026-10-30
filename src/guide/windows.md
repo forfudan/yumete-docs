@@ -17,6 +17,7 @@ after either, as in helix.
 | `C-w h` `C-w j` `C-w k` `C-w l` | go to the region in that direction, if there is one |
 | `C-w v` | open a window beside this one and go there |
 | `C-w s` | open a window below this one and go there |
+| `C-w n s` `C-w n v` | open a blank window below or beside this one and go there |
 | `C-w e` `C-w i` | open or close the left / right sidebar; the keys stay where they are |
 | `C-w E` `C-w I` | open the left / right sidebar and go into it |
 | `C-w q` | close the region you are in |
@@ -49,7 +50,12 @@ C-w v             a window beside this one
 C-w s             a window below this one
 :vsplit ch2.md    a window beside, with that file in it
 :hsplit notes.md  a window below, with that file in it
+C-w n s, :hnew    a blank window below, on a new empty buffer
+C-w n v, :vnew    a blank window beside, on a new empty buffer
 ```
+
+With the vim key preset `C-w n` (or `C-w C-n`) opens the blank window at
+once, below, as vim does.
 
 The words are positions, not directions: on a vertical page, where the text
 itself runs down the columns, "beside" still means side by side and "below"

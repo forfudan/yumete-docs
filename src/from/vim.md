@@ -178,9 +178,11 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
   spelling, and neither has vim's tag object `it`.
 - vim-surround's visual `S` is not there. Use `ys` with a motion.
 - `gh` and `gl` do nothing; use `0` and `$`.
-- `:sp` is `:search-project`, not a split. Split with `C-w s`; there is no
-  vertical split. With the window split, `:q` closes the region you are in,
-  as vim's `:q` closes a window.
+- `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
+  side by side with `C-w v` or `:vsplit`. `C-w n` opens a blank window below
+  at once, as in vim; `:new` is helix's: a new empty buffer in this window,
+  and the split versions are `:hnew` and `:vnew`. `:q` closes the region you
+  are in, as vim's `:q` does.
 - `:set` opens the settings panel. It does not take `option=value`; each
   option is its own command or config key. See
   [Settings](../reference/settings.md).
