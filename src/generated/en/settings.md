@@ -34,7 +34,7 @@
 | `[editor] show_ruby` | `false` | **show ruby** — lay readings out beside their characters. Off by default: what is in the file is what is on the page |
 | `[editor] indent_hint` | `"none"` | **indent hint** — on a vertical page, a mark at the head of each paragraph, so the breaks in a long one are easy to find (`none` none, `symbol` a mark, `color` colour) |
 | `[editor] indent_symbol` | `"↵"` | **indent symbol** — which character the paragraph mark is; used when the indent hint is set to a mark |
-| `[editor] table_rules` | `"line dash"` | **table rules** — how the column rules of a table are drawn (`line dash` table rules.line dash, `line` lines, `line double` table rules.line double, `color` colour, `off` none) |
+| `[editor] table_rules` | `"line dash"` | **table rules** — how the column rules of a table are drawn (`line dash` lines and dashes, `line` lines, `line double` lines and double lines, `color` colour, `off` none) |
 | `[editor] char_info` | `true` | **char info** — the right end of the status line names the character under the caret: its code point and Unicode block |
 | `[editor] status_count` | `"text"` | **count on the status line** — how long the file is, on the status line, and the selection too when there is one (`text` text files, `all` every file, `off` off) |
 | `[editor] unicode_alarm` | `true` | **suspicious characters** — tint the cell after a zero-width or bidi control, and any space that is not a plain space |
@@ -69,7 +69,7 @@
 | `[ime] start` | `false` | **load the 碼表 at start** — off by default: the word model loads as usual, and the 碼表 waits for the first Chinese you type |
 | `[ime] system` | `"auto"` | **move the system input method aside in Normal mode** — in Normal mode, ask the system's input method to step aside, so it does not eat your keys (`auto` auto, `keep` leave it) |
 | `[panel] display` | `"box"` | **where candidates go** — where the candidates are drawn while you type: a box by the caret, the bottom line of the window, or the line under the caret (`box` box, `bottom` bottom line, `inline` in the line) |
-| `[panel] inline_preedit` | `"off"` | **preedit** — whether what you are typing is written in the candidate bar or in the text, and if in the text, the code or the first candidate (`off` inline-preedit.off, `composition` the code in the text, `preview` the first candidate in the text) |
+| `[panel] inline_preedit` | `"off"` | **preedit** — whether what you are typing is written in the candidate bar or in the text, and if in the text, the code or the first candidate (`off` in the candidate bar, `composition` the code in the text, `preview` the first candidate in the text) |
 | `[panel] page_size` | `6` | **page size** — how many candidates a page lists (1–9) |
 | `[panel] markers` | `"１２３４５６７８９"` | **markers** — the characters the nine candidate numbers are drawn as |
 | `[editor] show_chaifen` | `false` | **show chaifen** — while typing, show each candidate's 拆分 beside it |
