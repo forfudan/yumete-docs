@@ -169,7 +169,7 @@
 | `:ruby` |  | edit the reading here |
 | `:ruby-render` | `off｜basic｜full` | reading render mode: the source, coloured, laid out beside the base; with no argument it reports the mode |
 | `:ruby-auto` |  | write the readings in, by word (the selection, or the file) |
-| `:ruby-auto-rare` |  | annotate only the characters outside 通用規範漢字表 and its traditional counterparts |
+| `:ruby-auto-rare` |  | annotate only the characters no everyday list carries: 通用規範漢字表, its traditional forms, Taiwan's and Hong Kong's |
 | `:ruby-html` | `on｜off｜toggle` | read `<ruby>` |
 | `:ruby-typst` | `on｜off｜toggle` | read `#ruby(…)` |
 | `:ruby-format` | `html｜typst` | rewrite the readings in another dialect |
