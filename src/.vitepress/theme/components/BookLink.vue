@@ -17,7 +17,10 @@ const href = computed(() => {
 </script>
 
 <template>
-  <a class="book-link" :href="href">Book view</a>
+  <!-- target="_self" keeps VitePress's router from treating the click as a
+       page of its own and showing its 404 (2026-10-30): /book/ is mdBook's,
+       so the browser has to load it. -->
+  <a class="book-link" :href="href" target="_self">Book view</a>
 </template>
 
 <style scoped>
