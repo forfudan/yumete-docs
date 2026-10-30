@@ -95,6 +95,7 @@
 | `:sh` | `<命令>` | run a command and keep its output in a buffer |
 | `:!command` |  | hand the terminal over and watch it run (vi's spelling) |
 | `:which-wrap` | `<字母>` | which keys cross a line end, spelled as in vim: b h l < > ~ — vim keys only |
+| `:line-numbers` `:ln` | `absolute｜relative｜none` | how the gutter counts: absolute, relative to the cursor, or none; bare says which is on |
 | `:view-wrap` | `on｜off｜0｜<幾欄>` | wrap long paragraphs to the next row; `:view-wrap 50` sets a measure, `off` stops wrapping |
 | `:view-wrap-vertical` | `0｜<幾字>` | how many characters go in one vertical column; `0` follows the window |
 | `:view-margin` | `never｜dense｜loose｜always` | margin: the lane for readings, hung marks, emphasis dots and 平仄 |

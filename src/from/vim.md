@@ -75,6 +75,10 @@ A count before `i`, `a`, `I`, `A`, `o` or `O` types the text that many times:
 `5ix` then `Esc` gives five `x`, and `3o甲` then `Esc` gives three lines of
 甲. One `u` takes it all back.
 
+Vim's `relativenumber` option is `:line-numbers relative`: the cursor line shows
+its own number and the rest their distance, so the count for `k` and `j`
+is on the gutter (see [Line numbers](../writing/page#line-numbers-line-numbers)).
+
 ## Text objects
 
 After an operator, or after `v`, the object names are vim's: `w` `W` `s` `p`,
