@@ -12,7 +12,7 @@
 | `gh gl gs` | line start / line end / first non-blank |
 | `C-d C-u` | half a page forward/back; C-n / C-p for two thirds, C-f / C-b for a whole one |
 | `gd gD` | go to / show what this points at: a footnote's note, a component's row |
-| `g/ g?` | where else this word is: / here, ? in the other region |
+| `g/ g?` | where else this word is: / here, ? in the other window |
 | `/ n N` | search, next, previous |
 | `C-o C-i` | jump back / forward again |
 | `M a  'a` | remember this place / go back to it |
@@ -89,10 +89,10 @@
 | `ga` | back to the buffer before this one |
 | `gn / gp` | the next or previous buffer |
 | `gd` | go to definition |
-| `gD` | go to definition in the other region |
+| `gD` | go to definition in the other window |
 | `gr` | every place it is used |
 | `g/` | search the selection |
-| `g?` | search the selection in the other region |
+| `g?` | search the selection in the other window |
 | `gj / gk` | down / up a logical line (with line number) |
 | `g.` | back to the last change |
 | `gt / gc / gb` | the cursor to the top, middle or bottom of the screen |
@@ -150,7 +150,8 @@
 | `C-w h / C-w j / C-w k / C-w l` | go that way |
 | `C-w e / C-w i` | toggle the left / right bar |
 | `C-w E / C-w I` | go into the left / right sidebar |
-| `C-w s` | split in two |
+| `C-w s` | a window below |
+| `C-w v` | a window beside |
 | `C-w q` | close this one |
 | `C-w o` | keep only this one |
 
@@ -166,7 +167,7 @@
 | `Space t x` | convert the table's format (delimiter) |
 | `Space t w` | long cells: wrap / fold / whole |
 | `Space t /` | search down the columns (a column range can be given) |
-| `Space t ?` | search down the columns in the other region |
+| `Space t ?` | search down the columns in the other window |
 | `Space t g` | go to a cell (␣t20,20g) |
 | `Space t r / Space t R` | insert a new row (below / above) |
 | `Space t c / Space t C` | add a column (right / left) |

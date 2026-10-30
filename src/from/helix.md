@@ -47,7 +47,7 @@ sees it.
 | `M` `'` | not bound | `M a` names this place, `' a` goes back to it, across files |
 | `C-c` | comment | not bound; use `Space c` |
 | `C-w` | window mode | regions, also `Space w`: `w` next, `h` `j` `k` `l` move, `s` split, `q` close, `o` only, `e` `i` show or hide the left and right sidebar, `E` `I` go into it |
-| `gd` `gD` | definition, declaration | definition, and definition in the second editor region |
+| `gd` `gD` | definition, declaration | definition, and definition in the other window |
 | `gy` `gi` `gm` | type definition, implementation, last modified file | not bound |
 | `=` `$` | format, keep by shell command | not bound |
 | `A-o` `A-i` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
@@ -61,7 +61,7 @@ does not shift when the labels appear.
 New in the `g` group: `gL` follows a link, `gx` jumps to a word on the screen
 when you type its first two letters, `gz` jumps to a Chinese character when you
 type its pinyin, `g/` searches for the selection, and `g?` shows the results in
-the second editor region.
+the other window.
 
 The `]` and `[` group adds `m` for a merge conflict. In a code file `f`, `t`
 and `c` go to the next function, type and comment, as in helix; `a`, `e`, `T`,

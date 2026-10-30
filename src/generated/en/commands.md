@@ -4,6 +4,8 @@
 | --- | --- | --- |
 | `:cd` | `<path>` | change the working directory |
 | `:pwd` |  | show the working directory |
+| `:vsplit` `:vs` | `<path>` | a window beside this one (as C-w v); with a file, open it there |
+| `:hsplit` `:hs` `:split` | `<path>` | a window below this one (as C-w s); with a file, open it there |
 | `:open` `:o` `:e` `:edit` | `<path>` | open a file |
 | `:new` `:enew` |  | start an empty buffer |
 | `:write` `:w` | `<path>` | save; a path writes a copy, `:write-as` moves to it |
@@ -170,7 +172,7 @@
 | `:export` `:ex` | `html｜typst｜csv｜tsv <path>` | write it out as html or typst, layout and all |
 | `:diff` | `<path>` | what changed, by word rather than by line |
 | `:lsp-rename` | `<新名>` | rename the name under the caret everywhere, through the language server |
-| `:git-show` | `<提交>` | the committed draft, read-only, in the other region |
+| `:git-show` | `<提交>` | the committed draft, read-only, in the other window |
 | `:git-diff` | `<提交>` | against what git has, word by word: HEAD unless a commit is named |
 | `:toc` `:outline` | `<第幾條>` | list the headings; `:toc 3` goes to the third |
 | `:ruby` |  | edit the reading here |

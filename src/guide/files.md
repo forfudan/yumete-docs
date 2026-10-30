@@ -230,7 +230,7 @@ buffer, unsaved changes included.
 ### `:git-show`
 
 `:git-show` opens the committed copy of this file (`HEAD`, or the commit you
-name) read-only in the second editor region, at the line you are on. The keys
+name) read-only in the other window, at the line you are on. The keys
 stay in the file you are writing, so you can read the two side by side.
 Asking again replaces that copy. When git has no answer, such as for a file
 never committed, git's own message is shown.

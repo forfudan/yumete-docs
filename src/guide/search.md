@@ -21,7 +21,7 @@ Where each is on is under [Chinese in a search](#chinese-in-a-search).
 | `?` | search backwards |
 | `n` `N` | next / previous match |
 | `g/` | search for the selection, or the word under the cursor |
-| `g?` | the same, shown in the other editor region |
+| `g?` | the same, shown in the other window |
 | `*` | helix keymap: put the selection in the search register (`n` then finds it) |
 
 `/` opens a `search:` prompt at the bottom of the screen. You can type
@@ -53,7 +53,7 @@ smart_case = false
 
 `g/` takes the selection, or the word under the cursor, and jumps to the next
 place it appears. The text is taken as it stands, so brackets and dots need
-no escaping. `g?` shows the same match in the other editor region, so the
+no escaping. `g?` shows the same match in the other window, so the
 place you are standing stays on screen (see [Windows and the sidebar](./windows.md)).
 
 Under the helix keymap, `*` works as in helix: it puts the selection into the search register without
