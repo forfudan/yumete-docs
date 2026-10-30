@@ -380,14 +380,13 @@ in.
 | `Space t <` `Space t =` `Space t >` | align this column left, centre or right |
 | `Space t F` | line the table up in the file |
 | `Space t H` | switch whether the first row is a heading |
-| `Space t e` | open this table's schema |
 
 Not every table has every key:
 
 | Table | Missing keys | Why |
 | --- | --- | --- |
 | Markdown pipe table | `Space t H`, `Space t e` | The rule row under the heading already says which row is the heading. |
-| CSV, TSV and other table files | `Space t c` `C` `D` `h` `l`, alignment, `Space t F` | The columns belong to the file (and to its schema), so they cannot be added, deleted or moved here. |
+| CSV, TSV and other table files | `Space t c` `C` `D` `h` `l`, alignment, `Space t F` | The columns belong to the file, so they cannot be added, deleted or moved here. |
 | A stretch inside a document | all that change rows or columns | See [A table inside a document](#a-table-inside-a-document). |
 
 `o` and `O` at the cell level also add a row, and drop you straight into its first
@@ -403,7 +402,7 @@ from the first line. `Space t H` (or `:table-header off`) makes the first row an
 ordinary data row, and the columns are named by number instead. Press it again (or
 `:table-header on`) to change back.
 
-This is also how you edit the column names of a CSV without a schema: turn the
+This is also how you edit the column names of a CSV without a `datapackage.json`: turn the
 heading off, edit row 1 like any other row, and turn it back on.
 
 ### Lining up a Markdown table in the file
@@ -481,8 +480,9 @@ column searched, wherever you started, so the same value gives the same route ev
 time. Each hit is selected, the end wraps to the start, and two hits in one cell
 count as two.
 
-If the table's schema names its link columns (see [Schemas](#schemas)), the search
-covers only those. Otherwise it covers every column, and says so.
+If the table names a key column (see [Describing a table file](#describing-a-table-file)),
+the search covers every column but that one: the question is who *uses* a name,
+not where it is defined. Otherwise it covers every column, and says so.
 
 `n` and `N` walk the last search, whichever kind it was. A new `/` takes them back.
 
@@ -511,7 +511,7 @@ to 10, `Space t 1,5,9s` is three columns, `Space t 20,3g` is a row and a column.
 
 ### Going to a row by name
 
-If a schema names a key column, `:table-jump` goes to the row with that name:
+If the table names a key column, `:table-jump` goes to the row with that name:
 
 ```
 :table-jump Okafor
@@ -565,8 +565,7 @@ again to see it again.
 
 - **rows with the wrong number of fields**;
 - **a quoted field that does not close on the same line**;
-- **a row name used twice**, when a schema names a key column;
-- **a name with no row of its own**, when a schema names link columns. Structure
+- **a row name used twice**, when the table names a key column. Structure
   marks such as `⿰` do not count.
 
 The list opens in a new buffer, sorted by line. `gf` on an entry goes to that row.
@@ -734,82 +733,87 @@ another row it empties until you ask again.
 - **In the sidebar, a long field wraps** instead of being cut, so this is the place
   to read a cell that is folded in the grid. The floating panel cuts it short
   with `…`.
-- **A computed field** from a schema has a `*` after its name, as a reminder that
-  the file has no such column.
-- **In a link column** (see [Schemas](#schemas)), the panel lists at the top each
-  name the cell refers to, with the row where that name is defined. A name with no
-  row is marked `—`.
+- **In a table with a key column**, the panel lists at the top each character of
+  the cell that has a row of its own, with that row's number, so a 拆分 cell such
+  as `⿰木目` leads to 木 and 目. A character with no row is marked `—`.
 
 The panel works in every kind of table, including code tables with no heading,
 where the fields are named by number.
 
-## Schemas
+## Describing a table file
 
-A schema is a small TOML file that tells yumete how to read one table file: the
-delimiter, which columns to show and under what names, which column names a row,
-and which columns refer to other rows. You do not need one; without it the file's
-own first line names the columns. A schema helps with a large table you work on
-often.
+Most table files need no description: the delimiter is guessed, the first line
+names the columns, and the choices you make while reading are remembered for
+you. A description helps with a large table you work on often, or one you share.
 
-yumete looks for schemas in `.yumete/tables/*.toml`, starting in the folder the data
-file is in and going up. A file that a schema names opens as a table automatically.
+### What yumete remembers for you
 
-```toml
-[table]
-file = ["parts.csv"]      # the data files this schema is for
-key = "char"              # the column that names each row
-delimiter = ","
-header = true             # whether the first line is the heading
+Three things are ways of looking at a file rather than facts about it, so they
+are kept in yumete's own data directory (`tables.txt`), by file path, and never
+written beside the data:
 
-[[table.column]]
-name = "char"
-label = "Char"            # shown in the heading instead of the name
-
-[[table.column]]
-name = "parts"
-
-[[table.column]]
-name = "notes"
-hidden = true             # read and written, but not drawn or stopped on
-
-[[table.detail]]          # shown only in the record panel, never written
-name = "codepoint"
-compute = "codepoint(char)"
-
-[table.link]              # the cells of these columns name other rows
-from = ["parts"]
-to = "char"
+```
+:table-delimiter space    read this file cut by spaces (also tab, comma,
+                          semicolon, or the character itself)
+:table-header off         the first row is data (Space t H flips it)
+:table-hide 7             column 7 takes no space and is stepped over
+:table-show 7             and is drawn again
 ```
 
-A `[[table.detail]]` field can use `codepoint(column)`, `block(column)` (the
-Unicode block) or `range_label(column, name)`, which looks the character up in a
-`[ranges.name]` table of your own:
+A hidden column is still read and written; only the screen changes. The next
+time you open the file, the same choices apply. A fresh clone of a project shows
+every column.
 
-```toml
-[ranges.blocks]
-"Extension B" = [0x20000, 0x2A6DF]
+### `datapackage.json`
+
+What *is* true of the data — column names and types, and which column names a
+row — goes in a [Frictionless Data Package](https://datapackage.org/): one
+`datapackage.json` in the same folder as the data, listing each table file as a
+`resource`. Other tools read the same file.
+
+```json
+{
+  "name": "division",
+  "resources": [
+    {
+      "name": "parts",
+      "path": "parts.csv",
+      "dialect": { "delimiter": "\t", "header": false },
+      "schema": {
+        "fields": [
+          { "name": "char", "title": "字" },
+          { "name": "parts" },
+          { "name": "notes" }
+        ],
+        "primaryKey": "char"
+      }
+    }
+  ]
+}
 ```
 
-What a schema adds:
+yumete reads, for the resource whose `path` is this file: `dialect.delimiter`
+and `dialect.header`, each field's `name`, `title` (shown in the heading
+instead of the name) and `type`, and `primaryKey`. A file the package lists
+opens as a table automatically. Everything else in the file is left alone.
 
-- `key` makes `:table-jump` work and lets `:table-check` find repeated names.
-- `[table.link]` limits `Space t /` to the link columns, lets `:table-check` find
-  names with no row, and fills the top of the record panel.
-- `hidden` columns stop taking space.
+`primaryKey` is what makes `:table-jump` work, lets `:table-check` find
+repeated names, and lets the record panel and `Enter` lead from a cell to the
+rows its characters name.
 
-**`Space t e`** (or `:table-schema`) opens the schema of the current table file in
-the second editor region. If there is none, yumete drafts one, describing exactly
-what you see now: the delimiter it guessed, the column names from the first line,
-and the heading setting. The draft is an unsaved buffer bound to
-`.yumete/tables/<name>.toml` under the project root (beside the data when the
-file lies outside a project); nothing is on disk until you `:w` it, and `:w`
-makes that folder. Edit it, save, then press `Space t o` and `Space t b` (or run
-`:table-render off` and `:table-render basic`) to read the table the new way. An
-existing schema file is never overwritten.
+`:table-schema` says how the current table is read: how many columns, the
+delimiter, the header setting, and which file it was read from.
+`:table-schema write` writes this file's description into the `datapackage.json`
+beside it, adding the package if there is none and replacing only this file's
+entry if there is one. Nothing is written unless you ask.
 
-A schema with an error is not ignored silently: yumete reports the file and what is
-wrong with it. Schemas are for whole table files. A pipe table or a stretch inside a
-document has none.
+A package with an error is not ignored silently: yumete reports what is wrong
+with it. Descriptions are for whole table files. A pipe table or a stretch
+inside a document has none.
+
+Earlier versions kept a TOML schema under `.yumete/tables/`. That file is no
+longer read; opening the table says so once, and `:table-schema write` makes
+the replacement.
 
 ## Commands
 
@@ -825,7 +829,9 @@ document has none.
 | `:table-jump <name>` | go to the row with this name |
 | `:table-check` | list problems in the table |
 | `:table-detail on\|off` | the record panel |
-| `:table-schema` | open or write this table's schema |
+| `:table-schema [write]` | say how this table is read, or write it into `datapackage.json` |
+| `:table-delimiter <name>` | read this file cut by that character, and remember it |
+| `:table-hide <n>` / `:table-show <n>` | hide a column, or draw it again; remembered |
 | `:convert-table [<from>] <to>` | rewrite the table in another format |
 | `:paste-table [<from>] <to>` | paste the clipboard as a table |
 | `:export csv\|tsv [<file>]` | write the table to another file |

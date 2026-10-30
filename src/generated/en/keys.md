@@ -180,7 +180,6 @@
 | `Space t F` | line it up again |
 | `Space t i` | this row's record |
 | `Space t H` | whether the table's first row is a heading row |
-| `Space t e` | this table's metadata |
 
 ### convert the table's format (delimiter) (`Space t x`)
 
