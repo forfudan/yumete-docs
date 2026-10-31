@@ -7,7 +7,7 @@ yumete has four ways to find things, from small to large:
 | `/` `?` | this file | one match at a time, with `n` and `N` |
 | `g/` `g?` | this file | the word under the cursor, without typing it |
 | `Space /` | this file, the open buffers, a directory or the project | a panel listing every match, with find and replace |
-| `Space f` `Space e` `Space b` | file names, folders, open buffers | a picker that opens what you choose |
+| `Space f` `Space e` `Space b` `Space g` | file names, folders, open buffers, changed files | a picker that opens what you choose |
 
 Searches can treat simplified and traditional characters as one (書 finds
 书), and full pinyin can find the characters it spells (`shuzhai` finds 書齋).
@@ -287,6 +287,7 @@ preview on the right. You type straight away to narrow the list.
 | `Space e` | browse folders, starting at the project |
 | `Space E` | browse folders, starting at this file's folder |
 | `Space b` | open buffers |
+| `Space g` | changed files: what git reports, and the buffers with unsaved changes (`:changed-files`) |
 
 `:open` with no file name opens the file picker too.
 
@@ -304,6 +305,17 @@ so `ch63` finds `卷三/ch63.md`. It reads pinyin too, and digits and
 characters mix: `di120` finds `第120章.md`. The matched characters are drawn
 in gold. Before you type, files you opened this session come first, then the
 rest in path order. A file that is already open is previewed from its buffer.
+
+A `+` before a name means the file has changes you have not saved.
+
+`Space g` lists every file git reports as changed in the repository you are
+working in, with a letter before each: `M` modified, `A` added, `D`
+deleted, `R` renamed, `U` untracked, `C` in conflict. The letter is green
+when the whole change is staged, gold when some of it is not, and red for a
+conflict. Staged files are listed too. Open buffers with unsaved changes
+are added with their `+`, even when git sees nothing changed in the file.
+Outside a git repository the picker lists only the unsaved buffers. Git is
+asked once each time the picker opens; the other pickers show only the `+`.
 
 `Space e` shows one folder at a time, folders first, with `../` at the top.
 `Enter` on a folder opens it in the same picker; `Enter` on a file opens the

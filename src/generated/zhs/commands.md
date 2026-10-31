@@ -169,6 +169,7 @@
 | `:resume` |  | 接着上次：把这个目录上次开着的那几个加进来 |
 | `:recent-files` |  | 最近开过的档(这个项目) |
 | `:recent-files-global` |  | 最近开过的档(全部项目) |
+| `:changed-files` |  | 存在改动文件 |
 | `:recent-projects` |  | 最近开过的项目 |
 | `:tutor` |  | 一课：把课文抄成你自己的一个文件，边改边学 |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | 键和命令，开成一个可以读、可以搜的文件 |

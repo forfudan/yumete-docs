@@ -43,6 +43,7 @@
 | `Space e` | browse files (project dir) |
 | `Space E` | browse files (this file's dir) |
 | `Space b` | open buffer picker |
+| `Space g` | changed files |
 | `Space y` | copy to the system clipboard |
 | `Space p` | paste from the system clipboard |
 | `Space P` | paste before, from the system clipboard |

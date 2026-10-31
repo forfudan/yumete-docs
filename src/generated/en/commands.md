@@ -169,6 +169,7 @@
 | `:resume` |  | take up this directory's last session — adds, closes nothing |
 | `:recent-files` |  | files opened under this project, newest first |
 | `:recent-files-global` |  | files opened anywhere, newest first |
+| `:changed-files` |  | the files git reports as changed, and the unsaved buffers (as Space g) |
 | `:recent-projects` |  | the directories a session was kept for |
 | `:tutor` |  | a lesson: the text is copied into a file of your own, and you learn by editing it |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | the keys and the commands, opened as a file you can read and search |
