@@ -31,9 +31,11 @@ Prefer an action name when one exists. A name says what the key does, and it
 keeps meaning that even if the default key for it moves.
 
 `:keymap-actions` lists every action in three columns: the name to write, what
-it does, and which key does it now. There are about eighty. The names follow
-helix's, so `move_visual_line_down`, `goto_file_start` and `yank` are what you would
-guess.
+it does, and which key does it now, under the keymap in use. Every Normal-mode
+key has one, about 170 in all, and a name does the same thing under either
+keymap: `delete_char_backward` is vim's `X` even when you use helix's keys.
+The names follow helix's, so `move_visual_line_down`, `goto_file_start` and
+`yank` are what you would guess.
 
 A bare word that is not an action name is refused. yumete reports it at startup
 and does not install that binding, so a typo such as `"delete_slection"` never
