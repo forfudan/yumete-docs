@@ -113,8 +113,13 @@ called, or which section it lives in.
               │  global  2   ← in force
               │  project unset
 ──────────────┴───────────────────────────────────────────────────────────────
-  hl panes  jk move  space toggle  i edit  d drop  e open it  Tab which file  :w save  :q leave
+  hl left/right, jk move, space toggle, i edit, c retype, d drop, e open it,
+  Tab which file, :w save, :q leave
+
 ```
+
+The bottom row is the command line: `:w` and `:q` are typed there, and what
+the panel says appears there, so the key hints above it stay in view.
 
 The groups on the left follow what a setting changes on screen, not the TOML
 section it lives in.
@@ -124,7 +129,8 @@ section it lives in.
 | `h` `l` | move between the groups on the left and the settings on the right |
 | `j` `k` | move up and down. `g` and `G` go to the top and bottom |
 | `Space` | flip a switch, step to the next choice, or add one to a number |
-| `i` | type a value. `Enter` keeps it, `Esc` leaves the old one |
+| `i` | type a value, starting from the one there. `Enter` keeps it, `Esc` leaves the old one, `Backspace` deletes a character |
+| `c` | type a value from empty |
 | `d` | remove this setting from the file, so the layer below applies again |
 | `Tab` | switch the file your edits go to: global or project |
 | `e` | open that file in the editor |
