@@ -301,6 +301,7 @@ The terminal keeps `Cmd+C` and `Cmd+V` for itself. Use the `Space` menu:
 | --- | --- |
 | `Space y` | copy the selection to the system clipboard |
 | `Space p` `Space P` | paste from the system clipboard after / before |
+| `Space R` | replace the selection with the system clipboard |
 
 Pasting with the terminal's own paste also works; the text arrives as text,
 not as keys. Copying goes through the terminal, so it works over ssh and
