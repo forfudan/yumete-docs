@@ -65,13 +65,18 @@ the way the reading runs.
 Every split halves the room the window had, and you may go on splitting
 until a window would be too narrow for its text. `C-w q` and `:q` close the
 window you are in and give its room back to the one next to it; the file
-stays open, changes and all. In the last window `:q` works as usual (see
+stays open, changes and all. The keys go back to the window you were in
+before this one, as in VS Code and tmux. If that window has closed too, they
+go to the window that takes the room, as in vim. In the last window `:q` works as usual (see
 [Saving and quitting](./files.md#saving-and-quitting)). `C-w o` keeps the
 window you are in and closes the rest.
 
 The rule between two windows one above the other carries the name of the
 file in the window you are not in. Each window keeps its own scroll, and
 long lines fold to each window's own width.
+
+The session remembers the windows and the sidebars, so `ye -r` opens them as
+you left them (see "Sessions" in [Files](./files.md)).
 
 Some commands use another window to show you something without moving you:
 
