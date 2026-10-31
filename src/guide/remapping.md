@@ -32,7 +32,7 @@ keeps meaning that even if the default key for it moves.
 
 `:keymap-actions` lists every action in three columns: the name to write, what
 it does, and which key does it now. There are about eighty. The names follow
-helix's, so `move_line_down`, `goto_file_start` and `yank` are what you would
+helix's, so `move_visual_line_down`, `goto_file_start` and `yank` are what you would
 guess.
 
 A bare word that is not an action name is refused. yumete reports it at startup
