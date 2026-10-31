@@ -19,7 +19,7 @@ daily target and `:count-progress` all count this way.
 The status line shows how long the file is, after the cursor position:
 `Ln 12, Col 5, Chr 5   3214 words`. With a selection it shows the selection's
 count beside the whole: `120 / 3214 words`. On a narrow window the count is the
-first thing to give way. The outline sidebar (`Space s`) shows each heading's
+first thing to give way. The outline sidebar (`:sidebar outline`) shows each heading's
 count at its right edge, including its subsections.
 
 ```toml

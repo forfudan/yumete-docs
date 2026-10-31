@@ -47,13 +47,16 @@
 | `Space y` | copy to the system clipboard |
 | `Space p` | paste from the system clipboard |
 | `Space P` | paste before, from the system clipboard |
-| `Space s` | show outline |
+| `Space s` | symbol picker |
+| `Space S` | project symbol picker |
 | `Space n` | character info (floating) |
 | `Space N` | character info (sidebar) |
 | `Space k` | documentation (floating) |
 | `Space K` | documentation (sidebar) |
-| `Space d` | show diagnostics (float) |
-| `Space D` | show diagnostics (sidebar) |
+| `Space d` | diagnostics picker |
+| `Space D` | project diagnostics picker |
+| `Space l` | show diagnostics (float) |
+| `Space L` | show diagnostics (sidebar) |
 | `Space x` | show the change (float) |
 | `Space X` | show the change (sidebar) |
 | `Space r` | rename it everywhere |

@@ -204,7 +204,7 @@ reloads. To see them again:
   `path:line: message`, without opening either file. A clean config says so in
   one line.
 - Open the config file in yumete. Each line with a problem gets a mark in the
-  gutter, the same way a language server marks code; `Space d` shows the
+  gutter, the same way a language server marks code; `Space l` shows the
   message under the cursor. The marks update as you type, so a line goes quiet
   the moment it is right. Nothing needs to be installed for this.
 

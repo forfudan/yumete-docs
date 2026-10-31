@@ -76,16 +76,17 @@ These differ:
 
 - `Space E` browses files from this file's directory. helix spells it
   `Space .`.
-- Not there: `j` (jump list picker), `g` (changed files), `S` (workspace
-  symbols), `h` (references), `'` (last picker), `Y`, `R` and `G`. For
-  references use `gr`.
+- Not there: `j` (jump list picker), `h` (references), `'` (last picker),
+  `Y`, `R` and `G`. For references use `gr`.
+- `s` and `S` fall back to the outline and the project's headings where no
+  language server answers; helix refuses. `g` lists staged files too.
 - Added: `n` for what the character under the cursor is (its readings and
-  how it is written), `x` for the change on this line, `i` for the record of
+  how it is written), `l` for the diagnostic on this line, `x` for the change on this line, `i` for the record of
   the table row the cursor is in, `t` for [tables](../writing/tables.md), `"`
   for registers, `m` for a merge conflict, `o` for recent files and projects,
   and `z` for the [input method](../writing/ime.md).
 - A capital shows the same thing in the sidebar instead of a popup: `N`, `K`,
-  `D`, `X`, `I`.
+  `L`, `X`, `I`.
 - `Space Space` turns a page down and `Space Backspace` a page up.
 
 ## Tables are on `Space t`
