@@ -288,6 +288,10 @@ preview on the right. You type straight away to narrow the list.
 | `Space E` | browse folders, starting at this file's folder |
 | `Space b` | open buffers |
 | `Space g` | changed files: what git reports, and the buffers with unsaved changes (`:changed-files`) |
+| `Space s` | the symbols of this file |
+| `Space S` | the symbols of the project |
+| `Space d` | the diagnostics of this file |
+| `Space D` | the diagnostics of the project |
 
 `:open` with no file name opens the file picker too.
 
@@ -316,6 +320,15 @@ conflict. Staged files are listed too. Open buffers with unsaved changes
 are added with their `+`, even when git sees nothing changed in the file.
 Outside a git repository the picker lists only the unsaved buffers. Git is
 asked once each time the picker opens; the other pickers show only the `+`.
+
+The symbol pickers ask the language server, as helix does: `Space s` lists
+this file's symbols as kind, name and what they sit in; `Space S` adds the
+file, and asks the server again as you type. Where no server serves the file,
+`Space s` lists the file's outline instead (its headings, or the functions
+and classes of code), and `Space S` the headings of every Markdown and Typst
+file in the project, each with the heading above it. The diagnostics
+pickers list severity, source, code and message, with the file in the
+project one, the worst first on each line. `Enter` goes to the place.
 
 `Space e` shows one folder at a time, folders first, with `../` at the top.
 `Enter` on a folder opens it in the same picker; `Enter` on a file opens the

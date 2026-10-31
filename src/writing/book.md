@@ -51,7 +51,7 @@ jump.
 
 ## Chapters in the outline
 
-The outline sidebar (`Space s`) lists the headings of the current file, each with
+The outline sidebar (`:sidebar outline`) lists the headings of the current file, each with
 its count. In a Typst main file, every `#include` is read open, and its
 chapter titles are listed in place of the file name:
 

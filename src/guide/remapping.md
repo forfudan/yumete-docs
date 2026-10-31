@@ -111,7 +111,7 @@ whatever the defaults later become; the flavour follows them.
 
 A binding that yumete cannot use is reported at startup and by
 `:check-config`. Opening the config file in yumete marks the line in the gutter;
-`Space d` shows why. See
+`Space l` shows why. See
 [When the config is wrong](./configuration.md#when-the-config-is-wrong).
 
 The [Keymap](../reference/keymap.md) lists every default key.

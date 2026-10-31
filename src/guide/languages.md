@@ -14,7 +14,7 @@ Each language below has a grammar compiled into yumete. A grammar gives you:
 - syntax colours, in code files and in Markdown code fences (```` ```py ````, ```` ```rust ````)
 - indentation after an opener, on `Enter` and on `o`
 - `Space c` and `Space C` to comment lines out with a line or a block comment
-- the outline (`Space s`), and `]f` `[f` to the next or previous function, `]t` `[t` to
+- the symbol picker (`Space s`) without a server, and `]f` `[f` to the next or previous function, `]t` `[t` to
   the next or previous class
 - text objects such as `mi f` (inside a function) and `mi c` (inside a comment); see
   [match mode](../reference/match.md)
@@ -31,7 +31,9 @@ The name in the first column is the one you write in `[lsp.<name>]` and
 | `gd` | go to the definition, across files. `C-o` comes back |
 | `gr` | every place the name is used: one is gone to, several open a picker showing the line around each |
 | `Space k` / `Space K` | documentation for the name under the cursor, in a float / in the sidebar |
-| `Space d` / `Space D` | the diagnostics on this line, in a float / in the sidebar |
+| `Space s` / `Space S` | the symbols of this file / of the project, in a picker; the project one asks the server again as you type |
+| `Space d` / `Space D` | the diagnostics of this file / of the project, in a picker |
+| `Space l` / `Space L` | the diagnostics on this line, in a float / in the sidebar |
 | `]d` / `[d` | the next / previous diagnostic; `]D` / `[D` the last / first |
 | `Space r` | rename the name everywhere: opens `:lsp-rename` with the old name typed in. Edit it and press `Enter` |
 | `Space a` | code actions for the selection: quick fixes, refactors. Pick one from the list |
@@ -134,7 +136,7 @@ args = ["--stdio"]
 ```
 
 The text-file names are `markdown`, `typst` and `text`. The server's complaints are under
-`Space d` and `]d`, and its fixes under `Space a`.
+`Space d`, `Space l` and `]d`, and its fixes under `Space a`.
 
 ## Formatting and other commands
 

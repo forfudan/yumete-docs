@@ -96,7 +96,7 @@ left sidebar holds four panels, and `Tab` steps through them:
 | --- | --- | --- |
 | Explorer | the project's files, as a tree | `:sidebar explorer` |
 | Buffers | the open files; a changed one is marked `+` | `:sidebar buffers` |
-| Outline | the headings of the current file | `Space s`, `:sidebar outline` |
+| Outline | the headings of the current file | `:sidebar outline` |
 | Search | the search panel | `Space /`, `:sidebar search` |
 
 The right sidebar holds one panel, **Info**, described below.
@@ -151,16 +151,11 @@ columns. When both sidebars are open on a small window they shrink together
 to make room; they grow back to the width you chose when the window widens.
 A window narrower than 36 columns has no room for a sidebar at all.
 
-## The outline: `Space s`
+## The outline
 
-`Space s` asks for the outline, and what it does depends on where you are:
-
-- sidebar closed: open it on the outline and go in;
-- open on another panel: switch to the outline;
-- open on the outline, keys in the text: go back into it;
-- already in the outline: close it.
-
-From a closed sidebar, pressing `Space s` twice brings you back to where you started; from any other state the second press closes the sidebar.
+`:sidebar outline` opens the outline in the sidebar. To jump to a heading
+without opening a sidebar, `Space s` lists the same headings in a picker
+(see [Pickers](./search.md#pickers)).
 
 The outline lists Markdown headings (`#` followed by a space) and Typst
 headings (`=`). In a text file it shows at the right edge how much each heading's
@@ -180,7 +175,7 @@ an upper-case key that puts the same answer in the sidebar:
 | --- | --- | --- |
 | dictionary: the character's decomposition, readings, code point | `Space n` | `Space N` |
 | documentation from the language server | `Space k` | `Space K` |
-| diagnostics | `Space d` | `Space D` |
+| diagnostics | `Space l` | `Space L` |
 | the change here: what this block was before | `Space x` | `Space X` |
 | the record (table row details) | `Space i` | `Space I` |
 | the wiki entry for the name under the cursor | | `:wiki-panel` |
