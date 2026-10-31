@@ -95,6 +95,12 @@ it too:
 "A-h" = "jump_view_left" # Alt-h goes to the window on the left
 ```
 
+Select mode's keys are helix's `extend_*` commands (`extend_char_left`,
+`extend_next_word_start`, `extend_to_file_start`). Each extends the selection
+in either mode, so bound in `[keys.normal]` it grows the selection without
+entering select mode. A `move_*` command extends in select mode and moves in
+Normal mode.
+
 Binding a prefix key to an action takes its whole group away. `g =
 "delete_selection"` makes `g` delete, and `gg`, `ge` and the rest of the `g` group
 are gone.
