@@ -72,6 +72,7 @@ own under the named registers.
 | `Space y` | `:clipboard-yank` | copy the selection to the system clipboard, and into the unnamed register |
 | `Space p` | `:clipboard-paste` | paste from the system clipboard after the selection |
 | `Space P` | | paste from the system clipboard before the selection |
+| `Space R` | | replace the selection with the system clipboard, as `"+R` does |
 
 Copying uses the terminal's OSC 52 escape, so it works over ssh and inside tmux, if
 the terminal allows it. Pasting runs `pbpaste` on macOS, or `wl-paste`, `xclip` or

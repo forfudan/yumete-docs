@@ -77,7 +77,7 @@ These differ:
 - `Space E` browses files from this file's directory. helix spells it
   `Space .`.
 - Not there: `j` (jump list picker), `h` (references), `'` (last picker),
-  `Y`, `R` and `G`. For references use `gr`.
+  `Y` and `G`. For references use `gr`.
 - `s` and `S` fall back to the outline and the project's headings where no
   language server answers; helix refuses. `g` lists staged files too.
 - Added: `n` for what the character under the cursor is (its readings and

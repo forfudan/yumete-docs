@@ -47,6 +47,7 @@
 | `Space y` | copy to the system clipboard |
 | `Space p` | paste from the system clipboard |
 | `Space P` | paste before, from the system clipboard |
+| `Space R` | replace the selection with the system clipboard |
 | `Space s` | symbol picker |
 | `Space S` | project symbol picker |
 | `Space n` | character info (floating) |
