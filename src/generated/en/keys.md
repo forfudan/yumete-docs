@@ -120,11 +120,11 @@
 | `]m` | merge conflict |
 | `]g` | a change |
 | `]d / ]D` | a diagnostic (capital: the first / the last) |
-| `]p` | the next paragraph |
-| `]␣` | a blank line below |
 | `]f` | a function |
 | `]t` | a class |
 | `]c` | a comment |
+| `]p` | the next paragraph |
+| `]␣` | a blank line below |
 
 ### previous… (`[`)
 
@@ -133,11 +133,11 @@
 | `[m` | merge conflict |
 | `[g` | a change |
 | `[d / [D` | a diagnostic (capital: the first / the last) |
-| `[p` | the previous paragraph |
-| `[␣` | a blank line above |
 | `[f` | a function |
 | `[t` | a class |
 | `[c` | a comment |
+| `[p` | the previous paragraph |
+| `[␣` | a blank line above |
 
 ### put this line where (`z`)
 
@@ -220,6 +220,14 @@
 | `` `g `` | simplified → 古籍 繁 |
 | `` `j `` | traditional → Japanese shinjitai |
 |  | vi's marks: M sets, ' returns |
+
+### merge conflict (`Space m`)
+
+| Key | What it does |
+| --- | --- |
+| `Space m o` | keep ours |
+| `Space m t` | keep theirs |
+| `Space m b` | keep both sides |
 
 ### open something recent (`Space o`)
 

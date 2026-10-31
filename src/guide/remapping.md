@@ -32,8 +32,10 @@ keeps meaning that even if the default key for it moves.
 
 `:keymap-actions` lists every action in three columns: the name to write, what
 it does, and which key does it now, under the keymap in use. Every Normal-mode
-key has one, about 170 in all, and a name does the same thing under either
-keymap: `delete_char_backward` is vim's `X` even when you use helix's keys.
+key has one, the keys inside the groups too, about 340 in all:
+`goto_line_start` is `g h`, `file_picker` is `Space f`, `hsplit` is `C-w s`.
+A name does the same thing under either keymap: `delete_char_backward` is
+vim's `X` even when you use helix's keys.
 The names follow helix's, so `move_visual_line_down`, `goto_file_start` and
 `yank` are what you would guess.
 
@@ -83,6 +85,15 @@ bind that key to the prefix itself, as a run of keys:
 
 A run of keys on the right always means the editor's own keys. `"@ "` presses
 the real `Space` even when you have bound `Space` to something else.
+
+To give one key of a group a key of its own, bind its name. The group keeps
+it too:
+
+```toml
+[keys.normal]
+"A-f" = "file_picker"    # Alt-f opens the file picker; Space f still does
+"A-h" = "jump_view_left" # Alt-h goes to the window on the left
+```
 
 Binding a prefix key to an action takes its whole group away. `g =
 "delete_selection"` makes `g` delete, and `gg`, `ge` and the rest of the `g` group
