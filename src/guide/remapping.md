@@ -13,8 +13,11 @@ x = "delete_selection"         # x deletes the selection
 "A-j" = "@kJ"                  # Alt-j joins this line onto the one above
 ```
 
-Only Normal-mode keys can be remapped. Bindings are read from the global file
-only; a project's `.yumete/config.toml` cannot hold them, because a binding can
+Normal mode's keys go under `[keys.normal]`, and select mode's under
+`[keys.select]`. Select mode takes every `[keys.normal]` line too, so
+`[keys.select]` is only for what should differ there. (In helix the two are
+separate and a Normal-mode line does nothing after `v`.) Bindings are read
+from the global file only; a project's `.yumete/config.toml` cannot hold them, because a binding can
 run a command line. Run `:reload-config` after editing, or restart.
 
 ## The right-hand side
@@ -26,6 +29,10 @@ Each right-hand side says which of three kinds it is.
 | a bare name | an action | `"delete_selection"` |
 | `:` in front | a command line, run as if typed after `:` | `":write"`, `":view-wrap 40"` |
 | `@` in front | a run of keys, played as if you pressed them | `"@kJ"` |
+| a list | each of the above, run in order | `["select_all", ":write"]` |
+
+`no_op` is the action that does nothing. Binding a key to it unbinds the key,
+and takes it off its group's menu.
 
 Prefer an action name when one exists. A name says what the key does, and it
 keeps meaning that even if the default key for it moves.
@@ -65,26 +72,39 @@ not `S-q`. The same spellings work inside an `@` run on the right:
 The left side may also be a run of keys. `"dj" = "@xd"` makes `d` followed by
 `j` delete the line. yumete waits after the `d` to see what comes next; if the
 next key does not continue any of your runs, `d` does what it always did.
-That is also why named keys need the brackets: `"tab"` would be the three keys
-`t`, `a`, `b`.
+helix's names for keys work as well: `ret`, `space`, `tab`, `backspace`, `del`,
+`minus`, the arrows and the rest, so `ret = "open_below"` binds Enter. Any
+other word on the left is a run of keys.
 
 `Esc` cannot be bound. It is how you let go of a run of keys you started by
 mistake, and a keymap without it would have no way out.
 
-## Prefix keys
+## Groups
 
-`Space`, `g`, `m` and `z` open groups of keys. To move a whole group to another key,
-bind that key to the prefix itself, as a run of keys:
+`Space`, `g`, `m`, `z`, `C-w` and the other prefix keys open groups of keys. A
+table named after one adds keys to that group, as in helix:
 
 ```toml
-[keys.normal]
-";" = "@ "             # ; opens the Space menu
-"<space>" = "@l"       # Space moves one cell right
-"<backspace>" = "@h"   # Backspace moves left
+[keys.normal.space]
+q = ":quit"          # Space q quits; the rest of Space stays
+f = "no_op"          # Space f does nothing, and leaves the menu
+
+[keys.normal.g]
+a = "code_action"    # also written g = { a = "code_action" }
 ```
 
-A run of keys on the right always means the editor's own keys. `"@ "` presses
-the real `Space` even when you have bound `Space` to something else.
+A table under a key that opens no group makes a group of your own. Give it a
+name with `label`, and its menu is titled with it:
+
+```toml
+[keys.normal.space.x]
+label = "My tools"
+w = ":write"
+a = ["select_all", "yank"]
+```
+
+The same keys can be written as runs, `"<space>q" = ":quit"`. Either way the
+group's menu shows them beside its own keys.
 
 To give one key of a group a key of its own, bind its name. The group keeps
 it too:
@@ -100,6 +120,19 @@ Select mode's keys are helix's `extend_*` commands (`extend_char_left`,
 in either mode, so bound in `[keys.normal]` it grows the selection without
 entering select mode. A `move_*` command extends in select mode and moves in
 Normal mode.
+
+To move a whole group to another key, bind that key to the prefix itself, as a
+run of keys:
+
+```toml
+[keys.normal]
+";" = "@ "             # ; opens the Space menu
+"<space>" = "@l"       # Space moves one cell right
+"<backspace>" = "@h"   # Backspace moves left
+```
+
+A run of keys on the right always means the editor's own keys. `"@ "` presses
+the real `Space` even when you have bound `Space` to something else.
 
 Binding a prefix key to an action takes its whole group away. `g =
 "delete_selection"` makes `g` delete, and `gg`, `ge` and the rest of the `g` group
@@ -129,7 +162,9 @@ whatever the defaults later become; the flavour follows them.
 ## Checking your bindings
 
 A binding that yumete cannot use is reported at startup and by
-`:check-config`. Opening the config file in yumete marks the line in the gutter;
+`:check-config`, and only that line is skipped: a misspelt name, a right side
+that is not a command, a list or a table, or a table under `[keys]` that is
+not a mode. Opening the config file in yumete marks the line in the gutter;
 `Space l` shows why. See
 [When the config is wrong](./configuration.md#when-the-config-is-wrong).
 
