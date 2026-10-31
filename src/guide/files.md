@@ -259,6 +259,12 @@ The session also keeps how the page looked: the layout, the `:view-*`
 settings and the theme, where they differ from your config. `:reload-config`
 puts everything back the way the config says.
 
+`ye -r` also brings back the windows: how they were split, the file and the
+place in each, which sidebars were open, and where the keys were. A window
+whose file has gone is left out, and its neighbour takes its room. `:resume`
+adds the files and leaves your windows as they are. See
+[Windows and the sidebar](./windows.md).
+
 To resume every time you start without a file name:
 
 ```toml
