@@ -119,10 +119,25 @@ reload_auto = false
 
 While a file has unsaved changes, yumete writes a copy of it beside the file
 every few seconds, at most five, and also when you stop typing. The copy of
-`chapter.md` is a hidden file beside it, `.chapter.md.yumete.<number>`, where the
-number identifies the running yumete, so two yumetes never write over each
+`chapter.md` is a hidden file beside it, `.chapter.md.<number>.yumete-swp`, where
+the number identifies the running yumete, so two yumetes never write over each
 other's copy. Saving or quitting
 normally deletes it, so you only see it after something went wrong.
+
+A save writes the new text to a temporary file beside the original and then
+puts it in place, so a crash halfway through cannot leave you half a file.
+That file ends in `.yumete-tmp` and is gone when the save is done. To keep
+both out of git:
+
+```gitignore
+*.yumete-swp
+*.yumete-tmp
+```
+
+Do not write `*.yumete`: it also matches the project's `.yumete/` folder,
+where its settings and wiki live. Copies written by older versions, named
+`.chapter.md.yumete.<number>`, are still found and offered; `.*.yumete.*`
+ignores them.
 
 On macOS and Linux, closing the terminal window (`SIGHUP`) or a `SIGTERM`
 makes yumete write the copy of every unsaved file on the way out, so nothing
