@@ -48,7 +48,7 @@
 | `:wiki` | `<詞條名>` | 查一个词条：打名字，打错了、顺序反了也找得到 |
 | `:wiki-edit` |  | 打开本项目的 .yumete/wiki.md，没有就建一个 |
 | `:wiki-global` |  | 打开全局的 wiki.md——整个系列共用的设定 |
-| `:keymap-yumete-flavor` | `on｜off｜toggle` | Yumete 键位风味：在 helix/vim 键位之上的一小组改动。不带参数报当前状态 |
+| `:keymap-yumete-flavor` | `off｜basic｜full` | Yumete 键位风味：在 helix/vim 键位之上的一小组改动。不带参数报当前状态 |
 | `:links` | `list｜graph｜off` | 开链接面板：哪些文件 [[链]] 到这里、这里链到哪里；list 列表、graph 图、off 关掉 |
 | `:links-export` |  | 把整个项目的链接图写成 .yumete/graph.html，并在浏览器打开 |
 | `:links-reindex` |  | 重读整个项目的 [[链接]] |
