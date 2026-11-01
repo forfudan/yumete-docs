@@ -415,3 +415,61 @@
 | `Y` | `@y$` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
+
+### `[keys.prompt]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `normal_mode` | close the prompt, the search or the picker | `Esc` |
+| `confirm` | run the line; in a picker, open the highlighted entry | `Enter` |
+| `completion_next` | the next completion | `Tab` |
+| `completion_prev` | the previous completion | `S-tab` |
+| `history_prev` | the previous line in the history | `Up` `C-p` |
+| `history_next` | the next line in the history | `Down` `C-n` |
+| `move_char_left` | one character left | `Left` |
+| `move_char_right` | one character right | `Right` |
+| `goto_line_start` | the start of the line | `Home` `C-a` |
+| `goto_line_end` | the end of the line | `End` `C-e` |
+| `delete_char_backward` | delete the character before the cursor | `Backspace` |
+| `delete_char_forward` | delete the character after the cursor | `Delete` |
+| `delete_word_backward` | delete the word before the cursor | `C-w` |
+| `kill_to_line_start` | delete to the start of the line | `C-u` |
+| `toggle_wide_search` | match across glyph variants and pinyin, on or off | `A-j` |
+
+### `[keys.picker]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `next_entry` | the next entry | `Tab` `C-n` `Down` |
+| `prev_entry` | the previous entry | `S-tab` `C-p` `Up` |
+| `page_down` | a page down | `Pagedown` |
+| `page_up` | a page up | `Pageup` |
+| `first_entry` | the first entry |  |
+| `last_entry` | the last entry |  |
+| `cycle_hidden_files` | cycle which files are skipped: hidden, ignored | `A-h` |
+
+### `[keys.sidebar]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `move_line_down` | one row down | `j` `Down` |
+| `move_line_up` | one row up | `k` `Up` |
+| `page_down` | a page down | `J` `Pagedown` |
+| `page_up` | a page up | `K` `Pageup` |
+| `goto_file_start` | the first row | `g` `Home` |
+| `goto_last_line` | the last row | `G` `End` |
+| `collapse_entry` | fold the entry, or go out of it | `h` `Left` |
+| `expand_entry` | unfold the entry, or go into it | `l` `Right` |
+| `open_entry` | go to the entry: open the file, or jump to the line | `Enter` |
+| `toggle_links_graph` | the links panel as a list or a graph | `v` |
+| `restore_change` | restore this change | `u` |
+| `yank_old_text` | copy what was there before the change | `y` |
+| `refresh_sidebar` | read it again | `R` |
+| `cycle_sidebar_width` | the next width: narrow, middle, wide | `w` |
+| `next_sidebar_view` | the next view in this slot | `Tab` |
+| `prev_sidebar_view` | the previous view in this slot | `S-tab` |
+| `normal_mode` | suspend the input method again | `Esc` |
+| `leave_sidebar` | back to the text, the panel stays | `q` |
+| `command_mode` | the command line | `:` |
+| `space_mode` | the Space menu | `Space` |
+| `window_mode` | the window group | `C-w` |

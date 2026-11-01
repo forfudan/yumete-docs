@@ -12,4 +12,8 @@ and extends the selection. `Space f` is the space bar, then `f`; `C-w` is
 Ctrl and `w`; two keys written together, such as `gh`, are pressed one after
 the other. The `:` commands are on their own page, [Commands](commands.md).
 
+After the main table come the commands of the three places that are not
+modes, under the name of each one's table: the prompt (`:`, `/`, `::` and a
+picker's query), the picker's list, and the sidebar.
+
 <!--@include: ../generated/en/actions.md-->

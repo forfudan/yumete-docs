@@ -147,6 +147,37 @@ Binding a prefix key to an action takes its whole group away. `g =
 "delete_selection"` makes `g` delete, and `gg`, `ge` and the rest of the `g` group
 are gone.
 
+## Prompts, pickers and sidebars
+
+The keys of the command line, the pickers and the sidebars have names too,
+which helix's do not. Each place has its own table:
+
+```toml
+[keys.prompt]               # :, /, ::, and the query of a picker
+"C-b" = "move_char_left"
+"C-f" = "move_char_right"
+
+[keys.picker]               # the list of a picker, and of ::
+"C-j" = "next_entry"
+"C-k" = "prev_entry"
+
+[keys.sidebar]              # the file tree, buffers, outline, links, info
+n = "move_line_down"
+e = "move_line_up"
+```
+
+A picker takes the prompt's keys as well, for its query, and its own win where
+both bind a key. A line binds one key, to a command from that place's list, a
+command line (`":write"`) or keys (`"@hello"`), and `no_op` unbinds a key.
+Nothing comes over from `[keys.normal]` or `[keys.insert]`: a sidebar's `J`
+pages and its `g` goes straight to the top, so the two keymaps differ already.
+Where a name is also a Normal or Insert command (`move_char_left`,
+`page_down`), it does the same thing in that place.
+[Bindable commands](../reference/actions.md) lists each place's
+commands and keys.
+
+The hint row under a sidebar still shows the default keys.
+
 ## Presets and bindings together
 
 `[keys] preset = "vim"` switches the whole keymap to vim's hands (see
@@ -178,8 +209,9 @@ whatever the defaults later become; the flavour follows them.
 
 A binding that yumete cannot use is reported at startup and by
 `:check-config`, and only that line is skipped: a misspelt name, a right side
-that is not a command, a list or a table, or a table under `[keys]` that is
-not a mode. Opening the config file in yumete marks the line in the gutter;
+that is not a command, a list or a table, a line of `[keys.prompt]`,
+`[keys.picker]` or `[keys.sidebar]` with more than one key, or a table under
+`[keys]` that yumete does not read. Opening the config file in yumete marks the line in the gutter;
 `Space l` shows why. See
 [When the config is wrong](./configuration.md#when-the-config-is-wrong).
 
