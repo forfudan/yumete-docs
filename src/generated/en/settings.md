@@ -104,5 +104,6 @@
 | `[editor] which_wrap` | `"b"` | **which wrap** — which keys cross a line end, spelled as in vim: b h l < > ~ — vim keys only |
 | `[editor] language_key` | `"C-^"` | **language key** — the key that switches 中/ABC on a terminal that cannot report a lone Shift |
 | `[keys] flavor` | `false` | **Yumete keymap flavour** — with this on, `d` and `c` only delete and `A-d`/`A-c` are the ones that cut, so a tidy-up between a copy and a paste cannot eat the copy. `[keys.normal]` still wins |
+| `[keys] inherit` | `true` | **Sidebars and prompts take my keys** — a `[keys.normal]` line of one key whose command a sidebar has works in the sidebar, and a `[keys.insert]` one in the command line and the pickers. `[keys.sidebar]` and `[keys.prompt]` still win |
 | `[keys] preset` | `"helix"` | **keymap** — whether the keys follow helix or vim (`helix` helix, `vim` vim) |
 

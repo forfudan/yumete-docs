@@ -169,10 +169,21 @@ e = "move_line_up"
 A picker takes the prompt's keys as well, for its query, and its own win where
 both bind a key. A line binds one key, to a command from that place's list, a
 command line (`":write"`) or keys (`"@hello"`), and `no_op` unbinds a key.
-Nothing comes over from `[keys.normal]` or `[keys.insert]`: a sidebar's `J`
-pages and its `g` goes straight to the top, so the two keymaps differ already.
 Where a name is also a Normal or Insert command (`move_char_left`,
 `page_down`), it does the same thing in that place.
+
+Your own keys follow you in. A `[keys.normal]` line of one key whose command a
+sidebar also has works in the sidebar, and a `[keys.insert]` line works in the
+command line and the pickers in the same way. With `n = "move_line_down"` in
+`[keys.normal]`, `n` walks the file tree as well as the text. The place's own
+table still wins, and the defaults never come over: Normal mode's `J` joins
+lines, but a sidebar's `J` still pages. `no_op` in `[keys.normal]` unbinds the
+key in the text only. To turn this off:
+
+```toml
+[keys]
+inherit = false
+```
 [Bindable commands](../reference/actions.md) lists each place's
 commands and keys.
 
