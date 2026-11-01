@@ -18,9 +18,10 @@ With no register named, these keys use the unnamed one:
 | `R` | replace the selection with the register; `2R` replaces it with two copies (helix keymap; under vim, `R` in Normal mode is vim's replace mode) |
 | `C-r "` (Insert) | insert the register's text at the cursor |
 
-If you would rather `d` and `c` left the register alone, `:keymap-yumete-flavor on`
-swaps them with `A-d` and `A-c`. Set `flavor = true` under `[keys]` to make that the
-default.
+If you would rather `d` and `c` left the register alone, `:keymap-yumete-flavor full`
+swaps them with `A-d` and `A-c` (helix keymap). Set `flavor = "full"` under `[keys]`
+to make that the default, or `delete_keeps_register = true` under
+`[keys.flavor_items]` for this item alone.
 
 Under the vim keymap a paste leaves a cursor, not the pasted text selected. The cursor
 goes to the last character pasted when the text is part of one line, to the first

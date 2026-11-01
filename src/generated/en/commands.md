@@ -48,7 +48,7 @@
 | `:wiki` | `<詞條名>` | look an entry up by name — misspelt or out of order still finds it |
 | `:wiki-edit` |  | open this project's .yumete/wiki.md, existing or not |
 | `:wiki-global` |  | open the global wiki.md — what a whole series shares |
-| `:keymap-yumete-flavor` | `on｜off｜toggle` | the Yumete keymap flavour: a small set of departures over helix/vim. Bare reports it |
+| `:keymap-yumete-flavor` | `off｜basic｜full` | the Yumete keymap flavour: a small set of departures over helix/vim. Bare reports it |
 | `:links` | `list｜graph｜off` | the links panel: what [[links]] here and what this links to — list, graph, or off |
 | `:links-export` |  | write the whole project's link graph to .yumete/graph.html and open it in the browser |
 | `:links-reindex` |  | read the project's [[links]] again |
