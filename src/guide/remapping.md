@@ -193,6 +193,28 @@ commands and keys.
 The hint rows, the `::` palette and `:keymap-actions` name the keys as they are
 bound now, yours included.
 
+## Tables
+
+In a table's grid (`␣tt`) a command does its action to a cell:
+`move_char_right` is one cell right, `yank` takes the cell, `goto_line_start`
+is the first cell of the record. That holds however the command is reached,
+by its key, by a binding of your own or from a group (`g h`). Four commands
+belong to the grid alone: `table_enter_cell` (`Enter`), `table_leave_cell`
+(`Esc` in a cell), `table_next_cell` and `table_prev_cell` (`Tab`, `S-Tab`,
+which also step while you type in a cell).
+
+`[keys.table]` holds lines for a table only, laid over `[keys.normal]` as
+`[keys.select]` is:
+
+```toml
+[keys.table]
+"A-l" = "table_next_cell"
+"A-h" = "table_prev_cell"
+```
+
+[Bindable commands](../reference/actions.md) lists what each key means in the
+grid.
+
 ## Presets and bindings together
 
 `[keys] preset = "vim"` switches the whole keymap to vim's hands (see
