@@ -21,7 +21,8 @@ not taken that way still does what it does here. See
 [Coming from vim](../from/vim.md) for the full list of differences, and
 [Match mode](match.md) for what the `m` group takes.
 
-To change a key, see [Key remapping](../guide/remapping.md). For every `:`
-command, see [Commands](commands.md).
+To change a key, see [Key remapping](../guide/remapping.md). Every key's
+command by name, under both keymaps, is in [Bindable commands](actions.md);
+every `:` command is in [Commands](commands.md).
 
 <!--@include: ../generated/en/keys.md-->
