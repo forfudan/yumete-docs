@@ -13,12 +13,21 @@ x = "delete_selection"         # x deletes the selection
 "A-j" = "@kJ"                  # Alt-j joins this line onto the one above
 ```
 
-Normal mode's keys go under `[keys.normal]`, and select mode's under
-`[keys.select]`. Select mode takes every `[keys.normal]` line too, so
-`[keys.select]` is only for what should differ there. (In helix the two are
-separate and a Normal-mode line does nothing after `v`.) Bindings are read
-from the global file only; a project's `.yumete/config.toml` cannot hold them, because a binding can
-run a command line. Run `:reload-config` after editing, or restart.
+Normal mode's keys go under `[keys.normal]`, select mode's under
+`[keys.select]`, and Insert mode's under `[keys.insert]`, where a key no
+binding names types itself:
+
+```toml
+[keys.insert]
+j = { k = "normal_mode" }   # jk leaves Insert mode; a j alone is typed
+"C-l" = "insert_newline"
+```
+
+Select mode takes every `[keys.normal]` line too, so `[keys.select]` is only
+for what should differ there. (In helix the two are separate and a
+Normal-mode line does nothing after `v`.) Bindings are read from the global
+file only; a project's `.yumete/config.toml` cannot hold them, because a
+binding can run a command line. Run `:reload-config` after editing, or restart.
 
 ## The right-hand side
 
