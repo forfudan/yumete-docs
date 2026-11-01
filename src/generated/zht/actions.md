@@ -14,10 +14,10 @@
 | `move_next_long_word_end` | 下一個大詞尾 | `E` |  |  |
 | `goto_line_start` | 行首 | `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
 | `goto_line_end` | 行尾 | `End` `gl` `g Down` |  |  |
-| `goto_first_nonwhitespace` | 第一個非空白字符 | `gs` | `gs` `^` |  |
+| `goto_first_nonwhitespace` | 第一個非空白字符 | `gs` | `^` |  |
 | `goto_file_start` | 文件開頭 | `gg` | `gg` |  |
-| `goto_file_end` | 文件末尾 | `ge` | `ge` |  |
-| `goto_last_line` | 最後一行 |  |  |  |
+| `goto_file_end` | 文件末尾 |  |  |  |
+| `goto_last_line` | 最後一行 | `ge` | `ge` |  |
 | `goto_prev_sentence` | 上一句 | `H` |  |  |
 | `goto_next_sentence` | 下一句 | `L` |  |  |
 | `goto_prev_paragraph` | 上一段 | `[p` | `[p` |  |
@@ -55,8 +55,8 @@
 | `repeat_last_change` | 再做一次剛纔那個改動 | `.` |  |  |
 | `search` | 往前搜索 | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
 | `rsearch` | 往後搜索 | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
-| `search_next` | 下一處 | `n` `zn` `Zn` | `gn` `zn` `Zn` |  |
-| `search_prev` | 上一處 | `N` `zN` `ZN` | `gN` `zN` `ZN` |  |
+| `search_next` | 下一處 | `n` `zn` `Zn` | `gn` |  |
+| `search_prev` | 上一處 | `N` `zN` `ZN` | `gN` |  |
 | `search_selection` | 找選中的那段 | `g/` | `g/` `*` |  |
 | `goto_definition` | 前往定義位置 | `gd` | `gd` |  |
 | `open_here` | 打開本行寫的檔名 | `gf` | `gf` |  |
@@ -74,8 +74,8 @@
 | `comment_block` | 整段註釋 | `Space C` | `Space C` |  |
 | `copy_to_clipboard` | 複製到系統剪貼簿 | `Space y` | `Space y` |  |
 | `paste_from_clipboard` | 從系統剪貼簿粘貼 | `Space p` | `Space p` |  |
-| `move_line_up` | 上一行(文件裏的) | `gk` `g Up` | `k` `Up` `gk` `g Up` |  |
-| `move_line_down` | 下一行(文件裏的) | `gj` `g Down` | `j` `Down` `gj` `g Down` |  |
+| `move_line_up` | 上一行(文件裏的) | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
+| `move_line_down` | 下一行(文件裏的) | `gj` `g Down` | `C-n` `j` `Down` `gj` `g Down` |  |
 | `goto_next_line_nonwhitespace` | 下一行的第一個非空白字符 |  | `Enter` |  |
 | `jump_next_word_start` | 光標跳到下一個詞首(不選中) |  | `w` |  |
 | `jump_next_long_word_start` | 光標跳到下一個大詞首(不選中) |  | `W` |  |
@@ -87,7 +87,7 @@
 | `jump_prev_paragraph` | 光標跳到上一段(不選中) |  | `{` |  |
 | `move_next_paragraph` | 選到下一段 | `}` |  |  |
 | `move_prev_paragraph` | 選到上一段 | `{` |  |  |
-| `goto_window_top` | 屏幕最上面那一行 | `gt` | `H` `gt` |  |
+| `goto_window_top` | 屏幕最上面那一行 | `gt` | `H` |  |
 | `goto_window_center` | 屏幕中間那一行 | `gc` | `M` `gc` |  |
 | `goto_window_bottom` | 屏幕最下面那一行 | `gb` | `L` `gb` |  |
 | `jump_prev_sentence` | 光標跳到上一句(不選中) |  | `(` |  |
@@ -119,8 +119,8 @@
 | `split_selection_on_newline` | 按行把選區拆開 | `A-s` | `A-s` |  |
 | `rotate_selections_forward` | 主選區換成下一個 | `)` |  |  |
 | `rotate_selections_backward` | 主選區換成上一個 | `(` |  |  |
-| `trim_selections` | 去掉每個選區兩頭的空白 | `_` | `_` |  |
-| `align_selections` | 把各個選區對齊 | `&` | `&` |  |
+| `trim_selections` | 去掉每個選區兩頭的空白 | `_` |  |  |
+| `align_selections` | 把各個選區對齊 | `&` |  |  |
 | `rotate_selection_contents_forward` | 各選區的內容往後輪換 | `A-)` | `A-)` |  |
 | `rotate_selection_contents_backward` | 各選區的內容往前輪換 | `A-(` | `A-(` |  |
 | `select_regex` | 在選區裏按正則選出 | `s` |  |  |
@@ -140,23 +140,23 @@
 | `later` | 重做(和 U 一樣) | `A-U` | `A-U` |  |
 | `goto_column` | 到這一行的第幾列(用計數) |  | `\|` |  |
 | `shell_pipe` | 用外部命令處理選區，換掉它 | `\|` |  |  |
-| `shell_insert_output` | 把外部命令的輸出插在選區前 | `!` | `!` |  |
+| `shell_insert_output` | 把外部命令的輸出插在選區前 | `!` |  |  |
 | `shell_append_output` | 把外部命令的輸出接在選區後 | `A-!` | `A-!` |  |
 | `shell_pipe_to` | 把選區交給外部命令，不改文本 | `A-\|` | `A-\|` |  |
 | `command_mode` | 命令行 | `:` | `:` |  |
 | `match_mode` | 配對組：括號、引號、對象 | `m` |  |  |
 | `replace` | 把選中的每個字換成另一個字 | `r` | `r` |  |
 | `select_register` | 選寄存器(再按一個字母) | `"` | `"` |  |
-| `record_macro` | 開始或停止錄宏 | `Q` | `Q` `q` |  |
-| `replay_macro` | 回放宏 | `q` | `q` `Q` |  |
+| `record_macro` | 開始或停止錄宏 | `Q` | `Q` |  |
+| `replay_macro` | 回放宏 | `q` |  |  |
 | `window_mode` | 窗口組 | `C-w` `Space w` | `C-w` `Space w` |  |
 | `page_down` | 前進一頁 | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `Pagedown` |
 | `page_up` | 後退一頁 | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `Pageup` |
 | `join_selections_space` | 合併行並選中接縫 | `A-J` | `A-J` |  |
 | `save_selection` | 把這裏記進跳轉表 | `C-s` | `C-s` |  |
 | `jump_forward` | 跳轉表：再往前一處 | `Tab` | `Tab` |  |
-| `two_thirds_page_down` | 前進三分之二頁 | `C-n` | `C-n` |  |
-| `two_thirds_page_up` | 後退三分之二頁 | `C-p` | `C-p` |  |
+| `two_thirds_page_down` | 前進三分之二頁 | `C-n` |  |  |
+| `two_thirds_page_up` | 後退三分之二頁 | `C-p` |  |  |
 | `flip_selections` | 光標換到選區另一頭 | `A-;` | `A-;` |  |
 | `vim_redo` | 重做(vim 的 C-r) |  | `C-r` |  |
 | `delete_char_backward` | 刪除光標前的一個字 |  | `X` | `Backspace` `C-h` |
@@ -173,7 +173,7 @@
 | `goto_word` | 跳到當前屏幕某位置 | `gw` | `gw` |  |
 | `goto_word_by_letters` | 兩字母定位單詞 | `gx` | `gx` |  |
 | `goto_char_by_pinyin` | 多字母定位漢字 | `gz` | `gz` |  |
-| `goto_last_accessed_file` | 回到最近打開的緩衝區 | `ga` | `ga` |  |
+| `goto_last_accessed_file` | 回到最近打開的緩衝區 | `ga` | `` `ga` |  |
 | `goto_definition_other_window` | 前往定義(另一窗口顯示) | `gD` | `gD` |  |
 | `goto_reference` | 用到它的每一處 | `gr` | `gr` |  |
 | `search_selection_other_window` | 搜索所選内容(另一窗口顯示) | `g?` | `g?` |  |
@@ -230,11 +230,11 @@
 | `goto_prev_comment` | 上一處註釋 | `[c` | `[c` |  |
 | `add_newline_below` | 下面加一條空行 | `]␣` | `]␣` |  |
 | `add_newline_above` | 上面加一條空行 | `[␣` | `[␣` |  |
-| `align_view_center` | 光標行挪到屏幕中間 | `zz` `zc` `Zz` `Zc` | `zz` `zc` `Zz` `Zc` |  |
+| `align_view_center` | 光標行挪到屏幕中間 | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
 | `align_view_top` | 光標行挪到屏幕頂上 | `zt` `Zt` | `zt` `Zt` |  |
 | `align_view_bottom` | 光標行挪到屏幕底下 | `zb` `Zb` | `zb` `Zb` |  |
-| `scroll_down` | 屏幕往下滾一行(光標的字不動) | `zj` `z Down` `Zj` `Z Down` | `zj` `z Down` `Zj` `Z Down` |  |
-| `scroll_up` | 屏幕往上滾一行(光標的字不動) | `zk` `z Up` `Zk` `Z Up` | `zk` `z Up` `Zk` `Z Up` |  |
+| `scroll_down` | 屏幕往下滾一行(光標的字不動) | `zj` `z Down` `Zj` `Z Down` | `z Down` `Z Down` |  |
+| `scroll_up` | 屏幕往上滾一行(光標的字不動) | `zk` `z Up` `Zk` `Z Up` | `z Up` `Z Up` |  |
 | `match_brackets` | 前往配對符號的另一個 | `mm` |  |  |
 | `select_textobject_inner` | 選擇配對符號内部字符 | `mi` |  |  |
 | `select_textobject_around` | 選擇配對符號和内部字符 | `ma` |  |  |
@@ -345,7 +345,7 @@
 | `paste_table_as_csv` | 剪貼板貼成 csv 表格 | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | 表格轉成 tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | 剪貼板貼成 tsv 表格 | `Space t x T` | `Space t x T` |  |
-| `no_op` | 什麽都不做(綁上它就是解綁那個鍵) |  |  |  |
+| `no_op` | 什麽都不做(綁上它就是解綁那個鍵) |  | `&` `!` |  |
 | `extend_char_left` | 選區向左撑一個字 | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | 選區向右撑一個字 | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | 選區撑到上一行(屏幕上的) | `k` `Up` |  |  |
@@ -367,7 +367,8 @@
 | `extend_to_line_start` | 選區撑到行首 | `Home` | `Home` |  |
 | `extend_to_line_end` | 選區撑到行尾 | `End` |  |  |
 | `extend_to_file_start` | 選區撑到文件開頭 | `gg` | `gg` |  |
-| `extend_to_file_end` | 選區撑到文件末尾 | `ge` | `ge` |  |
+| `extend_to_file_end` | 選區撑到文件末尾 |  |  |  |
+| `extend_to_last_line` | 選到最後一行 | `ge` | `ge` |  |
 | `extend_to_word` | 選區撑到屏幕上某個位置(標籤) | `gw` | `gw` |  |
 | `insert_newline` | 換行(帶上縮進、列表記號) |  |  | `Enter` |
 | `delete_char_forward` | 刪除光標後的一個字 |  |  | `Delete` `C-d` |
@@ -394,8 +395,8 @@
 | `vim_goto_line` | 到第幾行，不帶計數到最後一行(vim 的 G) |  | `G` |  |
 | `vim_indent` | 增加縮進，光標留在原列(vim) |  | `>` |  |
 | `vim_unindent` | 減少縮進，光標留在原列(vim) |  | `<` |  |
-| `vim_paste_after` | 向後粘貼(vim 的 p) |  | `p` |  |
-| `vim_paste_before` | 向前粘貼(vim 的 P) |  | `P` |  |
+| `vim_paste_after` | 向後粘貼(vim 的 p) |  | `p` `]p` |  |
+| `vim_paste_before` | 向前粘貼(vim 的 P) |  | `P` `[p` |  |
 | `vim_increment` | 光標處或其後的數字加一(vim 的 C-a) |  | `C-a` |  |
 | `vim_decrement` | 光標處或其後的數字減一(vim 的 C-x) |  | `C-x` |  |
 | `vim_search_next` | 下一處(vim 的 n) |  | `n` |  |
@@ -408,6 +409,9 @@
 | `vim_switch_to_uppercase` | 選區轉大寫並退出可視模式(vim 的 U) |  | `U` |  |
 | `vim_yank` | 複製選區並退出可視模式(vim 的 y) |  | `y` |  |
 | `vim_visual_block_mode` | 塊選擇(vim 的 C-v) |  | `C-v` |  |
+| `vim_record_macro` | 錄宏(再按一個字母) |  | `q` |  |
+| `vim_replay_macro` | 回放宏(再按一個字母) |  | `@` |  |
+| `vim_goto_first_nonwhitespace` | 行首第一個非空字(帶數字時往下數行) |  | `_` |  |
 
 ### vim keys that play other keys
 

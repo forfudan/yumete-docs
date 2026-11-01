@@ -83,7 +83,7 @@
 | --- | --- |
 | `gg` | start of the file |
 | `g<N>g` | go to line N |
-| `ge` | end of file |
+| `ge` | the last line |
 | `gh / gl` | line start / end |
 | `gs` | first non-blank character |
 | `gf` | open this file |

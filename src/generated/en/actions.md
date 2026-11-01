@@ -14,10 +14,10 @@
 | `move_next_long_word_end` | the next long word's end | `E` |  |  |
 | `goto_line_start` | the start of the line | `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
 | `goto_line_end` | the end of the line | `End` `gl` `g Down` |  |  |
-| `goto_first_nonwhitespace` | the first character that is not a space | `gs` | `gs` `^` |  |
+| `goto_first_nonwhitespace` | the first character that is not a space | `gs` | `^` |  |
 | `goto_file_start` | the start of the file | `gg` | `gg` |  |
-| `goto_file_end` | the end of the file | `ge` | `ge` |  |
-| `goto_last_line` | the last line |  |  |  |
+| `goto_file_end` | the end of the file |  |  |  |
+| `goto_last_line` | the last line | `ge` | `ge` |  |
 | `goto_prev_sentence` | the previous sentence | `H` |  |  |
 | `goto_next_sentence` | the next sentence | `L` |  |  |
 | `goto_prev_paragraph` | the previous paragraph | `[p` | `[p` |  |
@@ -55,8 +55,8 @@
 | `repeat_last_change` | repeat the last insert (vim keymap: the last change) | `.` |  |  |
 | `search` | search forward | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
 | `rsearch` | search backward | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
-| `search_next` | the next match | `n` `zn` `Zn` | `gn` `zn` `Zn` |  |
-| `search_prev` | the previous match | `N` `zN` `ZN` | `gN` `zN` `ZN` |  |
+| `search_next` | the next match | `n` `zn` `Zn` | `gn` |  |
+| `search_prev` | the previous match | `N` `zN` `ZN` | `gN` |  |
 | `search_selection` | look for what is selected | `g/` | `g/` `*` |  |
 | `goto_definition` | go to where it is defined | `gd` | `gd` |  |
 | `open_here` | open the file this line names | `gf` | `gf` |  |
@@ -74,8 +74,8 @@
 | `comment_block` | comment this block | `Space C` | `Space C` |  |
 | `copy_to_clipboard` | copy to the system clipboard | `Space y` | `Space y` |  |
 | `paste_from_clipboard` | paste from the system clipboard | `Space p` | `Space p` |  |
-| `move_line_up` | one line up, in the file | `gk` `g Up` | `k` `Up` `gk` `g Up` |  |
-| `move_line_down` | one line down, in the file | `gj` `g Down` | `j` `Down` `gj` `g Down` |  |
+| `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
+| `move_line_down` | one line down, in the file | `gj` `g Down` | `C-n` `j` `Down` `gj` `g Down` |  |
 | `goto_next_line_nonwhitespace` | the next line's first character that is not a space |  | `Enter` |  |
 | `jump_next_word_start` | the cursor to the next word's start, selecting nothing |  | `w` |  |
 | `jump_next_long_word_start` | the cursor to the next long word's start, selecting nothing |  | `W` |  |
@@ -87,7 +87,7 @@
 | `jump_prev_paragraph` | the cursor to the previous paragraph, selecting nothing |  | `{` |  |
 | `move_next_paragraph` | select on to the next paragraph | `}` |  |  |
 | `move_prev_paragraph` | select back to the previous paragraph | `{` |  |  |
-| `goto_window_top` | the top line on screen | `gt` | `H` `gt` |  |
+| `goto_window_top` | the top line on screen | `gt` | `H` |  |
 | `goto_window_center` | the middle line on screen | `gc` | `M` `gc` |  |
 | `goto_window_bottom` | the bottom line on screen | `gb` | `L` `gb` |  |
 | `jump_prev_sentence` | the cursor to the previous sentence, selecting nothing |  | `(` |  |
@@ -119,8 +119,8 @@
 | `split_selection_on_newline` | split the selection into its lines | `A-s` | `A-s` |  |
 | `rotate_selections_forward` | make the next selection the primary one | `)` |  |  |
 | `rotate_selections_backward` | make the previous selection the primary one | `(` |  |  |
-| `trim_selections` | trim the spaces off both ends of each selection | `_` | `_` |  |
-| `align_selections` | line the selections up | `&` | `&` |  |
+| `trim_selections` | trim the spaces off both ends of each selection | `_` |  |  |
+| `align_selections` | line the selections up | `&` |  |  |
 | `rotate_selection_contents_forward` | rotate the selections' contents forward | `A-)` | `A-)` |  |
 | `rotate_selection_contents_backward` | rotate the selections' contents backward | `A-(` | `A-(` |  |
 | `select_regex` | select what matches a pattern inside the selection | `s` |  |  |
@@ -140,23 +140,23 @@
 | `later` | redo, as U does | `A-U` | `A-U` |  |
 | `goto_column` | to column N of this line (the count) |  | `\|` |  |
 | `shell_pipe` | pipe the selection through a command, replacing it | `\|` |  |  |
-| `shell_insert_output` | insert a command's output before the selection | `!` | `!` |  |
+| `shell_insert_output` | insert a command's output before the selection | `!` |  |  |
 | `shell_append_output` | append a command's output after the selection | `A-!` | `A-!` |  |
 | `shell_pipe_to` | pipe the selection to a command, keeping the text | `A-\|` | `A-\|` |  |
 | `command_mode` | the command line | `:` | `:` |  |
 | `match_mode` | the match group: brackets, quotes, objects | `m` |  |  |
 | `replace` | replace each selected character with another | `r` | `r` |  |
 | `select_register` | pick a register (then a letter) | `"` | `"` |  |
-| `record_macro` | start or stop recording a macro | `Q` | `Q` `q` |  |
-| `replay_macro` | replay the macro | `q` | `q` `Q` |  |
+| `record_macro` | start or stop recording a macro | `Q` | `Q` |  |
+| `replay_macro` | replay the macro | `q` |  |  |
 | `window_mode` | the window group | `C-w` `Space w` | `C-w` `Space w` |  |
 | `page_down` | a page down | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `Pagedown` |
 | `page_up` | a page up | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `Pageup` |
 | `join_selections_space` | join lines and select where they meet | `A-J` | `A-J` |  |
 | `save_selection` | save this place in the jump list | `C-s` | `C-s` |  |
 | `jump_forward` | forward again in the jump list | `Tab` | `Tab` |  |
-| `two_thirds_page_down` | two thirds of a page down | `C-n` | `C-n` |  |
-| `two_thirds_page_up` | two thirds of a page up | `C-p` | `C-p` |  |
+| `two_thirds_page_down` | two thirds of a page down | `C-n` |  |  |
+| `two_thirds_page_up` | two thirds of a page up | `C-p` |  |  |
 | `flip_selections` | move the cursor to the other end of the selection | `A-;` | `A-;` |  |
 | `vim_redo` | redo, vim's C-r |  | `C-r` |  |
 | `delete_char_backward` | delete the character before the cursor |  | `X` | `Backspace` `C-h` |
@@ -173,7 +173,7 @@
 | `goto_word` | go to a place on this screen | `gw` | `gw` |  |
 | `goto_word_by_letters` | two letters to locate a word | `gx` | `gx` |  |
 | `goto_char_by_pinyin` | more letters to locate a char | `gz` | `gz` |  |
-| `goto_last_accessed_file` | back to the buffer before this one | `ga` | `ga` |  |
+| `goto_last_accessed_file` | back to the buffer before this one | `ga` | `` `ga` |  |
 | `goto_definition_other_window` | go to definition in the other window | `gD` | `gD` |  |
 | `goto_reference` | every place it is used | `gr` | `gr` |  |
 | `search_selection_other_window` | search the selection in the other window | `g?` | `g?` |  |
@@ -230,11 +230,11 @@
 | `goto_prev_comment` | the previous comment | `[c` | `[c` |  |
 | `add_newline_below` | a blank line below | `]␣` | `]␣` |  |
 | `add_newline_above` | a blank line above | `[␣` | `[␣` |  |
-| `align_view_center` | put the cursor's line in the middle of the screen | `zz` `zc` `Zz` `Zc` | `zz` `zc` `Zz` `Zc` |  |
+| `align_view_center` | put the cursor's line in the middle of the screen | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
 | `align_view_top` | put the cursor's line at the top of the screen | `zt` `Zt` | `zt` `Zt` |  |
 | `align_view_bottom` | put the cursor's line at the bottom of the screen | `zb` `Zb` | `zb` `Zb` |  |
-| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `zj` `z Down` `Zj` `Z Down` |  |
-| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `zk` `z Up` `Zk` `Z Up` |  |
+| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `z Down` `Z Down` |  |
+| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `z Up` `Z Up` |  |
 | `match_brackets` | go to the other half of the pair | `mm` |  |  |
 | `select_textobject_inner` | select what is inside the pair | `mi` |  |  |
 | `select_textobject_around` | select the pair and what is inside | `ma` |  |  |
@@ -345,7 +345,7 @@
 | `paste_table_as_csv` | paste the clipboard as a csv table | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | convert the table to tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | paste the clipboard as a tsv table | `Space t x T` | `Space t x T` |  |
-| `no_op` | nothing (bound to a key, it unbinds it) |  |  |  |
+| `no_op` | nothing (bound to a key, it unbinds it) |  | `&` `!` |  |
 | `extend_char_left` | extend the selection one character left | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | extend the selection one character right | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | extend the selection one line up, on screen | `k` `Up` |  |  |
@@ -367,7 +367,8 @@
 | `extend_to_line_start` | extend the selection to the line's start | `Home` | `Home` |  |
 | `extend_to_line_end` | extend the selection to the line's end | `End` |  |  |
 | `extend_to_file_start` | extend the selection to the start of the file | `gg` | `gg` |  |
-| `extend_to_file_end` | extend the selection to the end of the file | `ge` | `ge` |  |
+| `extend_to_file_end` | extend the selection to the end of the file |  |  |  |
+| `extend_to_last_line` | extend to the last line | `ge` | `ge` |  |
 | `extend_to_word` | extend the selection to a place on screen, by its label | `gw` | `gw` |  |
 | `insert_newline` | a line break, carrying the indent and a list's marker |  |  | `Enter` |
 | `delete_char_forward` | delete the character after the cursor |  |  | `Delete` `C-d` |
@@ -394,8 +395,8 @@
 | `vim_goto_line` | to line N, or to the last line without a count (vim's G) |  | `G` |  |
 | `vim_indent` | indent, the cursor keeping its column (vim) |  | `>` |  |
 | `vim_unindent` | unindent, the cursor keeping its column (vim) |  | `<` |  |
-| `vim_paste_after` | paste after (vim's p) |  | `p` |  |
-| `vim_paste_before` | paste before (vim's P) |  | `P` |  |
+| `vim_paste_after` | paste after (vim's p) |  | `p` `]p` |  |
+| `vim_paste_before` | paste before (vim's P) |  | `P` `[p` |  |
 | `vim_increment` | the number at or after the cursor, plus one (vim's C-a) |  | `C-a` |  |
 | `vim_decrement` | the number at or after the cursor, minus one (vim's C-x) |  | `C-x` |  |
 | `vim_search_next` | the next match (vim's n) |  | `n` |  |
@@ -408,6 +409,9 @@
 | `vim_switch_to_uppercase` | the selection to uppercase, leaving Visual mode (vim's U) |  | `U` |  |
 | `vim_yank` | yank the selection, leaving Visual mode (vim's y) |  | `y` |  |
 | `vim_visual_block_mode` | select a block (vim's C-v) |  | `C-v` |  |
+| `vim_record_macro` | record a macro (then a letter) |  | `q` |  |
+| `vim_replay_macro` | replay the macro (then a letter) |  | `@` |  |
+| `vim_goto_first_nonwhitespace` | the first non-blank character, a count of lines down |  | `_` |  |
 
 ### vim keys that play other keys
 

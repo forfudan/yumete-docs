@@ -155,7 +155,10 @@ the last insert, as helix's does.
 | `C-o` in insert mode | run one Normal command and come back |
 | `C-u` `C-w` in insert mode | delete to the start of the line, the word before; each first stops where this Insert began |
 | `K` | the documentation for the thing under the cursor |
-| `q`, `Q` | record a macro (`q` again stops), play it |
+| `q`*a*, `@`*a*, `Q` | record a macro (`q` again stops), play it, play it; the letter is read, but there is one macro |
+| `C-n` `C-p` `_` | down, up a line; the first non-blank character, a count of lines down |
+| `]p` `[p` | put after, before (the indent is not adjusted yet) |
+| `C-^` | the previous file; while typing it switches the input method between Chinese and English, as vim's Insert-mode `C-^` switches language |
 | `ZZ` `ZQ` | save and quit, quit without saving |
 
 Under the vim keymap the case and conversion menu moves from `` ` `` to
@@ -171,9 +174,11 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 
 ## What is not there
 
-- There are no named macros: `qa`…`q` and `@a` are not there. There is one
-  macro, the last one recorded; `q` records it and `Q` plays it. See
+- There are no named macros. `qa`…`q` and `@a` work, but every letter
+  names the same one macro, the last one recorded; `Q` plays it too. See
   [Registers](../reference/registers.md).
+- Folds are not there, so `zc`, `zj`, `zk`, `zn` and `zN` do nothing, and
+  neither do `gt` (no tab pages) and `gs`; `&` and `!` do nothing yet.
 - The code objects (functions, parameters, tests, HTML elements) have no vim
   spelling, and neither has vim's tag object `it`.
 - vim-surround's visual `S` is not there. Use `ys` with a motion.
