@@ -32,6 +32,7 @@
     "text": "Reference",
     "items": [
       { "text": "Keymap", "link": "/reference/keymap" },
+      { "text": "Bindable commands", "link": "/reference/actions" },
       { "text": "Match mode", "link": "/reference/match" },
       { "text": "Registers", "link": "/reference/registers" },
       { "text": "Jumplist", "link": "/reference/jumplist" },
