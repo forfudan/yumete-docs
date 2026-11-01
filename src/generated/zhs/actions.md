@@ -26,13 +26,13 @@
 | `half_page_up` | 后退半页 | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
 | `jump_backward` | 跳转表：回到刚才那个位置 | `C-o` | `C-o` |  |
 | `select_mode` | 延伸模式：移动把选区撑大 | `v` | `v` |  |
-| `extend_line_below` | 选中当前行 | `x` | `x` |  |
+| `extend_line_below` | 选中当前行 | `x` |  |  |
 | `extend_to_line_bounds` | 把选区撑到整行边界 | `X` |  |  |
 | `select_all` | 选中整个文件 | `%` | `%` |  |
 | `collapse_selection` | 选区收回光标 | `;` |  |  |
-| `delete_selection` | 剪切选区(进寄存器) | `d` |  |  |
+| `delete_selection` | 剪切选区(进寄存器) | `d` | `x` |  |
 | `delete_selection_noyank` | 删除选区(不动寄存器) | `A-d` | `A-d` |  |
-| `change_selection` | 剪切后改写 | `c` |  |  |
+| `change_selection` | 剪切后改写 | `c` | `s` |  |
 | `change_selection_noyank` | 改写选区(不动寄存器) | `A-c` | `A-c` |  |
 | `insert_mode` | 在选区前插入 | `i` |  |  |
 | `append_mode` | 在选区后插入 | `a` |  |  |
@@ -50,7 +50,7 @@
 | `increment` | 光标处的数字加一 | `C-a` |  |  |
 | `decrement` | 光标处的数字减一 | `C-x` |  |  |
 | `switch_case` | 大小写互换 | `~` ``` `` ``` | ``` g`` ``` |  |
-| `undo` | 撤销 | `u` | `u` |  |
+| `undo` | 撤销 | `u` |  |  |
 | `redo` | 重做 | `U` |  |  |
 | `repeat_last_change` | 再做一次刚才那个改动 | `.` |  |  |
 | `search` | 往前搜索 | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
@@ -123,7 +123,7 @@
 | `align_selections` | 把各个选区对齐 | `&` | `&` |  |
 | `rotate_selection_contents_forward` | 各选区的内容往后轮换 | `A-)` | `A-)` |  |
 | `rotate_selection_contents_backward` | 各选区的内容往前轮换 | `A-(` | `A-(` |  |
-| `select_regex` | 在选区里按正则选出 | `s` | `s` |  |
+| `select_regex` | 在选区里按正则选出 | `s` |  |  |
 | `split_selection` | 按正则把选区拆开 | `S` | `S` |  |
 | `keep_selections` | 只留配得上正则的选区 | `A-k` `K` | `A-k` `K` |  |
 | `remove_selections` | 去掉配得上正则的选区 | `A-K` | `A-K` |  |
@@ -399,6 +399,11 @@
 | `vim_match_brackets` | 配对的括号，不在括号上就找本行的下一个(vim 的 %) |  |  |  |
 | `vim_kill_to_line_start` | 删到这次插入开始的地方(vim 的 C-u) |  |  | `C-u` |
 | `vim_kill_to_line_end` | 删到行尾，不删换行(vim) |  |  | `C-k` |
+| `vim_flip_selections` | 换到选区的另一头(vim 可视模式的 o) |  | `o` |  |
+| `vim_switch_to_lowercase` | 选区转小写并退出可视模式(vim 的 u) |  | `u` |  |
+| `vim_switch_to_uppercase` | 选区转大写并退出可视模式(vim 的 U) |  | `U` |  |
+| `vim_yank` | 复制选区并退出可视模式(vim 的 y) |  | `y` |  |
+| `vim_visual_block_mode` | 块选择(vim 的 C-v) |  | `C-v` |  |
 
 ### vim keys that play other keys
 
