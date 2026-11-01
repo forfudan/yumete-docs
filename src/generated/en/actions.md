@@ -26,13 +26,13 @@
 | `half_page_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
 | `jump_backward` | back to where you jumped from | `C-o` | `C-o` |  |
 | `select_mode` | Select mode: moving grows the selection | `v` | `v` |  |
-| `extend_line_below` | select this line | `x` | `x` |  |
+| `extend_line_below` | select this line | `x` |  |  |
 | `extend_to_line_bounds` | grow the selection to whole lines | `X` |  |  |
 | `select_all` | select the whole file | `%` | `%` |  |
 | `collapse_selection` | collapse the selection to the cursor | `;` |  |  |
-| `delete_selection` | cut the selection into the register | `d` |  |  |
+| `delete_selection` | cut the selection into the register | `d` | `x` |  |
 | `delete_selection_noyank` | delete the selection, leaving the register | `A-d` | `A-d` |  |
-| `change_selection` | cut into the register, then change | `c` |  |  |
+| `change_selection` | cut into the register, then change | `c` | `s` |  |
 | `change_selection_noyank` | change the selection, leaving the register | `A-c` | `A-c` |  |
 | `insert_mode` | insert before the selection | `i` |  |  |
 | `append_mode` | insert after the selection | `a` |  |  |
@@ -50,7 +50,7 @@
 | `increment` | the number under the cursor, plus one | `C-a` |  |  |
 | `decrement` | the number under the cursor, minus one | `C-x` |  |  |
 | `switch_case` | switch case | `~` ``` `` ``` | ``` g`` ``` |  |
-| `undo` | undo | `u` | `u` |  |
+| `undo` | undo | `u` |  |  |
 | `redo` | redo | `U` |  |  |
 | `repeat_last_change` | repeat the last insert (vim keymap: the last change) | `.` |  |  |
 | `search` | search forward | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
@@ -123,7 +123,7 @@
 | `align_selections` | line the selections up | `&` | `&` |  |
 | `rotate_selection_contents_forward` | rotate the selections' contents forward | `A-)` | `A-)` |  |
 | `rotate_selection_contents_backward` | rotate the selections' contents backward | `A-(` | `A-(` |  |
-| `select_regex` | select what matches a pattern inside the selection | `s` | `s` |  |
+| `select_regex` | select what matches a pattern inside the selection | `s` |  |  |
 | `split_selection` | split the selection on a pattern | `S` | `S` |  |
 | `keep_selections` | keep the selections that match a pattern | `A-k` `K` | `A-k` `K` |  |
 | `remove_selections` | remove the selections that match a pattern | `A-K` | `A-K` |  |
@@ -399,6 +399,11 @@
 | `vim_match_brackets` | the matching bracket, or the next one on the line (vim's %) |  |  |  |
 | `vim_kill_to_line_start` | delete back to where this Insert began (vim's C-u) |  |  | `C-u` |
 | `vim_kill_to_line_end` | delete to the end of the line, never the line break (vim) |  |  | `C-k` |
+| `vim_flip_selections` | to the other end of the selection (vim's Visual o) |  | `o` |  |
+| `vim_switch_to_lowercase` | the selection to lowercase, leaving Visual mode (vim's u) |  | `u` |  |
+| `vim_switch_to_uppercase` | the selection to uppercase, leaving Visual mode (vim's U) |  | `U` |  |
+| `vim_yank` | yank the selection, leaving Visual mode (vim's y) |  | `y` |  |
+| `vim_visual_block_mode` | select a block (vim's C-v) |  | `C-v` |  |
 
 ### vim keys that play other keys
 
