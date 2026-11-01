@@ -158,8 +158,8 @@ which helix's do not. Each place has its own table:
 "C-f" = "move_char_right"
 
 [keys.picker]               # the list of a picker, and of ::
-"C-j" = "next_entry"
-"C-k" = "prev_entry"
+"A-j" = "next_entry"        # not C-j: a terminal sends it as Enter
+"A-k" = "prev_entry"
 
 [keys.sidebar]              # the file tree, buffers, outline, links, info
 n = "move_line_down"
@@ -187,7 +187,8 @@ inherit = false
 [Bindable commands](../reference/actions.md) lists each place's
 commands and keys.
 
-The hint row under a sidebar still shows the default keys.
+The hint rows, the `::` palette and `:keymap-actions` name the keys as they are
+bound now, yours included.
 
 ## Presets and bindings together
 
