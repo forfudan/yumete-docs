@@ -313,6 +313,10 @@
 | `table_search_columns` | 按列搜索(可指定列範圍) | `Space t /` | `Space t /` |  |
 | `table_search_columns_other_window` | 按列搜索(另一窗口顯示) | `Space t ?` | `Space t ?` |  |
 | `table_goto_cell` | 去某一格(␣t 20,20g) | `Space t g` | `Space t g` |  |
+| `table_enter_cell` | 進格子裏(按字走) |  |  |  |
+| `table_leave_cell` | 出格子(回到按格走) |  |  |  |
+| `table_next_cell` | 下一格，行尾接下一行 |  |  |  |
+| `table_prev_cell` | 上一格 |  |  |  |
 | `table_yank_column` | 複製這一欄 | `Space t y` | `Space t y` |  |
 | `table_replace_column` | 用複製的欄蓋掉該欄 | `Space t v` | `Space t v` |  |
 | `table_paste_column_right` | 把複製的欄貼到右邊 | `Space t p` | `Space t p` |  |
@@ -415,6 +419,43 @@
 | `Y` | `@y$` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
+
+### In a table's grid (`[keys.table]`)
+
+| Key | Command |
+| --- | --- |
+| `h` | `move_char_left` |
+| `l` | `move_char_right` |
+| `j` | `move_visual_line_down` `move_line_down` |
+| `k` | `move_visual_line_up` `move_line_up` |
+| `Home` | `goto_line_start` |
+| `End` | `goto_line_end` `vim_goto_line_end` |
+| `x` | `extend_line_below` |
+| `%` | `select_all` |
+| `Enter` | `table_enter_cell` |
+| `Esc` | `table_leave_cell` |
+| `Tab` | `table_next_cell` |
+| `S-tab` | `table_prev_cell` |
+| `C-n` | `two_thirds_page_down` |
+| `C-p` | `two_thirds_page_up` |
+| `C-d` | `half_page_down` |
+| `C-u` | `half_page_up` |
+| `Pagedown` | `page_down` |
+| `Pageup` | `page_up` |
+| `y` | `yank` `operator_yank` |
+| `d` | `delete_selection` `operator_delete` |
+| `A-d` | `delete_selection_noyank` |
+| `c` | `change_selection` `operator_change` |
+| `A-c` | `change_selection_noyank` |
+| `p` | `paste_after` `vim_paste_after` |
+| `P` | `paste_before` `vim_paste_before` |
+| `R` | `replace_with_yanked` |
+| `i` | `insert_mode` `vim_insert_mode` |
+| `a` | `append_mode` `vim_append_mode` |
+| `I` | `insert_at_line_start` `vim_insert_at_line_start` |
+| `A` | `insert_at_line_end` `vim_insert_at_line_end` |
+| `o` | `open_below` `vim_open_below` |
+| `O` | `open_above` `vim_open_above` |
 
 ### `[keys.prompt]`
 
