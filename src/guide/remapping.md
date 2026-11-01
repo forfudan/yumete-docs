@@ -161,13 +161,16 @@ which helix's do not. Each place has its own table:
 "A-j" = "next_entry"        # not C-j: a terminal sends it as Enter
 "A-k" = "prev_entry"
 
-[keys.sidebar]              # the file tree, buffers, outline, links, info
-n = "move_line_down"
+[keys.sidebar]              # the file tree, buffers, outline, links, info,
+n = "move_line_down"        # and the search panel's moving keys
 e = "move_line_up"
+
+[keys.field]                # a box of the search panel
+"C-n" = "next_field"
 ```
 
-A picker takes the prompt's keys as well, for its query, and its own win where
-both bind a key. A line binds one key, to a command from that place's list, a
+A picker takes the prompt's keys as well, for its query, and so does a box of
+the search panel; their own win where both bind a key. A line binds one key, to a command from that place's list, a
 command line (`":write"`) or keys (`"@hello"`), and `no_op` unbinds a key.
 Where a name is also a Normal or Insert command (`move_char_left`,
 `page_down`), it does the same thing in that place.

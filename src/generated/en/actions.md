@@ -473,3 +473,12 @@
 | `command_mode` | the command line | `:` |
 | `space_mode` | the Space menu | `Space` |
 | `window_mode` | the window group | `C-w` |
+
+### `[keys.field]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `next_field` | the next box (and a greyed-out word is taken first) | `Tab` |
+| `prev_field` | the previous box | `S-tab` |
+| `move_line_down` | the box below | `Down` |
+| `move_line_up` | the box above | `Up` |
