@@ -154,6 +154,12 @@ are gone.
 apply on top of whichever preset is in use, and beat it where both bind the same
 key.
 
+Under the vim keymap, a key you bind to a motion is also that motion after an
+operator: with `"Q" = "jump_next_word_end"`, `dQ` deletes to the end of the
+word. Where vim's own key does something of its own, it runs a command named
+`vim_` and helix's name (`vim_paste_after` for `p`), so a name means the same
+under either keymap.
+
 The Yumete flavour is a short list of changes laid over either preset. Today it
 holds one: `d` and `c` delete without filling the register, and `A-d` and `A-c`
 become the keys that cut.
