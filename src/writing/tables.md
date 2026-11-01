@@ -245,8 +245,9 @@ whole cell is the unit: you move between cells and copy or replace whole cells.
 | `Enter` | go inside the current cell |
 | `Esc` | come back out to the cell level |
 
-The status line shows where you are: `CEL` at the cell level, `CEL.NOR` inside a
-cell, `CEL.INS` while typing.
+The status line shows where you are: `TBL.NOR` at the cell level (`TBL.SEL`
+while selecting whole cells), `CEL.NOR` inside a cell (`CEL.SEL` while selecting
+characters), `CEL.INS` while typing.
 
 `Esc` at the cell level clears a count or a selection, as everywhere else. It
 never leaves the table.
