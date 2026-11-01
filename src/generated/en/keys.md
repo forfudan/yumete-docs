@@ -209,7 +209,7 @@
 | --- | --- |
 | `` `l `` | to lowercase |
 | `` `u `` | to uppercase |
-| `` `` `` | switch case |
+| ``` `` ``` | switch case |
 | `` `s `` | traditional → simplified |
 | `` `t `` | simplified → traditional |
 | `` `w `` | simplified → Taiwan 繁 |

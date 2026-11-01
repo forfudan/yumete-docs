@@ -13,7 +13,7 @@
 | `move_prev_long_word_start` | 上一个大词首 | `B` |  |  |
 | `move_next_long_word_end` | 下一个大词尾 | `E` |  |  |
 | `goto_line_start` | 行首 | `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | 行尾 | `End` `gl` `g Down` | `End` `$` |  |
+| `goto_line_end` | 行尾 | `End` `gl` `g Down` |  |  |
 | `goto_first_nonwhitespace` | 第一个非空白字符 | `gs` | `gs` `^` |  |
 | `goto_file_start` | 文件开头 | `gg` | `gg` |  |
 | `goto_file_end` | 文件末尾 | `ge` | `ge` |  |
@@ -36,27 +36,27 @@
 | `change_selection_noyank` | 改写选区(不动寄存器) | `A-c` | `A-c` |  |
 | `insert_mode` | 在选区前插入 | `i` |  |  |
 | `append_mode` | 在选区后插入 | `a` |  |  |
-| `insert_at_line_start` | 在行首插入 | `I` | `I` |  |
-| `insert_at_line_end` | 在行尾插入 | `A` | `A` |  |
-| `open_below` | 在下方开新行 | `o` | `o` |  |
-| `open_above` | 在上方开新行 | `O` | `O` |  |
+| `insert_at_line_start` | 在行首插入 | `I` |  |  |
+| `insert_at_line_end` | 在行尾插入 | `A` |  |  |
+| `open_below` | 在下方开新行 | `o` |  |  |
+| `open_above` | 在上方开新行 | `O` |  |  |
 | `yank` | 复制 | `y` |  |  |
-| `paste_after` | 向后粘贴 | `p` | `p` |  |
-| `paste_before` | 向前粘贴 | `P` | `P` |  |
+| `paste_after` | 向后粘贴 | `p` |  |  |
+| `paste_before` | 向前粘贴 | `P` |  |  |
 | `replace_with_yanked` | 用寄存器内容替换选区 | `R` |  |  |
-| `join_selections` | 与下一行合并 | `J` | `J` |  |
+| `join_selections` | 与下一行合并 | `J` |  |  |
 | `indent` | 增加缩进 | `>` |  |  |
 | `unindent` | 减少缩进 | `<` |  |  |
-| `increment` | 光标处的数字加一 | `C-a` | `C-a` |  |
-| `decrement` | 光标处的数字减一 | `C-x` | `C-x` |  |
-| `switch_case` | 大小写互换 | `~` `` `` `` | `~` `` g`` `` |  |
+| `increment` | 光标处的数字加一 | `C-a` |  |  |
+| `decrement` | 光标处的数字减一 | `C-x` |  |  |
+| `switch_case` | 大小写互换 | `~` ``` `` ``` | ``` g`` ``` |  |
 | `undo` | 撤销 | `u` | `u` |  |
 | `redo` | 重做 | `U` |  |  |
 | `repeat_last_change` | 再做一次刚才那个改动 | `.` |  |  |
 | `search` | 往前搜索 | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
 | `rsearch` | 往后搜索 | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
-| `search_next` | 下一处 | `n` `zn` `Zn` | `n` `gn` `zn` `Zn` |  |
-| `search_prev` | 上一处 | `N` `zN` `ZN` | `N` `gN` `zN` `ZN` |  |
+| `search_next` | 下一处 | `n` `zn` `Zn` | `gn` `zn` `Zn` |  |
+| `search_prev` | 上一处 | `N` `zN` `ZN` | `gN` `zN` `ZN` |  |
 | `search_selection` | 找选中的那段 | `g/` | `g/` `*` |  |
 | `goto_definition` | 前往定义位置 | `gd` | `gd` |  |
 | `open_here` | 打开本行写的文件名 | `gf` | `gf` |  |
@@ -105,7 +105,7 @@
 | `find_till_char` | 往后找一个字，选到它前面 | `t` | `t` |  |
 | `till_prev_char` | 往前找一个字，选到它后面 | `T` | `T` |  |
 | `select_line_mode` | 整行选择模式 |  | `V` |  |
-| `normal_mode` | 退出延伸模式，收起临时显示的东西 | `Esc` | `Esc` | `Esc` |
+| `normal_mode` | 退出延伸模式，收起临时显示的东西 | `Esc` |  | `Esc` |
 | `repeat_find_char` | 再找一次刚才那个字 |  | `;` |  |
 | `repeat_find_char_reverse` | 反方向再找一次刚才那个字 |  | `,` |  |
 | `copy_selection_on_next_line` | 在下一行复制一个选区 | `C` | `C` |  |
@@ -165,7 +165,7 @@
 | `search_selection_exact` | 找选中的那段(原样) | `A-*` | `A-*` |  |
 | `search_word_backward` | 往回找光标下的词 |  | `#` |  |
 | `replace_mode` | 覆写模式：打字盖掉原文 |  | `R` |  |
-| `goto_line` | 到第几行(用计数) | `G` | `G` |  |
+| `goto_line` | 到第几行(用计数) | `G` |  |  |
 | `vim_repeat_last_change` | 用新的计数再做一次刚才的改动 |  | `.` |  |
 | `repeat_last_motion` | 再做一次刚才的 f 或 t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | 光标跳到上一个词尾(不选中) |  | `ge` |  |
@@ -235,7 +235,7 @@
 | `align_view_bottom` | 光标行挪到屏幕底下 | `zb` `Zb` | `zb` `Zb` |  |
 | `scroll_down` | 屏幕往下滚一行(光标的字不动) | `zj` `z Down` `Zj` `Z Down` | `zj` `z Down` `Zj` `Z Down` |  |
 | `scroll_up` | 屏幕往上滚一行(光标的字不动) | `zk` `z Up` `Zk` `Z Up` | `zk` `z Up` `Zk` `Z Up` |  |
-| `match_brackets` | 前往配对符号的另一个 | `mm` | `%` |  |
+| `match_brackets` | 前往配对符号的另一个 | `mm` |  |  |
 | `select_textobject_inner` | 选择配对符号内部字符 | `mi` |  |  |
 | `select_textobject_around` | 选择配对符号和内部字符 | `ma` |  |  |
 | `surround_add` | 使用配对符号包住选区 | `ms` |  |  |
@@ -354,14 +354,14 @@
 | `extend_next_long_word_start` | 选区撑到下一个大词首 | `W` |  |  |
 | `extend_prev_long_word_start` | 选区撑到上一个大词首 | `B` |  |  |
 | `extend_next_long_word_end` | 选区撑到下一个大词尾 | `E` |  |  |
-| `extend_search_next` | 下一处也选上(多一个选区) | `n` | `n` |  |
-| `extend_search_prev` | 上一处也选上(多一个选区) | `N` | `N` |  |
+| `extend_search_next` | 下一处也选上(多一个选区) | `n` |  |  |
+| `extend_search_prev` | 上一处也选上(多一个选区) | `N` |  |  |
 | `extend_till_char` | 选区往后撑到某个字前面 | `t` | `t` |  |
 | `extend_next_char` | 选区往后撑到某个字 | `f` | `f` |  |
 | `extend_till_prev_char` | 选区往前撑到某个字后面 | `T` | `T` |  |
 | `extend_prev_char` | 选区往前撑到某个字 | `F` | `F` |  |
 | `extend_to_line_start` | 选区撑到行首 | `Home` | `Home` |  |
-| `extend_to_line_end` | 选区撑到行尾 | `End` | `End` |  |
+| `extend_to_line_end` | 选区撑到行尾 | `End` |  |  |
 | `extend_to_file_start` | 选区撑到文件开头 | `gg` | `gg` |  |
 | `extend_to_file_end` | 选区撑到文件末尾 | `ge` | `ge` |  |
 | `extend_to_word` | 选区撑到屏幕上某个位置(标签) | `gw` | `gw` |  |
@@ -377,6 +377,28 @@
 | `commit_undo_checkpoint` | 在这里断开撤销 |  |  | `C-g` |
 | `insert_tab` | 插入缩进(文件用的那一种) |  |  | `Tab` |
 | `insert_other_tab` | 插入另一种缩进(Tab 或空格) |  |  | `S-tab` |
+| `vim_normal_mode` | 回普通模式(vim：退出可视模式时选区收成一点) |  | `Esc` |  |
+| `vim_goto_line_end` | 行尾(vim 的 $：往下走也留在行尾) |  | `End` |  |
+| `vim_insert_mode` | 在光标前插入(vim 的 i) |  | `i` |  |
+| `vim_append_mode` | 在光标后插入(vim 的 a) |  | `a` |  |
+| `vim_insert_at_line_start` | 在第一个非空白字符前插入(vim 的 I) |  | `I` |  |
+| `vim_insert_at_line_end` | 在行尾插入(vim 的 A) |  | `A` |  |
+| `vim_open_below` | 在下方开新行(vim 的 o，计数重复) |  | `o` |  |
+| `vim_open_above` | 在上方开新行(vim 的 O，计数重复) |  | `O` |  |
+| `vim_join_selections` | 与下一行合并(vim 的 J) |  | `J` |  |
+| `vim_switch_case` | 大小写互换并往后走(vim 的 ~) |  | `~` |  |
+| `vim_goto_line` | 到第几行，不带计数到最后一行(vim 的 G) |  | `G` |  |
+| `vim_indent` | 增加缩进，光标留在原列(vim) |  | `>` |  |
+| `vim_unindent` | 减少缩进，光标留在原列(vim) |  | `<` |  |
+| `vim_paste_after` | 向后粘贴(vim 的 p) |  | `p` |  |
+| `vim_paste_before` | 向前粘贴(vim 的 P) |  | `P` |  |
+| `vim_increment` | 光标处或其后的数字加一(vim 的 C-a) |  | `C-a` |  |
+| `vim_decrement` | 光标处或其后的数字减一(vim 的 C-x) |  | `C-x` |  |
+| `vim_search_next` | 下一处(vim 的 n) |  | `n` |  |
+| `vim_search_prev` | 上一处(vim 的 N) |  | `N` |  |
+| `vim_match_brackets` | 配对的括号，不在括号上就找本行的下一个(vim 的 %) |  |  |  |
+| `vim_kill_to_line_start` | 删到这次插入开始的地方(vim 的 C-u) |  |  | `C-u` |
+| `vim_kill_to_line_end` | 删到行尾，不删换行(vim) |  |  | `C-k` |
 
 ### vim keys that play other keys
 
@@ -384,6 +406,7 @@
 | --- | --- |
 | `+` | `@jgs` |
 | `-` | `@kgs` |
+| `$` | `vim_goto_line_end` |
 | `Y` | `@y$` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
