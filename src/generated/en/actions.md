@@ -13,7 +13,7 @@
 | `move_prev_long_word_start` | the previous long word's start | `B` |  |  |
 | `move_next_long_word_end` | the next long word's end | `E` |  |  |
 | `goto_line_start` | the start of the line | `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | the end of the line | `End` `gl` `g Down` | `End` `$` |  |
+| `goto_line_end` | the end of the line | `End` `gl` `g Down` |  |  |
 | `goto_first_nonwhitespace` | the first character that is not a space | `gs` | `gs` `^` |  |
 | `goto_file_start` | the start of the file | `gg` | `gg` |  |
 | `goto_file_end` | the end of the file | `ge` | `ge` |  |
@@ -36,27 +36,27 @@
 | `change_selection_noyank` | change the selection, leaving the register | `A-c` | `A-c` |  |
 | `insert_mode` | insert before the selection | `i` |  |  |
 | `append_mode` | insert after the selection | `a` |  |  |
-| `insert_at_line_start` | insert at the start of the line | `I` | `I` |  |
-| `insert_at_line_end` | insert at the end of the line | `A` | `A` |  |
-| `open_below` | open a line below | `o` | `o` |  |
-| `open_above` | open a line above | `O` | `O` |  |
+| `insert_at_line_start` | insert at the start of the line | `I` |  |  |
+| `insert_at_line_end` | insert at the end of the line | `A` |  |  |
+| `open_below` | open a line below | `o` |  |  |
+| `open_above` | open a line above | `O` |  |  |
 | `yank` | yank | `y` |  |  |
-| `paste_after` | paste after | `p` | `p` |  |
-| `paste_before` | paste before | `P` | `P` |  |
+| `paste_after` | paste after | `p` |  |  |
+| `paste_before` | paste before | `P` |  |  |
 | `replace_with_yanked` | replace the selection with the register | `R` |  |  |
-| `join_selections` | join with the next line | `J` | `J` |  |
+| `join_selections` | join with the next line | `J` |  |  |
 | `indent` | indent | `>` |  |  |
 | `unindent` | unindent | `<` |  |  |
-| `increment` | the number under the cursor, plus one | `C-a` | `C-a` |  |
-| `decrement` | the number under the cursor, minus one | `C-x` | `C-x` |  |
-| `switch_case` | switch case | `~` `` `` `` | `~` `` g`` `` |  |
+| `increment` | the number under the cursor, plus one | `C-a` |  |  |
+| `decrement` | the number under the cursor, minus one | `C-x` |  |  |
+| `switch_case` | switch case | `~` ``` `` ``` | ``` g`` ``` |  |
 | `undo` | undo | `u` | `u` |  |
 | `redo` | redo | `U` |  |  |
 | `repeat_last_change` | repeat the last insert (vim keymap: the last change) | `.` |  |  |
 | `search` | search forward | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
 | `rsearch` | search backward | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
-| `search_next` | the next match | `n` `zn` `Zn` | `n` `gn` `zn` `Zn` |  |
-| `search_prev` | the previous match | `N` `zN` `ZN` | `N` `gN` `zN` `ZN` |  |
+| `search_next` | the next match | `n` `zn` `Zn` | `gn` `zn` `Zn` |  |
+| `search_prev` | the previous match | `N` `zN` `ZN` | `gN` `zN` `ZN` |  |
 | `search_selection` | look for what is selected | `g/` | `g/` `*` |  |
 | `goto_definition` | go to where it is defined | `gd` | `gd` |  |
 | `open_here` | open the file this line names | `gf` | `gf` |  |
@@ -105,7 +105,7 @@
 | `find_till_char` | find a character forward, selecting up to just before it | `t` | `t` |  |
 | `till_prev_char` | find a character backward, selecting back to just after it | `T` | `T` |  |
 | `select_line_mode` | line-wise Select mode |  | `V` |  |
-| `normal_mode` | leave Select mode and put away what was shown for a moment | `Esc` | `Esc` | `Esc` |
+| `normal_mode` | leave Select mode and put away what was shown for a moment | `Esc` |  | `Esc` |
 | `repeat_find_char` | find that character again |  | `;` |  |
 | `repeat_find_char_reverse` | find that character again, the other way |  | `,` |  |
 | `copy_selection_on_next_line` | copy the selection onto the next line | `C` | `C` |  |
@@ -165,7 +165,7 @@
 | `search_selection_exact` | look for what is selected, exactly as written | `A-*` | `A-*` |  |
 | `search_word_backward` | search backward for the word under the cursor |  | `#` |  |
 | `replace_mode` | Replace mode: typing writes over the text |  | `R` |  |
-| `goto_line` | to line N (the count) | `G` | `G` |  |
+| `goto_line` | to line N (the count) | `G` |  |  |
 | `vim_repeat_last_change` | repeat the last change with a new count |  | `.` |  |
 | `repeat_last_motion` | repeat the last f or t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | the cursor back to the previous word's end, selecting nothing |  | `ge` |  |
@@ -235,7 +235,7 @@
 | `align_view_bottom` | put the cursor's line at the bottom of the screen | `zb` `Zb` | `zb` `Zb` |  |
 | `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `zj` `z Down` `Zj` `Z Down` |  |
 | `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `zk` `z Up` `Zk` `Z Up` |  |
-| `match_brackets` | go to the other half of the pair | `mm` | `%` |  |
+| `match_brackets` | go to the other half of the pair | `mm` |  |  |
 | `select_textobject_inner` | select what is inside the pair | `mi` |  |  |
 | `select_textobject_around` | select the pair and what is inside | `ma` |  |  |
 | `surround_add` | wrap the selection in a pair | `ms` |  |  |
@@ -354,14 +354,14 @@
 | `extend_next_long_word_start` | extend the selection to the next long word's start | `W` |  |  |
 | `extend_prev_long_word_start` | extend the selection to the previous long word's start | `B` |  |  |
 | `extend_next_long_word_end` | extend the selection to the next long word's end | `E` |  |  |
-| `extend_search_next` | add the next match as a selection | `n` | `n` |  |
-| `extend_search_prev` | add the previous match as a selection | `N` | `N` |  |
+| `extend_search_next` | add the next match as a selection | `n` |  |  |
+| `extend_search_prev` | add the previous match as a selection | `N` |  |  |
 | `extend_till_char` | extend the selection forward to just before a character | `t` | `t` |  |
 | `extend_next_char` | extend the selection forward to a character | `f` | `f` |  |
 | `extend_till_prev_char` | extend the selection backward to just after a character | `T` | `T` |  |
 | `extend_prev_char` | extend the selection backward to a character | `F` | `F` |  |
 | `extend_to_line_start` | extend the selection to the line's start | `Home` | `Home` |  |
-| `extend_to_line_end` | extend the selection to the line's end | `End` | `End` |  |
+| `extend_to_line_end` | extend the selection to the line's end | `End` |  |  |
 | `extend_to_file_start` | extend the selection to the start of the file | `gg` | `gg` |  |
 | `extend_to_file_end` | extend the selection to the end of the file | `ge` | `ge` |  |
 | `extend_to_word` | extend the selection to a place on screen, by its label | `gw` | `gw` |  |
@@ -377,6 +377,28 @@
 | `commit_undo_checkpoint` | break the undo here |  |  | `C-g` |
 | `insert_tab` | insert an indent, the kind the file uses |  |  | `Tab` |
 | `insert_other_tab` | insert the other kind of indent, a tab or spaces |  |  | `S-tab` |
+| `vim_normal_mode` | back to Normal mode (vim: leaving Visual mode collapses the selection) |  | `Esc` |  |
+| `vim_goto_line_end` | the end of the line (vim's $: moving down keeps to line ends) |  | `End` |  |
+| `vim_insert_mode` | insert before the cursor (vim's i) |  | `i` |  |
+| `vim_append_mode` | insert after the cursor (vim's a) |  | `a` |  |
+| `vim_insert_at_line_start` | insert before the first non-blank (vim's I) |  | `I` |  |
+| `vim_insert_at_line_end` | insert at the end of the line (vim's A) |  | `A` |  |
+| `vim_open_below` | open a line below (vim's o; a count repeats it) |  | `o` |  |
+| `vim_open_above` | open a line above (vim's O; a count repeats it) |  | `O` |  |
+| `vim_join_selections` | join with the next line (vim's J) |  | `J` |  |
+| `vim_switch_case` | switch case and move on (vim's ~) |  | `~` |  |
+| `vim_goto_line` | to line N, or to the last line without a count (vim's G) |  | `G` |  |
+| `vim_indent` | indent, the cursor keeping its column (vim) |  | `>` |  |
+| `vim_unindent` | unindent, the cursor keeping its column (vim) |  | `<` |  |
+| `vim_paste_after` | paste after (vim's p) |  | `p` |  |
+| `vim_paste_before` | paste before (vim's P) |  | `P` |  |
+| `vim_increment` | the number at or after the cursor, plus one (vim's C-a) |  | `C-a` |  |
+| `vim_decrement` | the number at or after the cursor, minus one (vim's C-x) |  | `C-x` |  |
+| `vim_search_next` | the next match (vim's n) |  | `n` |  |
+| `vim_search_prev` | the previous match (vim's N) |  | `N` |  |
+| `vim_match_brackets` | the matching bracket, or the next one on the line (vim's %) |  |  |  |
+| `vim_kill_to_line_start` | delete back to where this Insert began (vim's C-u) |  |  | `C-u` |
+| `vim_kill_to_line_end` | delete to the end of the line, never the line break (vim) |  |  | `C-k` |
 
 ### vim keys that play other keys
 
@@ -384,6 +406,7 @@
 | --- | --- |
 | `+` | `@jgs` |
 | `-` | `@kgs` |
+| `$` | `vim_goto_line_end` |
 | `Y` | `@y$` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
