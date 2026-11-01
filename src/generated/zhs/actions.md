@@ -415,3 +415,61 @@
 | `Y` | `@y$` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
+
+### `[keys.prompt]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `normal_mode` | 关掉这一行(命令行、搜索、挑选器) | `Esc` |
+| `confirm` | 执行这一行；挑选器里打开选中的那一项 | `Enter` |
+| `completion_next` | 补全：下一个 | `Tab` |
+| `completion_prev` | 补全：上一个 | `S-tab` |
+| `history_prev` | 历史：上一条 | `Up` `C-p` |
+| `history_next` | 历史：下一条 | `Down` `C-n` |
+| `move_char_left` | 左一个字 | `Left` |
+| `move_char_right` | 右一个字 | `Right` |
+| `goto_line_start` | 行首 | `Home` `C-a` |
+| `goto_line_end` | 行尾 | `End` `C-e` |
+| `delete_char_backward` | 删除光标前的一个字 | `Backspace` |
+| `delete_char_forward` | 删除光标后的一个字 | `Delete` |
+| `delete_word_backward` | 删除光标前的一个词 | `C-w` |
+| `kill_to_line_start` | 删到行首 | `C-u` |
+| `toggle_wide_search` | 繁简拼音通配开关 | `A-j` |
+
+### `[keys.picker]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `next_entry` | 下一项 | `Tab` `C-n` `Down` |
+| `prev_entry` | 上一项 | `S-tab` `C-p` `Up` |
+| `page_down` | 前进一页 | `Pagedown` |
+| `page_up` | 后退一页 | `Pageup` |
+| `first_entry` | 第一项 |  |
+| `last_entry` | 最后一项 |  |
+| `cycle_hidden_files` | 换一种：跳过哪些文件(隐藏的、忽略的) | `A-h` |
+
+### `[keys.sidebar]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `move_line_down` | 下一行 | `j` `Down` |
+| `move_line_up` | 上一行 | `k` `Up` |
+| `page_down` | 前进一页 | `J` `Pagedown` |
+| `page_up` | 后退一页 | `K` `Pageup` |
+| `goto_file_start` | 第一行 | `g` `Home` |
+| `goto_last_line` | 最后一行 | `G` `End` |
+| `collapse_entry` | 收起 | `h` `Left` |
+| `expand_entry` | 展开；展开不了就进入 | `l` `Right` |
+| `open_entry` | 进入：打开文件、跳到那一行 | `Enter` |
+| `toggle_links_graph` | 链接面板：列表/图 | `v` |
+| `restore_change` | 还原此处改动 | `u` |
+| `yank_old_text` | 复制先前版本 | `y` |
+| `refresh_sidebar` | 重读 | `R` |
+| `cycle_sidebar_width` | 宽窄 | `w` |
+| `next_sidebar_view` | 换视图 | `Tab` |
+| `prev_sidebar_view` | 换视图(往回) | `S-tab` |
+| `normal_mode` | 让输入法再挂起一次 | `Esc` |
+| `leave_sidebar` | 回编辑区，面板留着 | `q` |
+| `command_mode` | 命令行 | `:` |
+| `space_mode` | 空格菜单 | `Space` |
+| `window_mode` | 窗口组 | `C-w` |
