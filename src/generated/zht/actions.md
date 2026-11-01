@@ -473,3 +473,12 @@
 | `command_mode` | 命令行 | `:` |
 | `space_mode` | 空格菜單 | `Space` |
 | `window_mode` | 窗口組 | `C-w` |
+
+### `[keys.field]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `next_field` | 下一格；有灰字時先收下灰字 | `Tab` |
+| `prev_field` | 上一格 | `S-tab` |
+| `move_line_down` | 下面那一格 | `Down` |
+| `move_line_up` | 上面那一格 | `Up` |
