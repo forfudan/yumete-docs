@@ -242,6 +242,10 @@
 | `]f` | a function |
 | `]t` | a class |
 | `]c` | a comment |
+| `]a` | a parameter |
+| `]e` | an entry |
+| `]T` | a test |
+| `]x` | an XML element |
 | `]p` | the next paragraph |
 | `]␣` | a blank line below |
 
@@ -254,6 +258,10 @@
 | `[f` | a function |
 | `[t` | a class |
 | `[c` | a comment |
+| `[a` | a parameter |
+| `[e` | an entry |
+| `[T` | a test |
+| `[x` | an XML element |
 | `[p` | the previous paragraph |
 | `[␣` | a blank line above |
 

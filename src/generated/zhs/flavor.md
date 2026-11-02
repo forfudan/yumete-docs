@@ -28,7 +28,7 @@
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | 行首、首字 |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 删到行尾 |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | 空格菜单 |
-| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` | 借用 helix 的键 |
+| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | 借用 helix 的键 |
 
 ## `full`
 
@@ -396,7 +396,11 @@ Under vim:
 | g 前往 | `g.` | 回到最后改动的地方 |  |
 | g 前往 | `gb` | 光标移至屏幕顶部/中部/底部 |  |
 | 下一个 | `]g / ]G` | 改动(大写：第一处/最后一处) |  |
+| 下一个 | `]e` | 条目 |  |
+| 下一个 | `]x` | XML 元素 |  |
 | 上一个 | `[g / [G` | 改动(大写：第一处/最后一处) |  |
+| 上一个 | `[e` | 条目 |  |
+| 上一个 | `[x` | XML 元素 |  |
 
 ### `delete_keeps_register` {#delete_keeps_register}
 

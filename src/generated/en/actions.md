@@ -261,6 +261,14 @@
 | `goto_prev_class` | the previous class | `[t` |  |  |
 | `goto_next_comment` | the next comment | `]c` | `]c` |  |
 | `goto_prev_comment` | the previous comment | `[c` | `[c` |  |
+| `goto_next_parameter` | select the next parameter | `]a` |  |  |
+| `goto_prev_parameter` | select the previous parameter | `[a` |  |  |
+| `goto_next_entry` | select the next entry | `]e` | `]e` |  |
+| `goto_prev_entry` | select the previous entry | `[e` | `[e` |  |
+| `goto_next_test` | select the next test | `]T` |  |  |
+| `goto_prev_test` | select the previous test | `[T` |  |  |
+| `goto_next_xml_element` | select the next XML element | `]x` | `]x` |  |
+| `goto_prev_xml_element` | select the previous XML element | `[x` | `[x` |  |
 | `add_newline_below` | a blank line below | `]␣` | `]␣` |  |
 | `add_newline_above` | a blank line above | `[␣` | `[␣` |  |
 | `align_view_center` | put the cursor's line in the middle of the screen | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
