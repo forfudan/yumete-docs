@@ -99,11 +99,19 @@
 | `A-;` | move the cursor to the other end of the selection | `flip_selections` |
 | `A-_` | merge the selections that touch | `merge_consecutive_selections` |
 | `` A-` `` | to uppercase | `switch_to_uppercase` |
+| `A-a` | select every node beside this one | `select_all_siblings` |
+| `A-b` | to the start of the node around the cursor, then of its parent | `move_parent_node_start` |
 | `A-c` | change the selection, leaving the register | `change_selection_noyank` |
 | `A-C` | copy the selection onto the previous line | `copy_selection_on_prev_line` |
 | `A-d` | delete the selection, leaving the register | `delete_selection_noyank` |
+| `A-e` | to the end of the node around the cursor | `move_parent_node_end` |
+| `A-i` | shrink the selection back, or to its first child node | `shrink_selection` |
+| `A-I` | select every node inside this one | `select_all_children` |
 | `A-J` | join lines and select where they meet | `join_selections_space` |
 | `A-K` | remove the selections that match a pattern | `remove_selections` |
+| `A-n` | select the next syntax node | `select_next_sibling` |
+| `A-o` | grow the selection to the syntax node around it | `expand_selection` |
+| `A-p` | select the previous syntax node | `select_prev_sibling` |
 | `A-s` | split the selection into its lines | `split_selection_on_newline` |
 | `A-u` | undo, as u does | `earlier` |
 | `A-U` | redo, as U does | `later` |
@@ -133,6 +141,8 @@
 | `T` | extend the selection backward to just after a character | `extend_till_prev_char` |
 | `w` | extend the selection to the next word's start | `extend_next_word_start` |
 | `W` | extend the selection to the next long word's start | `extend_next_long_word_start` |
+| `A-b` | extend the selection to the start of the node around the cursor | `extend_parent_node_start` |
+| `A-e` | extend the selection to the end of the node around the cursor | `extend_parent_node_end` |
 | `Home` | extend the selection to the line's start | `extend_to_line_start` |
 | `End` | extend the selection to the line's end | `extend_to_line_end` |
 

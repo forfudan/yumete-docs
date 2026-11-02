@@ -126,6 +126,8 @@
 | `y` | yank the selection, leaving Visual mode (vim's y) | `vim_yank` |
 | `<` | unindent, the cursor keeping its column (vim) | `vim_unindent` |
 | `>` | indent, the cursor keeping its column (vim) | `vim_indent` |
+| `A-b` | extend the selection to the start of the node around the cursor | `extend_parent_node_start` |
+| `A-e` | extend the selection to the end of the node around the cursor | `extend_parent_node_end` |
 | `Home` | extend the selection to the line's start | `extend_to_line_start` |
 
 ## Insert mode

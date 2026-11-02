@@ -68,7 +68,8 @@ helix keys yumete does not have yet:
 
 | Key | helix | yumete |
 | --- | --- | --- |
-| `A-o` `A-i` `A-I` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
+| `A-o` `A-i` `A-I` `A-p` `A-n` `A-a` `A-e` `A-b` in prose | syntax tree selection | in code and fenced blocks only: prose has no tree |
+| `A-up` `A-down` `A-left` `A-right` | the same, on the arrows | not bound: use the letters |
 | `]a` `]e` `]T` `]x`, and the same after `[` | parameter, entry, test, XML element | not bound |
 | `Space A-c` | line comments only | not bound; `Space c` comments by the line |
 | `zm` | centre the cursor sideways | not bound: yumete does not scroll sideways |

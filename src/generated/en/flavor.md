@@ -28,7 +28,7 @@
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | line start, first character |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | delete to the line's end |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | the Space menu |
-| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `gb` `gy` `]g` `[g` | helix's keys |
+| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` | helix's keys |
 
 ## `full`
 
@@ -372,11 +372,19 @@ On: under vim, helix's keys on the keys vim leaves free: the Alt keys, C-s, Z, g
 | Normal mode | `A-;` | move the cursor to the other end of the selection |  |
 | Normal mode | `A-_` | merge the selections that touch |  |
 | Normal mode | `` A-` `` | to uppercase |  |
+| Normal mode | `A-a` | select every node beside this one |  |
+| Normal mode | `A-b` | to the start of the node around the cursor, then of its parent |  |
 | Normal mode | `A-c` | change the selection, leaving the register |  |
 | Normal mode | `A-C` | copy the selection onto the previous line |  |
 | Normal mode | `A-d` | delete the selection, leaving the register |  |
+| Normal mode | `A-e` | to the end of the node around the cursor |  |
+| Normal mode | `A-i` | shrink the selection back, or to its first child node |  |
+| Normal mode | `A-I` | select every node inside this one |  |
 | Normal mode | `A-J` | join lines and select where they meet |  |
 | Normal mode | `A-K` | remove the selections that match a pattern |  |
+| Normal mode | `A-n` | select the next syntax node |  |
+| Normal mode | `A-o` | grow the selection to the syntax node around it |  |
+| Normal mode | `A-p` | select the previous syntax node |  |
 | Normal mode | `A-s` | split the selection into its lines |  |
 | Normal mode | `A-u` | undo, as u does |  |
 | Normal mode | `A-U` | redo, as U does |  |
