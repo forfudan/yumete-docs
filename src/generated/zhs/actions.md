@@ -261,6 +261,14 @@
 | `goto_prev_class` | 上一个类 | `[t` |  |  |
 | `goto_next_comment` | 下一处注释 | `]c` | `]c` |  |
 | `goto_prev_comment` | 上一处注释 | `[c` | `[c` |  |
+| `goto_next_parameter` | 选中下一个参数 | `]a` |  |  |
+| `goto_prev_parameter` | 选中上一个参数 | `[a` |  |  |
+| `goto_next_entry` | 选中下一个条目 | `]e` | `]e` |  |
+| `goto_prev_entry` | 选中上一个条目 | `[e` | `[e` |  |
+| `goto_next_test` | 选中下一个测试 | `]T` |  |  |
+| `goto_prev_test` | 选中上一个测试 | `[T` |  |  |
+| `goto_next_xml_element` | 选中下一个 XML 元素 | `]x` | `]x` |  |
+| `goto_prev_xml_element` | 选中上一个 XML 元素 | `[x` | `[x` |  |
 | `add_newline_below` | 下面加一条空行 | `]␣` | `]␣` |  |
 | `add_newline_above` | 上面加一条空行 | `[␣` | `[␣` |  |
 | `align_view_center` | 光标行挪到屏幕中间 | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |

@@ -69,7 +69,6 @@ helix keys yumete does not have yet:
 | Key | helix | yumete |
 | --- | --- | --- |
 | `A-up` `A-down` `A-left` `A-right` | the same, on the arrows | not bound: use the letters |
-| `]a` `]e` `]T` `]x`, and the same after `[` | parameter, entry, test, XML element | not bound |
 | `Space A-c` | line comments only | not bound; `Space c` comments by the line |
 | `zm` | centre the cursor sideways | not bound: yumete does not scroll sideways |
 | `Space G` | the debugger | not there |

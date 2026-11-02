@@ -28,7 +28,7 @@
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | line start, first character |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | delete to the line's end |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | the Space menu |
-| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` | helix's keys |
+| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | helix's keys |
 
 ## `full`
 
@@ -396,7 +396,11 @@ On: under vim, helix's keys on the keys vim leaves free: the Alt keys, C-s, Z, g
 | g goto | `g.` | back to the last change |  |
 | g goto | `gb` | the cursor to the top, middle or bottom of the screen |  |
 | next… | `]g / ]G` | a change (capital: the first / the last) |  |
+| next… | `]e` | an entry |  |
+| next… | `]x` | an XML element |  |
 | previous… | `[g / [G` | a change (capital: the first / the last) |  |
+| previous… | `[e` | an entry |  |
+| previous… | `[x` | an XML element |  |
 
 ### `delete_keeps_register` {#delete_keeps_register}
 
