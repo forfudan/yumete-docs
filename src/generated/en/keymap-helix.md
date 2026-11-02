@@ -65,6 +65,7 @@
 | `:` | the command line | `command_mode` |
 | `;` | collapse the selection to the cursor | `collapse_selection` |
 | `<` | unindent | `unindent` |
+| `=` | format the selection with the language server | `format_selections` |
 | `>` | indent | `indent` |
 | `?` | search backward | `rsearch` |
 | `[` | the [ group: the previous one of something | `left_bracket_mode` |

@@ -140,6 +140,9 @@ The text-file names are `markdown`, `typst` and `text`. The server's complaints 
 
 ## Formatting and other commands
 
+`=` asks the language server to format the selection, as helix's does; one
+selection at a time, and only a server that formats a range answers.
+
 `:format` (or `:fmt`) does not ask the language server. It runs the command the config
 names for the file's language, under `[language.<name>]`:
 
