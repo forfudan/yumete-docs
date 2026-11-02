@@ -23,7 +23,7 @@
 | `x_selects_upward` | `basic` | helix | `X` | select the line above |
 | `bare_g_last_line` | `basic` | helix | `G` | to the last line |
 | `move_lines` | `basic` | helix, vim | `A-j` `A-k` | move lines down and up |
-| `line_end_keys` | `basic` | helix | `0` `^` `$` | line start, first character, line end |
+| `line_start_keys` | `basic` | helix | `0` `^` | line start, first character |
 | `d_to_line_end` | `basic` | helix | `D` `A-D` | delete to the line's end |
 | `vim_space_menu` | `basic` | vim | `Space` | the Space menu |
 | `helix_keys_under_vim` | `basic` | vim | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `gb` `gy` `]g` `[g` | helix's keys |
