@@ -23,7 +23,7 @@
 | `x_selects_upward` | `basic` | helix | `X` | 往上选行 |
 | `bare_g_last_line` | `basic` | helix | `G` | 到末行 |
 | `move_lines` | `basic` | helix, vim | `A-j` `A-k` | 上下移动行 |
-| `line_end_keys` | `basic` | helix | `0` `^` `$` | 行首、首字、行尾 |
+| `line_start_keys` | `basic` | helix | `0` `^` | 行首、首字 |
 | `d_to_line_end` | `basic` | helix | `D` `A-D` | 删到行尾 |
 | `vim_space_menu` | `basic` | vim | `Space` | 空格菜单 |
 | `helix_keys_under_vim` | `basic` | vim | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `gb` `gy` `]g` `[g` | 借用 helix 的键 |

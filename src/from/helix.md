@@ -53,7 +53,7 @@ With the flavour at `basic`, these keys are yumete's:
 | `H` `L` | not bound | previous and next sentence |
 | `M` `'` | not bound | `M a` names this place, `' a` goes back to it, across files |
 | `C-n` `C-p` | not bound | two-thirds of a page down and up |
-| `0` `^` `$` | `0` `^` not bound; `$` keeps the selections a shell command accepts | the line's start, its first character, its end |
+| `0` `^` | not bound | the line's start, its first character |
 | `D` `A-D` | not bound | delete to the line's end; `A-D` leaves the register alone |
 | `A-j` `A-k` | not bound | move the selected lines (in prose, paragraphs) down and up |
 | `C-w e` `i` `E` `I` | not bound | show or hide the left and right sidebar, go into it |

@@ -13,7 +13,7 @@
 | `move_prev_long_word_start` | 上一個大詞首 | `B` |  |  |
 | `move_next_long_word_end` | 下一個大詞尾 | `E` |  |  |
 | `goto_line_start` | 行首 | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | 行尾 | `$` `End` `gl` `g Down` |  |  |
+| `goto_line_end` | 行尾 | `End` `gl` `g Down` |  |  |
 | `goto_first_nonwhitespace` | 第一個非空白字符 | `^` `gs` | `^` |  |
 | `goto_file_start` | 文件開頭 | `gg` | `gg` |  |
 | `goto_file_end` | 文件末尾 |  |  |  |

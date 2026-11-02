@@ -13,7 +13,7 @@
 | `move_prev_long_word_start` | the previous long word's start | `B` |  |  |
 | `move_next_long_word_end` | the next long word's end | `E` |  |  |
 | `goto_line_start` | the start of the line | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | the end of the line | `$` `End` `gl` `g Down` |  |  |
+| `goto_line_end` | the end of the line | `End` `gl` `g Down` |  |  |
 | `goto_first_nonwhitespace` | the first character that is not a space | `^` `gs` | `^` |  |
 | `goto_file_start` | the start of the file | `gg` | `gg` |  |
 | `goto_file_end` | the end of the file |  |  |  |
