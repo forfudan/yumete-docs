@@ -253,7 +253,7 @@
 | `Space z i` | pick a scheme |
 | `Space z n` | the next scheme |
 | `Space z 3-9` | candidates on a page |
-| `Space z /` | the 拆分 beside a candidate |
+| `Space z /` | the next annotation beside the candidates |
 | `Space z t` | switch to the installed 碼表 |
 | `Space z w` | where the 碼表 came from |
 | `Space z W` | where the data is |

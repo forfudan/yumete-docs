@@ -185,8 +185,8 @@ You can shorten both the command and the scheme, as long as the short form
 matches only one thing. `:yume-s` is `:yume-scheme`, because no other `:yume-`
 command starts with `s`. `l`, `x`, `q`, `r` and `p` are each enough for a
 scheme. If a short form matches two things, yumete picks neither and shows you
-both in the menu: `:yume-c` could be `:yume-chaifen` or `:yume-commit`, so type
-`:yume-ch` or `:yume-co`.
+both in the menu: `:yume-a` could be `:yume-annotation` or
+`:yume-autocompletion`, so type `:yume-an` or `:yume-au`.
 
 If the scheme's table is not installed, yumete says so and stays on the scheme
 that was working. You are never left unable to type.
@@ -305,12 +305,40 @@ in the sidebar if the sidebar's information panel is already open. It does not
 open the sidebar for you. This is the same entry `Space n` shows for the
 character under the cursor in Normal mode.
 
-### The 拆分 beside each candidate
+### The annotation beside each candidate
 
-`:yume-chaifen on` writes the 拆分 and code beside each candidate in the box.
-`:yume-chaifen off` removes them, `:yume-chaifen toggle` flips, and
-`:yume-chaifen` on its own says which it is. The strip panels (`bottom` and
-`inline`, below) have no room for this; use `Tab` there.
+An annotation mode writes some of eight fields beside each candidate in the
+box: 拆分, 全息拆分, code, reading, simplified and traditional, meaning,
+character set and code point. yume's two modes come with yumete: `double` (二重)
+is the 拆分 and the code, `multi` (多重) is every field but 全息拆分.
+
+```text
+1 沙 e     氵小丿 · Vi-Nxa-Ke · shā shà suō · 簡繁古臺港-CJK · 6C99
+```
+
+`/` while typing a code moves to the next mode, and after the last one turns
+the annotation off, as in yume. `:yume-annotation double` picks a mode,
+`:yume-annotation off` turns it off, `:yume-annotation next` does what `/`
+does, and `:yume-annotation` on its own says which mode is on. `[ime]
+annotation` is the mode a session starts in (`off` at the factory).
+
+The annotations start in one column, after the widest candidate, and the box
+grows to hold them. When the window is too narrow, the fields at the end are
+left out, whole, and `…` takes their place: the 拆分 comes first, so it is the
+last to go.
+
+The settings panel's input method group has a page for the modes
+(`annotation modes`): one tick per field, per mode. A mode with nothing ticked
+is skipped by `/`. To add a mode, give it a table of its own in the config:
+
+```toml
+[ime.annotation_modes.reading]
+code = true
+reading = true
+```
+
+The strip panels (`bottom` and `inline`, below) have no room for this; use
+`Tab` there.
 
 ### When a character goes into the text
 
@@ -556,7 +584,7 @@ keys, so you do not have to remember them.
 | `Space z i` | pick a scheme from the list | `:yume-scheme` |
 | `Space z n` | switch to the next scheme that can load, installed or built in; the rest are skipped | |
 | `Space z 3`–`9` | candidates on a page | `:yume-menu-size` |
-| `Space z /` | show or hide the 拆分 beside each candidate | `:yume-chaifen toggle` |
+| `Space z /` | the next annotation mode beside the candidates | `:yume-annotation next` |
 | `Space z t` | use the installed table | `:yume-installed` |
 | `Space z w` | which scheme and table are in use | `:yume-which` |
 | `Space z W` | where the data is | `:yume-where` |
@@ -715,7 +743,7 @@ page_size = 6
 | `:yume-panel [where]` | Set or show where candidates are drawn. |
 | `:yume-inline-preedit [mode]` | Set or show where the code is shown. |
 | `:yume-menu-size [1–9]` | Set or show the candidates on a page. |
-| `:yume-chaifen [on\|off\|toggle]` | Set or show the 拆分 beside candidates. |
+| `:yume-annotation [off\|next\|mode]` | Set or show the annotation beside candidates. |
 | `:yume-autocompletion [on\|off\|toggle]` | Set or show prediction. |
 | `:yume-which` | Say which scheme and table are in use. |
 | `:yume-where` | Open a report of where tables are searched for and found. |
@@ -725,7 +753,7 @@ setting off: `:yume-panel` says where the candidates are, `:yume-commit` says
 which method is in force. The full list of commands is in
 [Commands](../reference/commands.md).
 
-`:yume-commit`, `:yume-chaifen` and `:yume-autocompletion` change the engine, so
+`:yume-commit`, `:yume-annotation` and `:yume-autocompletion` change the engine, so
 they need a table to be loaded. If none is, yumete says so. The panel commands
 do not need a table.
 
@@ -736,11 +764,11 @@ do not need a table.
 `:yume-which` (or `Space z w`) answers in one line:
 
 ```text
-靈明 · 碼表 ~/Library/Input Methods/Yume.app/Contents/Resources/schemes/lingming.ytab · 拆分 off · commit delayed (頂字)
+靈明 · 碼表 ~/Library/Input Methods/Yume.app/Contents/Resources/schemes/lingming.ytab · annotation off · commit delayed (頂字)
 ```
 
-That is the scheme, the table file it is reading, whether the 拆分 annotation is
-on, and the commit method in force. If the panel is not the box, or the code is
+That is the scheme, the table file it is reading, the annotation mode, and the
+commit method in force. If the panel is not the box, or the code is
 not shown in the default place, it adds that too. For the built-in table, the
 table part says `出廠自帶` followed by the time that table was built, so you know
 how old it is.
@@ -784,7 +812,7 @@ holding a file wins. Each file is listed with the format stamp it carries.
 To tell whether the built-in or the installed table is at fault, switch between
 them with `:yume-builtin` and `:yume-installed` and type the same code.
 
-### The 拆分 annotations disappeared
+### The annotations disappeared
 
 The data's binary format follows the engine. After an update, an older data
 directory can look complete while the engine refuses some files. `:yume-which`

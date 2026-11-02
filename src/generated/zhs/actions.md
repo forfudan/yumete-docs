@@ -302,7 +302,7 @@
 | `yume_menu_size_7` | 候选栏一页 7 条 | `Space z 7` | `Space z 7` |  |
 | `yume_menu_size_8` | 候选栏一页 8 条 | `Space z 8` | `Space z 8` |  |
 | `yume_menu_size_9` | 候选栏一页 9 条 | `Space z 9` | `Space z 9` |  |
-| `yume_toggle_chaifen` | 候选旁的拆分注解 | `Space z /` | `Space z /` |  |
+| `yume_next_annotation` | 候选旁的注解，换下一个 | `Space z /` | `Space z /` |  |
 | `yume_installed_table` | 改用安装版码表 | `Space z t` | `Space z t` |  |
 | `yume_table_source` | 查看码表源 | `Space z w` | `Space z w` |  |
 | `yume_data_location` | 查看数据位置 | `Space z W` | `Space z W` |  |

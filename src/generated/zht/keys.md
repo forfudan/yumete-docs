@@ -253,7 +253,7 @@
 | `Space z i` | 選方案 |
 | `Space z n` | 下一個方案 |
 | `Space z 3-9` | 一頁幾條 |
-| `Space z /` | 候選旁的拆分注解 |
+| `Space z /` | 候選旁的注解，換下一個 |
 | `Space z t` | 改用安裝版碼表 |
 | `Space z w` | 查看碼表源 |
 | `Space z W` | 查看數據位置 |

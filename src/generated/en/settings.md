@@ -73,7 +73,8 @@
 | `[panel] inline_preedit` | `"off"` | **preedit** — whether what you are typing is written in the candidate bar or in the text, and if in the text, the code or the first candidate (`off` in the candidate bar, `composition` the code in the text, `preview` the first candidate in the text) |
 | `[panel] page_size` | `6` | **page size** — how many candidates a page lists (1–9) |
 | `[panel] markers` | `"１２３４５６７８９"` | **markers** — the characters the nine candidate numbers are drawn as |
-| `[editor] show_chaifen` | `false` | **show 拆分** — while typing, show each candidate's 拆分 beside it |
+| `[ime] annotation` | `"off"` | **annotation** — what is written beside each candidate: nothing, or an annotation mode; / while typing moves to the next (`off` off, `multi` multi, `double` double) |
+| `[ime] annotation_modes` | `{}` | **annotation modes** — which fields each mode shows. To add a mode, write [ime.annotation_modes.name] in the config |
 
 ### editing
 
