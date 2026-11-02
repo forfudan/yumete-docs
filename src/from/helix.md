@@ -1,13 +1,16 @@
 # Coming from helix
 
 yumete's default keymap is helix's. You select first and act second, a cursor
-is a one-character selection, and most keys do what your hands expect. This
-page lists the places where they do not.
+is a one-character selection, and most keys do what your hands expect. What
+yumete adds is the [Yumete flavour](../guide/remapping.md#the-yumete-flavour),
+on at its `basic` level: new menus and keys helix leaves free, and nothing
+that changes a key you already use. `flavor = "off"` under `[keys]` takes it
+away. This page lists the places where the keys are not helix's.
 
 ## What is the same
 
 These work as in helix. Motions: `h` `j` `k` `l`, `f` `t` `F` `T` (across lines),
-`gg` `ge` `gh` `gl` `gs`, and `C-d` `C-u` `C-f` `C-b`. Selection: `x` `X`
+`gg` `ge` `gh` `gl` `gs`, and `C-d` `C-u` `C-f` `C-b`. Selection: `x`
 `%` `v` `;` `,` `C` `s` `S` `K` `&` `_`, `A-;`, and `(` `)` to rotate the
 primary selection. Changes: `d` `c` `y` `p` `P` `R` `r` `~` `>` `<` `J`
 `u` `U` `C-a` `C-x`, with `A-d` and `A-c` to leave the register alone.
@@ -39,17 +42,35 @@ sees it.
 
 ## Keys that differ
 
-| Key | helix | yumete |
+With the flavour at `basic`, these keys are yumete's:
+
+| Key | helix | yumete, `basic` |
 | --- | --- | --- |
 | `` ` `` | lower case | a menu: `` `l `` lower, `` `u `` upper, ``` `` ``` switch, and conversions between simplified, traditional, full width and half width |
-| `` A-` `` | upper case | not bound; use `` `u `` |
+| `X` | the selection's lines, whole | the line above, as `x` the line below; again, one more |
+| `G` | with a count, that line; alone, nothing | alone, the last line's start |
 | `H` `L` | not bound | previous and next sentence |
 | `M` `'` | not bound | `M a` names this place, `' a` goes back to it, across files |
+| `C-n` `C-p` | not bound | two-thirds of a page down and up |
+| `0` `^` `$` | not bound | the line's start, its first character, its end |
+| `D` `A-D` | not bound | delete to the line's end; `A-D` leaves the register alone |
+| `A-j` `A-k` | not bound | move the selected lines (in prose, paragraphs) down and up |
+| `C-w e` `i` `E` `I` | not bound | show or hide the left and right sidebar, go into it |
+| `gD` | declaration | definition in the other window |
+| Insert `C-a` `C-e` `C-n` `C-g` `C-c` | not bound | line start, line end, completion, an undo checkpoint (helix's `C-s`, which a terminal takes), back to Normal mode |
+
+With the flavour off, `` ` `` lowercases and `` A-` `` uppercases, as in helix.
+At `full`, three more: `d` and `c` delete without filling the register and
+`A-d` `A-c` cut, `Esc` also collapses the selections to one cursor, and
+Insert `S-Tab` types the other kind of indent.
+
+helix keys yumete does not have yet:
+
+| Key | helix | yumete |
+| --- | --- | --- |
 | `C-c` | comment | not bound; use `Space c` |
-| `C-w` | window mode | regions, also `Space w`: `w` next, `h` `j` `k` `l` move, `s` `v` split, `n s` `n v` blank split, `q` close, `o` only, `e` `i` show or hide the left and right sidebar, `E` `I` go into it |
-| `gd` `gD` | definition, declaration | definition, and definition in the other window |
 | `gy` `gi` `gm` | type definition, implementation, last modified file | not bound |
-| `=` `$` | format, keep by shell command | not bound |
+| `=` | format | not bound |
 | `A-o` `A-i` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
 
 `gw` jump labels are the same key and work the same way, with three
@@ -58,12 +79,12 @@ not on every word. A label is one letter when the screen has 26 places or
 fewer, two otherwise. And a label covers one character, so a line of Chinese
 does not shift when the labels appear.
 
-New in the `g` group: `gL` follows a link, `gx` jumps to a word on the screen
+New in the `g` group (flavour): `gL` follows a link, `gx` jumps to a word on the screen
 when you type its first two letters, `gz` jumps to a Chinese character when you
 type its pinyin, `g/` searches for the selection, and `g?` shows the results in
 the other window.
 
-The `]` and `[` group adds `m` for a merge conflict. In a code file `f`, `t`
+The `]` and `[` group adds `m` for a merge conflict (flavour). In a code file `f`, `t`
 and `c` go to the next function, type and comment, as in helix; `a`, `e`, `T`,
 `x` and `G` are not there.
 
@@ -80,7 +101,7 @@ These differ:
   `Y` and `G`. For references use `gr`.
 - `s` and `S` fall back to the outline and the project's headings where no
   language server answers; helix refuses. `g` lists staged files too.
-- Added: `n` for what the character under the cursor is (its readings and
+- Added by the flavour: `n` for what the character under the cursor is (its readings and
   how it is written), `l` for the diagnostic on this line, `x` for the change on this line, `i` for the record of
   the table row the cursor is in, `t` for [tables](../writing/tables.md), `"`
   for registers, `m` for a merge conflict, `o` for recent files and projects,
@@ -88,6 +109,7 @@ These differ:
 - A capital shows the same thing in the sidebar instead of a popup: `N`, `K`,
   `L`, `X`, `I`.
 - `Space Space` turns a page down and `Space Backspace` a page up.
+- `Space q` closes the window, as `:quit` does.
 
 ## Tables are on `Space t`
 

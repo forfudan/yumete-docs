@@ -228,15 +228,20 @@ word. Where vim's own key does something of its own, it runs a command named
 `vim_` and helix's name (`vim_paste_after` for `p`), so a name means the same
 under either keymap.
 
-The Yumete flavour is what yumete changes over either preset. It has three
-levels:
+## The Yumete flavour
 
-- `off`: helix or vim as upstream has it.
-- `basic` (the default): the changes you can see the moment you press them.
-- `full`: also the changes that make a familiar key do something else. Today
-  that is one item, `delete_keeps_register`: `d` and `c` delete without filling
-  the register, and `A-d` and `A-c` become the keys that cut. It applies under
-  the helix keymap only; under vim, `"_d` does the same.
+The helix and vim keymaps are helix's and vim's own. Everything yumete adds
+to them, or changes in them, is an item of the Yumete flavour, laid on top.
+Its level sets which items are on:
+
+- `off`: helix or vim as upstream has it, and nothing more.
+- `basic` (the default): the items you see the moment you press them. A new
+  menu, a key the upstream leaves free, a command on a key that did nothing:
+  `Space t` for tables, `H` and `L` for sentences, `0` `^` `$` under helix.
+- `full`: also the items that make a familiar key do something else. `d`
+  and `c` delete without filling the register, and `A-d` and `A-c` become
+  the keys that cut (helix keymap only; under vim, `"_d` does the same).
+  `Esc` also collapses the selections to one cursor.
 
 ```toml
 [keys]
@@ -244,13 +249,21 @@ flavor = "full"
 
 [keys.flavor_items]
 delete_keeps_register = false
+tables = true
 ```
 
-A line under `[keys.flavor_items]` turns one item on or off whatever the level.
-`:keymap-yumete-flavor full` sets the level for this session, and
-`:keymap-yumete-flavor` alone lists the level and each item. Use the flavour
-rather than binding the four keys yourself. A binding stays in force whatever
-the defaults later become; the flavour follows them.
+A line under `[keys.flavor_items]` turns one item on or off whatever the
+level. Your own `[keys.normal]` lines come before the flavour, and the
+flavour before the keymap. `:keymap-yumete-flavor full` sets the level for
+this session; `:keymap-yumete-flavor` alone says the level, how many items
+are on, and which of them you set by name or took with a binding.
+
+Use the flavour rather than binding its keys yourself. A binding stays in
+force whatever the defaults later become; the flavour follows them.
+
+Every item, with its level and the keys it uses:
+
+<!--@include: ../generated/en/flavor.md-->
 
 ## Checking your bindings
 

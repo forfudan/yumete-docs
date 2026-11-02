@@ -76,6 +76,7 @@
 | `Space ?` | every command |
 | `Space Space` | page down |
 | `Space Backspace` | page up |
+| `Space q` | close the window |
 
 ### g goto (`g`)
 
