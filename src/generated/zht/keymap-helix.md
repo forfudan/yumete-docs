@@ -65,6 +65,7 @@
 | `:` | 命令行 | `command_mode` |
 | `;` | 選區收回光標 | `collapse_selection` |
 | `<` | 減少縮進 | `unindent` |
+| `=` | 用語言服務器排版選區 | `format_selections` |
 | `>` | 增加縮進 | `indent` |
 | `?` | 往後搜索 | `rsearch` |
 | `[` | [ 組：往前找上一處 | `left_bracket_mode` |

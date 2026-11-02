@@ -68,7 +68,6 @@ helix keys yumete does not have yet:
 
 | Key | helix | yumete |
 | --- | --- | --- |
-| `=` | format | not bound |
 | `A-o` `A-i` `A-I` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
 | `]a` `]e` `]T` `]x`, and the same after `[` | parameter, entry, test, XML element | not bound |
 | `Space A-c` | line comments only | not bound; `Space c` comments by the line |

@@ -86,6 +86,7 @@
 | `goto_last_change` | 最後一處改動 | `]G` | `]G` |  |
 | `suspend` | 暫停，回到終端；fg 回來 | `C-z` | `C-z` |  |
 | `select_references_to_symbol_under_cursor` | 選中本檔裏的每一處 | `Space h` | `Space h` |  |
+| `format_selections` | 用語言服務器排版選區 | `=` |  |  |
 | `last_picker` | 上一個挑選器 | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | 從系統剪貼簿粘貼 | `Space p` | `Space p` |  |
 | `move_line_up` | 上一行(文件裏的) | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
@@ -373,7 +374,7 @@
 | `paste_table_as_csv` | 剪貼板貼成 csv 表格 | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | 表格轉成 tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | 剪貼板貼成 tsv 表格 | `Space t x T` | `Space t x T` |  |
-| `no_op` | 什麽都不做(綁上它就是解綁那個鍵) |  | `&` `!` `C-c` |  |
+| `no_op` | 什麽都不做(綁上它就是解綁那個鍵) |  | `&` `=` `!` `C-c` |  |
 | `extend_char_left` | 選區向左撑一個字 | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | 選區向右撑一個字 | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | 選區撑到上一行(屏幕上的) | `k` `Up` |  |  |

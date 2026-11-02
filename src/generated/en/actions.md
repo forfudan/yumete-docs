@@ -86,6 +86,7 @@
 | `goto_last_change` | the last change | `]G` | `]G` |  |
 | `suspend` | suspend to the shell; fg brings it back | `C-z` | `C-z` |  |
 | `select_references_to_symbol_under_cursor` | select every place this symbol stands in the file | `Space h` | `Space h` |  |
+| `format_selections` | format the selection with the language server | `=` |  |  |
 | `last_picker` | the last picker again | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | paste from the system clipboard | `Space p` | `Space p` |  |
 | `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
@@ -373,7 +374,7 @@
 | `paste_table_as_csv` | paste the clipboard as a csv table | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | convert the table to tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | paste the clipboard as a tsv table | `Space t x T` | `Space t x T` |  |
-| `no_op` | nothing (bound to a key, it unbinds it) |  | `&` `!` `C-c` |  |
+| `no_op` | nothing (bound to a key, it unbinds it) |  | `&` `=` `!` `C-c` |  |
 | `extend_char_left` | extend the selection one character left | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | extend the selection one character right | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | extend the selection one line up, on screen | `k` `Up` |  |  |
