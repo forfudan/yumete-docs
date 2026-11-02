@@ -68,12 +68,17 @@ helix keys yumete does not have yet:
 
 | Key | helix | yumete |
 | --- | --- | --- |
-| `A-o` `A-i` `A-I` `A-p` `A-n` `A-a` `A-e` `A-b` in prose | syntax tree selection | in code and fenced blocks only: prose has no tree |
 | `A-up` `A-down` `A-left` `A-right` | the same, on the arrows | not bound: use the letters |
 | `]a` `]e` `]T` `]x`, and the same after `[` | parameter, entry, test, XML element | not bound |
 | `Space A-c` | line comments only | not bound; `Space c` comments by the line |
 | `zm` | centre the cursor sideways | not bound: yumete does not scroll sideways |
 | `Space G` | the debugger | not there |
+
+In prose, which has no syntax tree, `A-o` and its family walk the writing
+units instead: clause, sentence, list item, block, section, file. One `A-o`
+on a word is the block, as in helix's Markdown; unlike helix, the next one
+is the section rather than the whole file, and `A-i` goes down to the
+sentences. See [Growing and shrinking a selection](../writing/cjk.md#growing-and-shrinking-a-selection).
 
 `gw` jump labels are the same key and work the same way, with three
 differences. In Chinese the labels go on clause starts, the places `e` stops,

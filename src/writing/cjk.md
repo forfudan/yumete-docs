@@ -58,6 +58,24 @@ Each ASCII bracket key covers its full-width and Chinese relatives, so your
 hand goes to the same key. The full list is in [Match mode](../reference/match.md).
 Under the vim keymap these are `iw`, `is` and the rest.
 
+### Growing and shrinking a selection
+
+helix's syntax-tree keys work in prose too, on its own units: clause,
+sentence, list item, block (lines between blank lines: a paragraph, a list,
+a quote), section (a heading and what is under it), file.
+
+| Keys | Does |
+| --- | --- |
+| `A-o` | from a bare cursor, the block (or the list item); from a clause or a sentence, the unit above |
+| `A-i` | back to what `A-o` grew from; otherwise the first unit inside |
+| `A-n` `A-p` | the next and previous unit at the same level: sentence, paragraph, section |
+| `A-I` | every unit inside: `x A-I` selects each sentence of the paragraph |
+| `A-a` | every unit beside this one |
+| `A-e` `A-b` | the end and the start of the unit around the cursor |
+
+So `mi u A-o` is the sentence, and `x A-o` the section. In code and in a
+fenced block the same keys follow the syntax tree, as in helix.
+
 ## How words are found
 
 Word boundaries come from a word list. With Yume's data installed (see
