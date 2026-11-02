@@ -107,19 +107,23 @@ Put the cursor anywhere on a link and press `gL`, or hold Ctrl and click it.
 | `[next](02.md)`, `[[Chapter 3]]` | opened here, as a buffer |
 | `[snow](#snow)`, `[[Chapter 3#snow]]` | to that heading, opening its file first |
 
-A relative path is read from the folder of the file the link is in.
+A relative path is read from the folder of the file the link is in; `~/` is
+your home folder, and an absolute path is followed as written, inside the
+project or not.
 
 `gL` takes any link. The keys helix and vim have for it each take some:
 `gx` opens a web address, as in vim; `gf` opens a file or a web address, as
 in helix; `gd` follows a file, a `[[page]]` or a heading. `gx` and `gf` also
-open a web address written bare, in any file.
+open a web address written bare, in any file, and `gf` a path written bare
+(`~/notes/a.md`, `/etc/hosts`, `ch02.md:12` for its twelfth line), when the
+file is there.
 `[[Chapter 3]]` names a title, not a file: yumete tries the current file's
 extension first, then `.md`. In `[[Chapter 3|that night]]` the part after `|`
 is only what the link shows.
 
 Only `http` and `https` links are handed to the system. Any other scheme, such
-as `mailto:`, is shown on the status line and not run, and an absolute path is
-not followed.
+as `mailto:`, is shown on the status line and not run. A path to a file only
+ever opens that file in yumete.
 
 On a footnote mark, `gd` goes to the note, and `gd` in the note brings you back
 to the character you left. See [Checks and counts](checks.md) for the note that
