@@ -73,7 +73,8 @@
 | `[panel] inline_preedit` | `"off"` | **正在打的那一段** — 正在打的那一段寫在候選欄裏，還是寫進正文；寫進正文的時候寫編碼還是寫首選 (`off` 候選欄裏, `composition` 正文裏寫編碼, `preview` 正文裏寫首選) |
 | `[panel] page_size` | `6` | **候選一頁幾條** — 候選框一頁列幾個字 (1–9) |
 | `[panel] markers` | `"１２３４５６７８９"` | **候選的序號** — 候選前面那九個序號畫成什麽字 |
-| `[editor] show_chaifen` | `false` | **候選旁的拆分** — 打字時在候選字旁邊寫出它的拆分 |
+| `[ime] annotation` | `"off"` | **候選旁的注解** — 打字時候選旁寫什麼：關，或一個注解模式；打字時按 / 換下一個 (`off` 關, `multi` 多重, `double` 二重) |
+| `[ime] annotation_modes` | `{}` | **注解模式** — 每個模式寫哪幾欄。要加一個模式，在配置裏寫 [ime.annotation_modes.名字] |
 
 ### 編輯
 

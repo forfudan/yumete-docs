@@ -302,7 +302,7 @@
 | `yume_menu_size_7` | 7 candidates on a page | `Space z 7` | `Space z 7` |  |
 | `yume_menu_size_8` | 8 candidates on a page | `Space z 8` | `Space z 8` |  |
 | `yume_menu_size_9` | 9 candidates on a page | `Space z 9` | `Space z 9` |  |
-| `yume_toggle_chaifen` | the 拆分 beside a candidate | `Space z /` | `Space z /` |  |
+| `yume_next_annotation` | the next annotation beside the candidates | `Space z /` | `Space z /` |  |
 | `yume_installed_table` | switch to the installed 碼表 | `Space z t` | `Space z t` |  |
 | `yume_table_source` | where the 碼表 came from | `Space z w` | `Space z w` |  |
 | `yume_data_location` | where the data is | `Space z W` | `Space z W` |  |

@@ -83,7 +83,7 @@
 | `:yume-where` |  | 碼表和字料之數據源及回退順序 |
 | `:yume-which` |  | 現在用的是哪個方案、碼表打哪來 |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始打字：載入一個方案(不寫名字就用配置裏那個) |
-| `:yume-chaifen` | `on｜off｜toggle` | 候選旁的拆分注解 |
+| `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | 候選旁的注解：關、下一個、或一個注解模式 |
 | `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | 上屏方式：預設、延遲(頂字)、唯一、整句 |
 | `:yume-panel` | `box｜bottom｜inline` | 候選畫在哪：box 光標旁邊的框，bottom 窗口最下面那一行，inline 光標的下一行 |
 | `:yume-inline-preedit` | `off｜composition｜preview` | 正在打的那一段寫在哪：off 候選欄裏，composition 正文裏寫編碼，preview 正文裏寫首選 |

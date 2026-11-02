@@ -83,7 +83,7 @@
 | `:yume-where` |  | where the 碼表 and other data are looked for, in order |
 | `:yume-which` |  | which scheme is in use, and where its 碼表 came from |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | start typing: load a scheme (with no name, the configured one) |
-| `:yume-chaifen` | `on｜off｜toggle` | the 拆分 annotation beside the candidates |
+| `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | the annotation beside the candidates: off, the next mode, or a mode by name |
 | `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | commit method: default (the scheme's own), delayed (頂字), unique, fluency (whole sentence) |
 | `:yume-panel` | `box｜bottom｜inline` | where the candidates are drawn: box by the caret, bottom on the bottom line, inline on the line under the caret |
 | `:yume-inline-preedit` | `off｜composition｜preview` | where the composition shows: off in the candidate bar, composition or preview in the text |
