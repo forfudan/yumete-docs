@@ -103,7 +103,8 @@
 | --- | --- | --- |
 | `[editor] which_wrap` | `"b"` | **哪些鍵跨行** — 哪些按鍵會跨越行尾(vim 功能)。只允許 b h l < > ~ |
 | `[editor] language_key` | `"C-^"` | **切中英的鍵** — 報不出單獨 Shift 的終端上，用這個鍵切中文/ABC |
-| `[keys] flavor` | `"basic"` | **Yumete 鍵位風味** — 在 helix/vim 鍵位之上的改動。基本：看得見的改動，如菜單、新鍵；完整：再加改了熟悉鍵行爲的幾項，如 `d` `c` 只刪不剪、要剪按 `A-d` `A-c`。`[keys.normal]` 蓋得過它 (`off` 關閉, `basic` 基本, `full` 完整) |
-| `[keys] inherit` | `true` | **側欄與命令行沿用我的改鍵** — [keys.normal] 裏單鍵綁的命令，側欄也有就在側欄生效；[keys.insert] 的同理進命令行與挑選器。[keys.sidebar] 與 [keys.prompt] 蓋得過它 |
 | `[keys] preset` | `"helix"` | **鍵位那一套** — 整套鍵位照 helix 還是照 vim 的習慣 (`helix` helix, `vim` vim) |
+| `[keys] flavor` | `"basic"` | **Yumete 鍵位風味** — 在 helix/vim 鍵位之上的改動。基本：看得見的改動，如菜單、新鍵；完整：再加改了熟悉鍵行爲的幾項，如 `d` `c` 只刪不剪、要剪按 `A-d` `A-c`。`[keys.normal]` 蓋得過它 (`off` 關閉, `basic` 基本, `full` 完整) |
+| `[keys] flavor_items` | `{}` | **風味各項** — Yumete 風味的每一項，一項一個勾。按 l 或空格進去。 |
+| `[keys] inherit` | `true` | **側欄與命令行沿用我的改鍵** — [keys.normal] 裏單鍵綁的命令，側欄也有就在側欄生效；[keys.insert] 的同理進命令行與挑選器。[keys.sidebar] 與 [keys.prompt] 蓋得過它 |
 
