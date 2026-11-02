@@ -99,11 +99,19 @@
 | `A-;` | 光標換到選區另一頭 | `flip_selections` |
 | `A-_` | 把相連的選區合起來 | `merge_consecutive_selections` |
 | `` A-` `` | 轉大寫 | `switch_to_uppercase` |
+| `A-a` | 選中同一層的每一個節點 | `select_all_siblings` |
+| `A-b` | 到光標所在節點的開頭，再按到上一層的 | `move_parent_node_start` |
 | `A-c` | 改寫選區(不動寄存器) | `change_selection_noyank` |
 | `A-C` | 在上一行復制一個選區 | `copy_selection_on_prev_line` |
 | `A-d` | 删除選區(不動寄存器) | `delete_selection_noyank` |
+| `A-e` | 到光標所在節點的末尾 | `move_parent_node_end` |
+| `A-i` | 選區縮回去，或縮到第一個子節點 | `shrink_selection` |
+| `A-I` | 選中裏面的每一個節點 | `select_all_children` |
 | `A-J` | 合併行並選中接縫 | `join_selections_space` |
 | `A-K` | 去掉配得上正則的選區 | `remove_selections` |
+| `A-n` | 選下一個語法節點 | `select_next_sibling` |
+| `A-o` | 選區擴到外面那一層語法節點 | `expand_selection` |
+| `A-p` | 選上一個語法節點 | `select_prev_sibling` |
 | `A-s` | 按行把選區拆開 | `split_selection_on_newline` |
 | `A-u` | 撤銷(和 u 一樣) | `earlier` |
 | `A-U` | 重做(和 U 一樣) | `later` |
@@ -133,6 +141,8 @@
 | `T` | 選區往前撑到某個字後面 | `extend_till_prev_char` |
 | `w` | 選區撑到下一個詞首 | `extend_next_word_start` |
 | `W` | 選區撑到下一個大詞首 | `extend_next_long_word_start` |
+| `A-b` | 選區延到所在節點的開頭 | `extend_parent_node_start` |
+| `A-e` | 選區延到所在節點的末尾 | `extend_parent_node_end` |
 | `Home` | 選區撑到行首 | `extend_to_line_start` |
 | `End` | 選區撑到行尾 | `extend_to_line_end` |
 

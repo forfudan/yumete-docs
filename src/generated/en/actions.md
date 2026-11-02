@@ -87,6 +87,16 @@
 | `suspend` | suspend to the shell; fg brings it back | `C-z` | `C-z` |  |
 | `select_references_to_symbol_under_cursor` | select every place this symbol stands in the file | `Space h` | `Space h` |  |
 | `format_selections` | format the selection with the language server | `=` |  |  |
+| `expand_selection` | grow the selection to the syntax node around it | `A-o` | `A-o` |  |
+| `shrink_selection` | shrink the selection back, or to its first child node | `A-i` | `A-i` |  |
+| `select_next_sibling` | select the next syntax node | `A-n` | `A-n` |  |
+| `select_prev_sibling` | select the previous syntax node | `A-p` | `A-p` |  |
+| `select_all_siblings` | select every node beside this one | `A-a` | `A-a` |  |
+| `select_all_children` | select every node inside this one | `A-I` | `A-I` |  |
+| `move_parent_node_end` | to the end of the node around the cursor | `A-e` | `A-e` |  |
+| `move_parent_node_start` | to the start of the node around the cursor, then of its parent | `A-b` | `A-b` |  |
+| `extend_parent_node_end` | extend the selection to the end of the node around the cursor | `A-e` | `A-e` |  |
+| `extend_parent_node_start` | extend the selection to the start of the node around the cursor | `A-b` | `A-b` |  |
 | `last_picker` | the last picker again | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | paste from the system clipboard | `Space p` | `Space p` |  |
 | `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |

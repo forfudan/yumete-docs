@@ -28,7 +28,7 @@
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | 行首、首字 |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 删到行尾 |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | 空格菜单 |
-| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `gb` `gy` `]g` `[g` | 借用 helix 的键 |
+| [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` | 借用 helix 的键 |
 
 ## `full`
 
@@ -372,11 +372,19 @@ Under vim:
 | Normal mode | `A-;` | 光标换到选区另一头 |  |
 | Normal mode | `A-_` | 把相连的选区合起来 |  |
 | Normal mode | `` A-` `` | 转大写 |  |
+| Normal mode | `A-a` | 选中同一层的每一个节点 |  |
+| Normal mode | `A-b` | 到光标所在节点的开头，再按到上一层的 |  |
 | Normal mode | `A-c` | 改写选区(不动寄存器) |  |
 | Normal mode | `A-C` | 在上一行复制一个选区 |  |
 | Normal mode | `A-d` | 删除选区(不动寄存器) |  |
+| Normal mode | `A-e` | 到光标所在节点的末尾 |  |
+| Normal mode | `A-i` | 选区缩回去，或缩到第一个子节点 |  |
+| Normal mode | `A-I` | 选中里面的每一个节点 |  |
 | Normal mode | `A-J` | 合并行并选中接缝 |  |
 | Normal mode | `A-K` | 去掉配得上正则的选区 |  |
+| Normal mode | `A-n` | 选下一个语法节点 |  |
+| Normal mode | `A-o` | 选区扩到外面那一层语法节点 |  |
+| Normal mode | `A-p` | 选上一个语法节点 |  |
 | Normal mode | `A-s` | 按行把选区拆开 |  |
 | Normal mode | `A-u` | 撤销(和 u 一样) |  |
 | Normal mode | `A-U` | 重做(和 U 一样) |  |

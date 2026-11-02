@@ -126,6 +126,8 @@
 | `y` | 複製選區並退出可視模式(vim 的 y) | `vim_yank` |
 | `<` | 減少縮進，光標留在原列(vim) | `vim_unindent` |
 | `>` | 增加縮進，光標留在原列(vim) | `vim_indent` |
+| `A-b` | 選區延到所在節點的開頭 | `extend_parent_node_start` |
+| `A-e` | 選區延到所在節點的末尾 | `extend_parent_node_end` |
 | `Home` | 選區撑到行首 | `extend_to_line_start` |
 
 ## Insert mode

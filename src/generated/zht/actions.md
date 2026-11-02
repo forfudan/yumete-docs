@@ -87,6 +87,16 @@
 | `suspend` | 暫停，回到終端；fg 回來 | `C-z` | `C-z` |  |
 | `select_references_to_symbol_under_cursor` | 選中本檔裏的每一處 | `Space h` | `Space h` |  |
 | `format_selections` | 用語言服務器排版選區 | `=` |  |  |
+| `expand_selection` | 選區擴到外面那一層語法節點 | `A-o` | `A-o` |  |
+| `shrink_selection` | 選區縮回去，或縮到第一個子節點 | `A-i` | `A-i` |  |
+| `select_next_sibling` | 選下一個語法節點 | `A-n` | `A-n` |  |
+| `select_prev_sibling` | 選上一個語法節點 | `A-p` | `A-p` |  |
+| `select_all_siblings` | 選中同一層的每一個節點 | `A-a` | `A-a` |  |
+| `select_all_children` | 選中裏面的每一個節點 | `A-I` | `A-I` |  |
+| `move_parent_node_end` | 到光標所在節點的末尾 | `A-e` | `A-e` |  |
+| `move_parent_node_start` | 到光標所在節點的開頭，再按到上一層的 | `A-b` | `A-b` |  |
+| `extend_parent_node_end` | 選區延到所在節點的末尾 | `A-e` | `A-e` |  |
+| `extend_parent_node_start` | 選區延到所在節點的開頭 | `A-b` | `A-b` |  |
 | `last_picker` | 上一個挑選器 | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | 從系統剪貼簿粘貼 | `Space p` | `Space p` |  |
 | `move_line_up` | 上一行(文件裏的) | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
