@@ -62,6 +62,12 @@
 | `open_here` | 打开本行写的文件名 | `gf` | `gf` |  |
 | `follow_link` | 前往光标下的链接位置 | `gL` | `gL` |  |
 | `open_link` | 用浏览器打开光标下的网址 | `gx` | `gx` |  |
+| `goto_declaration` | 跳到声明 | `gD` | `gD` |  |
+| `goto_type_definition` | 跳到类型定义 | `gy` | `gy` |  |
+| `goto_implementation` | 跳到实现 | `gi` |  |  |
+| `goto_last_modified_file` | 最近改过的文件 | `gm` |  |  |
+| `insert_char_above` | 打出上一行同一位置的字 |  |  | `C-y` |
+| `insert_char_below` | 打出下一行同一位置的字 |  |  | `C-e` |
 | `file_picker` | 打开文件挑选器 | `Space f` | `Space f` |  |
 | `buffer_picker` | 打开缓冲区选择器 | `Space b` | `Space b` |  |
 | `next_buffer` | 切换到下一个缓冲区 | `gn` | `gn` |  |
@@ -71,7 +77,7 @@
 | `search_panel` | 高级搜索面板 | `Space /` | `Space /` |  |
 | `command_menu` | 所有命令 | `Space ?` | `Space ?` |  |
 | `paste_menu` | 粘贴菜单：挑一个寄存器 | `Space "` | `Space "` |  |
-| `comment_line` | 注释这一行 | `Space c` | `Space c` |  |
+| `comment_line` | 注释这一行 | `C-c` `Space c` | `Space c` |  |
 | `comment_block` | 整段注释 | `Space C` | `Space C` |  |
 | `copy_to_clipboard` | 复制到系统剪贴板 | `Space y` | `Space y` |  |
 | `paste_from_clipboard` | 从系统剪贴板粘贴 | `Space p` | `Space p` |  |
@@ -241,8 +247,8 @@
 | `align_view_center` | 光标行挪到屏幕中间 | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
 | `align_view_top` | 光标行挪到屏幕顶上 | `zt` `Zt` | `zt` `Zt` |  |
 | `align_view_bottom` | 光标行挪到屏幕底下 | `zb` `Zb` | `zb` `Zb` |  |
-| `scroll_down` | 屏幕往下滚一行(光标的字不动) | `zj` `z Down` `Zj` `Z Down` | `z Down` `Z Down` |  |
-| `scroll_up` | 屏幕往上滚一行(光标的字不动) | `zk` `z Up` `Zk` `Z Up` | `z Up` `Z Up` |  |
+| `scroll_down` | 屏幕往下滚一行(光标的字不动) | `zj` `z Down` `Zj` `Z Down` | `C-e` `z Down` `Z Down` |  |
+| `scroll_up` | 屏幕往上滚一行(光标的字不动) | `zk` `z Up` `Zk` `Z Up` | `C-y` `z Up` `Z Up` |  |
 | `match_brackets` | 前往配对符号的另一个 | `mm` |  |  |
 | `select_textobject_inner` | 选择配对符号内部字符 | `mi` |  |  |
 | `select_textobject_around` | 选择配对符号和内部字符 | `ma` |  |  |
@@ -352,7 +358,7 @@
 | `paste_table_as_csv` | 剪贴板贴成 csv 表格 | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | 表格转成 tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | 剪贴板贴成 tsv 表格 | `Space t x T` | `Space t x T` |  |
-| `no_op` | 什么都不做(绑上它就是解绑那个键) |  | `&` `!` |  |
+| `no_op` | 什么都不做(绑上它就是解绑那个键) |  | `&` `!` `C-c` |  |
 | `extend_char_left` | 选区向左撑一个字 | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | 选区向右撑一个字 | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | 选区撑到上一行(屏幕上的) | `k` `Up` |  |  |

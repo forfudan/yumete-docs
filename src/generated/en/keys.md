@@ -96,6 +96,10 @@
 | `ga` | back to the buffer before this one |
 | `gn / gp` | the next or previous buffer |
 | `gd` | go to definition |
+| `gD` | go to the declaration |
+| `gy` | go to the type definition |
+| `gi` | go to the implementation |
+| `gm` | the file changed last |
 | `gr` | every place it is used |
 | `g/` | search the selection |
 | `gj / gk` | down / up a logical line (with line number) |
