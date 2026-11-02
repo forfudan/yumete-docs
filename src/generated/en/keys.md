@@ -11,8 +11,8 @@
 | `gg ge` | start / end of the file |
 | `gh gl gs` | line start / line end / first non-blank |
 | `C-d C-u` | half a page forward/back; C-n / C-p for two thirds, C-f / C-b for a whole one |
-| `gd gD` | go to / show what this points at: a footnote's note, a component's row |
-| `g/ g?` | where else this word is: / here, ? in the other window |
+| `gd` | go to what this points at: a footnote's note, a component's row |
+| `g/` | where else this word is |
 | `/ n N` | search, next, previous |
 | `C-o C-i` | jump back / forward again |
 | `M a  'a` | remember this place / go back to it |

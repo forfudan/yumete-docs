@@ -237,7 +237,7 @@ Its level sets which items are on:
 - `off`: helix or vim as upstream has it, and nothing more.
 - `basic` (the default): the items you see the moment you press them. A new
   menu, a key the upstream leaves free, a command on a key that did nothing:
-  `Space t` for tables, `H` and `L` for sentences, `0` `^` `$` under helix.
+  `Space t` for tables, `H` and `L` for sentences, `0` and `^` under helix.
 - `full`: also the items that make a familiar key do something else. `d`
   and `c` delete without filling the register, and `A-d` and `A-c` become
   the keys that cut (helix keymap only; under vim, `"_d` does the same).

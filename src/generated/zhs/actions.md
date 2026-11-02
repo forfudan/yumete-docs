@@ -28,7 +28,7 @@
 | `select_mode` | 延伸模式：移动把选区撑大 | `v` | `v` |  |
 | `extend_line_below` | 选中当前行 | `x` |  |  |
 | `extend_to_line_bounds` | 把选区撑到整行边界 |  |  |  |
-| `select_all` | 选中整个文件 | `%` | `%` |  |
+| `select_all` | 选中整个文件 | `%` |  |  |
 | `collapse_selection` | 选区收回光标 | `;` |  |  |
 | `delete_selection` | 剪切选区(进寄存器) | `d` | `x` |  |
 | `delete_selection_noyank` | 删除选区(不动寄存器) | `A-d` | `A-d` |  |
@@ -57,7 +57,7 @@
 | `rsearch` | 往后搜索 | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
 | `search_next` | 下一处 | `n` `zn` `Zn` | `gn` |  |
 | `search_prev` | 上一处 | `N` `zN` `ZN` | `gN` |  |
-| `search_selection` | 找选中的那段 | `g/` | `g/` `*` |  |
+| `search_selection` | 找选中的那段 | `g/` | `*` `g/` |  |
 | `goto_definition` | 前往定义位置 | `gd` | `gd` |  |
 | `open_here` | 打开本行写的文件名 | `gf` | `gf` |  |
 | `follow_link` | 前往光标下的链接位置 | `gL` | `gL` |  |
@@ -71,7 +71,7 @@
 | `file_picker` | 打开文件挑选器 | `Space f` | `Space f` |  |
 | `buffer_picker` | 打开缓冲区选择器 | `Space b` | `Space b` |  |
 | `next_buffer` | 切换到下一个缓冲区 | `gn` | `gn` |  |
-| `prev_buffer` | 切换到上一个缓冲区 | `gp` | `gp` |  |
+| `prev_buffer` | 切换到上一个缓冲区 | `gp` |  |  |
 | `dictionary` | 字典：光标下那个字的拆分 | `Space n` | `Space n` |  |
 | `next_region` | 下一个区域 | `C-w w` | `C-w w` |  |
 | `search_panel` | 高级搜索面板 | `Space /` | `Space /` |  |
@@ -95,7 +95,7 @@
 | `move_next_paragraph` | 选到下一段 | `}` |  |  |
 | `move_prev_paragraph` | 选到上一段 | `{` |  |  |
 | `goto_window_top` | 屏幕最上面那一行 | `gt` | `H` |  |
-| `goto_window_center` | 屏幕中间那一行 | `gc` | `M` `gc` |  |
+| `goto_window_center` | 屏幕中间那一行 | `gc` | `M` |  |
 | `goto_window_bottom` | 屏幕最下面那一行 | `gb` | `L` `gb` |  |
 | `jump_prev_sentence` | 光标跳到上一句(不选中) |  | `(` |  |
 | `jump_next_sentence` | 光标跳到下一句(不选中) |  | `)` |  |
@@ -115,7 +115,7 @@
 | `normal_mode` | 退出延伸模式，收起临时显示的东西 | `Esc` |  | `Esc` `C-c` |
 | `repeat_find_char` | 再找一次刚才那个字 |  | `;` |  |
 | `repeat_find_char_reverse` | 反方向再找一次刚才那个字 |  | `,` |  |
-| `copy_selection_on_next_line` | 在下一行复制一个选区 | `C` | `C` |  |
+| `copy_selection_on_next_line` | 在下一行复制一个选区 | `C` |  |  |
 | `copy_selection_on_prev_line` | 在上一行复制一个选区 | `A-C` | `A-C` |  |
 | `keep_primary_selection` | 只留主选区 | `,` |  |  |
 | `remove_primary_selection` | 去掉主选区 | `A-,` | `A-,` |  |
@@ -131,8 +131,8 @@
 | `rotate_selection_contents_forward` | 各选区的内容往后轮换 | `A-)` | `A-)` |  |
 | `rotate_selection_contents_backward` | 各选区的内容往前轮换 | `A-(` | `A-(` |  |
 | `select_regex` | 在选区里按正则选出 | `s` |  |  |
-| `split_selection` | 按正则把选区拆开 | `S` | `S` |  |
-| `keep_selections` | 只留配得上正则的选区 | `K` | `K` |  |
+| `split_selection` | 按正则把选区拆开 | `S` |  |  |
+| `keep_selections` | 只留配得上正则的选区 | `K` |  |  |
 | `remove_selections` | 去掉配得上正则的选区 | `A-K` | `A-K` |  |
 | `operator_delete` | 删除(再按一个动作) |  | `d` |  |
 | `operator_change` | 改写(再按一个动作) |  | `c` |  |
@@ -141,7 +141,7 @@
 | `operator_unindent` | 减少缩进(再按一个动作) |  | `<` |  |
 | `delete_to_line_end` | 删到行尾 | `D` |  |  |
 | `delete_to_line_end_noyank` | 删到行尾，不进寄存器 | `A-D` |  |  |
-| `vim_delete_char_forward` | 删掉光标下的字，不删换行(vim 的 x) |  |  |  |
+| `vim_delete_char_forward` | 删掉光标下的字，不删换行(vim 的 x) |  | `x` |  |
 | `extend_line_above` | 往上选行 | `X` |  |  |
 | `move_selected_lines_down` | 把选中的行往下移 | `A-j` | `A-j` |  |
 | `move_selected_lines_up` | 把选中的行往上移 | `A-k` | `A-k` |  |
@@ -162,21 +162,21 @@
 | `match_mode` | 配对组：括号、引号、对象 | `m` |  |  |
 | `replace` | 把选中的每个字换成另一个字 | `r` | `r` |  |
 | `select_register` | 选寄存器(再按一个字母) | `"` | `"` |  |
-| `record_macro` | 开始或停止录宏 | `Q` | `Q` |  |
-| `replay_macro` | 回放宏 | `q` |  |  |
+| `record_macro` | 开始或停止录宏 | `Q` |  |  |
+| `replay_macro` | 回放宏 | `q` | `Q` |  |
 | `window_mode` | 窗口组 | `C-w` `Space w` | `C-w` `Space w` |  |
 | `page_down` | 前进一页 | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `Pagedown` |
 | `page_up` | 后退一页 | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `Pageup` |
 | `join_selections_space` | 合并行并选中接缝 | `A-J` | `A-J` |  |
 | `save_selection` | 把这里记进跳转表 | `C-s` | `C-s` |  |
-| `jump_forward` | 跳转表：再往前一处 | `Tab` | `Tab` |  |
+| `jump_forward` | 跳转表：再往前一处 | `C-i` `Tab` | `C-i` `Tab` |  |
 | `two_thirds_page_down` | 前进三分之二页 | `C-n` |  |  |
 | `two_thirds_page_up` | 后退三分之二页 | `C-p` |  |  |
 | `flip_selections` | 光标换到选区另一头 | `A-;` | `A-;` |  |
 | `vim_redo` | 重做(vim 的 C-r) |  | `C-r` |  |
 | `delete_char_backward` | 删除光标前的一个字 |  | `X` | `Backspace` `C-h` |
 | `case_mode` | 字形组：大小写、繁简 | `` ` `` | `` g` `` |  |
-| `search_selection_detect_word_boundaries` | 找选中的那段(整词) | `*` | `*` |  |
+| `search_selection_detect_word_boundaries` | 找选中的那段(整词) | `*` |  |  |
 | `search_selection_exact` | 找选中的那段(原样) | `A-*` | `A-*` |  |
 | `search_word_backward` | 往回找光标下的词 |  | `#` |  |
 | `replace_mode` | 覆写模式：打字盖掉原文 |  | `R` |  |
@@ -188,8 +188,8 @@
 | `goto_word` | 跳到当前屏幕某位置 | `gw` | `gW` `gw` |  |
 | `goto_word_by_letters` | 两字母定位单词 | `gz` | `gz` |  |
 | `goto_char_by_pinyin` | 多字母定位汉字 | `gZ` | `gZ` |  |
-| `goto_last_accessed_file` | 回到最近打开的缓冲区 | `ga` | `` `ga` |  |
-| `goto_reference` | 用到它的每一处 | `gr` | `gr` |  |
+| `goto_last_accessed_file` | 回到最近打开的缓冲区 | `ga` | `` |  |
+| `goto_reference` | 用到它的每一处 | `gr` |  |  |
 | `move_next_zong` | 竖排时到下一纵(文件里的) |  | `gj` |  |
 | `move_prev_zong` | 竖排时到上一纵(文件里的) |  | `gk` |  |
 | `goto_last_modification` | 回到最后改动的地方 | `g.` | `g.` |  |
@@ -212,7 +212,7 @@
 | `symbol_picker` | 符号挑选器 | `Space s` | `Space s` |  |
 | `workspace_symbol_picker` | 项目符号挑选器 | `Space S` | `Space S` |  |
 | `dictionary_panel` | 显示汉字信息(边栏) | `Space N` | `Space N` |  |
-| `hover` | 显示定义文档(浮窗) | `Space k` | `Space k` `K` |  |
+| `hover` | 显示定义文档(浮窗) | `Space k` | `K` `Space k` |  |
 | `hover_panel` | 显示定义文档(边栏) | `Space K` | `Space K` |  |
 | `diagnostics_picker` | 诊断挑选器 | `Space d` | `Space d` |  |
 | `workspace_diagnostics_picker` | 项目诊断挑选器 | `Space D` | `Space D` |  |
@@ -228,18 +228,18 @@
 | `conflict_mode` | 合并冲突 | `Space m` | `Space m` |  |
 | `open_recent_mode` | 开上次的 | `Space o` | `Space o` |  |
 | `yume_mode` | 输入法 | `Space z` | `Space z` |  |
-| `goto_next_conflict` | 下一处合并冲突 | `]m` | `]m` |  |
-| `goto_prev_conflict` | 上一处合并冲突 | `[m` | `[m` |  |
+| `goto_next_conflict` | 下一处合并冲突 | `]m` |  |  |
+| `goto_prev_conflict` | 上一处合并冲突 | `[m` |  |  |
 | `goto_next_change` | 下一处改动(git) | `]g` | `]g` `]c` |  |
 | `goto_prev_change` | 上一处改动(git) | `[g` | `[g` `[c` |  |
 | `goto_next_diag` | 下一条诊断 | `]d` | `]d` |  |
 | `goto_prev_diag` | 上一条诊断 | `[d` | `[d` |  |
 | `goto_last_diag` | 最后一条诊断 | `]D` | `]D` |  |
 | `goto_first_diag` | 第一条诊断 | `[D` | `[D` |  |
-| `goto_next_function` | 下一个函数 | `]f` | `]f` |  |
-| `goto_prev_function` | 上一个函数 | `[f` | `[f` |  |
-| `goto_next_class` | 下一个类 | `]t` | `]t` |  |
-| `goto_prev_class` | 上一个类 | `[t` | `[t` |  |
+| `goto_next_function` | 下一个函数 | `]f` |  |  |
+| `goto_prev_function` | 上一个函数 | `[f` |  |  |
+| `goto_next_class` | 下一个类 | `]t` |  |  |
+| `goto_prev_class` | 上一个类 | `[t` |  |  |
 | `goto_next_comment` | 下一处注释 | `]c` | `]c` |  |
 | `goto_prev_comment` | 上一处注释 | `[c` | `[c` |  |
 | `add_newline_below` | 下面加一条空行 | `]␣` | `]␣` |  |
@@ -383,7 +383,7 @@
 | `extend_to_file_end` | 选区撑到文件末尾 |  |  |  |
 | `extend_to_last_line` | 选到最后一行 | `ge` | `ge` |  |
 | `extend_to_word` | 选区撑到屏幕上某个位置(标签) | `gw` | `gw` |  |
-| `insert_newline` | 换行(带上缩进、列表记号) |  |  | `Enter` |
+| `insert_newline` | 换行(带上缩进、列表记号) |  |  | `Enter` `C-j` |
 | `delete_char_forward` | 删除光标后的一个字 |  |  | `Delete` `C-d` |
 | `delete_word_forward` | 删除光标后的一个词 |  |  | `A-d` |
 | `delete_word_backward` | 删除光标前的一个词 |  |  | `C-w` |
@@ -396,7 +396,7 @@
 | `insert_tab` | 插入缩进(文件用的那一种) |  |  | `Tab` `S-tab` |
 | `insert_other_tab` | 插入另一种缩进(Tab 或空格) |  |  | `S-tab` |
 | `vim_normal_mode` | 回普通模式(vim：退出可视模式时选区收成一点) |  | `Esc` |  |
-| `vim_goto_line_end` | 行尾(vim 的 $：往下走也留在行尾) |  | `End` |  |
+| `vim_goto_line_end` | 行尾(vim 的 $：往下走也留在行尾) |  | `$` `End` |  |
 | `vim_insert_mode` | 在光标前插入(vim 的 i) |  | `i` |  |
 | `vim_append_mode` | 在光标后插入(vim 的 a) |  | `a` |  |
 | `vim_insert_at_line_start` | 在第一个非空白字符前插入(vim 的 I) |  | `I` |  |
@@ -414,7 +414,7 @@
 | `vim_decrement` | 光标处或其后的数字减一(vim 的 C-x) |  | `C-x` |  |
 | `vim_search_next` | 下一处(vim 的 n) |  | `n` |  |
 | `vim_search_prev` | 上一处(vim 的 N) |  | `N` |  |
-| `vim_match_brackets` | 配对的括号，不在括号上就找本行的下一个(vim 的 %) |  |  |  |
+| `vim_match_brackets` | 配对的括号，不在括号上就找本行的下一个(vim 的 %) |  | `%` |  |
 | `vim_kill_to_line_start` | 删到这次插入开始的地方(vim 的 C-u) |  |  | `C-u` |
 | `vim_kill_to_line_end` | 删到行尾，不删换行(vim) |  |  | `C-k` |
 | `vim_flip_selections` | 换到选区的另一头(vim 可视模式的 o) |  | `o` |  |
@@ -432,9 +432,10 @@
 | --- | --- |
 | `+` | `@jgs` |
 | `-` | `@kgs` |
-| `$` | `vim_goto_line_end` |
 | `D` | `@d$` |
+| `C` | `@c$` |
 | `Y` | `@y$` |
+| `S` | `@cc` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
 
