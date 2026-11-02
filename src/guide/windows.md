@@ -22,6 +22,9 @@ after either, as in helix.
 | `C-w E` `C-w I` | open the left / right sidebar and go into it |
 | `C-w q` | close the region you are in |
 | `C-w o` | keep only this window; close every other window and both sidebars |
+| `C-w t` | turn the split this window is in: beside becomes below, below becomes beside |
+| `C-w H` `C-w J` `C-w K` `C-w L` | swap this window with the one in that direction; the keys stay in this one |
+| `C-w f` `C-w F` | open the file under the cursor, as `gf` does, in a new window below or beside |
 
 You can keep `Ctrl` held: `C-w C-w` is the same as `C-w w`, and so on for the
 other letters. The arrow keys work in place of `h` `j` `k` `l`.
@@ -55,7 +58,9 @@ C-w n v, :vnew    a blank window beside, on a new empty buffer
 ```
 
 With the vim key preset `C-w n` (or `C-w C-n`) opens the blank window at
-once, below, as vim does.
+once, below, as vim does. `C-w t`, `C-w F` and `C-w H` `J` `K` `L` are
+helix's and not there, since vim's mean other things; `C-w f` is the same
+in both.
 
 The words are positions, not directions: on a vertical page, where the text
 itself runs down the columns, "beside" still means side by side and "below"

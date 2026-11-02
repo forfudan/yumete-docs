@@ -76,13 +76,13 @@
 | `~` | 大小寫互換 | `switch_case` |
 | `C-a` | 光標處的數字加一 | `increment` |
 | `C-b` `PageUp` | 後退一頁 | `page_up` |
-| `C-c` | 註釋這一行 | `comment_line` |
-| `C-d` | 前進半頁 | `half_page_down` |
+| `C-c` | 註釋這一行 | `toggle_comments` |
+| `C-d` | 前進半頁 | `page_cursor_half_down` |
 | `C-f` `PageDown` | 前進一頁 | `page_down` |
 | `C-i` `Tab` | 跳轉表：再往前一處 | `jump_forward` |
 | `C-o` | 跳轉表：回到剛纔那個位置 | `jump_backward` |
 | `C-s` | 把這裏記進跳轉表 | `save_selection` |
-| `C-u` | 後退半頁 | `half_page_up` |
+| `C-u` | 後退半頁 | `page_cursor_half_up` |
 | `C-w` | 窗口組 | `window_mode` |
 | `C-x` | 光標處的數字減一 | `decrement` |
 | `A-!` | 把外部命令的輸出接在選區後 | `shell_append_output` |
@@ -164,8 +164,11 @@
 | `Space F` | 文件挑選器(工作路徑) |
 | `Space e` | 瀏覽文件(項目路徑) |
 | `Space b` | 緩衝區挑選器 |
+| `Space j` | 跳轉列表 |
+| `Space '` | 上一個挑選器 |
 | `Space g` | 存在改動文件 |
 | `Space y` | 複製到系統剪貼板 |
+| `Space Y` | 主選區複製到系統剪貼板 |
 | `Space p` | 從系統剪貼板粘貼 |
 | `Space P` | 從系統剪貼板粘貼在前 |
 | `Space R` | 用系統剪貼板替換選區 |
@@ -220,7 +223,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `]g` | 改動 |
+| `]g / ]G` | 改動(大寫：第一處/最後一處) |
 | `]d / ]D` | 診斷(大寫：第一個/最後一個) |
 | `]f` | 函數 |
 | `]t` | 類 |
@@ -232,7 +235,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `[g` | 改動 |
+| `[g / [G` | 改動(大寫：第一處/最後一處) |
 | `[d / [D` | 診斷(大寫：第一個/最後一個) |
 | `[f` | 函數 |
 | `[t` | 類 |
@@ -259,6 +262,10 @@
 | `C-w n` | 開一個空白窗口 |
 | `C-w q` | 關掉這一區 |
 | `C-w o` | 只留這一區 |
+| `C-w t` | 並排與上下互換 |
+| `C-w H / C-w J / C-w K / C-w L` | 和那個方向的對調 |
+| `C-w f` | 在下面打開光標下的文件 |
+| `C-w F` | 在旁邊打開光標下的文件 |
 
 ## 開一個空白窗口 (`C-w n`, `Space w n`)
 

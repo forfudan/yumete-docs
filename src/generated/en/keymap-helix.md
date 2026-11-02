@@ -76,13 +76,13 @@
 | `~` | switch case | `switch_case` |
 | `C-a` | the number under the cursor, plus one | `increment` |
 | `C-b` `PageUp` | a page up | `page_up` |
-| `C-c` | comment this line | `comment_line` |
-| `C-d` | half a page down | `half_page_down` |
+| `C-c` | comment this line | `toggle_comments` |
+| `C-d` | half a page down | `page_cursor_half_down` |
 | `C-f` `PageDown` | a page down | `page_down` |
 | `C-i` `Tab` | forward again in the jump list | `jump_forward` |
 | `C-o` | back to where you jumped from | `jump_backward` |
 | `C-s` | save this place in the jump list | `save_selection` |
-| `C-u` | half a page up | `half_page_up` |
+| `C-u` | half a page up | `page_cursor_half_up` |
 | `C-w` | the window group | `window_mode` |
 | `C-x` | the number under the cursor, minus one | `decrement` |
 | `A-!` | append a command's output after the selection | `shell_append_output` |
@@ -164,8 +164,11 @@
 | `Space F` | open file picker (working dir) |
 | `Space e` | browse files (project dir) |
 | `Space b` | open buffer picker |
+| `Space j` | jump list |
+| `Space '` | the last picker again |
 | `Space g` | changed files |
 | `Space y` | copy to the system clipboard |
+| `Space Y` | copy the main selection to the system clipboard |
 | `Space p` | paste from the system clipboard |
 | `Space P` | paste before, from the system clipboard |
 | `Space R` | replace the selection with the system clipboard |
@@ -220,7 +223,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `]g` | a change |
+| `]g / ]G` | a change (capital: the first / the last) |
 | `]d / ]D` | a diagnostic (capital: the first / the last) |
 | `]f` | a function |
 | `]t` | a class |
@@ -232,7 +235,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `[g` | a change |
+| `[g / [G` | a change (capital: the first / the last) |
 | `[d / [D` | a diagnostic (capital: the first / the last) |
 | `[f` | a function |
 | `[t` | a class |
@@ -259,6 +262,10 @@
 | `C-w n` | a blank window |
 | `C-w q` | close this one |
 | `C-w o` | keep only this one |
+| `C-w t` | turn the split: beside or below |
+| `C-w H / C-w J / C-w K / C-w L` | trade places with the one that way |
+| `C-w f` | open the file under the cursor below |
+| `C-w F` | open the file under the cursor beside |
 
 ## a blank window (`C-w n`, `Space w n`)
 

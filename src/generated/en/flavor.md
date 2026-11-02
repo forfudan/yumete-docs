@@ -387,8 +387,8 @@ On: under vim, helix's keys on the keys vim leaves free: the Alt keys, C-s, Z, g
 | g goto | `gy` | go to the type definition |  |
 | g goto | `g.` | back to the last change |  |
 | g goto | `gb` | the cursor to the top, middle or bottom of the screen |  |
-| next… | `]g` | a change |  |
-| previous… | `[g` | a change |  |
+| next… | `]g / ]G` | a change (capital: the first / the last) |  |
+| previous… | `[g / [G` | a change (capital: the first / the last) |  |
 
 ### `delete_keeps_register` {#delete_keeps_register}
 

@@ -22,8 +22,8 @@
 | `goto_next_sentence` | the next sentence | `L` |  |  |
 | `goto_prev_paragraph` | the previous paragraph | `[p` | `[p` |  |
 | `goto_next_paragraph` | the next paragraph | `]p` | `]p` |  |
-| `half_page_down` | half a page down | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` |  |
-| `half_page_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
+| `page_cursor_half_down` | half a page down | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` |  |
+| `page_cursor_half_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
 | `jump_backward` | back to where you jumped from | `C-o` | `C-o` |  |
 | `select_mode` | Select mode: moving grows the selection | `v` | `v` |  |
 | `extend_line_below` | select this line | `x` |  |  |
@@ -59,7 +59,7 @@
 | `search_prev` | the previous match | `N` `zN` `ZN` | `gN` |  |
 | `search_selection` | look for what is selected | `g/` | `*` `g/` |  |
 | `goto_definition` | go to where it is defined | `gd` | `gd` |  |
-| `open_here` | open the file this line names | `gf` | `gf` |  |
+| `goto_file` | open the file this line names | `gf` | `gf` |  |
 | `follow_link` | follow the link under the cursor | `gL` | `gL` |  |
 | `open_link` | open the web address under the cursor in the browser | `gx` | `gx` |  |
 | `goto_declaration` | go to the declaration | `gD` | `gD` |  |
@@ -70,17 +70,22 @@
 | `insert_char_below` | type the character below the cursor |  |  | `C-e` |
 | `file_picker` | open the file picker | `Space f` | `Space f` |  |
 | `buffer_picker` | open the buffer picker | `Space b` | `Space b` |  |
-| `next_buffer` | the next buffer | `gn` | `gn` |  |
-| `prev_buffer` | the previous buffer | `gp` |  |  |
+| `goto_next_buffer` | the next buffer | `gn` | `gn` |  |
+| `goto_previous_buffer` | the previous buffer | `gp` |  |  |
 | `dictionary` | the 拆分 of the character under the cursor | `Space n` | `Space n` |  |
-| `next_region` | the next region | `C-w w` | `C-w w` |  |
-| `search_panel` | the search panel | `Space /` | `Space /` |  |
-| `command_menu` | every command | `Space ?` | `Space ?` |  |
+| `rotate_view` | the next region | `C-w w` | `C-w w` |  |
+| `global_search` | the search panel | `Space /` | `Space /` |  |
+| `command_palette` | every command | `Space ?` | `Space ?` |  |
 | `paste_menu` | the paste menu | `Space "` | `Space "` |  |
-| `comment_line` | comment this line | `C-c` `Space c` | `Space c` |  |
-| `comment_block` | comment this block | `Space C` | `Space C` |  |
-| `copy_to_clipboard` | copy to the system clipboard | `Space y` | `Space y` |  |
-| `paste_from_clipboard` | paste from the system clipboard | `Space p` | `Space p` |  |
+| `toggle_comments` | comment this line | `C-c` `Space c` | `Space c` |  |
+| `toggle_block_comments` | comment this block | `Space C` | `Space C` |  |
+| `yank_to_clipboard` | copy to the system clipboard | `Space y` | `Space y` |  |
+| `yank_main_selection_to_clipboard` | copy the main selection to the system clipboard | `Space Y` | `Space Y` |  |
+| `jumplist_picker` | jump list | `Space j` | `Space j` |  |
+| `goto_first_change` | the first change | `[G` | `[G` |  |
+| `goto_last_change` | the last change | `]G` | `]G` |  |
+| `last_picker` | the last picker again | `Space '` | `Space '` |  |
+| `paste_clipboard_after` | paste from the system clipboard | `Space p` | `Space p` |  |
 | `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
 | `move_line_down` | one line down, in the file | `gj` `g Down` | `C-n` `j` `Down` `gj` `g Down` |  |
 | `goto_next_line_nonwhitespace` | the next line's first character that is not a space |  | `Enter` |  |
@@ -209,8 +214,8 @@
 | `changed_file_picker` | changed files | `Space g` | `Space g` |  |
 | `paste_clipboard_before` | paste before, from the system clipboard | `Space P` | `Space P` |  |
 | `replace_selections_with_clipboard` | replace the selection with the system clipboard | `Space R` | `Space R` |  |
-| `symbol_picker` | symbol picker | `Space s` | `Space s` |  |
-| `workspace_symbol_picker` | project symbol picker | `Space S` | `Space S` |  |
+| `lsp_or_syntax_symbol_picker` | symbol picker | `Space s` | `Space s` |  |
+| `lsp_or_syntax_workspace_symbol_picker` | project symbol picker | `Space S` | `Space S` |  |
 | `dictionary_panel` | character info (sidebar) | `Space N` | `Space N` |  |
 | `hover` | documentation (floating) | `Space k` | `K` `Space k` |  |
 | `hover_panel` | documentation (sidebar) | `Space K` | `Space K` |  |
@@ -270,6 +275,13 @@
 | `window_new_mode` | the blank-window group: s below, v beside | `C-w n` | `C-w n` |  |
 | `wclose` | close this one | `C-w q` | `C-w q` |  |
 | `wonly` | keep only this one | `C-w o` | `C-w o` |  |
+| `transpose_view` | turn the split: beside or below | `C-w t` |  |  |
+| `swap_view_left` | trade places with the region on the left | `C-w H` |  |  |
+| `swap_view_down` | trade places with the region below | `C-w J` |  |  |
+| `swap_view_up` | trade places with the region above | `C-w K` |  |  |
+| `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
+| `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w f` |  |
+| `goto_file_vsplit` | open the file under the cursor beside | `C-w F` |  |  |
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | traditional → simplified | `` `s `` | `` g`s `` |  |
@@ -457,8 +469,8 @@
 | `S-Tab` | `table_prev_cell` |
 | `C-n` | `two_thirds_page_down` |
 | `C-p` | `two_thirds_page_up` |
-| `C-d` | `half_page_down` |
-| `C-u` | `half_page_up` |
+| `C-d` | `page_cursor_half_down` |
+| `C-u` | `page_cursor_half_up` |
 | `PageDown` | `page_down` |
 | `PageUp` | `page_up` |
 | `y` | `yank` `operator_yank` |

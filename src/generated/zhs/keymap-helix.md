@@ -76,13 +76,13 @@
 | `~` | 大小写互换 | `switch_case` |
 | `C-a` | 光标处的数字加一 | `increment` |
 | `C-b` `PageUp` | 后退一页 | `page_up` |
-| `C-c` | 注释这一行 | `comment_line` |
-| `C-d` | 前进半页 | `half_page_down` |
+| `C-c` | 注释这一行 | `toggle_comments` |
+| `C-d` | 前进半页 | `page_cursor_half_down` |
 | `C-f` `PageDown` | 前进一页 | `page_down` |
 | `C-i` `Tab` | 跳转表：再往前一处 | `jump_forward` |
 | `C-o` | 跳转表：回到刚才那个位置 | `jump_backward` |
 | `C-s` | 把这里记进跳转表 | `save_selection` |
-| `C-u` | 后退半页 | `half_page_up` |
+| `C-u` | 后退半页 | `page_cursor_half_up` |
 | `C-w` | 窗口组 | `window_mode` |
 | `C-x` | 光标处的数字减一 | `decrement` |
 | `A-!` | 把外部命令的输出接在选区后 | `shell_append_output` |
@@ -164,8 +164,11 @@
 | `Space F` | 文件挑选器(工作路径) |
 | `Space e` | 浏览文件(项目路径) |
 | `Space b` | 缓冲区挑选器 |
+| `Space j` | 跳转列表 |
+| `Space '` | 上一个挑选器 |
 | `Space g` | 存在改动文件 |
 | `Space y` | 复制到系统剪贴板 |
+| `Space Y` | 主选区复制到系统剪贴板 |
 | `Space p` | 从系统剪贴板粘贴 |
 | `Space P` | 从系统剪贴板粘贴在前 |
 | `Space R` | 用系统剪贴板替换选区 |
@@ -220,7 +223,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `]g` | 改动 |
+| `]g / ]G` | 改动(大写：第一处/最后一处) |
 | `]d / ]D` | 诊断(大写：第一个/最后一个) |
 | `]f` | 函数 |
 | `]t` | 类 |
@@ -232,7 +235,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `[g` | 改动 |
+| `[g / [G` | 改动(大写：第一处/最后一处) |
 | `[d / [D` | 诊断(大写：第一个/最后一个) |
 | `[f` | 函数 |
 | `[t` | 类 |
@@ -259,6 +262,10 @@
 | `C-w n` | 开一个空白窗口 |
 | `C-w q` | 关掉这一区 |
 | `C-w o` | 只留这一区 |
+| `C-w t` | 并排与上下互换 |
+| `C-w H / C-w J / C-w K / C-w L` | 和那个方向的对调 |
+| `C-w f` | 在下面打开光标下的文件 |
+| `C-w F` | 在旁边打开光标下的文件 |
 
 ## 开一个空白窗口 (`C-w n`, `Space w n`)
 
