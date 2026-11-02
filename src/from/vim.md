@@ -165,7 +165,7 @@ the last insert, as helix's does.
 | `K` | the documentation for the thing under the cursor |
 | `q`*a*, `@`*a*, `Q` | record a macro (`q` again stops), play it, play it; the letter is read, but there is one macro |
 | `C-n` `C-p` `_` | down, up a line; the first non-blank character, a count of lines down |
-| `]p` `[p` | put after, before (the indent is not adjusted yet) |
+| `]p` `[p` `]P` `[P` | put after, before, with the indent adjusted to the current line |
 | `C-^` | the previous file; while typing it switches the input method between Chinese and English, as vim's Insert-mode `C-^` switches language |
 | `ZZ` `ZQ` | save and quit, quit without saving |
 | `gw` | fill, as `gq`, with the cursor kept |

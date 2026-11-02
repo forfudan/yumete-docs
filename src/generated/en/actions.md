@@ -444,8 +444,10 @@
 | `vim_goto_line` | to line N, or to the last line without a count (vim's G) |  | `G` |  |
 | `vim_indent` | indent, the cursor keeping its column (vim) |  | `>` |  |
 | `vim_unindent` | unindent, the cursor keeping its column (vim) |  | `<` |  |
-| `vim_paste_after` | paste after (vim's p) |  | `p` `]p` |  |
-| `vim_paste_before` | paste before (vim's P) |  | `P` `[p` |  |
+| `vim_paste_after` | paste after (vim's p) |  | `p` |  |
+| `vim_paste_before` | paste before (vim's P) |  | `P` |  |
+| `vim_paste_after_indented` | paste after, indented like this line (vim's ]p) |  | `]p` |  |
+| `vim_paste_before_indented` | paste before, indented like this line (vim's [p) |  | `]P` `[p` `[P` |  |
 | `vim_increment` | the number at or after the cursor, plus one (vim's C-a) |  | `C-a` |  |
 | `vim_decrement` | the number at or after the cursor, minus one (vim's C-x) |  | `C-x` |  |
 | `vim_search_next` | the next match (vim's n) |  | `n` |  |

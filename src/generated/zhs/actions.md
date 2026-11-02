@@ -444,8 +444,10 @@
 | `vim_goto_line` | 到第几行，不带计数到最后一行(vim 的 G) |  | `G` |  |
 | `vim_indent` | 增加缩进，光标留在原列(vim) |  | `>` |  |
 | `vim_unindent` | 减少缩进，光标留在原列(vim) |  | `<` |  |
-| `vim_paste_after` | 向后粘贴(vim 的 p) |  | `p` `]p` |  |
-| `vim_paste_before` | 向前粘贴(vim 的 P) |  | `P` `[p` |  |
+| `vim_paste_after` | 向后粘贴(vim 的 p) |  | `p` |  |
+| `vim_paste_before` | 向前粘贴(vim 的 P) |  | `P` |  |
+| `vim_paste_after_indented` | 向后粘贴，缩进对齐这一行(vim 的 ]p) |  | `]p` |  |
+| `vim_paste_before_indented` | 向前粘贴，缩进对齐这一行(vim 的 [p) |  | `]P` `[p` `[P` |  |
 | `vim_increment` | 光标处或其后的数字加一(vim 的 C-a) |  | `C-a` |  |
 | `vim_decrement` | 光标处或其后的数字减一(vim 的 C-x) |  | `C-x` |  |
 | `vim_search_next` | 下一处(vim 的 n) |  | `n` |  |
