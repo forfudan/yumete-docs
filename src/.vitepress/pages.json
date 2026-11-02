@@ -32,6 +32,9 @@
     "text": "Reference",
     "items": [
       { "text": "Keymap", "link": "/reference/keymap" },
+      { "text": "helix keymap", "link": "/reference/keymap-helix" },
+      { "text": "vim keymap", "link": "/reference/keymap-vim" },
+      { "text": "The Yumete flavour", "link": "/reference/flavor" },
       { "text": "Bindable commands", "link": "/reference/actions" },
       { "text": "Match mode", "link": "/reference/match" },
       { "text": "Registers", "link": "/reference/registers" },

@@ -836,5 +836,6 @@ the replacement.
 | `:paste-table [<from>] <to>` | paste the clipboard as a table |
 | `:export csv\|tsv [<file>]` | write the table to another file |
 
-Every `Space t` key is listed on the [Keymap](../reference/keymap.md) page, and
-every command on the [Commands](../reference/commands.md) page.
+Every `Space t` key is listed under [`tables`](../reference/flavor.md#tables)
+on the flavour's page, and every command on the
+[Commands](../reference/commands.md) page.

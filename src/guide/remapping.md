@@ -230,44 +230,12 @@ under either keymap.
 
 ## The Yumete flavour
 
-The helix and vim keymaps are helix's and vim's own. Everything yumete adds
-to them, or changes in them, is an item of the Yumete flavour, laid on top.
-Its level sets which items are on:
-
-- `off`: helix or vim as upstream has it, and nothing more.
-- `basic` (the default): the items you see the moment you press them. A new
-  menu, a key the upstream leaves free, a command on a key that did nothing:
-  `Space t` for tables, `H` and `L` for sentences, `0` and `^` under helix.
-- `full`: also the items that make a familiar key do something else. `d`
-  and `c` delete without filling the register, and `A-d` and `A-c` become
-  the keys that cut (helix keymap only; under vim, `"_d` does the same).
-  `Esc` also collapses the selections to one cursor.
-
-```toml
-[keys]
-flavor = "full"
-
-[keys.flavor_items]
-delete_keeps_register = false
-tables = true
-```
-
-A line under `[keys.flavor_items]` turns one item on or off whatever the
-level. The settings panel writes those lines for you: in `:settings`, the
-keys group's "flavour items" row opens a page with the level at the top and
-one tick per item, each with its keys and, on the right, the file that set
-it or the binding that took its keys. Ticking an item back to what the
-level gives removes its line, and `d` does the same. Your own `[keys.normal]` lines come before the flavour, and the
-flavour before the keymap. `:keymap-yumete-flavor full` sets the level for
-this session; `:keymap-yumete-flavor` alone says the level, how many items
-are on, and which of them you set by name or took with a binding.
-
-Use the flavour rather than binding its keys yourself. A binding stays in
-force whatever the defaults later become; the flavour follows them.
-
-Every item, with its level and the keys it uses:
-
-<!--@include: ../generated/en/flavor.md-->
+Everything yumete adds to helix's and vim's keymaps is an item of the
+Yumete flavour. `[keys] flavor` sets its level (`off`, `basic` or `full`),
+and `[keys.flavor_items]` turns one item on or off whatever the level. Your
+own `[keys.normal]` lines come before the flavour, and the flavour before
+the keymap. [The Yumete flavour](../reference/flavor.md) lists every item
+and each key it changes.
 
 ## Checking your bindings
 
@@ -279,4 +247,6 @@ that is not a command, a list or a table, a line of `[keys.prompt]`,
 `Space l` shows why. See
 [When the config is wrong](./configuration.md#when-the-config-is-wrong).
 
-The [Keymap](../reference/keymap.md) lists every default key.
+The [helix](../reference/keymap-helix.md) and [vim](../reference/keymap-vim.md)
+keymap pages list every key of each, and
+[The Yumete flavour](../reference/flavor.md) what the flavour adds.

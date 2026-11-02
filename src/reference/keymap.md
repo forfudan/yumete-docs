@@ -1,28 +1,36 @@
 # Keymap
 
-These are the keys of the default keymap, which is helix's. The tables are
-written by the editor itself (`ye --docgen`) from the same lists its key menus
-are drawn from, so a key listed here is a key the editor has.
+What a key does is settled in three layers, each laid over the one before:
 
-`C-w` is Ctrl and `w`. `Space f` is the space bar, then `f`. Two keys written
-together, such as `gg`, are pressed one after the other. A key that starts a
-group, such as `g`, `m` or `Space`, opens a menu of what can follow, so you
-need not learn these tables by heart: press the first key and read.
+1. **The keymap**: helix's, the default, or vim's (`[keys] preset = "vim"`,
+   or `:keymap vim` for this session).
+2. **The Yumete flavour**: what yumete adds to either keymap. It is on at its
+   `basic` level unless you change it.
+3. **Your own bindings**, under `[keys.normal]`, `[keys.insert]` and the
+   rest of [Key remapping](../guide/remapping.md).
 
-The editor's own messages write the space bar as `␣`, so `␣t o` is Space, `t`,
-`o`.
+Each layer has its own page:
 
-The first two tables are the keys a writer uses in the first hour. They are
-the ones `:help` lists first. The rest are the groups, one table per menu.
+- [helix keymap](keymap-helix.md): helix's keys as yumete has them, with the
+  flavour off.
+- [vim keymap](keymap-vim.md): vim's keys, the same way.
+- [The Yumete flavour](flavor.md): each item yumete adds, its level, and
+  every key it changes under each keymap.
 
-Under the vim keymap (`:keymap vim`), vim's keys sit on top of these: `x`
-deletes a character, `dd` a line, `%` goes to the matching bracket. Every key
-not taken that way still does what it does here. See
-[Coming from vim](../from/vim.md) for the full list of differences, and
-[Match mode](match.md) for what the `m` group takes.
+[Bindable commands](actions.md) goes the other way round: every command by
+name, with the keys that reach it under both keymaps with the flavour as it
+comes. Every `:` command is in [Commands](commands.md).
 
-To change a key, see [Key remapping](../guide/remapping.md). Every key's
-command by name, under both keymaps, is in [Bindable commands](actions.md);
-every `:` command is in [Commands](commands.md).
+The tables on these pages are written by the editor itself (`ye --docgen`)
+from the tables its keys run on, so a key listed is a key the editor has.
 
-<!--@include: ../generated/en/keys.md-->
+## Writing keys down
+
+`C-w` is Ctrl and `w`; `A-d` is Alt and `d`. `Space f` is the space bar,
+then `f`. Two keys written together, such as `gg`, are pressed one after
+the other. A key that opens a menu, such as `g`, `m` or `Space`, shows what
+can follow, so you need not learn these tables by heart: press the first key
+and read.
+
+The editor's own messages write the space bar as `␣`, so `␣t o` is Space,
+`t`, `o`.
