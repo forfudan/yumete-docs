@@ -27,6 +27,8 @@
 | [`move_lines`](#move_lines) | `A-j` `A-k` | `A-j` `A-k` | move lines down and up |
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | line start, first character |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | delete to the line's end |
+| [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | block comment marks on their own lines |
+| [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim's gc comments |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | the Space menu |
 | [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | helix's keys |
 
@@ -344,6 +346,20 @@ On: D deletes to the end of the line into the register, A-D without filling it. 
 | --- | --- | --- | --- |
 | Normal mode | `D` | delete to the end of the line |  |
 | Normal mode | `A-D` | delete to the end of the line, leaving the register as it is |  |
+
+### `block_comment_lines` {#block_comment_lines}
+
+On: Space C over several whole lines in Markdown, Typst or HTML puts <!-- and --> on lines of their own. Off: helix's, the marks at the first line's start and the last line's end.
+
+It changes what its keys do, not which command they run.
+
+### `vim_comment_keys` {#vim_comment_keys}
+
+On: under the vim keymap gc with a motion, gcc and Visual gc comment the lines, as vim 9.1's package and Neovim do. Off: only c in the Space menu.
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| g goto | `gc` | comment out (then a motion) |  |
 
 ### `vim_space_menu` {#vim_space_menu}
 

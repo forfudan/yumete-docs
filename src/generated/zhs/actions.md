@@ -79,6 +79,7 @@
 | `paste_menu` | 粘贴菜单：挑一个寄存器 | `Space "` | `Space "` |  |
 | `toggle_comments` | 注释这一行 | `C-c` `Space c` | `Space c` |  |
 | `toggle_block_comments` | 整段注释 | `Space C` | `Space C` |  |
+| `toggle_line_comments` | 只用行注释 | `Space A-c` | `Space A-c` |  |
 | `yank_to_clipboard` | 复制到系统剪贴板 | `Space y` | `Space y` |  |
 | `yank_main_selection_to_clipboard` | 主选区复制到系统剪贴板 | `Space Y` | `Space Y` |  |
 | `jumplist_picker` | 跳转列表 | `Space j` | `Space j` |  |
@@ -219,6 +220,7 @@
 | `operator_lowercase` | 转小写(再按一个动作) |  | `gu` |  |
 | `operator_uppercase` | 转大写(再按一个动作) |  | `gU` |  |
 | `operator_switch_case` | 大小写互换(再按一个动作) |  | `g~` |  |
+| `operator_comment` | 注释（等一个动作） |  | `gc` |  |
 | `operator_fill` | 按宽度重排，等待动作 |  | `gq` |  |
 | `operator_fill_keep_cursor` | 重新排版，光标不动（vim 的 gw） |  | `gw` |  |
 | `join_selections_no_space` | 合并下一行，不补空格 |  | `gJ` |  |

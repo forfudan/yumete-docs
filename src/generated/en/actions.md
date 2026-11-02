@@ -79,6 +79,7 @@
 | `paste_menu` | the paste menu | `Space "` | `Space "` |  |
 | `toggle_comments` | comment this line | `C-c` `Space c` | `Space c` |  |
 | `toggle_block_comments` | comment this block | `Space C` | `Space C` |  |
+| `toggle_line_comments` | comment out, by the line only | `Space A-c` | `Space A-c` |  |
 | `yank_to_clipboard` | copy to the system clipboard | `Space y` | `Space y` |  |
 | `yank_main_selection_to_clipboard` | copy the main selection to the system clipboard | `Space Y` | `Space Y` |  |
 | `jumplist_picker` | jump list | `Space j` | `Space j` |  |
@@ -219,6 +220,7 @@
 | `operator_lowercase` | to lowercase (then a motion) |  | `gu` |  |
 | `operator_uppercase` | to uppercase (then a motion) |  | `gU` |  |
 | `operator_switch_case` | switch case (then a motion) |  | `g~` |  |
+| `operator_comment` | comment out (then a motion) |  | `gc` |  |
 | `operator_fill` | fill the lines to the width — waits for a motion |  | `gq` |  |
 | `operator_fill_keep_cursor` | refill the lines, the cursor staying where it is (vim's gw) |  | `gw` |  |
 | `join_selections_no_space` | join the next line, adding no space at all |  | `gJ` |  |

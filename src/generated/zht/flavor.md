@@ -27,6 +27,8 @@
 | [`move_lines`](#move_lines) | `A-j` `A-k` | `A-j` `A-k` | 上下移動行 |
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | 行首、首字 |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 刪到行尾 |
+| [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | 塊注釋標記各占一行 |
+| [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim 的 gc 注釋 |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | 空格菜單 |
 | [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | 借用 helix 的鍵 |
 
@@ -344,6 +346,20 @@ Under vim:
 | --- | --- | --- | --- |
 | Normal mode | `D` | 刪到行尾 |  |
 | Normal mode | `A-D` | 刪到行尾，不進寄存器 |  |
+
+### `block_comment_lines` {#block_comment_lines}
+
+開：在 Markdown、Typst、HTML 裏用 空格 C 注釋多整行時，<!-- 與 --> 各占一行。關：照 helix，標記寫在首行開頭與末行結尾。
+
+It changes what its keys do, not which command they run.
+
+### `vim_comment_keys` {#vim_comment_keys}
+
+開：vim 鍵位下 gc 接動作、gcc、可視模式的 gc 注釋所在的行，同 vim 9.1 自帶的包與 Neovim。關：只有空格選單裏的 c。
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| g 前往 | `gc` | 注釋（等一個動作） |  |
 
 ### `vim_space_menu` {#vim_space_menu}
 
