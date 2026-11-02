@@ -87,13 +87,13 @@
 | `C-6` `C-^` | 回到最近打開的緩衝區 | `goto_last_accessed_file` |
 | `C-a` | 光標處或其後的數字加一(vim 的 C-a) | `vim_increment` |
 | `C-b` `PageUp` | 後退一頁 | `page_up` |
-| `C-d` | 前進半頁 | `half_page_down` |
+| `C-d` | 前進半頁 | `page_cursor_half_down` |
 | `C-e` | 屏幕往下滾一行(光標的字不動) | `scroll_down` |
 | `C-f` `PageDown` | 前進一頁 | `page_down` |
 | `C-i` `Tab` | 跳轉表：再往前一處 | `jump_forward` |
 | `C-o` | 跳轉表：回到剛纔那個位置 | `jump_backward` |
 | `C-r` | 重做(vim 的 C-r) | `vim_redo` |
-| `C-u` | 後退半頁 | `half_page_up` |
+| `C-u` | 後退半頁 | `page_cursor_half_up` |
 | `C-v` | 塊選擇(vim 的 C-v) | `vim_visual_block_mode` |
 | `C-w` | 窗口組 | `window_mode` |
 | `C-x` | 光標處或其後的數字減一(vim 的 C-x) | `vim_decrement` |
@@ -161,8 +161,11 @@
 | `\F` | 文件挑選器(工作路徑) |
 | `\e` | 瀏覽文件(項目路徑) |
 | `\b` | 緩衝區挑選器 |
+| `\j` | 跳轉列表 |
+| `\'` | 上一個挑選器 |
 | `\g` | 存在改動文件 |
 | `\y` | 複製到系統剪貼板 |
+| `\Y` | 主選區複製到系統剪貼板 |
 | `\p` | 從系統剪貼板粘貼 |
 | `\P` | 從系統剪貼板粘貼在前 |
 | `\R` | 用系統剪貼板替換選區 |
@@ -240,6 +243,7 @@
 | `C-w n` | 開一個空白窗口 |
 | `C-w q` | 關掉這一區 |
 | `C-w o` | 只留這一區 |
+| `C-w f` | 在下面打開光標下的文件 |
 
 ## 開一個空白窗口 (`C-w n`, `\wn`)
 

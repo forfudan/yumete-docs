@@ -22,8 +22,8 @@
 | `goto_next_sentence` | 下一句 | `L` |  |  |
 | `goto_prev_paragraph` | 上一段 | `[p` | `[p` |  |
 | `goto_next_paragraph` | 下一段 | `]p` | `]p` |  |
-| `half_page_down` | 前进半页 | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` |  |
-| `half_page_up` | 后退半页 | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
+| `page_cursor_half_down` | 前进半页 | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` |  |
+| `page_cursor_half_up` | 后退半页 | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
 | `jump_backward` | 跳转表：回到刚才那个位置 | `C-o` | `C-o` |  |
 | `select_mode` | 延伸模式：移动把选区撑大 | `v` | `v` |  |
 | `extend_line_below` | 选中当前行 | `x` |  |  |
@@ -59,7 +59,7 @@
 | `search_prev` | 上一处 | `N` `zN` `ZN` | `gN` |  |
 | `search_selection` | 找选中的那段 | `g/` | `*` `g/` |  |
 | `goto_definition` | 前往定义位置 | `gd` | `gd` |  |
-| `open_here` | 打开本行写的文件名 | `gf` | `gf` |  |
+| `goto_file` | 打开本行写的文件名 | `gf` | `gf` |  |
 | `follow_link` | 前往光标下的链接位置 | `gL` | `gL` |  |
 | `open_link` | 用浏览器打开光标下的网址 | `gx` | `gx` |  |
 | `goto_declaration` | 跳到声明 | `gD` | `gD` |  |
@@ -70,17 +70,22 @@
 | `insert_char_below` | 打出下一行同一位置的字 |  |  | `C-e` |
 | `file_picker` | 打开文件挑选器 | `Space f` | `Space f` |  |
 | `buffer_picker` | 打开缓冲区选择器 | `Space b` | `Space b` |  |
-| `next_buffer` | 切换到下一个缓冲区 | `gn` | `gn` |  |
-| `prev_buffer` | 切换到上一个缓冲区 | `gp` |  |  |
+| `goto_next_buffer` | 切换到下一个缓冲区 | `gn` | `gn` |  |
+| `goto_previous_buffer` | 切换到上一个缓冲区 | `gp` |  |  |
 | `dictionary` | 字典：光标下那个字的拆分 | `Space n` | `Space n` |  |
-| `next_region` | 下一个区域 | `C-w w` | `C-w w` |  |
-| `search_panel` | 高级搜索面板 | `Space /` | `Space /` |  |
-| `command_menu` | 所有命令 | `Space ?` | `Space ?` |  |
+| `rotate_view` | 下一个区域 | `C-w w` | `C-w w` |  |
+| `global_search` | 高级搜索面板 | `Space /` | `Space /` |  |
+| `command_palette` | 所有命令 | `Space ?` | `Space ?` |  |
 | `paste_menu` | 粘贴菜单：挑一个寄存器 | `Space "` | `Space "` |  |
-| `comment_line` | 注释这一行 | `C-c` `Space c` | `Space c` |  |
-| `comment_block` | 整段注释 | `Space C` | `Space C` |  |
-| `copy_to_clipboard` | 复制到系统剪贴板 | `Space y` | `Space y` |  |
-| `paste_from_clipboard` | 从系统剪贴板粘贴 | `Space p` | `Space p` |  |
+| `toggle_comments` | 注释这一行 | `C-c` `Space c` | `Space c` |  |
+| `toggle_block_comments` | 整段注释 | `Space C` | `Space C` |  |
+| `yank_to_clipboard` | 复制到系统剪贴板 | `Space y` | `Space y` |  |
+| `yank_main_selection_to_clipboard` | 主选区复制到系统剪贴板 | `Space Y` | `Space Y` |  |
+| `jumplist_picker` | 跳转列表 | `Space j` | `Space j` |  |
+| `goto_first_change` | 第一处改动 | `[G` | `[G` |  |
+| `goto_last_change` | 最后一处改动 | `]G` | `]G` |  |
+| `last_picker` | 上一个挑选器 | `Space '` | `Space '` |  |
+| `paste_clipboard_after` | 从系统剪贴板粘贴 | `Space p` | `Space p` |  |
 | `move_line_up` | 上一行(文件里的) | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
 | `move_line_down` | 下一行(文件里的) | `gj` `g Down` | `C-n` `j` `Down` `gj` `g Down` |  |
 | `goto_next_line_nonwhitespace` | 下一行的第一个非空白字符 |  | `Enter` |  |
@@ -209,8 +214,8 @@
 | `changed_file_picker` | 存在改动文件 | `Space g` | `Space g` |  |
 | `paste_clipboard_before` | 从系统剪贴板粘贴在前 | `Space P` | `Space P` |  |
 | `replace_selections_with_clipboard` | 用系统剪贴板替换选区 | `Space R` | `Space R` |  |
-| `symbol_picker` | 符号挑选器 | `Space s` | `Space s` |  |
-| `workspace_symbol_picker` | 项目符号挑选器 | `Space S` | `Space S` |  |
+| `lsp_or_syntax_symbol_picker` | 符号挑选器 | `Space s` | `Space s` |  |
+| `lsp_or_syntax_workspace_symbol_picker` | 项目符号挑选器 | `Space S` | `Space S` |  |
 | `dictionary_panel` | 显示汉字信息(边栏) | `Space N` | `Space N` |  |
 | `hover` | 显示定义文档(浮窗) | `Space k` | `K` `Space k` |  |
 | `hover_panel` | 显示定义文档(边栏) | `Space K` | `Space K` |  |
@@ -270,6 +275,13 @@
 | `window_new_mode` | 空白窗口组：s 下面，v 旁边 | `C-w n` | `C-w n` |  |
 | `wclose` | 关掉这一区 | `C-w q` | `C-w q` |  |
 | `wonly` | 只留这一区 | `C-w o` | `C-w o` |  |
+| `transpose_view` | 并排与上下互换 | `C-w t` |  |  |
+| `swap_view_left` | 和左边那一区对调 | `C-w H` |  |  |
+| `swap_view_down` | 和下面那一区对调 | `C-w J` |  |  |
+| `swap_view_up` | 和上面那一区对调 | `C-w K` |  |  |
+| `swap_view_right` | 和右边那一区对调 | `C-w L` |  |  |
+| `goto_file_hsplit` | 在下面打开光标下的文件 | `C-w f` | `C-w f` |  |
+| `goto_file_vsplit` | 在旁边打开光标下的文件 | `C-w F` |  |  |
 | `switch_to_lowercase` | 转小写 | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | 转大写 | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | 繁→简 | `` `s `` | `` g`s `` |  |
@@ -457,8 +469,8 @@
 | `S-Tab` | `table_prev_cell` |
 | `C-n` | `two_thirds_page_down` |
 | `C-p` | `two_thirds_page_up` |
-| `C-d` | `half_page_down` |
-| `C-u` | `half_page_up` |
+| `C-d` | `page_cursor_half_down` |
+| `C-u` | `page_cursor_half_up` |
 | `PageDown` | `page_down` |
 | `PageUp` | `page_up` |
 | `y` | `yank` `operator_yank` |

@@ -70,7 +70,8 @@ own under the named registers.
 
 | Key | Command | Effect |
 | --- | --- | --- |
-| `Space y` | `:clipboard-yank` | copy the selection to the system clipboard, and into the unnamed register |
+| `Space y` | `:clipboard-yank` | copy every selection to the system clipboard, one to a line, and into the unnamed register |
+| `Space Y` | | copy the main selection only |
 | `Space p` | `:clipboard-paste` | paste from the system clipboard after the selection |
 | `Space P` | | paste from the system clipboard before the selection |
 | `Space R` | | replace the selection with the system clipboard, as `"+R` does |

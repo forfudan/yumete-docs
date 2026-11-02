@@ -87,13 +87,13 @@
 | `C-6` `C-^` | back to the buffer before this one | `goto_last_accessed_file` |
 | `C-a` | the number at or after the cursor, plus one (vim's C-a) | `vim_increment` |
 | `C-b` `PageUp` | a page up | `page_up` |
-| `C-d` | half a page down | `half_page_down` |
+| `C-d` | half a page down | `page_cursor_half_down` |
 | `C-e` | scroll the view down a line, the cursor keeping its place in the text | `scroll_down` |
 | `C-f` `PageDown` | a page down | `page_down` |
 | `C-i` `Tab` | forward again in the jump list | `jump_forward` |
 | `C-o` | back to where you jumped from | `jump_backward` |
 | `C-r` | redo, vim's C-r | `vim_redo` |
-| `C-u` | half a page up | `half_page_up` |
+| `C-u` | half a page up | `page_cursor_half_up` |
 | `C-v` | select a block (vim's C-v) | `vim_visual_block_mode` |
 | `C-w` | the window group | `window_mode` |
 | `C-x` | the number at or after the cursor, minus one (vim's C-x) | `vim_decrement` |
@@ -161,8 +161,11 @@
 | `\F` | open file picker (working dir) |
 | `\e` | browse files (project dir) |
 | `\b` | open buffer picker |
+| `\j` | jump list |
+| `\'` | the last picker again |
 | `\g` | changed files |
 | `\y` | copy to the system clipboard |
+| `\Y` | copy the main selection to the system clipboard |
 | `\p` | paste from the system clipboard |
 | `\P` | paste before, from the system clipboard |
 | `\R` | replace the selection with the system clipboard |
@@ -240,6 +243,7 @@
 | `C-w n` | a blank window |
 | `C-w q` | close this one |
 | `C-w o` | keep only this one |
+| `C-w f` | open the file under the cursor below |
 
 ## a blank window (`C-w n`, `\wn`)
 

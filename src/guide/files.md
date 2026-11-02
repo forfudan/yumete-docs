@@ -299,7 +299,8 @@ The terminal keeps `Cmd+C` and `Cmd+V` for itself. Use the `Space` menu:
 
 | Key | Action |
 | --- | --- |
-| `Space y` | copy the selection to the system clipboard |
+| `Space y` | copy every selection to the system clipboard, one to a line |
+| `Space Y` | copy the main selection only |
 | `Space p` `Space P` | paste from the system clipboard after / before |
 | `Space R` | replace the selection with the system clipboard |
 
