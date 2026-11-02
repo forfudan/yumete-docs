@@ -217,7 +217,8 @@
 | --- | --- |
 | `]d / ]D` | a diagnostic (capital: the first / the last) |
 | `]c` | a change |
-| `]p` | paste after (vim's p) |
+| `]p` | paste after, indented like this line (vim's ]p) |
+| `]P` | paste before, indented like this line (vim's [p) |
 | `]␣` | a blank line below |
 
 ## previous… (`[`)
@@ -226,7 +227,7 @@
 | --- | --- |
 | `[d / [D` | a diagnostic (capital: the first / the last) |
 | `[c` | a change |
-| `[p` | paste before (vim's P) |
+| `[p / [P` | paste before, indented like this line (vim's [p) |
 | `[␣` | a blank line above |
 
 ## put this line where (`z`)

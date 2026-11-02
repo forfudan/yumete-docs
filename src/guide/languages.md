@@ -34,7 +34,7 @@ The name in the first column is the one you write in `[lsp.<name>]` and
 
 | Key | What it does |
 | --- | --- |
-| `gd` | go to the definition, across files. `C-o` comes back |
+| `gd` `gD` `gy` `gi` | go to the definition, the declaration, the type's definition, the implementation, across files: one is gone to, several open a picker. `C-o` comes back |
 | `gr` | every place the name is used: one is gone to, several open a picker showing the line around each |
 | `Space k` / `Space K` | documentation for the name under the cursor, in a float / in the sidebar |
 | `Space s` / `Space S` | the symbols of this file / of the project, in a picker; the project one asks the server again as you type |
