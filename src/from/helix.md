@@ -69,7 +69,11 @@ helix keys yumete does not have yet:
 | Key | helix | yumete |
 | --- | --- | --- |
 | `=` | format | not bound |
-| `A-o` `A-i` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
+| `A-o` `A-i` `A-I` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
+| `]a` `]e` `]T` `]x`, and the same after `[` | parameter, entry, test, XML element | not bound |
+| `Space A-c` | line comments only | not bound; `Space c` comments by the line |
+| `zm` | centre the cursor sideways | not bound: yumete does not scroll sideways |
+| `Space G` | the debugger | not there |
 
 `gw` jump labels are the same key and work the same way, with three
 differences. In Chinese the labels go on clause starts, the places `e` stops,

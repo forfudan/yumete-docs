@@ -84,6 +84,8 @@
 | `jumplist_picker` | 跳转列表 | `Space j` | `Space j` |  |
 | `goto_first_change` | 第一处改动 | `[G` | `[G` |  |
 | `goto_last_change` | 最后一处改动 | `]G` | `]G` |  |
+| `suspend` | 暂停，回到终端；fg 回来 | `C-z` | `C-z` |  |
+| `select_references_to_symbol_under_cursor` | 选中本档里的每一处 | `Space h` | `Space h` |  |
 | `last_picker` | 上一个挑选器 | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | 从系统剪贴板粘贴 | `Space p` | `Space p` |  |
 | `move_line_up` | 上一行(文件里的) | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
@@ -163,6 +165,7 @@
 | `shell_insert_output` | 把外部命令的输出插在选区前 | `!` |  |  |
 | `shell_append_output` | 把外部命令的输出接在选区后 | `A-!` | `A-!` |  |
 | `shell_pipe_to` | 把选区交给外部命令，不改文本 | `A-\|` | `A-\|` |  |
+| `shell_keep_pipe` | 只留下终端命令通过的选区 | `$` |  |  |
 | `command_mode` | 命令行 | `:` | `:` |  |
 | `match_mode` | 配对组：括号、引号、对象 | `m` |  |  |
 | `replace` | 把选中的每个字换成另一个字 | `r` | `r` |  |

@@ -98,6 +98,7 @@
 | `C-w` | the window group | `window_mode` |
 | `C-x` | the number at or after the cursor, minus one (vim's C-x) | `vim_decrement` |
 | `C-y` | scroll the view up a line, the cursor keeping its place in the text | `scroll_up` |
+| `C-z` | suspend to the shell; fg brings it back | `suspend` |
 | `Esc` | back to Normal mode (vim: leaving Visual mode collapses the selection) | `vim_normal_mode` |
 | `Enter` | the next line's first character that is not a space | `goto_next_line_nonwhitespace` |
 | `Home` | the start of the line | `goto_line_start` |
@@ -175,6 +176,7 @@
 | `\d` | diagnostics picker |
 | `\D` | project diagnostics picker |
 | `\r` | rename it everywhere |
+| `\h` | select every place this symbol stands in the file |
 | `\a` | code actions |
 | `\w` | region |
 | `\c` | comment out, by the line |
