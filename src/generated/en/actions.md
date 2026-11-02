@@ -12,9 +12,9 @@
 | `move_next_long_word_start` | the next long word's start | `W` |  |  |
 | `move_prev_long_word_start` | the previous long word's start | `B` |  |  |
 | `move_next_long_word_end` | the next long word's end | `E` |  |  |
-| `goto_line_start` | the start of the line | `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | the end of the line | `End` `gl` `g Down` |  |  |
-| `goto_first_nonwhitespace` | the first character that is not a space | `gs` | `^` |  |
+| `goto_line_start` | the start of the line | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
+| `goto_line_end` | the end of the line | `$` `End` `gl` `g Down` |  |  |
+| `goto_first_nonwhitespace` | the first character that is not a space | `^` `gs` | `^` |  |
 | `goto_file_start` | the start of the file | `gg` | `gg` |  |
 | `goto_file_end` | the end of the file |  |  |  |
 | `goto_last_line` | the last line | `ge` | `ge` |  |
@@ -27,7 +27,7 @@
 | `jump_backward` | back to where you jumped from | `C-o` | `C-o` |  |
 | `select_mode` | Select mode: moving grows the selection | `v` | `v` |  |
 | `extend_line_below` | select this line | `x` |  |  |
-| `extend_to_line_bounds` | grow the selection to whole lines | `X` |  |  |
+| `extend_to_line_bounds` | grow the selection to whole lines |  |  |  |
 | `select_all` | select the whole file | `%` | `%` |  |
 | `collapse_selection` | collapse the selection to the cursor | `;` |  |  |
 | `delete_selection` | cut the selection into the register | `d` | `x` |  |
@@ -93,7 +93,7 @@
 | `jump_prev_sentence` | the cursor to the previous sentence, selecting nothing |  | `(` |  |
 | `jump_next_sentence` | the cursor to the next sentence, selecting nothing |  | `)` |  |
 | `add_mark` | set a mark (then a letter) | `M` | `m` |  |
-| `goto_mark` | go to a mark (then a letter) | `'` | `'` `` ` `` |  |
+| `goto_mark` | go to a mark (then a letter) | `'` | `` ` `` `'` |  |
 | `view_mode` | the view group: put the cursor line at the top, middle or bottom | `z` | `z` |  |
 | `sticky_view_mode` | the view group, staying open | `Z` | `Z` |  |
 | `right_bracket_mode` | the ] group: the next one of something | `]` | `]` |  |
@@ -105,7 +105,7 @@
 | `find_till_char` | find a character forward, selecting up to just before it | `t` | `t` |  |
 | `till_prev_char` | find a character backward, selecting back to just after it | `T` | `T` |  |
 | `select_line_mode` | line-wise Select mode |  | `V` |  |
-| `normal_mode` | leave Select mode and put away what was shown for a moment | `Esc` |  | `Esc` |
+| `normal_mode` | leave Select mode and put away what was shown for a moment | `Esc` |  | `Esc` `C-c` |
 | `repeat_find_char` | find that character again |  | `;` |  |
 | `repeat_find_char_reverse` | find that character again, the other way |  | `,` |  |
 | `copy_selection_on_next_line` | copy the selection onto the next line | `C` | `C` |  |
@@ -125,14 +125,22 @@
 | `rotate_selection_contents_backward` | rotate the selections' contents backward | `A-(` | `A-(` |  |
 | `select_regex` | select what matches a pattern inside the selection | `s` |  |  |
 | `split_selection` | split the selection on a pattern | `S` | `S` |  |
-| `keep_selections` | keep the selections that match a pattern | `A-k` `K` | `A-k` `K` |  |
+| `keep_selections` | keep the selections that match a pattern | `K` | `K` |  |
 | `remove_selections` | remove the selections that match a pattern | `A-K` | `A-K` |  |
 | `operator_delete` | delete (then a motion) |  | `d` |  |
 | `operator_change` | change (then a motion) |  | `c` |  |
 | `operator_yank` | yank (then a motion) |  | `y` |  |
 | `operator_indent` | indent (then a motion) |  | `>` |  |
 | `operator_unindent` | unindent (then a motion) |  | `<` |  |
-| `delete_to_line_end` | delete to the end of the line |  | `D` |  |
+| `delete_to_line_end` | delete to the end of the line | `D` |  |  |
+| `delete_to_line_end_noyank` | delete to the end of the line, leaving the register as it is | `A-D` |  |  |
+| `vim_delete_char_forward` | delete the character under the cursor, never the line break (vim's x) |  |  |  |
+| `extend_line_above` | select the line above, or one more line upward | `X` |  |  |
+| `move_selected_lines_down` | move the selected lines down | `A-j` | `A-j` |  |
+| `move_selected_lines_up` | move the selected lines up | `A-k` | `A-k` |  |
+| `goto_line_or_last_line` | go to line N, or with no count to the last line | `G` |  |  |
+| `normal_mode_and_collapse` | leave select mode, or collapse to one cursor |  |  |  |
+| `quit` | close this one | `Space q` | `Space q` |  |
 | `select_inner_object` | select inside an object (then which) |  | `i` |  |
 | `select_around_object` | select around an object (then which) |  | `a` |  |
 | `undo_line` | undo every change on this line |  | `U` |  |
@@ -165,7 +173,7 @@
 | `search_selection_exact` | look for what is selected, exactly as written | `A-*` | `A-*` |  |
 | `search_word_backward` | search backward for the word under the cursor |  | `#` |  |
 | `replace_mode` | Replace mode: typing writes over the text |  | `R` |  |
-| `goto_line` | to line N (the count) | `G` |  |  |
+| `goto_line` | to line N (the count) |  |  |  |
 | `vim_repeat_last_change` | repeat the last change with a new count |  | `.` |  |
 | `repeat_last_motion` | repeat the last f or t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | the cursor back to the previous word's end, selecting nothing |  | `ge` |  |
@@ -257,7 +265,7 @@
 | `wclose` | close this one | `C-w q` | `C-w q` |  |
 | `wonly` | keep only this one | `C-w o` | `C-w o` |  |
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
-| `switch_to_uppercase` | to uppercase | `` `u `` | `` g`u `` |  |
+| `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | traditional → simplified | `` `s `` | `` g`s `` |  |
 | `convert_to_traditional` | simplified → traditional | `` `t `` | `` g`t `` |  |
 | `convert_to_taiwan_traditional` | simplified → Taiwan 繁 | `` `w `` | `` g`w `` |  |
@@ -380,7 +388,7 @@
 | `run_one_normal_command` | one Normal-mode command, then back to Insert mode (vim's C-o) |  |  | `C-o` |
 | `goto_line_end_newline` | to the end of the line, after its last character |  |  | `End` `C-e` |
 | `commit_undo_checkpoint` | break the undo here |  |  | `C-g` |
-| `insert_tab` | insert an indent, the kind the file uses |  |  | `Tab` |
+| `insert_tab` | insert an indent, the kind the file uses |  |  | `Tab` `S-tab` |
 | `insert_other_tab` | insert the other kind of indent, a tab or spaces |  |  | `S-tab` |
 | `vim_normal_mode` | back to Normal mode (vim: leaving Visual mode collapses the selection) |  | `Esc` |  |
 | `vim_goto_line_end` | the end of the line (vim's $: moving down keeps to line ends) |  | `End` |  |
@@ -420,6 +428,7 @@
 | `+` | `@jgs` |
 | `-` | `@kgs` |
 | `$` | `vim_goto_line_end` |
+| `D` | `@d$` |
 | `Y` | `@y$` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |

@@ -12,9 +12,9 @@
 | `move_next_long_word_start` | 下一個大詞首(按空格分) | `W` |  |  |
 | `move_prev_long_word_start` | 上一個大詞首 | `B` |  |  |
 | `move_next_long_word_end` | 下一個大詞尾 | `E` |  |  |
-| `goto_line_start` | 行首 | `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | 行尾 | `End` `gl` `g Down` |  |  |
-| `goto_first_nonwhitespace` | 第一個非空白字符 | `gs` | `^` |  |
+| `goto_line_start` | 行首 | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
+| `goto_line_end` | 行尾 | `$` `End` `gl` `g Down` |  |  |
+| `goto_first_nonwhitespace` | 第一個非空白字符 | `^` `gs` | `^` |  |
 | `goto_file_start` | 文件開頭 | `gg` | `gg` |  |
 | `goto_file_end` | 文件末尾 |  |  |  |
 | `goto_last_line` | 最後一行 | `ge` | `ge` |  |
@@ -27,7 +27,7 @@
 | `jump_backward` | 跳轉表：回到剛纔那個位置 | `C-o` | `C-o` |  |
 | `select_mode` | 延伸模式：移動把選區撑大 | `v` | `v` |  |
 | `extend_line_below` | 選中當前行 | `x` |  |  |
-| `extend_to_line_bounds` | 把選區撑到整行邊界 | `X` |  |  |
+| `extend_to_line_bounds` | 把選區撑到整行邊界 |  |  |  |
 | `select_all` | 選中整個文件 | `%` | `%` |  |
 | `collapse_selection` | 選區收回光標 | `;` |  |  |
 | `delete_selection` | 剪切選區(進寄存器) | `d` | `x` |  |
@@ -93,7 +93,7 @@
 | `jump_prev_sentence` | 光標跳到上一句(不選中) |  | `(` |  |
 | `jump_next_sentence` | 光標跳到下一句(不選中) |  | `)` |  |
 | `add_mark` | 設標記(再按一個字母) | `M` | `m` |  |
-| `goto_mark` | 回到標記(再按一個字母) | `'` | `'` `` ` `` |  |
+| `goto_mark` | 回到標記(再按一個字母) | `'` | `` ` `` `'` |  |
 | `view_mode` | 視圖組：把光標行放到屏幕頂、中、底 | `z` | `z` |  |
 | `sticky_view_mode` | 視圖組(按完不收) | `Z` | `Z` |  |
 | `right_bracket_mode` | ] 組：往後找下一處 | `]` | `]` |  |
@@ -105,7 +105,7 @@
 | `find_till_char` | 往後找一個字，選到它前面 | `t` | `t` |  |
 | `till_prev_char` | 往前找一個字，選到它後面 | `T` | `T` |  |
 | `select_line_mode` | 整行選擇模式 |  | `V` |  |
-| `normal_mode` | 退出延伸模式，收起臨時顯示的東西 | `Esc` |  | `Esc` |
+| `normal_mode` | 退出延伸模式，收起臨時顯示的東西 | `Esc` |  | `Esc` `C-c` |
 | `repeat_find_char` | 再找一次剛纔那個字 |  | `;` |  |
 | `repeat_find_char_reverse` | 反方向再找一次剛纔那個字 |  | `,` |  |
 | `copy_selection_on_next_line` | 在下一行復制一個選區 | `C` | `C` |  |
@@ -125,14 +125,22 @@
 | `rotate_selection_contents_backward` | 各選區的內容往前輪換 | `A-(` | `A-(` |  |
 | `select_regex` | 在選區裏按正則選出 | `s` |  |  |
 | `split_selection` | 按正則把選區拆開 | `S` | `S` |  |
-| `keep_selections` | 只留配得上正則的選區 | `A-k` `K` | `A-k` `K` |  |
+| `keep_selections` | 只留配得上正則的選區 | `K` | `K` |  |
 | `remove_selections` | 去掉配得上正則的選區 | `A-K` | `A-K` |  |
 | `operator_delete` | 刪除(再按一個動作) |  | `d` |  |
 | `operator_change` | 改寫(再按一個動作) |  | `c` |  |
 | `operator_yank` | 複製(再按一個動作) |  | `y` |  |
 | `operator_indent` | 增加縮進(再按一個動作) |  | `>` |  |
 | `operator_unindent` | 減少縮進(再按一個動作) |  | `<` |  |
-| `delete_to_line_end` | 刪到行尾 |  | `D` |  |
+| `delete_to_line_end` | 刪到行尾 | `D` |  |  |
+| `delete_to_line_end_noyank` | 刪到行尾，不進寄存器 | `A-D` |  |  |
+| `vim_delete_char_forward` | 刪掉光標下的字，不刪換行(vim 的 x) |  |  |  |
+| `extend_line_above` | 往上選行 | `X` |  |  |
+| `move_selected_lines_down` | 把選中的行往下移 | `A-j` | `A-j` |  |
+| `move_selected_lines_up` | 把選中的行往上移 | `A-k` | `A-k` |  |
+| `goto_line_or_last_line` | 到第 N 行，不帶數字到末行 | `G` |  |  |
+| `normal_mode_and_collapse` | 退出選擇，或收成一個光標 |  |  |  |
+| `quit` | 關掉這一個 | `Space q` | `Space q` |  |
 | `select_inner_object` | 選中對象的裏面(再按一個對象) |  | `i` |  |
 | `select_around_object` | 選中整個對象(再按一個對象) |  | `a` |  |
 | `undo_line` | 撤銷這一行的所有改動 |  | `U` |  |
@@ -165,7 +173,7 @@
 | `search_selection_exact` | 找選中的那段(原樣) | `A-*` | `A-*` |  |
 | `search_word_backward` | 往回找光標下的詞 |  | `#` |  |
 | `replace_mode` | 覆寫模式：打字蓋掉原文 |  | `R` |  |
-| `goto_line` | 到第幾行(用計數) | `G` |  |  |
+| `goto_line` | 到第幾行(用計數) |  |  |  |
 | `vim_repeat_last_change` | 用新的計數再做一次剛纔的改動 |  | `.` |  |
 | `repeat_last_motion` | 再做一次剛纔的 f 或 t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | 光標跳到上一個詞尾(不選中) |  | `ge` |  |
@@ -257,7 +265,7 @@
 | `wclose` | 關掉這一區 | `C-w q` | `C-w q` |  |
 | `wonly` | 只留這一區 | `C-w o` | `C-w o` |  |
 | `switch_to_lowercase` | 轉小寫 | `` `l `` | `` g`l `` |  |
-| `switch_to_uppercase` | 轉大寫 | `` `u `` | `` g`u `` |  |
+| `switch_to_uppercase` | 轉大寫 | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | 繁→簡 | `` `s `` | `` g`s `` |  |
 | `convert_to_traditional` | 簡→繁 | `` `t `` | `` g`t `` |  |
 | `convert_to_taiwan_traditional` | 簡→臺灣繁 | `` `w `` | `` g`w `` |  |
@@ -380,7 +388,7 @@
 | `run_one_normal_command` | 臨時回普通模式做一件事(vim 的 C-o) |  |  | `C-o` |
 | `goto_line_end_newline` | 到行尾(最後一個字後面) |  |  | `End` `C-e` |
 | `commit_undo_checkpoint` | 在這裏斷開撤銷 |  |  | `C-g` |
-| `insert_tab` | 插入縮進(文件用的那一種) |  |  | `Tab` |
+| `insert_tab` | 插入縮進(文件用的那一種) |  |  | `Tab` `S-tab` |
 | `insert_other_tab` | 插入另一種縮進(Tab 或空格) |  |  | `S-tab` |
 | `vim_normal_mode` | 回普通模式(vim：退出可視模式時選區收成一點) |  | `Esc` |  |
 | `vim_goto_line_end` | 行尾(vim 的 $：往下走也留在行尾) |  | `End` |  |
@@ -420,6 +428,7 @@
 | `+` | `@jgs` |
 | `-` | `@kgs` |
 | `$` | `vim_goto_line_end` |
+| `D` | `@d$` |
 | `Y` | `@y$` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |

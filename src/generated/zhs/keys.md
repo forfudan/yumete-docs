@@ -76,6 +76,7 @@
 | `Space ?` | 命令一览 |
 | `Space Space` | 下一页 |
 | `Space Backspace` | 上一页 |
+| `Space q` | 关闭窗口 |
 
 ### g 前往 (`g`)
 

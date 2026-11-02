@@ -16,6 +16,11 @@ or type `:keymap vim` to use it for this session only. `:keymap helix` goes
 back, and `:keymap` on its own says which keymap is in force. Keys you bind in
 `[keys.normal]` win over the keymap. See [Key remapping](../guide/remapping.md).
 
+What yumete adds over vim's keys, such as the `Space` menu's tables and input
+method, `` g` `` for the case menu and `A-j` `A-k` to move lines, is the
+[Yumete flavour](../guide/remapping.md#the-yumete-flavour), on at its `basic`
+level. `flavor = "off"` under `[keys]` takes it away.
+
 ## Operators wait for a motion
 
 `d`, `c`, `y`, `>` and `<` are operators, as in vim. After one, the status
