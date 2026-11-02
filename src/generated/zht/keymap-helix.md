@@ -196,6 +196,7 @@
 | `Space w` | 工作區域操作 |
 | `Space c` | 行注釋 |
 | `Space C` | 塊注釋 |
+| `Space A-c` | 只用行注釋 |
 | `Space /` | 搜索面板 |
 | `Space ?` | 命令一覽 |
 

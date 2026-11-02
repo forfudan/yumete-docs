@@ -183,6 +183,7 @@
 | `\w` | region |
 | `\c` | comment out, by the line |
 | `\C` | comment out, in a block |
+| `\A-c` | comment out, by the line only |
 | `\/` | the search panel |
 | `\?` | every command |
 

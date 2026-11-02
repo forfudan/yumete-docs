@@ -13,7 +13,13 @@ Each language below has a grammar compiled into yumete. A grammar gives you:
 
 - syntax colours, in code files and in Markdown code fences (```` ```py ````, ```` ```rust ````)
 - indentation after an opener, on `Enter` and on `o`
-- `Space c` and `Space C` to comment lines out with a line or a block comment
+- comments, as in helix: `Space c` or `C-c` comments the lines (and takes off a block
+  comment already round them), `Space A-c` uses line comments only, and `Space C` wraps
+  exactly what is selected in a block comment, half a line included. In a fenced block
+  the comment is the block's language. In Markdown, Typst and HTML, `Space C` over
+  several whole lines puts `<!--` and `-->` on lines of their own (the flavour's
+  `block_comment_lines`). Under the vim keymap `gc{motion}`, `gcc` and Visual `gc` comment
+  lines, as in Neovim (the flavour's `vim_comment_keys`).
 - the symbol picker (`Space s`) without a server, and `]f` `[f` to the next or previous function, `]t` `[t` to
   the next or previous class
 - text objects such as `mi f` (inside a function) and `mi c` (inside a comment); see

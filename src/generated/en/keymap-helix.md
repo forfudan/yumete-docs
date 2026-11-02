@@ -196,6 +196,7 @@
 | `Space w` | region |
 | `Space c` | comment out, by the line |
 | `Space C` | comment out, in a block |
+| `Space A-c` | comment out, by the line only |
 | `Space /` | the search panel |
 | `Space ?` | every command |
 
