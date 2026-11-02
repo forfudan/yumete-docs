@@ -80,8 +80,8 @@ you left them (see "Sessions" in [Files](./files.md)).
 
 Some commands use another window to show you something without moving you:
 
-- `g?` shows the next match of the word under the cursor there (see
-  [Search and pickers](./search.md));
+- `:table-find column` shows a table's hits there (see
+  [Tables](../writing/tables.md));
 - `:git-show` opens the committed copy of the file there, read-only (see
   [Files, saving and changes](./files.md)).
 

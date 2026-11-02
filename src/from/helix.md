@@ -56,7 +56,6 @@ With the flavour at `basic`, these keys are yumete's:
 | `D` `A-D` | not bound | delete to the line's end; `A-D` leaves the register alone |
 | `A-j` `A-k` | not bound | move the selected lines (in prose, paragraphs) down and up |
 | `C-w e` `i` `E` `I` | not bound | show or hide the left and right sidebar, go into it |
-| `gD` | declaration | definition in the other window |
 | Insert `C-a` `C-e` `C-n` `C-g` `C-c` | not bound | line start, line end, completion, an undo checkpoint (helix's `C-s`, which a terminal takes), back to Normal mode |
 
 With the flavour off, `` ` `` lowercases and `` A-` `` uppercases, as in helix.
@@ -69,7 +68,7 @@ helix keys yumete does not have yet:
 | Key | helix | yumete |
 | --- | --- | --- |
 | `C-c` | comment | not bound; use `Space c` |
-| `gy` `gi` `gm` | type definition, implementation, last modified file | not bound |
+| `gD` `gy` `gi` `gm` | declaration, type definition, implementation, last modified file | not bound |
 | `=` | format | not bound |
 | `A-o` `A-i` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
 
@@ -79,10 +78,11 @@ not on every word. A label is one letter when the screen has 26 places or
 fewer, two otherwise. And a label covers one character, so a line of Chinese
 does not shift when the labels appear.
 
-New in the `g` group (flavour): `gL` follows a link, `gx` jumps to a word on the screen
-when you type its first two letters, `gz` jumps to a Chinese character when you
-type its pinyin, `g/` searches for the selection, and `g?` shows the results in
-the other window.
+New in the `g` group (flavour): `gz` jumps to a word on the screen when you
+type its first two letters, `gZ` jumps to a Chinese character when you type its
+pinyin, `gx` opens the web address under the cursor (as vim's `gx`), `gL`
+follows any link, and `g/` searches for the selection. `gf` also opens a
+Markdown link and a web address, as helix's does.
 
 The `]` and `[` group adds `m` for a merge conflict (flavour). In a code file `f`, `t`
 and `c` go to the next function, type and comment, as in helix; `a`, `e`, `T`,

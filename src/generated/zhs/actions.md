@@ -3,7 +3,7 @@
 | Command | What it does | helix | vim | Insert |
 | --- | --- | --- | --- | --- |
 | `move_char_left` | 左一个字 | `h` `Left` | `h` `Left` `Backspace` | `Left` |
-| `move_char_right` | 右一个字 | `l` `Right` | `l` `Right` | `Right` |
+| `move_char_right` | 右一个字 | `l` `Right` | `l` `Right` `Space` | `Right` |
 | `move_visual_line_up` | 上一行(屏幕上的) | `k` `Up` | `gk` `g Up` | `Up` |
 | `move_visual_line_down` | 下一行(屏幕上的) | `j` `Down` | `gj` `g Down` | `Down` |
 | `move_next_word_start` | 下一个词首 | `w` |  |  |
@@ -46,7 +46,7 @@
 | `replace_with_yanked` | 用寄存器内容替换选区 | `R` |  |  |
 | `join_selections` | 与下一行合并 | `J` |  |  |
 | `indent` | 增加缩进 | `>` |  |  |
-| `unindent` | 减少缩进 | `<` |  |  |
+| `unindent` | 减少缩进 | `<` |  | `C-d` |
 | `increment` | 光标处的数字加一 | `C-a` |  |  |
 | `decrement` | 光标处的数字减一 | `C-x` |  |  |
 | `switch_case` | 大小写互换 | `~` ``` `` ``` | ``` g`` ``` |  |
@@ -61,6 +61,7 @@
 | `goto_definition` | 前往定义位置 | `gd` | `gd` |  |
 | `open_here` | 打开本行写的文件名 | `gf` | `gf` |  |
 | `follow_link` | 前往光标下的链接位置 | `gL` | `gL` |  |
+| `open_link` | 用浏览器打开光标下的网址 | `gx` | `gx` |  |
 | `file_picker` | 打开文件挑选器 | `Space f` | `Space f` |  |
 | `buffer_picker` | 打开缓冲区选择器 | `Space b` | `Space b` |  |
 | `next_buffer` | 切换到下一个缓冲区 | `gn` | `gn` |  |
@@ -93,13 +94,13 @@
 | `jump_prev_sentence` | 光标跳到上一句(不选中) |  | `(` |  |
 | `jump_next_sentence` | 光标跳到下一句(不选中) |  | `)` |  |
 | `add_mark` | 设标记(再按一个字母) | `M` | `m` |  |
-| `goto_mark` | 回到标记(再按一个字母) | `'` | `` ` `` `'` |  |
+| `goto_mark` | 回到标记(再按一个字母) | `'` | `` ` `` `'` `` g` `` |  |
 | `view_mode` | 视图组：把光标行放到屏幕顶、中、底 | `z` | `z` |  |
 | `sticky_view_mode` | 视图组(按完不收) | `Z` | `Z` |  |
 | `right_bracket_mode` | ] 组：往后找下一处 | `]` | `]` |  |
 | `left_bracket_mode` | [ 组：往前找上一处 | `[` | `[` |  |
 | `goto_mode` | g 组：前往 | `g` | `g` |  |
-| `space_mode` | 空格菜单 | `Space` | `Space` |  |
+| `space_mode` | 空格菜单 | `Space` | `Space` `\` |  |
 | `find_next_char` | 往后找一个字，选到它 | `f` | `f` |  |
 | `find_prev_char` | 往前找一个字，选到它 | `F` | `F` |  |
 | `find_till_char` | 往后找一个字，选到它前面 | `t` | `t` |  |
@@ -178,13 +179,11 @@
 | `repeat_last_motion` | 再做一次刚才的 f 或 t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | 光标跳到上一个词尾(不选中) |  | `ge` |  |
 | `jump_prev_long_word_end` | 光标跳到上一个大词尾(不选中) |  | `gE` |  |
-| `goto_word` | 跳到当前屏幕某位置 | `gw` | `gw` |  |
-| `goto_word_by_letters` | 两字母定位单词 | `gx` | `gx` |  |
-| `goto_char_by_pinyin` | 多字母定位汉字 | `gz` | `gz` |  |
+| `goto_word` | 跳到当前屏幕某位置 | `gw` | `gW` `gw` |  |
+| `goto_word_by_letters` | 两字母定位单词 | `gz` | `gz` |  |
+| `goto_char_by_pinyin` | 多字母定位汉字 | `gZ` | `gZ` |  |
 | `goto_last_accessed_file` | 回到最近打开的缓冲区 | `ga` | `` `ga` |  |
-| `goto_definition_other_window` | 前往定义(另一窗口显示) | `gD` | `gD` |  |
 | `goto_reference` | 用到它的每一处 | `gr` | `gr` |  |
-| `search_selection_other_window` | 搜索所选内容(另一窗口显示) | `g?` | `g?` |  |
 | `move_next_zong` | 竖排时到下一纵(文件里的) |  | `gj` |  |
 | `move_prev_zong` | 竖排时到上一纵(文件里的) |  | `gk` |  |
 | `goto_last_modification` | 回到最后改动的地方 | `g.` | `g.` |  |
@@ -196,6 +195,7 @@
 | `operator_uppercase` | 转大写(再按一个动作) |  | `gU` |  |
 | `operator_switch_case` | 大小写互换(再按一个动作) |  | `g~` |  |
 | `operator_fill` | 按宽度重排，等待动作 |  | `gq` |  |
+| `operator_fill_keep_cursor` | 重新排版，光标不动（vim 的 gw） |  | `gw` |  |
 | `join_selections_no_space` | 合并下一行，不补空格 |  | `gJ` |  |
 | `file_picker_in_current_directory` | 文件挑选器(工作路径) | `Space F` | `Space F` |  |
 | `file_explorer` | 浏览文件(项目路径) | `Space e` | `Space e` |  |
@@ -224,8 +224,8 @@
 | `yume_mode` | 输入法 | `Space z` | `Space z` |  |
 | `goto_next_conflict` | 下一处合并冲突 | `]m` | `]m` |  |
 | `goto_prev_conflict` | 上一处合并冲突 | `[m` | `[m` |  |
-| `goto_next_change` | 下一处改动(git) | `]g` | `]g` |  |
-| `goto_prev_change` | 上一处改动(git) | `[g` | `[g` |  |
+| `goto_next_change` | 下一处改动(git) | `]g` | `]g` `]c` |  |
+| `goto_prev_change` | 上一处改动(git) | `[g` | `[g` `[c` |  |
 | `goto_next_diag` | 下一条诊断 | `]d` | `]d` |  |
 | `goto_prev_diag` | 上一条诊断 | `[d` | `[d` |  |
 | `goto_last_diag` | 最后一条诊断 | `]D` | `]D` |  |
@@ -319,7 +319,6 @@
 | `table_convert_mode` | 转换表格格式(分隔符) | `Space t x` | `Space t x` |  |
 | `table_cell_width` | 长单元格:换行/折叠/全文 | `Space t w` | `Space t w` |  |
 | `table_search_columns` | 按列搜索(可指定列范围) | `Space t /` | `Space t /` |  |
-| `table_search_columns_other_window` | 按列搜索(另一窗口显示) | `Space t ?` | `Space t ?` |  |
 | `table_goto_cell` | 去某一格(␣t 20,20g) | `Space t g` | `Space t g` |  |
 | `table_enter_cell` | 进格子里(按字走) |  |  |  |
 | `table_leave_cell` | 出格子(回到按格走) |  |  |  |

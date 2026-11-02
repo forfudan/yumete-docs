@@ -17,7 +17,7 @@
 | `space_paging` | `basic` | helix, vim | `Space Space` `Space Backspace` | `空格 空格` `空格 ⌫` 翻頁 |
 | `space_quit` | `basic` | helix, vim | `Space q` | `空格 q` 關閉窗口 |
 | `sidebars` | `basic` | helix, vim | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e i E I` 側欄 |
-| `goto_extras` | `basic` | helix, vim | `gL` `gx` `gz` `g/` `g?` `gD` | `gL gx gz g/ g? gD`：鏈接、跳轉、搜這個詞 |
+| `goto_extras` | `basic` | helix, vim | `gz` `gZ` `g/` `gL` `gx` `gW` | `gz` `gZ` `g/` `gL` `gx` `gW`：跳轉、搜這個詞、鏈接 |
 | `insert_extras` | `basic` | helix, vim | `C-a` `C-e` `C-n` `C-g` | 插入態 `C-a C-e C-n C-g` |
 | `insert_ctrl_c` | `basic` | helix | `C-c` | 插入態 `C-c` 回普通態 |
 | `x_selects_upward` | `basic` | helix | `X` | `X` 往上選行 |
@@ -25,6 +25,8 @@
 | `move_lines` | `basic` | helix, vim | `A-j` `A-k` | `A-j` `A-k` 上下移動行 |
 | `line_end_keys` | `basic` | helix | `0` `^` `$` | `0` `^` `$` 行首、首字、行尾 |
 | `d_to_line_end` | `basic` | helix | `D` `A-D` | `D` `A-D` 刪到行尾 |
+| `vim_space_menu` | `basic` | vim | `Space` | vim 下 `空格` 打開空格菜單 |
+| `helix_keys_under_vim` | `basic` | vim | `g.` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `ga` `gp` `gc` `gb` `gr` `]g` `]f` `]t` `[g` `[f` `[t` | vim 下借用 helix 的鍵：Alt 鍵、`C-s`、`Z` 等 |
 | `delete_keeps_register` | `full` | helix | `d` `c` `A-d` `A-c` | `d` `c` 不進寄存器 |
 | `esc_collapses` | `full` | helix | `Esc` | `Esc` 收成一個光標 |
 | `shift_tab_other_indent` | `full` | helix, vim | `S-tab` | 插入態 `S-Tab` 插另一種縮進 |

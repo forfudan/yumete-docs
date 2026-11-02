@@ -5,7 +5,7 @@ yumete has four ways to find things, from small to large:
 | Keys | Where it looks | What you get |
 | --- | --- | --- |
 | `/` `?` | this file | one match at a time, with `n` and `N` |
-| `g/` `g?` | this file | the word under the cursor, without typing it |
+| `g/` | this file | the word under the cursor, without typing it |
 | `Space /` | this file, the open buffers, a directory or the project | a panel listing every match, with find and replace |
 | `Space f` `Space e` `Space b` `Space g` | file names, folders, open buffers, changed files | a picker that opens what you choose |
 
@@ -21,7 +21,6 @@ Where each is on is under [Chinese in a search](#chinese-in-a-search).
 | `?` | search backwards |
 | `n` `N` | next / previous match |
 | `g/` | search for the selection, or the word under the cursor |
-| `g?` | the same, shown in the other window |
 | `*` | helix keymap: put the selection in the search register (`n` then finds it) |
 
 `/` opens a `search:` prompt at the bottom of the screen. You can type
@@ -53,8 +52,7 @@ smart_case = false
 
 `g/` takes the selection, or the word under the cursor, and jumps to the next
 place it appears. The text is taken as it stands, so brackets and dots need
-no escaping. `g?` shows the same match in the other window, so the
-place you are standing stays on screen (see [Windows and the sidebar](./windows.md)).
+no escaping.
 
 Under the helix keymap, `*` works as in helix: it puts the selection into the search register without
 moving, with word boundaries when the selection is a whole word (`A-*`

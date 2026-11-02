@@ -151,23 +151,23 @@ back, so editing it does nothing. To keep a word for good, copy it into
 
 Three keys jump to a place on the screen. `C-o` takes you back.
 
-**`gw`: any clause.** Every clause on the screen gets a letter label on its first
+**`gw` (`gW` under vim): any clause.** Every clause on the screen gets a letter label on its first
 character; type the label to jump there. Up to 26 places and each label is
 one letter; more, and labels take two. The places are the units `e` stops at,
 so `那年冬天，雪下得早。` gets two labels, not one per character. It works the same on a
 vertical page, one label to a column.
 
-**`gx`: two letters of Latin text.** Type the first two letters of a word you
+**`gz`: two letters of Latin text.** Type the first two letters of a word you
 can see, and every place on the screen spelled that way gets a label. A
 one-letter word such as `a` is followed by a space, and the space is its second
-letter. `gx` looks only at Latin text; for Chinese use `gz`.
+letter. `gz` looks only at Latin text; for Chinese use `gZ`.
 
-**`gz`: a Chinese character by its reading.** Type the pinyin of the character
+**`gZ`: a Chinese character by its reading.** Type the pinyin of the character
 you are looking at. A panel lists the characters on the screen with that reading
 and how many times each appears; keep typing until the list is short. Then pick
 one with its number, or with `Space`, `;` or `'` for the first three. Each place
 it appears gets a label. `-` and `=` page through a long list. For example,
-on a screen with 雪, 下 and 見 on it, `gz` `x` lists all three, and `;` then
+on a screen with 雪, 下 and 見 on it, `gZ` `x` lists all three, and `;` then
 labels every 下.
 
 To find one character on the line, `f` and `t` take Chinese as well. With
