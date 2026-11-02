@@ -84,6 +84,8 @@
 | `jumplist_picker` | 跳轉列表 | `Space j` | `Space j` |  |
 | `goto_first_change` | 第一處改動 | `[G` | `[G` |  |
 | `goto_last_change` | 最後一處改動 | `]G` | `]G` |  |
+| `suspend` | 暫停，回到終端；fg 回來 | `C-z` | `C-z` |  |
+| `select_references_to_symbol_under_cursor` | 選中本檔裏的每一處 | `Space h` | `Space h` |  |
 | `last_picker` | 上一個挑選器 | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | 從系統剪貼簿粘貼 | `Space p` | `Space p` |  |
 | `move_line_up` | 上一行(文件裏的) | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
@@ -163,6 +165,7 @@
 | `shell_insert_output` | 把外部命令的輸出插在選區前 | `!` |  |  |
 | `shell_append_output` | 把外部命令的輸出接在選區後 | `A-!` | `A-!` |  |
 | `shell_pipe_to` | 把選區交給外部命令，不改文本 | `A-\|` | `A-\|` |  |
+| `shell_keep_pipe` | 只留下終端命令通過的選區 | `$` |  |  |
 | `command_mode` | 命令行 | `:` | `:` |  |
 | `match_mode` | 配對組：括號、引號、對象 | `m` |  |  |
 | `replace` | 把選中的每個字換成另一個字 | `r` | `r` |  |

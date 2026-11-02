@@ -84,6 +84,8 @@
 | `jumplist_picker` | jump list | `Space j` | `Space j` |  |
 | `goto_first_change` | the first change | `[G` | `[G` |  |
 | `goto_last_change` | the last change | `]G` | `]G` |  |
+| `suspend` | suspend to the shell; fg brings it back | `C-z` | `C-z` |  |
+| `select_references_to_symbol_under_cursor` | select every place this symbol stands in the file | `Space h` | `Space h` |  |
 | `last_picker` | the last picker again | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | paste from the system clipboard | `Space p` | `Space p` |  |
 | `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
@@ -163,6 +165,7 @@
 | `shell_insert_output` | insert a command's output before the selection | `!` |  |  |
 | `shell_append_output` | append a command's output after the selection | `A-!` | `A-!` |  |
 | `shell_pipe_to` | pipe the selection to a command, keeping the text | `A-\|` | `A-\|` |  |
+| `shell_keep_pipe` | keep the selections a terminal command succeeds on | `$` |  |  |
 | `command_mode` | the command line | `:` | `:` |  |
 | `match_mode` | the match group: brackets, quotes, objects | `m` |  |  |
 | `replace` | replace each selected character with another | `r` | `r` |  |

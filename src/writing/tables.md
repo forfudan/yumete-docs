@@ -261,7 +261,7 @@ cursor, because there is no character to stand on.
 | --- | --- |
 | `h` `l` | previous / next cell in the row |
 | `j` `k` | same column, next / previous row |
-| `0` `$`, `Home` `End` | first / last cell of the row |
+| `Home` `End` | first / last cell of the row (also `0` `$` under the vim keymap) |
 | `Tab` `S-Tab` | next / previous cell, wrapping to the next or previous row |
 | `C-d` `C-u` | half a page down / up, staying in the same column |
 | `C-f` `C-b` | a full page down / up, staying in the same column |
@@ -298,8 +298,8 @@ Inside, the cell behaves like a small document. `h` `l`, `w` `b` `e`, the
 operators, and selections all mean what they mean outside a table, with the cell's edges
 as the walls:
 
-- `gg` and `ge` go to the first and last character of the cell. `0` `$`, `Home`
-  `End`, and `gh` `gl` do the same.
+- `gg` and `ge` go to the first and last character of the cell. `Home` `End`
+  and `gh` `gl` do the same, and so do `0` `$` under the vim keymap.
 - `w`, `b` and `e` never leave the cell, and neither do operators built on them,
   so `dw` cannot eat a delimiter.
 - `h` at the first character and `l` at the last step into the next cell. `l` at

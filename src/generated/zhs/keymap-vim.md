@@ -98,6 +98,7 @@
 | `C-w` | 窗口组 | `window_mode` |
 | `C-x` | 光标处或其后的数字减一(vim 的 C-x) | `vim_decrement` |
 | `C-y` | 屏幕往上滚一行(光标的字不动) | `scroll_up` |
+| `C-z` | 暂停，回到终端；fg 回来 | `suspend` |
 | `Esc` | 回普通模式(vim：退出可视模式时选区收成一点) | `vim_normal_mode` |
 | `Enter` | 下一行的第一个非空白字符 | `goto_next_line_nonwhitespace` |
 | `Home` | 行首 | `goto_line_start` |
@@ -175,6 +176,7 @@
 | `\d` | 诊断挑选器 |
 | `\D` | 项目诊断挑选器 |
 | `\r` | 改名（各处一起改） |
+| `\h` | 选中本档里的每一处 |
 | `\a` | 代码动作 |
 | `\w` | 工作区域操作 |
 | `\c` | 行注释 |

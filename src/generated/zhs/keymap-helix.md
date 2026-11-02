@@ -53,6 +53,7 @@
 | `Space` | 空格菜单 | `space_mode` |
 | `!` | 把外部命令的输出插在选区前 | `shell_insert_output` |
 | `"` | 选寄存器(再按一个字母) | `select_register` |
+| `$` | 只留下终端命令通过的选区 | `shell_keep_pipe` |
 | `%` | 选中整个文件 | `select_all` |
 | `&` | 把各个选区对齐 | `align_selections` |
 | `(` | 主选区换成上一个 | `rotate_selections_backward` |
@@ -85,6 +86,7 @@
 | `C-u` | 后退半页 | `page_cursor_half_up` |
 | `C-w` | 窗口组 | `window_mode` |
 | `C-x` | 光标处的数字减一 | `decrement` |
+| `C-z` | 暂停，回到终端；fg 回来 | `suspend` |
 | `A-!` | 把外部命令的输出接在选区后 | `shell_append_output` |
 | `A-(` | 各选区的内容往前轮换 | `rotate_selection_contents_backward` |
 | `A-)` | 各选区的内容往后轮换 | `rotate_selection_contents_forward` |
@@ -178,6 +180,7 @@
 | `Space d` | 诊断挑选器 |
 | `Space D` | 项目诊断挑选器 |
 | `Space r` | 改名（各处一起改） |
+| `Space h` | 选中本档里的每一处 |
 | `Space a` | 代码动作 |
 | `Space w` | 工作区域操作 |
 | `Space c` | 行注释 |

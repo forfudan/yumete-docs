@@ -53,6 +53,7 @@
 | `Space` | 空格菜單 | `space_mode` |
 | `!` | 把外部命令的輸出插在選區前 | `shell_insert_output` |
 | `"` | 選寄存器(再按一個字母) | `select_register` |
+| `$` | 只留下終端命令通過的選區 | `shell_keep_pipe` |
 | `%` | 選中整個文件 | `select_all` |
 | `&` | 把各個選區對齊 | `align_selections` |
 | `(` | 主選區換成上一個 | `rotate_selections_backward` |
@@ -85,6 +86,7 @@
 | `C-u` | 後退半頁 | `page_cursor_half_up` |
 | `C-w` | 窗口組 | `window_mode` |
 | `C-x` | 光標處的數字減一 | `decrement` |
+| `C-z` | 暫停，回到終端；fg 回來 | `suspend` |
 | `A-!` | 把外部命令的輸出接在選區後 | `shell_append_output` |
 | `A-(` | 各選區的內容往前輪換 | `rotate_selection_contents_backward` |
 | `A-)` | 各選區的內容往後輪換 | `rotate_selection_contents_forward` |
@@ -178,6 +180,7 @@
 | `Space d` | 診斷挑選器 |
 | `Space D` | 項目診斷挑選器 |
 | `Space r` | 改名（各處一起改） |
+| `Space h` | 選中本檔裏的每一處 |
 | `Space a` | 代碼動作 |
 | `Space w` | 工作區域操作 |
 | `Space c` | 行注釋 |

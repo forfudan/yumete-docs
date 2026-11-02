@@ -53,6 +53,7 @@
 | `Space` | the Space menu | `space_mode` |
 | `!` | insert a command's output before the selection | `shell_insert_output` |
 | `"` | pick a register (then a letter) | `select_register` |
+| `$` | keep the selections a terminal command succeeds on | `shell_keep_pipe` |
 | `%` | select the whole file | `select_all` |
 | `&` | line the selections up | `align_selections` |
 | `(` | make the previous selection the primary one | `rotate_selections_backward` |
@@ -85,6 +86,7 @@
 | `C-u` | half a page up | `page_cursor_half_up` |
 | `C-w` | the window group | `window_mode` |
 | `C-x` | the number under the cursor, minus one | `decrement` |
+| `C-z` | suspend to the shell; fg brings it back | `suspend` |
 | `A-!` | append a command's output after the selection | `shell_append_output` |
 | `A-(` | rotate the selections' contents backward | `rotate_selection_contents_backward` |
 | `A-)` | rotate the selections' contents forward | `rotate_selection_contents_forward` |
@@ -178,6 +180,7 @@
 | `Space d` | diagnostics picker |
 | `Space D` | project diagnostics picker |
 | `Space r` | rename it everywhere |
+| `Space h` | select every place this symbol stands in the file |
 | `Space a` | code actions |
 | `Space w` | region |
 | `Space c` | comment out, by the line |
