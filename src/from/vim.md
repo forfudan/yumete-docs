@@ -20,8 +20,8 @@ What yumete adds over vim's keys is the
 [Yumete flavour](../guide/remapping.md#the-yumete-flavour), on at its `basic`
 level: the `Space` menu on `Space`, `` g` `` for the case menu, `gW` for jump
 labels, `gz` `gZ` to jump by letters or pinyin, `A-j` `A-k` to move lines, and
-helix's keys on keys vim leaves free (the Alt keys, `C-s`, `ga`, `gr` and the
-rest). With `flavor = "off"` under `[keys]` the keys are vim's alone: `Space`
+helix's keys on keys vim and Neovim leave free (the Alt keys, `C-s`, `gb`,
+`gy` and the rest). With `flavor = "off"` under `[keys]` the keys are vim's alone: `Space`
 moves right and the `Space` menu is on `\`, vim's leader.
 
 ## Operators wait for a motion

@@ -28,7 +28,7 @@
 | `select_mode` | Select mode: moving grows the selection | `v` | `v` |  |
 | `extend_line_below` | select this line | `x` |  |  |
 | `extend_to_line_bounds` | grow the selection to whole lines |  |  |  |
-| `select_all` | select the whole file | `%` | `%` |  |
+| `select_all` | select the whole file | `%` |  |  |
 | `collapse_selection` | collapse the selection to the cursor | `;` |  |  |
 | `delete_selection` | cut the selection into the register | `d` | `x` |  |
 | `delete_selection_noyank` | delete the selection, leaving the register | `A-d` | `A-d` |  |
@@ -57,7 +57,7 @@
 | `rsearch` | search backward | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
 | `search_next` | the next match | `n` `zn` `Zn` | `gn` |  |
 | `search_prev` | the previous match | `N` `zN` `ZN` | `gN` |  |
-| `search_selection` | look for what is selected | `g/` | `g/` `*` |  |
+| `search_selection` | look for what is selected | `g/` | `*` `g/` |  |
 | `goto_definition` | go to where it is defined | `gd` | `gd` |  |
 | `open_here` | open the file this line names | `gf` | `gf` |  |
 | `follow_link` | follow the link under the cursor | `gL` | `gL` |  |
@@ -71,7 +71,7 @@
 | `file_picker` | open the file picker | `Space f` | `Space f` |  |
 | `buffer_picker` | open the buffer picker | `Space b` | `Space b` |  |
 | `next_buffer` | the next buffer | `gn` | `gn` |  |
-| `prev_buffer` | the previous buffer | `gp` | `gp` |  |
+| `prev_buffer` | the previous buffer | `gp` |  |  |
 | `dictionary` | the 拆分 of the character under the cursor | `Space n` | `Space n` |  |
 | `next_region` | the next region | `C-w w` | `C-w w` |  |
 | `search_panel` | the search panel | `Space /` | `Space /` |  |
@@ -95,7 +95,7 @@
 | `move_next_paragraph` | select on to the next paragraph | `}` |  |  |
 | `move_prev_paragraph` | select back to the previous paragraph | `{` |  |  |
 | `goto_window_top` | the top line on screen | `gt` | `H` |  |
-| `goto_window_center` | the middle line on screen | `gc` | `M` `gc` |  |
+| `goto_window_center` | the middle line on screen | `gc` | `M` |  |
 | `goto_window_bottom` | the bottom line on screen | `gb` | `L` `gb` |  |
 | `jump_prev_sentence` | the cursor to the previous sentence, selecting nothing |  | `(` |  |
 | `jump_next_sentence` | the cursor to the next sentence, selecting nothing |  | `)` |  |
@@ -115,7 +115,7 @@
 | `normal_mode` | leave Select mode and put away what was shown for a moment | `Esc` |  | `Esc` `C-c` |
 | `repeat_find_char` | find that character again |  | `;` |  |
 | `repeat_find_char_reverse` | find that character again, the other way |  | `,` |  |
-| `copy_selection_on_next_line` | copy the selection onto the next line | `C` | `C` |  |
+| `copy_selection_on_next_line` | copy the selection onto the next line | `C` |  |  |
 | `copy_selection_on_prev_line` | copy the selection onto the previous line | `A-C` | `A-C` |  |
 | `keep_primary_selection` | keep only the primary selection | `,` |  |  |
 | `remove_primary_selection` | remove the primary selection | `A-,` | `A-,` |  |
@@ -131,8 +131,8 @@
 | `rotate_selection_contents_forward` | rotate the selections' contents forward | `A-)` | `A-)` |  |
 | `rotate_selection_contents_backward` | rotate the selections' contents backward | `A-(` | `A-(` |  |
 | `select_regex` | select what matches a pattern inside the selection | `s` |  |  |
-| `split_selection` | split the selection on a pattern | `S` | `S` |  |
-| `keep_selections` | keep the selections that match a pattern | `K` | `K` |  |
+| `split_selection` | split the selection on a pattern | `S` |  |  |
+| `keep_selections` | keep the selections that match a pattern | `K` |  |  |
 | `remove_selections` | remove the selections that match a pattern | `A-K` | `A-K` |  |
 | `operator_delete` | delete (then a motion) |  | `d` |  |
 | `operator_change` | change (then a motion) |  | `c` |  |
@@ -141,7 +141,7 @@
 | `operator_unindent` | unindent (then a motion) |  | `<` |  |
 | `delete_to_line_end` | delete to the end of the line | `D` |  |  |
 | `delete_to_line_end_noyank` | delete to the end of the line, leaving the register as it is | `A-D` |  |  |
-| `vim_delete_char_forward` | delete the character under the cursor, never the line break (vim's x) |  |  |  |
+| `vim_delete_char_forward` | delete the character under the cursor, never the line break (vim's x) |  | `x` |  |
 | `extend_line_above` | select the line above, or one more line upward | `X` |  |  |
 | `move_selected_lines_down` | move the selected lines down | `A-j` | `A-j` |  |
 | `move_selected_lines_up` | move the selected lines up | `A-k` | `A-k` |  |
@@ -162,21 +162,21 @@
 | `match_mode` | the match group: brackets, quotes, objects | `m` |  |  |
 | `replace` | replace each selected character with another | `r` | `r` |  |
 | `select_register` | pick a register (then a letter) | `"` | `"` |  |
-| `record_macro` | start or stop recording a macro | `Q` | `Q` |  |
-| `replay_macro` | replay the macro | `q` |  |  |
+| `record_macro` | start or stop recording a macro | `Q` |  |  |
+| `replay_macro` | replay the macro | `q` | `Q` |  |
 | `window_mode` | the window group | `C-w` `Space w` | `C-w` `Space w` |  |
 | `page_down` | a page down | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `Pagedown` |
 | `page_up` | a page up | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `Pageup` |
 | `join_selections_space` | join lines and select where they meet | `A-J` | `A-J` |  |
 | `save_selection` | save this place in the jump list | `C-s` | `C-s` |  |
-| `jump_forward` | forward again in the jump list | `Tab` | `Tab` |  |
+| `jump_forward` | forward again in the jump list | `C-i` `Tab` | `C-i` `Tab` |  |
 | `two_thirds_page_down` | two thirds of a page down | `C-n` |  |  |
 | `two_thirds_page_up` | two thirds of a page up | `C-p` |  |  |
 | `flip_selections` | move the cursor to the other end of the selection | `A-;` | `A-;` |  |
 | `vim_redo` | redo, vim's C-r |  | `C-r` |  |
 | `delete_char_backward` | delete the character before the cursor |  | `X` | `Backspace` `C-h` |
 | `case_mode` | the case group: upper and lower case, traditional and simplified | `` ` `` | `` g` `` |  |
-| `search_selection_detect_word_boundaries` | look for what is selected, as a whole word | `*` | `*` |  |
+| `search_selection_detect_word_boundaries` | look for what is selected, as a whole word | `*` |  |  |
 | `search_selection_exact` | look for what is selected, exactly as written | `A-*` | `A-*` |  |
 | `search_word_backward` | search backward for the word under the cursor |  | `#` |  |
 | `replace_mode` | Replace mode: typing writes over the text |  | `R` |  |
@@ -188,8 +188,8 @@
 | `goto_word` | go to a place on this screen | `gw` | `gW` `gw` |  |
 | `goto_word_by_letters` | two letters to locate a word | `gz` | `gz` |  |
 | `goto_char_by_pinyin` | more letters to locate a char | `gZ` | `gZ` |  |
-| `goto_last_accessed_file` | back to the buffer before this one | `ga` | `` `ga` |  |
-| `goto_reference` | every place it is used | `gr` | `gr` |  |
+| `goto_last_accessed_file` | back to the buffer before this one | `ga` | `` |  |
+| `goto_reference` | every place it is used | `gr` |  |  |
 | `move_next_zong` | on a vertical page, on to the next line of the file |  | `gj` |  |
 | `move_prev_zong` | on a vertical page, back to the previous line of the file |  | `gk` |  |
 | `goto_last_modification` | back to the last change | `g.` | `g.` |  |
@@ -212,7 +212,7 @@
 | `symbol_picker` | symbol picker | `Space s` | `Space s` |  |
 | `workspace_symbol_picker` | project symbol picker | `Space S` | `Space S` |  |
 | `dictionary_panel` | character info (sidebar) | `Space N` | `Space N` |  |
-| `hover` | documentation (floating) | `Space k` | `Space k` `K` |  |
+| `hover` | documentation (floating) | `Space k` | `K` `Space k` |  |
 | `hover_panel` | documentation (sidebar) | `Space K` | `Space K` |  |
 | `diagnostics_picker` | diagnostics picker | `Space d` | `Space d` |  |
 | `workspace_diagnostics_picker` | project diagnostics picker | `Space D` | `Space D` |  |
@@ -228,18 +228,18 @@
 | `conflict_mode` | merge conflict | `Space m` | `Space m` |  |
 | `open_recent_mode` | open something recent | `Space o` | `Space o` |  |
 | `yume_mode` | the input method | `Space z` | `Space z` |  |
-| `goto_next_conflict` | the next merge conflict | `]m` | `]m` |  |
-| `goto_prev_conflict` | the previous merge conflict | `[m` | `[m` |  |
+| `goto_next_conflict` | the next merge conflict | `]m` |  |  |
+| `goto_prev_conflict` | the previous merge conflict | `[m` |  |  |
 | `goto_next_change` | the next change (git) | `]g` | `]g` `]c` |  |
 | `goto_prev_change` | the previous change (git) | `[g` | `[g` `[c` |  |
 | `goto_next_diag` | the next diagnostic | `]d` | `]d` |  |
 | `goto_prev_diag` | the previous diagnostic | `[d` | `[d` |  |
 | `goto_last_diag` | the last diagnostic | `]D` | `]D` |  |
 | `goto_first_diag` | the first diagnostic | `[D` | `[D` |  |
-| `goto_next_function` | the next function | `]f` | `]f` |  |
-| `goto_prev_function` | the previous function | `[f` | `[f` |  |
-| `goto_next_class` | the next class | `]t` | `]t` |  |
-| `goto_prev_class` | the previous class | `[t` | `[t` |  |
+| `goto_next_function` | the next function | `]f` |  |  |
+| `goto_prev_function` | the previous function | `[f` |  |  |
+| `goto_next_class` | the next class | `]t` |  |  |
+| `goto_prev_class` | the previous class | `[t` |  |  |
 | `goto_next_comment` | the next comment | `]c` | `]c` |  |
 | `goto_prev_comment` | the previous comment | `[c` | `[c` |  |
 | `add_newline_below` | a blank line below | `]␣` | `]␣` |  |
@@ -383,7 +383,7 @@
 | `extend_to_file_end` | extend the selection to the end of the file |  |  |  |
 | `extend_to_last_line` | extend to the last line | `ge` | `ge` |  |
 | `extend_to_word` | extend the selection to a place on screen, by its label | `gw` | `gw` |  |
-| `insert_newline` | a line break, carrying the indent and a list's marker |  |  | `Enter` |
+| `insert_newline` | a line break, carrying the indent and a list's marker |  |  | `Enter` `C-j` |
 | `delete_char_forward` | delete the character after the cursor |  |  | `Delete` `C-d` |
 | `delete_word_forward` | delete the word after the cursor |  |  | `A-d` |
 | `delete_word_backward` | delete the word before the cursor |  |  | `C-w` |
@@ -396,7 +396,7 @@
 | `insert_tab` | insert an indent, the kind the file uses |  |  | `Tab` `S-tab` |
 | `insert_other_tab` | insert the other kind of indent, a tab or spaces |  |  | `S-tab` |
 | `vim_normal_mode` | back to Normal mode (vim: leaving Visual mode collapses the selection) |  | `Esc` |  |
-| `vim_goto_line_end` | the end of the line (vim's $: moving down keeps to line ends) |  | `End` |  |
+| `vim_goto_line_end` | the end of the line (vim's $: moving down keeps to line ends) |  | `$` `End` |  |
 | `vim_insert_mode` | insert before the cursor (vim's i) |  | `i` |  |
 | `vim_append_mode` | insert after the cursor (vim's a) |  | `a` |  |
 | `vim_insert_at_line_start` | insert before the first non-blank (vim's I) |  | `I` |  |
@@ -414,7 +414,7 @@
 | `vim_decrement` | the number at or after the cursor, minus one (vim's C-x) |  | `C-x` |  |
 | `vim_search_next` | the next match (vim's n) |  | `n` |  |
 | `vim_search_prev` | the previous match (vim's N) |  | `N` |  |
-| `vim_match_brackets` | the matching bracket, or the next one on the line (vim's %) |  |  |  |
+| `vim_match_brackets` | the matching bracket, or the next one on the line (vim's %) |  | `%` |  |
 | `vim_kill_to_line_start` | delete back to where this Insert began (vim's C-u) |  |  | `C-u` |
 | `vim_kill_to_line_end` | delete to the end of the line, never the line break (vim) |  |  | `C-k` |
 | `vim_flip_selections` | to the other end of the selection (vim's Visual o) |  | `o` |  |
@@ -432,9 +432,10 @@
 | --- | --- |
 | `+` | `@jgs` |
 | `-` | `@kgs` |
-| `$` | `vim_goto_line_end` |
 | `D` | `@d$` |
+| `C` | `@c$` |
 | `Y` | `@y$` |
+| `S` | `@cc` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
 
