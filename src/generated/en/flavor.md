@@ -26,7 +26,7 @@
 | `line_end_keys` | `basic` | helix | `0` `^` `$` | line start, first character, line end |
 | `d_to_line_end` | `basic` | helix | `D` `A-D` | delete to the line's end |
 | `vim_space_menu` | `basic` | vim | `Space` | the Space menu |
-| `helix_keys_under_vim` | `basic` | vim | `g.` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `ga` `gp` `gc` `gb` `gr` `]g` `]f` `]t` `[g` `[f` `[t` | helix's keys |
+| `helix_keys_under_vim` | `basic` | vim | `g.` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `ga` `gp` `gc` `gb` `gr` `gy` `]g` `]f` `]t` `[g` `[f` `[t` | helix's keys |
 | `delete_keeps_register` | `full` | helix | `d` `c` `A-d` `A-c` | deleting keeps the register |
 | `esc_collapses` | `full` | helix | `Esc` | collapse to one cursor |
 | `shift_tab_other_indent` | `full` | helix, vim | `S-tab` | the other kind of indent |

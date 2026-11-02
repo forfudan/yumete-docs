@@ -62,6 +62,12 @@
 | `open_here` | open the file this line names | `gf` | `gf` |  |
 | `follow_link` | follow the link under the cursor | `gL` | `gL` |  |
 | `open_link` | open the web address under the cursor in the browser | `gx` | `gx` |  |
+| `goto_declaration` | go to the declaration | `gD` | `gD` |  |
+| `goto_type_definition` | go to the type definition | `gy` | `gy` |  |
+| `goto_implementation` | go to the implementation | `gi` |  |  |
+| `goto_last_modified_file` | the file changed last | `gm` |  |  |
+| `insert_char_above` | type the character above the cursor |  |  | `C-y` |
+| `insert_char_below` | type the character below the cursor |  |  | `C-e` |
 | `file_picker` | open the file picker | `Space f` | `Space f` |  |
 | `buffer_picker` | open the buffer picker | `Space b` | `Space b` |  |
 | `next_buffer` | the next buffer | `gn` | `gn` |  |
@@ -71,7 +77,7 @@
 | `search_panel` | the search panel | `Space /` | `Space /` |  |
 | `command_menu` | every command | `Space ?` | `Space ?` |  |
 | `paste_menu` | the paste menu | `Space "` | `Space "` |  |
-| `comment_line` | comment this line | `Space c` | `Space c` |  |
+| `comment_line` | comment this line | `C-c` `Space c` | `Space c` |  |
 | `comment_block` | comment this block | `Space C` | `Space C` |  |
 | `copy_to_clipboard` | copy to the system clipboard | `Space y` | `Space y` |  |
 | `paste_from_clipboard` | paste from the system clipboard | `Space p` | `Space p` |  |
@@ -241,8 +247,8 @@
 | `align_view_center` | put the cursor's line in the middle of the screen | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
 | `align_view_top` | put the cursor's line at the top of the screen | `zt` `Zt` | `zt` `Zt` |  |
 | `align_view_bottom` | put the cursor's line at the bottom of the screen | `zb` `Zb` | `zb` `Zb` |  |
-| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `z Down` `Z Down` |  |
-| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `z Up` `Z Up` |  |
+| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `C-e` `z Down` `Z Down` |  |
+| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `C-y` `z Up` `Z Up` |  |
 | `match_brackets` | go to the other half of the pair | `mm` |  |  |
 | `select_textobject_inner` | select what is inside the pair | `mi` |  |  |
 | `select_textobject_around` | select the pair and what is inside | `ma` |  |  |
@@ -352,7 +358,7 @@
 | `paste_table_as_csv` | paste the clipboard as a csv table | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | convert the table to tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | paste the clipboard as a tsv table | `Space t x T` | `Space t x T` |  |
-| `no_op` | nothing (bound to a key, it unbinds it) |  | `&` `!` |  |
+| `no_op` | nothing (bound to a key, it unbinds it) |  | `&` `!` `C-c` |  |
 | `extend_char_left` | extend the selection one character left | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | extend the selection one character right | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | extend the selection one line up, on screen | `k` `Up` |  |  |

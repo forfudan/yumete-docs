@@ -170,6 +170,10 @@ the last insert, as helix's does.
 | `ZZ` `ZQ` | save and quit, quit without saving |
 | `gw` | fill, as `gq`, with the cursor kept |
 | `gx` | open the web address under the cursor |
+| `gD` | the declaration, asked of the language server |
+| `C-e` `C-y` | scroll a line down, up |
+| `''` | back where the last jump came from; again, forward |
+| `C-y` `C-e` in insert mode | type the character above, below the cursor |
 | `]c` `[c` | next, previous change |
 | `C-c` `C-d` `C-g u` in insert mode | leave Insert, take an indent off the line, start a new undo step |
 

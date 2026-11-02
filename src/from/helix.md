@@ -10,9 +10,10 @@ away. This page lists the places where the keys are not helix's.
 ## What is the same
 
 These work as in helix. Motions: `h` `j` `k` `l`, `f` `t` `F` `T` (across lines),
-`gg` `ge` `gh` `gl` `gs`, and `C-d` `C-u` `C-f` `C-b`. Selection: `x`
+`gg` `ge` `gh` `gl` `gs`, `gd` `gD` `gy` `gi` `gr` (asked of the language
+server), `gm` (the file changed last), and `C-d` `C-u` `C-f` `C-b`. Selection: `x`
 `%` `v` `;` `,` `C` `s` `S` `K` `&` `_`, `A-;`, and `(` `)` to rotate the
-primary selection. Changes: `d` `c` `y` `p` `P` `R` `r` `~` `>` `<` `J`
+primary selection. Changes: `d` `c` `y` `p` `P` `R` `r` `~` `>` `<` `J` `C-c` (comment)
 `u` `U` `C-a` `C-x`, with `A-d` and `A-c` to leave the register alone.
 Macros are `Q` to record and `q` to play, `"a` picks a register, `A-.`
 repeats the last `f` or `t`, and `C-o` `C-i` `C-s` work the jump list.
@@ -67,8 +68,6 @@ helix keys yumete does not have yet:
 
 | Key | helix | yumete |
 | --- | --- | --- |
-| `C-c` | comment | not bound; use `Space c` |
-| `gD` `gy` `gi` `gm` | declaration, type definition, implementation, last modified file | not bound |
 | `=` | format | not bound |
 | `A-o` `A-i` `A-p` `A-n` `A-a` `A-e` `A-b` | syntax tree selection | not bound |
 

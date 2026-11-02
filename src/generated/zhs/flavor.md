@@ -26,7 +26,7 @@
 | `line_end_keys` | `basic` | helix | `0` `^` `$` | 行首、首字、行尾 |
 | `d_to_line_end` | `basic` | helix | `D` `A-D` | 删到行尾 |
 | `vim_space_menu` | `basic` | vim | `Space` | 空格菜单 |
-| `helix_keys_under_vim` | `basic` | vim | `g.` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `ga` `gp` `gc` `gb` `gr` `]g` `]f` `]t` `[g` `[f` `[t` | 借用 helix 的键 |
+| `helix_keys_under_vim` | `basic` | vim | `g.` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `ga` `gp` `gc` `gb` `gr` `gy` `]g` `]f` `]t` `[g` `[f` `[t` | 借用 helix 的键 |
 | `delete_keeps_register` | `full` | helix | `d` `c` `A-d` `A-c` | 删除不进寄存器 |
 | `esc_collapses` | `full` | helix | `Esc` | 收成一个光标 |
 | `shift_tab_other_indent` | `full` | helix, vim | `S-tab` | 插另一种缩进 |
