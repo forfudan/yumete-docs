@@ -324,7 +324,9 @@ annotation` is the mode a session starts in (`off` at the factory).
 
 拼音 has no 字根 table, so it shows its own fields whatever the mode
 (全息拆分, the reading, simplified and traditional), and `/` turns them on and
-off. The mode you picked comes back when you switch to a shape scheme.
+off; the status line says the pinyin annotation is on or off rather than
+naming a mode. The mode you picked comes back when you switch to a shape
+scheme.
 
 The annotations start in one column, after the widest candidate, and the box
 grows to hold them. When the window is too narrow, the fields at the end are
