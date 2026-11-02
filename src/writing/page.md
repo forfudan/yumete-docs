@@ -108,6 +108,11 @@ Put the cursor anywhere on a link and press `gL`, or hold Ctrl and click it.
 | `[snow](#snow)`, `[[Chapter 3#snow]]` | to that heading, opening its file first |
 
 A relative path is read from the folder of the file the link is in.
+
+`gL` takes any link. The keys helix and vim have for it each take some:
+`gx` opens a web address, as in vim; `gf` opens a file or a web address, as
+in helix; `gd` follows a file, a `[[page]]` or a heading. `gx` and `gf` also
+open a web address written bare, in any file.
 `[[Chapter 3]]` names a title, not a file: yumete tries the current file's
 extension first, then `.md`. In `[[Chapter 3|that night]]` the part after `|`
 is only what the link shows.

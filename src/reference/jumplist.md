@@ -19,7 +19,7 @@ A new jump after going back drops the places ahead of you, and the list keeps th
 - following a heading in the outline, or a `path:line` with `gf`
 - `gd` and the places `gr` lists
 - `]d` `[d`, `]f` `[f` and the other `]` `[` jumps to a diagnostic, function, change or conflict
-- `gw`, `gx` and `gz` (the cursor jumps, the view does not move)
+- `gw`, `gz` and `gZ` (the cursor jumps, the view does not move)
 - going to a mark with `'`, and to a change with `g.`
 
 Switching files with `ga`, `gn`, `gp` or `:open` does not add a jump.

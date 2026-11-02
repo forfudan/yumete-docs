@@ -470,7 +470,6 @@ else does this value appear?":
 | Keys | What it does |
 | --- | --- |
 | `Space t /` | search down the columns for what the cursor is on |
-| `Space t ?` | the same, showing the results in the other window |
 | `Space t 2/` | search column 2 only |
 | `Space t 2-10/` | search columns 2 to 10 |
 | `n` `N` | next / previous hit |
@@ -491,7 +490,7 @@ not where it is defined. Otherwise it covers every column, and says so.
 
 ```
 :table-find row Lin        line by line, like /
-:table-find column Lin     down the columns, like Space t ? (in the other window)
+:table-find column Lin     down the columns, shown in the other window
 :table-find Lin            no direction: line by line
 ```
 

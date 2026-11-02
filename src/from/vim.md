@@ -16,10 +16,13 @@ or type `:keymap vim` to use it for this session only. `:keymap helix` goes
 back, and `:keymap` on its own says which keymap is in force. Keys you bind in
 `[keys.normal]` win over the keymap. See [Key remapping](../guide/remapping.md).
 
-What yumete adds over vim's keys, such as the `Space` menu's tables and input
-method, `` g` `` for the case menu and `A-j` `A-k` to move lines, is the
+What yumete adds over vim's keys is the
 [Yumete flavour](../guide/remapping.md#the-yumete-flavour), on at its `basic`
-level. `flavor = "off"` under `[keys]` takes it away.
+level: the `Space` menu on `Space`, `` g` `` for the case menu, `gW` for jump
+labels, `gz` `gZ` to jump by letters or pinyin, `A-j` `A-k` to move lines, and
+helix's keys on keys vim leaves free (the Alt keys, `C-s`, `ga`, `gr` and the
+rest). With `flavor = "off"` under `[keys]` the keys are vim's alone: `Space`
+moves right and the `Space` menu is on `\`, vim's leader.
 
 ## Operators wait for a motion
 
@@ -165,6 +168,10 @@ the last insert, as helix's does.
 | `]p` `[p` | put after, before (the indent is not adjusted yet) |
 | `C-^` | the previous file; while typing it switches the input method between Chinese and English, as vim's Insert-mode `C-^` switches language |
 | `ZZ` `ZQ` | save and quit, quit without saving |
+| `gw` | fill, as `gq`, with the cursor kept |
+| `gx` | open the web address under the cursor |
+| `]c` `[c` | next, previous change |
+| `C-c` `C-d` `C-g u` in insert mode | leave Insert, take an indent off the line, start a new undo step |
 
 Under the vim keymap the case and conversion menu moves from `` ` `` to
 ``g` ``, since `` ` `` jumps to a mark: ``g`s`` turns traditional characters

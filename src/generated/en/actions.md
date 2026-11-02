@@ -3,7 +3,7 @@
 | Command | What it does | helix | vim | Insert |
 | --- | --- | --- | --- | --- |
 | `move_char_left` | one character left | `h` `Left` | `h` `Left` `Backspace` | `Left` |
-| `move_char_right` | one character right | `l` `Right` | `l` `Right` | `Right` |
+| `move_char_right` | one character right | `l` `Right` | `l` `Right` `Space` | `Right` |
 | `move_visual_line_up` | one line up, on screen | `k` `Up` | `gk` `g Up` | `Up` |
 | `move_visual_line_down` | one line down, on screen | `j` `Down` | `gj` `g Down` | `Down` |
 | `move_next_word_start` | the next word's start | `w` |  |  |
@@ -46,7 +46,7 @@
 | `replace_with_yanked` | replace the selection with the register | `R` |  |  |
 | `join_selections` | join with the next line | `J` |  |  |
 | `indent` | indent | `>` |  |  |
-| `unindent` | unindent | `<` |  |  |
+| `unindent` | unindent | `<` |  | `C-d` |
 | `increment` | the number under the cursor, plus one | `C-a` |  |  |
 | `decrement` | the number under the cursor, minus one | `C-x` |  |  |
 | `switch_case` | switch case | `~` ``` `` ``` | ``` g`` ``` |  |
@@ -61,6 +61,7 @@
 | `goto_definition` | go to where it is defined | `gd` | `gd` |  |
 | `open_here` | open the file this line names | `gf` | `gf` |  |
 | `follow_link` | follow the link under the cursor | `gL` | `gL` |  |
+| `open_link` | open the web address under the cursor in the browser | `gx` | `gx` |  |
 | `file_picker` | open the file picker | `Space f` | `Space f` |  |
 | `buffer_picker` | open the buffer picker | `Space b` | `Space b` |  |
 | `next_buffer` | the next buffer | `gn` | `gn` |  |
@@ -93,13 +94,13 @@
 | `jump_prev_sentence` | the cursor to the previous sentence, selecting nothing |  | `(` |  |
 | `jump_next_sentence` | the cursor to the next sentence, selecting nothing |  | `)` |  |
 | `add_mark` | set a mark (then a letter) | `M` | `m` |  |
-| `goto_mark` | go to a mark (then a letter) | `'` | `` ` `` `'` |  |
+| `goto_mark` | go to a mark (then a letter) | `'` | `` ` `` `'` `` g` `` |  |
 | `view_mode` | the view group: put the cursor line at the top, middle or bottom | `z` | `z` |  |
 | `sticky_view_mode` | the view group, staying open | `Z` | `Z` |  |
 | `right_bracket_mode` | the ] group: the next one of something | `]` | `]` |  |
 | `left_bracket_mode` | the [ group: the previous one of something | `[` | `[` |  |
 | `goto_mode` | the g group: go to | `g` | `g` |  |
-| `space_mode` | the Space menu | `Space` | `Space` |  |
+| `space_mode` | the Space menu | `Space` | `Space` `\` |  |
 | `find_next_char` | find a character forward, selecting up to it | `f` | `f` |  |
 | `find_prev_char` | find a character backward, selecting back to it | `F` | `F` |  |
 | `find_till_char` | find a character forward, selecting up to just before it | `t` | `t` |  |
@@ -178,13 +179,11 @@
 | `repeat_last_motion` | repeat the last f or t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | the cursor back to the previous word's end, selecting nothing |  | `ge` |  |
 | `jump_prev_long_word_end` | the cursor back to the previous long word's end, selecting nothing |  | `gE` |  |
-| `goto_word` | go to a place on this screen | `gw` | `gw` |  |
-| `goto_word_by_letters` | two letters to locate a word | `gx` | `gx` |  |
-| `goto_char_by_pinyin` | more letters to locate a char | `gz` | `gz` |  |
+| `goto_word` | go to a place on this screen | `gw` | `gW` `gw` |  |
+| `goto_word_by_letters` | two letters to locate a word | `gz` | `gz` |  |
+| `goto_char_by_pinyin` | more letters to locate a char | `gZ` | `gZ` |  |
 | `goto_last_accessed_file` | back to the buffer before this one | `ga` | `` `ga` |  |
-| `goto_definition_other_window` | go to definition in the other window | `gD` | `gD` |  |
 | `goto_reference` | every place it is used | `gr` | `gr` |  |
-| `search_selection_other_window` | search the selection in the other window | `g?` | `g?` |  |
 | `move_next_zong` | on a vertical page, on to the next line of the file |  | `gj` |  |
 | `move_prev_zong` | on a vertical page, back to the previous line of the file |  | `gk` |  |
 | `goto_last_modification` | back to the last change | `g.` | `g.` |  |
@@ -196,6 +195,7 @@
 | `operator_uppercase` | to uppercase (then a motion) |  | `gU` |  |
 | `operator_switch_case` | switch case (then a motion) |  | `g~` |  |
 | `operator_fill` | fill the lines to the width — waits for a motion |  | `gq` |  |
+| `operator_fill_keep_cursor` | refill the lines, the cursor staying where it is (vim's gw) |  | `gw` |  |
 | `join_selections_no_space` | join the next line, adding no space at all |  | `gJ` |  |
 | `file_picker_in_current_directory` | open file picker (working dir) | `Space F` | `Space F` |  |
 | `file_explorer` | browse files (project dir) | `Space e` | `Space e` |  |
@@ -224,8 +224,8 @@
 | `yume_mode` | the input method | `Space z` | `Space z` |  |
 | `goto_next_conflict` | the next merge conflict | `]m` | `]m` |  |
 | `goto_prev_conflict` | the previous merge conflict | `[m` | `[m` |  |
-| `goto_next_change` | the next change (git) | `]g` | `]g` |  |
-| `goto_prev_change` | the previous change (git) | `[g` | `[g` |  |
+| `goto_next_change` | the next change (git) | `]g` | `]g` `]c` |  |
+| `goto_prev_change` | the previous change (git) | `[g` | `[g` `[c` |  |
 | `goto_next_diag` | the next diagnostic | `]d` | `]d` |  |
 | `goto_prev_diag` | the previous diagnostic | `[d` | `[d` |  |
 | `goto_last_diag` | the last diagnostic | `]D` | `]D` |  |
@@ -319,7 +319,6 @@
 | `table_convert_mode` | convert the table's format (delimiter) | `Space t x` | `Space t x` |  |
 | `table_cell_width` | long cells: wrap / fold / whole | `Space t w` | `Space t w` |  |
 | `table_search_columns` | search down the columns (a column range can be given) | `Space t /` | `Space t /` |  |
-| `table_search_columns_other_window` | search down the columns in the other window | `Space t ?` | `Space t ?` |  |
 | `table_goto_cell` | go to a cell (␣t20,20g) | `Space t g` | `Space t g` |  |
 | `table_enter_cell` | into the cell, to move by character |  |  |  |
 | `table_leave_cell` | out of the cell, to move by cell again |  |  |  |

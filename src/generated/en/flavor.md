@@ -17,7 +17,7 @@
 | `space_paging` | `basic` | helix, vim | `Space Space` `Space Backspace` | `Space Space` and `Space Backspace` turn a page |
 | `space_quit` | `basic` | helix, vim | `Space q` | `Space q` closes the window |
 | `sidebars` | `basic` | helix, vim | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e i E I`, the sidebars |
-| `goto_extras` | `basic` | helix, vim | `gL` `gx` `gz` `g/` `g?` `gD` | `gL gx gz g/ g? gD`: links, jumps, searching the word |
+| `goto_extras` | `basic` | helix, vim | `gz` `gZ` `g/` `gL` `gx` `gW` | `gz` `gZ` `g/` `gL` `gx` `gW`: jumps, searching the word, links |
 | `insert_extras` | `basic` | helix, vim | `C-a` `C-e` `C-n` `C-g` | Insert mode's `C-a C-e C-n C-g` |
 | `insert_ctrl_c` | `basic` | helix | `C-c` | Insert mode's `C-c` leaves Insert |
 | `x_selects_upward` | `basic` | helix | `X` | `X` selects the line above |
@@ -25,6 +25,8 @@
 | `move_lines` | `basic` | helix, vim | `A-j` `A-k` | `A-j` and `A-k` move lines down and up |
 | `line_end_keys` | `basic` | helix | `0` `^` `$` | `0`, `^` and `$`: line start, first character, line end |
 | `d_to_line_end` | `basic` | helix | `D` `A-D` | `D` and `A-D` delete to the line's end |
+| `vim_space_menu` | `basic` | vim | `Space` | `Space` opens the Space menu under vim |
+| `helix_keys_under_vim` | `basic` | vim | `g.` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `C-s` `Z` `ga` `gp` `gc` `gb` `gr` `]g` `]f` `]t` `[g` `[f` `[t` | helix's keys under vim: the Alt keys, `C-s`, `Z` and more |
 | `delete_keeps_register` | `full` | helix | `d` `c` `A-d` `A-c` | `d` and `c` do not fill the register |
 | `esc_collapses` | `full` | helix | `Esc` | `Esc` collapses to one cursor |
 | `shift_tab_other_indent` | `full` | helix, vim | `S-tab` | Insert mode's `S-Tab` types the other kind of indent |

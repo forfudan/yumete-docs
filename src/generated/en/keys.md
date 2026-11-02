@@ -90,15 +90,14 @@
 | `gf` | open this file |
 | `gL` | follow the link |
 | `gw` | go to a place on this screen |
-| `gx` | two letters to locate a word |
-| `gz` | more letters to locate a char |
+| `gx` | open the web address |
+| `gz` | two letters to locate a word |
+| `gZ` | more letters to locate a char |
 | `ga` | back to the buffer before this one |
 | `gn / gp` | the next or previous buffer |
 | `gd` | go to definition |
-| `gD` | go to definition in the other window |
 | `gr` | every place it is used |
 | `g/` | search the selection |
-| `g?` | search the selection in the other window |
 | `gj / gk` | down / up a logical line (with line number) |
 | `g.` | back to the last change |
 | `gt / gc / gb` | the cursor to the top, middle or bottom of the screen |
@@ -181,7 +180,6 @@
 | `Space t x` | convert the table's format (delimiter) |
 | `Space t w` | long cells: wrap / fold / whole |
 | `Space t /` | search down the columns (a column range can be given) |
-| `Space t ?` | search down the columns in the other window |
 | `Space t g` | go to a cell (␣t20,20g) |
 | `Space t r / Space t R` | insert a new row (below / above) |
 | `Space t c / Space t C` | add a column (right / left) |
