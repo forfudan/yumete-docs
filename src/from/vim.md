@@ -17,7 +17,7 @@ back, and `:keymap` on its own says which keymap is in force. Keys you bind in
 `[keys.normal]` win over the keymap. See [Key remapping](../guide/remapping.md).
 
 What yumete adds over vim's keys is the
-[Yumete flavour](../guide/remapping.md#the-yumete-flavour), on at its `basic`
+[Yumete flavour](../reference/flavor.md), on at its `basic`
 level: the `Space` menu on `Space`, `` g` `` for the case menu, `gW` for jump
 labels, `gz` `gZ` to jump by letters or pinyin, `A-j` `A-k` to move lines, and
 helix's keys on keys vim and Neovim leave free (the Alt keys, `C-s`, `gb`,

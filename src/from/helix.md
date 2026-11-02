@@ -2,7 +2,7 @@
 
 yumete's default keymap is helix's. You select first and act second, a cursor
 is a one-character selection, and most keys do what your hands expect. What
-yumete adds is the [Yumete flavour](../guide/remapping.md#the-yumete-flavour),
+yumete adds is the [Yumete flavour](../reference/flavor.md),
 on at its `basic` level: new menus and keys helix leaves free, and nothing
 that changes a key you already use. `flavor = "off"` under `[keys]` takes it
 away. This page lists the places where the keys are not helix's.

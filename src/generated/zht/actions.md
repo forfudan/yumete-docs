@@ -165,8 +165,8 @@
 | `record_macro` | 開始或停止錄宏 | `Q` |  |  |
 | `replay_macro` | 回放宏 | `q` | `Q` |  |
 | `window_mode` | 窗口組 | `C-w` `Space w` | `C-w` `Space w` |  |
-| `page_down` | 前進一頁 | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `Pagedown` |
-| `page_up` | 後退一頁 | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `Pageup` |
+| `page_down` | 前進一頁 | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `PageDown` |
+| `page_up` | 後退一頁 | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `PageUp` |
 | `join_selections_space` | 合併行並選中接縫 | `A-J` | `A-J` |  |
 | `save_selection` | 把這裏記進跳轉表 | `C-s` | `C-s` |  |
 | `jump_forward` | 跳轉表：再往前一處 | `C-i` `Tab` | `C-i` `Tab` |  |
@@ -393,8 +393,8 @@
 | `run_one_normal_command` | 臨時回普通模式做一件事(vim 的 C-o) |  |  | `C-o` |
 | `goto_line_end_newline` | 到行尾(最後一個字後面) |  |  | `End` `C-e` |
 | `commit_undo_checkpoint` | 在這裏斷開撤銷 |  |  | `C-g` |
-| `insert_tab` | 插入縮進(文件用的那一種) |  |  | `Tab` `S-tab` |
-| `insert_other_tab` | 插入另一種縮進(Tab 或空格) |  |  | `S-tab` |
+| `insert_tab` | 插入縮進(文件用的那一種) |  |  | `Tab` `S-Tab` |
+| `insert_other_tab` | 插入另一種縮進(Tab 或空格) |  |  | `S-Tab` |
 | `vim_normal_mode` | 回普通模式(vim：退出可視模式時選區收成一點) |  | `Esc` |  |
 | `vim_goto_line_end` | 行尾(vim 的 $：往下走也留在行尾) |  | `$` `End` |  |
 | `vim_insert_mode` | 在光標前插入(vim 的 i) |  | `i` |  |
@@ -454,13 +454,13 @@
 | `Enter` | `table_enter_cell` |
 | `Esc` | `table_leave_cell` |
 | `Tab` | `table_next_cell` |
-| `S-tab` | `table_prev_cell` |
+| `S-Tab` | `table_prev_cell` |
 | `C-n` | `two_thirds_page_down` |
 | `C-p` | `two_thirds_page_up` |
 | `C-d` | `half_page_down` |
 | `C-u` | `half_page_up` |
-| `Pagedown` | `page_down` |
-| `Pageup` | `page_up` |
+| `PageDown` | `page_down` |
+| `PageUp` | `page_up` |
 | `y` | `yank` `operator_yank` |
 | `d` | `delete_selection` `operator_delete` |
 | `A-d` | `delete_selection_noyank` |
@@ -483,7 +483,7 @@
 | `normal_mode` | 關掉這一行(命令行、搜索、挑選器) | `Esc` |
 | `confirm` | 執行這一行；挑選器裏打開選中的那一項 | `Enter` |
 | `completion_next` | 補全：下一個 | `Tab` |
-| `completion_prev` | 補全：上一個 | `S-tab` |
+| `completion_prev` | 補全：上一個 | `S-Tab` |
 | `history_prev` | 歷史：上一條 | `Up` `C-p` |
 | `history_next` | 歷史：下一條 | `Down` `C-n` |
 | `move_char_left` | 左一個字 | `Left` |
@@ -501,9 +501,9 @@
 | Command | What it does | Keys |
 | --- | --- | --- |
 | `next_entry` | 下一項 | `Tab` `C-n` `Down` |
-| `prev_entry` | 上一項 | `S-tab` `C-p` `Up` |
-| `page_down` | 前進一頁 | `Pagedown` |
-| `page_up` | 後退一頁 | `Pageup` |
+| `prev_entry` | 上一項 | `S-Tab` `C-p` `Up` |
+| `page_down` | 前進一頁 | `PageDown` |
+| `page_up` | 後退一頁 | `PageUp` |
 | `first_entry` | 第一項 |  |
 | `last_entry` | 最後一項 |  |
 | `cycle_hidden_files` | 換一種：跳過哪些文件(隱藏的、忽略的) | `A-h` |
@@ -514,8 +514,8 @@
 | --- | --- | --- |
 | `move_line_down` | 下一行 | `j` `Down` |
 | `move_line_up` | 上一行 | `k` `Up` |
-| `page_down` | 前進一頁 | `J` `Pagedown` |
-| `page_up` | 後退一頁 | `K` `Pageup` |
+| `page_down` | 前進一頁 | `J` `PageDown` |
+| `page_up` | 後退一頁 | `K` `PageUp` |
 | `goto_file_start` | 第一行 | `g` `Home` |
 | `goto_last_line` | 最後一行 | `G` `End` |
 | `collapse_entry` | 收起 | `h` `Left` |
@@ -527,7 +527,7 @@
 | `refresh_sidebar` | 重讀 | `R` |
 | `cycle_sidebar_width` | 寬窄 | `w` |
 | `next_sidebar_view` | 換視圖 | `Tab` |
-| `prev_sidebar_view` | 換視圖(往回) | `S-tab` |
+| `prev_sidebar_view` | 換視圖(往回) | `S-Tab` |
 | `normal_mode` | 讓輸入法再掛起一次 | `Esc` |
 | `leave_sidebar` | 回編輯區，面板留着 | `q` |
 | `command_mode` | 命令行 | `:` |
@@ -539,6 +539,6 @@
 | Command | What it does | Keys |
 | --- | --- | --- |
 | `next_field` | 下一格；有灰字時先收下灰字 | `Tab` |
-| `prev_field` | 上一格 | `S-tab` |
+| `prev_field` | 上一格 | `S-Tab` |
 | `move_line_down` | 下面那一格 | `Down` |
 | `move_line_up` | 上面那一格 | `Up` |

@@ -165,8 +165,8 @@
 | `record_macro` | start or stop recording a macro | `Q` |  |  |
 | `replay_macro` | replay the macro | `q` | `Q` |  |
 | `window_mode` | the window group | `C-w` `Space w` | `C-w` `Space w` |  |
-| `page_down` | a page down | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `C-f` `Pagedown` `Space Space` `z C-f` `z Pagedown` `Z C-f` `Z Pagedown` | `Pagedown` |
-| `page_up` | a page up | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `C-b` `Pageup` `Space Backspace` `z C-b` `z Pageup` `Z C-b` `Z Pageup` | `Pageup` |
+| `page_down` | a page down | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `PageDown` |
+| `page_up` | a page up | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `PageUp` |
 | `join_selections_space` | join lines and select where they meet | `A-J` | `A-J` |  |
 | `save_selection` | save this place in the jump list | `C-s` | `C-s` |  |
 | `jump_forward` | forward again in the jump list | `C-i` `Tab` | `C-i` `Tab` |  |
@@ -393,8 +393,8 @@
 | `run_one_normal_command` | one Normal-mode command, then back to Insert mode (vim's C-o) |  |  | `C-o` |
 | `goto_line_end_newline` | to the end of the line, after its last character |  |  | `End` `C-e` |
 | `commit_undo_checkpoint` | break the undo here |  |  | `C-g` |
-| `insert_tab` | insert an indent, the kind the file uses |  |  | `Tab` `S-tab` |
-| `insert_other_tab` | insert the other kind of indent, a tab or spaces |  |  | `S-tab` |
+| `insert_tab` | insert an indent, the kind the file uses |  |  | `Tab` `S-Tab` |
+| `insert_other_tab` | insert the other kind of indent, a tab or spaces |  |  | `S-Tab` |
 | `vim_normal_mode` | back to Normal mode (vim: leaving Visual mode collapses the selection) |  | `Esc` |  |
 | `vim_goto_line_end` | the end of the line (vim's $: moving down keeps to line ends) |  | `$` `End` |  |
 | `vim_insert_mode` | insert before the cursor (vim's i) |  | `i` |  |
@@ -454,13 +454,13 @@
 | `Enter` | `table_enter_cell` |
 | `Esc` | `table_leave_cell` |
 | `Tab` | `table_next_cell` |
-| `S-tab` | `table_prev_cell` |
+| `S-Tab` | `table_prev_cell` |
 | `C-n` | `two_thirds_page_down` |
 | `C-p` | `two_thirds_page_up` |
 | `C-d` | `half_page_down` |
 | `C-u` | `half_page_up` |
-| `Pagedown` | `page_down` |
-| `Pageup` | `page_up` |
+| `PageDown` | `page_down` |
+| `PageUp` | `page_up` |
 | `y` | `yank` `operator_yank` |
 | `d` | `delete_selection` `operator_delete` |
 | `A-d` | `delete_selection_noyank` |
@@ -483,7 +483,7 @@
 | `normal_mode` | close the prompt, the search or the picker | `Esc` |
 | `confirm` | run the line; in a picker, open the highlighted entry | `Enter` |
 | `completion_next` | the next completion | `Tab` |
-| `completion_prev` | the previous completion | `S-tab` |
+| `completion_prev` | the previous completion | `S-Tab` |
 | `history_prev` | the previous line in the history | `Up` `C-p` |
 | `history_next` | the next line in the history | `Down` `C-n` |
 | `move_char_left` | one character left | `Left` |
@@ -501,9 +501,9 @@
 | Command | What it does | Keys |
 | --- | --- | --- |
 | `next_entry` | the next entry | `Tab` `C-n` `Down` |
-| `prev_entry` | the previous entry | `S-tab` `C-p` `Up` |
-| `page_down` | a page down | `Pagedown` |
-| `page_up` | a page up | `Pageup` |
+| `prev_entry` | the previous entry | `S-Tab` `C-p` `Up` |
+| `page_down` | a page down | `PageDown` |
+| `page_up` | a page up | `PageUp` |
 | `first_entry` | the first entry |  |
 | `last_entry` | the last entry |  |
 | `cycle_hidden_files` | cycle which files are skipped: hidden, ignored | `A-h` |
@@ -514,8 +514,8 @@
 | --- | --- | --- |
 | `move_line_down` | one row down | `j` `Down` |
 | `move_line_up` | one row up | `k` `Up` |
-| `page_down` | a page down | `J` `Pagedown` |
-| `page_up` | a page up | `K` `Pageup` |
+| `page_down` | a page down | `J` `PageDown` |
+| `page_up` | a page up | `K` `PageUp` |
 | `goto_file_start` | the first row | `g` `Home` |
 | `goto_last_line` | the last row | `G` `End` |
 | `collapse_entry` | fold the entry, or go out of it | `h` `Left` |
@@ -527,7 +527,7 @@
 | `refresh_sidebar` | read it again | `R` |
 | `cycle_sidebar_width` | the next width: narrow, middle, wide | `w` |
 | `next_sidebar_view` | the next view in this slot | `Tab` |
-| `prev_sidebar_view` | the previous view in this slot | `S-tab` |
+| `prev_sidebar_view` | the previous view in this slot | `S-Tab` |
 | `normal_mode` | suspend the input method again | `Esc` |
 | `leave_sidebar` | back to the text, the panel stays | `q` |
 | `command_mode` | the command line | `:` |
@@ -539,6 +539,6 @@
 | Command | What it does | Keys |
 | --- | --- | --- |
 | `next_field` | the next box (and a greyed-out word is taken first) | `Tab` |
-| `prev_field` | the previous box | `S-tab` |
+| `prev_field` | the previous box | `S-Tab` |
 | `move_line_down` | the box below | `Down` |
 | `move_line_up` | the box above | `Up` |
