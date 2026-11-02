@@ -253,7 +253,11 @@ tables = true
 ```
 
 A line under `[keys.flavor_items]` turns one item on or off whatever the
-level. Your own `[keys.normal]` lines come before the flavour, and the
+level. The settings panel writes those lines for you: in `:settings`, the
+keys group's "flavour items" row opens a page with the level at the top and
+one tick per item, each with its keys and, on the right, the file that set
+it or the binding that took its keys. Ticking an item back to what the
+level gives removes its line, and `d` does the same. Your own `[keys.normal]` lines come before the flavour, and the
 flavour before the keymap. `:keymap-yumete-flavor full` sets the level for
 this session; `:keymap-yumete-flavor` alone says the level, how many items
 are on, and which of them you set by name or took with a binding.
