@@ -4,6 +4,9 @@ A fold is a run of lines shown as one. Closed, it takes one row on the page; ope
 lines are there as usual. Folds belong to the window: two windows on one file can fold
 it differently, and a new window starts with the folds of the one it was split from.
 
+The session keeps them: `ye -r` brings back each window's folds, the closed heading
+folds found again by their heading, the ones you made by their lines.
+
 There are two kinds:
 
 - **Heading folds.** In Markdown and Typst every heading is a fold over its section,
@@ -47,12 +50,18 @@ folds, but every one is a command (`close_fold`, `open_all_folds` and the rest) 
 | `za` `zA` | open the closed fold here or close the open one, every level |
 | `zv` | open just enough to see the cursor's line |
 | `zR` `zM` | open every fold, close every fold |
+| `zm` `zr` | one level more folded, one level less (*count* levels): every fold deeper than the level closes, every other opens |
 | `zd` `zD` `zE` | delete the fold here, every fold here, every fold you made; the text stays |
 | `zj` `zk` | down to the start of the next fold, up to the end of the one before |
 | `[z` `]z` | to the start, the end of the open fold the cursor is in |
 | `zn` `zN` `zi` | every fold open for now, back as they were, the one or the other |
 
 `zd` takes only folds you made; a heading fold comes from the heading and stays.
+With the headings, `zM` then `zr` is the outline of the chapters: each `#` open, every
+`##` under it closed.
+
+Under either keymap, `:view-fold` makes a fold of the selected lines, as vim's fold
+command does.
 
 ## Moving and editing
 

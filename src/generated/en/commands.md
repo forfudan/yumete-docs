@@ -135,6 +135,7 @@
 | `:pipe-before` | `<命令>` | run a terminal command and put its output before the selection |
 | `:pipe-after` | `<命令>` | run a terminal command and put its output after the selection |
 | `:read` | `<path>` | put a file's contents after the selection |
+| `:view-fold` |  | fold the selected lines |
 | `:keep-pipe` | `<命令>` | keep the selections a terminal command succeeds on |
 | `:pipe-to` | `<命令>` | send the selection through a terminal command and keep nothing back |
 | `:yuhao` |  | open the Yuhao input method website |

@@ -325,6 +325,8 @@
 | `disable_folds` | every fold open, kept (vim's zn) |  | `zn` `Zn` |  |
 | `enable_folds` | folds back as they were (vim's zN) |  | `zN` `ZN` |  |
 | `toggle_folds_enabled` | folds off or back on (vim's zi) |  | `zi` `Zi` |  |
+| `fold_more` | fold one level more (vim's zm) |  | `zm` `Zm` |  |
+| `fold_less` | fold one level less (vim's zr) |  | `zr` `Zr` |  |
 | `goto_fold_start` | to the start of the open fold here (vim's [z) |  | `[z` |  |
 | `goto_fold_end` | to the end of the open fold here (vim's ]z) |  | `]z` |  |
 | `rotate_view_reverse` | previous |  | `C-w W` |  |
