@@ -178,7 +178,7 @@
 | `shell_append_output` | append a command's output after the selection | `A-!` | `A-!` |  |
 | `shell_pipe_to` | pipe the selection to a command, keeping the text | `A-\|` | `A-\|` |  |
 | `shell_keep_pipe` | keep the selections a terminal command succeeds on | `$` |  |  |
-| `command_mode` | the command line | `:` | `:` |  |
+| `command_mode` | the command line | `:` | `:` `C-w :` |  |
 | `match_mode` | the match group: brackets, quotes, objects | `m` |  |  |
 | `replace` | replace each selected character with another | `r` | `r` |  |
 | `select_register` | pick a register (then a letter) | `"` | `"` |  |
@@ -292,7 +292,7 @@
 | `toggle_right_sidebar` | open or close the right sidebar | `C-w i` | `C-w i` |  |
 | `goto_left_sidebar` | into the left sidebar | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | into the right sidebar | `C-w I` | `C-w I` |  |
-| `hsplit` | a window below | `C-w s` | `C-w s` |  |
+| `hsplit` | a window below | `C-w s` | `C-w S` `C-w s` |  |
 | `vsplit` | a window beside | `C-w v` | `C-w v` |  |
 | `hsplit_new` | a blank window below | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | a blank window beside | `C-w n v` | `C-w n v` |  |
@@ -304,8 +304,21 @@
 | `swap_view_down` | trade places with the region below | `C-w J` |  |  |
 | `swap_view_up` | trade places with the region above | `C-w K` |  |  |
 | `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
-| `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w f` |  |
+| `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | open the file under the cursor beside | `C-w F` |  |  |
+| `rotate_view_reverse` | previous |  | `C-w W` |  |
+| `jump_view_first` | the first window |  | `C-w t` |  |
+| `jump_view_last` | the last window |  | `C-w b` |  |
+| `jump_view_last_accessed` | the window before |  | `C-w p` |  |
+| `exchange_view` | trade places with the next |  | `C-w x` |  |
+| `rotate_views_forward` | rotate this row on |  | `C-w r` |  |
+| `rotate_views_backward` | rotate this row back |  | `C-w R` |  |
+| `move_view_far_left` | move this window to the far left |  | `C-w H` |  |
+| `move_view_far_down` | move this window to the very bottom |  | `C-w J` |  |
+| `move_view_far_up` | move this window to the very top |  | `C-w K` |  |
+| `move_view_far_right` | move this window to the far right |  | `C-w L` |  |
+| `vim_close_window` | close this one (never the last) |  | `C-w c` |  |
+| `goto_last_accessed_file_hsplit` | the file before, below |  | `C-w ^` |  |
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | traditional → simplified | `` `s `` | `` g`s `` |  |
