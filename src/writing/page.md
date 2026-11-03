@@ -350,7 +350,8 @@ quit. The file must have a name; save a new buffer first.
 
 Focus works by paragraph, not by row: a paragraph wrapped over three rows is
 lit as a whole. Both take `on`, `off` and `toggle`; typed alone, each says
-whether it is on.
+whether it is on. How far the rest steps back is `[theme] focus`, the percent
+of ink it keeps: 50 by default.
 
 ## The count as you write
 

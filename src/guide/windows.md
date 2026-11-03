@@ -98,7 +98,9 @@ file it showed before (a new window starts with the history of the one it
 was split from), or closes when it has none to go back to.
 
 The rule between two windows one above the other carries the name of the
-file in the window you are not in. Each window keeps its own scroll, and
+file in the window you are not in. A window you are not in keeps 95% of its
+ink, a little dimmer than the one you are in; `[theme] inactive` sets it, and
+100 does not dim at all, as in vim and helix. Each window keeps its own scroll, and
 long lines fold to each window's own width.
 
 The session remembers the windows and the sidebars, so `ye -r` opens them as
