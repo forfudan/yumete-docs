@@ -37,7 +37,7 @@
 | `p` | 向后粘贴(vim 的 p) | `vim_paste_after` |
 | `P` | 向前粘贴(vim 的 P) | `vim_paste_before` |
 | `q` | 录宏(再按一个字母) | `vim_record_macro` |
-| `Q` | 回放宏 | `replay_macro` |
+| `Q` | 播放最近录的宏(vim 的 Q) | `vim_replay_last_macro` |
 | `r` | 把选中的每个字换成另一个字 | `replace` |
 | `R` | 覆写模式：打字盖掉原文 | `replace_mode` |
 | `s` | as `cl` | `@c{n}l` |

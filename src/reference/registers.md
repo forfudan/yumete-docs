@@ -80,6 +80,20 @@ Copying uses the terminal's OSC 52 escape, so it works over ssh and inside tmux,
 the terminal allows it. Pasting runs `pbpaste` on macOS, or `wl-paste`, `xclip` or
 `xsel` on Linux. The terminal's own paste key also works.
 
-Macros are not kept in registers. There is one macro, the last one recorded: `Q`
-records and `q` replays it under the helix keymap, the other way round under vim. A
-letter after `q` does not name a register.
+A macro is kept in a register, as text. Under the helix keymap `Q` records and
+`q` plays, into and from register `@`, or the one a `"` names first: `"aQ` …
+`Q` records into `a`, and `"aq` plays it. Under vim, `qa` … `q` records into `a`,
+`qA` adds to it, `@a` plays it, `@@` plays the last one played again, and `Q`
+plays the last one recorded.
+
+The keys are written as helix writes them, under both keymaps: a character as
+itself, any other key in angle brackets, so `ihello` then `Esc` is
+`ihello<esc>`. `"ap` pastes a macro to read or change, and a line yanked into
+a register plays as keys. A line break in it is `Enter`, as in vim.
+
+| Key | Written |
+| --- | --- |
+| `Esc` `Enter` `Tab` `S-Tab` `Backspace` `Delete` | `<esc>` `<ret>` `<tab>` `<S-tab>` `<backspace>` `<del>` |
+| arrows, `Home` `End` `PageUp` `PageDown` | `<left>` `<right>` `<up>` `<down>` `<home>` `<end>` `<pageup>` `<pagedown>` |
+| `C-w`, `A-o` | `<C-w>`, `<A-o>` |
+| space, `-` `<` `>` | `<space>` `<minus>` `<lt>` `<gt>` |

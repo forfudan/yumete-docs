@@ -37,7 +37,7 @@
 | `p` | paste after (vim's p) | `vim_paste_after` |
 | `P` | paste before (vim's P) | `vim_paste_before` |
 | `q` | record a macro (then a letter) | `vim_record_macro` |
-| `Q` | replay the macro | `replay_macro` |
+| `Q` | play the macro recorded last (vim's Q) | `vim_replay_last_macro` |
 | `r` | replace each selected character with another | `replace` |
 | `R` | Replace mode: typing writes over the text | `replace_mode` |
 | `s` | as `cl` | `@c{n}l` |

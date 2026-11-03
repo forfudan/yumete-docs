@@ -183,7 +183,7 @@
 | `replace` | 把選中的每個字換成另一個字 | `r` | `r` |  |
 | `select_register` | 選寄存器(再按一個字母) | `"` | `"` |  |
 | `record_macro` | 開始或停止錄宏 | `Q` |  |  |
-| `replay_macro` | 回放宏 | `q` | `Q` |  |
+| `replay_macro` | 回放宏 | `q` |  |  |
 | `window_mode` | 窗口組 | `C-w` `Space w` | `C-w` `Space w` |  |
 | `page_down` | 前進一頁 | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `PageDown` |
 | `page_up` | 後退一頁 | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `PageUp` |
@@ -475,6 +475,7 @@
 | `vim_visual_block_mode` | 塊選擇(vim 的 C-v) |  | `C-v` |  |
 | `vim_record_macro` | 錄宏(再按一個字母) |  | `q` |  |
 | `vim_replay_macro` | 回放宏(再按一個字母) |  | `@` |  |
+| `vim_replay_last_macro` | 播放最近錄的宏(vim 的 Q) |  | `Q` |  |
 | `vim_goto_first_nonwhitespace` | 行首第一個非空字(帶數字時往下數行) |  | `_` |  |
 
 ### vim keys that play other keys
