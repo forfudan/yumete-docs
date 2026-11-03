@@ -196,7 +196,8 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 - `gt` (no tab pages) and `gs` do nothing, and `&` and `!` do nothing yet.
 - Folds are vim's, made with `zf` (see [Folds](../reference/folds.md)); in
   Markdown and Typst the headings fold too, all open at first. There is no
-  `foldmethod`, and no `zm` `zr` levels yet.
+  `foldmethod`. vim's fold command is `:view-fold`, on the selected lines;
+  the commands that open and close folds over a range are not there.
 - The code objects (functions, parameters, tests, HTML elements) have no vim
   spelling, and neither has vim's tag object `it`.
 - vim-surround's visual `S` is not there. Use `ys` with a motion.

@@ -256,6 +256,8 @@
 | `zn` | every fold open, kept (vim's zn) |
 | `zN` | folds back as they were (vim's zN) |
 | `zi` | folds off or back on (vim's zi) |
+| `zm` | fold one level more (vim's zm) |
+| `zr` | fold one level less (vim's zr) |
 | `zt` | top |
 | `zb` | bottom |
 

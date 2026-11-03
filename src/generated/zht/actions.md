@@ -325,6 +325,8 @@
 | `disable_folds` | 暫時全部展開(vim 的 zn) |  | `zn` `Zn` |  |
 | `enable_folds` | 折疊恢復原樣(vim 的 zN) |  | `zN` `ZN` |  |
 | `toggle_folds_enabled` | 折疊停用或恢復(vim 的 zi) |  | `zi` `Zi` |  |
+| `fold_more` | 多合上一層(vim 的 zm) |  | `zm` `Zm` |  |
+| `fold_less` | 多打開一層(vim 的 zr) |  | `zr` `Zr` |  |
 | `goto_fold_start` | 到所在折疊的開頭(vim 的 [z) |  | `[z` |  |
 | `goto_fold_end` | 到所在折疊的末尾(vim 的 ]z) |  | `]z` |  |
 | `rotate_view_reverse` | 上一個 |  | `C-w W` |  |
