@@ -48,7 +48,7 @@
 | `x` | 選中當前行 | `extend_line_below` |
 | `X` | 把選區撑到整行邊界 | `extend_to_line_bounds` |
 | `y` | 複製 | `yank` |
-| `z` | 視圖組：放光標行、滾屏、折疊 | `view_mode` |
+| `z` | 視圖組：放光標行、滾屏、摺疊 | `view_mode` |
 | `Z` | 視圖組(按完不收) | `sticky_view_mode` |
 | `Space` | 空格菜單 | `space_mode` |
 | `!` | 把外部命令的輸出插在選區前 | `shell_insert_output` |

@@ -27,8 +27,8 @@
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | 行首、首字 |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 刪到行尾 |
 | [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | 塊注釋標記各占一行 |
-| [`heading_folds`](#heading_folds) |  |  | 按標題折疊 |
-| [`helix_fold_keys`](#helix_fold_keys) | `za` `zR` `zM` `zf` | — | helix 下的折疊鍵 |
+| [`heading_folds`](#heading_folds) |  |  | 按標題摺疊 |
+| [`helix_fold_keys`](#helix_fold_keys) | `za` `zR` `zM` `zf` | — | helix 下的摺疊鍵 |
 | [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim 的 gc 注釋 |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | 空格菜單 |
 | [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | 借用 helix 的鍵 |
@@ -348,20 +348,20 @@ It changes what its keys do, not which command they run.
 
 ### `heading_folds` {#heading_folds}
 
-開：Markdown 與 Typst 每個標題下的那一節是一個折疊，開始時全開着。關：照 vim，只有 zf 做的折疊。
+開：Markdown 與 Typst 每個標題下的那一節是一個摺疊，開始時全開着。關：照 vim，只有 zf 做的摺疊。
 
 It changes what its keys do, not which command they run.
 
 ### `helix_fold_keys` {#helix_fold_keys}
 
-開：helix 下也有 vim 的 za 開合折疊、zR 全開、zM 全合；zf 把選中的行做成折疊。關：這幾個鍵空着，只能用命令折疊。
+開：helix 下也有 vim 的 za 開合摺疊、zR 全開、zM 全合；zf 把選中的行做成摺疊。關：這幾個鍵空着，只能用命令摺疊。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| 視圖 | `za` | 開合折疊(vim 的 za) |  |
-| 視圖 | `zR` | 打開所有折疊(vim 的 zR) |  |
-| 視圖 | `zM` | 合上所有折疊(vim 的 zM) |  |
-| 視圖 | `zf` | 把選中的行做成折疊 |  |
+| 視圖 | `za` | 開合摺疊(vim 的 za) |  |
+| 視圖 | `zR` | 打開所有摺疊(vim 的 zR) |  |
+| 視圖 | `zM` | 合上所有摺疊(vim 的 zM) |  |
+| 視圖 | `zf` | 把選中的行做成摺疊 |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
 
