@@ -615,8 +615,8 @@
 | `yank_old_text` | copy what was there before the change | `y` |
 | `refresh_sidebar` | read it again | `R` |
 | `cycle_sidebar_width` | the next width: narrow, middle, wide | `w` |
-| `next_sidebar_view` | the next view in this slot | `Tab` |
-| `prev_sidebar_view` | the previous view in this slot | `S-Tab` |
+| `next_sidebar_view` | the next panel in this sidebar | `Tab` |
+| `prev_sidebar_view` | the previous panel in this sidebar | `S-Tab` |
 | `normal_mode` | suspend the input method again | `Esc` |
 | `leave_sidebar` | back to the text, the panel stays | `q` |
 | `command_mode` | the command line | `:` |
