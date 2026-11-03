@@ -22,8 +22,8 @@
 | `goto_next_sentence` | the next sentence | `L` |  |  |
 | `goto_prev_paragraph` | the previous paragraph | `[p` | `[p` |  |
 | `goto_next_paragraph` | the next paragraph | `]p` | `]p` |  |
-| `page_cursor_half_down` | half a page down | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` |  |
-| `page_cursor_half_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
+| `page_cursor_half_down` | half a page down | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` |  |
+| `page_cursor_half_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` |  |
 | `jump_backward` | back to where you jumped from | `C-o` | `C-o` |  |
 | `select_mode` | Select mode: moving grows the selection | `v` | `v` |  |
 | `extend_line_below` | select this line | `x` |  |  |
@@ -53,8 +53,8 @@
 | `undo` | undo | `u` |  |  |
 | `redo` | redo | `U` |  |  |
 | `repeat_last_change` | repeat the last insert (vim keymap: the last change) | `.` |  |  |
-| `search` | search forward | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
-| `rsearch` | search backward | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
+| `search` | search forward | `/` `z/` `Z/` | `/` |  |
+| `rsearch` | search backward | `?` `z?` `Z?` | `?` |  |
 | `search_next` | the next match | `n` `zn` `Zn` | `gn` |  |
 | `search_prev` | the previous match | `N` `zN` `ZN` | `gN` |  |
 | `search_selection` | look for what is selected | `g/` | `*` `g/` |  |
@@ -185,8 +185,8 @@
 | `record_macro` | start or stop recording a macro | `Q` |  |  |
 | `replay_macro` | replay the macro | `q` |  |  |
 | `window_mode` | the window group | `C-w` `Space w` | `C-w` `Space w` |  |
-| `page_down` | a page down | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `PageDown` |
-| `page_up` | a page up | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `PageUp` |
+| `page_down` | a page down | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` | `PageDown` |
+| `page_up` | a page up | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` | `PageUp` |
 | `join_selections_space` | join lines and select where they meet | `A-J` | `A-J` |  |
 | `save_selection` | save this place in the jump list | `C-s` | `C-s` |  |
 | `jump_forward` | forward again in the jump list | `C-i` `Tab` | `C-i` `Tab` |  |
@@ -276,8 +276,8 @@
 | `align_view_center` | put the cursor's line in the middle of the screen | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
 | `align_view_top` | put the cursor's line at the top of the screen | `zt` `Zt` | `zt` `Zt` |  |
 | `align_view_bottom` | put the cursor's line at the bottom of the screen | `zb` `Zb` | `zb` `Zb` |  |
-| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `C-e` `z Down` `Z Down` |  |
-| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `C-y` `z Up` `Z Up` |  |
+| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `C-e` |  |
+| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `C-y` |  |
 | `match_brackets` | go to the other half of the pair | `mm` |  |  |
 | `select_textobject_inner` | select what is inside the pair | `mi` |  |  |
 | `select_textobject_around` | select the pair and what is inside | `ma` |  |  |
