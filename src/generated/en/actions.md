@@ -166,7 +166,7 @@
 | `move_selected_lines_up` | move the selected lines up | `A-k` | `A-k` |  |
 | `goto_line_or_last_line` | go to line N, or with no count to the last line | `G` |  |  |
 | `normal_mode_and_collapse` | leave select mode, or collapse to one cursor |  |  |  |
-| `quit` | close this one |  |  |  |
+| `quit` | close this region; in the last window, leave the editor |  |  |  |
 | `select_inner_object` | select inside an object (then which) |  | `i` |  |
 | `select_around_object` | select around an object (then which) |  | `a` |  |
 | `undo_line` | undo every change on this line |  | `U` |  |
@@ -297,7 +297,7 @@
 | `hsplit_new` | a blank window below | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | a blank window beside | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | the blank-window group: s below, v beside | `C-w n` | `C-w n` |  |
-| `wclose` | close this one | `C-w q` | `C-w q` |  |
+| `wclose` | close this region; the last window leaves | `C-w q` | `C-w q` |  |
 | `wonly` | keep only this one | `C-w o` | `C-w o` |  |
 | `transpose_view` | turn the split: beside or below | `C-w t` |  |  |
 | `swap_view_left` | trade places with the region on the left | `C-w H` |  |  |

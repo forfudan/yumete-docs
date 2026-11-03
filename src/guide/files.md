@@ -16,15 +16,23 @@ work, and the tools that show what you have changed.
 | `:write-quit` (`:wq`) | save, then quit |
 | `:exit` (`:x`, `:xit`) | save only if changed, then quit |
 | `:write-quit-all` (`:wqa`, `:xa`) | save every file that changed, then quit |
-| `:quit` (`:q`) | close this file; quit when it was the last one; in a split, close this region |
-| `:quit-all` (`:qa`) | close every file and quit |
+| `:quit` (`:q`) | close this region; in the last window, quit |
+| `:quit-window` (`:close`) | close this region, but never the last window |
+| `:quit-others` (`:only`) | keep this window; close the other windows and the sidebars |
+| `:quit-all` (`:qa`) | quit |
+| `:buffer-close` (`:bc`) | close this file; the windows stay |
 
-A `!` after `:q` or `:qa` throws away unsaved changes. Without it, quitting
-with unsaved changes stops and says so.
+The tabs along the top are the open files and a window shows one of them, as
+in helix and vim. Closing a window closes no file: with the window split,
+`:q`, `:q!`, `:wq` and `:x` close only the window you are in, and the file
+stays open with its changes. In the last window they quit the editor; a
+sidebar does not count as a window here.
 
-With the window split, `:q`, `:q!`, `:wq` and `:x` close only the region you
-are in. The file stays open with its changes, so `:q!` throws nothing away
-there. In the last region they work as above.
+Quitting with a file unsaved, in any tab, stops, says so and shows that file.
+A `!` after `:q` or `:qa` quits anyway and throws the unsaved changes away.
+
+In a sidebar there is no file to write: `:x` and `ZZ` close the sidebar and
+`:wq` refuses.
 
 `:w` always writes, even when nothing changed, and that moves the file's
 modification time. Build tools and sync programs read that time, so an idle

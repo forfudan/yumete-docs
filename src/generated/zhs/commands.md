@@ -33,7 +33,9 @@
 | `:convert-opencc` |  | opencc 装了没有、装在哪、哪个版本 |
 | `:convert-opencc-install` |  | 装 opencc(macOS 这里真的会跑，别的机器只把命令印给你) |
 | `:convert-opencc-update` |  | 把 opencc 升到最新 |
-| `:quit` `:q` |  | 关掉这一个文件；只剩一个时才真的退出(`quit!` 不管改动) |
+| `:quit` `:q` |  | 关掉这一区；最后一个窗口就离开编辑器(`quit!` 不管改动) |
+| `:quit-window` `:close` `:clo` |  | 关掉这一区，但不关最后一个窗口(vim 的 `:close`，短写 `:clo`) |
+| `:quit-others` `:only` `:on` |  | 只留这一个窗口，别的窗口和侧栏都关掉(vim 的 `:only`，短写 `:on`) |
 | `:quit-all` `:qa` |  | 每个开着的文件都关掉，然后离开(短写 `:qa`) |
 | `:write-quit` `:wq` | `<路径>` | 无条件存好再退出(短写 `:wq`；`:x` 是改过才存的那个) |
 | `:write-quit-all` `:wqa` `:xa` |  | 保存所有改动过的文件并退出 |
@@ -162,7 +164,7 @@
 | `:buffer` |  | 开着的文件：列出、切换、关掉 |
 | `:buffer-next` `:bn` |  | 下一个 |
 | `:buffer-previous` `:bp` |  | 上一个 |
-| `:buffer-close` `:bc` |  | 关掉这一个(`close!` 不管改动) |
+| `:buffer-close` `:bc` |  | 关掉这一个(`buffer-close!` 不管改动) |
 | `:format` `:fmt` |  | 照这种文件在配置里説的那样格式化([language.markdown] format = …) |
 | `:run` | `<名字>` | 跑这种文件在配置里自己起名的那条命令 |
 | `:markdown-footnote` |  | 脚注：号码自己找空的，注也一并开好 |

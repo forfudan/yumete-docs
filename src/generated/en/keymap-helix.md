@@ -294,7 +294,7 @@
 | `C-w s` | a window below |
 | `C-w v` | a window beside |
 | `C-w n` | a blank window |
-| `C-w q` | close this one |
+| `C-w q` | close this region; the last window leaves |
 | `C-w o` | keep only this one |
 | `C-w t` | turn the split: beside or below |
 | `C-w H / C-w J / C-w K / C-w L` | trade places with the one that way |

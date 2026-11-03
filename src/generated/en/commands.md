@@ -33,7 +33,9 @@
 | `:convert-opencc` |  | whether opencc is installed, where, and which version |
 | `:convert-opencc-install` |  | install opencc — run here on macOS, printed for you elsewhere |
 | `:convert-opencc-update` |  | bring opencc up to date |
-| `:quit` `:q` |  | close this file; leave only when it was the last one (`quit!` ignores changes) |
+| `:quit` `:q` |  | close this region; in the last window, leave the editor (`quit!` ignores changes) |
+| `:quit-window` `:close` `:clo` |  | close this region, but never the last window (vim's `:close`, short: `:clo`) |
+| `:quit-others` `:only` `:on` |  | keep only this window; the other windows and the sidebars close (vim's `:only`, short: `:on`) |
 | `:quit-all` `:qa` |  | close every open file, then leave (short: :qa) |
 | `:write-quit` `:wq` | `<path>` | always save, then leave (short: :wq; :x saves only if changed) |
 | `:write-quit-all` `:wqa` `:xa` |  | save every file that changed, then leave |
@@ -162,7 +164,7 @@
 | `:buffer` |  | the open files: list, switch, close |
 | `:buffer-next` `:bn` |  | the next one |
 | `:buffer-previous` `:bp` |  | the previous one |
-| `:buffer-close` `:bc` |  | close this one (`close!` ignores changes) |
+| `:buffer-close` `:bc` |  | close this file (`buffer-close!` ignores changes) |
 | `:format` `:fmt` |  | format this file the way the config says ([language.markdown] format = …) |
 | `:run` | `<名字>` | run the command this language names in the config |
 | `:markdown-footnote` |  | a footnote: the next free number, and its note opened with it |
