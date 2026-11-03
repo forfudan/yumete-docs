@@ -358,10 +358,10 @@ It changes what its keys do, not which command they run.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| 這一行挪到哪 | `za` | 開合折疊(vim 的 za) |  |
-| 這一行挪到哪 | `zR` | 打開所有折疊(vim 的 zR) |  |
-| 這一行挪到哪 | `zM` | 合上所有折疊(vim 的 zM) |  |
-| 這一行挪到哪 | `zf` | 把選中的行做成折疊 |  |
+| 視圖 | `za` | 開合折疊(vim 的 za) |  |
+| 視圖 | `zR` | 打開所有折疊(vim 的 zR) |  |
+| 視圖 | `zM` | 合上所有折疊(vim 的 zM) |  |
+| 視圖 | `zf` | 把選中的行做成折疊 |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
 
