@@ -273,6 +273,7 @@
 | `zz / zc` | center |
 | `zt` | top |
 | `zb` | bottom |
+| `zm` | center sideways |
 | `zj / z<down>` | scroll down |
 | `zk / z<up>` | scroll up |
 | `zC-d / z␣` | half a page down |

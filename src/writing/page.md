@@ -142,6 +142,10 @@ characters.
 :view-wrap 0         drop the measure and wrap at the window again
 ```
 
+With wrapping off the page follows the cursor sideways. vim's `zh` `zl` (a column),
+`zH` `zL` (half a page), `zs` `ze` (the cursor at the left, the right edge) and
+helix's `zm` (the cursor's column in the middle) move it by hand.
+
 A Latin word is never cut in half. A row never starts with closing punctuation
 such as `。` `、` `」` `）`, and never ends with an opener such as `「` `（`.
 

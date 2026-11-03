@@ -336,6 +336,13 @@
 | `vim_align_view_bottom` | 底下，光标到缩进之后 |  | `z-` `Z-` |  |
 | `vim_align_view_below_top` | 屏幕下面那一行放到顶上 |  | `z+` `Z+` |  |
 | `vim_align_view_above_bottom` | 屏幕上面那一行放到底下 |  | `z^` `Z^` |  |
+| `scroll_view_left` | 视窗往左一栏 |  | `zh` `z Left` `Zh` `Z Left` |  |
+| `scroll_view_right` | 视窗往右一栏 |  | `zl` `z Right` `Zl` `Z Right` |  |
+| `scroll_view_half_left` | 视窗往左半页 |  | `zH` `ZH` |  |
+| `scroll_view_half_right` | 视窗往右半页 |  | `zL` `ZL` |  |
+| `align_view_cursor_left` | 光标那一列放到左边 |  | `zs` `Zs` |  |
+| `align_view_cursor_right` | 光标那一列放到右边 |  | `ze` `Ze` |  |
+| `align_view_middle` | 横向居中 | `zm` `Zm` |  |  |
 | `rotate_view_reverse` | 上一个 |  | `C-w W` |  |
 | `jump_view_first` | 第一个窗口 |  | `C-w t` |  |
 | `jump_view_last` | 最后一个窗口 |  | `C-w b` |  |
