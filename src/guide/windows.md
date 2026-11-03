@@ -94,7 +94,8 @@ window you are in and closes the rest.
 The tabs along the top are the open files, one each, whatever the windows show.
 The file of the window you are in is lit; a file another window shows is
 underlined. `:bc` closes a file: a window that was showing it goes back to the
-file it showed before, or closes if it showed no other.
+file it showed before (a new window starts with the history of the one it
+was split from), or closes when it has none to go back to.
 
 The rule between two windows one above the other carries the name of the
 file in the window you are not in. Each window keeps its own scroll, and
@@ -115,7 +116,7 @@ They use the window next to yours, opening one below if there is none.
 ## Sidebars
 
 There is one sidebar on each side, and each holds one panel at a time. The
-left sidebar holds four panels, and `Tab` steps through them:
+left sidebar holds five panels, and `Tab` steps through them:
 
 | Panel | Shows | Opened with |
 | --- | --- | --- |
@@ -123,6 +124,7 @@ left sidebar holds four panels, and `Tab` steps through them:
 | Buffers | the open files; a changed one is marked `+` | `:sidebar buffers` |
 | Outline | the headings of the current file | `:sidebar outline` |
 | Search | the search panel | `Space /`, `:sidebar search` |
+| Links | the links into and out of the current file (see [Links](../writing/links.md)) | `:links`, `:sidebar links` |
 
 The right sidebar holds one panel, **Info**, described below.
 

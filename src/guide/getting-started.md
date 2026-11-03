@@ -101,8 +101,9 @@ is. The full story is in [The input method](../writing/ime.md).
 | --- | --- |
 | `:w` | save |
 | `:w other.md` | write a copy to `other.md`, and stay on this file |
-| `:q` | close this file, and leave when it was the last one |
-| `:q!` | the same, throwing away unsaved changes |
+| `:q` | close this window, and leave in the last one |
+| `:q!` | the same, leaving even with unsaved changes |
+| `:bc` | close this file |
 | `:wq` | save, then leave |
 | `:x` | save only if something changed, then leave |
 | `:wa` | save every file that changed |

@@ -219,7 +219,7 @@
 | `]c` | a change |
 | `]p` | paste after, indented like this line (vim's ]p) |
 | `]P` | paste before, indented like this line (vim's [p) |
-| `]z` | to this fold's end (vim's ]z) |
+| `]z` | to this fold's end |
 | `]␣` | a blank line below |
 
 ## previous… (`[`)
@@ -229,7 +229,7 @@
 | `[d / [D` | a diagnostic (capital: the first / the last) |
 | `[c` | a change |
 | `[p / [P` | paste before, indented like this line (vim's [p) |
-| `[z` | to this fold's start (vim's [z) |
+| `[z` | to this fold's start |
 | `[␣` | a blank line above |
 
 ## view (`z`)
@@ -237,29 +237,29 @@
 | Key | What it does |
 | --- | --- |
 | `zz` | center |
-| `zf` | make a fold (vim's zf, then a motion) |
-| `zF` | make a fold of N lines (vim's zF) |
-| `zo` | open a fold (vim's zo) |
-| `zO` | open every fold here (vim's zO) |
-| `zc` | close a fold (vim's zc) |
-| `zC` | close every fold here (vim's zC) |
-| `za` | open or close a fold (vim's za) |
-| `zA` | open or close every fold here (vim's zA) |
-| `zv` | open folds to show the cursor line (vim's zv) |
-| `zR` | open every fold (vim's zR) |
-| `zM` | close every fold (vim's zM) |
-| `zd` | delete the fold here, not the text (vim's zd) |
-| `zD` | delete every fold made with zf here (vim's zD) |
-| `zE` | delete every fold made with zf (vim's zE) |
-| `zj` | to the next fold's start (vim's zj) |
-| `zk` | to the previous fold's end (vim's zk) |
-| `zn` | folds off for now (vim's zn) |
-| `zN` | folds back on (vim's zN) |
-| `zi` | folds off or back on (vim's zi) |
-| `zm` | close one more level (vim's zm) |
-| `zr` | open one more level (vim's zr) |
-| `zx` | refold to the fold level, then show the cursor line (vim's zx) |
-| `zX` | refold to the fold level (vim's zX) |
+| `zf` | make a fold, then a motion |
+| `zF` | make a fold of N lines |
+| `zo` | open a fold |
+| `zO` | open every fold here |
+| `zc` | close a fold |
+| `zC` | close every fold here |
+| `za` | open or close a fold |
+| `zA` | open or close every fold here |
+| `zv` | open folds to show the cursor line |
+| `zR` | open every fold |
+| `zM` | close every fold |
+| `zd` | delete the fold here, not the text |
+| `zD` | delete every fold made with zf here |
+| `zE` | delete every fold made with zf |
+| `zj` | to the next fold's start |
+| `zk` | to the previous fold's end |
+| `zn` | folds off for now |
+| `zN` | folds back on |
+| `zi` | folds off or back on |
+| `zm` | close one more level |
+| `zr` | open one more level |
+| `zx` | refold to the fold level, then show the cursor line |
+| `zX` | refold to the fold level |
 | `zt` | top |
 | `zb` | bottom |
 

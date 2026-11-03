@@ -306,31 +306,31 @@
 | `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
 | `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | open the file under the cursor beside | `C-w F` |  |  |
-| `create_fold` | make a fold (vim's zf, then a motion) | `zf` `Zf` | `zf` `Zf` |  |
-| `create_fold_lines` | make a fold of N lines (vim's zF) |  | `zF` `ZF` |  |
-| `open_fold` | open a fold (vim's zo) |  | `zo` `Zo` |  |
-| `open_folds_recursively` | open every fold here (vim's zO) |  | `zO` `ZO` |  |
-| `close_fold` | close a fold (vim's zc) |  | `zc` `Zc` |  |
-| `close_folds_recursively` | close every fold here (vim's zC) |  | `zC` `ZC` |  |
-| `toggle_fold` | open or close a fold (vim's za) | `za` `Za` | `za` `Za` |  |
-| `toggle_folds_recursively` | open or close every fold here (vim's zA) |  | `zA` `ZA` |  |
-| `open_folds_to_cursor` | open folds to show the cursor line (vim's zv) |  | `zv` `Zv` |  |
-| `open_all_folds` | open every fold (vim's zR) | `zR` `ZR` | `zR` `ZR` |  |
-| `close_all_folds` | close every fold (vim's zM) | `zM` `ZM` | `zM` `ZM` |  |
-| `delete_fold` | delete the fold here, not the text (vim's zd) |  | `zd` `Zd` |  |
-| `delete_folds_recursively` | delete every fold made with zf here (vim's zD) |  | `zD` `ZD` |  |
-| `delete_all_folds` | delete every fold made with zf (vim's zE) |  | `zE` `ZE` |  |
-| `goto_next_fold` | to the next fold's start (vim's zj) |  | `zj` `Zj` |  |
-| `goto_prev_fold` | to the previous fold's end (vim's zk) |  | `zk` `Zk` |  |
-| `disable_folds` | folds off for now (vim's zn) |  | `zn` `Zn` |  |
-| `enable_folds` | folds back on (vim's zN) |  | `zN` `ZN` |  |
-| `toggle_folds_enabled` | folds off or back on (vim's zi) |  | `zi` `Zi` |  |
-| `fold_more` | close one more level (vim's zm) |  | `zm` `Zm` |  |
-| `fold_less` | open one more level (vim's zr) |  | `zr` `Zr` |  |
-| `goto_fold_start` | to this fold's start (vim's [z) |  | `[z` |  |
-| `goto_fold_end` | to this fold's end (vim's ]z) |  | `]z` |  |
-| `reapply_fold_level_and_view` | refold to the fold level, then show the cursor line (vim's zx) |  | `zx` `Zx` |  |
-| `reapply_fold_level` | refold to the fold level (vim's zX) |  | `zX` `ZX` |  |
+| `create_fold` | make a fold, then a motion | `zf` `Zf` | `zf` `Zf` |  |
+| `create_fold_lines` | make a fold of N lines |  | `zF` `ZF` |  |
+| `open_fold` | open a fold |  | `zo` `Zo` |  |
+| `open_folds_recursively` | open every fold here |  | `zO` `ZO` |  |
+| `close_fold` | close a fold |  | `zc` `Zc` |  |
+| `close_folds_recursively` | close every fold here |  | `zC` `ZC` |  |
+| `toggle_fold` | open or close a fold | `za` `Za` | `za` `Za` |  |
+| `toggle_folds_recursively` | open or close every fold here |  | `zA` `ZA` |  |
+| `open_folds_to_cursor` | open folds to show the cursor line |  | `zv` `Zv` |  |
+| `open_all_folds` | open every fold | `zR` `ZR` | `zR` `ZR` |  |
+| `close_all_folds` | close every fold | `zM` `ZM` | `zM` `ZM` |  |
+| `delete_fold` | delete the fold here, not the text |  | `zd` `Zd` |  |
+| `delete_folds_recursively` | delete every fold made with zf here |  | `zD` `ZD` |  |
+| `delete_all_folds` | delete every fold made with zf |  | `zE` `ZE` |  |
+| `goto_next_fold` | to the next fold's start |  | `zj` `Zj` |  |
+| `goto_prev_fold` | to the previous fold's end |  | `zk` `Zk` |  |
+| `disable_folds` | folds off for now |  | `zn` `Zn` |  |
+| `enable_folds` | folds back on |  | `zN` `ZN` |  |
+| `toggle_folds_enabled` | folds off or back on |  | `zi` `Zi` |  |
+| `fold_more` | close one more level |  | `zm` `Zm` |  |
+| `fold_less` | open one more level |  | `zr` `Zr` |  |
+| `goto_fold_start` | to this fold's start |  | `[z` |  |
+| `goto_fold_end` | to this fold's end |  | `]z` |  |
+| `reapply_fold_level_and_view` | refold to the fold level, then show the cursor line |  | `zx` `Zx` |  |
+| `reapply_fold_level` | refold to the fold level |  | `zX` `ZX` |  |
 | `vim_align_view_top` | line to top, cursor past indent |  | `z Enter` `Z Enter` |  |
 | `vim_align_view_center` | line to center, cursor past indent |  | `z.` `Z.` |  |
 | `vim_align_view_bottom` | line to bottom, cursor past indent |  | `z-` `Z-` |  |
