@@ -219,6 +219,7 @@
 | `]c` | a change |
 | `]p` | paste after, indented like this line (vim's ]p) |
 | `]P` | paste before, indented like this line (vim's [p) |
+| `]z` | to the end of the open fold here (vim's ]z) |
 | `]␣` | a blank line below |
 
 ## previous… (`[`)
@@ -228,6 +229,7 @@
 | `[d / [D` | a diagnostic (capital: the first / the last) |
 | `[c` | a change |
 | `[p / [P` | paste before, indented like this line (vim's [p) |
+| `[z` | to the start of the open fold here (vim's [z) |
 | `[␣` | a blank line above |
 
 ## put this line where (`z`)
@@ -235,6 +237,25 @@
 | Key | What it does |
 | --- | --- |
 | `zz` | middle |
+| `zf` | make a fold over a motion (vim's zf) |
+| `zF` | make a fold over count lines (vim's zF) |
+| `zo` | open a fold (vim's zo) |
+| `zO` | open every fold here (vim's zO) |
+| `zc` | close a fold (vim's zc) |
+| `zC` | close every fold here (vim's zC) |
+| `za` | open or close a fold (vim's za) |
+| `zA` | open or close every fold here (vim's zA) |
+| `zv` | open enough to see the cursor's line (vim's zv) |
+| `zR` | open every fold (vim's zR) |
+| `zM` | close every fold (vim's zM) |
+| `zd` | delete the fold here, not the text (vim's zd) |
+| `zD` | delete every fold here (vim's zD) |
+| `zE` | delete every fold made with zf (vim's zE) |
+| `zj` | to the next fold's start (vim's zj) |
+| `zk` | to the previous fold's end (vim's zk) |
+| `zn` | every fold open, kept (vim's zn) |
+| `zN` | folds back as they were (vim's zN) |
+| `zi` | folds off or back on (vim's zi) |
 | `zt` | top |
 | `zb` | bottom |
 
