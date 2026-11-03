@@ -358,9 +358,9 @@ On: vim's za, zR and zM under helix (open or close a fold, open all, close all);
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| view | `za` | open or close a fold (vim's za) |  |
-| view | `zR` | open every fold (vim's zR) |  |
-| view | `zM` | close every fold (vim's zM) |  |
+| view | `za` | open or close a fold |  |
+| view | `zR` | open every fold |  |
+| view | `zM` | close every fold |  |
 | view | `zf` | make a fold of the selected lines |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}

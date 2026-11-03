@@ -358,9 +358,9 @@ It changes what its keys do, not which command they run.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| 视图 | `za` | 开合折叠(vim 的 za) |  |
-| 视图 | `zR` | 打开所有折叠(vim 的 zR) |  |
-| 视图 | `zM` | 合上所有折叠(vim 的 zM) |  |
+| 视图 | `za` | 开合折叠 |  |
+| 视图 | `zR` | 打开所有折叠 |  |
+| 视图 | `zM` | 合上所有折叠 |  |
 | 视图 | `zf` | 把选中的行做成折叠 |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}

@@ -306,31 +306,31 @@
 | `swap_view_right` | 和右邊那一區對調 | `C-w L` |  |  |
 | `goto_file_hsplit` | 在下面打開光標下的文件 | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | 在旁邊打開光標下的文件 | `C-w F` |  |  |
-| `create_fold` | 做一個摺疊(vim 的 zf，後面跟移動) | `zf` `Zf` | `zf` `Zf` |  |
-| `create_fold_lines` | 把 N 行做成摺疊(vim 的 zF，用計數) |  | `zF` `ZF` |  |
-| `open_fold` | 打開摺疊(vim 的 zo) |  | `zo` `Zo` |  |
-| `open_folds_recursively` | 打開這裏的所有摺疊(vim 的 zO) |  | `zO` `ZO` |  |
-| `close_fold` | 合上摺疊(vim 的 zc) |  | `zc` `Zc` |  |
-| `close_folds_recursively` | 合上這裏的所有摺疊(vim 的 zC) |  | `zC` `ZC` |  |
-| `toggle_fold` | 開合摺疊(vim 的 za) | `za` `Za` | `za` `Za` |  |
-| `toggle_folds_recursively` | 開合這裏的所有摺疊(vim 的 zA) |  | `zA` `ZA` |  |
-| `open_folds_to_cursor` | 打開摺疊，露出光標所在行(vim 的 zv) |  | `zv` `Zv` |  |
-| `open_all_folds` | 打開所有摺疊(vim 的 zR) | `zR` `ZR` | `zR` `ZR` |  |
-| `close_all_folds` | 合上所有摺疊(vim 的 zM) | `zM` `ZM` | `zM` `ZM` |  |
-| `delete_fold` | 刪掉這裏的摺疊，字不動(vim 的 zd) |  | `zd` `Zd` |  |
-| `delete_folds_recursively` | 刪掉這裏所有 zf 做的摺疊(vim 的 zD) |  | `zD` `ZD` |  |
-| `delete_all_folds` | 刪掉所有 zf 做的摺疊(vim 的 zE) |  | `zE` `ZE` |  |
-| `goto_next_fold` | 到下一個摺疊的開頭(vim 的 zj) |  | `zj` `Zj` |  |
-| `goto_prev_fold` | 到上一個摺疊的末尾(vim 的 zk) |  | `zk` `Zk` |  |
-| `disable_folds` | 暫時停用摺疊(vim 的 zn) |  | `zn` `Zn` |  |
-| `enable_folds` | 恢復摺疊(vim 的 zN) |  | `zN` `ZN` |  |
-| `toggle_folds_enabled` | 停用或恢復摺疊(vim 的 zi) |  | `zi` `Zi` |  |
-| `fold_more` | 多合上一層(vim 的 zm) |  | `zm` `Zm` |  |
-| `fold_less` | 多打開一層(vim 的 zr) |  | `zr` `Zr` |  |
-| `goto_fold_start` | 到所在摺疊的開頭(vim 的 [z) |  | `[z` |  |
-| `goto_fold_end` | 到所在摺疊的末尾(vim 的 ]z) |  | `]z` |  |
-| `reapply_fold_level_and_view` | 按層級重新摺疊，再露出光標所在行(vim 的 zx) |  | `zx` `Zx` |  |
-| `reapply_fold_level` | 按層級重新摺疊(vim 的 zX) |  | `zX` `ZX` |  |
+| `create_fold` | 做一個摺疊，後面跟移動 | `zf` `Zf` | `zf` `Zf` |  |
+| `create_fold_lines` | 把 N 行做成摺疊(用計數) |  | `zF` `ZF` |  |
+| `open_fold` | 打開摺疊 |  | `zo` `Zo` |  |
+| `open_folds_recursively` | 打開這裏的所有摺疊 |  | `zO` `ZO` |  |
+| `close_fold` | 合上摺疊 |  | `zc` `Zc` |  |
+| `close_folds_recursively` | 合上這裏的所有摺疊 |  | `zC` `ZC` |  |
+| `toggle_fold` | 開合摺疊 | `za` `Za` | `za` `Za` |  |
+| `toggle_folds_recursively` | 開合這裏的所有摺疊 |  | `zA` `ZA` |  |
+| `open_folds_to_cursor` | 打開摺疊，露出光標所在行 |  | `zv` `Zv` |  |
+| `open_all_folds` | 打開所有摺疊 | `zR` `ZR` | `zR` `ZR` |  |
+| `close_all_folds` | 合上所有摺疊 | `zM` `ZM` | `zM` `ZM` |  |
+| `delete_fold` | 刪掉這裏的摺疊，字不動 |  | `zd` `Zd` |  |
+| `delete_folds_recursively` | 刪掉這裏所有 zf 做的摺疊 |  | `zD` `ZD` |  |
+| `delete_all_folds` | 刪掉所有 zf 做的摺疊 |  | `zE` `ZE` |  |
+| `goto_next_fold` | 到下一個摺疊的開頭 |  | `zj` `Zj` |  |
+| `goto_prev_fold` | 到上一個摺疊的末尾 |  | `zk` `Zk` |  |
+| `disable_folds` | 暫時停用摺疊 |  | `zn` `Zn` |  |
+| `enable_folds` | 恢復摺疊 |  | `zN` `ZN` |  |
+| `toggle_folds_enabled` | 停用或恢復摺疊 |  | `zi` `Zi` |  |
+| `fold_more` | 多合上一層 |  | `zm` `Zm` |  |
+| `fold_less` | 多打開一層 |  | `zr` `Zr` |  |
+| `goto_fold_start` | 到所在摺疊的開頭 |  | `[z` |  |
+| `goto_fold_end` | 到所在摺疊的末尾 |  | `]z` |  |
+| `reapply_fold_level_and_view` | 按層級重新摺疊，再露出光標所在行 |  | `zx` `Zx` |  |
+| `reapply_fold_level` | 按層級重新摺疊 |  | `zX` `ZX` |  |
 | `vim_align_view_top` | 這一行放到頂上，光標到縮進之後 |  | `z Enter` `Z Enter` |  |
 | `vim_align_view_center` | 這一行放到中間，光標到縮進之後 |  | `z.` `Z.` |  |
 | `vim_align_view_bottom` | 這一行放到底下，光標到縮進之後 |  | `z-` `Z-` |  |
