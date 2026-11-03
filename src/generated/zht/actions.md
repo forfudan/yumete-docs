@@ -22,8 +22,8 @@
 | `goto_next_sentence` | 下一句 | `L` |  |  |
 | `goto_prev_paragraph` | 上一段 | `[p` | `[p` |  |
 | `goto_next_paragraph` | 下一段 | `]p` | `]p` |  |
-| `page_cursor_half_down` | 前進半頁 | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` |  |
-| `page_cursor_half_up` | 後退半頁 | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` |  |
+| `page_cursor_half_down` | 前進半頁 | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` |  |
+| `page_cursor_half_up` | 後退半頁 | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` |  |
 | `jump_backward` | 跳轉表：回到剛纔那個位置 | `C-o` | `C-o` |  |
 | `select_mode` | 延伸模式：移動把選區撑大 | `v` | `v` |  |
 | `extend_line_below` | 選中當前行 | `x` |  |  |
@@ -53,8 +53,8 @@
 | `undo` | 撤銷 | `u` |  |  |
 | `redo` | 重做 | `U` |  |  |
 | `repeat_last_change` | 再做一次剛纔那個改動 | `.` |  |  |
-| `search` | 往前搜索 | `/` `z/` `Z/` | `/` `z/` `Z/` |  |
-| `rsearch` | 往後搜索 | `?` `z?` `Z?` | `?` `z?` `Z?` |  |
+| `search` | 往前搜索 | `/` `z/` `Z/` | `/` |  |
+| `rsearch` | 往後搜索 | `?` `z?` `Z?` | `?` |  |
 | `search_next` | 下一處 | `n` `zn` `Zn` | `gn` |  |
 | `search_prev` | 上一處 | `N` `zN` `ZN` | `gN` |  |
 | `search_selection` | 找選中的那段 | `g/` | `*` `g/` |  |
@@ -185,8 +185,8 @@
 | `record_macro` | 開始或停止錄宏 | `Q` |  |  |
 | `replay_macro` | 回放宏 | `q` |  |  |
 | `window_mode` | 窗口組 | `C-w` `Space w` | `C-w` `Space w` |  |
-| `page_down` | 前進一頁 | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `PageDown` |
-| `page_up` | 後退一頁 | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `PageUp` |
+| `page_down` | 前進一頁 | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` | `PageDown` |
+| `page_up` | 後退一頁 | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` | `PageUp` |
 | `join_selections_space` | 合併行並選中接縫 | `A-J` | `A-J` |  |
 | `save_selection` | 把這裏記進跳轉表 | `C-s` | `C-s` |  |
 | `jump_forward` | 跳轉表：再往前一處 | `C-i` `Tab` | `C-i` `Tab` |  |
@@ -276,8 +276,8 @@
 | `align_view_center` | 光標行挪到屏幕中間 | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
 | `align_view_top` | 光標行挪到屏幕頂上 | `zt` `Zt` | `zt` `Zt` |  |
 | `align_view_bottom` | 光標行挪到屏幕底下 | `zb` `Zb` | `zb` `Zb` |  |
-| `scroll_down` | 屏幕往下滾一行(光標的字不動) | `zj` `z Down` `Zj` `Z Down` | `C-e` `z Down` `Z Down` |  |
-| `scroll_up` | 屏幕往上滾一行(光標的字不動) | `zk` `z Up` `Zk` `Z Up` | `C-y` `z Up` `Z Up` |  |
+| `scroll_down` | 屏幕往下滾一行(光標的字不動) | `zj` `z Down` `Zj` `Z Down` | `C-e` |  |
+| `scroll_up` | 屏幕往上滾一行(光標的字不動) | `zk` `z Up` `Zk` `Z Up` | `C-y` |  |
 | `match_brackets` | 前往配對符號的另一個 | `mm` |  |  |
 | `select_textobject_inner` | 選擇配對符號内部字符 | `mi` |  |  |
 | `select_textobject_around` | 選擇配對符號和内部字符 | `ma` |  |  |
