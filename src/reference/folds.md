@@ -27,13 +27,21 @@ and the first of them:
 ```
 
 In a text file it is the heading, or the first words, and how many 字 the fold holds,
-counted as the status line counts:
+counted as the status line counts. A heading's fold counts what is under the heading,
+the same number the outline shows:
 
 ```
 ## 第三節 雪夜 ··································· 4,213 字
 ```
 
 On a vertical page the same line runs down one 縱, filled with `︙`.
+
+## In the outline
+
+The outline shows the folds of the window you are in. A section closed on the page
+has dots to its count, as its fold's line has, and the headings inside it are grey.
+The outline's own `h` and `l` fold its list, not the page. `Enter` on a closed section
+goes to its line and leaves it closed.
 
 ## Keys
 

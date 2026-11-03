@@ -179,8 +179,10 @@ without opening a sidebar, `Space s` lists the same headings in a picker
 
 The outline lists Markdown headings (`#` followed by a space) and Typst
 headings (`=`). In a text file it shows at the right edge how much each heading's
-section holds, its subsections included. `h` folds the sections under a heading and `l`
-opens them again; `h` on a heading with nothing under it folds its parent. In
+section holds, its subsections included. `h` hides the headings under a heading and `l`
+shows them again; `h` on a heading with nothing under it does this to its parent.
+These fold the list, not the page; a section folded on the page has dots to its
+count (see [Folds](../reference/folds.md#in-the-outline)). In
 a Typst file, the outline also reads the files the document `#include`s, and
 `Enter` on one of their headings opens that file.
 
