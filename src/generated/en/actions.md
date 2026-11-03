@@ -183,7 +183,7 @@
 | `replace` | replace each selected character with another | `r` | `r` |  |
 | `select_register` | pick a register (then a letter) | `"` | `"` |  |
 | `record_macro` | start or stop recording a macro | `Q` |  |  |
-| `replay_macro` | replay the macro | `q` | `Q` |  |
+| `replay_macro` | replay the macro | `q` |  |  |
 | `window_mode` | the window group | `C-w` `Space w` | `C-w` `Space w` |  |
 | `page_down` | a page down | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `PageDown` |
 | `page_up` | a page up | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `PageUp` |
@@ -475,6 +475,7 @@
 | `vim_visual_block_mode` | select a block (vim's C-v) |  | `C-v` |  |
 | `vim_record_macro` | record a macro (then a letter) |  | `q` |  |
 | `vim_replay_macro` | replay the macro (then a letter) |  | `@` |  |
+| `vim_replay_last_macro` | play the macro recorded last (vim's Q) |  | `Q` |  |
 | `vim_goto_first_nonwhitespace` | the first non-blank character, a count of lines down |  | `_` |  |
 
 ### vim keys that play other keys

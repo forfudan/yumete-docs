@@ -163,7 +163,7 @@ the last insert, as helix's does.
 | `C-o` in insert mode | run one Normal command and come back |
 | `C-u` `C-w` in insert mode | delete to the start of the line, the word before; each first stops where this Insert began |
 | `K` | the documentation for the thing under the cursor |
-| `q`*a*, `@`*a*, `Q` | record a macro (`q` again stops), play it, play it; the letter is read, but there is one macro |
+| `q`*a*, `@`*a*, `@@`, `Q` | record a macro into register *a* (`q` again stops; `q`*A* adds to it), play it, play the last one played, play the last one recorded |
 | `C-n` `C-p` `_` | down, up a line; the first non-blank character, a count of lines down |
 | `]p` `[p` `]P` `[P` | put after, before, with the indent adjusted to the current line |
 | `C-^` | the previous file; while typing it switches the input method between Chinese and English, as vim's Insert-mode `C-^` switches language |
@@ -190,8 +190,8 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 
 ## What is not there
 
-- There are no named macros. `qa`…`q` and `@a` work, but every letter
-  names the same one macro, the last one recorded; `Q` plays it too. See
+- A macro is written in its register as helix writes it: `"ap` after `qaihello<Esc>q`
+  gives `ihello<esc>`, where vim gives `ihello^[`. See
   [Registers](../reference/registers.md).
 - Folds are not there, so `zc`, `zj`, `zk`, `zn` and `zN` do nothing, and
   neither do `gt` (no tab pages) and `gs`; `&` and `!` do nothing yet.
