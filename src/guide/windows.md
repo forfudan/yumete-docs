@@ -91,6 +91,11 @@ go to the window that takes the room, as in vim. In the last window `:q` works a
 [Saving and quitting](./files.md#saving-and-quitting)). `C-w o` keeps the
 window you are in and closes the rest.
 
+The tabs along the top are the open files, one each, whatever the windows show.
+The file of the window you are in is lit; a file another window shows is
+underlined. `:bc` closes a file: a window that was showing it goes back to the
+file it showed before, or closes if it showed no other.
+
 The rule between two windows one above the other carries the name of the
 file in the window you are not in. Each window keeps its own scroll, and
 long lines fold to each window's own width.

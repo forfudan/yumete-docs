@@ -166,7 +166,7 @@
 | `move_selected_lines_up` | move the selected lines up | `A-k` | `A-k` |  |
 | `goto_line_or_last_line` | go to line N, or with no count to the last line | `G` |  |  |
 | `normal_mode_and_collapse` | leave select mode, or collapse to one cursor |  |  |  |
-| `quit` | close this one | `Space q` | `Space q` |  |
+| `quit` | close this one |  |  |  |
 | `select_inner_object` | select inside an object (then which) |  | `i` |  |
 | `select_around_object` | select around an object (then which) |  | `a` |  |
 | `undo_line` | undo every change on this line |  | `U` |  |
