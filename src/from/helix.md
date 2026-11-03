@@ -114,7 +114,6 @@ These differ:
 - A capital shows the same thing in the sidebar instead of a popup: `N`, `K`,
   `L`, `X`, `I`.
 - `Space Space` turns a page down and `Space Backspace` a page up.
-- `Space q` closes the window, as `:quit` does.
 
 ## Tables are on `Space t`
 

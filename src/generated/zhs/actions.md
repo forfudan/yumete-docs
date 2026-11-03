@@ -166,7 +166,7 @@
 | `move_selected_lines_up` | 把选中的行往上移 | `A-k` | `A-k` |  |
 | `goto_line_or_last_line` | 到第 N 行，不带数字到末行 | `G` |  |  |
 | `normal_mode_and_collapse` | 退出选择，或收成一个光标 |  |  |  |
-| `quit` | 关掉这一个 | `Space q` | `Space q` |  |
+| `quit` | 关掉这一个 |  |  |  |
 | `select_inner_object` | 选中对象的里面(再按一个对象) |  | `i` |  |
 | `select_around_object` | 选中整个对象(再按一个对象) |  | `a` |  |
 | `undo_line` | 撤销这一行的所有改动 |  | `U` |  |

@@ -17,7 +17,6 @@
 | [`popup_panel_pairs`](#popup_panel_pairs) | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | popups and their sidebars |
 | [`explorer_here`](#explorer_here) | `Space E` | `Space E` | explorer from this file's folder |
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | turn a page |
-| [`space_quit`](#space_quit) | `Space q` | `Space q` | close the window |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | sidebars |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | jumps, word search, links |
 | [`insert_extras`](#insert_extras) | `C-a` `C-e` `C-n` `C-g` | — | Insert: line ends, completion, undo step |
@@ -246,14 +245,6 @@ On: Space Space turns a page down and Space Backspace a page up. Off: both are u
 | --- | --- | --- | --- |
 | Space | `Space Space` | page down |  |
 | Space | `Space Backspace` | page up |  |
-
-### `space_quit` {#space_quit}
-
-On: Space q closes the window, as :quit does. Off: unbound.
-
-| Where | Key | With the item | Without it |
-| --- | --- | --- | --- |
-| Space | `Space q` | close the window |  |
 
 ### `sidebars` {#sidebars}
 

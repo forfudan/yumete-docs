@@ -17,7 +17,6 @@
 | [`popup_panel_pairs`](#popup_panel_pairs) | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | 浮窗與側欄 |
 | [`explorer_here`](#explorer_here) | `Space E` | `Space E` | 從當前文件的目錄瀏覽 |
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | 翻頁 |
-| [`space_quit`](#space_quit) | `Space q` | `Space q` | 關閉窗口 |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | 側欄 |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | 跳轉、搜這個詞、鏈接 |
 | [`insert_extras`](#insert_extras) | `C-a` `C-e` `C-n` `C-g` | — | 插入態的行首行尾、補全、斷撤銷點 |
@@ -246,14 +245,6 @@ Under vim:
 | --- | --- | --- | --- |
 | 空格 | `Space Space` | 下一頁 |  |
 | 空格 | `Space Backspace` | 上一頁 |  |
-
-### `space_quit` {#space_quit}
-
-開：空格 q 關閉當前窗口，同 :quit。關：這個鍵空着。
-
-| Where | Key | With the item | Without it |
-| --- | --- | --- | --- |
-| 空格 | `Space q` | 關閉窗口 |  |
 
 ### `sidebars` {#sidebars}
 
