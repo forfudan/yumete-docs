@@ -232,7 +232,7 @@
 | `[z` | to the start of the open fold here (vim's [z) |
 | `[␣` | a blank line above |
 
-## put this line where (`z`)
+## view (`z`)
 
 | Key | What it does |
 | --- | --- |

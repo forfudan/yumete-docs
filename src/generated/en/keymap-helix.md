@@ -266,7 +266,7 @@
 | `[p` | the previous paragraph |
 | `[␣` | a blank line above |
 
-## put this line where (`z`)
+## view (`z`)
 
 | Key | What it does |
 | --- | --- |

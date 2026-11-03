@@ -358,10 +358,10 @@ On: under helix, za opens or closes a fold, zR opens all, zM closes all, zf make
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| put this line where | `za` | open or close a fold (vim's za) |  |
-| put this line where | `zR` | open every fold (vim's zR) |  |
-| put this line where | `zM` | close every fold (vim's zM) |  |
-| put this line where | `zf` | make a fold of the selected lines |  |
+| view | `za` | open or close a fold (vim's za) |  |
+| view | `zR` | open every fold (vim's zR) |  |
+| view | `zM` | close every fold (vim's zM) |  |
+| view | `zf` | make a fold of the selected lines |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
 
