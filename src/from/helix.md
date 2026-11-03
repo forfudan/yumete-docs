@@ -73,7 +73,7 @@ helix keys yumete does not have yet:
 | `Space G` | the debugger | not there |
 
 In prose, which has no syntax tree, `A-o` and its family walk the writing
-units instead: clause, sentence, list item, block, section, file. One `A-o`
+units instead: clause, quotation, sentence, list item, block, section, file. One `A-o`
 on a word is the block, as in helix's Markdown; unlike helix, the next one
 is the section rather than the whole file, and `A-i` goes down to the
 sentences. See [Growing and shrinking a selection](../writing/cjk.md#growing-and-shrinking-a-selection).
