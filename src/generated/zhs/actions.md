@@ -306,6 +306,27 @@
 | `swap_view_right` | 和右边那一区对调 | `C-w L` |  |  |
 | `goto_file_hsplit` | 在下面打开光标下的文件 | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | 在旁边打开光标下的文件 | `C-w F` |  |  |
+| `create_fold` | 做一个折叠(vim 的 zf，后面跟移动) |  | `zf` `Zf` |  |
+| `create_fold_lines` | 把计数那么多行做成折叠(vim 的 zF) |  | `zF` `ZF` |  |
+| `open_fold` | 打开折叠(vim 的 zo) |  | `zo` `Zo` |  |
+| `open_folds_recursively` | 打开这里的所有折叠(vim 的 zO) |  | `zO` `ZO` |  |
+| `close_fold` | 合上折叠(vim 的 zc) |  | `zc` `Zc` |  |
+| `close_folds_recursively` | 合上这里的所有折叠(vim 的 zC) |  | `zC` `ZC` |  |
+| `toggle_fold` | 开合折叠(vim 的 za) |  | `za` `Za` |  |
+| `toggle_folds_recursively` | 开合这里的所有折叠(vim 的 zA) |  | `zA` `ZA` |  |
+| `open_folds_to_cursor` | 打开到看得见光标那一行(vim 的 zv) |  | `zv` `Zv` |  |
+| `open_all_folds` | 打开所有折叠(vim 的 zR) |  | `zR` `ZR` |  |
+| `close_all_folds` | 合上所有折叠(vim 的 zM) |  | `zM` `ZM` |  |
+| `delete_fold` | 删掉这里的折叠，字不动(vim 的 zd) |  | `zd` `Zd` |  |
+| `delete_folds_recursively` | 删掉这里的所有折叠(vim 的 zD) |  | `zD` `ZD` |  |
+| `delete_all_folds` | 删掉所有 zf 做的折叠(vim 的 zE) |  | `zE` `ZE` |  |
+| `goto_next_fold` | 到下一个折叠的开头(vim 的 zj) |  | `zj` `Zj` |  |
+| `goto_prev_fold` | 到上一个折叠的末尾(vim 的 zk) |  | `zk` `Zk` |  |
+| `disable_folds` | 暂时全部展开(vim 的 zn) |  | `zn` `Zn` |  |
+| `enable_folds` | 折叠恢复原样(vim 的 zN) |  | `zN` `ZN` |  |
+| `toggle_folds_enabled` | 折叠停用或恢复(vim 的 zi) |  | `zi` `Zi` |  |
+| `goto_fold_start` | 到所在折叠的开头(vim 的 [z) |  | `[z` |  |
+| `goto_fold_end` | 到所在折叠的末尾(vim 的 ]z) |  | `]z` |  |
 | `rotate_view_reverse` | 上一个 |  | `C-w W` |  |
 | `jump_view_first` | 第一个窗口 |  | `C-w t` |  |
 | `jump_view_last` | 最后一个窗口 |  | `C-w b` |  |

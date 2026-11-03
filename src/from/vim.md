@@ -193,8 +193,10 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 - A macro is written in its register as helix writes it: `"ap` after `qaihello<Esc>q`
   gives `ihello<esc>`, where vim gives `ihello^[`. See
   [Registers](../reference/registers.md).
-- Folds are not there, so `zc`, `zj`, `zk`, `zn` and `zN` do nothing, and
-  neither do `gt` (no tab pages) and `gs`; `&` and `!` do nothing yet.
+- `gt` (no tab pages) and `gs` do nothing, and `&` and `!` do nothing yet.
+- Folds are vim's, made with `zf` (see [Folds](../reference/folds.md)); in
+  Markdown and Typst the headings fold too, all open at first. There is no
+  `foldmethod`, and no `zm` `zr` levels yet.
 - The code objects (functions, parameters, tests, HTML elements) have no vim
   spelling, and neither has vim's tag object `it`.
 - vim-surround's visual `S` is not there. Use `ys` with a motion.

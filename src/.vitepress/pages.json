@@ -39,6 +39,7 @@
       { "text": "Match mode", "link": "/reference/match" },
       { "text": "Registers", "link": "/reference/registers" },
       { "text": "Jumplist", "link": "/reference/jumplist" },
+      { "text": "Folds", "link": "/reference/folds" },
       { "text": "Commands", "link": "/reference/commands" },
       { "text": "Settings", "link": "/reference/settings" }
     ]

@@ -306,6 +306,27 @@
 | `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
 | `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | open the file under the cursor beside | `C-w F` |  |  |
+| `create_fold` | make a fold over a motion (vim's zf) |  | `zf` `Zf` |  |
+| `create_fold_lines` | make a fold over count lines (vim's zF) |  | `zF` `ZF` |  |
+| `open_fold` | open a fold (vim's zo) |  | `zo` `Zo` |  |
+| `open_folds_recursively` | open every fold here (vim's zO) |  | `zO` `ZO` |  |
+| `close_fold` | close a fold (vim's zc) |  | `zc` `Zc` |  |
+| `close_folds_recursively` | close every fold here (vim's zC) |  | `zC` `ZC` |  |
+| `toggle_fold` | open or close a fold (vim's za) |  | `za` `Za` |  |
+| `toggle_folds_recursively` | open or close every fold here (vim's zA) |  | `zA` `ZA` |  |
+| `open_folds_to_cursor` | open enough to see the cursor's line (vim's zv) |  | `zv` `Zv` |  |
+| `open_all_folds` | open every fold (vim's zR) |  | `zR` `ZR` |  |
+| `close_all_folds` | close every fold (vim's zM) |  | `zM` `ZM` |  |
+| `delete_fold` | delete the fold here, not the text (vim's zd) |  | `zd` `Zd` |  |
+| `delete_folds_recursively` | delete every fold here (vim's zD) |  | `zD` `ZD` |  |
+| `delete_all_folds` | delete every fold made with zf (vim's zE) |  | `zE` `ZE` |  |
+| `goto_next_fold` | to the next fold's start (vim's zj) |  | `zj` `Zj` |  |
+| `goto_prev_fold` | to the previous fold's end (vim's zk) |  | `zk` `Zk` |  |
+| `disable_folds` | every fold open, kept (vim's zn) |  | `zn` `Zn` |  |
+| `enable_folds` | folds back as they were (vim's zN) |  | `zN` `ZN` |  |
+| `toggle_folds_enabled` | folds off or back on (vim's zi) |  | `zi` `Zi` |  |
+| `goto_fold_start` | to the start of the open fold here (vim's [z) |  | `[z` |  |
+| `goto_fold_end` | to the end of the open fold here (vim's ]z) |  | `]z` |  |
 | `rotate_view_reverse` | previous |  | `C-w W` |  |
 | `jump_view_first` | the first window |  | `C-w t` |  |
 | `jump_view_last` | the last window |  | `C-w b` |  |
