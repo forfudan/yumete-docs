@@ -615,8 +615,8 @@
 | `yank_old_text` | 复制先前版本 | `y` |
 | `refresh_sidebar` | 重读 | `R` |
 | `cycle_sidebar_width` | 宽窄 | `w` |
-| `next_sidebar_view` | 换视图 | `Tab` |
-| `prev_sidebar_view` | 换视图(往回) | `S-Tab` |
+| `next_sidebar_view` | 换面板 | `Tab` |
+| `prev_sidebar_view` | 换面板(往回) | `S-Tab` |
 | `normal_mode` | 让输入法再挂起一次 | `Esc` |
 | `leave_sidebar` | 回编辑区，面板留着 | `q` |
 | `command_mode` | 命令行 | `:` |
