@@ -60,6 +60,8 @@
 | `[theme] ground` | `"paint"` | **ground** — the editor paints the paper itself, or leaves the background to the terminal (use this with a transparent terminal) (`paint` paint the paper, `terminal` the terminal's own) |
 | `[theme] status_bar` | `"sunken"` | **status bar** — whether the two bottom lines sit lower than the paper or one step towards the ink (`sunken` sunken, `raised` raised) |
 | `[theme] fill` | `false` | **fill** — whether code blocks and quotes sit on a faint ground |
+| `[theme] inactive` | `95` | **inactive windows** — how much ink a window you are not in keeps, in percent: 100 does not dim, as vim and helix (50–100) |
+| `[theme] focus` | `50` | **focus mode** — how much ink focus mode leaves the paragraphs you are not writing, in percent (10–100) |
 
 ### input
 
