@@ -285,7 +285,7 @@
 | `C-w s` | a window below |
 | `C-w v` | a window beside |
 | `C-w n` | a blank window |
-| `C-w q` | close this one |
+| `C-w q` | close this region; the last window leaves |
 | `C-w o` | keep only this one |
 | `C-w f` | open the file under the cursor below |
 
