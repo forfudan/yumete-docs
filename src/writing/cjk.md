@@ -61,8 +61,14 @@ Under the vim keymap these are `iw`, `is` and the rest.
 ### Growing and shrinking a selection
 
 helix's syntax-tree keys work in prose too, on its own units: clause,
-sentence, list item, block (lines between blank lines: a paragraph, a list,
-a quote), section (a heading and what is under it), file.
+quotation, sentence, list item, block (lines between blank lines: a
+paragraph, a list, a quote), section (a heading and what is under it), file.
+
+Here a clause takes the comma, 、, semicolon or colon that ends it, so the
+clauses of a sentence lie end to end and only its 。 is left over:
+那年冬天，山下起了大雪。 is 那年冬天， and 山下起了大雪. A quotation, 「…」
+『…』 or “…” with its marks, is a unit between the clauses in it and the
+sentence around it; when it holds several sentences, it holds those.
 
 | Keys | Does |
 | --- | --- |
@@ -73,7 +79,8 @@ a quote), section (a heading and what is under it), file.
 | `A-a` | every unit beside this one |
 | `A-e` `A-b` | the end and the start of the unit around the cursor |
 
-So `mi u A-o` is the sentence, and `x A-o` the section. In code and in a
+So `mi u A-o` is the sentence (or the quotation it is in), and `x A-o` the
+section. In code and in a
 fenced block the same keys follow the syntax tree, as in helix.
 
 ## How words are found
