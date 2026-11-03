@@ -120,7 +120,7 @@
 | `jump_next_sentence` | the cursor to the next sentence, selecting nothing |  | `)` |  |
 | `add_mark` | set a mark (then a letter) | `M` | `m` |  |
 | `goto_mark` | go to a mark (then a letter) | `'` | `` ` `` `'` `` g` `` |  |
-| `view_mode` | the view group: put the cursor line at the top, middle or bottom | `z` | `z` |  |
+| `view_mode` | the view group: place the cursor line, scroll, fold | `z` | `z` |  |
 | `sticky_view_mode` | the view group, staying open | `Z` | `Z` |  |
 | `right_bracket_mode` | the ] group: the next one of something | `]` | `]` |  |
 | `left_bracket_mode` | the [ group: the previous one of something | `[` | `[` |  |
@@ -297,8 +297,8 @@
 | `hsplit_new` | a blank window below | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | a blank window beside | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | the blank-window group: s below, v beside | `C-w n` | `C-w n` |  |
-| `wclose` | close this region; the last window leaves | `C-w q` | `C-w q` |  |
-| `wonly` | keep only this one | `C-w o` | `C-w o` |  |
+| `wclose` | close this region (in the last window, quit) | `C-w q` | `C-w q` |  |
+| `wonly` | keep only this window | `C-w o` | `C-w o` |  |
 | `transpose_view` | turn the split: beside or below | `C-w t` |  |  |
 | `swap_view_left` | trade places with the region on the left | `C-w H` |  |  |
 | `swap_view_down` | trade places with the region below | `C-w J` |  |  |
@@ -306,42 +306,42 @@
 | `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
 | `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | open the file under the cursor beside | `C-w F` |  |  |
-| `create_fold` | make a fold over a motion (vim's zf) | `zf` `Zf` | `zf` `Zf` |  |
-| `create_fold_lines` | make a fold over count lines (vim's zF) |  | `zF` `ZF` |  |
+| `create_fold` | make a fold (vim's zf, then a motion) | `zf` `Zf` | `zf` `Zf` |  |
+| `create_fold_lines` | make a fold of N lines (vim's zF) |  | `zF` `ZF` |  |
 | `open_fold` | open a fold (vim's zo) |  | `zo` `Zo` |  |
 | `open_folds_recursively` | open every fold here (vim's zO) |  | `zO` `ZO` |  |
 | `close_fold` | close a fold (vim's zc) |  | `zc` `Zc` |  |
 | `close_folds_recursively` | close every fold here (vim's zC) |  | `zC` `ZC` |  |
 | `toggle_fold` | open or close a fold (vim's za) | `za` `Za` | `za` `Za` |  |
 | `toggle_folds_recursively` | open or close every fold here (vim's zA) |  | `zA` `ZA` |  |
-| `open_folds_to_cursor` | open enough to see the cursor's line (vim's zv) |  | `zv` `Zv` |  |
+| `open_folds_to_cursor` | open folds to show the cursor line (vim's zv) |  | `zv` `Zv` |  |
 | `open_all_folds` | open every fold (vim's zR) | `zR` `ZR` | `zR` `ZR` |  |
 | `close_all_folds` | close every fold (vim's zM) | `zM` `ZM` | `zM` `ZM` |  |
 | `delete_fold` | delete the fold here, not the text (vim's zd) |  | `zd` `Zd` |  |
-| `delete_folds_recursively` | delete every fold here (vim's zD) |  | `zD` `ZD` |  |
+| `delete_folds_recursively` | delete every fold made with zf here (vim's zD) |  | `zD` `ZD` |  |
 | `delete_all_folds` | delete every fold made with zf (vim's zE) |  | `zE` `ZE` |  |
 | `goto_next_fold` | to the next fold's start (vim's zj) |  | `zj` `Zj` |  |
 | `goto_prev_fold` | to the previous fold's end (vim's zk) |  | `zk` `Zk` |  |
-| `disable_folds` | every fold open, kept (vim's zn) |  | `zn` `Zn` |  |
-| `enable_folds` | folds back as they were (vim's zN) |  | `zN` `ZN` |  |
+| `disable_folds` | folds off for now (vim's zn) |  | `zn` `Zn` |  |
+| `enable_folds` | folds back on (vim's zN) |  | `zN` `ZN` |  |
 | `toggle_folds_enabled` | folds off or back on (vim's zi) |  | `zi` `Zi` |  |
-| `fold_more` | fold one level more (vim's zm) |  | `zm` `Zm` |  |
-| `fold_less` | fold one level less (vim's zr) |  | `zr` `Zr` |  |
-| `goto_fold_start` | to the start of the open fold here (vim's [z) |  | `[z` |  |
-| `goto_fold_end` | to the end of the open fold here (vim's ]z) |  | `]z` |  |
-| `reapply_fold_level_and_view` | folds back to the level, then open to the cursor (vim's zx) |  | `zx` `Zx` |  |
-| `reapply_fold_level` | folds back to the level (vim's zX) |  | `zX` `ZX` |  |
-| `vim_align_view_top` | top, past the indent |  | `z Enter` `Z Enter` |  |
-| `vim_align_view_center` | middle, past the indent |  | `z.` `Z.` |  |
-| `vim_align_view_bottom` | bottom, past the indent |  | `z-` `Z-` |  |
-| `vim_align_view_below_top` | the line below the page to the top |  | `z+` `Z+` |  |
-| `vim_align_view_above_bottom` | the line above the page to the bottom |  | `z^` `Z^` |  |
-| `scroll_view_left` | the view a column left |  | `zh` `z Left` `Zh` `Z Left` |  |
-| `scroll_view_right` | the view a column right |  | `zl` `z Right` `Zl` `Z Right` |  |
-| `scroll_view_half_left` | the view half a page left |  | `zH` `ZH` |  |
-| `scroll_view_half_right` | the view half a page right |  | `zL` `ZL` |  |
-| `align_view_cursor_left` | the cursor to the left edge |  | `zs` `Zs` |  |
-| `align_view_cursor_right` | the cursor to the right edge |  | `ze` `Ze` |  |
+| `fold_more` | close one more level (vim's zm) |  | `zm` `Zm` |  |
+| `fold_less` | open one more level (vim's zr) |  | `zr` `Zr` |  |
+| `goto_fold_start` | to this fold's start (vim's [z) |  | `[z` |  |
+| `goto_fold_end` | to this fold's end (vim's ]z) |  | `]z` |  |
+| `reapply_fold_level_and_view` | refold to the fold level, then show the cursor line (vim's zx) |  | `zx` `Zx` |  |
+| `reapply_fold_level` | refold to the fold level (vim's zX) |  | `zX` `ZX` |  |
+| `vim_align_view_top` | line to top, cursor past indent |  | `z Enter` `Z Enter` |  |
+| `vim_align_view_center` | line to center, cursor past indent |  | `z.` `Z.` |  |
+| `vim_align_view_bottom` | line to bottom, cursor past indent |  | `z-` `Z-` |  |
+| `vim_align_view_below_top` | next page's first line to top |  | `z+` `Z+` |  |
+| `vim_align_view_above_bottom` | previous page's last line to bottom |  | `z^` `Z^` |  |
+| `scroll_view_left` | view one column left |  | `zh` `z Left` `Zh` `Z Left` |  |
+| `scroll_view_right` | view one column right |  | `zl` `z Right` `Zl` `Z Right` |  |
+| `scroll_view_half_left` | view half a screen left |  | `zH` `ZH` |  |
+| `scroll_view_half_right` | view half a screen right |  | `zL` `ZL` |  |
+| `align_view_cursor_left` | cursor's column to left edge |  | `zs` `Zs` |  |
+| `align_view_cursor_right` | cursor's column to right edge |  | `ze` `Ze` |  |
 | `align_view_middle` | center sideways | `zm` `Zm` |  |  |
 | `rotate_view_reverse` | previous |  | `C-w W` |  |
 | `jump_view_first` | the first window |  | `C-w t` |  |
@@ -354,7 +354,7 @@
 | `move_view_far_down` | move this window to the very bottom |  | `C-w J` |  |
 | `move_view_far_up` | move this window to the very top |  | `C-w K` |  |
 | `move_view_far_right` | move this window to the far right |  | `C-w L` |  |
-| `vim_close_window` | close this one (never the last) |  | `C-w c` |  |
+| `vim_close_window` | close this region (never the last window) |  | `C-w c` |  |
 | `goto_last_accessed_file_hsplit` | the file before, below |  | `C-w ^` |  |
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |

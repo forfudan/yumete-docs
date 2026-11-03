@@ -348,13 +348,13 @@ It changes what its keys do, not which command they run.
 
 ### `heading_folds` {#heading_folds}
 
-On: every Markdown and Typst heading is a fold over its section, all open at first. Off: vim's, only the folds zf makes.
+On: each Markdown or Typst heading folds its section; all start open. Off: vim's, only folds made with zf.
 
 It changes what its keys do, not which command they run.
 
 ### `helix_fold_keys` {#helix_fold_keys}
 
-On: under helix, za opens or closes a fold, zR opens all, zM closes all, zf makes a fold of the selected lines, as vim's. Off: unbound; folds by command only.
+On: vim's za, zR and zM under helix (open or close a fold, open all, close all); zf makes a fold of the selected lines. Off: unbound; folds by command only.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |

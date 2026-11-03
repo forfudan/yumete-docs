@@ -35,7 +35,7 @@
 | `:convert-opencc-update` |  | bring opencc up to date |
 | `:quit` `:q` |  | close this region; in the last window, leave the editor (`quit!` ignores changes) |
 | `:quit-window` `:close` `:clo` |  | close this region, but never the last window (vim's `:close`, short: `:clo`) |
-| `:quit-others` `:only` `:on` |  | keep only this window; the other windows and the sidebars close (vim's `:only`, short: `:on`) |
+| `:quit-others` `:only` `:on` |  | keep only this window; close other windows and sidebars (vim's `:only`, short: `:on`) |
 | `:quit-all` `:qa` |  | close every open file, then leave (short: :qa) |
 | `:write-quit` `:wq` | `<path>` | always save, then leave (short: :wq; :x saves only if changed) |
 | `:write-quit-all` `:wqa` `:xa` |  | save every file that changed, then leave |
@@ -137,7 +137,7 @@
 | `:pipe-before` | `<命令>` | run a terminal command and put its output before the selection |
 | `:pipe-after` | `<命令>` | run a terminal command and put its output after the selection |
 | `:read` | `<path>` | put a file's contents after the selection |
-| `:view-fold` |  | fold the selected lines |
+| `:view-fold` |  | make a fold of the selected lines |
 | `:keep-pipe` | `<命令>` | keep the selections a terminal command succeeds on |
 | `:pipe-to` | `<命令>` | send the selection through a terminal command and keep nothing back |
 | `:yuhao` |  | open the Yuhao input method website |

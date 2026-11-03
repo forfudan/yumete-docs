@@ -54,7 +54,7 @@
 | `X` | delete the character before the cursor | `delete_char_backward` |
 | `y` | yank (then a motion) | `operator_yank` |
 | `Y` | as `y$` | `@y$` |
-| `z` | the view group: put the cursor line at the top, middle or bottom | `view_mode` |
+| `z` | the view group: place the cursor line, scroll, fold | `view_mode` |
 | `0` | as `gh` | `@gh` |
 | `"` | pick a register (then a letter) | `select_register` |
 | `#` | search backward for the word under the cursor | `search_word_backward` |
@@ -219,7 +219,7 @@
 | `]c` | a change |
 | `]p` | paste after, indented like this line (vim's ]p) |
 | `]P` | paste before, indented like this line (vim's [p) |
-| `]z` | to the end of the open fold here (vim's ]z) |
+| `]z` | to this fold's end (vim's ]z) |
 | `]␣` | a blank line below |
 
 ## previous… (`[`)
@@ -229,7 +229,7 @@
 | `[d / [D` | a diagnostic (capital: the first / the last) |
 | `[c` | a change |
 | `[p / [P` | paste before, indented like this line (vim's [p) |
-| `[z` | to the start of the open fold here (vim's [z) |
+| `[z` | to this fold's start (vim's [z) |
 | `[␣` | a blank line above |
 
 ## view (`z`)
@@ -237,29 +237,29 @@
 | Key | What it does |
 | --- | --- |
 | `zz` | center |
-| `zf` | make a fold over a motion (vim's zf) |
-| `zF` | make a fold over count lines (vim's zF) |
+| `zf` | make a fold (vim's zf, then a motion) |
+| `zF` | make a fold of N lines (vim's zF) |
 | `zo` | open a fold (vim's zo) |
 | `zO` | open every fold here (vim's zO) |
 | `zc` | close a fold (vim's zc) |
 | `zC` | close every fold here (vim's zC) |
 | `za` | open or close a fold (vim's za) |
 | `zA` | open or close every fold here (vim's zA) |
-| `zv` | open enough to see the cursor's line (vim's zv) |
+| `zv` | open folds to show the cursor line (vim's zv) |
 | `zR` | open every fold (vim's zR) |
 | `zM` | close every fold (vim's zM) |
 | `zd` | delete the fold here, not the text (vim's zd) |
-| `zD` | delete every fold here (vim's zD) |
+| `zD` | delete every fold made with zf here (vim's zD) |
 | `zE` | delete every fold made with zf (vim's zE) |
 | `zj` | to the next fold's start (vim's zj) |
 | `zk` | to the previous fold's end (vim's zk) |
-| `zn` | every fold open, kept (vim's zn) |
-| `zN` | folds back as they were (vim's zN) |
+| `zn` | folds off for now (vim's zn) |
+| `zN` | folds back on (vim's zN) |
 | `zi` | folds off or back on (vim's zi) |
-| `zm` | fold one level more (vim's zm) |
-| `zr` | fold one level less (vim's zr) |
-| `zx` | folds back to the level, then open to the cursor (vim's zx) |
-| `zX` | folds back to the level (vim's zX) |
+| `zm` | close one more level (vim's zm) |
+| `zr` | open one more level (vim's zr) |
+| `zx` | refold to the fold level, then show the cursor line (vim's zx) |
+| `zX` | refold to the fold level (vim's zX) |
 | `zt` | top |
 | `zb` | bottom |
 
@@ -276,7 +276,7 @@
 | `C-w r` | rotate this row on |
 | `C-w R` | rotate this row back |
 | `C-w H / C-w J / C-w K / C-w L` | move to that edge |
-| `C-w c` | close this one (never the last) |
+| `C-w c` | close this region (never the last window) |
 | `C-w S` | a window below |
 | `C-w F` | open the file under the cursor below |
 | `C-w ^` | the file before, below |
@@ -285,8 +285,8 @@
 | `C-w s` | a window below |
 | `C-w v` | a window beside |
 | `C-w n` | a blank window |
-| `C-w q` | close this region; the last window leaves |
-| `C-w o` | keep only this one |
+| `C-w q` | close this region (in the last window, quit) |
+| `C-w o` | keep only this window |
 | `C-w f` | open the file under the cursor below |
 
 ## a blank window (`C-w n`, `\wn`)
