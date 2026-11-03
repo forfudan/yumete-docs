@@ -155,7 +155,7 @@
 | `remove_selections` | remove the selections that match a pattern | `A-K` | `A-K` |  |
 | `operator_delete` | delete (then a motion) |  | `d` |  |
 | `operator_change` | change (then a motion) |  | `c` |  |
-| `operator_yank` | yank (then a motion) |  | `y` |  |
+| `operator_yank` | yank (then a motion) |  | `y` `zy` `Zy` |  |
 | `operator_indent` | indent (then a motion) |  | `>` |  |
 | `operator_unindent` | unindent (then a motion) |  | `<` |  |
 | `delete_to_line_end` | delete to the end of the line | `D` |  |  |
@@ -306,17 +306,17 @@
 | `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
 | `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | open the file under the cursor beside | `C-w F` |  |  |
-| `create_fold` | make a fold over a motion (vim's zf) |  | `zf` `Zf` |  |
+| `create_fold` | make a fold over a motion (vim's zf) | `zf` `Zf` | `zf` `Zf` |  |
 | `create_fold_lines` | make a fold over count lines (vim's zF) |  | `zF` `ZF` |  |
 | `open_fold` | open a fold (vim's zo) |  | `zo` `Zo` |  |
 | `open_folds_recursively` | open every fold here (vim's zO) |  | `zO` `ZO` |  |
 | `close_fold` | close a fold (vim's zc) |  | `zc` `Zc` |  |
 | `close_folds_recursively` | close every fold here (vim's zC) |  | `zC` `ZC` |  |
-| `toggle_fold` | open or close a fold (vim's za) |  | `za` `Za` |  |
+| `toggle_fold` | open or close a fold (vim's za) | `za` `Za` | `za` `Za` |  |
 | `toggle_folds_recursively` | open or close every fold here (vim's zA) |  | `zA` `ZA` |  |
 | `open_folds_to_cursor` | open enough to see the cursor's line (vim's zv) |  | `zv` `Zv` |  |
-| `open_all_folds` | open every fold (vim's zR) |  | `zR` `ZR` |  |
-| `close_all_folds` | close every fold (vim's zM) |  | `zM` `ZM` |  |
+| `open_all_folds` | open every fold (vim's zR) | `zR` `ZR` | `zR` `ZR` |  |
+| `close_all_folds` | close every fold (vim's zM) | `zM` `ZM` | `zM` `ZM` |  |
 | `delete_fold` | delete the fold here, not the text (vim's zd) |  | `zd` `Zd` |  |
 | `delete_folds_recursively` | delete every fold here (vim's zD) |  | `zD` `ZD` |  |
 | `delete_all_folds` | delete every fold made with zf (vim's zE) |  | `zE` `ZE` |  |
@@ -329,6 +329,13 @@
 | `fold_less` | fold one level less (vim's zr) |  | `zr` `Zr` |  |
 | `goto_fold_start` | to the start of the open fold here (vim's [z) |  | `[z` |  |
 | `goto_fold_end` | to the end of the open fold here (vim's ]z) |  | `]z` |  |
+| `reapply_fold_level_and_view` | folds back to the level, then open to the cursor (vim's zx) |  | `zx` `Zx` |  |
+| `reapply_fold_level` | folds back to the level (vim's zX) |  | `zX` `ZX` |  |
+| `vim_align_view_top` | top, past the indent |  | `z Enter` `Z Enter` |  |
+| `vim_align_view_center` | middle, past the indent |  | `z.` `Z.` |  |
+| `vim_align_view_bottom` | bottom, past the indent |  | `z-` `Z-` |  |
+| `vim_align_view_below_top` | the line below the page to the top |  | `z+` `Z+` |  |
+| `vim_align_view_above_bottom` | the line above the page to the bottom |  | `z^` `Z^` |  |
 | `rotate_view_reverse` | previous |  | `C-w W` |  |
 | `jump_view_first` | the first window |  | `C-w t` |  |
 | `jump_view_last` | the last window |  | `C-w b` |  |
@@ -480,8 +487,8 @@
 | `vim_goto_line` | to line N, or to the last line without a count (vim's G) |  | `G` |  |
 | `vim_indent` | indent, the cursor keeping its column (vim) |  | `>` |  |
 | `vim_unindent` | unindent, the cursor keeping its column (vim) |  | `<` |  |
-| `vim_paste_after` | paste after (vim's p) |  | `p` |  |
-| `vim_paste_before` | paste before (vim's P) |  | `P` |  |
+| `vim_paste_after` | paste after (vim's p) |  | `p` `zp` `Zp` |  |
+| `vim_paste_before` | paste before (vim's P) |  | `P` `zP` `ZP` |  |
 | `vim_paste_after_indented` | paste after, indented like this line (vim's ]p) |  | `]p` |  |
 | `vim_paste_before_indented` | paste before, indented like this line (vim's [p) |  | `]P` `[p` `[P` |  |
 | `vim_increment` | the number at or after the cursor, plus one (vim's C-a) |  | `C-a` |  |

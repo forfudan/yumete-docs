@@ -236,7 +236,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `zz` | middle |
+| `zz` | center |
 | `zf` | make a fold over a motion (vim's zf) |
 | `zF` | make a fold over count lines (vim's zF) |
 | `zo` | open a fold (vim's zo) |
@@ -258,6 +258,8 @@
 | `zi` | folds off or back on (vim's zi) |
 | `zm` | fold one level more (vim's zm) |
 | `zr` | fold one level less (vim's zr) |
+| `zx` | folds back to the level, then open to the cursor (vim's zx) |
+| `zX` | folds back to the level (vim's zX) |
 | `zt` | top |
 | `zb` | bottom |
 

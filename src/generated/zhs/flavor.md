@@ -29,6 +29,7 @@
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 删到行尾 |
 | [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | 块注释标记各占一行 |
 | [`heading_folds`](#heading_folds) |  |  | 按标题折叠 |
+| [`helix_fold_keys`](#helix_fold_keys) | `za` `zR` `zM` `zf` | — | helix 下的折叠键 |
 | [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim 的 gc 注释 |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | 空格菜单 |
 | [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | 借用 helix 的键 |
@@ -359,6 +360,17 @@ It changes what its keys do, not which command they run.
 开：Markdown 与 Typst 的每个标题都是一个折叠，盖住它那一节，开始时全开着。关：照 vim，只有 zf 做的折叠。
 
 It changes what its keys do, not which command they run.
+
+### `helix_fold_keys` {#helix_fold_keys}
+
+开：helix 下 za 开合折叠，zR 全开，zM 全合，zf 把选中的行做成折叠，同 vim。关：这几个键空着，折叠只用命令。
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| 这一行挪到哪 | `za` | 开合折叠(vim 的 za) |  |
+| 这一行挪到哪 | `zR` | 打开所有折叠(vim 的 zR) |  |
+| 这一行挪到哪 | `zM` | 合上所有折叠(vim 的 zM) |  |
+| 这一行挪到哪 | `zf` | 把选中的行做成折叠 |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
 

@@ -45,9 +45,8 @@ goes to its line and leaves it closed.
 
 ## Keys
 
-These are vim's, under the vim keymap. The helix keymap has none, as helix has no
-folds, but every one is a command (`close_fold`, `open_all_folds` and the rest) that
-`::` finds and a key can be bound to.
+These are vim's, under the vim keymap. Every one is also a command (`close_fold`,
+`open_all_folds` and the rest) that `::` finds and a key can be bound to.
 
 | Key | What it does |
 | --- | --- |
@@ -63,10 +62,22 @@ folds, but every one is a command (`close_fold`, `open_all_folds` and the rest) 
 | `zj` `zk` | down to the start of the next fold, up to the end of the one before |
 | `[z` `]z` | to the start, the end of the open fold the cursor is in |
 | `zn` `zN` `zi` | every fold open for now, back as they were, the one or the other |
+| `zx` `zX` | the folds you opened and closed put back to the level `zm` `zr` `zM` `zR` set, then (`zx`) open to the cursor's line |
 
 `zd` takes only folds you made; a heading fold comes from the heading and stays.
 With the headings, `zM` then `zr` is the outline of the chapters: each `#` open, every
 `##` under it closed.
+
+helix has no folds, so its `z` keys are its view's. The flavour's `helix_fold_keys` item
+(on at `basic`) adds four of vim's on keys helix leaves free:
+
+| Key | What it does |
+| --- | --- |
+| `za` | open the closed fold here or close the open one |
+| `zR` `zM` | open every fold, close every fold |
+| `zf` | make a fold of the selected lines |
+
+`zc`, `zj` and `zk` stay helix's (centre, scroll).
 
 Under either keymap, `:view-fold` makes a fold of the selected lines, as vim's fold
 command does.
