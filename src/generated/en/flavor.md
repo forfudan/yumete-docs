@@ -29,6 +29,7 @@
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | delete to the line's end |
 | [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | block comment marks on their own lines |
 | [`heading_folds`](#heading_folds) |  |  | folds by heading |
+| [`helix_fold_keys`](#helix_fold_keys) | `za` `zR` `zM` `zf` | — | fold keys under helix |
 | [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim's gc comments |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | the Space menu |
 | [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | helix's keys |
@@ -359,6 +360,17 @@ It changes what its keys do, not which command they run.
 On: every Markdown and Typst heading is a fold over its section, all open at first. Off: vim's, only the folds zf makes.
 
 It changes what its keys do, not which command they run.
+
+### `helix_fold_keys` {#helix_fold_keys}
+
+On: under helix, za opens or closes a fold, zR opens all, zM closes all, zf makes a fold of the selected lines, as vim's. Off: unbound; folds by command only.
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| put this line where | `za` | open or close a fold (vim's za) |  |
+| put this line where | `zR` | open every fold (vim's zR) |  |
+| put this line where | `zM` | close every fold (vim's zM) |  |
+| put this line where | `zf` | make a fold of the selected lines |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
 

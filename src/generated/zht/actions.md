@@ -155,7 +155,7 @@
 | `remove_selections` | 去掉配得上正則的選區 | `A-K` | `A-K` |  |
 | `operator_delete` | 刪除(再按一個動作) |  | `d` |  |
 | `operator_change` | 改寫(再按一個動作) |  | `c` |  |
-| `operator_yank` | 複製(再按一個動作) |  | `y` |  |
+| `operator_yank` | 複製(再按一個動作) |  | `y` `zy` `Zy` |  |
 | `operator_indent` | 增加縮進(再按一個動作) |  | `>` |  |
 | `operator_unindent` | 減少縮進(再按一個動作) |  | `<` |  |
 | `delete_to_line_end` | 刪到行尾 | `D` |  |  |
@@ -306,17 +306,17 @@
 | `swap_view_right` | 和右邊那一區對調 | `C-w L` |  |  |
 | `goto_file_hsplit` | 在下面打開光標下的文件 | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | 在旁邊打開光標下的文件 | `C-w F` |  |  |
-| `create_fold` | 做一個折疊(vim 的 zf，後面跟移動) |  | `zf` `Zf` |  |
+| `create_fold` | 做一個折疊(vim 的 zf，後面跟移動) | `zf` `Zf` | `zf` `Zf` |  |
 | `create_fold_lines` | 把計數那麼多行做成折疊(vim 的 zF) |  | `zF` `ZF` |  |
 | `open_fold` | 打開折疊(vim 的 zo) |  | `zo` `Zo` |  |
 | `open_folds_recursively` | 打開這裏的所有折疊(vim 的 zO) |  | `zO` `ZO` |  |
 | `close_fold` | 合上折疊(vim 的 zc) |  | `zc` `Zc` |  |
 | `close_folds_recursively` | 合上這裏的所有折疊(vim 的 zC) |  | `zC` `ZC` |  |
-| `toggle_fold` | 開合折疊(vim 的 za) |  | `za` `Za` |  |
+| `toggle_fold` | 開合折疊(vim 的 za) | `za` `Za` | `za` `Za` |  |
 | `toggle_folds_recursively` | 開合這裏的所有折疊(vim 的 zA) |  | `zA` `ZA` |  |
 | `open_folds_to_cursor` | 打開到看得見光標那一行(vim 的 zv) |  | `zv` `Zv` |  |
-| `open_all_folds` | 打開所有折疊(vim 的 zR) |  | `zR` `ZR` |  |
-| `close_all_folds` | 合上所有折疊(vim 的 zM) |  | `zM` `ZM` |  |
+| `open_all_folds` | 打開所有折疊(vim 的 zR) | `zR` `ZR` | `zR` `ZR` |  |
+| `close_all_folds` | 合上所有折疊(vim 的 zM) | `zM` `ZM` | `zM` `ZM` |  |
 | `delete_fold` | 刪掉這裏的折疊，字不動(vim 的 zd) |  | `zd` `Zd` |  |
 | `delete_folds_recursively` | 刪掉這裏的所有折疊(vim 的 zD) |  | `zD` `ZD` |  |
 | `delete_all_folds` | 刪掉所有 zf 做的折疊(vim 的 zE) |  | `zE` `ZE` |  |
@@ -329,6 +329,13 @@
 | `fold_less` | 多打開一層(vim 的 zr) |  | `zr` `Zr` |  |
 | `goto_fold_start` | 到所在折疊的開頭(vim 的 [z) |  | `[z` |  |
 | `goto_fold_end` | 到所在折疊的末尾(vim 的 ]z) |  | `]z` |  |
+| `reapply_fold_level_and_view` | 折疊回到層級，再打開到光標那一行(vim 的 zx) |  | `zx` `Zx` |  |
+| `reapply_fold_level` | 折疊回到層級(vim 的 zX) |  | `zX` `ZX` |  |
+| `vim_align_view_top` | 頂上，光標到縮進之後 |  | `z Enter` `Z Enter` |  |
+| `vim_align_view_center` | 中間，光標到縮進之後 |  | `z.` `Z.` |  |
+| `vim_align_view_bottom` | 底下，光標到縮進之後 |  | `z-` `Z-` |  |
+| `vim_align_view_below_top` | 屏幕下面那一行放到頂上 |  | `z+` `Z+` |  |
+| `vim_align_view_above_bottom` | 屏幕上面那一行放到底下 |  | `z^` `Z^` |  |
 | `rotate_view_reverse` | 上一個 |  | `C-w W` |  |
 | `jump_view_first` | 第一個窗口 |  | `C-w t` |  |
 | `jump_view_last` | 最後一個窗口 |  | `C-w b` |  |
@@ -480,8 +487,8 @@
 | `vim_goto_line` | 到第幾行，不帶計數到最後一行(vim 的 G) |  | `G` |  |
 | `vim_indent` | 增加縮進，光標留在原列(vim) |  | `>` |  |
 | `vim_unindent` | 減少縮進，光標留在原列(vim) |  | `<` |  |
-| `vim_paste_after` | 向後粘貼(vim 的 p) |  | `p` |  |
-| `vim_paste_before` | 向前粘貼(vim 的 P) |  | `P` |  |
+| `vim_paste_after` | 向後粘貼(vim 的 p) |  | `p` `zp` `Zp` |  |
+| `vim_paste_before` | 向前粘貼(vim 的 P) |  | `P` `zP` `ZP` |  |
 | `vim_paste_after_indented` | 向後粘貼，縮進對齊這一行(vim 的 ]p) |  | `]p` |  |
 | `vim_paste_before_indented` | 向前粘貼，縮進對齊這一行(vim 的 [p) |  | `]P` `[p` `[P` |  |
 | `vim_increment` | 光標處或其後的數字加一(vim 的 C-a) |  | `C-a` |  |

@@ -270,9 +270,19 @@
 
 | Key | What it does |
 | --- | --- |
-| `zz` | middle |
+| `zz / zc` | center |
 | `zt` | top |
 | `zb` | bottom |
+| `zj / z<down>` | scroll down |
+| `zk / z<up>` | scroll up |
+| `zC-d / z␣` | half a page down |
+| `zC-u / z⌫` | half a page up |
+| `zC-f / z<pagedown>` | a page down |
+| `zC-b / z<pageup>` | a page up |
+| `z/` | search forward |
+| `z?` | search backward |
+| `zn` | the next match |
+| `zN` | the previous match |
 
 ## region (`C-w`, `Space w`)
 
