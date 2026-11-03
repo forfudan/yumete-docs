@@ -243,6 +243,19 @@
 | Key | What it does |
 | --- | --- |
 | `C-w w` | next |
+| `C-w W` | previous |
+| `C-w t` | the first window |
+| `C-w b` | the last window |
+| `C-w p` | the window before |
+| `C-w x` | trade places with the next |
+| `C-w r` | rotate this row on |
+| `C-w R` | rotate this row back |
+| `C-w H / C-w J / C-w K / C-w L` | move to that edge |
+| `C-w c` | close this one (never the last) |
+| `C-w S` | a window below |
+| `C-w F` | open the file under the cursor below |
+| `C-w ^` | the file before, below |
+| `C-w :` | the command line |
 | `C-w h / C-w j / C-w k / C-w l` | go that way |
 | `C-w s` | a window below |
 | `C-w v` | a window beside |

@@ -20,7 +20,7 @@ after either, as in helix.
 | `C-w n s` `C-w n v` | open a blank window below or beside this one and go there |
 | `C-w e` `C-w i` | open or close the left / right sidebar; the keys stay where they are |
 | `C-w E` `C-w I` | open the left / right sidebar and go into it |
-| `C-w q` | close the region you are in |
+| `C-w q` | close the region you are in; in the last window it is `:q` |
 | `C-w o` | keep only this window; close every other window and both sidebars |
 | `C-w t` | turn the split this window is in: beside becomes below, below becomes beside |
 | `C-w H` `C-w J` `C-w K` `C-w L` | swap this window with the one in that direction; the keys stay in this one |
@@ -38,8 +38,7 @@ Lower case leaves the keys where they are. `C-w e` folds the left sidebar
 away or brings it back while you keep typing in the text. Upper case `C-w E`
 opens the sidebar and moves into it, and never closes it.
 
-`C-w q` in the only window left does nothing but say so: closing it would
-mean leaving, and that is `:q`.
+`C-w q` in the last window is `:q`, as in helix and vim.
 
 ## Windows
 
@@ -59,8 +58,24 @@ C-w n v, :vnew    a blank window beside, on a new empty buffer
 
 With the vim key preset `C-w n` (or `C-w C-n`) opens the blank window at
 once, below, as vim does. `C-w t`, `C-w F` and `C-w H` `J` `K` `L` are
-helix's and not there, since vim's mean other things; `C-w f` is the same
-in both.
+vim's, and these are added:
+
+| Key | Action |
+| --- | --- |
+| `C-w W` | go to the region before this one, wrapping |
+| `C-w t` `C-w b` | go to the first / last window |
+| `C-w p` | go to the window you were in before |
+| *N* `C-w w`, *N* `C-w W` | go to window *N* |
+| `C-w x` | trade places with the next window of this row or column (from the last, the one before; *N* `C-w x`, the *N*th); the keys stay at that place on the screen |
+| `C-w r` `C-w R` | move the windows of this row or column one place on / back; the keys stay with this window. Not when one of them is split the other way |
+| `C-w H` `C-w J` `C-w K` `C-w L` | move this window to that edge of the screen, taking the whole of it |
+| `C-w c` | close the region you are in, but never the last window; *N* `C-w c` closes window *N* |
+| `C-w S` `C-w F` | the same as `C-w s` and `C-w f` |
+| `C-w ^` | open the file before this one in a new window below |
+| `C-w :` | the command line |
+
+vim's size keys (`=` `+` `-` `<` `>` `_` `|`) are not there, since every
+split halves the room; nor are its tab, preview-window and tag keys.
 
 The words are positions, not directions: on a vertical page, where the text
 itself runs down the columns, "beside" still means side by side and "below"

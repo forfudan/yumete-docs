@@ -178,7 +178,7 @@
 | `shell_append_output` | 把外部命令的輸出接在選區後 | `A-!` | `A-!` |  |
 | `shell_pipe_to` | 把選區交給外部命令，不改文本 | `A-\|` | `A-\|` |  |
 | `shell_keep_pipe` | 只留下終端命令通過的選區 | `$` |  |  |
-| `command_mode` | 命令行 | `:` | `:` |  |
+| `command_mode` | 命令行 | `:` | `:` `C-w :` |  |
 | `match_mode` | 配對組：括號、引號、對象 | `m` |  |  |
 | `replace` | 把選中的每個字換成另一個字 | `r` | `r` |  |
 | `select_register` | 選寄存器(再按一個字母) | `"` | `"` |  |
@@ -292,7 +292,7 @@
 | `toggle_right_sidebar` | 開關右欄 | `C-w i` | `C-w i` |  |
 | `goto_left_sidebar` | 進左欄 | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | 進右欄 | `C-w I` | `C-w I` |  |
-| `hsplit` | 下面開一個窗口 | `C-w s` | `C-w s` |  |
+| `hsplit` | 下面開一個窗口 | `C-w s` | `C-w S` `C-w s` |  |
 | `vsplit` | 旁邊開一個窗口 | `C-w v` | `C-w v` |  |
 | `hsplit_new` | 下面開一個空白窗口 | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | 旁邊開一個空白窗口 | `C-w n v` | `C-w n v` |  |
@@ -304,8 +304,21 @@
 | `swap_view_down` | 和下面那一區對調 | `C-w J` |  |  |
 | `swap_view_up` | 和上面那一區對調 | `C-w K` |  |  |
 | `swap_view_right` | 和右邊那一區對調 | `C-w L` |  |  |
-| `goto_file_hsplit` | 在下面打開光標下的文件 | `C-w f` | `C-w f` |  |
+| `goto_file_hsplit` | 在下面打開光標下的文件 | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | 在旁邊打開光標下的文件 | `C-w F` |  |  |
+| `rotate_view_reverse` | 上一個 |  | `C-w W` |  |
+| `jump_view_first` | 第一個窗口 |  | `C-w t` |  |
+| `jump_view_last` | 最後一個窗口 |  | `C-w b` |  |
+| `jump_view_last_accessed` | 剛纔那個窗口 |  | `C-w p` |  |
+| `exchange_view` | 和下一個對調 |  | `C-w x` |  |
+| `rotate_views_forward` | 這一排往後輪 |  | `C-w r` |  |
+| `rotate_views_backward` | 這一排往前輪 |  | `C-w R` |  |
+| `move_view_far_left` | 挪到最左邊 |  | `C-w H` |  |
+| `move_view_far_down` | 挪到最下面 |  | `C-w J` |  |
+| `move_view_far_up` | 挪到最上面 |  | `C-w K` |  |
+| `move_view_far_right` | 挪到最右邊 |  | `C-w L` |  |
+| `vim_close_window` | 關掉這一區(最後一個不關) |  | `C-w c` |  |
+| `goto_last_accessed_file_hsplit` | 在下面打開上一個文件 |  | `C-w ^` |  |
 | `switch_to_lowercase` | 轉小寫 | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | 轉大寫 | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | 繁→簡 | `` `s `` | `` g`s `` |  |
