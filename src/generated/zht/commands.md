@@ -137,7 +137,7 @@
 | `:pipe-before` | `<命令>` | 跑一條終端命令，把輸出插在選區之前 |
 | `:pipe-after` | `<命令>` | 跑一條終端命令，把輸出接在選區之後 |
 | `:read` | `<路徑>` | 將文件内容插入選區之後 |
-| `:view-fold` |  | 把選中的行做成一個折疊 |
+| `:view-fold` |  | 把選中的行做成折疊 |
 | `:keep-pipe` | `<命令>` | 只留下終端命令通過的選區 |
 | `:pipe-to` | `<命令>` | 將選區發送爲終端命令 |
 | `:yuhao` |  | 打開宇浩輸入法官網 |
@@ -164,7 +164,7 @@
 | `:buffer` |  | 開着的文件：列出、切換、關掉 |
 | `:buffer-next` `:bn` |  | 下一個 |
 | `:buffer-previous` `:bp` |  | 上一個 |
-| `:buffer-close` `:bc` |  | 關掉這一個(`buffer-close!` 不管改動) |
+| `:buffer-close` `:bc` |  | 關掉這個文件(`buffer-close!` 不管改動) |
 | `:format` `:fmt` |  | 照這種文件在配置裏説的那樣格式化([language.markdown] format = …) |
 | `:run` | `<名字>` | 跑這種文件在配置裏自己起名的那條命令 |
 | `:markdown-footnote` |  | 腳注：號碼自己找空的，註也一併開好 |

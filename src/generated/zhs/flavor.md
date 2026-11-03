@@ -348,13 +348,13 @@ It changes what its keys do, not which command they run.
 
 ### `heading_folds` {#heading_folds}
 
-开：Markdown 与 Typst 的每个标题都是一个折叠，盖住它那一节，开始时全开着。关：照 vim，只有 zf 做的折叠。
+开：Markdown 与 Typst 每个标题下的那一节是一个折叠，开始时全开着。关：照 vim，只有 zf 做的折叠。
 
 It changes what its keys do, not which command they run.
 
 ### `helix_fold_keys` {#helix_fold_keys}
 
-开：helix 下 za 开合折叠，zR 全开，zM 全合，zf 把选中的行做成折叠，同 vim。关：这几个键空着，折叠只用命令。
+开：helix 下也有 vim 的 za 开合折叠、zR 全开、zM 全合；zf 把选中的行做成折叠。关：这几个键空着，只能用命令折叠。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |

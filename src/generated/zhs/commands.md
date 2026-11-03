@@ -137,7 +137,7 @@
 | `:pipe-before` | `<命令>` | 跑一条终端命令，把输出插在选区之前 |
 | `:pipe-after` | `<命令>` | 跑一条终端命令，把输出接在选区之后 |
 | `:read` | `<路径>` | 将文件内容插入选区之后 |
-| `:view-fold` |  | 把选中的行做成一个折叠 |
+| `:view-fold` |  | 把选中的行做成折叠 |
 | `:keep-pipe` | `<命令>` | 只留下终端命令通过的选区 |
 | `:pipe-to` | `<命令>` | 将选区发送为终端命令 |
 | `:yuhao` |  | 打开宇浩输入法官网 |
@@ -164,7 +164,7 @@
 | `:buffer` |  | 开着的文件：列出、切换、关掉 |
 | `:buffer-next` `:bn` |  | 下一个 |
 | `:buffer-previous` `:bp` |  | 上一个 |
-| `:buffer-close` `:bc` |  | 关掉这一个(`buffer-close!` 不管改动) |
+| `:buffer-close` `:bc` |  | 关掉这个文件(`buffer-close!` 不管改动) |
 | `:format` `:fmt` |  | 照这种文件在配置里説的那样格式化([language.markdown] format = …) |
 | `:run` | `<名字>` | 跑这种文件在配置里自己起名的那条命令 |
 | `:markdown-footnote` |  | 脚注：号码自己找空的，注也一并开好 |

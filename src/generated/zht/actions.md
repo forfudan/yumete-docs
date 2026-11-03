@@ -120,7 +120,7 @@
 | `jump_next_sentence` | 光標跳到下一句(不選中) |  | `)` |  |
 | `add_mark` | 設標記(再按一個字母) | `M` | `m` |  |
 | `goto_mark` | 回到標記(再按一個字母) | `'` | `` ` `` `'` `` g` `` |  |
-| `view_mode` | 視圖組：把光標行放到屏幕頂、中、底 | `z` | `z` |  |
+| `view_mode` | 視圖組：放光標行、滾屏、折疊 | `z` | `z` |  |
 | `sticky_view_mode` | 視圖組(按完不收) | `Z` | `Z` |  |
 | `right_bracket_mode` | ] 組：往後找下一處 | `]` | `]` |  |
 | `left_bracket_mode` | [ 組：往前找上一處 | `[` | `[` |  |
@@ -166,7 +166,7 @@
 | `move_selected_lines_up` | 把選中的行往上移 | `A-k` | `A-k` |  |
 | `goto_line_or_last_line` | 到第 N 行，不帶數字到末行 | `G` |  |  |
 | `normal_mode_and_collapse` | 退出選擇，或收成一個光標 |  |  |  |
-| `quit` | 關掉這一個 |  |  |  |
+| `quit` | 關掉這一區；最後一個窗口就離開編輯器 |  |  |  |
 | `select_inner_object` | 選中對象的裏面(再按一個對象) |  | `i` |  |
 | `select_around_object` | 選中整個對象(再按一個對象) |  | `a` |  |
 | `undo_line` | 撤銷這一行的所有改動 |  | `U` |  |
@@ -297,8 +297,8 @@
 | `hsplit_new` | 下面開一個空白窗口 | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | 旁邊開一個空白窗口 | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | 空白窗口組：s 下面，v 旁邊 | `C-w n` | `C-w n` |  |
-| `wclose` | 關掉這一區 | `C-w q` | `C-w q` |  |
-| `wonly` | 只留這一區 | `C-w o` | `C-w o` |  |
+| `wclose` | 關掉這一區(最後一個窗口就離開編輯器) | `C-w q` | `C-w q` |  |
+| `wonly` | 只留這個窗口 | `C-w o` | `C-w o` |  |
 | `transpose_view` | 並排與上下互換 | `C-w t` |  |  |
 | `swap_view_left` | 和左邊那一區對調 | `C-w H` |  |  |
 | `swap_view_down` | 和下面那一區對調 | `C-w J` |  |  |
@@ -307,41 +307,41 @@
 | `goto_file_hsplit` | 在下面打開光標下的文件 | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | 在旁邊打開光標下的文件 | `C-w F` |  |  |
 | `create_fold` | 做一個折疊(vim 的 zf，後面跟移動) | `zf` `Zf` | `zf` `Zf` |  |
-| `create_fold_lines` | 把計數那麼多行做成折疊(vim 的 zF) |  | `zF` `ZF` |  |
+| `create_fold_lines` | 把 N 行做成折疊(vim 的 zF，用計數) |  | `zF` `ZF` |  |
 | `open_fold` | 打開折疊(vim 的 zo) |  | `zo` `Zo` |  |
 | `open_folds_recursively` | 打開這裏的所有折疊(vim 的 zO) |  | `zO` `ZO` |  |
 | `close_fold` | 合上折疊(vim 的 zc) |  | `zc` `Zc` |  |
 | `close_folds_recursively` | 合上這裏的所有折疊(vim 的 zC) |  | `zC` `ZC` |  |
 | `toggle_fold` | 開合折疊(vim 的 za) | `za` `Za` | `za` `Za` |  |
 | `toggle_folds_recursively` | 開合這裏的所有折疊(vim 的 zA) |  | `zA` `ZA` |  |
-| `open_folds_to_cursor` | 打開到看得見光標那一行(vim 的 zv) |  | `zv` `Zv` |  |
+| `open_folds_to_cursor` | 打開折疊，露出光標所在行(vim 的 zv) |  | `zv` `Zv` |  |
 | `open_all_folds` | 打開所有折疊(vim 的 zR) | `zR` `ZR` | `zR` `ZR` |  |
 | `close_all_folds` | 合上所有折疊(vim 的 zM) | `zM` `ZM` | `zM` `ZM` |  |
 | `delete_fold` | 刪掉這裏的折疊，字不動(vim 的 zd) |  | `zd` `Zd` |  |
-| `delete_folds_recursively` | 刪掉這裏的所有折疊(vim 的 zD) |  | `zD` `ZD` |  |
+| `delete_folds_recursively` | 刪掉這裏所有 zf 做的折疊(vim 的 zD) |  | `zD` `ZD` |  |
 | `delete_all_folds` | 刪掉所有 zf 做的折疊(vim 的 zE) |  | `zE` `ZE` |  |
 | `goto_next_fold` | 到下一個折疊的開頭(vim 的 zj) |  | `zj` `Zj` |  |
 | `goto_prev_fold` | 到上一個折疊的末尾(vim 的 zk) |  | `zk` `Zk` |  |
-| `disable_folds` | 暫時全部展開(vim 的 zn) |  | `zn` `Zn` |  |
-| `enable_folds` | 折疊恢復原樣(vim 的 zN) |  | `zN` `ZN` |  |
-| `toggle_folds_enabled` | 折疊停用或恢復(vim 的 zi) |  | `zi` `Zi` |  |
+| `disable_folds` | 暫時停用折疊(vim 的 zn) |  | `zn` `Zn` |  |
+| `enable_folds` | 恢復折疊(vim 的 zN) |  | `zN` `ZN` |  |
+| `toggle_folds_enabled` | 停用或恢復折疊(vim 的 zi) |  | `zi` `Zi` |  |
 | `fold_more` | 多合上一層(vim 的 zm) |  | `zm` `Zm` |  |
 | `fold_less` | 多打開一層(vim 的 zr) |  | `zr` `Zr` |  |
 | `goto_fold_start` | 到所在折疊的開頭(vim 的 [z) |  | `[z` |  |
 | `goto_fold_end` | 到所在折疊的末尾(vim 的 ]z) |  | `]z` |  |
-| `reapply_fold_level_and_view` | 折疊回到層級，再打開到光標那一行(vim 的 zx) |  | `zx` `Zx` |  |
-| `reapply_fold_level` | 折疊回到層級(vim 的 zX) |  | `zX` `ZX` |  |
-| `vim_align_view_top` | 頂上，光標到縮進之後 |  | `z Enter` `Z Enter` |  |
-| `vim_align_view_center` | 中間，光標到縮進之後 |  | `z.` `Z.` |  |
-| `vim_align_view_bottom` | 底下，光標到縮進之後 |  | `z-` `Z-` |  |
-| `vim_align_view_below_top` | 屏幕下面那一行放到頂上 |  | `z+` `Z+` |  |
-| `vim_align_view_above_bottom` | 屏幕上面那一行放到底下 |  | `z^` `Z^` |  |
-| `scroll_view_left` | 視圖往左一欄 |  | `zh` `z Left` `Zh` `Z Left` |  |
-| `scroll_view_right` | 視圖往右一欄 |  | `zl` `z Right` `Zl` `Z Right` |  |
-| `scroll_view_half_left` | 視圖往左半頁 |  | `zH` `ZH` |  |
-| `scroll_view_half_right` | 視圖往右半頁 |  | `zL` `ZL` |  |
-| `align_view_cursor_left` | 光標那一列放到左邊 |  | `zs` `Zs` |  |
-| `align_view_cursor_right` | 光標那一列放到右邊 |  | `ze` `Ze` |  |
+| `reapply_fold_level_and_view` | 按層級重新折疊，再露出光標所在行(vim 的 zx) |  | `zx` `Zx` |  |
+| `reapply_fold_level` | 按層級重新折疊(vim 的 zX) |  | `zX` `ZX` |  |
+| `vim_align_view_top` | 這一行放到頂上，光標到縮進之後 |  | `z Enter` `Z Enter` |  |
+| `vim_align_view_center` | 這一行放到中間，光標到縮進之後 |  | `z.` `Z.` |  |
+| `vim_align_view_bottom` | 這一行放到底下，光標到縮進之後 |  | `z-` `Z-` |  |
+| `vim_align_view_below_top` | 下一頁第一行放到頂上 |  | `z+` `Z+` |  |
+| `vim_align_view_above_bottom` | 上一頁最後一行放到底下 |  | `z^` `Z^` |  |
+| `scroll_view_left` | 視圖往左一列 |  | `zh` `z Left` `Zh` `Z Left` |  |
+| `scroll_view_right` | 視圖往右一列 |  | `zl` `z Right` `Zl` `Z Right` |  |
+| `scroll_view_half_left` | 視圖往左半屏 |  | `zH` `ZH` |  |
+| `scroll_view_half_right` | 視圖往右半屏 |  | `zL` `ZL` |  |
+| `align_view_cursor_left` | 光標那一列放到最左邊 |  | `zs` `Zs` |  |
+| `align_view_cursor_right` | 光標那一列放到最右邊 |  | `ze` `Ze` |  |
 | `align_view_middle` | 橫向居中 | `zm` `Zm` |  |  |
 | `rotate_view_reverse` | 上一個 |  | `C-w W` |  |
 | `jump_view_first` | 第一個窗口 |  | `C-w t` |  |

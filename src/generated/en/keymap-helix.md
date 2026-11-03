@@ -48,7 +48,7 @@
 | `x` | select this line | `extend_line_below` |
 | `X` | grow the selection to whole lines | `extend_to_line_bounds` |
 | `y` | yank | `yank` |
-| `z` | the view group: put the cursor line at the top, middle or bottom | `view_mode` |
+| `z` | the view group: place the cursor line, scroll, fold | `view_mode` |
 | `Z` | the view group, staying open | `sticky_view_mode` |
 | `Space` | the Space menu | `space_mode` |
 | `!` | insert a command's output before the selection | `shell_insert_output` |
@@ -274,12 +274,12 @@
 | `zt` | top |
 | `zb` | bottom |
 | `zm` | center sideways |
-| `zj / z<down>` | scroll down |
-| `zk / z<up>` | scroll up |
-| `zC-d / z␣` | half a page down |
-| `zC-u / z⌫` | half a page up |
-| `zC-f / z<pagedown>` | a page down |
-| `zC-b / z<pageup>` | a page up |
+| `zj / z<down>` | scroll down a line |
+| `zk / z<up>` | scroll up a line |
+| `zC-d / z␣` | half page down |
+| `zC-u / z⌫` | half page up |
+| `zC-f / z<pagedown>` | page down |
+| `zC-b / z<pageup>` | page up |
 | `z/` | search forward |
 | `z?` | search backward |
 | `zn` | the next match |
@@ -294,8 +294,8 @@
 | `C-w s` | a window below |
 | `C-w v` | a window beside |
 | `C-w n` | a blank window |
-| `C-w q` | close this region; the last window leaves |
-| `C-w o` | keep only this one |
+| `C-w q` | close this region (in the last window, quit) |
+| `C-w o` | keep only this window |
 | `C-w t` | turn the split: beside or below |
 | `C-w H / C-w J / C-w K / C-w L` | trade places with the one that way |
 | `C-w f` | open the file under the cursor below |
