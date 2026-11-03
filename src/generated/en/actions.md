@@ -336,6 +336,13 @@
 | `vim_align_view_bottom` | bottom, past the indent |  | `z-` `Z-` |  |
 | `vim_align_view_below_top` | the line below the page to the top |  | `z+` `Z+` |  |
 | `vim_align_view_above_bottom` | the line above the page to the bottom |  | `z^` `Z^` |  |
+| `scroll_view_left` | the view a column left |  | `zh` `z Left` `Zh` `Z Left` |  |
+| `scroll_view_right` | the view a column right |  | `zl` `z Right` `Zl` `Z Right` |  |
+| `scroll_view_half_left` | the view half a page left |  | `zH` `ZH` |  |
+| `scroll_view_half_right` | the view half a page right |  | `zL` `ZL` |  |
+| `align_view_cursor_left` | the cursor to the left edge |  | `zs` `Zs` |  |
+| `align_view_cursor_right` | the cursor to the right edge |  | `ze` `Ze` |  |
+| `align_view_middle` | center sideways | `zm` `Zm` |  |  |
 | `rotate_view_reverse` | previous |  | `C-w W` |  |
 | `jump_view_first` | the first window |  | `C-w t` |  |
 | `jump_view_last` | the last window |  | `C-w b` |  |
