@@ -277,17 +277,15 @@
 | `C-w R` | rotate this row back |
 | `C-w H / C-w J / C-w K / C-w L` | move to that edge |
 | `C-w c` | close, don't quit |
-| `C-w S` | a window below |
-| `C-w F` | file under cursor, below |
-| `C-w ^` | the file before, below |
+| `C-w S / C-w s` | a window above |
+| `C-w F / C-w f` | file under cursor, above |
+| `C-w ^` | the file before, above |
 | `C-w :` | the command line |
 | `C-w h / C-w j / C-w k / C-w l` | go that way |
-| `C-w s` | a window below |
 | `C-w v` | a window beside |
 | `C-w n` | a blank window |
 | `C-w q` | close |
 | `C-w o` | keep only this window |
-| `C-w f` | file under cursor, below |
 
 ## a blank window (`C-w n`, `\wn`)
 

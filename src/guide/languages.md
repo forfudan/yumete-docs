@@ -119,6 +119,8 @@ These come filled in:
 | `go` | `gopls` |
 | `mojo` | `mojo-lsp-server` |
 | `python` | `ty server`, `pylsp`, `jedi-language-server`, `ruff server` |
+| `markdown` | `marksman server`, `markdown-oxide`, `rumdl server` |
+| `typst` | `tinymist` |
 
 For any other language, add a table yourself. `tsx` is its own name, separate from
 `typescript`, so a TSX file needs `[lsp.tsx]` too.
@@ -141,8 +143,15 @@ choose its servers for everyone who opens it.
 
 ## Servers for text files
 
-Markdown, Typst and plain text have no server by default. Name one and it is attached,
-for example a spelling and grammar checker such as `harper-ls`:
+Markdown and Typst come with helix's servers filled in, and each starts when it is
+installed: `marksman` (links and headings), `markdown-oxide` (notes linked with
+`[[ ]]`) and `rumdl` (markdownlint's rules) for Markdown, `tinymist` for Typst. With
+none of them installed a text file opens without a word about servers. `rumdl` warns
+about lines over 80 characters by default, and a Markdown paragraph is one line; a
+`.rumdl.toml` with `[global]` and `disable = ["MD013"]` turns that rule off. Plain
+text has no server. Writing a
+language replaces its list, for example with a spelling and grammar checker such as
+`harper-ls`:
 
 ```toml
 [[lsp.markdown]]
