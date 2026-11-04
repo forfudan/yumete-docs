@@ -12,16 +12,16 @@
 | `move_next_long_word_start` | the next long word's start | `W` |  |  |
 | `move_prev_long_word_start` | the previous long word's start | `B` |  |  |
 | `move_next_long_word_end` | the next long word's end | `E` |  |  |
-| `goto_line_start` | the start of the line | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | the end of the line | `End` `gl` `g Down` |  |  |
+| `goto_line_start` | the start of the line | `0` `Home` `gh` | `Home` `0` | `Home` `C-a` |
+| `goto_line_end` | the end of the line | `End` `gl` |  |  |
 | `goto_first_nonwhitespace` | the first character that is not a space | `^` `gs` | `^` |  |
 | `goto_file_start` | the start of the file | `gg` | `gg` |  |
 | `goto_file_end` | the end of the file |  |  |  |
-| `goto_last_line` | the last line | `ge` | `ge` |  |
+| `goto_last_line` | the last line | `ge` |  |  |
 | `goto_prev_sentence` | the previous sentence | `H` |  |  |
 | `goto_next_sentence` | the next sentence | `L` |  |  |
-| `goto_prev_paragraph` | the previous paragraph | `[p` | `[p` |  |
-| `goto_next_paragraph` | the next paragraph | `]p` | `]p` |  |
+| `goto_prev_paragraph` | the previous paragraph | `[p` |  |  |
+| `goto_next_paragraph` | the next paragraph | `]p` |  |  |
 | `page_cursor_half_down` | half a page down | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` |  |
 | `page_cursor_half_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` |  |
 | `jump_backward` | back to where you jumped from | `C-o` | `C-o` |  |
@@ -70,7 +70,7 @@
 | `insert_char_below` | type the character below the cursor |  |  | `C-e` |
 | `file_picker` | open the file picker | `Space f` | `Space f` |  |
 | `buffer_picker` | open the buffer picker | `Space b` | `Space b` |  |
-| `goto_next_buffer` | the next buffer | `gn` | `gn` |  |
+| `goto_next_buffer` | the next buffer | `gn` |  |  |
 | `goto_previous_buffer` | the previous buffer | `gp` |  |  |
 | `dictionary` | the 拆分 of the character under the cursor | `Space n` | `Space n` |  |
 | `rotate_view` | the next region | `C-w w` | `C-w w` |  |
@@ -100,8 +100,8 @@
 | `extend_parent_node_start` | extend the selection to the start of the node around the cursor | `A-b` | `A-b` |  |
 | `last_picker` | the last picker again | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | paste from the system clipboard | `Space p` | `Space p` |  |
-| `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
-| `move_line_down` | one line down, in the file | `gj` `g Down` | `C-n` `j` `Down` `gj` `g Down` |  |
+| `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` |  |
+| `move_line_down` | one line down, in the file | `gj` `g Down` | `C-n` `j` `Down` |  |
 | `goto_next_line_nonwhitespace` | the next line's first character that is not a space |  | `Enter` |  |
 | `jump_next_word_start` | the cursor to the next word's start, selecting nothing |  | `w` |  |
 | `jump_next_long_word_start` | the cursor to the next long word's start, selecting nothing |  | `W` |  |
@@ -119,7 +119,7 @@
 | `jump_prev_sentence` | the cursor to the previous sentence, selecting nothing |  | `(` |  |
 | `jump_next_sentence` | the cursor to the next sentence, selecting nothing |  | `)` |  |
 | `add_mark` | set a mark (then a letter) | `M` | `m` |  |
-| `goto_mark` | go to a mark (then a letter) | `'` | `` ` `` `'` `` g` `` |  |
+| `goto_mark` | go to a mark (then a letter) | `'` | `` ` `` `'` |  |
 | `view_mode` | the view group: place the cursor line, scroll, fold | `z` | `z` |  |
 | `sticky_view_mode` | the view group, staying open | `Z` | `Z` |  |
 | `right_bracket_mode` | the ] group: the next one of something | `]` | `]` |  |
@@ -205,13 +205,13 @@
 | `repeat_last_motion` | repeat the last f or t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | the cursor back to the previous word's end, selecting nothing |  | `ge` |  |
 | `jump_prev_long_word_end` | the cursor back to the previous long word's end, selecting nothing |  | `gE` |  |
-| `goto_word` | go to a place on this screen | `gw` | `gW` `gw` |  |
+| `goto_word` | go to a place on this screen | `gw` | `gW` |  |
 | `goto_word_by_letters` | two letters to locate a word | `gz` | `gz` |  |
 | `goto_char_by_pinyin` | more letters to locate a char | `gZ` | `gZ` |  |
 | `goto_last_accessed_file` | back to the buffer before this one | `ga` | `` |  |
 | `goto_reference` | every place it is used | `gr` |  |  |
-| `move_next_zong` | on a vertical page, on to the next line of the file |  | `gj` |  |
-| `move_prev_zong` | on a vertical page, back to the previous line of the file |  | `gk` |  |
+| `move_next_zong` | on a vertical page, on to the next line of the file |  |  |  |
+| `move_prev_zong` | on a vertical page, back to the previous line of the file |  |  |  |
 | `goto_last_modification` | back to the last change | `g.` | `g.` |  |
 | `reselect_last_selection` | select what was selected last |  | `gv` |  |
 | `insert_at_last_insert` | insert again where the last Insert stopped |  | `gi` |  |
@@ -261,8 +261,8 @@
 | `goto_prev_function` | the previous function | `[f` |  |  |
 | `goto_next_class` | the next class | `]t` |  |  |
 | `goto_prev_class` | the previous class | `[t` |  |  |
-| `goto_next_comment` | the next comment | `]c` | `]c` |  |
-| `goto_prev_comment` | the previous comment | `[c` | `[c` |  |
+| `goto_next_comment` | the next comment | `]c` |  |  |
+| `goto_prev_comment` | the previous comment | `[c` |  |  |
 | `goto_next_parameter` | select the next parameter | `]a` |  |  |
 | `goto_prev_parameter` | select the previous parameter | `[a` |  |  |
 | `goto_next_entry` | select the next entry | `]e` | `]e` |  |
@@ -296,7 +296,7 @@
 | `vsplit` | a window beside | `C-w v` | `C-w v` |  |
 | `hsplit_new` | a blank window below | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | a blank window beside | `C-w n v` | `C-w n v` |  |
-| `window_new_mode` | the blank-window group: s below, v beside | `C-w n` | `C-w n` |  |
+| `window_new_mode` | the blank-window group: s below, v beside | `C-w n` |  |  |
 | `wclose` | close | `C-w q` | `C-w q` |  |
 | `wonly` | keep only this window | `C-w o` | `C-w o` |  |
 | `transpose_view` | turn the split: beside or below | `C-w t` |  |  |
@@ -467,8 +467,8 @@
 | `extend_char_right` | extend the selection one character right | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | extend the selection one line up, on screen | `k` `Up` |  |  |
 | `extend_visual_line_down` | extend the selection one line down, on screen | `j` `Down` |  |  |
-| `extend_line_up` | extend the selection one line up, in the file | `gk` | `gk` |  |
-| `extend_line_down` | extend the selection one line down, in the file | `gj` | `gj` |  |
+| `extend_line_up` | extend the selection one line up, in the file |  |  |  |
+| `extend_line_down` | extend the selection one line down, in the file |  |  |  |
 | `extend_next_word_start` | extend the selection to the next word's start | `w` |  |  |
 | `extend_prev_word_start` | extend the selection to the previous word's start | `b` |  |  |
 | `extend_next_word_end` | extend the selection to the next word's end | `e` |  |  |
@@ -483,10 +483,10 @@
 | `extend_prev_char` | extend the selection backward to a character | `F` | `F` |  |
 | `extend_to_line_start` | extend the selection to the line's start | `Home` | `Home` |  |
 | `extend_to_line_end` | extend the selection to the line's end | `End` |  |  |
-| `extend_to_file_start` | extend the selection to the start of the file | `gg` | `gg` |  |
+| `extend_to_file_start` | extend the selection to the start of the file |  |  |  |
 | `extend_to_file_end` | extend the selection to the end of the file |  |  |  |
-| `extend_to_last_line` | extend to the last line | `ge` | `ge` |  |
-| `extend_to_word` | extend the selection to a place on screen, by its label | `gw` | `gw` |  |
+| `extend_to_last_line` | extend to the last line |  |  |  |
+| `extend_to_word` | extend the selection to a place on screen, by its label |  |  |  |
 | `insert_newline` | a line break, carrying the indent and a list's marker |  |  | `Enter` `C-j` |
 | `delete_char_forward` | delete the character after the cursor |  |  | `Delete` `C-d` |
 | `delete_word_forward` | delete the word after the cursor |  |  | `A-d` |

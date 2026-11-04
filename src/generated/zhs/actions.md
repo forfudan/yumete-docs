@@ -12,16 +12,16 @@
 | `move_next_long_word_start` | 下一个大词首(按空格分) | `W` |  |  |
 | `move_prev_long_word_start` | 上一个大词首 | `B` |  |  |
 | `move_next_long_word_end` | 下一个大词尾 | `E` |  |  |
-| `goto_line_start` | 行首 | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | 行尾 | `End` `gl` `g Down` |  |  |
+| `goto_line_start` | 行首 | `0` `Home` `gh` | `Home` `0` | `Home` `C-a` |
+| `goto_line_end` | 行尾 | `End` `gl` |  |  |
 | `goto_first_nonwhitespace` | 第一个非空白字符 | `^` `gs` | `^` |  |
 | `goto_file_start` | 文件开头 | `gg` | `gg` |  |
 | `goto_file_end` | 文件末尾 |  |  |  |
-| `goto_last_line` | 最后一行 | `ge` | `ge` |  |
+| `goto_last_line` | 最后一行 | `ge` |  |  |
 | `goto_prev_sentence` | 上一句 | `H` |  |  |
 | `goto_next_sentence` | 下一句 | `L` |  |  |
-| `goto_prev_paragraph` | 上一段 | `[p` | `[p` |  |
-| `goto_next_paragraph` | 下一段 | `]p` | `]p` |  |
+| `goto_prev_paragraph` | 上一段 | `[p` |  |  |
+| `goto_next_paragraph` | 下一段 | `]p` |  |  |
 | `page_cursor_half_down` | 前进半页 | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` |  |
 | `page_cursor_half_up` | 后退半页 | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` |  |
 | `jump_backward` | 跳转表：回到刚才那个位置 | `C-o` | `C-o` |  |
@@ -70,7 +70,7 @@
 | `insert_char_below` | 打出下一行同一位置的字 |  |  | `C-e` |
 | `file_picker` | 打开文件挑选器 | `Space f` | `Space f` |  |
 | `buffer_picker` | 打开缓冲区选择器 | `Space b` | `Space b` |  |
-| `goto_next_buffer` | 切换到下一个缓冲区 | `gn` | `gn` |  |
+| `goto_next_buffer` | 切换到下一个缓冲区 | `gn` |  |  |
 | `goto_previous_buffer` | 切换到上一个缓冲区 | `gp` |  |  |
 | `dictionary` | 字典：光标下那个字的拆分 | `Space n` | `Space n` |  |
 | `rotate_view` | 下一个区域 | `C-w w` | `C-w w` |  |
@@ -100,8 +100,8 @@
 | `extend_parent_node_start` | 选区延到所在节点的开头 | `A-b` | `A-b` |  |
 | `last_picker` | 上一个挑选器 | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | 从系统剪贴板粘贴 | `Space p` | `Space p` |  |
-| `move_line_up` | 上一行(文件里的) | `gk` `g Up` | `C-p` `k` `Up` `gk` `g Up` |  |
-| `move_line_down` | 下一行(文件里的) | `gj` `g Down` | `C-n` `j` `Down` `gj` `g Down` |  |
+| `move_line_up` | 上一行(文件里的) | `gk` `g Up` | `C-p` `k` `Up` |  |
+| `move_line_down` | 下一行(文件里的) | `gj` `g Down` | `C-n` `j` `Down` |  |
 | `goto_next_line_nonwhitespace` | 下一行的第一个非空白字符 |  | `Enter` |  |
 | `jump_next_word_start` | 光标跳到下一个词首(不选中) |  | `w` |  |
 | `jump_next_long_word_start` | 光标跳到下一个大词首(不选中) |  | `W` |  |
@@ -119,7 +119,7 @@
 | `jump_prev_sentence` | 光标跳到上一句(不选中) |  | `(` |  |
 | `jump_next_sentence` | 光标跳到下一句(不选中) |  | `)` |  |
 | `add_mark` | 设标记(再按一个字母) | `M` | `m` |  |
-| `goto_mark` | 回到标记(再按一个字母) | `'` | `` ` `` `'` `` g` `` |  |
+| `goto_mark` | 回到标记(再按一个字母) | `'` | `` ` `` `'` |  |
 | `view_mode` | 视图组：放光标行、滚屏、折叠 | `z` | `z` |  |
 | `sticky_view_mode` | 视图组(按完不收) | `Z` | `Z` |  |
 | `right_bracket_mode` | ] 组：往后找下一处 | `]` | `]` |  |
@@ -205,13 +205,13 @@
 | `repeat_last_motion` | 再做一次刚才的 f 或 t | `A-.` | `A-.` |  |
 | `jump_prev_word_end` | 光标跳到上一个词尾(不选中) |  | `ge` |  |
 | `jump_prev_long_word_end` | 光标跳到上一个大词尾(不选中) |  | `gE` |  |
-| `goto_word` | 跳到当前屏幕某位置 | `gw` | `gW` `gw` |  |
+| `goto_word` | 跳到当前屏幕某位置 | `gw` | `gW` |  |
 | `goto_word_by_letters` | 两字母定位单词 | `gz` | `gz` |  |
 | `goto_char_by_pinyin` | 多字母定位汉字 | `gZ` | `gZ` |  |
 | `goto_last_accessed_file` | 回到最近打开的缓冲区 | `ga` | `` |  |
 | `goto_reference` | 用到它的每一处 | `gr` |  |  |
-| `move_next_zong` | 竖排时到下一纵(文件里的) |  | `gj` |  |
-| `move_prev_zong` | 竖排时到上一纵(文件里的) |  | `gk` |  |
+| `move_next_zong` | 竖排时到下一纵(文件里的) |  |  |  |
+| `move_prev_zong` | 竖排时到上一纵(文件里的) |  |  |  |
 | `goto_last_modification` | 回到最后改动的地方 | `g.` | `g.` |  |
 | `reselect_last_selection` | 重选上一次那一段 |  | `gv` |  |
 | `insert_at_last_insert` | 回到上次插入处继续插入 |  | `gi` |  |
@@ -261,8 +261,8 @@
 | `goto_prev_function` | 上一个函数 | `[f` |  |  |
 | `goto_next_class` | 下一个类 | `]t` |  |  |
 | `goto_prev_class` | 上一个类 | `[t` |  |  |
-| `goto_next_comment` | 下一处注释 | `]c` | `]c` |  |
-| `goto_prev_comment` | 上一处注释 | `[c` | `[c` |  |
+| `goto_next_comment` | 下一处注释 | `]c` |  |  |
+| `goto_prev_comment` | 上一处注释 | `[c` |  |  |
 | `goto_next_parameter` | 选中下一个参数 | `]a` |  |  |
 | `goto_prev_parameter` | 选中上一个参数 | `[a` |  |  |
 | `goto_next_entry` | 选中下一个条目 | `]e` | `]e` |  |
@@ -296,7 +296,7 @@
 | `vsplit` | 旁边开一个窗口 | `C-w v` | `C-w v` |  |
 | `hsplit_new` | 下面开一个空白窗口 | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | 旁边开一个空白窗口 | `C-w n v` | `C-w n v` |  |
-| `window_new_mode` | 空白窗口组：s 下面，v 旁边 | `C-w n` | `C-w n` |  |
+| `window_new_mode` | 空白窗口组：s 下面，v 旁边 | `C-w n` |  |  |
 | `wclose` | 关闭窗口 | `C-w q` | `C-w q` |  |
 | `wonly` | 只留这个窗口 | `C-w o` | `C-w o` |  |
 | `transpose_view` | 并排与上下互换 | `C-w t` |  |  |
@@ -467,8 +467,8 @@
 | `extend_char_right` | 选区向右撑一个字 | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | 选区撑到上一行(屏幕上的) | `k` `Up` |  |  |
 | `extend_visual_line_down` | 选区撑到下一行(屏幕上的) | `j` `Down` |  |  |
-| `extend_line_up` | 选区撑到上一行(文件里的) | `gk` | `gk` |  |
-| `extend_line_down` | 选区撑到下一行(文件里的) | `gj` | `gj` |  |
+| `extend_line_up` | 选区撑到上一行(文件里的) |  |  |  |
+| `extend_line_down` | 选区撑到下一行(文件里的) |  |  |  |
 | `extend_next_word_start` | 选区撑到下一个词首 | `w` |  |  |
 | `extend_prev_word_start` | 选区撑到上一个词首 | `b` |  |  |
 | `extend_next_word_end` | 选区撑到下一个词尾 | `e` |  |  |
@@ -483,10 +483,10 @@
 | `extend_prev_char` | 选区往前撑到某个字 | `F` | `F` |  |
 | `extend_to_line_start` | 选区撑到行首 | `Home` | `Home` |  |
 | `extend_to_line_end` | 选区撑到行尾 | `End` |  |  |
-| `extend_to_file_start` | 选区撑到文件开头 | `gg` | `gg` |  |
+| `extend_to_file_start` | 选区撑到文件开头 |  |  |  |
 | `extend_to_file_end` | 选区撑到文件末尾 |  |  |  |
-| `extend_to_last_line` | 选到最后一行 | `ge` | `ge` |  |
-| `extend_to_word` | 选区撑到屏幕上某个位置(标签) | `gw` | `gw` |  |
+| `extend_to_last_line` | 选到最后一行 |  |  |  |
+| `extend_to_word` | 选区撑到屏幕上某个位置(标签) |  |  |  |
 | `insert_newline` | 换行(带上缩进、列表记号) |  |  | `Enter` `C-j` |
 | `delete_char_forward` | 删除光标后的一个字 |  |  | `Delete` `C-d` |
 | `delete_word_forward` | 删除光标后的一个词 |  |  | `A-d` |
