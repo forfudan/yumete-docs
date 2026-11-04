@@ -417,7 +417,7 @@
 | `yume_lane_tonggui` | 通用規範漢字 | `Space z g j` | `Space z g j` |  |
 | `yume_lane_tongfan` | 通規標準繁體字 | `Space z g f` | `Space z g f` |  |
 | `yume_lane_tai` | 常用與次常用國字 | `Space z g t` | `Space z g t` |  |
-| `yume_builtin_pinyin` | 拼音 | `Space z b p` | `Space z b p` |  |
+| `yume_builtin_pinyin` | 宇浩拼音 | `Space z b p` | `Space z b p` |  |
 | `yume_builtin_lingming` | 靈明 | `Space z b l` | `Space z b l` |  |
 | `yume_builtin_xingchen` | 星陳 | `Space z b x` | `Space z b x` |  |
 | `table_source_view` | 源碼視圖(顯示源碼) | `Space t o` | `Space t o` |  |

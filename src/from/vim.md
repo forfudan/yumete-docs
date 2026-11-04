@@ -211,6 +211,14 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
   option is its own command or config key. See
   [Settings](../reference/settings.md).
 - There is no `:g` and no `:normal`.
+- A range is written with `-`, and `,` lists single lines: `:3-6s` is lines 3
+  to 6, while `:3,6s` is lines 3 and 6 only. `:'<,'>` and `:.,+2` are not
+  spellings here, and `:s` from Visual mode works on the selection. Only `:s`
+  takes a range; `:2,4d` and the like are not there. See
+  [Search and replace](../guide/search.md).
+- A long line wrapped over several rows scrolls a row at a time, as with
+  Neovim's `smoothscroll`: after `G` the top row can be the tail of a line,
+  and `scrolloff` counts rows.
 - Modelines are read for `ft`, `ts`, `sw`, `et` and `tw` only; `fenc`, `ff`
   and the rest are passed over, and the encoding is read from the bytes. See
   [Modelines](../guide/files.md#modelines).

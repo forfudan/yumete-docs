@@ -71,7 +71,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[ime] scheme` | `"pinyin"` | **scheme** — which 碼表 to type with. 拼音, 靈明 and 星陳 come built in; the others need the data installed (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 拼音) |
+| `[ime] scheme` | `"pinyin"` | **scheme** — which 碼表 to type with. 拼音, 靈明 and 星陳 come built in; the others need the data installed (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 宇浩拼音) |
 | `[ime] commit` | `"default"` | **commit method** — when a finished code goes to the page (`default` the scheme's own, `delayed` delayed (頂字), `unique` unique, `fluency` whole-sentence) |
 | `[ime] charset` | `"all"` | **charset filter** — which characters the candidates may hold (`all` all characters, `common` common characters only, `tonggui` simplified only, `harmonic` traditional only) |
 | `[ime] charset_sort` | `"common"` | **charset sort** — which characters come first among the candidates; a whole-sentence scheme orders its own (`original` original order, `common` common first, `tonggui` simplified first, `harmonic` traditional first) |

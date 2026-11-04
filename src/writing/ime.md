@@ -754,8 +754,9 @@ keyboard) and off (yumete has let go) are different.
 
 ## Settings
 
-All of these can also be set in the settings panel (`:settings`), under the
-input method group, or in the config file. See
+Most of these can also be set in the settings panel (`:settings`), under the
+input method group, and all of them in the config file; `[ime] lanes` and
+`[ime] data_dirs` are in the config file only. See
 [Configuration](../guide/configuration.md) and
 [Settings](../reference/settings.md).
 
