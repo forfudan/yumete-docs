@@ -13,6 +13,22 @@ x = "delete_selection"         # x deletes the selection
 "A-j" = "@kJ"                  # Alt-j joins this line onto the one above
 ```
 
+These tables hold under both keymaps. A binding for one keymap only goes
+under that keymap's name, and is laid over the shared ones while that keymap
+is in force:
+
+```toml
+[keys.vim.normal]
+"<tab>" = "goto_next_buffer"     # under vim only; helix keeps its Tab
+
+[keys.helix.insert]
+j = { k = "normal_mode" }        # jk under helix only
+```
+
+`[keys.helix]` and `[keys.vim]` each take `normal`, `select` and `insert`.
+`:keymap-actions` lists every action with its keys under helix, under vim,
+and the ones you bound yourself, the keymap in force in bold.
+
 Normal mode's keys go under `[keys.normal]`, select mode's under
 `[keys.select]`, and Insert mode's under `[keys.insert]`, where a key no
 binding names types itself:
