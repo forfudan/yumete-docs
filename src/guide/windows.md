@@ -56,8 +56,9 @@ C-w n s, :hnew    a blank window below, on a new empty buffer
 C-w n v, :vnew    a blank window beside, on a new empty buffer
 ```
 
-With the vim key preset `C-w n` (or `C-w C-n`) opens the blank window at
-once, below, as vim does. `C-w t`, `C-w F` and `C-w H` `J` `K` `L` are
+With the vim key preset a new window opens above or to the left of this
+one, as vim's does; with helix's, below or to the right. `C-w n` (or
+`C-w C-n`) opens the blank window at once, above, as vim does. `C-w t`, `C-w F` and `C-w H` `J` `K` `L` are
 vim's, and these are added:
 
 | Key | Action |
@@ -71,21 +72,22 @@ vim's, and these are added:
 | `C-w H` `C-w J` `C-w K` `C-w L` | move this window to that edge of the screen, taking the whole of it |
 | `C-w c` | close the region you are in, but never the last window; *N* `C-w c` closes window *N* |
 | `C-w S` `C-w F` | the same as `C-w s` and `C-w f` |
-| `C-w ^` | open the file before this one in a new window below |
+| `C-w ^` | open the file before this one in a new window above |
 | `C-w :` | the command line |
 
-vim's size keys (`=` `+` `-` `<` `>` `_` `|`) are not there, since every
-split halves the room; nor are its tab, preview-window and tag keys.
+vim's size keys (`=` `+` `-` `<` `>` `_` `|`) are not there, since the
+windows always share the room equally; nor are its tab, preview-window and
+tag keys.
 
 The words are positions, not directions: on a vertical page, where the text
 itself runs down the columns, "beside" still means side by side and "below"
-still means under. On a vertical page a window beside opens on the left,
-the way the reading runs.
+still means under. On a vertical page, where reading runs right to left,
+the windows beside each other are laid out from the right.
 
-Every split halves the room the window had, and you may go on splitting
-until a window would be too narrow for its text. `C-w q` and `:q` close the
-window you are in and give its room back to the one next to it; the file
-stays open, changes and all. The keys go back to the window you were in
+Windows side by side, or one above another, share the room equally, as in
+vim and helix, and you may go on splitting until a window would be too
+narrow for its text. `C-w q` and `:q` close the window you are in and the
+others share its room; the file stays open, changes and all. The keys go back to the window you were in
 before this one, as in VS Code and tmux. If that window has closed too, they
 go to the window that takes the room, as in vim. In the last window `:q` works as usual (see
 [Saving and quitting](./files.md#saving-and-quitting)). `C-w o` keeps the

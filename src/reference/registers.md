@@ -53,6 +53,11 @@ Under the vim keymap, `"0` holds the last yank, as in vim: a delete fills the un
 register, and `"0p` still pastes what you yanked. A delete of a line or more also
 goes into `"1`, and the older ones move down to `"2` … `"9`.
 
+Also as in vim, a capital letter adds to its register: `"Ayy` puts the line
+after what `"a` holds, and text added to lines, or lines to text, makes lines.
+A yank or delete into a named register fills the unnamed one too, so `"ayy`
+then `p` pastes that line. `:reg` opens the picker below.
+
 ## Earlier yanks
 
 Every yank or delete into the unnamed register replaces what was there, but the last 16
