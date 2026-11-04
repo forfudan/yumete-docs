@@ -130,6 +130,12 @@ left sidebar holds five panels, and `Tab` steps through them:
 
 The right sidebar holds one panel, **Info**, described below.
 
+With the mouse, the block at each end of the tab line opens or closes that
+side's sidebar: grey when the side is closed, the panel's frame colour when it
+is open, gold when the keys are in it. `[editor] sidebar_buttons = false` takes
+the blocks away; there are none while the tab line is hidden. A sidebar opened
+again, by its block or by `C-w e` and `C-w i`, shows the panel it was closed on.
+
 `:sidebar` on its own says what is open, `:sidebar off` closes both, and
 `:sidebar info` opens the right one. `Space e` and `Space f` are pickers, not
 the Explorer panel; see [Pickers](./search.md#pickers).

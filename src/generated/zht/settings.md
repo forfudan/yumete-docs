@@ -49,6 +49,7 @@
 | `[editor] tabs` | `"auto"` | **上方分頁條** — 頂上那條列着打開了哪些文件的横條 (`auto` 有兩個才畫, `always` 總是畫, `never` 不畫) |
 | `[editor] command_line` | `true` | **命令行那一行** — 狀態欄底下再加一行：打命令、剛纔怎麽了、現在能按什麽 |
 | `[editor] signature` | `true` | **右下角的名字** — 命令行空着的時候，右端淡淡地寫着 yumete |
+| `[editor] sidebar_buttons` | `true` | **側欄開關** — 標籤欄兩端各一個色塊，點一下打開或關上那一側的側欄 |
 | `[panel] rounded` | `true` | **面板圓角** — 面板的四個角是圓的還是方的 |
 | `[editor] language` | `"auto"` | **界面語言** — 編輯器界面顯示語言 (`auto` 跟隨系統, `zh` 繁體, `zhs` 簡體, `en` English) |
 

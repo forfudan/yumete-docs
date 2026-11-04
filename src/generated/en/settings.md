@@ -49,6 +49,7 @@
 | `[editor] tabs` | `"auto"` | **tabs** — the bar along the top that lists the open files (`auto` two or more, `always` always, `never` never) |
 | `[editor] command_line` | `true` | **command line** — a line under the status line for commands, for what just happened, and for the keys you can press now |
 | `[editor] signature` | `true` | **name in the corner** — a quiet yumete at the right end of the command line while it is empty |
+| `[editor] sidebar_buttons` | `true` | **sidebar buttons** — a block at each end of the tab line; a click opens or closes that side's sidebar |
 | `[panel] rounded` | `true` | **rounded** — whether panel corners are round or square |
 | `[editor] language` | `"auto"` | **language** — interface language (`auto` the system's, `zh` 繁體, `zhs` 简体, `en` English) |
 
