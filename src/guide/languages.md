@@ -58,11 +58,14 @@ page.
 Diagnostics wait until you leave Insert mode, since a half-typed line is always broken.
 In code files they show in a two-cell column in the gutter: a solid red cell for an
 error, and a pale cell marked `!` for a warning, `i` for information or `·` for a hint.
-The column is only drawn in code files, and only while line numbers are on.
+The column is drawn in code files, and in a text file a server checks, only while
+line numbers are on.
 
 The loudest message of a line is also written after it, as helix's
-end-of-line diagnostics: two cells after the code, in the colour of its column,
-cut with `…` at the window's edge, and never in the way of the cursor. It is
+end-of-line diagnostics: two cells after the text, in the colour of its column,
+cut with `…` at the window's edge, and never in the way of the cursor. In
+Markdown a line is a paragraph, so the message follows the paragraph's last
+row, as in helix and nvim. It is
 left off the line you are typing on in Insert mode, and it moves with its line
 as you add and remove lines, until the server speaks again.
 `:view-diagnostics warning` (or `error`, `info`, `hint`, `off`) sets how loud a
