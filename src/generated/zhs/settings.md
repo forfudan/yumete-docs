@@ -69,7 +69,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[ime] scheme` | `"lingming"` | **输入方案** — 用哪一套输入方案（灵明和星陈自带精华版），其他方案需安装 (`lingming` 灵明, `xingchen` 星陈, `qingyun` 卿云, `riyue` 日月, `pinyin` 拼音) |
+| `[ime] scheme` | `"pinyin"` | **输入方案** — 用哪一套输入方案（拼音、灵明、星陈自带），其他方案需安装 (`lingming` 灵明, `xingchen` 星陈, `qingyun` 卿云, `riyue` 日月, `pinyin` 拼音) |
 | `[ime] commit` | `"default"` | **上屏方式** — 码打完了什么时候上屏：等下一键、只有一个候选就上，还是攒成整句 (`default` 预设, `delayed` 延迟(顶字), `unique` 唯一, `fluency` 整句) |
 | `[ime] start` | `false` | **启动就载入码表** — 默认不载入——分词模型照常载入，码表等你第一次打字 |
 | `[ime] system` | `"auto"` | **NORMAL模式下屏蔽系统版宇梦输入法** — Normal 模态下请系统输入法让开，免得按键被它吃掉 (`auto` 自动, `keep` 不管它) |

@@ -297,15 +297,15 @@
 | `hsplit_new` | a blank window below | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | a blank window beside | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | the blank-window group: s below, v beside | `C-w n` | `C-w n` |  |
-| `wclose` | close this region (in the last window, quit) | `C-w q` | `C-w q` |  |
+| `wclose` | close | `C-w q` | `C-w q` |  |
 | `wonly` | keep only this window | `C-w o` | `C-w o` |  |
 | `transpose_view` | turn the split: beside or below | `C-w t` |  |  |
 | `swap_view_left` | trade places with the region on the left | `C-w H` |  |  |
 | `swap_view_down` | trade places with the region below | `C-w J` |  |  |
 | `swap_view_up` | trade places with the region above | `C-w K` |  |  |
 | `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
-| `goto_file_hsplit` | open the file under the cursor below | `C-w f` | `C-w F` `C-w f` |  |
-| `goto_file_vsplit` | open the file under the cursor beside | `C-w F` |  |  |
+| `goto_file_hsplit` | file under cursor, below | `C-w f` | `C-w F` `C-w f` |  |
+| `goto_file_vsplit` | file under cursor, beside | `C-w F` |  |  |
 | `create_fold` | make a fold, then a motion | `zf` `Zf` | `zf` `Zf` |  |
 | `create_fold_lines` | make a fold of N lines |  | `zF` `ZF` |  |
 | `open_fold` | open a fold |  | `zo` `Zo` |  |
@@ -354,7 +354,7 @@
 | `move_view_far_down` | move this window to the very bottom |  | `C-w J` |  |
 | `move_view_far_up` | move this window to the very top |  | `C-w K` |  |
 | `move_view_far_right` | move this window to the far right |  | `C-w L` |  |
-| `vim_close_window` | close this region (never the last window) |  | `C-w c` |  |
+| `vim_close_window` | close, don't quit |  | `C-w c` |  |
 | `goto_last_accessed_file_hsplit` | the file before, below |  | `C-w ^` |  |
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |

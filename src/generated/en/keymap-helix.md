@@ -294,12 +294,12 @@
 | `C-w s` | a window below |
 | `C-w v` | a window beside |
 | `C-w n` | a blank window |
-| `C-w q` | close this region (in the last window, quit) |
+| `C-w q` | close |
 | `C-w o` | keep only this window |
 | `C-w t` | turn the split: beside or below |
 | `C-w H / C-w J / C-w K / C-w L` | trade places with the one that way |
-| `C-w f` | open the file under the cursor below |
-| `C-w F` | open the file under the cursor beside |
+| `C-w f` | file under cursor, below |
+| `C-w F` | file under cursor, beside |
 
 ## a blank window (`C-w n`, `Space w n`)
 

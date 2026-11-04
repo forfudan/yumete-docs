@@ -297,15 +297,15 @@
 | `hsplit_new` | 下面开一个空白窗口 | `C-w n s` | `C-w n` `C-w n s` |  |
 | `vsplit_new` | 旁边开一个空白窗口 | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | 空白窗口组：s 下面，v 旁边 | `C-w n` | `C-w n` |  |
-| `wclose` | 关掉这一区(最后一个窗口就离开编辑器) | `C-w q` | `C-w q` |  |
+| `wclose` | 关闭窗口 | `C-w q` | `C-w q` |  |
 | `wonly` | 只留这个窗口 | `C-w o` | `C-w o` |  |
 | `transpose_view` | 并排与上下互换 | `C-w t` |  |  |
 | `swap_view_left` | 和左边那一区对调 | `C-w H` |  |  |
 | `swap_view_down` | 和下面那一区对调 | `C-w J` |  |  |
 | `swap_view_up` | 和上面那一区对调 | `C-w K` |  |  |
 | `swap_view_right` | 和右边那一区对调 | `C-w L` |  |  |
-| `goto_file_hsplit` | 在下面打开光标下的文件 | `C-w f` | `C-w F` `C-w f` |  |
-| `goto_file_vsplit` | 在旁边打开光标下的文件 | `C-w F` |  |  |
+| `goto_file_hsplit` | 下窗打开光标下文件 | `C-w f` | `C-w F` `C-w f` |  |
+| `goto_file_vsplit` | 侧窗打开光标下文件 | `C-w F` |  |  |
 | `create_fold` | 做一个折叠，后面跟移动 | `zf` `Zf` | `zf` `Zf` |  |
 | `create_fold_lines` | 把 N 行做成折叠(用计数) |  | `zF` `ZF` |  |
 | `open_fold` | 打开折叠 |  | `zo` `Zo` |  |
@@ -354,7 +354,7 @@
 | `move_view_far_down` | 挪到最下面 |  | `C-w J` |  |
 | `move_view_far_up` | 挪到最上面 |  | `C-w K` |  |
 | `move_view_far_right` | 挪到最右边 |  | `C-w L` |  |
-| `vim_close_window` | 关掉这一区(最后一个不关) |  | `C-w c` |  |
+| `vim_close_window` | 关闭窗口但不退出 |  | `C-w c` |  |
 | `goto_last_accessed_file_hsplit` | 在下面打开上一个文件 |  | `C-w ^` |  |
 | `switch_to_lowercase` | 转小写 | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | 转大写 | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
