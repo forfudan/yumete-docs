@@ -196,7 +196,7 @@ On: Space o lists recent files and projects. Off: unbound.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space o` | open something recent |  |
+| Space | `Space o` | open recent |  |
 | open something recent | `Space o f` | recent files |  |
 | open something recent | `Space o g` | recent files, everywhere |  |
 | open something recent | `Space o p` | recent projects |  |
@@ -216,8 +216,8 @@ On: Space n looks up the character under the cursor in a popup, Space N in the s
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space n` | character info (floating) |  |
-| Space | `Space N` | character info (sidebar) |  |
+| Space | `Space n` | char info (float) |  |
+| Space | `Space N` | char info (sidebar) |  |
 
 ### `popup_panel_pairs` {#popup_panel_pairs}
 
@@ -225,13 +225,13 @@ On: Space K puts the hover in the sidebar; Space l, x and i show a diagnostic, a
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space K` | documentation (sidebar) |  |
-| Space | `Space l` | show diagnostics (float) |  |
-| Space | `Space L` | show diagnostics (sidebar) |  |
-| Space | `Space x` | show the change (float) |  |
-| Space | `Space X` | show the change (sidebar) |  |
-| Space | `Space i` | this row's record (floating) |  |
-| Space | `Space I` | this row's record (sidebar) |  |
+| Space | `Space K` | docs (sidebar) |  |
+| Space | `Space l` | diagnostic (float) |  |
+| Space | `Space L` | diagnostic (sidebar) |  |
+| Space | `Space x` | change (float) |  |
+| Space | `Space X` | change (sidebar) |  |
+| Space | `Space i` | row record (float) |  |
+| Space | `Space I` | row record (sidebar) |  |
 
 ### `explorer_here` {#explorer_here}
 
@@ -239,7 +239,7 @@ On: Space E browses files from this file's folder. Off: unbound.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space E` | browse files (this file's dir) |  |
+| Space | `Space E` | browse this folder |  |
 
 ### `space_paging` {#space_paging}
 
@@ -365,7 +365,7 @@ On: vim's za, zR and zM under helix (open or close a fold, open all, close all);
 | view | `za` | open or close a fold |  |
 | view | `zR` | open every fold |  |
 | view | `zM` | close every fold |  |
-| view | `zf` | make a fold of the selected lines |  |
+| view | `zf` | fold the selected lines |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
 
@@ -424,7 +424,7 @@ On: under vim, helix's keys on the keys vim leaves free: the Alt keys, C-s, Z, g
 | Insert mode | `C-k` | delete to the end of the line, never the line break (vim) |  |
 | g goto | `gy` | go to the type definition |  |
 | g goto | `g.` | back to the last change |  |
-| g goto | `gb` | the cursor to the top, middle or bottom of the screen |  |
+| g goto | `gb` | screen top / middle / bottom |  |
 | next… | `]g / ]G` | a change (capital: the first / the last) |  |
 | next… | `]e` | an entry |  |
 | next… | `]x` | an XML element |  |
