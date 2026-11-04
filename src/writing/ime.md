@@ -697,13 +697,30 @@ Losing focus depends on the terminal reporting it. Most modern terminals do.
 
 ### Other input methods, and Linux
 
-Only 宇浩 understands the modal-suspend signal, so only 宇浩 can be stood aside.
-On Linux, 宇浩's fcitx5 add-on has no modal suspend yet, so yumete sends nothing
-there.
+Only 宇浩 understands the modal-suspend signal. Other input methods (Squirrel,
+Sogou, Apple's, Kotoeri, fcitx5, ibus) can only be stood aside by switching the
+system to its English layout, and yumete does that only if you ask:
 
-With any other input method, or on Linux, switch your system input method to
-English yourself before you use Normal mode, or turn it off while you work in
-yumete and use yumete's own.
+```toml
+[ime]
+others = "aside"   # "off" (default), "aside" or "aside-and-back"
+```
+
+- `aside`: in Normal mode and on the command line, yumete switches to English.
+  It does not switch back; you do, when you want to type with that input
+  method again.
+- `aside-and-back`: it also switches back to the input method you had where
+  text is typed. On macOS this fails about one time in three, with no error,
+  for every input method built on Apple's input method kit (measured with 宇浩
+  and Squirrel alike, even in TextEdit). When it fails, the letters you type
+  arrive as letters; switch input methods once to recover.
+
+On Linux it uses `fcitx5-remote` (or `fcitx-remote`) and `ibus`, which also
+stands aside 宇浩's own fcitx5 add-on, which has no modal suspend yet. Nothing is
+switched over SSH, where the input method is not the one in front of you.
+Windows is not covered yet.
+
+If yumete is closed with the terminal window, the system stays on English.
 
 To stop yumete from sending the signal at all, for example in a remote session
 or an unusual terminal:
@@ -748,6 +765,7 @@ input method group, or in the config file. See
 | `[ime] lanes` | `["tonggui", "tongfan", "tai"]` | Sentence lanes, first preferred; `[]` turns them off. |
 | `[ime] data_dirs` | `[]` | Directories to search for tables first, in order. `~` is expanded. |
 | `[ime] system` | `"auto"` | `auto` stands the system input method aside; `keep` never touches it. |
+| `[ime] others` | `"off"` | Other input methods in Normal mode: `off`, `aside` (switch to English), `aside-and-back` (and back where text is typed). |
 | `[panel] display` | `"box"` | Where candidates are drawn: `box`, `bottom`, `inline`. |
 | `[panel] inline_preedit` | `"off"` | Where the code is shown: `off`, `composition`, `preview`. |
 | `[panel] page_size` | `6` | Candidates on a page, 1 to 9. |

@@ -75,6 +75,7 @@
 | `[ime] charset_sort` | `"common"` | **charset sort** — which characters come first among the candidates; a whole-sentence scheme orders its own (`original` original order, `common` common first, `tonggui` simplified first, `harmonic` traditional first) |
 | `[ime] start` | `false` | **load the 碼表 at start** — off by default: the word model loads as usual, and the 碼表 waits for the first Chinese you type |
 | `[ime] system` | `"auto"` | **move the system input method aside in Normal mode** — while yumete reads the keys itself (Normal mode, the command line), ask the system's input method to step aside, so it does not eat them (`auto` auto, `keep` leave it) |
+| `[ime] others` | `"off"` | **move other input methods aside in Normal mode** — in Normal mode, switch other input methods (Squirrel, Sogou, fcitx) to English; on macOS switching back fails about one time in three (`off` off, `aside` aside, `aside-and-back` aside and back) |
 | `[panel] display` | `"box"` | **where candidates go** — where the candidates are drawn while you type: a box by the caret, the bottom line of the window, or the line under the caret (`box` box, `bottom` bottom line, `inline` in the line) |
 | `[panel] inline_preedit` | `"off"` | **preedit** — whether what you are typing is written in the candidate bar or in the text, and if in the text, the code or the first candidate (`off` in the candidate bar, `composition` the code in the text, `preview` the first candidate in the text) |
 | `[panel] page_size` | `6` | **page size** — how many candidates a page lists (1–9) |

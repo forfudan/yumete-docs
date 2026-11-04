@@ -75,6 +75,7 @@
 | `[ime] charset_sort` | `"common"` | **字集排序** — 哪一個字集的字排在候選前面，整句方案不起作用 (`original` 原始排序, `common` 常用字優先, `tonggui` 簡化字優先, `harmonic` 傳統字優先) |
 | `[ime] start` | `false` | **啓動就載入碼表** — 默認不載入——分詞模型照常載入，碼表等你第一次打字 |
 | `[ime] system` | `"auto"` | **NORMAL模式下屏蔽系統版宇夢輸入法** — Normal 模態下請系統輸入法讓開，免得按鍵被它吃掉 (`auto` 自動, `keep` 不管它) |
+| `[ime] others` | `"off"` | **Normal 模式下讓開其他輸入法** — Normal 模式下把鼠須管、搜狗等切到英文；在 macOS 上切回來大約三次有一次不成 (`off` 不動, `aside` 切到英文, `aside-and-back` 切到英文再切回) |
 | `[panel] display` | `"box"` | **候選怎麽畫** — 打字的時候候選畫在哪：光標旁邊的候選框、窗口最下面那一行，還是光標的下一行 (`box` 候選框, `bottom` 底行, `inline` 行中) |
 | `[panel] inline_preedit` | `"off"` | **正在打的那一段** — 正在打的那一段寫在候選欄裏，還是寫進正文；寫進正文的時候寫編碼還是寫首選 (`off` 候選欄裏, `composition` 正文裏寫編碼, `preview` 正文裏寫首選) |
 | `[panel] page_size` | `6` | **候選一頁幾條** — 候選框一頁列幾個字 (1–9) |
