@@ -181,6 +181,10 @@ On: Space z opens the input method menu. Off: the key that switches between Chin
 | the input method | `Space z i` | pick a scheme |  |
 | the input method | `Space z n` | the next scheme |  |
 | the input method | `Space z 3-9` | candidates on a page |  |
+| the input method | `Space z 0` | charset filter |  |
+| the input method | `Space z s` | charset sort |  |
+| the input method | `Space z g` | sentence lanes |  |
+| the input method | `Space z b` | built-in scheme |  |
 | the input method | `Space z /` | the next annotation beside the candidates |  |
 | the input method | `Space z t` | switch to the installed 碼表 |  |
 | the input method | `Space z w` | where the 碼表 came from |  |

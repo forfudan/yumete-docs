@@ -87,6 +87,9 @@
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 开始打字：载入一个方案(不写名字就用配置里那个) |
 | `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | 候选旁的注解：关、下一个、或一个注解模式 |
 | `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | 上屏方式：预设、延迟(顶字)、唯一、整句 |
+| `:yume-charset` | `all｜common｜tonggui｜harmonic` | 字集过滤：全部、常用、简化、传统 |
+| `:yume-charset-sort` | `original｜common｜tonggui｜harmonic` | 字集排序：原始、常用、简化、传统字优先 |
+| `:yume-lanes` | `tonggui｜tongfan｜tai｜default` | 整句字集轨：把一轨提到首轨，default 回到默认 |
 | `:yume-panel` | `box｜bottom｜inline` | 候选画在哪：box 光标旁边的框，bottom 窗口最下面那一行，inline 光标的下一行 |
 | `:yume-inline-preedit` | `off｜composition｜preview` | 正在打的那一段写在哪：off 候选栏里，composition 正文里写编码，preview 正文里写首选 |
 | `:yume-menu-size` | `<1–9>` | 候选面板一页几条(1–9，出厂 6) |

@@ -71,6 +71,8 @@
 | --- | --- | --- |
 | `[ime] scheme` | `"pinyin"` | **scheme** — which 碼表 to type with. 拼音, 靈明 and 星陳 come built in; the others need the data installed (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 拼音) |
 | `[ime] commit` | `"default"` | **commit method** — when a finished code goes to the page (`default` the scheme's own, `delayed` delayed (頂字), `unique` unique, `fluency` whole-sentence) |
+| `[ime] charset` | `"all"` | **charset filter** — which characters the candidates may hold (`all` all characters, `common` common characters only, `tonggui` simplified only, `harmonic` traditional only) |
+| `[ime] charset_sort` | `"common"` | **charset sort** — which characters come first among the candidates; a whole-sentence scheme orders its own (`original` original order, `common` common first, `tonggui` simplified first, `harmonic` traditional first) |
 | `[ime] start` | `false` | **load the 碼表 at start** — off by default: the word model loads as usual, and the 碼表 waits for the first Chinese you type |
 | `[ime] system` | `"auto"` | **move the system input method aside in Normal mode** — while yumete reads the keys itself (Normal mode, the command line), ask the system's input method to step aside, so it does not eat them (`auto` auto, `keep` leave it) |
 | `[panel] display` | `"box"` | **where candidates go** — where the candidates are drawn while you type: a box by the caret, the bottom line of the window, or the line under the caret (`box` box, `bottom` bottom line, `inline` in the line) |
