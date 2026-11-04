@@ -173,30 +173,30 @@
 
 | Key | What it does |
 | --- | --- |
-| `Space f` | open file picker (project dir) |
-| `Space F` | open file picker (working dir) |
-| `Space e` | browse files (project dir) |
+| `Space f` | file picker (project) |
+| `Space F` | file picker (work dir) |
+| `Space e` | browse the project |
 | `Space b` | open buffer picker |
 | `Space j` | jump list |
-| `Space '` | the last picker again |
+| `Space '` | last picker again |
 | `Space g` | changed files |
-| `Space y` | copy to the system clipboard |
-| `Space Y` | copy the main selection to the system clipboard |
-| `Space p` | paste from the system clipboard |
-| `Space P` | paste before, from the system clipboard |
-| `Space R` | replace the selection with the system clipboard |
+| `Space y` | copy to clipboard |
+| `Space Y` | copy main to clipboard |
+| `Space p` | paste from clipboard |
+| `Space P` | paste clipboard before |
+| `Space R` | replace with clipboard |
 | `Space s` | symbol picker |
 | `Space S` | project symbol picker |
-| `Space k` | documentation (floating) |
+| `Space k` | docs (float) |
 | `Space d` | diagnostics picker |
-| `Space D` | project diagnostics picker |
+| `Space D` | project diagnostics |
 | `Space r` | rename it everywhere |
-| `Space h` | select every place this symbol stands in the file |
+| `Space h` | select every use |
 | `Space a` | code actions |
 | `Space w` | region |
-| `Space c` | comment out, by the line |
-| `Space C` | comment out, in a block |
-| `Space A-c` | comment out, by the line only |
+| `Space c` | line comment |
+| `Space C` | block comment |
+| `Space A-c` | line comment only |
 | `Space /` | the search panel |
 | `Space ?` | every command |
 
@@ -219,9 +219,9 @@
 | `gi` | go to the implementation |
 | `gm` | the file changed last |
 | `gr` | every place it is used |
-| `gj / gk` | down / up a logical line (with line number) |
+| `gj / gk` | down / up a logical line |
 | `g.` | back to the last change |
-| `gt / gc / gb` | the cursor to the top, middle or bottom of the screen |
+| `gt / gc / gb` | screen top / middle / bottom |
 
 ## m (`m`)
 

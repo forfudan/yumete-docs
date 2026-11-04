@@ -25,7 +25,7 @@
 | `j` `C-n` `Down` | one line down, in the file | `move_line_down` |
 | `J` | join with the next line (vim's J) | `vim_join_selections` |
 | `k` `C-p` `Up` | one line up, in the file | `move_line_up` |
-| `K` | documentation (floating) | `hover` |
+| `K` | docs (float) | `hover` |
 | `l` `Space` `Right` | one character right | `move_char_right` |
 | `L` | the bottom line on screen | `goto_window_bottom` |
 | `m` | set a mark (then a letter) | `add_mark` |
@@ -160,30 +160,30 @@
 
 | Key | What it does |
 | --- | --- |
-| `\f` | open file picker (project dir) |
-| `\F` | open file picker (working dir) |
-| `\e` | browse files (project dir) |
+| `\f` | file picker (project) |
+| `\F` | file picker (work dir) |
+| `\e` | browse the project |
 | `\b` | open buffer picker |
 | `\j` | jump list |
-| `\'` | the last picker again |
+| `\'` | last picker again |
 | `\g` | changed files |
-| `\y` | copy to the system clipboard |
-| `\Y` | copy the main selection to the system clipboard |
-| `\p` | paste from the system clipboard |
-| `\P` | paste before, from the system clipboard |
-| `\R` | replace the selection with the system clipboard |
+| `\y` | copy to clipboard |
+| `\Y` | copy main to clipboard |
+| `\p` | paste from clipboard |
+| `\P` | paste clipboard before |
+| `\R` | replace with clipboard |
 | `\s` | symbol picker |
 | `\S` | project symbol picker |
-| `\k` | documentation (floating) |
+| `\k` | docs (float) |
 | `\d` | diagnostics picker |
-| `\D` | project diagnostics picker |
+| `\D` | project diagnostics |
 | `\r` | rename it everywhere |
-| `\h` | select every place this symbol stands in the file |
+| `\h` | select every use |
 | `\a` | code actions |
 | `\w` | region |
-| `\c` | comment out, by the line |
-| `\C` | comment out, in a block |
-| `\A-c` | comment out, by the line only |
+| `\c` | line comment |
+| `\C` | block comment |
+| `\A-c` | line comment only |
 | `\/` | the search panel |
 | `\?` | every command |
 

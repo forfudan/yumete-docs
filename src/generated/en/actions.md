@@ -79,14 +79,14 @@
 | `paste_menu` | the paste menu | `Space "` | `Space "` |  |
 | `toggle_comments` | comment this line | `C-c` `Space c` | `Space c` |  |
 | `toggle_block_comments` | comment this block | `Space C` | `Space C` |  |
-| `toggle_line_comments` | comment out, by the line only | `Space A-c` | `Space A-c` |  |
+| `toggle_line_comments` | line comment only | `Space A-c` | `Space A-c` |  |
 | `yank_to_clipboard` | copy to the system clipboard | `Space y` | `Space y` |  |
-| `yank_main_selection_to_clipboard` | copy the main selection to the system clipboard | `Space Y` | `Space Y` |  |
+| `yank_main_selection_to_clipboard` | copy main to clipboard | `Space Y` | `Space Y` |  |
 | `jumplist_picker` | jump list | `Space j` | `Space j` |  |
 | `goto_first_change` | the first change | `[G` | `[G` |  |
 | `goto_last_change` | the last change | `]G` | `]G` |  |
 | `suspend` | suspend to the shell; fg brings it back | `C-z` | `C-z` |  |
-| `select_references_to_symbol_under_cursor` | select every place this symbol stands in the file | `Space h` | `Space h` |  |
+| `select_references_to_symbol_under_cursor` | select every use | `Space h` | `Space h` |  |
 | `format_selections` | format the selection with the language server | `=` |  |  |
 | `expand_selection` | grow the selection to the syntax node around it | `A-o` | `A-o` |  |
 | `shrink_selection` | shrink the selection back, or to its first child node | `A-i` | `A-i` |  |
@@ -98,7 +98,7 @@
 | `move_parent_node_start` | to the start of the node around the cursor, then of its parent | `A-b` | `A-b` |  |
 | `extend_parent_node_end` | extend the selection to the end of the node around the cursor | `A-e` | `A-e` |  |
 | `extend_parent_node_start` | extend the selection to the start of the node around the cursor | `A-b` | `A-b` |  |
-| `last_picker` | the last picker again | `Space '` | `Space '` |  |
+| `last_picker` | last picker again | `Space '` | `Space '` |  |
 | `paste_clipboard_after` | paste from the system clipboard | `Space p` | `Space p` |  |
 | `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` |  |
 | `move_line_down` | one line down, in the file | `gj` `g Down` | `C-n` `j` `Down` |  |
@@ -224,30 +224,30 @@
 | `operator_fill` | fill the lines to the width — waits for a motion |  | `gq` |  |
 | `operator_fill_keep_cursor` | refill the lines, the cursor staying where it is (vim's gw) |  | `gw` |  |
 | `join_selections_no_space` | join the next line, adding no space at all |  | `gJ` |  |
-| `file_picker_in_current_directory` | open file picker (working dir) | `Space F` | `Space F` |  |
-| `file_explorer` | browse files (project dir) | `Space e` | `Space e` |  |
-| `file_explorer_in_current_buffer_directory` | browse files (this file's dir) | `Space E` | `Space E` |  |
+| `file_picker_in_current_directory` | file picker (work dir) | `Space F` | `Space F` |  |
+| `file_explorer` | browse the project | `Space e` | `Space e` |  |
+| `file_explorer_in_current_buffer_directory` | browse this folder | `Space E` | `Space E` |  |
 | `changed_file_picker` | changed files | `Space g` | `Space g` |  |
-| `paste_clipboard_before` | paste before, from the system clipboard | `Space P` | `Space P` |  |
-| `replace_selections_with_clipboard` | replace the selection with the system clipboard | `Space R` | `Space R` |  |
+| `paste_clipboard_before` | paste clipboard before | `Space P` | `Space P` |  |
+| `replace_selections_with_clipboard` | replace with clipboard | `Space R` | `Space R` |  |
 | `lsp_or_syntax_symbol_picker` | symbol picker | `Space s` | `Space s` |  |
 | `lsp_or_syntax_workspace_symbol_picker` | project symbol picker | `Space S` | `Space S` |  |
-| `dictionary_panel` | character info (sidebar) | `Space N` | `Space N` |  |
-| `hover` | documentation (floating) | `Space k` | `K` `Space k` |  |
-| `hover_panel` | documentation (sidebar) | `Space K` | `Space K` |  |
+| `dictionary_panel` | char info (sidebar) | `Space N` | `Space N` |  |
+| `hover` | docs (float) | `Space k` | `K` `Space k` |  |
+| `hover_panel` | docs (sidebar) | `Space K` | `Space K` |  |
 | `diagnostics_picker` | diagnostics picker | `Space d` | `Space d` |  |
-| `workspace_diagnostics_picker` | project diagnostics picker | `Space D` | `Space D` |  |
-| `show_diagnostic` | show diagnostics (float) | `Space l` | `Space l` |  |
-| `show_diagnostic_panel` | show diagnostics (sidebar) | `Space L` | `Space L` |  |
-| `show_change` | show the change (float) | `Space x` | `Space x` |  |
-| `show_change_panel` | show the change (sidebar) | `Space X` | `Space X` |  |
+| `workspace_diagnostics_picker` | project diagnostics | `Space D` | `Space D` |  |
+| `show_diagnostic` | diagnostic (float) | `Space l` | `Space l` |  |
+| `show_diagnostic_panel` | diagnostic (sidebar) | `Space L` | `Space L` |  |
+| `show_change` | change (float) | `Space x` | `Space x` |  |
+| `show_change_panel` | change (sidebar) | `Space X` | `Space X` |  |
 | `rename_symbol` | rename it everywhere | `Space r` | `Space r` |  |
 | `code_action` | code actions | `Space a` | `Space a` |  |
-| `show_record` | this row's record (floating) | `Space i` | `Space i` |  |
-| `show_record_panel` | this row's record (sidebar) | `Space I` | `Space I` |  |
+| `show_record` | row record (float) | `Space i` | `Space i` |  |
+| `show_record_panel` | row record (sidebar) | `Space I` | `Space I` |  |
 | `table_mode` | table operations | `Space t` | `Space t` |  |
 | `conflict_mode` | merge conflict | `Space m` | `Space m` |  |
-| `open_recent_mode` | open something recent | `Space o` | `Space o` |  |
+| `open_recent_mode` | open recent | `Space o` | `Space o` |  |
 | `yume_mode` | the input method | `Space z` | `Space z` |  |
 | `goto_next_conflict` | the next merge conflict | `]m` |  |  |
 | `goto_prev_conflict` | the previous merge conflict | `[m` |  |  |
