@@ -57,10 +57,11 @@ nothing to configure: yumete looks where 宇浩 keeps its data on each system.
   `$YUME_DATADIR`, then `yume/` under each of `$XDG_DATA_DIRS` (by default
   `/usr/local/share` and `/usr/share`).
 
-An installed file always wins over the built-in one, file by file: an installed
+An installed file wins over the built-in one, file by file: an installed
 宇浩 is usually newer than the tables yumete was built with, and a data
 directory that lacks one file (the sentence model, say) still gets that one
-from the binary.
+from the binary. An installed file this build cannot read, in an older or a
+newer format, is passed over for the built-in one.
 
 ### Naming a directory yourself
 
@@ -205,9 +206,9 @@ one is used. Two commands switch between them. They are useful when a
 candidate surprises you and you want to know which table is answering.
 
 - `:yume-builtin` switches to the built-in table of the current scheme,
-  whatever is installed.
+  whatever is installed. The next scheme you switch to is found as usual.
 - `:yume-installed` (or `Space z t`) switches back to the installed table for
-  the current scheme.
+  the current scheme, and says so when none is installed.
 
 `:yume-which` tells you which one is in use; see
 [Troubleshooting](#troubleshooting).
@@ -716,7 +717,8 @@ others = "aside"   # "off" (default), "aside" or "aside-and-back"
   arrive as letters; switch input methods once to recover.
 
 On Linux it uses `fcitx5-remote` (or `fcitx-remote`) and `ibus`, which also
-stands aside 宇浩's own fcitx5 add-on, which has no modal suspend yet. Nothing is
+stands aside 宇浩's own fcitx5 add-on, which has no modal suspend yet. ibus is
+switched to your first keyboard layout, so a German keyboard stays German. Nothing is
 switched over SSH, where the input method is not the one in front of you.
 Windows is not covered yet.
 

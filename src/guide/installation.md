@@ -116,10 +116,12 @@ warning if that directory is not on your `PATH`.
 On macOS and Linux the script never replaces a real file at either path. If `~/.local/bin/ye`
 belongs to another program, it says so and skips that name.
 
-The first build downloads the 靈明 and 星陳 tables it carries and caches them in
-`~/.cache/yumete/builtin`. A build with no network and no cached table still
-compiles, but the binary cannot type Chinese characters. Build again once you
-are online.
+The first build downloads the 宇浩拼音, 靈明 and 星陳 tables and the sentence
+model it carries, from the current Yume release, and caches them in
+`~/.cache/yumete/tables` (`$XDG_CACHE_HOME/yumete/tables` when that is set, or
+`$YUMETE_BUILTIN_DIR`). Delete that folder to take a newer release. A build
+with no network and no cached tables still compiles, but the binary cannot
+type Chinese characters; the next build tries the download again.
 
 ### On Windows
 
