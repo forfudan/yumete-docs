@@ -211,6 +211,9 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
   option is its own command or config key. See
   [Settings](../reference/settings.md).
 - There is no `:g` and no `:normal`.
+- Modelines are read for `ft`, `ts`, `sw`, `et` and `tw` only; `fenc`, `ff`
+  and the rest are passed over, and the encoding is read from the bytes. See
+  [Modelines](../guide/files.md#modelines).
 
 Everything else, the `Space` menu and the input method included, is the same
 under both keymaps. See [Coming from helix](helix.md).

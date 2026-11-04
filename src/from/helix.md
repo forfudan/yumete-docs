@@ -151,3 +151,5 @@ tree. `Space e` is a picker, as in helix, not this panel.
   [ruby](../writing/ruby.md).
 - `:keymap vim` switches to vim's keys for this session. See
   [Coming from vim](vim.md).
+- vim modelines (`vim: set ts=2 ft=python:`) are read under either keymap.
+  See [Modelines](../guide/files.md#modelines).
