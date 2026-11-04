@@ -112,6 +112,7 @@
 | `:view-sentence` | `on｜off｜toggle` | 一句一纵：竖排时每句话单起一纵，只是看法，不动文件 |
 | `:view-hanging` | `on｜off｜toggle` | 标点旁置：句读挂在边栏 |
 | `:view-numbers-fill` | `on｜off｜toggle` | 行号那一条有没有自己的底色(默认没有，横排竖排一样) |
+| `:view-diagnostics` | `hint｜info｜warning｜error｜off` | 行末诊断：hint、info、warning、error 或 off |
 | `:view-diff` | `on｜off｜toggle` | 改动条：行号旁边那一格用底色説哪几行跟 git 那一份不一样 |
 | `:view-typewriter` | `on｜off｜toggle` | 打字机：光标那一行一直停在画面中间，纸往上走 |
 | `:view-focus` | `on｜off｜toggle` | 焦点：正在写的那一段留在纸上，其余的退后一级 |

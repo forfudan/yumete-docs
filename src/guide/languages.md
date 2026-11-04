@@ -60,6 +60,16 @@ In code files they show in a two-cell column in the gutter: a solid red cell for
 error, and a pale cell marked `!` for a warning, `i` for information or `·` for a hint.
 The column is only drawn in code files, and only while line numbers are on.
 
+The loudest message of a line is also written after it, as helix's
+end-of-line diagnostics: two cells after the code, in the colour of its column,
+cut with `…` at the window's edge, and never in the way of the cursor. It is
+left off the line you are typing on in Insert mode, and it moves with its line
+as you add and remove lines, until the server speaks again.
+`:view-diagnostics warning` (or `error`, `info`, `hint`, `off`) sets how loud a
+message must be, for this session; `[editor] end_of_line_diagnostics` sets it
+for good, with helix's words (`disable`, `hint`, `info`, `warning`, `error`), and
+`hint`, every message, is the default.
+
 Rename and code actions can change files you have not opened. Those files are opened,
 each gets one undo step, and nothing is saved until you save it.
 
