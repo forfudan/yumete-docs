@@ -71,7 +71,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[ime] scheme` | `"pinyin"` | **输入方案** — 用哪一套输入方案（拼音、灵明、星陈自带），其他方案需安装 (`lingming` 灵明, `xingchen` 星陈, `qingyun` 卿云, `riyue` 日月, `pinyin` 拼音) |
+| `[ime] scheme` | `"pinyin"` | **输入方案** — 用哪一套输入方案（拼音、灵明、星陈自带），其他方案需安装 (`lingming` 灵明, `xingchen` 星陈, `qingyun` 卿云, `riyue` 日月, `pinyin` 宇浩拼音) |
 | `[ime] commit` | `"default"` | **上屏方式** — 码打完了什么时候上屏：等下一键、只有一个候选就上，还是攒成整句 (`default` 预设, `delayed` 延迟(顶字), `unique` 唯一, `fluency` 整句) |
 | `[ime] charset` | `"all"` | **字集过滤** — 候选里只留哪一个字集的汉字 (`all` 全部汉字, `common` 仅常用汉字, `tonggui` 仅简化汉字, `harmonic` 仅传统汉字) |
 | `[ime] charset_sort` | `"common"` | **字集排序** — 哪一个字集的字排在候选前面，整句方案不起作用 (`original` 原始排序, `common` 常用字优先, `tonggui` 简化字优先, `harmonic` 传统字优先) |
