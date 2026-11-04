@@ -112,6 +112,7 @@
 | `:view-sentence` | `on｜off｜toggle` | 一句一縱：竪排時每句話單起一縱，只是看法，不動文件 |
 | `:view-hanging` | `on｜off｜toggle` | 標點旁置：句讀掛在邊欄 |
 | `:view-numbers-fill` | `on｜off｜toggle` | 行號那一條有没有自己的底色(默認没有，橫排竪排一樣) |
+| `:view-diagnostics` | `hint｜info｜warning｜error｜off` | 行末診斷：hint、info、warning、error 或 off |
 | `:view-diff` | `on｜off｜toggle` | 改動條：行號旁邊那一格用底色説哪幾行跟 git 那一份不一樣 |
 | `:view-typewriter` | `on｜off｜toggle` | 打字機：光標那一行一直停在畫面中間，紙往上走 |
 | `:view-focus` | `on｜off｜toggle` | 焦點：正在寫的那一段留在紙上，其餘的退後一級 |

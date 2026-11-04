@@ -112,6 +112,7 @@
 | `:view-sentence` | `on｜off｜toggle` | one sentence to a column — a view of the page, not an edit |
 | `:view-hanging` | `on｜off｜toggle` | hanging punctuation: 句讀 sit in the margin |
 | `:view-numbers-fill` | `on｜off｜toggle` | whether the line-number band has a ground of its own (no by default, in both layouts) |
+| `:view-diagnostics` | `hint｜info｜warning｜error｜off` | end-of-line diagnostics: hint, info, warning, error or off |
 | `:view-diff` | `on｜off｜toggle` | change bar: the cell beside the line number says which lines differ from git |
 | `:view-typewriter` | `on｜off｜toggle` | typewriter: the row you are writing stays in the middle and the paper moves |
 | `:view-focus` | `on｜off｜toggle` | focus: the paragraph you are writing stays lit and the rest of the page stands back |
