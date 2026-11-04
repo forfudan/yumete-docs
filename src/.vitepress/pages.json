@@ -48,7 +48,8 @@
     "text": "Coming from",
     "items": [
       { "text": "Coming from helix", "link": "/from/helix" },
-      { "text": "Coming from vim", "link": "/from/vim" }
+      { "text": "Coming from vim", "link": "/from/vim" },
+      { "text": "Coming from LazyVim", "link": "/from/lazyvim" }
     ]
   },
   {
