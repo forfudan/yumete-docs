@@ -71,6 +71,8 @@
 | --- | --- | --- |
 | `[ime] scheme` | `"pinyin"` | **輸入方案** — 用哪一套輸入方案（拼音、靈明、星陳自帶），其他方案需安裝 (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 拼音) |
 | `[ime] commit` | `"default"` | **上屏方式** — 碼打完了什麽時候上屏：等下一鍵、只有一個候選就上，還是攢成整句 (`default` 預設, `delayed` 延遲(頂字), `unique` 唯一, `fluency` 整句) |
+| `[ime] charset` | `"all"` | **字集過濾** — 候選裏只留哪一個字集的漢字 (`all` 全部漢字, `common` 僅常用漢字, `tonggui` 僅簡化漢字, `harmonic` 僅傳統漢字) |
+| `[ime] charset_sort` | `"common"` | **字集排序** — 哪一個字集的字排在候選前面，整句方案不起作用 (`original` 原始排序, `common` 常用字優先, `tonggui` 簡化字優先, `harmonic` 傳統字優先) |
 | `[ime] start` | `false` | **啓動就載入碼表** — 默認不載入——分詞模型照常載入，碼表等你第一次打字 |
 | `[ime] system` | `"auto"` | **NORMAL模式下屏蔽系統版宇夢輸入法** — Normal 模態下請系統輸入法讓開，免得按鍵被它吃掉 (`auto` 自動, `keep` 不管它) |
 | `[panel] display` | `"box"` | **候選怎麽畫** — 打字的時候候選畫在哪：光標旁邊的候選框、窗口最下面那一行，還是光標的下一行 (`box` 候選框, `bottom` 底行, `inline` 行中) |

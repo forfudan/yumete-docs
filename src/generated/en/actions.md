@@ -402,6 +402,24 @@
 | `yume_preedit_off` | off — in the candidate bar | `Space z e o` | `Space z e o` |  |
 | `yume_preedit_composition` | composition — the code, in the text | `Space z e c` | `Space z e c` |  |
 | `yume_preedit_preview` | preview — the first candidate, in the text | `Space z e p` | `Space z e p` |  |
+| `yume_charset_mode` | charset filter | `Space z 0` | `Space z 0` |  |
+| `yume_sort_mode` | charset sort | `Space z s` | `Space z s` |  |
+| `yume_lanes_mode` | sentence lanes | `Space z g` | `Space z g` |  |
+| `yume_builtin_mode` | built-in scheme | `Space z b` | `Space z b` |  |
+| `yume_charset_all` | all characters | `Space z 0 a` | `Space z 0 a` |  |
+| `yume_charset_common` | common characters only | `Space z 0 c` | `Space z 0 c` |  |
+| `yume_charset_tonggui` | simplified only | `Space z 0 s` | `Space z 0 s` |  |
+| `yume_charset_harmonic` | traditional only | `Space z 0 t` | `Space z 0 t` |  |
+| `yume_sort_original` | original order | `Space z s o` | `Space z s o` |  |
+| `yume_sort_common` | common first | `Space z s c` | `Space z s c` |  |
+| `yume_sort_tonggui` | simplified first | `Space z s s` | `Space z s s` |  |
+| `yume_sort_harmonic` | traditional first | `Space z s t` | `Space z s t` |  |
+| `yume_lane_tonggui` | general standard (simplified) | `Space z g j` | `Space z g j` |  |
+| `yume_lane_tongfan` | standard traditional | `Space z g f` | `Space z g f` |  |
+| `yume_lane_tai` | Taiwan common characters | `Space z g t` | `Space z g t` |  |
+| `yume_builtin_pinyin` | 拼音 | `Space z b p` | `Space z b p` |  |
+| `yume_builtin_lingming` | 靈明 | `Space z b l` | `Space z b l` |  |
+| `yume_builtin_xingchen` | 星陳 | `Space z b x` | `Space z b x` |  |
 | `table_source_view` | source view: the file as written | `Space t o` | `Space t o` |  |
 | `table_basic_view` | basic view: the columns lined up | `Space t b` | `Space t b` |  |
 | `table_window_view` | window view: the table takes the window | `Space t t` | `Space t t` |  |

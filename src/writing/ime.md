@@ -381,6 +381,33 @@ Prediction (輸入預測) offers candidates before the code is complete.
 `:yume-autocompletion toggle` flips it, and `:yume-autocompletion` alone says
 whether it is on. `Space z y` flips it.
 
+### Character sets
+
+Three settings decide which characters the candidates hold and in what order.
+They are 宇浩's own, with the same names and the same defaults.
+
+- **Filter** (字集過濾): all characters (the default), common characters only,
+  simplified only, or traditional only. A character outside the set is not
+  offered at all.
+- **Sort** (字集排序): which characters come first among a 形碼 scheme's
+  candidates: original order, common first (the default), simplified first or
+  traditional first. 宇浩拼音's candidates come from the whole sentence in its
+  own order, so the sort does nothing there, and yumete says so.
+- **Lanes** (整句字集軌): for whole-sentence input, each lane builds the
+  sentence inside one character set, so a sentence keeps to one script. By
+  default there are three: general standard (simplified), standard
+  traditional, and Taiwan's common characters, with the simplified one first.
+  The first lane gives the top candidate, and each other lane adds its own
+  sentence when it differs, so `shuxuejiaoshou` offers both 数学教授 and 數學教授.
+  A character outside a lane can still be typed; it only costs the sentence.
+
+`Space z 0` then `a` `c` `s` `t` sets the filter, `Space z s` then `o` `c` `s`
+`t` sets the sort, and `Space z g` then `j` `f` `t` puts the simplified,
+traditional or Taiwan lane first; the others keep their order. The commands
+are `:yume-charset`, `:yume-charset-sort` and `:yume-lanes`, and each says
+what is in force when given nothing. `:yume-lanes default` puts the lanes back
+in their usual order.
+
 ### Candidates on a page
 
 A page holds six candidates by default. `:yume-menu-size 4` (any number from 1
@@ -592,14 +619,20 @@ keys, so you do not have to remember them.
 | `Space z n` | switch to the next scheme that can load, installed or built in; the rest are skipped | |
 | `Space z 3`–`9` | candidates on a page | `:yume-menu-size` |
 | `Space z /` | the next annotation mode beside the candidates | `:yume-annotation next` |
+| `Space z 0` then `a` `c` `s` `t` | character filter: all, common, simplified, traditional | `:yume-charset` |
+| `Space z s` then `o` `c` `s` `t` | character sort: original, common, simplified, traditional first | `:yume-charset-sort` |
+| `Space z g` then `j` `f` `t` | put the simplified, traditional or Taiwan lane first | `:yume-lanes` |
+| `Space z b` then `p` `l` `x` | switch to the built-in 宇浩拼音, 靈明 or 星陳, whatever is installed | `:yume-builtin` |
 | `Space z t` | use the installed table | `:yume-installed` |
 | `Space z w` | which scheme and table are in use | `:yume-which` |
 | `Space z W` | where the data is | `:yume-where` |
 
 Where 宇浩 has a Control-Shift shortcut for the same thing, the letter after
 `Space z` is the same letter: `m` for ⌃⇧M (commit method), `y` for ⌃⇧Y
-(prediction), `n` for ⌃⇧N (next scheme), and the digits for ⌃⇧3 to ⌃⇧9 (page size). If you know one, you
-know the other.
+(prediction), `n` for ⌃⇧N (next scheme), `0` for ⌃⇧0 (character filter), and
+the digits for ⌃⇧3 to ⌃⇧9 (page size). If you know one, you know the other.
+Where 宇浩's shortcut steps through the values, yumete's opens them, so you
+pick one instead of pressing again.
 
 `Space z m`, `Space z y` and `Space z /` run the `:yume-*` commands beside
 them, so without a loaded 碼表 they are refused the same way the commands are.
@@ -707,9 +740,12 @@ input method group, or in the config file. See
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[ime] scheme` | `"lingming"` | The scheme to load: `lingming`, `xingchen`, `qingyun`, `riyue`, `pinyin`, or a `custom.…` tag. |
+| `[ime] scheme` | `"pinyin"` | The scheme to load: `lingming`, `xingchen`, `qingyun`, `riyue`, `pinyin`, or a `custom.…` tag. |
 | `[ime] start` | `false` | Load the code table at start-up. |
 | `[ime] commit` | `"default"` | Commit method: `default`, `delayed`, `unique` (or `auto`), `fluency`. `default` means the scheme decides. |
+| `[ime] charset` | `"all"` | Character filter: `all`, `common`, `tonggui` (simplified), `harmonic` (traditional). |
+| `[ime] charset_sort` | `"common"` | Character sort: `original`, `common`, `tonggui`, `harmonic`. |
+| `[ime] lanes` | `["tonggui", "tongfan", "tai"]` | Sentence lanes, first preferred; `[]` turns them off. |
 | `[ime] data_dirs` | `[]` | Directories to search for tables first, in order. `~` is expanded. |
 | `[ime] system` | `"auto"` | `auto` stands the system input method aside; `keep` never touches it. |
 | `[panel] display` | `"box"` | Where candidates are drawn: `box`, `bottom`, `inline`. |
@@ -743,10 +779,13 @@ page_size = 6
 | `:yume`, `:y` | Turn the input method on, in Chinese. Loads the table if needed. |
 | `:yume off` | Turn it off and give the keyboard back to the system. |
 | `:yume-scheme [name]` | Load a scheme; with no name, the one in the config. |
-| `:yume-builtin` | Use the built-in 靈明 table. |
+| `:yume-builtin` | Use the built-in table of the current scheme. |
 | `:yume-installed` | Use the installed table for the current scheme. |
 | `:yume-table <path>` | Use a code table file of your own, including Rime `.dict.yaml`. |
 | `:yume-commit [method]` | Set or show the commit method. |
+| `:yume-charset [filter]` | Set or show the character filter. |
+| `:yume-charset-sort [sort]` | Set or show the character sort. |
+| `:yume-lanes [lane\|default]` | Put a sentence lane first, or show the lanes. |
 | `:yume-panel [where]` | Set or show where candidates are drawn. |
 | `:yume-inline-preedit [mode]` | Set or show where the code is shown. |
 | `:yume-menu-size [1–9]` | Set or show the candidates on a page. |

@@ -402,6 +402,24 @@
 | `yume_preedit_off` | off——写在候选栏里 | `Space z e o` | `Space z e o` |  |
 | `yume_preedit_composition` | composition——正文里写编码 | `Space z e c` | `Space z e c` |  |
 | `yume_preedit_preview` | preview——正文里写首选 | `Space z e p` | `Space z e p` |  |
+| `yume_charset_mode` | 字集过滤 | `Space z 0` | `Space z 0` |  |
+| `yume_sort_mode` | 字集排序 | `Space z s` | `Space z s` |  |
+| `yume_lanes_mode` | 整句字集轨 | `Space z g` | `Space z g` |  |
+| `yume_builtin_mode` | 切到内置方案 | `Space z b` | `Space z b` |  |
+| `yume_charset_all` | 全部汉字 | `Space z 0 a` | `Space z 0 a` |  |
+| `yume_charset_common` | 仅常用汉字 | `Space z 0 c` | `Space z 0 c` |  |
+| `yume_charset_tonggui` | 仅简化汉字 | `Space z 0 s` | `Space z 0 s` |  |
+| `yume_charset_harmonic` | 仅传统汉字 | `Space z 0 t` | `Space z 0 t` |  |
+| `yume_sort_original` | 原始排序 | `Space z s o` | `Space z s o` |  |
+| `yume_sort_common` | 常用字优先 | `Space z s c` | `Space z s c` |  |
+| `yume_sort_tonggui` | 简化字优先 | `Space z s s` | `Space z s s` |  |
+| `yume_sort_harmonic` | 传统字优先 | `Space z s t` | `Space z s t` |  |
+| `yume_lane_tonggui` | 通用规范汉字 | `Space z g j` | `Space z g j` |  |
+| `yume_lane_tongfan` | 通规标准繁体字 | `Space z g f` | `Space z g f` |  |
+| `yume_lane_tai` | 常用与次常用国字 | `Space z g t` | `Space z g t` |  |
+| `yume_builtin_pinyin` | 拼音 | `Space z b p` | `Space z b p` |  |
+| `yume_builtin_lingming` | 灵明 | `Space z b l` | `Space z b l` |  |
+| `yume_builtin_xingchen` | 星陈 | `Space z b x` | `Space z b x` |  |
 | `table_source_view` | 源码视图(显示源码) | `Space t o` | `Space t o` |  |
 | `table_basic_view` | 基本视图(表格按列对齐) | `Space t b` | `Space t b` |  |
 | `table_window_view` | 全窗视图(表格独占窗口) | `Space t t` | `Space t t` |  |
