@@ -122,9 +122,8 @@ such as 的 is never listed, because every text uses it at the usual rate.
 
 The line number is where the word first appears. Names the frequency table does
 not know, single characters, and words used fewer than three times are left
-out. The check needs a word-frequency table, which comes with the 宇浩 data (see
-[The input method](ime.md)). yumete's built-in word list has no frequencies, so
-without that data the check says so and lists nothing.
+out. The word frequencies are the ones every build carries with 宇浩拼音 (see
+[The input method](ime.md)).
 
 ## Punctuation: `:check-punct`
 
