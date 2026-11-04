@@ -16,7 +16,7 @@ it lasts for this run, and `ye -r` or `:resume` brings it back next time.
 
 | Name | Also accepted | Light | Dark | What it looks like |
 | --- | --- | --- | --- | --- |
-| `ink` | `moxiang` | yes | yes | The default. Warm white ink on near-black paper, gold for headings, red for errors |
+| `ink` | `moxiang` | yes | yes | The default. Warm white ink on near-black paper, rose for bold and italic, a colour per heading level, red for errors |
 | `bw` | `heibai`, `mono` | yes | yes | Black, white and grey only |
 | `morandi` | `molandi` | yes | yes | Muted, greyed colours |
 | `github` | `github-theme` | yes | yes | GitHub Light Default and Dark Default |
@@ -73,15 +73,20 @@ On top of the greys, each colour has one job:
 
 | Colour | Config key | Used for |
 | --- | --- | --- |
-| gold | `gold` | headings, table headers, labels in panels: text that is not the body text |
+| gold | `gold` | top-level headings, list markers, table headers, labels in panels: text that is not the body text |
 | red | `mark` | something wrong: a footnote marker, a table row with the wrong number of cells, a merge conflict |
 | purple | `purple` | inline code and code blocks |
 | green | `green` | quotations |
 | blue | `azure` | links |
 | yellow | `amber` | `::: warning` blocks, and types in code |
 
-Bold, italic and plain body text get no colour of their own. The order of the colours follows
-the ranks of official robes in imperial China: gold for the writer's own headings,
+In ink, bold is a deep rose and italic a pale rose of the same family (bold italic takes
+the bold), so the two read as one kind of emphasis and stay apart where a Chinese font
+barely slants; both are kept well away from the red. Headings take gold, then orange,
+then yellow-green, the deeper levels fading back toward the ink; the `#` stays grey.
+These prose colours are not config keys. `bw` and `morandi` give bold, italic and body
+text no colour of their own. The order of the colours follows
+the ranks of official robes in imperial China: gold for the writer's own top headings,
 purple for code where not one character may change, green for other people's words,
 blue for an address. Red never marks emphasis; it always means "this is wrong". Your
 own `==highlighted==` text sits on a pale wash of the gold, not the red.

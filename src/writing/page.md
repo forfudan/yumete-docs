@@ -31,8 +31,8 @@ this way; `[^note]` stays as written.
 
 Block structure is never hidden. A heading keeps its `#`, a list keeps its
 marker, a quote keeps its `>`. A terminal cannot make a heading bigger, so the
-`#` is the only thing that shows its level. Typst code such as
-`#import "ch1.typ"` is never hidden either, only dimmed.
+`#` shows its level, and in ink so does its colour. Typst code such as
+`#import "ch1.typ"` is never hidden either; it is coloured as code.
 
 Wherever the cursor or the selection touches a construct, that construct opens
 and shows its source. So the cursor is never inside text you cannot see, and
