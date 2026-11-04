@@ -92,7 +92,7 @@
 | `:yume-menu-size` | `<1–9>` | how many candidates a page holds (1-9, 6 by default) |
 | `:yume-autocompletion` | `on｜off｜toggle` | autocompletion: offer candidates before the code is finished |
 | `:yume-installed` |  | use the 碼表 the system has installed (builtin's other half) |
-| `:yume-builtin` |  | use the built-in 靈明 table, whatever else is installed |
+| `:yume-builtin` |  | use the built-in table of this scheme, whatever else is installed |
 | `:yume-table` | `<path>` | use your own table (a Rime .dict.yaml will do) |
 | `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | which markup this file is written in (with no argument, which one it is now) |
 | `:pipe` | `<命令>` | send the selection through a terminal command and take back its output |

@@ -28,20 +28,19 @@ An input method is two things: an engine and a code table (碼表) that says whi
 code gives which character. The engine is always in yumete. The code tables are
 data, and where they come from decides which schemes you can use.
 
-### The two tables in every build
+### The tables in every build
 
-Every yumete binary carries two small tables of its own:
+Every yumete binary carries the full tables of three schemes:
 
-- **靈明, 精華版.** Every character in the CJK basic block and Extension A, the
-  宇浩 component block, and the rest of the characters in the seven character
-  sets, plus the short codes. It has **no words**, so whole-sentence input
-  falls back to one character at a time.
-- **星陳, 精簡版.** The same idea for 星陳.
+- **宇浩拼音**, with the word frequencies, the word list and the sentence
+  model behind whole-sentence input. It is the scheme yumete starts with.
+- **靈明** and **星陳**, with their words and short codes.
 
-With nothing else installed, you can type 靈明 and 星陳 with these. The other
-schemes are not carried. If you ask for one and its table is not on the
-machine, yumete says the table is not installed and stays on the scheme you
-were using.
+They come from the current 宇浩 release when yumete is built, so with nothing
+else installed you can type all three. The other schemes (卿雲, 日月 and
+schemes you added to 宇浩 yourself) are not carried. If you ask for one and its
+table is not on the machine, yumete says the table is not installed and stays
+on the scheme you were using.
 
 ### Installed data
 
@@ -58,8 +57,10 @@ nothing to configure: yumete looks where 宇浩 keeps its data on each system.
   `$YUME_DATADIR`, then `yume/` under each of `$XDG_DATA_DIRS` (by default
   `/usr/local/share` and `/usr/share`).
 
-An installed table always wins over the built-in one. The built-in tables are
-the fallback for a machine with nothing installed.
+An installed file always wins over the built-in one, file by file: an installed
+宇浩 is usually newer than the tables yumete was built with, and a data
+directory that lacks one file (the sentence model, say) still gets that one
+from the binary.
 
 ### Naming a directory yourself
 
@@ -96,7 +97,6 @@ at start-up instead:
 
 ```toml
 [ime]
-scheme = "lingming"
 start = true
 ```
 
@@ -170,7 +170,7 @@ A scheme (方案) is a way of turning keys into characters: 靈明, 星陳, 卿�
 ### `:yume-scheme`
 
 ```text
-:yume-scheme              load the scheme the config names (靈明 by default)
+:yume-scheme              load the scheme the config names (宇浩拼音 by default)
 :yume-scheme xingchen     switch to 星陳
 :yume-s r                 the same idea, short: 日月
 ```
@@ -200,11 +200,12 @@ scheme = "xingchen"
 
 ### Built-in or installed
 
-When both a built-in and an installed table exist for 靈明 or 星陳, the
-installed one is used. Two commands switch between them. They are useful when a
+When both a built-in and an installed table exist for a scheme, the installed
+one is used. Two commands switch between them. They are useful when a
 candidate surprises you and you want to know which table is answering.
 
-- `:yume-builtin` switches to the built-in 靈明 table, whatever is installed.
+- `:yume-builtin` switches to the built-in table of the current scheme,
+  whatever is installed.
 - `:yume-installed` (or `Space z t`) switches back to the installed table for
   the current scheme.
 

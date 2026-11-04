@@ -276,18 +276,18 @@
 | `C-w r` | rotate this row on |
 | `C-w R` | rotate this row back |
 | `C-w H / C-w J / C-w K / C-w L` | move to that edge |
-| `C-w c` | close this region (never the last window) |
+| `C-w c` | close, don't quit |
 | `C-w S` | a window below |
-| `C-w F` | open the file under the cursor below |
+| `C-w F` | file under cursor, below |
 | `C-w ^` | the file before, below |
 | `C-w :` | the command line |
 | `C-w h / C-w j / C-w k / C-w l` | go that way |
 | `C-w s` | a window below |
 | `C-w v` | a window beside |
 | `C-w n` | a blank window |
-| `C-w q` | close this region (in the last window, quit) |
+| `C-w q` | close |
 | `C-w o` | keep only this window |
-| `C-w f` | open the file under the cursor below |
+| `C-w f` | file under cursor, below |
 
 ## a blank window (`C-w n`, `\wn`)
 

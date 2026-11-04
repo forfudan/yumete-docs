@@ -92,7 +92,7 @@
 | `:yume-menu-size` | `<1–9>` | 候選面板一頁幾條(1–9，出廠 6) |
 | `:yume-autocompletion` | `on｜off｜toggle` | 輸入預測：碼没打完就先給候選 |
 | `:yume-installed` |  | 改用系統裝的那份碼表(builtin 的反面) |
-| `:yume-builtin` |  | 改用出廠自帶的靈明碼表，不管裝了什麼 |
+| `:yume-builtin` |  | 改用出廠自帶的碼表，不管裝了什麼 |
 | `:yume-table` | `<路徑>` | 用你自己的碼表(Rime 的 .dict.yaml 也行) |
 | `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 這個文件是哪種標記(不給參數就説現在是哪個) |
 | `:pipe` | `<命令>` | 將選區發送爲終端命令，且使用其輸出替換選區 |

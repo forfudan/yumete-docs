@@ -60,10 +60,10 @@ ye --version
 
 ## Typing Chinese: the input method data
 
-Every build carries small tables of two schemes, 靈明 and 星陳, so the built-in
-input method types Chinese characters as soon as it is installed (see
-[The input method](../writing/ime.md)). Whole words, the other schemes, and the language model behind whole-sentence input come from the
-data of the Yume input method.
+Every build carries the full tables of 宇浩拼音, 靈明 and 星陳, with the
+language model behind whole-sentence input, so the built-in input method types
+Chinese as soon as it is installed (see [The input method](../writing/ime.md)).
+The other schemes come from the data of the Yume input method.
 
 If the Yume input method is installed on the same machine, yumete finds its data
 on its own. Nothing else to do.
