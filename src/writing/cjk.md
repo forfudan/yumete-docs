@@ -85,11 +85,11 @@ fenced block the same keys follow the syntax tree, as in helix.
 
 ## How words are found
 
-Word boundaries come from a word list. With Yume's data installed (see
-[The input method](ime.md)), yumete uses Yume's language model. Otherwise it
-uses `segmentation.txt` in the data directory if there is one
-(`:word-list-global` opens it), and a built-in list if not. `:word` says which
-list is in use, the level and the mark.
+Word boundaries come from Yume's language model, which every build carries
+(see [The input method](ime.md)); an installed Yume's copy wins when it is
+there. A `segmentation.txt` in the data directory (`:word-list-global` opens
+it) is used only if the model could not be loaded. `:word` says which list is
+in use, the level and the mark.
 
 `:word-level` sets how readily characters join into words:
 
