@@ -78,6 +78,10 @@ Names in angle brackets ignore case. A shifted letter is just the capital: `Q`,
 not `S-q`. The same spellings work inside an `@` run on the right:
 `"@<down>x"`.
 
+Shift-Tab is `<S-tab>`. Tab is `jump_forward` by default, as in helix and vim,
+and a terminal without the kitty keyboard protocol sends the same key for
+`C-i`, so binding Tab there takes jump-forward with it; `C-o` still jumps back.
+
 The left side may also be a run of keys. `"dj" = "@xd"` makes `d` followed by
 `j` delete the line. yumete waits after the `d` to see what comes next; if the
 next key does not continue any of your runs, `d` does what it always did.
