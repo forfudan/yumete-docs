@@ -29,7 +29,7 @@
 | `[editor] line_numbers` | `"absolute"` | **line numbers** — the column on the left that numbers the lines; relative numbers count from the caret, which makes jumps easy to type (`absolute` absolute, `relative` relative, `none` none) |
 | `[editor] line_number_fill` | `false` | **line number fill** — fill the line-number column with a faint ground, not just the number |
 | `[editor] diff_gutter` | `true` | **diff gutter** — the cell beside the line number marks lines that differ from git, or from the saved file outside git |
-| `[editor] end_of_line_diagnostics` | `"hint"` | **end-of-line diagnostics** — write the language server's message after its line of code, from which level up (`disable` off, `hint` hints and up, `info` info and up, `warning` warnings and up, `error` errors only) |
+| `[editor] end_of_line_diagnostics` | `"hint"` | **end-of-line diagnostics** — write the language server's message after its line, from which level up (`disable` off, `hint` hints and up, `info` info and up, `warning` warnings and up, `error` errors only) |
 | `[editor] modeline` | `true` | **read vim modelines** — vim: set ft=… ts=…: in the first or last five lines of a file sets its type, indentation and hard-wrap width |
 | `[editor] word_level` | `"balanced"` | **word level** — how readily characters are joined into a word: strict takes only the certain ones, loose whatever the dictionary has (`strict` strict, `balanced` balanced, `full` full (loose)) |
 | `[editor] word_mark` | `"color"` | **word mark** — how word boundaries are shown (`off` none, `color` colour, `ink` brightness, `tint` tint, `line` underline) |

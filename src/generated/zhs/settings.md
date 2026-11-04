@@ -29,7 +29,7 @@
 | `[editor] line_numbers` | `"absolute"` | **行号** — 左边那一栏画第几行。相对行号数的是「离光标几行」，跳行时好按 (`absolute` 绝对, `relative` 相对, `none` 不画) |
 | `[editor] line_number_fill` | `false` | **行号铺底** — 行号那一格用淡底色铺满，而不是只写一个数 |
 | `[editor] diff_gutter` | `true` | **改动条** — 行号旁边那一格用底色説哪几行跟 git 里的不一样 |
-| `[editor] end_of_line_diagnostics` | `"hint"` | **行末诊断** — 语言服务器的提示写在代码行的末尾，从哪一级起写 (`disable` 不显示, `hint` 建议及以上, `info` 说明及以上, `warning` 警告及以上, `error` 只显示错误) |
+| `[editor] end_of_line_diagnostics` | `"hint"` | **行末诊断** — 语言服务器的提示写在行末，从哪一级起写 (`disable` 不显示, `hint` 建议及以上, `info` 说明及以上, `warning` 警告及以上, `error` 只显示错误) |
 | `[editor] modeline` | `true` | **读 vim 的 modeline** — 文件头尾五行里的 vim: set ft=… ts=…: 定这个文件的类型、缩进和硬换行宽度 |
 | `[editor] word_level` | `"balanced"` | **分词松紧** — 多容易把几个字并成一个词。严：只认没争议的；松：词典説是就是 (`strict` 严格, `balanced` 适中, `full` 宽松) |
 | `[editor] word_mark` | `"color"` | **分词标记** — 分词标记用哪一种画法 (`off` 不画, `color` 不同颜色, `ink` 不同明度, `tint` 不同底色, `line` 下划线) |

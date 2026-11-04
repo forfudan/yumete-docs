@@ -355,7 +355,7 @@
 | `move_view_far_up` | move this window to the very top |  | `C-w K` |  |
 | `move_view_far_right` | move this window to the far right |  | `C-w L` |  |
 | `vim_close_window` | close, don't quit |  | `C-w c` |  |
-| `goto_last_accessed_file_hsplit` | the file before, below |  | `C-w ^` |  |
+| `goto_last_accessed_file_hsplit` | the file before, above |  | `C-w ^` |  |
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | traditional → simplified | `` `s `` | `` g`s `` |  |

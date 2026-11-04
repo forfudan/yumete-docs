@@ -355,7 +355,7 @@
 | `move_view_far_up` | 挪到最上面 |  | `C-w K` |  |
 | `move_view_far_right` | 挪到最右边 |  | `C-w L` |  |
 | `vim_close_window` | 关闭窗口但不退出 |  | `C-w c` |  |
-| `goto_last_accessed_file_hsplit` | 在下面打开上一个文件 |  | `C-w ^` |  |
+| `goto_last_accessed_file_hsplit` | 在上面打开上一个文件 |  | `C-w ^` |  |
 | `switch_to_lowercase` | 转小写 | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | 转大写 | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | 繁→简 | `` `s `` | `` g`s `` |  |
