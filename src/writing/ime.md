@@ -406,8 +406,10 @@ They are 宇浩's own, with the same names and the same defaults.
 `t` sets the sort, and `Space z g` then `j` `f` `t` puts the simplified,
 traditional or Taiwan lane first; the others keep their order. The commands
 are `:yume-charset`, `:yume-charset-sort` and `:yume-lanes`, and each says
-what is in force when given nothing. `:yume-lanes default` puts the lanes back
-in their usual order.
+what is in force when given nothing. `:yume-lanes` also takes Yume's other
+four character sets (`common`, `harmonic`, `guji`, `gang`) and adds that lane
+first, as `[ime] lanes` does. `:yume-lanes default` puts the lanes back in
+their usual order.
 
 ### Candidates on a page
 
