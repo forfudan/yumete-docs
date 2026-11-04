@@ -86,11 +86,13 @@ command does.
 
 A closed fold is one line. `j` and `k` step over it, a count counts it once, and an
 operator takes it whole: `dd`, `yy`, `>>` and `x` on a closed fold act on all its
-lines, and `2dd` takes the fold and the line after it. `o` opens a line after the
-fold, `p` puts after it and `P` before it, and the fold stays closed. Typing on its
-line opens it.
+lines, `zfj` reaches the line after it, and `2dd` takes the fold and the line after
+it. `>>` and `<<` then open it, as vim's do. `o` opens a line after the fold, `p`
+puts after it and `P` before it, and the fold stays closed. Typing on its line opens
+it, and so does typing with a second cursor inside it.
 
 What lands inside a closed fold opens it: a search, a mark, `%`, `u`, a jump to a
-definition, the moves along a line. vim's jumps leave it closed and put the cursor
-on its line: `G`, `gg`, `:`*line*, `C-o` and `C-i`. Then `zo` puts the cursor where
-the jump was going.
+definition, and the moves along its line (`l`, `$`, `f`…). `w` and `b` step past it.
+vim's jumps leave it closed: `G`, `gg`, `:`*line*, `C-o` and `C-i` put the cursor
+on its line, and the status line says the line the cursor is really on, as vim's
+does. The fold keys act there, and `zo` puts the cursor where the jump was going.
