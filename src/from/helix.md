@@ -69,7 +69,6 @@ helix keys yumete does not have yet:
 | Key | helix | yumete |
 | --- | --- | --- |
 | `A-up` `A-down` `A-left` `A-right` | the same, on the arrows | not bound: use the letters |
-| `zm` | centre the cursor sideways | not bound: yumete does not scroll sideways |
 | `Space G` | the debugger | not there |
 
 In prose, which has no syntax tree, `A-o` and its family walk the writing

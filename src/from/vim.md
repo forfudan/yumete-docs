@@ -203,8 +203,8 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 - vim-surround's visual `S` is not there. Use `ys` with a motion.
 - `gh` and `gl` do nothing; use `0` and `$`.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
-  side by side with `C-w v` or `:vsplit`. `C-w n` opens a blank window below
-  at once, as in vim; `:new` is helix's: a new empty buffer in this window,
+  side by side with `C-w v` or `:vsplit`; new windows open above and to the
+  left, as in vim. `C-w n` opens a blank window above at once, as in vim; `:new` is helix's: a new empty buffer in this window,
   and the split versions are `:hnew` and `:vnew`. `:q` closes the window you
   are in, and quits in the last one, as vim's `:q` does.
 - `:set` opens the settings panel. It does not take `option=value`; each

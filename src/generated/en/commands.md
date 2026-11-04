@@ -158,7 +158,7 @@
 | `:paste-table` | `<格式> [<格式>]` | paste the clipboard's table as the named format; with two words the first is the source |
 | `:convert-table` | `<格式> [<格式>]` | convert to the named format (csv, tsv, pipe); with two words the first is the source |
 | `:wheel` | `<幾行，1–10>` | how far one notch of the wheel moves; `:wheel 1` is the terminal's own |
-| `:clipboard` |  | the paste menu: the clipboard and what was yanked, pick one (also Space, then a double quote) |
+| `:clipboard` `:reg` |  | the paste menu: the clipboard and what was yanked, pick one (also Space, then a double quote) |
 | `:clipboard-yank` |  | put the selection on the system clipboard |
 | `:clipboard-paste` |  | paste from the system clipboard |
 | `:buffer` |  | the open files: list, switch, close |
