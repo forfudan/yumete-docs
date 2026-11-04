@@ -90,7 +90,7 @@
 | `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | commit method: default (the scheme's own), delayed (頂字), unique, fluency (whole sentence) |
 | `:yume-charset` | `all｜common｜tonggui｜harmonic` | charset filter: all, common, simplified or traditional characters |
 | `:yume-charset-sort` | `original｜common｜tonggui｜harmonic` | charset sort: original, or common, simplified or traditional first |
-| `:yume-lanes` | `tonggui｜tongfan｜tai｜default` | sentence lanes: put one first, or default for the usual order |
+| `:yume-lanes` | `tonggui｜tongfan｜tai｜common｜harmonic｜guji｜gang｜default` | sentence lanes: put one first, or default for the usual order |
 | `:yume-panel` | `box｜bottom｜inline` | where the candidates are drawn: box by the caret, bottom on the bottom line, inline on the line under the caret |
 | `:yume-inline-preedit` | `off｜composition｜preview` | where the composition shows: off in the candidate bar, composition or preview in the text |
 | `:yume-menu-size` | `<1–9>` | how many candidates a page holds (1-9, 6 by default) |
