@@ -44,7 +44,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] scrolloff` | `3` | **scrolloff** — how many lines (columns, on a vertical page) to keep between the caret and the edge (0–20) |
+| `[editor] scrolloff` | `5` | **scrolloff** — how many lines (columns, on a vertical page) to keep between the caret and the edge (0–20) |
 | `[editor] wheel_step` | `3` | **wheel step** — how many lines one notch of the wheel moves; 1 is the terminal's own step (1–10) |
 | `[editor] tabs` | `"auto"` | **tabs** — the bar along the top that lists the open files (`auto` two or more, `always` always, `never` never) |
 | `[editor] command_line` | `true` | **command line** — a line under the status line for commands, for what just happened, and for the keys you can press now |
