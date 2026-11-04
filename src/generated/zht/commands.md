@@ -14,6 +14,7 @@
 | `:write-all` `:wa` |  | 存下所有改過的文件 |
 | `:write-as` | `<路徑>` | 另存成新文件並改編輯它(`:w <文件名>` 只抄一份，人還在這邊) |
 | `:recover` |  | 問要不要用搶救稿 |
+| `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件存盤用的編碼：utf-8、gb18030、big5、shift-jis |
 | `:reload` |  | 把文件再讀一遍；加 ! 是丟掉你這裏的改動 |
 | `:reload-config` |  | 改完 config.toml，不必重啓 |
 | `:reload-auto` | `on｜off｜toggle` | 文件在外面改了就自己重讀——你這裏有改動時只提醒，不動手 |

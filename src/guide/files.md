@@ -43,9 +43,17 @@ modification time. Build tools and sync programs read that time, so an idle
 ### What a save writes
 
 Files are read and written as UTF-8. A byte-order mark at the start is
-kept out of the text you edit, and saving puts it back. A file in another encoding, such as Big5 or
-GB18030, is refused with a note to convert it first, for example with
-`iconv -f big5 -t utf-8`.
+kept out of the text you edit, and saving puts it back.
+
+A file in GB18030 (which also reads GBK and GB2312), Big5 or Shift-JIS is
+opened in it and saved back in it, byte for byte when nothing changed. The
+status line says which, as `[Big5]`, and `:info` lists it. yumete tells the
+three apart by the bytes; when a file is too short to be sure, it asks.
+`:encoding` says what the file is saved in, and `:encoding utf-8` (or
+`gb18030`, `big5`, `shift-jis`) changes it from the next save on. A character
+the encoding cannot hold, such as 简 in a Big5 file, stops the save before the
+disk is touched, and the message says where it is. Other encodings, such as
+Latin-1 or UTF-16, are refused.
 
 A saved file ends with a line break, as in vim and helix. It uses the file's
 own line ending, `\r\n` or `\n`, and an empty file stays empty. Line endings
