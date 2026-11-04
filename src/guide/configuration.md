@@ -80,7 +80,8 @@ zong_length = 24     # characters to a column
 
 Two things are read from the global file only:
 
-- `[keys.normal]`, because a binding can run a command line;
+- the key tables (`[keys.normal]`, `[keys.helix.normal]`, `[keys.vim.normal]`
+  and the rest), because a binding can run a command line;
 - `screenshot` under `[editor]`, because it runs through a shell.
 
 A project folder can come from anyone, and opening it should not run their

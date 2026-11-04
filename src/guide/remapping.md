@@ -62,9 +62,10 @@ and takes it off its group's menu.
 Prefer an action name when one exists. A name says what the key does, and it
 keeps meaning that even if the default key for it moves.
 
-`:keymap-actions` lists every action in three columns: the name to write, what
-it does, and which key does it now, under the keymap in use. Every Normal-mode
-key has one, the keys inside the groups too, about 340 in all:
+`:keymap-actions` lists every action with the name to write, what it does, its
+keys under helix and under vim (the keymap in use in bold, without the keys you
+have bound to something else), and the keys you bound to it yourself. Every
+Normal-mode key has one, the keys inside the groups too, about 340 in all:
 `goto_line_start` is `g h`, `file_picker` is `Space f`, `hsplit` is `C-w s`.
 A name does the same thing under either keymap: `delete_char_backward` is
 vim's `X` even when you use helix's keys.
@@ -210,8 +211,8 @@ inherit = false
 [Bindable commands](../reference/actions.md) lists each place's
 commands and keys.
 
-The hint rows, the `::` palette and `:keymap-actions` name the keys as they are
-bound now, yours included.
+The hint rows and the `::` palette name the keys as they are bound now, yours
+included; `:keymap-actions` lists yours in a column of their own.
 
 ## Tables
 
