@@ -105,6 +105,27 @@ first save never asks.
 Every save goes through this check: `:w!`, `:wq`, `:wa` and `:wqa!`
 included. The `!` overrides a change made outside, not this question.
 
+## Modelines
+
+A vim modeline in the first or last five lines of a file says how that file
+is read, under either keymap:
+
+```text
+<!-- vim: set ft=html ts=2 sw=2 et: -->
+# vim: ts=4 noet
+```
+
+yumete reads them as vim does, both forms, and takes five things from them:
+the file type (`ft`, `syntax`), the tab stop (`ts`), the indent width (`sw`;
+`sw=0` is the tab stop), whether Tab types spaces (`et`, `noet`) and the
+width `:hard-wrap` fills to (`tw`). They hold for that file only. Everything
+else in a modeline is passed over without a word, and nothing in one is ever
+run. A type yumete has no grammar for, such as `ft=xml`, changes nothing.
+
+`--syntax` still outranks a modeline, a typed `:indent-width` or `:indent-tab`
+outranks it for that file, and `:reload` reads it again. `:info` shows what
+the modeline said. `[editor] modeline = false` turns them off.
+
 ## When the file changes outside
 
 Another program can change a file you have open: a git checkout, a sync
