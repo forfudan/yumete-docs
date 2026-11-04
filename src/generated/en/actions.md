@@ -3,7 +3,7 @@
 | Command | What it does | helix | vim | Insert |
 | --- | --- | --- | --- | --- |
 | `move_char_left` | one character left | `h` `Left` | `h` `Left` `Backspace` | `Left` |
-| `move_char_right` | one character right | `l` `Right` | `l` `Right` `Space` | `Right` |
+| `move_char_right` | one character right | `l` `Right` | `l` `Right` | `Right` |
 | `move_visual_line_up` | one line up, on screen | `k` `Up` | `gk` `g Up` | `Up` |
 | `move_visual_line_down` | one line down, on screen | `j` `Down` | `gj` `g Down` | `Down` |
 | `move_next_word_start` | the next word's start | `w` |  |  |
@@ -12,8 +12,8 @@
 | `move_next_long_word_start` | the next long word's start | `W` |  |  |
 | `move_prev_long_word_start` | the previous long word's start | `B` |  |  |
 | `move_next_long_word_end` | the next long word's end | `E` |  |  |
-| `goto_line_start` | the start of the line | `0` `Home` `gh` | `Home` `0` | `Home` `C-a` |
-| `goto_line_end` | the end of the line | `End` `gl` |  |  |
+| `goto_line_start` | the start of the line | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
+| `goto_line_end` | the end of the line | `End` `gl` `g Down` |  |  |
 | `goto_first_nonwhitespace` | the first character that is not a space | `^` `gs` | `^` |  |
 | `goto_file_start` | the start of the file | `gg` | `gg` |  |
 | `goto_file_end` | the end of the file |  |  |  |
@@ -22,8 +22,8 @@
 | `goto_next_sentence` | the next sentence | `L` |  |  |
 | `goto_prev_paragraph` | the previous paragraph | `[p` |  |  |
 | `goto_next_paragraph` | the next paragraph | `]p` |  |  |
-| `page_cursor_half_down` | half a page down | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` |  |
-| `page_cursor_half_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` |  |
+| `page_cursor_half_down` | half a page down | `C-d` `z C-d` `z␣` `Z C-d` `Z␣` | `C-d` `Z C-d` `Z␣` |  |
+| `page_cursor_half_up` | half a page up | `C-u` `z C-u` `z Backspace` `Z C-u` `Z Backspace` | `C-u` `Z C-u` `Z Backspace` |  |
 | `jump_backward` | back to where you jumped from | `C-o` | `C-o` |  |
 | `select_mode` | Select mode: moving grows the selection | `v` | `v` |  |
 | `extend_line_below` | select this line | `x` |  |  |
@@ -53,10 +53,10 @@
 | `undo` | undo | `u` |  |  |
 | `redo` | redo | `U` |  |  |
 | `repeat_last_change` | repeat the last insert (vim keymap: the last change) | `.` |  |  |
-| `search` | search forward | `/` `z/` `Z/` | `/` |  |
-| `rsearch` | search backward | `?` `z?` `Z?` | `?` |  |
-| `search_next` | the next match | `n` `zn` `Zn` | `gn` |  |
-| `search_prev` | the previous match | `N` `zN` `ZN` | `gN` |  |
+| `search` | search forward | `/` `z/` `Z/` | `/` `Z/` |  |
+| `rsearch` | search backward | `?` `z?` `Z?` | `?` `Z?` |  |
+| `search_next` | the next match | `n` `zn` `Zn` | `gn` `Zn` |  |
+| `search_prev` | the previous match | `N` `zN` `ZN` | `gN` `ZN` |  |
 | `search_selection` | look for what is selected | `g/` | `*` `g/` |  |
 | `goto_definition` | go to where it is defined | `gd` | `gd` |  |
 | `goto_file` | open the file this line names | `gf` | `gf` |  |
@@ -155,7 +155,7 @@
 | `remove_selections` | remove the selections that match a pattern | `A-K` | `A-K` |  |
 | `operator_delete` | delete (then a motion) |  | `d` |  |
 | `operator_change` | change (then a motion) |  | `c` |  |
-| `operator_yank` | yank (then a motion) |  | `y` `zy` `Zy` |  |
+| `operator_yank` | yank (then a motion) |  | `y` `zy` |  |
 | `operator_indent` | indent (then a motion) |  | `>` |  |
 | `operator_unindent` | unindent (then a motion) |  | `<` |  |
 | `delete_to_line_end` | delete to the end of the line | `D` |  |  |
@@ -185,8 +185,8 @@
 | `record_macro` | start or stop recording a macro | `Q` |  |  |
 | `replay_macro` | replay the macro | `q` |  |  |
 | `window_mode` | the window group | `C-w` `Space w` | `C-w` `Space w` |  |
-| `page_down` | a page down | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` | `PageDown` |
-| `page_up` | a page up | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` | `PageUp` |
+| `page_down` | a page down | `C-f` `PageDown` `Space Space` `z C-f` `z PageDown` `Z C-f` `Z PageDown` | `C-f` `PageDown` `Space Space` `Z C-f` `Z PageDown` | `PageDown` |
+| `page_up` | a page up | `C-b` `PageUp` `Space Backspace` `z C-b` `z PageUp` `Z C-b` `Z PageUp` | `C-b` `PageUp` `Space Backspace` `Z C-b` `Z PageUp` | `PageUp` |
 | `join_selections_space` | join lines and select where they meet | `A-J` | `A-J` |  |
 | `save_selection` | save this place in the jump list | `C-s` | `C-s` |  |
 | `jump_forward` | forward again in the jump list | `C-i` `Tab` | `C-i` `Tab` |  |
@@ -210,8 +210,8 @@
 | `goto_char_by_pinyin` | more letters to locate a char | `gZ` | `gZ` |  |
 | `goto_last_accessed_file` | back to the buffer before this one | `ga` | `` |  |
 | `goto_reference` | every place it is used | `gr` |  |  |
-| `move_next_zong` | on a vertical page, on to the next line of the file |  |  |  |
-| `move_prev_zong` | on a vertical page, back to the previous line of the file |  |  |  |
+| `move_next_zong` | on a vertical page, on to the next line of the file |  | `gj` |  |
+| `move_prev_zong` | on a vertical page, back to the previous line of the file |  | `gk` |  |
 | `goto_last_modification` | back to the last change | `g.` | `g.` |  |
 | `reselect_last_selection` | select what was selected last |  | `gv` |  |
 | `insert_at_last_insert` | insert again where the last Insert stopped |  | `gi` |  |
@@ -273,11 +273,11 @@
 | `goto_prev_xml_element` | select the previous XML element | `[x` | `[x` |  |
 | `add_newline_below` | a blank line below | `]␣` | `]␣` |  |
 | `add_newline_above` | a blank line above | `[␣` | `[␣` |  |
-| `align_view_center` | put the cursor's line in the middle of the screen | `zz` `zc` `Zz` `Zc` | `zz` `Zz` |  |
+| `align_view_center` | put the cursor's line in the middle of the screen | `zz` `zc` `Zz` `Zc` | `zz` `Zz` `Zc` |  |
 | `align_view_top` | put the cursor's line at the top of the screen | `zt` `Zt` | `zt` `Zt` |  |
 | `align_view_bottom` | put the cursor's line at the bottom of the screen | `zb` `Zb` | `zb` `Zb` |  |
-| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `C-e` |  |
-| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `C-y` |  |
+| `scroll_down` | scroll the view down a line, the cursor keeping its place in the text | `zj` `z Down` `Zj` `Z Down` | `C-e` `Zj` `Z Down` |  |
+| `scroll_up` | scroll the view up a line, the cursor keeping its place in the text | `zk` `z Up` `Zk` `Z Up` | `C-y` `Zk` `Z Up` |  |
 | `match_brackets` | go to the other half of the pair | `mm` |  |  |
 | `select_textobject_inner` | select what is inside the pair | `mi` |  |  |
 | `select_textobject_around` | select the pair and what is inside | `ma` |  |  |
@@ -306,43 +306,43 @@
 | `swap_view_right` | trade places with the region on the right | `C-w L` |  |  |
 | `goto_file_hsplit` | file under cursor, below | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | file under cursor, beside | `C-w F` |  |  |
-| `create_fold` | make a fold, then a motion | `zf` `Zf` | `zf` `Zf` |  |
-| `create_fold_lines` | make a fold of N lines |  | `zF` `ZF` |  |
-| `open_fold` | open a fold |  | `zo` `Zo` |  |
-| `open_folds_recursively` | open every fold here |  | `zO` `ZO` |  |
-| `close_fold` | close a fold |  | `zc` `Zc` |  |
-| `close_folds_recursively` | close every fold here |  | `zC` `ZC` |  |
-| `toggle_fold` | open or close a fold | `za` `Za` | `za` `Za` |  |
-| `toggle_folds_recursively` | open or close every fold here |  | `zA` `ZA` |  |
-| `open_folds_to_cursor` | open folds to show the cursor line |  | `zv` `Zv` |  |
-| `open_all_folds` | open every fold | `zR` `ZR` | `zR` `ZR` |  |
-| `close_all_folds` | close every fold | `zM` `ZM` | `zM` `ZM` |  |
-| `delete_fold` | delete the fold here, not the text |  | `zd` `Zd` |  |
-| `delete_folds_recursively` | delete every fold made with zf here |  | `zD` `ZD` |  |
-| `delete_all_folds` | delete every fold made with zf |  | `zE` `ZE` |  |
-| `goto_next_fold` | to the next fold's start |  | `zj` `Zj` |  |
-| `goto_prev_fold` | to the previous fold's end |  | `zk` `Zk` |  |
-| `disable_folds` | folds off for now |  | `zn` `Zn` |  |
-| `enable_folds` | folds back on |  | `zN` `ZN` |  |
-| `toggle_folds_enabled` | folds off or back on |  | `zi` `Zi` |  |
-| `fold_more` | close one more level |  | `zm` `Zm` |  |
-| `fold_less` | open one more level |  | `zr` `Zr` |  |
+| `create_fold` | make a fold, then a motion | `zf` `Zf` | `zf` |  |
+| `create_fold_lines` | make a fold of N lines |  | `zF` |  |
+| `open_fold` | open a fold |  | `zo` |  |
+| `open_folds_recursively` | open every fold here |  | `zO` |  |
+| `close_fold` | close a fold |  | `zc` |  |
+| `close_folds_recursively` | close every fold here |  | `zC` |  |
+| `toggle_fold` | open or close a fold | `za` `Za` | `za` |  |
+| `toggle_folds_recursively` | open or close every fold here |  | `zA` |  |
+| `open_folds_to_cursor` | open folds to show the cursor line |  | `zv` |  |
+| `open_all_folds` | open every fold | `zR` `ZR` | `zR` |  |
+| `close_all_folds` | close every fold | `zM` `ZM` | `zM` |  |
+| `delete_fold` | delete the fold here, not the text |  | `zd` |  |
+| `delete_folds_recursively` | delete every fold made with zf here |  | `zD` |  |
+| `delete_all_folds` | delete every fold made with zf |  | `zE` |  |
+| `goto_next_fold` | to the next fold's start |  | `zj` |  |
+| `goto_prev_fold` | to the previous fold's end |  | `zk` |  |
+| `disable_folds` | folds off for now |  | `zn` |  |
+| `enable_folds` | folds back on |  | `zN` |  |
+| `toggle_folds_enabled` | folds off or back on |  | `zi` |  |
+| `fold_more` | close one more level |  | `zm` |  |
+| `fold_less` | open one more level |  | `zr` |  |
 | `goto_fold_start` | to this fold's start |  | `[z` |  |
 | `goto_fold_end` | to this fold's end |  | `]z` |  |
-| `reapply_fold_level_and_view` | refold to the fold level, then show the cursor line |  | `zx` `Zx` |  |
-| `reapply_fold_level` | refold to the fold level |  | `zX` `ZX` |  |
-| `vim_align_view_top` | line to top, cursor past indent |  | `z Enter` `Z Enter` |  |
-| `vim_align_view_center` | line to center, cursor past indent |  | `z.` `Z.` |  |
-| `vim_align_view_bottom` | line to bottom, cursor past indent |  | `z-` `Z-` |  |
-| `vim_align_view_below_top` | next page's first line to top |  | `z+` `Z+` |  |
-| `vim_align_view_above_bottom` | previous page's last line to bottom |  | `z^` `Z^` |  |
-| `scroll_view_left` | view one column left |  | `zh` `z Left` `Zh` `Z Left` |  |
-| `scroll_view_right` | view one column right |  | `zl` `z Right` `Zl` `Z Right` |  |
-| `scroll_view_half_left` | view half a screen left |  | `zH` `ZH` |  |
-| `scroll_view_half_right` | view half a screen right |  | `zL` `ZL` |  |
-| `align_view_cursor_left` | cursor's column to left edge |  | `zs` `Zs` |  |
-| `align_view_cursor_right` | cursor's column to right edge |  | `ze` `Ze` |  |
-| `align_view_middle` | center sideways | `zm` `Zm` |  |  |
+| `reapply_fold_level_and_view` | refold to the fold level, then show the cursor line |  | `zx` |  |
+| `reapply_fold_level` | refold to the fold level |  | `zX` |  |
+| `vim_align_view_top` | line to top, cursor past indent |  | `z Enter` |  |
+| `vim_align_view_center` | line to center, cursor past indent |  | `z.` |  |
+| `vim_align_view_bottom` | line to bottom, cursor past indent |  | `z-` |  |
+| `vim_align_view_below_top` | next page's first line to top |  | `z+` |  |
+| `vim_align_view_above_bottom` | previous page's last line to bottom |  | `z^` |  |
+| `scroll_view_left` | view one column left |  | `zh` `z Left` |  |
+| `scroll_view_right` | view one column right |  | `zl` `z Right` |  |
+| `scroll_view_half_left` | view half a screen left |  | `zH` |  |
+| `scroll_view_half_right` | view half a screen right |  | `zL` |  |
+| `align_view_cursor_left` | cursor's column to left edge |  | `zs` |  |
+| `align_view_cursor_right` | cursor's column to right edge |  | `ze` |  |
+| `align_view_middle` | center sideways | `zm` `Zm` | `Zm` |  |
 | `rotate_view_reverse` | previous |  | `C-w W` |  |
 | `jump_view_first` | the first window |  | `C-w t` |  |
 | `jump_view_last` | the last window |  | `C-w b` |  |
@@ -467,8 +467,8 @@
 | `extend_char_right` | extend the selection one character right | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | extend the selection one line up, on screen | `k` `Up` |  |  |
 | `extend_visual_line_down` | extend the selection one line down, on screen | `j` `Down` |  |  |
-| `extend_line_up` | extend the selection one line up, in the file |  |  |  |
-| `extend_line_down` | extend the selection one line down, in the file |  |  |  |
+| `extend_line_up` | extend the selection one line up, in the file | `gk` |  |  |
+| `extend_line_down` | extend the selection one line down, in the file | `gj` |  |  |
 | `extend_next_word_start` | extend the selection to the next word's start | `w` |  |  |
 | `extend_prev_word_start` | extend the selection to the previous word's start | `b` |  |  |
 | `extend_next_word_end` | extend the selection to the next word's end | `e` |  |  |
@@ -483,10 +483,10 @@
 | `extend_prev_char` | extend the selection backward to a character | `F` | `F` |  |
 | `extend_to_line_start` | extend the selection to the line's start | `Home` | `Home` |  |
 | `extend_to_line_end` | extend the selection to the line's end | `End` |  |  |
-| `extend_to_file_start` | extend the selection to the start of the file |  |  |  |
+| `extend_to_file_start` | extend the selection to the start of the file | `gg` | `gg` |  |
 | `extend_to_file_end` | extend the selection to the end of the file |  |  |  |
-| `extend_to_last_line` | extend to the last line |  |  |  |
-| `extend_to_word` | extend the selection to a place on screen, by its label |  |  |  |
+| `extend_to_last_line` | extend to the last line | `ge` |  |  |
+| `extend_to_word` | extend the selection to a place on screen, by its label | `gw` |  |  |
 | `insert_newline` | a line break, carrying the indent and a list's marker |  |  | `Enter` `C-j` |
 | `delete_char_forward` | delete the character after the cursor |  |  | `Delete` `C-d` |
 | `delete_word_forward` | delete the word after the cursor |  |  | `A-d` |
@@ -512,8 +512,8 @@
 | `vim_goto_line` | to line N, or to the last line without a count (vim's G) |  | `G` |  |
 | `vim_indent` | indent, the cursor keeping its column (vim) |  | `>` |  |
 | `vim_unindent` | unindent, the cursor keeping its column (vim) |  | `<` |  |
-| `vim_paste_after` | paste after (vim's p) |  | `p` `zp` `Zp` |  |
-| `vim_paste_before` | paste before (vim's P) |  | `P` `zP` `ZP` |  |
+| `vim_paste_after` | paste after (vim's p) |  | `p` `zp` |  |
+| `vim_paste_before` | paste before (vim's P) |  | `P` `zP` |  |
 | `vim_paste_after_indented` | paste after, indented like this line (vim's ]p) |  | `]p` |  |
 | `vim_paste_before_indented` | paste before, indented like this line (vim's [p) |  | `]P` `[p` `[P` |  |
 | `vim_increment` | the number at or after the cursor, plus one (vim's C-a) |  | `C-a` |  |
