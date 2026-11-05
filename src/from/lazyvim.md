@@ -112,8 +112,8 @@ D = { run = ":view-focus toggle", label = "Toggle Dimming" }
 z = { run = ":view-typewriter toggle", label = "Toggle Zen Mode" }
 G = { run = ":view-diff toggle", label = "Toggle Git Signs" }
 T = { run = ":view-code toggle", label = "Toggle Treesitter Highlight" }
-L = { run = ":line-numbers relative", label = "Toggle Relative Number" }
-l = { run = ":line-numbers absolute", label = "Toggle Line Numbers" }
+L = { run = ":line-numbers relative", label = "Relative Numbers" }
+l = { run = ":line-numbers absolute", label = "Line Numbers" }
 
 [keys.normal.space.x]
 label = "diagnostics/quickfix"
@@ -160,7 +160,7 @@ are.
 
 Each of those groups takes its letter, so `Space f` followed by a key the group
 does not have does nothing, as in LazyVim. Each time the config loads, yumete
-says which of its own `Space` commands the groups took over. The menus show
+says which of its `Space` keys the groups took over. The menus show
 each group as `+name`, `Backspace` goes back a level, and `Esc` closes them.
 
 ## What is not there
