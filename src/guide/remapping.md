@@ -130,7 +130,7 @@ The Space key itself is `" "` at the top of `[keys.normal]`.
 
 A table under any other key makes a group of your own, nested as deep as you
 like. It takes its key: if the key ran a command, it now opens the group, and
-yumete says so once at startup. Give it a name with `label`; its menu is titled
+yumete says so at startup. Give it a name with `label`; its menu is titled
 with it, and its parent's menu shows it as `+name`:
 
 ```toml
