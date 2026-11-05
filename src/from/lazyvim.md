@@ -32,14 +32,14 @@ space = "file_picker"                  # Find Files (Root Dir)
 "`" = "goto_last_accessed_file"        # Switch to Other Buffer
 "|" = "vsplit"                         # Split Window Right
 "-" = "hsplit"                         # Split Window Below
-"." = ":new"                           # Scratch Buffer
+"." = { run = ":new", label = "Scratch Buffer" }
 # "/" "?" "e" "w" are already LazyVim's: search panel, every command,
 # explorer, the window group.
 
 [keys.normal.space.b]
 label = "buffer"
 b = "goto_last_accessed_file"
-d = ":buffer-close"
+d = { run = ":buffer-close", label = "Delete Buffer" }
 D = [":buffer-close", ":quit-window"]
 j = "buffer_picker"
 
@@ -48,11 +48,11 @@ label = "code"
 a = "code_action"
 A = "code_action"
 r = "rename_symbol"
-f = ":format"
+f = { run = ":format", label = "Format" }
 d = "show_diagnostic"
 s = "lsp_or_syntax_symbol_picker"
 S = "goto_reference"
-l = ":info"
+l = { run = ":info", label = "Lsp Info" }
 
 [keys.normal.space.f]
 label = "file/find"
@@ -60,41 +60,41 @@ f = "file_picker"
 F = "file_picker_in_current_directory"
 g = "file_picker"
 b = "buffer_picker"
-r = ":recent-files-global"
-R = ":recent-files"
-p = ":recent-projects"
-n = ":new"
+r = { run = ":recent-files-global", label = "Recent" }
+R = { run = ":recent-files", label = "Recent (cwd)" }
+p = { run = ":recent-projects", label = "Projects" }
+n = { run = ":new", label = "New File" }
 e = "file_explorer"
 E = "file_explorer_in_current_buffer_directory"
-c = ":settings"
+c = { run = ":settings", label = "Find Config File" }
 t = "suspend"
 T = "suspend"
 
 [keys.normal.space.g]
 label = "git"
-g = ":!lazygit"
-G = ":!lazygit"
+g = { run = ":!lazygit", label = "Lazygit (Root Dir)" }
+G = { run = ":!lazygit", label = "Lazygit (cwd)" }
 s = "changed_file_picker"
-d = ":git-diff"
+d = { run = ":git-diff", label = "Git Diff" }
 
 [keys.normal.space.g.h]
 label = "hunks"
 p = "show_change"
-d = ":git-diff"
+d = { run = ":git-diff", label = "Diff This" }
 
 [keys.normal.space.q]
 label = "quit/session"
-q = ":quit-all"
-s = ":resume"
-l = ":resume"
-S = ":recent-projects"
+q = { run = ":quit-all", label = "Quit All" }
+s = { run = ":resume", label = "Restore Session" }
+l = { run = ":resume", label = "Restore Last Session" }
+S = { run = ":recent-projects", label = "Select Session" }
 
 [keys.normal.space.s]
 label = "search"
-g = ":search-project"
-G = ":search-working"
-B = ":search-buffers"
-r = ":replace-project"
+g = { run = ":search-project", label = "Grep (Root Dir)" }
+G = { run = ":search-working", label = "Grep (cwd)" }
+B = { run = ":search-buffers", label = "Grep Open Buffers" }
+r = { run = ":replace-project", label = "Search and Replace" }
 s = "lsp_or_syntax_symbol_picker"
 S = "lsp_or_syntax_workspace_symbol_picker"
 d = "workspace_diagnostics_picker"
@@ -102,31 +102,31 @@ D = "diagnostics_picker"
 j = "jumplist_picker"
 R = "last_picker"
 C = "command_palette"
-k = ":keymap-actions"
-h = ":help"
+k = { run = ":keymap-actions", label = "Keymaps" }
+h = { run = ":help", label = "Help Pages" }
 '"' = "paste_menu"
 
 [keys.normal.space.u]
 label = "ui"
-D = ":view-focus toggle"
-z = ":view-typewriter toggle"
-G = ":view-diff toggle"
-T = ":view-code toggle"
-L = ":line-numbers relative"
-l = ":line-numbers absolute"
+D = { run = ":view-focus toggle", label = "Toggle Dimming" }
+z = { run = ":view-typewriter toggle", label = "Toggle Zen Mode" }
+G = { run = ":view-diff toggle", label = "Toggle Git Signs" }
+T = { run = ":view-code toggle", label = "Toggle Treesitter Highlight" }
+L = { run = ":line-numbers relative", label = "Toggle Relative Number" }
+l = { run = ":line-numbers absolute", label = "Toggle Line Numbers" }
 
 [keys.normal.space.x]
 label = "diagnostics/quickfix"
 x = "workspace_diagnostics_picker"
 X = "diagnostics_picker"
-q = ":diagnostics-all"
+q = { run = ":diagnostics-all", label = "Quickfix List" }
 
 [keys.normal.space.tab]
 label = "tabs"
-tab = ":new"
-"]" = ":buffer-next"
-"[" = ":buffer-previous"
-d = ":buffer-close"
+tab = { run = ":new", label = "New Tab" }
+"]" = { run = ":buffer-next", label = "Next Tab" }
+"[" = { run = ":buffer-previous", label = "Previous Tab" }
+d = { run = ":buffer-close", label = "Close Tab" }
 ```
 
 LazyVim also changes a few keys outside the menu. These are in a block of
