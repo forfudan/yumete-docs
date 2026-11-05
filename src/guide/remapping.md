@@ -162,7 +162,11 @@ the order of your file, and a key you rebind keeps its place.
 
 The same keys can be written as runs: `"<space>bd" = ":buffer-close"`. A run is
 not a group: yumete waits for the next key, and a key that does not go on lets
-the keys before it act first.
+the keys before it act first. A run presses the Space key itself, so where Space
+opens the Space menu it lands in that group, and where Space does something else
+(vim with the flavour off) yumete holds Space and waits. Of two spellings that
+reach one key of a group (`"C-wz"` and `"<space>wz"`), the one later in the file
+wins, and yumete says so at startup.
 
 To give one key of a group a key of its own, bind its name. The group keeps
 it too:
