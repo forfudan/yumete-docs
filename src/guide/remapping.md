@@ -123,18 +123,46 @@ f = "no_op"          # Space f does nothing, and leaves the menu
 a = "code_action"    # also written g = { a = "code_action" }
 ```
 
-A table under a key that opens no group makes a group of your own. Give it a
-name with `label`, and its menu is titled with it:
+A group is one group however it is opened. Keys added under `[keys.normal.space.w]`
+are in `C-w` too, and `[keys.normal.space]` is the Space group wherever it is
+opened: from `\` under vim when Space moves right, or from a key it was moved to.
+The Space key itself is `" "` at the top of `[keys.normal]`.
+
+A table under any other key makes a group of your own, nested as deep as you
+like. It takes its key: if the key ran a command, it now opens the group, and
+yumete says so once at startup. Give it a name with `label`; its menu is titled
+with it, and its parent's menu shows it as `+name`:
 
 ```toml
-[keys.normal.space.x]
-label = "My tools"
-w = ":write"
-a = ["select_all", "yank"]
+[keys.normal.space.b]
+label = "buffer"
+d = ":buffer-close"
+p = { run = "buffer_picker", label = "pick" }
+
+[keys.normal.space.g.h]
+label = "hunks"
+s = "show_change"
 ```
 
-The same keys can be written as runs, `"<space>q" = ":quit"`. Either way the
-group's menu shows them beside its own keys.
+In a menu, `Esc` closes every level and `Backspace` goes back one; a key the
+group does not have closes it and does nothing. There is no timeout.
+
+A few words have a meaning inside a group's table:
+
+| Word | Meaning |
+| --- | --- |
+| `label` | the group's name; also renames a built-in group, with or without keys of yours under it |
+| `run`, `label` | a command and the text its menu row shows, as `{ run = …, label = … }` |
+| `sticky = true` | the group stays open after each key, until `Esc` |
+| `inherit = false` | in a built-in group's table, your keys replace its own |
+
+`no_op` removes a key, or a whole group when given its key. A group left with
+no keys leaves its parent's menu. Your keys appear after the group's own, in
+the order of your file, and a key you rebind keeps its place.
+
+The same keys can be written as runs: `"<space>bd" = ":buffer-close"`. A run is
+not a group: yumete waits for the next key, and a key that does not go on lets
+the keys before it act first.
 
 To give one key of a group a key of its own, bind its name. The group keeps
 it too:
@@ -151,22 +179,24 @@ in either mode, so bound in `[keys.normal]` it grows the selection without
 entering select mode. A `move_*` command extends in select mode and moves in
 Normal mode.
 
-To move a whole group to another key, bind that key to the prefix itself, as a
-run of keys:
+To move a whole group to another key, bind that key to the group, and your
+keys in it come along:
 
 ```toml
 [keys.normal]
-";" = "@ "             # ; opens the Space menu
+";" = "space_mode"     # ; opens the Space menu
 "<space>" = "@l"       # Space moves one cell right
 "<backspace>" = "@h"   # Backspace moves left
 ```
 
-A run of keys on the right always means the editor's own keys. `"@ "` presses
+A run of keys on the right always means the editor's own keys: `"@ "` presses
 the real `Space` even when you have bound `Space` to something else.
 
 Binding a prefix key to an action takes its whole group away. `g =
 "delete_selection"` makes `g` delete, and `gg`, `ge` and the rest of the `g` group
 are gone.
+
+`[keys.table]` groups work the same way inside a table's grid.
 
 ## Prompts, pickers and sidebars
 

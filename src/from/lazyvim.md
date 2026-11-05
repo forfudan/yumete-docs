@@ -158,6 +158,11 @@ comments on vim's `gc`. yumete's other `Space` letters, such as `Space z` for
 the input method and `Space t` for tables, are not LazyVim's and stay as they
 are.
 
+Each of those groups takes its letter, so `Space f` followed by a key the group
+does not have does nothing, as in LazyVim. When the config loads, yumete says
+once which of its own `Space` commands the groups took over. The menus show
+each group as `+name`, `Backspace` goes back a level, and `Esc` closes them.
+
 ## What is not there
 
 LazyVim's plugins bring things yumete does not have: git staging, blame and
