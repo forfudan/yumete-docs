@@ -81,7 +81,7 @@ whatever it is called.
 ## Markdown colouring
 
 Headings, `**bold**`, `*italic*`, `~~struck~~`, `==highlight==`, `` `code` ``,
-links, `[[wiki links]]`, footnotes, quotes, lists, tasks, rules, tables, front
+`$maths$`, links, `[[wiki links]]`, footnotes, quotes, lists, tasks, rules, tables, front
 matter and `::: tip` boxes are all coloured. The marks themselves are dimmed,
 and the text they fence stands forward. Annotations to yourself, written
 `%%like this%%` or `<!-- like this -->`, are set back in a faint colour. Their
@@ -96,6 +96,21 @@ coloured. The list of languages is on the
 A line longer than 50,000 characters is left plain, so a one-line data file
 does not slow the editor down. `:view-long-line` sets the limit, and
 `:view-long-line off` removes it.
+
+### Maths
+
+`$a + b$` and `$$x^2$$` are coloured as maths, and so is display maths set on
+lines of its own: a `$$` line, the formula, and a `$$` line; in Typst, a `$`
+… `$` over several lines. In Markdown a `$` with a space after it, or a blank
+line before the closing `$$`, is not maths, so prices stay prices.
+
+In Ghostty and kitty, and in either one inside tmux with `allow-passthrough
+on`, the formula under the cursor is also typeset: a float under the cursor
+shows it as maths and follows it as you type. The picture is made by the
+`typst` command, which has to be on your `PATH`. Markdown's LaTeX goes through
+the MiTeX package, which comes with yumete, so nothing is downloaded. Other
+terminals show the coloured source only. `[editor] maths_preview = false`
+turns the float off.
 
 ### Following a link
 
