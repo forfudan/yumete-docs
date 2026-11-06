@@ -94,6 +94,26 @@ so at startup. `[language.*]` and `[lsp.*]` are allowed in a project file:
 they never pass through a shell, and each placeholder such as `{file}` is handed
 to the program as a single argument.
 
+## Bringing a config from helix or LazyVim
+
+`ye --import` writes another editor's config into yumete's, once:
+
+| Command | What it writes |
+| --- | --- |
+| `ye --import helix` | your helix `config.toml`: the keys, the `[editor]` settings yumete has, and the theme when yumete has one like it |
+| `ye --import lazyvim` | LazyVim's `Space` menu, the config on [Coming from LazyVim](../from/lazyvim.md) |
+
+Nothing of the other editor runs. helix's file is read as it is written, and
+LazyVim is only recognised, by its `lazyvim.json`, its `lazy-lock.json` or the
+starter's `lua/config/lazy.lua`; your own Lua is not read.
+
+If you have no global config yet, the import becomes it. If you have one, the
+import is written beside it as `config.imported.toml`, and you copy what you
+want across. The file starts with where it came from, and ends with a
+`# Not carried over:` list: each key, setting or file that did not come
+over, and why, such as a helix command yumete does not have or a key it
+cannot bind. Nothing reads the other editor's files again after this.
+
 ## The settings panel
 
 `:settings` (short: `:set`) opens every setting on one full page, each with its

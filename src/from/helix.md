@@ -142,6 +142,14 @@ tree. `Space e` is a picker, as in helix, not this panel.
 `C-w I` move into it. `:sidebar` with a panel name opens that panel, and
 `:sidebar off` closes it. See [Windows and the sidebar](../guide/windows.md).
 
+## Your helix config
+
+`ye --import helix` writes your helix `config.toml` into yumete's: your keys,
+the `[editor]` settings yumete has, and the theme. Pasting the file as it is
+does not work, because helix's `[editor]` names are not yumete's and a name
+yumete does not know stops the whole file. See
+[Bringing a config from helix or LazyVim](../guide/configuration.md#bringing-a-config-from-helix-or-lazyvim).
+
 ## What yumete adds
 
 - An input method for Chinese, built in. See [The input method](../writing/ime.md).
