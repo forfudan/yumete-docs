@@ -24,6 +24,10 @@ one book or one repository: its layout, its markup, its language servers. It
 travels with the project, so a collaborator who opens the same folder gets the
 same page.
 
+`:config-open` opens the global file and `:config-open-workspace` the project's,
+as helix's commands of those names do. Either opens empty when the file is not
+there yet; `:w` creates it, and `:w!` its folder too if that is missing.
+
 The project file overrides the global one **item by item**. A project that sets
 only `layout = "vertical"` keeps everything else from your global file.
 
@@ -177,7 +181,8 @@ not have to remember where it lives.
 ## Reloading
 
 If you edit a config file by hand while the editor is running, run
-`:reload-config` to apply it without restarting.
+`:reload-config` (or helix's name, `:config-reload`) to apply it without
+restarting.
 
 Commands such as `:theme`, `:view-hud` or `:view-focus` change a setting for this
 session only. `:reload-config` also puts those back to what the files say.
