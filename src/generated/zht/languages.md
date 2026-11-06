@@ -2,25 +2,25 @@
 
 | Language | `[lsp.…]` key | Server at the factory |
 | --- | --- | --- |
-| ada | `ada` |  |
-| bash | `bash` |  |
-| c | `c` |  |
-| cpp | `cpp` |  |
-| css | `css` |  |
-| gas | `gas` |  |
-| go | `go` | `gopls` |
-| html | `html` |  |
-| java | `java` |  |
-| javascript | `javascript` |  |
-| json | `json` |  |
-| lua | `lua` |  |
+| ada | `ada` | `ada_language_server` |
+| bash | `bash` | `bash-language-server` |
+| c | `c` | `clangd` |
+| cpp | `cpp` | `clangd` |
+| css | `css` | `vscode-css-language-server` |
+| gas | `gas` | `asm-lsp` |
+| go | `go` | `gopls`, `golangci-lint-langserver` |
+| html | `html` | `vscode-html-language-server`, `superhtml` |
+| java | `java` | `jdtls` |
+| javascript | `javascript` | `typescript-language-server` |
+| json | `json` | `vscode-json-language-server` |
+| lua | `lua` | `lua-language-server` |
 | mojo | `mojo` | `mojo-lsp-server` |
-| nasm | `nasm` |  |
-| pascal | `pascal` |  |
+| nasm | `nasm` | `asm-lsp` |
+| pascal | `pascal` | `pasls` |
 | python | `python` | `ty`, `pylsp`, `jedi-language-server`, `ruff` |
-| r | `r` |  |
+| r | `r` | `R` |
 | rust | `rust` | `rust-analyzer` |
-| toml | `toml` |  |
-| tsx | `tsx` |  |
-| typescript | `typescript` |  |
-| yaml | `yaml` |  |
+| toml | `toml` | `taplo`, `tombi` |
+| tsx | `tsx` | `typescript-language-server` |
+| typescript | `typescript` | `typescript-language-server` |
+| yaml | `yaml` | `yaml-language-server`, `ansible-language-server` |

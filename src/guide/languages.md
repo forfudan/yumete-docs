@@ -111,19 +111,12 @@ and `Space a` gathers code actions from all of them. Other questions (documentat
 definitions, references, completion, renames) go to the first one in the list that is
 running, so put the one that answers those best first.
 
-These come filled in:
-
-| Language | Servers |
-| --- | --- |
-| `rust` | `rust-analyzer` |
-| `go` | `gopls` |
-| `mojo` | `mojo-lsp-server` |
-| `python` | `ty server`, `pylsp`, `jedi-language-server`, `ruff server` |
-| `markdown` | `marksman server`, `markdown-oxide`, `rumdl server` |
-| `typst` | `tinymist` |
-
-For any other language, add a table yourself. `tsx` is its own name, separate from
-`typescript`, so a TSX file needs `[lsp.tsx]` too.
+Every language in the table at the top of this page comes with helix's servers filled
+in, so installing one is enough. Two lists differ from helix's: Python's puts
+`ruff server` last, because it answers no documentation requests, and Mojo starts
+`mojo-lsp-server` directly rather than through `pixi run`. A language you write replaces
+its list. `tsx` is its own name, separate from `typescript`, so changing the TypeScript
+server for TSX files too needs `[lsp.tsx]` as well.
 
 ### Where yumete looks for the program
 
