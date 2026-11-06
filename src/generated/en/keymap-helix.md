@@ -274,12 +274,12 @@
 | `zt` | top |
 | `zb` | bottom |
 | `zm` | center sideways |
-| `zj / z<down>` | scroll down a line |
-| `zk / z<up>` | scroll up a line |
+| `zj / z↓` | scroll down a line |
+| `zk / z↑` | scroll up a line |
 | `zC-d / z␣` | half page down |
 | `zC-u / z⌫` | half page up |
-| `zC-f / z<pagedown>` | page down |
-| `zC-b / z<pageup>` | page up |
+| `zC-f / zPgDn` | page down |
+| `zC-b / zPgUp` | page up |
 | `z/` | search forward |
 | `z?` | search backward |
 | `zn` | the next match |
