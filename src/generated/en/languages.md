@@ -8,7 +8,7 @@
 | cpp | `cpp` | `clangd` |
 | css | `css` | `vscode-css-language-server` |
 | gas | `gas` | `asm-lsp` |
-| go | `go` | `gopls`, `golangci-lint-langserver` |
+| go | `go` | `gopls` |
 | html | `html` | `vscode-html-language-server`, `superhtml` |
 | java | `java` | `jdtls` |
 | javascript | `javascript` | `typescript-language-server` |

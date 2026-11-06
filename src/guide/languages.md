@@ -112,16 +112,19 @@ definitions, references, completion, renames) go to the first one in the list th
 running, so put the one that answers those best first.
 
 Every language in the table at the top of this page comes with helix's servers filled
-in, so installing one is enough. Two lists differ from helix's: Python's puts
-`ruff server` last, because it answers no documentation requests, and Mojo starts
-`mojo-lsp-server` directly rather than through `pixi run`. A language you write replaces
+in, so installing one is enough. Three lists differ from helix's: Python's puts
+`ruff server` last, because it answers no documentation requests, Mojo starts
+`mojo-lsp-server` directly rather than through `pixi run`, and Go has only `gopls`,
+because `golangci-lint-langserver` needs settings yumete cannot pass to it. A language you write replaces
 its list. `tsx` is its own name, separate from `typescript`, so changing the TypeScript
 server for TSX files too needs `[lsp.tsx]` as well.
 
 ### Where yumete looks for the program
 
-Before `PATH`, yumete looks inside the project. Starting from the file's folder and
-going up to the outermost git repository, it checks `.venv/bin`, `venv/bin`,
+For Python and Mojo, whose servers belong to the project's own environment, yumete
+looks inside the project before `PATH`. Every other language's server comes from
+`PATH`, so opening, say, a JSON file in a repository you do not trust does not run a
+program that repository contains. Starting from the file's folder and going up to the outermost git repository, it checks `.venv/bin`, `venv/bin`,
 `node_modules/.bin`, and the environments under `.pixi/envs/` and `.direnv/`. A copy
 found there wins over one on `PATH`, because it matches the project's own interpreter
 and dependencies, and the status line says so when it is used. A `command` with a `/`
