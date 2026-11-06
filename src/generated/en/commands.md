@@ -16,7 +16,9 @@
 | `:recover` |  | ask whether to use the draft |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | the encoding the file is saved in: utf-8, gb18030, big5 or shift-jis |
 | `:reload` |  | read the file again; ! throws away what you changed here |
-| `:reload-config` |  | after editing config.toml, without restarting |
+| `:reload-config` `:config-reload` |  | after editing config.toml, without restarting |
+| `:config-open` |  | open your config.toml |
+| `:config-open-workspace` |  | open this project's .yumete/config.toml |
 | `:reload-auto` | `on｜off｜toggle` | re-read by itself when the file changes outside — a warning, not a re-read, when you have changes of your own |
 | `:readonly` `:ro` | `on｜off｜toggle` | read-only: lock this one against editing |
 | `:goto` | `<行號>` | go to a line (`:42` will do) |

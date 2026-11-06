@@ -55,8 +55,8 @@ Recovering replaces the file's text in the buffer; nothing is saved until you
 | Data, sessions, log | `~/.local/share/yumete/` (`$XDG_DATA_HOME/yumete/` if set; `%APPDATA%\yumete\` on Windows) |
 
 `:version` shows the exact paths on your machine. `:settings` opens a panel of
-every setting with a note on each, and `:w` there saves it. After editing a
-file by hand, `:reload-config` applies it, and `:check-config` points out lines
+every setting with a note on each, and `:w` there saves it. `:config-open`
+opens the file itself. After editing it by hand, `:reload-config` applies it, and `:check-config` points out lines
 it cannot read. See [Configuration](guide/configuration.md).
 
 ## Some cells have an amber background. What is that?

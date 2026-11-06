@@ -159,8 +159,9 @@ the input method and `Space t` for tables, are not LazyVim's and stay as they
 are.
 
 Each of those groups takes its letter, so `Space f` followed by a key the group
-does not have does nothing, as in LazyVim. Each time the config loads, yumete
-says which of its `Space` keys the groups took over. The menus show
+does not have does nothing, as in LazyVim. The first time yumete starts with
+this config, it says which of its `Space` keys the groups took over, and
+`:check-config` says it again whenever you ask. The menus show
 each group as `+name`, `Backspace` goes back a level, and `Esc` closes them.
 
 ## What is not there

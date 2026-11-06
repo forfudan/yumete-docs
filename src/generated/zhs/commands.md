@@ -16,7 +16,9 @@
 | `:recover` |  | 问要不要用抢救稿 |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件存盘用的编码：utf-8、gb18030、big5、shift-jis |
 | `:reload` |  | 把文件再读一遍；加 ! 是丢掉你这里的改动 |
-| `:reload-config` |  | 改完 config.toml，不必重启 |
+| `:reload-config` `:config-reload` |  | 改完 config.toml，不必重启 |
+| `:config-open` |  | 打开全局的 config.toml |
+| `:config-open-workspace` |  | 打开本项目的 .yumete/config.toml |
 | `:reload-auto` | `on｜off｜toggle` | 文件在外面改了就自己重读——你这里有改动时只提醒，不动手 |
 | `:readonly` `:ro` | `on｜off｜toggle` | 只读：锁住这一份，不许改 |
 | `:goto` | `<行號>` | 跳到某一行(`:42` 就够了) |
