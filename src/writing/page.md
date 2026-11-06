@@ -51,6 +51,10 @@ as `#let` or `#import`, or a heading in either syntax, settles it. Without
 enough evidence the file is plain text, so the `*` and `#` in a novel are not
 mistaken for markup.
 
+A new buffer with no name starts as plain text. Each time you leave Insert
+mode, yumete guesses again from what you have written. It stops guessing once
+you choose a syntax with `:syntax` or save the buffer under a name.
+
 You can always say it yourself:
 
 ```
