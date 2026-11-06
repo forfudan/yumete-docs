@@ -159,6 +159,14 @@ args = ["--stdio"]
 The text-file names are `markdown`, `typst` and `text`. The server's complaints are under
 `Space d`, `Space l` and `]d`, and its fixes under `Space a`.
 
+A Typst file is writing with code in it, and the cursor decides which one it is on. On
+code (a `#` expression, maths, a `@reference` or `<label>`, or the body of a code block)
+the server answers as it does in a program: `Space k` shows its documentation, `gd` goes
+where it says, completion offers its names (as soon as you type `#` or `@`) and `(`
+shows the function's parameters. On writing, `Space k` shows the wiki entry and
+completion offers words, as in any manuscript. With no server running, `Space k` on
+code says so.
+
 ## Formatting and other commands
 
 `=` asks the language server to format the selection, as helix's does; one

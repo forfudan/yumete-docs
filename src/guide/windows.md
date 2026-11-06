@@ -213,7 +213,7 @@ an upper-case key that puts the same answer in the sidebar:
 | Kind | Float | Sidebar |
 | --- | --- | --- |
 | dictionary: the character's decomposition, readings, code point | `Space n` | `Space N` |
-| documentation from the language server | `Space k` | `Space K` |
+| documentation from the language server; on writing, the wiki entry | `Space k` | `Space K` |
 | diagnostics | `Space l` | `Space L` |
 | the change here: what this block was before | `Space x` | `Space X` |
 | the record (table row details) | `Space i` | `Space I` |
