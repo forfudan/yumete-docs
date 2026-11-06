@@ -17,7 +17,8 @@ command, `Space e` opens the explorer, and `Space w` is the window group.
 
 ## The config
 
-Paste this into your config file (see [Configuration](../guide/configuration.md)).
+Paste this into your config file (see [Configuration](../guide/configuration.md)), or
+run `ye --import lazyvim`, which writes it for you.
 Each `[keys.normal.space.…]` table is one of LazyVim's groups, and its `label`
 is the name the menu shows for it.
 
