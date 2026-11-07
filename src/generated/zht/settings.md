@@ -32,6 +32,7 @@
 | `[editor] end_of_line_diagnostics` | `"hint"` | **行末診斷** — 在行末顯示語言服務器診斷，從哪一級起顯示 (`disable` 不顯示, `hint` 建議及以上, `info` 説明及以上, `warning` 警告及以上, `error` 只顯示錯誤) |
 | `[editor] modeline` | `true` | **讀 vim 的 modeline** — 文件首尾五行内的 vim: set ft=… ts=…: 可設置文件類型、縮進和硬換行寬度 |
 | `[editor] maths_preview` | `true` | **公式預覽** — 光標在公式中時，在下方浮窗顯示排版結果；需要 Ghostty 或 kitty 以及 typst 命令 |
+| `[editor] preview_fit` | `"width"` | **頁面窗口大小** — 頁面窗口中頁面的大小：頁寬適應窗口並隨光標滚動，或整頁放進窗口 (`width` 頁寬, `page` 整頁) |
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製後，被複制的範圍閃一下 |
 | `[editor] indent_guides` | `false` | **縮進參考線** — 在代碼行首每級縮進畫一條豎線，同 helix；僅用於代碼文件 |
 | `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
