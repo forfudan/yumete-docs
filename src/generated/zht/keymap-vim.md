@@ -10,7 +10,7 @@
 | `B` | 光標跳到上一個大詞首(不選中) | `jump_prev_long_word_start` |
 | `c` | 改寫(再按一個動作) | `operator_change` |
 | `C` | as `c$` | `@c$` |
-| `d` | 刪除(再按一個動作) | `operator_delete` |
+| `d` | 删除(再按一個動作) | `operator_delete` |
 | `D` | as `d$` | `@d$` |
 | `e` | 光標跳到下一個詞尾(不選中) | `jump_next_word_end` |
 | `E` | 光標跳到下一個大詞尾(不選中) | `jump_next_long_word_end` |
@@ -36,8 +36,8 @@
 | `O` | 在上方開新行(vim 的 O，計數重複) | `vim_open_above` |
 | `p` | 向後粘貼(vim 的 p) | `vim_paste_after` |
 | `P` | 向前粘貼(vim 的 P) | `vim_paste_before` |
-| `q` | 錄宏(再按一個字母) | `vim_record_macro` |
-| `Q` | 播放最近錄的宏(vim 的 Q) | `vim_replay_last_macro` |
+| `q` | 録宏(再按一個字母) | `vim_record_macro` |
+| `Q` | 播放最近録的宏(vim 的 Q) | `vim_replay_last_macro` |
 | `r` | 把選中的每個字換成另一個字 | `replace` |
 | `R` | 覆寫模式：打字蓋掉原文 | `replace_mode` |
 | `s` | as `cl` | `@c{n}l` |
@@ -50,11 +50,11 @@
 | `V` | 整行選擇模式 | `select_line_mode` |
 | `w` | 光標跳到下一個詞首(不選中) | `jump_next_word_start` |
 | `W` | 光標跳到下一個大詞首(不選中) | `jump_next_long_word_start` |
-| `x` | 刪掉光標下的字，不刪換行(vim 的 x) | `vim_delete_char_forward` |
-| `X` | 刪除光標前的一個字 | `delete_char_backward` |
+| `x` | 删掉光標下的字，不删換行(vim 的 x) | `vim_delete_char_forward` |
+| `X` | 删除光標前的一個字 | `delete_char_backward` |
 | `y` | 複製(再按一個動作) | `operator_yank` |
 | `Y` | as `y$` | `@y$` |
-| `z` | 視圖組：放光標行、滾屏、摺疊 | `view_mode` |
+| `z` | 視圖組：放光標行、滚屏、摺疊 | `view_mode` |
 | `0` | as `gh` | `@gh` |
 | `"` | 選寄存器(再按一個字母) | `select_register` |
 | `#` | 往回找光標下的詞 | `search_word_backward` |
@@ -88,7 +88,7 @@
 | `C-a` | 光標處或其後的數字加一(vim 的 C-a) | `vim_increment` |
 | `C-b` `PageUp` | 後退一頁 | `page_up` |
 | `C-d` | 前進半頁 | `page_cursor_half_down` |
-| `C-e` | 屏幕往下滾一行(光標的字不動) | `scroll_down` |
+| `C-e` | 屏幕往下滚一行(光標的字不動) | `scroll_down` |
 | `C-f` `PageDown` | 前進一頁 | `page_down` |
 | `C-i` `Tab` | 跳轉表：再往前一處 | `jump_forward` |
 | `C-o` | 跳轉表：回到剛纔那個位置 | `jump_backward` |
@@ -97,7 +97,7 @@
 | `C-v` | 塊選擇(vim 的 C-v) | `vim_visual_block_mode` |
 | `C-w` | 窗口組 | `window_mode` |
 | `C-x` | 光標處或其後的數字減一(vim 的 C-x) | `vim_decrement` |
-| `C-y` | 屏幕往上滾一行(光標的字不動) | `scroll_up` |
+| `C-y` | 屏幕往上滚一行(光標的字不動) | `scroll_up` |
 | `C-z` | 暫停，回到終端；fg 回來 | `suspend` |
 | `Esc` | 回普通模式(vim：退出可視模式時選區收成一點) | `vim_normal_mode` |
 | `Enter` | 下一行的第一個非空白字符 | `goto_next_line_nonwhitespace` |
@@ -118,7 +118,7 @@
 | `i` | 選中對象的裏面(再按一個對象) | `select_inner_object` |
 | `l` `Right` | 選區向右撑一個字 | `extend_char_right` |
 | `o` | 換到選區的另一頭(vim 可視模式的 o) | `vim_flip_selections` |
-| `R` | 用寄存器內容替換選區 | `replace_with_yanked` |
+| `R` | 用寄存器内容替換選區 | `replace_with_yanked` |
 | `t` | 選區往後撑到某個字前面 | `extend_till_char` |
 | `T` | 選區往前撑到某個字後面 | `extend_till_prev_char` |
 | `u` | 選區轉小寫並退出可視模式(vim 的 u) | `vim_switch_to_lowercase` |
@@ -136,12 +136,12 @@
 | --- | --- | --- |
 | `Esc` `C-c` | 退出延伸模式，收起臨時顯示的東西 | `normal_mode` |
 | `Enter` `C-j` | 換行(帶上縮進、列表記號) | `insert_newline` |
-| `Backspace` `C-h` | 刪除光標前的一個字 | `delete_char_backward` |
-| `Delete` | 刪除光標後的一個字 | `delete_char_forward` |
+| `Backspace` `C-h` | 删除光標前的一個字 | `delete_char_backward` |
+| `Delete` | 删除光標後的一個字 | `delete_char_forward` |
 | `C-d` | 減少縮進 | `unindent` |
-| `C-w` | 刪除光標前的一個詞 | `delete_word_backward` |
-| `C-u` | 刪到這次插入開始的地方(vim 的 C-u) | `vim_kill_to_line_start` |
-| `C-r` | 插入寄存器的內容(再按一個字母) | `insert_register` |
+| `C-w` | 删除光標前的一個詞 | `delete_word_backward` |
+| `C-u` | 删到這次插入開始的地方(vim 的 C-u) | `vim_kill_to_line_start` |
+| `C-r` | 插入寄存器的内容(再按一個字母) | `insert_register` |
 | `C-o` | 臨時回普通模式做一件事(vim 的 C-o) | `run_one_normal_command` |
 | `Left` | 左一個字 | `move_char_left` |
 | `Right` | 右一個字 | `move_char_right` |
@@ -181,9 +181,9 @@
 | `\h` | 選中本檔裏的每一處 |
 | `\a` | 代碼動作 |
 | `\w` | 工作區域操作 |
-| `\c` | 行注釋 |
-| `\C` | 塊注釋 |
-| `\A-c` | 只用行注釋 |
+| `\c` | 行註釋 |
+| `\C` | 塊註釋 |
+| `\A-c` | 只用行註釋 |
 | `\/` | 搜索面板 |
 | `\?` | 命令一覽 |
 
@@ -243,14 +243,14 @@
 | `zO` | 打開這裏的所有摺疊 |
 | `zc` | 合上摺疊 |
 | `zC` | 合上這裏的所有摺疊 |
-| `za` | 開合摺疊 |
+| `za` | 開合折疊 |
 | `zA` | 開合這裏的所有摺疊 |
 | `zv` | 打開摺疊，露出光標所在行 |
 | `zR` | 打開所有摺疊 |
 | `zM` | 合上所有摺疊 |
-| `zd` | 刪掉這裏的摺疊，字不動 |
-| `zD` | 刪掉這裏所有 zf 做的摺疊 |
-| `zE` | 刪掉所有 zf 做的摺疊 |
+| `zd` | 删掉這裏的摺疊，字不動 |
+| `zD` | 删掉這裏所有 zf 做的摺疊 |
+| `zE` | 删掉所有 zf 做的摺疊 |
 | `zj` | 到下一個摺疊的開頭 |
 | `zk` | 到上一個摺疊的末尾 |
 | `zn` | 暫時停用摺疊 |
