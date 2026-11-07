@@ -148,6 +148,14 @@ L = ":buffer-next"
 "C-s" = ":write"
 ```
 
+LazyVim also lights up what you yank for a moment. yumete does the same with
+this setting, which is off unless you turn it on:
+
+```toml
+[editor]
+yank_flash = true
+```
+
 ## What the config moves
 
 LazyVim's groups sit on letters yumete uses for single commands: `Space b`,
