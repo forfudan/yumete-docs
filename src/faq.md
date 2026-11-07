@@ -9,7 +9,7 @@ the config:
 
 ```toml
 [editor]
-language = "zh"    # "auto" (default), "zh" traditional, "zhs" simplified, "en"
+language = "zht"   # "auto" (default), "zht" traditional, "zhs" simplified, "en"
 ```
 
 `:language en` switches for the current session without a restart, and

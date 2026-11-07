@@ -2,204 +2,204 @@
 
 | Command | Arguments | What it does |
 | --- | --- | --- |
-| `:cd` | `<路徑>` | 更改工作路徑 |
-| `:pwd` |  | 查詢工作路徑 |
-| `:vsplit` `:vs` | `<路徑>` | 旁邊開一個窗口（同 C-w v）；帶文件名就在那裏打開它 |
-| `:hsplit` `:hs` `:split` | `<路徑>` | 下面開一個窗口（同 C-w s）；帶文件名就在那裏打開它 |
-| `:vnew` |  | 旁邊開一個空白窗口（同 C-w n v） |
-| `:hnew` |  | 下面開一個空白窗口（同 C-w n s） |
+| `:cd` | `<路徑>` | 切換工作目録 |
+| `:pwd` |  | 顯示工作目録 |
+| `:vsplit` `:vs` | `<路徑>` | 在旁邊分出窗口（同 C-w v）；可帶文件名 |
+| `:hsplit` `:hs` `:split` | `<路徑>` | 在下方分出窗口（同 C-w s）；可帶文件名 |
+| `:vnew` |  | 在旁邊打開空白窗口（同 C-w n v） |
+| `:hnew` |  | 在下方打開空白窗口（同 C-w n s） |
 | `:open` `:o` `:e` `:edit` | `<路徑>` | 打開一個文件 |
-| `:new` `:enew` `:ene` |  | 開一個空的緩衝區 |
-| `:tabnew` `:tabe` `:tabedit` | `<路徑>` | vim 的 :tabnew：新的草稿，給了文件名就打開那個文件 |
-| `:write` `:w` | `<路徑>` | 保存；給路徑存一份副本，`:write-as` 纔換過去 |
-| `:write-all` `:wa` |  | 存下所有改過的文件 |
-| `:write-as` | `<路徑>` | 另存成新文件並改編輯它(`:w <文件名>` 只抄一份，人還在這邊) |
-| `:recover` |  | 問要不要用搶救稿 |
-| `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件存盤用的編碼：utf-8、gb18030、big5、shift-jis |
-| `:reload` |  | 把文件再讀一遍；加 ! 是丢掉你這裏的改動 |
-| `:reload-config` `:config-reload` |  | 改完 config.toml，不必重啓 |
-| `:config-open` |  | 打開全局的 config.toml |
+| `:new` `:enew` `:ene` |  | 新建空緩衝區 |
+| `:tabnew` `:tabe` `:tabedit` | `<路徑>` | vim 的 :tabnew：新建空緩衝區，帶文件名則打開該文件 |
+| `:write` `:w` | `<路徑>` | 保存；帶路徑則另存副本，`:write-as` 會切換到新文件 |
+| `:write-all` `:wa` |  | 保存所有改動過的文件 |
+| `:write-as` | `<路徑>` | 另存爲新文件並切換過去(`:w <文件名>` 只保存副本，仍留在原文件) |
+| `:recover` |  | 詢問是否恢復未保存的内容 |
+| `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件保存時用的編碼：utf-8、gb18030、big5、shift-jis |
+| `:reload` |  | 重新載入文件；加 ! 放棄本地改動 |
+| `:reload-config` `:config-reload` |  | 重新載入 config.toml，無需重啓 |
+| `:config-open` |  | 打開全局 config.toml |
 | `:config-open-workspace` |  | 打開本項目的 .yumete/config.toml |
-| `:reload-auto` | `on｜off｜toggle` | 文件在外面改了就自己重讀——你這裏有改動時只提醒，不動手 |
-| `:readonly` `:ro` | `on｜off｜toggle` | 只讀：鎖住這一份，不許改 |
-| `:goto` | `<行號>` | 跳到某一行(`:42` 就够了) |
-| `:count` `:wc` |  | 寫了多少；`progress` 今天，`target` 每天要多少 |
+| `:reload-auto` | `on｜off｜toggle` | 文件在外部被修改時自動重新載入；有未保存的改動時只提醒 |
+| `:readonly` `:ro` | `on｜off｜toggle` | 只讀：禁止編輯此文件 |
+| `:goto` | `<行號>` | 跳轉到某行(直接 `:42` 也行) |
+| `:count` `:wc` |  | 字數統計；`progress` 看今天，`target` 設每日目標 |
 | `:count-progress` |  | 寫作進度：今天寫了多少，離目標還有多少 |
-| `:count-target` | `<字數>｜off` | 每天要寫多少字；`:count-target off` 不再算 |
-| `:check-usage` |  | 查用字：全文寫了兩種寫法的(裏/裡、為/爲、你自己配的人名)，列出少數那一邊 |
-| `:check-config` |  | 查配置檔：哪一行讓整份失效，哪一行寫了没人讀 |
-| `:check-names` |  | 查專名：文件裏把百科的名字寫錯了一個同音字的地方(醉翁亭寫成醉翁停) |
-| `:diagnostics-all` |  | 語言服務器説過的全部問題，排成一張 gf 跳得了的單子 |
-| `:check-charset` |  | 查字集：不在通用規範/臺灣/香港/古籍裏的字，排版社的字體多半也没有 |
+| `:count-target` | `<字數>｜off` | 每日字數目標；`:count-target off` 取消 |
+| `:check-usage` |  | 檢查用字：同一個詞有兩種寫法時(裏/裡、為/爲、自定義的人名)，列出較少的那種 |
+| `:check-config` |  | 檢查配置：哪一行導致整個文件失效，哪些鍵無人讀取 |
+| `:check-names` |  | 檢查專名：找出百科詞條名寫錯同音字的地方(醉翁亭寫成醉翁停) |
+| `:diagnostics-all` |  | 列出語言服務器報告的所有問題，可用 gf 跳轉 |
+| `:check-charset` |  | 檢查字集：列出不在通用規範/臺灣/香港/古籍字表中的字(多數字體缺這些字) |
 | `:check-merge` |  | 列出這份文件裏的合併衝突 |
-| `:check-punct` |  | 查標點：中文裏的半角逗號句號、`...`、還有開了口没收尾的「」()《》 |
-| `:convert` | `s｜t｜tw｜hk｜jp｜c｜g s｜t｜tw｜hk｜jp｜c｜g` | 簡繁轉換：交給 opencc 跑，:convert 看能走哪幾條路 |
-| `:convert-opencc` |  | opencc 裝了没有、裝在哪、哪個版本 |
-| `:convert-opencc-install` |  | 裝 opencc(macOS 這裏真的會跑，别的機器只把命令印給你) |
-| `:convert-opencc-update` |  | 把 opencc 升到最新 |
-| `:quit` `:q` |  | 關掉這一區；最後一個窗口就離開編輯器(`quit!` 不管改動) |
-| `:quit-window` `:close` `:clo` |  | 關掉這一區，但不關最後一個窗口(vim 的 `:close`，短寫 `:clo`) |
-| `:quit-others` `:only` `:on` |  | 只留這一個窗口，别的窗口和側欄都關掉(vim 的 `:only`，短寫 `:on`) |
-| `:quit-all` `:qa` |  | 每個開着的文件都關掉，然後離開(短寫 `:qa`) |
-| `:write-quit` `:wq` | `<路徑>` | 無條件存好再退出(短寫 `:wq`；`:x` 是改過纔存的那個) |
+| `:check-punct` |  | 檢查標點：中文裏的半角逗號句號、`...`，以及未閉合的「」()《》 |
+| `:convert` | `s｜t｜tw｜hk｜jp｜c｜g s｜t｜tw｜hk｜jp｜c｜g` | 簡繁轉換(用 opencc)；:convert 列出可用的轉換 |
+| `:convert-opencc` |  | opencc 是否已安裝、安裝位置、版本 |
+| `:convert-opencc-install` |  | 安裝 opencc(macOS 上直接運行，其他系統只打印命令) |
+| `:convert-opencc-update` |  | 把 opencc 升級到最新版 |
+| `:quit` `:q` |  | 關閉當前區域；若是最後一個窗口則退出編輯器(`quit!` 放棄改動) |
+| `:quit-window` `:close` `:clo` |  | 關閉當前區域，但不關閉最後一個窗口(vim 的 `:close`，簡寫 `:clo`) |
+| `:quit-others` `:only` `:on` |  | 只保留當前窗口，關閉其他窗口和側欄(vim 的 `:only`，簡寫 `:on`) |
+| `:quit-all` `:qa` |  | 關閉所有文件並退出(簡寫 `:qa`) |
+| `:write-quit` `:wq` | `<路徑>` | 保存並退出(簡寫 `:wq`；`:x` 只在有改動時保存) |
 | `:write-quit-all` `:wqa` `:xa` |  | 保存所有改動過的文件並退出 |
-| `:exit` `:x` `:xit` | `<路徑>` | 改過纔存，然後退出(短寫 `:x`，也認 `:xit`) |
-| `:update` `:up` |  | 改過纔存，不退出(短寫 `:up`) |
+| `:exit` `:x` `:xit` | `<路徑>` | 有改動纔保存，然後退出(簡寫 `:x`，也可用 `:xit`) |
+| `:update` `:up` |  | 有改動纔保存，不退出(簡寫 `:up`) |
 | `:undo` `:u` |  | 撤銷上一次改動 |
-| `:earlier` `:ear` | `<步數>｜<時間>` | 撤銷至幾步或多久以前（5m、1h） |
-| `:later` `:lat` | `<步數>｜<時間>` | 重做至幾步或多久以後 |
+| `:earlier` `:ear` | `<步數>｜<時間>` | 撤銷若干步，或回到多久以前(5m、1h) |
+| `:later` `:lat` | `<步數>｜<時間>` | 重做若干步，或前進到多久以後 |
 | `:redo` `:red` |  | 重做 |
-| `:word` `:wd` |  | 分詞：哪一份詞表、標記、粒度 |
+| `:word` `:wd` |  | 分詞：詞表、標記、粒度 |
 | `:word-mark` | `off｜color｜ink｜tint｜line｜字色｜墨色` | 分詞標記 |
-| `:wiki` | `<詞條名>` | 查一個詞條：打名字，打錯了、順序反了也找得到 |
-| `:wiki-edit` |  | 打開本項目的 .yumete/wiki.md，没有就建一個 |
-| `:wiki-global` |  | 打開全局的 wiki.md——整個系列共用的設定 |
-| `:keymap-yumete-flavor` | `off｜basic｜full` | Yumete 鍵位風味：在 helix/vim 鍵位之上的一小組改動。不帶參數報當前狀態 |
-| `:links` | `list｜graph｜off` | 開鏈接面板：哪些文件 [[鏈]] 到這裏、這裏鏈到哪裏；list 列表、graph 圖、off 關掉 |
-| `:links-export` |  | 把整個項目的鏈接圖寫成 .yumete/graph.html，並在瀏覽器打開 |
-| `:links-reindex` |  | 重讀整個項目的 [[鏈接]] |
-| `:wiki-panel` | `on｜off｜toggle` | 把詞條固定在邊欄——開着的時候不再浮出來 |
-| `:wiki-mark` | `color｜line｜off` | 正文裏怎麽給詞條名做記號：金色、下劃線，或者不做 |
-| `:wiki-where` |  | 百科到哪裏找的：讀了哪些文件、各幾條、哪些標不出來 |
-| `:wiki-reload` |  | 重讀百科和它引到的每一個文件 |
-| `:word-list` |  | 此刻用的是哪一份詞表 |
-| `:word-list-local` |  | 開項目的詞表 .yumete/words.txt——人名、地名 |
-| `:word-list-global` |  | 開全域詞表 segmentation.txt |
-| `:word-list-reload` |  | 重讀兩份詞表(項目的 ＋ 全域的) |
+| `:wiki` | `<詞條名>` | 按名稱查詞條，拼錯或順序顛倒也能找到 |
+| `:wiki-edit` |  | 打開本項目的 .yumete/wiki.md，不存在則新建 |
+| `:wiki-global` |  | 打開全局 wiki.md(整個系列共用的設定) |
+| `:keymap-yumete-flavor` | `off｜basic｜full` | Yumete 鍵位風味：在 helix/vim 鍵位上的少量改動；不帶參數顯示當前狀態 |
+| `:links` | `list｜graph｜off` | 鏈接面板：哪些文件 [[鏈接]] 到這裏、這裏鏈接到哪裏；list 列表、graph 圖、off 關閉 |
+| `:links-export` |  | 將項目鏈接圖導出爲 .yumete/graph.html 並在瀏覽器中打開 |
+| `:links-reindex` |  | 重新讀取項目的 [[鏈接]] |
+| `:wiki-panel` | `on｜off｜toggle` | 把詞條固定在側欄，打開時不再彈出浮窗 |
+| `:wiki-mark` | `color｜line｜off` | 正文中詞條名的標記：金色、下劃線或不標 |
+| `:wiki-where` |  | 百科來源：讀取了哪些文件、各有幾條、哪些無法標記 |
+| `:wiki-reload` |  | 重新讀取百科及其引用的所有文件 |
+| `:word-list` |  | 當前使用的詞表 |
+| `:word-list-local` |  | 打開項目詞表 .yumete/words.txt(人名、地名) |
+| `:word-list-global` |  | 打開全局詞表 segmentation.txt |
+| `:word-list-reload` |  | 重新讀取項目詞表和全局詞表 |
 | `:word-level` | `off｜strict｜balanced｜full` | 分詞粒度：多少個字算一個詞 |
-| `:word-discover` |  | 挖掘這一篇的用户詞語：人名地名，字典裏没有的 |
-| `:word-discover-working` |  | 在工作路徑中挖掘用户詞語 |
-| `:word-discover-project` |  | 在項目路徑中挖掘用户詞語 |
-| `:word-habit` |  | 口頭禪：這一篇比别人多説的那些詞 |
-| `:vertical` |  | 把這一頁轉成豎排 |
-| `:horizontal` |  | 把這一頁轉成横排 |
-| `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | 豎排的 hjkl 走行文還是走版面 |
-| `:theme` | `ink｜one-dark｜github｜monokai｜dracula｜tokyo-night｜catppuccin｜gruvbox｜bw｜morandi｜<主題名>` | 主題：用哪一套墨(深淺在 :theme-mode) |
-| `:theme-mode` | `system｜dark｜light` | 深色還是淺色(system 問終端) |
-| `:language` `:lang` | `zh｜zhs｜en` | 編輯器自己説話用哪種語言：`zh` 繁體/`zhs` 简体/`en` English |
-| `:version` `:ver` |  | 這是哪一版，以及配置、數據、日誌都放在哪 |
-| `:keymap` | `helix｜vim` | 鍵位預設：helix(出廠)或 vim——把 vim 的 x s dd ^ $ 翻過來 |
-| `:keymap-actions` |  | 列出每個能綁的動作名 |
-| `:info` |  | 這份文檔：位置、大小、行字數、語言、哪幾個服務器同它關聯 |
-| `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息：即時顯示哪一種(record/diagnostics/dictionary/wiki/docs；不寫就按文件算) |
-| `:rules` | `<欄>…｜off` | 在指定的欄上鋪一道底紋：`:rules 80 100 120`；不寫數字就是 80 和 100，`off` 關掉 |
-| `:theme-fill` | `on｜off｜toggle` | 代碼、引用要不要坐在底色上(出廠不坐) |
-| `:shot` | `screen｜png｜html｜txt <路徑>` | 截圖：默認進剪貼板，png/html/txt 則存成文件(進下載文件夾) |
+| `:word-discover` |  | 挖掘本文的用户詞語：詞典裏没有的人名、地名 |
+| `:word-discover-working` |  | 在工作目録中挖掘用户詞語 |
+| `:word-discover-project` |  | 在項目中挖掘用户詞語 |
+| `:word-habit` |  | 口頭禪：本文比一般文本多用的詞 |
+| `:vertical` |  | 把這一頁改爲豎排 |
+| `:horizontal` |  | 把這一頁改爲横排 |
+| `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | 豎排時 hjkl 按文字方向還是按屏幕方向移動 |
+| `:theme` | `ink｜one-dark｜github｜monokai｜dracula｜tokyo-night｜catppuccin｜gruvbox｜bw｜morandi｜<主題名>` | 主題(深淺色用 :theme-mode) |
+| `:theme-mode` | `system｜dark｜light` | 深色或淺色(system 跟隨終端) |
+| `:language` `:lang` | `zht｜zhs｜en｜<語言>` | 界面語言：`zht` 繁體/`zhs` 简体/`en` English |
+| `:version` `:ver` |  | 版本號，以及配置、數據、日誌的位置 |
+| `:keymap` | `helix｜vim` | 鍵位預設：helix(默認)或 vim(支持 vim 的 x s dd ^ $ 等) |
+| `:keymap-actions` |  | 列出所有可綁定的動作名 |
+| `:info` |  | 文件信息：路徑、大小、行數字數、語言、關聯的語言服務器 |
+| `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息欄隨光標顯示哪一種(record/diagnostics/dictionary/wiki/docs；不寫則按文件類型) |
+| `:rules` | `<欄>…｜off` | 在指定列加標尺：`:rules 80 100 120`；不帶數字爲 80 和 100，`off` 關閉 |
+| `:theme-fill` | `on｜off｜toggle` | 代碼和引用是否加底色(默認不加) |
+| `:shot` | `screen｜png｜html｜txt <路徑>` | 截圖：默認複製到剪貼板；png/html/txt 則保存到下載文件夾 |
 | `:yume` `:y` | `on｜off` | 宇夢輸入引擎開關：on 打開、off 關閉 |
-| `:yume-where` |  | 碼表和字料之數據源及回退順序 |
-| `:yume-which` |  | 現在用的是哪個方案、碼表打哪來 |
-| `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始打字：載入一個方案(不寫名字就用配置裏那個) |
-| `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | 候選旁的註解：關、下一個、或一個註解模式 |
-| `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | 上屏方式：預設、延遲(頂字)、唯一、整句 |
+| `:yume-where` |  | 碼表和數據的查找位置及順序 |
+| `:yume-which` |  | 當前方案及碼表來源 |
+| `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始輸入：載入方案(不寫名稱則用配置中的) |
+| `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | 候選註解：關、下一個，或指定模式 |
+| `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | 上屏方式：默認、延遲(頂字)、唯一、整句 |
 | `:yume-charset` | `all｜common｜tonggui｜harmonic` | 字集過濾：全部、常用、簡化、傳統 |
 | `:yume-charset-sort` | `original｜common｜tonggui｜harmonic` | 字集排序：原始、常用、簡化、傳統字優先 |
 | `:yume-lanes` | `tonggui｜tongfan｜tai｜common｜harmonic｜guji｜gang｜default` | 整句字集軌：把一軌提到首軌，default 回到默認 |
-| `:yume-panel` | `box｜bottom｜inline` | 候選畫在哪：box 光標旁邊的框，bottom 窗口最下面那一行，inline 光標的下一行 |
-| `:yume-inline-preedit` | `off｜composition｜preview` | 正在打的那一段寫在哪：off 候選欄裏，composition 正文裏寫編碼，preview 正文裏寫首選 |
-| `:yume-menu-size` | `<1–9>` | 候選面板一頁幾條(1–9，出廠 6) |
-| `:yume-autocompletion` | `on｜off｜toggle` | 輸入預測：碼没打完就先給候選 |
-| `:yume-installed` |  | 改用系統裝的那份碼表(builtin 的反面) |
-| `:yume-builtin` |  | 改用出廠自帶的碼表，不管裝了什麽 |
+| `:yume-panel` | `box｜bottom｜inline` | 候選位置：box 光標旁的框，bottom 窗口底行，inline 光標下一行 |
+| `:yume-inline-preedit` | `off｜composition｜preview` | 編碼顯示位置：off 候選欄，composition 正文顯示編碼，preview 正文顯示首選 |
+| `:yume-menu-size` | `<1–9>` | 每頁候選數(1–9，默認 6) |
+| `:yume-autocompletion` | `on｜off｜toggle` | 輸入預測：編碼未打完就給出候選 |
+| `:yume-installed` |  | 改用系統安裝的碼表(與 builtin 相對) |
+| `:yume-builtin` |  | 改用内置碼表，忽略已安裝的 |
 | `:yume-table` | `<路徑>` | 用你自己的碼表(Rime 的 .dict.yaml 也行) |
-| `:set` `:se` | `<選項>` | vim 的 :set，只認 modeline 認的幾項：ft、ts、sw、et、tw；不帶參數打開設置面板 |
+| `:set` `:se` | `<選項>` | vim 的 :set，支持 modeline 的幾項：ft、ts、sw、et、tw；不帶參數則打開設置面板 |
 | `:setfiletype` `:setf` | `<文件類型>` | vim 的 :setf，同 :set ft= |
-| `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 這個文件是哪種標記(不給參數就説現在是哪個) |
-| `:pipe` | `<命令>` | 將選區發送爲終端命令，且使用其輸出替換選區 |
-| `:sh` | `<命令>` | 跑一條命令，輸出收進一個緩衝區 |
-| `:!command` |  | 讓出終端跑一條命令，直接看它跑(vi 的寫法) |
-| `:which-wrap` | `<字母>` | 哪些按鍵會跨越行尾(vim 功能)。只允許 b h l < > ~ |
-| `:line-numbers` `:ln` | `absolute｜relative｜none` | 行號顯示方式。absolute 絶對行號。relative 同光標位置之相對行號。none 不顯示。無參數時報告當前模式 |
-| `:view-wrap` | `on｜off｜0｜<幾欄>` | 長段落折到下一行；`:view-wrap 50` 定寬度，`off` 不折 |
-| `:view-wrap-vertical` | `0｜<幾字>` | 豎排一列寫幾個字；`:view-wrap-vertical 30` 定長度，`0` 跟着窗口 |
-| `:view-margin` | `never｜dense｜loose｜always` | 邊欄：注音、旁置標點、着重號、平仄那一格留不留 |
-| `:view-pages-horizontal` | `<1–4>` | 分欄：横排分成幾欄並排，文字從左欄接到右欄 |
+| `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 文件的標記語言(不帶參數顯示當前值) |
+| `:pipe` | `<命令>` | 將選區傳給終端命令，用輸出替換選區 |
+| `:sh` | `<命令>` | 運行命令，輸出放進一個緩衝區 |
+| `:!command` |  | 在終端裏直接運行命令並查看輸出(vi 寫法) |
+| `:which-wrap` | `<字母>` | 哪些鍵可以跨越行尾(vim 鍵位)。只能是 b h l < > ~ |
+| `:line-numbers` `:ln` | `absolute｜relative｜none` | 行號：absolute 絶對、relative 相對光標、none 不顯示；不帶參數顯示當前模式 |
+| `:view-wrap` | `on｜off｜0｜<幾欄>` | 自動換行；`:view-wrap 50` 設寬度，`off` 關閉 |
+| `:view-wrap-vertical` | `0｜<幾字>` | 豎排每列字數；`:view-wrap-vertical 30` 設長度，`0` 跟隨窗口 |
+| `:view-margin` | `never｜dense｜loose｜always` | 頁邊：是否爲注音、懸掛標點、着重號、平仄留出位置 |
+| `:view-pages-horizontal` | `<1–4>` | 分欄：横排時分成多欄並排，文字從左欄接到右欄 |
 | `:view-pages-vertical` | `<1–4>` | 段組：把豎排的頁面横着分成幾條，右上讀到左上，再右下讀到左下 |
-| `:view-sentence` | `on｜off｜toggle` | 一句一縱：豎排時每句話單起一縱，只是看法，不動文件 |
-| `:view-hanging` | `on｜off｜toggle` | 標點旁置：句讀掛在邊欄 |
-| `:view-numbers-fill` | `on｜off｜toggle` | 行號那一條有没有自己的底色(默認没有，横排豎排一樣) |
+| `:view-sentence` | `on｜off｜toggle` | 一句一縱：豎排時每句另起一縱，只改顯示，不改文件 |
+| `:view-hanging` | `on｜off｜toggle` | 標點懸掛：句讀掛在頁邊 |
+| `:view-numbers-fill` | `on｜off｜toggle` | 行號欄是否加底色(默認不加，横排豎排一樣) |
 | `:view-diagnostics` | `hint｜info｜warning｜error｜off` | 行末診斷：hint、info、warning、error 或 off |
-| `:view-diff` | `on｜off｜toggle` | 改動條：行號旁邊那一格用底色説哪幾行跟 git 那一份不一樣 |
-| `:view-typewriter` | `on｜off｜toggle` | 打字機：光標那一行一直停在畫面中間，紙往上走 |
-| `:view-focus` | `on｜off｜toggle` | 焦點：正在寫的那一段留在紙上，其餘的退後一級 |
-| `:view-meter` | `on｜off｜toggle` | 平仄：每個字的平仄畫在旁邊，句末畫韻腳(今音，入聲已派入三聲) |
-| `:view-punct` | `on｜off｜toggle` | 標點提示：半角標點與 ... 旁邊畫出該用的那一個 |
-| `:view-code` | `on｜off｜toggle` | 代碼上色：圍欄裏的代碼按它自己的語法上色 |
-| `:view-long-line` | `off｜<幾字>` | 某行長度超過此字數，將停止上色 |
-| `:view-hud` | `off｜basic｜full` | 光標旁邊那個小牌子：不畫、藥丸、帶框的面板 |
-| `:view-preview` | `on｜off｜toggle` | 交給真正的排版器去排，在瀏覽器裏看 |
-| `:render` | `off｜basic｜full` | 畫面上顯示多少「結果」：原文、著色、所見即所得 |
-| `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行縮進：`off`/`basic`(縮進，空行留着)/`full`(連段間空行一起收)，或幾格 |
-| `:indent-tab` | `spaces｜tab` | Tab 鍵打什麽：空格還是製表符(Shift-Tab 打另一種) |
-| `:indent-width` | `<幾格，1–16>` | 縮進寬度：Tab 打幾個空格、> 和 < 挪幾格 |
-| `:hard-wrap` | `<幾欄>` | 按寬度重排硬換行，不改意思：選區，或光標所在的那一段；0 = 每段併成一行；不帶數字照 hard_wrap 設置 |
-| `:align` | `<符號>` | 選中的幾行按一個符號對齊，不給就是 = |
-| `:split-join` |  | 光標所在括號裏的各項拆成每項一行，或合回一行 |
-| `:reflow` | `<幾欄>` | 選區按寬度重排（默認 80 欄） |
-| `:auto-pairs` | `off｜basic｜full` | 輸入左括號時自動補上右括號：關、基本、完整。無參數時，報告當前檔位 |
-| `:indent-hint` | `none｜color｜symbol` | 縮進的那兩格上畫什麽 |
-| `:table` `:ta` `:tab` | `<行>x<欄>` | 一張空表：`:table 3 4` 是三行四欄，首行是欄名。只能在空行上用 |
-| `:table-render` | `off｜basic｜window` | 表格渲染模式：源碼視圖、基本視圖、全窗視圖。無參數時，報告當前模式名 |
-| `:table-check` |  | 檢查整張表：行名重複、欄數不對、字不在字集裏 |
-| `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | 欄線：欄與欄之間怎麽分開 |
-| `:table-sort` | `<欄> a｜d …` | 照這幾欄排：`sort 1 a 2 d` 是先第一欄順排、再第二欄倒排 |
-| `:replace` `:r` | `<路徑>` | 找了換：面板裏打找什麽、換成什麽 |
-| `:replace-buffers` `:rb` |  | 在緩衝區(打開的每一個文件)替換 |
-| `:replace-working` `:rw` |  | 在工作路徑中替換 |
-| `:replace-project` `:rp` |  | 在項目路徑中替換 |
-| `:pipe-before` | `<命令>` | 跑一條終端命令，把輸出插在選區之前 |
-| `:pipe-after` | `<命令>` | 跑一條終端命令，把輸出接在選區之後 |
+| `:view-diff` | `on｜off｜toggle` | 改動條：行號旁用底色標出與 git 版本不同的行 |
+| `:view-typewriter` | `on｜off｜toggle` | 打字機模式：光標所在行始終居中 |
+| `:view-focus` | `on｜off｜toggle` | 專注：正在寫的段落保持清晰，其餘變淡 |
+| `:view-meter` | `on｜off｜toggle` | 平仄：字旁標平仄，句末標韻腳(今音，入派三聲) |
+| `:view-punct` | `on｜off｜toggle` | 標點提示：在半角標點和 ... 旁顯示應使用的全角標點 |
+| `:view-code` | `on｜off｜toggle` | 代碼着色：代碼塊按其語言着色 |
+| `:view-long-line` | `off｜<幾字>` | 行長超過此字數時停止着色 |
+| `:view-hud` | `off｜basic｜full` | 光標提示：不顯示、膠囊、面板 |
+| `:view-preview` | `on｜off｜toggle` | 交給排版器排版，在瀏覽器中查看 |
+| `:render` | `off｜basic｜full` | 渲染程度：源碼、着色、所見即所得 |
+| `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行縮進：`off`/`basic`(保留段間空行)/`full`(隱藏段間空行)，或格數 |
+| `:indent-tab` | `spaces｜tab` | Tab 鍵輸入空格還是製表符(Shift-Tab 輸入另一種) |
+| `:indent-width` | `<幾格，1–16>` | 縮進寬度：Tab 輸入的空格數，> 和 < 移動的格數 |
+| `:hard-wrap` | `<幾欄>` | 按寬度重新硬換行(選區或光標所在段)，不改内容；0 把每段合成一行；不帶數字按 hard_wrap 設置 |
+| `:align` | `<符號>` | 按某個符號對齊選中的行，默認爲 = |
+| `:split-join` |  | 把光標所在括號裏的各項拆成每行一項，或合併回一行 |
+| `:reflow` | `<幾欄>` | 按寬度重排選區(默認 80 列) |
+| `:auto-pairs` | `off｜basic｜full` | 自動補上右括號：關/基本/完整；不帶參數顯示當前檔位 |
+| `:indent-hint` | `none｜color｜symbol` | 縮進的兩格顯示什麽 |
+| `:table` `:ta` `:tab` | `<行>x<欄>` | 插入空表：`:table 3 4` 爲三行四列，首行爲表頭；只能在空行使用 |
+| `:table-render` | `off｜basic｜window` | 表格顯示：源碼、基本、全窗；不帶參數顯示當前模式 |
+| `:table-check` |  | 檢查整張表：行名重複、列數不對、字不在字集裏 |
+| `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | 列線：列與列之間的分隔方式 |
+| `:table-sort` | `<欄> a｜d …` | 按列排序：`sort 1 a 2 d` 先按第一列升序，再按第二列降序 |
+| `:replace` `:r` | `<路徑>` | 搜索與替換 |
+| `:replace-buffers` `:rb` |  | 在所有打開的文件中替換 |
+| `:replace-working` `:rw` |  | 在工作目録中替換 |
+| `:replace-project` `:rp` |  | 在項目中替換 |
+| `:pipe-before` | `<命令>` | 運行終端命令，把輸出插在選區之前 |
+| `:pipe-after` | `<命令>` | 運行終端命令，把輸出插在選區之後 |
 | `:read` | `<路徑>` | 將文件内容插入選區之後 |
 | `:view-fold` |  | 把選中的行做成摺疊 |
-| `:keep-pipe` | `<命令>` | 只留下終端命令通過的選區 |
-| `:pipe-to` | `<命令>` | 將選區發送爲終端命令 |
+| `:keep-pipe` | `<命令>` | 只保留終端命令執行成功的選區 |
+| `:pipe-to` | `<命令>` | 把選區交給終端命令，不收回輸出 |
 | `:yuhao` |  | 打開宇浩輸入法官網 |
-| `:search` `:s` `:grep` | `<路徑>` | 搜索：打開搜索面板進行搜索，可跨文件搜索，提供更多搜索選項 |
-| `:search-buffers` `:sb` |  | 在緩衝區(打開的每一個文件)搜索 |
-| `:search-working` `:sw` |  | 在工作路徑搜索 |
-| `:search-project` `:sp` |  | 在項目路徑搜索 |
-| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | 邊欄：不寫就説開着哪幾扇，`off` 關掉，寫名字就開那一扇 |
-| `:table-detail` | `on｜off｜toggle` | 記録那一格：開、關，或者給個寬度 |
-| `:table-numbers` | `on｜off｜toggle` | 欄號那一行：␣t3/、␣t20,20g 用的就是它 |
-| `:table-header` | `on｜off｜toggle` | 第一行是欄名，還是跟别的行一樣是數據 |
-| `:table-schema` | `write` | 説這張表是怎麽讀的；write 寫進旁邊的 datapackage.json |
-| `:table-delimiter` | `<分隔符>` | 照這個分隔符把文件讀成表格，並記住(tab、space、comma、semicolon 或那個字符) |
-| `:table-hide` | `<欄號>` | 把第 N 欄藏起來(只是不畫，照樣讀寫)，並記住 |
-| `:table-show` | `<欄號>` | 把藏起來的第 N 欄再畫出來 |
-| `:table-jump` | `<列名>` | 跳到表格裏叫這個名字的那一行(`:table-jump 木`) |
-| `:table-find` | `row｜column｜<字符串> <字符串>` | 找：`row` 一行一行(就是 `/`)，`column` 一欄一欄(表格裏 t/ t? 就是它) |
-| `:paste-table` | `<格式> [<格式>]` | 將剪貼板中表格貼作目標格式；兩個參數時第一個爲源格式 |
-| `:convert-table` | `<格式> [<格式>]` | 轉爲目標格式(csv,tsv,pipe)；兩個參數時第一個爲源格式 |
-| `:wheel` | `<幾行，1–10>` | 滚輪一格走幾行；`:wheel 1` 是終端自己的一格 |
-| `:clipboard` `:reg` |  | 粘貼菜單：剪貼板和取過的那幾段，挑一個貼(␣ 後按雙引號也是) |
-| `:clipboard-yank` |  | 選區送到系統剪貼板 |
-| `:clipboard-paste` |  | 從系統剪貼板貼進來 |
-| `:buffer` |  | 開着的文件：列出、切換、關掉 |
+| `:search` `:s` `:grep` | `<路徑>` | 打開搜索面板：可跨文件，選項更多 |
+| `:search-buffers` `:sb` |  | 在所有打開的文件中搜索 |
+| `:search-working` `:sw` |  | 在工作目録中搜索 |
+| `:search-project` `:sp` |  | 在項目中搜索 |
+| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | 側欄：不帶參數列出已打開的面板，`off` 關閉，給出名稱則打開該面板 |
+| `:table-detail` | `on｜off｜toggle` | 記録面板：開、關或指定寬度 |
+| `:table-numbers` | `on｜off｜toggle` | 列號行：␣t3/、␣t20,20g 用的就是它 |
+| `:table-header` | `on｜off｜toggle` | 首行是表頭還是數據 |
+| `:table-schema` | `write` | 顯示錶格結構；write 寫入同目録的 datapackage.json |
+| `:table-delimiter` | `<分隔符>` | 按此分隔符把文件讀成表格並記住(tab、space、comma、semicolon 或該字符) |
+| `:table-hide` | `<欄號>` | 隱藏第 N 列(只是不顯示，照常讀寫)，並記住 |
+| `:table-show` | `<欄號>` | 重新顯示被隱藏的第 N 列 |
+| `:table-jump` | `<列名>` | 跳到表格中該名稱所在的行(`:table-jump 木`) |
+| `:table-find` | `row｜column｜<字符串> <字符串>` | 查找：`row` 按行(同 `/`)，`column` 按列(同表格裏的 t/ t?) |
+| `:paste-table` | `<格式> [<格式>]` | 將剪貼板中的表格粘貼爲目標格式；兩個參數時第一個爲源格式 |
+| `:convert-table` | `<格式> [<格式>]` | 轉爲目標格式(csv、tsv、pipe)；兩個參數時第一個爲源格式 |
+| `:wheel` | `<幾行，1–10>` | 滚輪每格滚動的行數；`:wheel 1` 爲終端默認 |
+| `:clipboard` `:reg` |  | 粘貼菜單：從剪貼板和複製過的内容裏選一項粘貼(也可先按 ␣ 再按雙引號) |
+| `:clipboard-yank` |  | 複製選區到系統剪貼板 |
+| `:clipboard-paste` |  | 從系統剪貼板粘貼 |
+| `:buffer` |  | 打開的文件：列出、切換、關閉 |
 | `:buffer-next` `:bn` |  | 下一個 |
 | `:buffer-previous` `:bp` |  | 上一個 |
-| `:buffer-close` `:bc` |  | 關掉這個文件(`buffer-close!` 不管改動) |
-| `:format` `:fmt` |  | 照這種文件在配置裏説的那樣格式化([language.markdown] format = …) |
-| `:run` | `<名字>` | 跑這種文件在配置裏自己起名的那條命令 |
-| `:markdown-footnote` |  | 腳註：號碼自己找空的，注也一併開好 |
-| `:markdown-footnote-inline` |  | 行内注 ^[…]，不去文末 |
-| `:settings` |  | 整頁一扇設置：每一項有名字有説明，改完 :w 存盤 |
-| `:resume` |  | 接着上次：把這個目録上次開着的那幾個加進來 |
-| `:recent-files` |  | 最近開過的檔(這個項目) |
-| `:recent-files-global` |  | 最近開過的檔(全部項目) |
-| `:changed-files` |  | 存在改動文件 |
-| `:recent-projects` |  | 最近開過的項目 |
-| `:tutor` |  | 一課：把課文抄成你自己的一個文件，邊改邊學 |
-| `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | 鍵和命令，開成一個可以讀、可以搜的文件 |
-| `:export` `:ex` | `html｜typst｜csv｜tsv <路徑>` | 導出成 html 或 typst，排版一起帶上 |
-| `:diff` | `<路徑>` | 改了什麽：按詞比，不是按行 |
-| `:lsp-rename` | `<新名>` | 讓語言服務器把光標下的名字各處一起改 |
-| `:git-show` | `<提交>` | 把提交過的那一稿以只讀方式開在另一個窗口 |
-| `:git-diff` | `<提交>` | 跟 git 裏那一份比，逐詞：不寫提交就是 HEAD |
+| `:buffer-close` `:bc` |  | 關閉這個文件(`buffer-close!` 放棄改動) |
+| `:format` `:fmt` |  | 按配置格式化此文件([language.markdown] format = …) |
+| `:run` | `<名字>` | 運行配置中爲該語言定義的命令 |
+| `:markdown-footnote` |  | 腳註：自動編號並創建註釋 |
+| `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
+| `:settings` |  | 設置頁：每項附有説明，改完 :w 保存 |
+| `:resume` |  | 恢復上次會話：打開這個目録上次開着的文件(不關閉現有的) |
+| `:recent-files` |  | 最近打開的文件(本項目) |
+| `:recent-files-global` |  | 最近打開的文件(所有項目) |
+| `:changed-files` |  | 改動過的文件：git 中有改動的與未保存的(同 Space g) |
+| `:recent-projects` |  | 最近打開的項目 |
+| `:tutor` |  | 教程：把課文複製成你自己的文件，邊改邊學 |
+| `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | 以可搜索的文件打開按鍵與命令列表 |
+| `:export` `:ex` | `html｜typst｜csv｜tsv <路徑>` | 導出爲 html 或 typst，保留排版 |
+| `:diff` | `<路徑>` | 查看改動：按詞比較，而非按行 |
+| `:lsp-rename` | `<新名>` | 通過語言服務器重命名光標下的符號(各處一起改) |
+| `:git-show` | `<提交>` | 在另一個窗口以只讀方式打開已提交的版本 |
+| `:git-diff` | `<提交>` | 與 git 中的版本逐詞比較，默認比 HEAD |
 | `:toc` `:outline` | `<第幾條>` | 列出標題；`:toc 3` 跳到第三條 |
 | `:ruby` |  | 編輯此處注音 |
-| `:ruby-render` | `off｜basic｜full` | 注音渲染模式：顯示源碼、顔色渲染、夾行顯示。無參數時，報告當前模式名 |
-| `:ruby-auto` |  | 按詞自動注音(選中的，或者整份) |
+| `:ruby-render` | `off｜basic｜full` | 注音顯示：源碼、着色、夾行；不帶參數顯示當前模式 |
+| `:ruby-auto` |  | 按詞自動注音(選區或整個文件) |
 | `:ruby-auto-rare` |  | 只注陸、臺、港常用字表都没有的字 |
-| `:ruby-html` | `on｜off｜toggle` | 認 `<ruby>` 這一種 |
-| `:ruby-typst` | `on｜off｜toggle` | 認 `#ruby(…)` 這一種 |
+| `:ruby-html` | `on｜off｜toggle` | 識别 `<ruby>` |
+| `:ruby-typst` | `on｜off｜toggle` | 識别 `#ruby(…)` |
 | `:ruby-format` | `html｜typst` | 把注音改寫成另一種寫法 |
-| `:s/pat/rep/` |  | 取代：選區内；`%s` 全文、`1-40s` 一段、`1,5,9s` 幾行；旗標 g i f c n t y j；分隔符可換 |
+| `:s/pat/rep/` |  | 替換：默認在選區内；`%s` 全文、`1-40s` 指定範圍、`1,5,9s` 指定行；標誌 g i f c n t y j；分隔符可換 |

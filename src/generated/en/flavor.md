@@ -5,7 +5,7 @@
 | Item | helix | vim | What it does |
 | --- | --- | --- | --- |
 | [`case_menu`](#case_menu) | `` ` `` | `` g` `` | case and conversion menu |
-| [`sentences_on_h_l`](#sentences_on_h_l) | `H` `L` | — | walk sentences |
+| [`sentences_on_h_l`](#sentences_on_h_l) | `H` `L` | — | move by sentence |
 | [`marks_on_m_quote`](#marks_on_m_quote) | `M` `'` | — | set and go to marks |
 | [`two_thirds_page`](#two_thirds_page) | `C-n` `C-p` | — | two-thirds of a page |
 | [`tables`](#tables) | `Space t` | `Space t` | table menu |
@@ -15,7 +15,7 @@
 | [`registers_menu`](#registers_menu) | `Space "` | `Space "` | registers menu |
 | [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | dictionary |
 | [`popup_panel_pairs`](#popup_panel_pairs) | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | popups and their sidebars |
-| [`explorer_here`](#explorer_here) | `Space E` | `Space E` | explorer from this file's folder |
+| [`explorer_here`](#explorer_here) | `Space E` | `Space E` | browse from this file's folder |
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | turn a page |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | sidebars |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | jumps, word search, links |
@@ -24,7 +24,7 @@
 | [`insert_ctrl_c`](#insert_ctrl_c) | `C-c` | — | Insert: leave |
 | [`x_selects_upward`](#x_selects_upward) | `X` | — | select the line above |
 | [`bare_g_last_line`](#bare_g_last_line) | `G` | — | to the last line |
-| [`move_lines`](#move_lines) | `A-j` `A-k` | `A-j` `A-k` | move lines down and up |
+| [`move_lines`](#move_lines) | `A-j` `A-k` | `A-j` `A-k` | move lines up and down |
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | line start, first character |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | delete to the line's end |
 | [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | block comment marks on their own lines |
@@ -38,7 +38,7 @@
 
 | Item | helix | vim | What it does |
 | --- | --- | --- | --- |
-| [`delete_keeps_register`](#delete_keeps_register) | `d` `c` `A-d` `A-c` | — | deleting keeps the register |
+| [`delete_keeps_register`](#delete_keeps_register) | `d` `c` `A-d` `A-c` | — | delete without yanking |
 | [`esc_collapses`](#esc_collapses) | `Esc` | — | collapse to one cursor |
 | [`shift_tab_other_indent`](#shift_tab_other_indent) | `S-Tab` | `S-Tab` | the other kind of indent |
 
@@ -52,37 +52,37 @@ Under helix:
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `` ` `` | the case group: upper and lower case, traditional and simplified | to lowercase |
-| letter case | `` `l `` | to lowercase |  |
-| letter case | `` `u `` | to uppercase |  |
-| letter case | ``` `` ``` | switch case |  |
-| letter case | `` `s `` | traditional → simplified |  |
-| letter case | `` `t `` | simplified → traditional |  |
-| letter case | `` `w `` | simplified → Taiwan 繁 |  |
-| letter case | `` `f `` | to fullwidth |  |
-| letter case | `` `h `` | to halfwidth |  |
-| letter case | `` `k `` | simplified → Hong Kong 繁 |  |
-| letter case | `` `c `` | simplified → mainland 繁 |  |
-| letter case | `` `g `` | simplified → 古籍 繁 |  |
-| letter case | `` `j `` | traditional → Japanese shinjitai |  |
+| Normal mode | `` ` `` | case group: upper/lower, traditional/simplified | to lowercase |
+| convert | `` `l `` | to lowercase |  |
+| convert | `` `u `` | to uppercase |  |
+| convert | ``` `` ``` | switch case |  |
+| convert | `` `s `` | traditional → simplified |  |
+| convert | `` `t `` | simplified → traditional |  |
+| convert | `` `w `` | simplified → Taiwan traditional |  |
+| convert | `` `f `` | to fullwidth |  |
+| convert | `` `h `` | to halfwidth |  |
+| convert | `` `k `` | simplified → Hong Kong traditional |  |
+| convert | `` `c `` | simplified → mainland traditional |  |
+| convert | `` `g `` | simplified → classical traditional |  |
+| convert | `` `j `` | traditional → Japanese shinjitai |  |
 
 Under vim:
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| g goto | `` g` `` | the case group: upper and lower case, traditional and simplified | go to a mark (then a letter) |
-| letter case | `` g`l `` | to lowercase |  |
-| letter case | `` g`u `` | to uppercase |  |
-| letter case | ``` g`` ``` | switch case |  |
-| letter case | `` g`s `` | traditional → simplified |  |
-| letter case | `` g`t `` | simplified → traditional |  |
-| letter case | `` g`w `` | simplified → Taiwan 繁 |  |
-| letter case | `` g`f `` | to fullwidth |  |
-| letter case | `` g`h `` | to halfwidth |  |
-| letter case | `` g`k `` | simplified → Hong Kong 繁 |  |
-| letter case | `` g`c `` | simplified → mainland 繁 |  |
-| letter case | `` g`g `` | simplified → 古籍 繁 |  |
-| letter case | `` g`j `` | traditional → Japanese shinjitai |  |
+| g goto | `` g` `` | case group: upper/lower, traditional/simplified | go to a mark (then a letter) |
+| convert | `` g`l `` | to lowercase |  |
+| convert | `` g`u `` | to uppercase |  |
+| convert | ``` g`` ``` | switch case |  |
+| convert | `` g`s `` | traditional → simplified |  |
+| convert | `` g`t `` | simplified → traditional |  |
+| convert | `` g`w `` | simplified → Taiwan traditional |  |
+| convert | `` g`f `` | to fullwidth |  |
+| convert | `` g`h `` | to halfwidth |  |
+| convert | `` g`k `` | simplified → Hong Kong traditional |  |
+| convert | `` g`c `` | simplified → mainland traditional |  |
+| convert | `` g`g `` | simplified → classical traditional |  |
+| convert | `` g`j `` | traditional → Japanese shinjitai |  |
 
 ### `sentences_on_h_l` {#sentences_on_h_l}
 
@@ -90,8 +90,8 @@ On: H and L go to the previous and the next sentence. Off: helix leaves both unb
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `H` | the previous sentence |  |
-| Normal mode | `L` | the next sentence |  |
+| Normal mode | `H` | previous sentence |  |
+| Normal mode | `L` | next sentence |  |
 
 ### `marks_on_m_quote` {#marks_on_m_quote}
 
@@ -117,31 +117,31 @@ On: Space t opens the table menu. Off: the table commands are still on the : lin
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space t` | table operations |  |
-| t table | `Space t o` | source view: the file as written |  |
-| t table | `Space t b` | basic view: the columns lined up |  |
-| t table | `Space t t` | window view: the table takes the window |  |
-| t table | `Space t q` | leave window view |  |
-| t table | `Space t ] / Space t [` | the next table / the one before |  |
-| t table | `Space t x` | convert the table's format (delimiter) |  |
-| t table | `Space t w` | long cells: wrap / fold / whole |  |
-| t table | `Space t /` | search down the columns (a column range can be given) |  |
-| t table | `Space t g` | go to a cell (␣t20,20g) |  |
-| t table | `Space t r / Space t R` | insert a new row (below / above) |  |
-| t table | `Space t c / Space t C` | add a column (right / left) |  |
-| t table | `Space t d / Space t D` | delete this row / column |  |
-| t table | `Space t j / Space t k` | move this row down / up |  |
-| t table | `Space t h / Space t l` | move this column left / right |  |
-| t table | `Space t y / Space t p / Space t P` | yank this column / paste it to the right / to the left |  |
-| t table | `Space t v` | write the yanked column over this one |  |
-| t table | `Space t 1s / Space t 1S` | sort by column, ascending / descending (␣t1s; ␣t1a2d8as for several) |  |
-| t table | `Space t < / Space t = / Space t >` | this column left / centre / right |  |
-| t table | `Space t F` | line it up again |  |
-| t table | `Space t i` | this row's record |  |
-| t table | `Space t H` | whether the table's first row is a heading row |  |
-| convert the table's format (delimiter) | `Space t x p / Space t x P` | pipe (convert / paste) |  |
-| convert the table's format (delimiter) | `Space t x c / Space t x C` | csv (convert / paste) |  |
-| convert the table's format (delimiter) | `Space t x t / Space t x T` | tsv (convert / paste) |  |
+| Space | `Space t` | table |  |
+| ␣t table | `Space t o` | source view |  |
+| ␣t table | `Space t b` | basic view: columns aligned |  |
+| ␣t table | `Space t t` | window view: the table fills the window |  |
+| ␣t table | `Space t q` | leave window view |  |
+| ␣t table | `Space t ] / Space t [` | next / previous table |  |
+| ␣t table | `Space t x` | convert the table delimiter |  |
+| ␣t table | `Space t w` | long cells: wrap / fold / full |  |
+| ␣t table | `Space t /` | search by column (range optional) |  |
+| ␣t table | `Space t g` | go to a cell (␣t20,20g) |  |
+| ␣t table | `Space t r / Space t R` | insert row (below / above) |  |
+| ␣t table | `Space t c / Space t C` | insert column (right / left) |  |
+| ␣t table | `Space t d / Space t D` | delete this row / column |  |
+| ␣t table | `Space t j / Space t k` | move this row down / up |  |
+| ␣t table | `Space t h / Space t l` | move this column left / right |  |
+| ␣t table | `Space t y / Space t p / Space t P` | copy this column / paste right / paste left |  |
+| ␣t table | `Space t v` | overwrite this column with the copied one |  |
+| ␣t table | `Space t 1s / Space t 1S` | sort by column, ascending / descending (␣t1s; ␣t1a2d8as for several) |  |
+| ␣t table | `Space t < / Space t = / Space t >` | align column left / centre / right |  |
+| ␣t table | `Space t F` | realign |  |
+| ␣t table | `Space t i` | this row's record |  |
+| ␣t table | `Space t H` | first row as header |  |
+| convert the table delimiter | `Space t x p / Space t x P` | pipe (convert / paste) |  |
+| convert the table delimiter | `Space t x c / Space t x C` | csv (convert / paste) |  |
+| convert the table delimiter | `Space t x t / Space t x T` | tsv (convert / paste) |  |
 
 ### `merge_conflicts` {#merge_conflicts}
 
@@ -173,23 +173,23 @@ On: Space z opens the input method menu. Off: the key that switches between Chin
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space z` | the input method |  |
-| the input method | `Space z z` | input method on / off (on is Chinese) |  |
-| the input method | `Space z m` | when a word commits |  |
-| the input method | `Space z p` | where the candidates are drawn |  |
-| the input method | `Space z e` | where what you are typing is written |  |
-| the input method | `Space z y` | prediction (autocompletion) on or off |  |
-| the input method | `Space z i` | pick a scheme |  |
-| the input method | `Space z n` | the next scheme |  |
-| the input method | `Space z 3-9` | candidates on a page |  |
-| the input method | `Space z 0` | charset filter |  |
-| the input method | `Space z s` | charset sort |  |
-| the input method | `Space z g` | sentence lanes |  |
-| the input method | `Space z b` | built-in scheme |  |
-| the input method | `Space z /` | the next annotation beside the candidates |  |
-| the input method | `Space z t` | switch to the installed 碼表 |  |
-| the input method | `Space z w` | where the 碼表 came from |  |
-| the input method | `Space z W` | where the data is |  |
+| Space | `Space z` | input method |  |
+| input method | `Space z z` | input method on / off (on is Chinese) |  |
+| input method | `Space z m` | commit mode |  |
+| input method | `Space z p` | candidate bar position |  |
+| input method | `Space z e` | where uncommitted text shows |  |
+| input method | `Space z y` | prediction on / off |  |
+| input method | `Space z i` | pick a scheme |  |
+| input method | `Space z n` | next scheme |  |
+| input method | `Space z 3-9` | candidates per page |  |
+| input method | `Space z 0` | charset filter |  |
+| input method | `Space z s` | charset sort |  |
+| input method | `Space z g` | sentence lanes |  |
+| input method | `Space z b` | use built-in scheme |  |
+| input method | `Space z /` | next annotation mode |  |
+| input method | `Space z t` | use the installed code table |  |
+| input method | `Space z w` | where the code table came from |  |
+| input method | `Space z W` | where the data is |  |
 
 ### `recent_files` {#recent_files}
 
@@ -198,10 +198,10 @@ On: Space o lists recent files and projects. Off: unbound.
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
 | Space | `Space o` | open recent |  |
-| open something recent | `Space o f` | recent files |  |
-| open something recent | `Space o g` | recent files, everywhere |  |
-| open something recent | `Space o p` | recent projects |  |
-| open something recent | `Space o r` | take up the last session |  |
+| open recent | `Space o f` | recent files |  |
+| open recent | `Space o g` | recent files (all projects) |  |
+| open recent | `Space o p` | recent projects |  |
+| open recent | `Space o r` | restore last session |  |
 
 ### `registers_menu` {#registers_menu}
 
@@ -217,7 +217,7 @@ On: Space n looks up the character under the cursor in a popup, Space N in the s
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space n` | char info (float) |  |
+| Space | `Space n` | char info (popup) |  |
 | Space | `Space N` | char info (sidebar) |  |
 
 ### `popup_panel_pairs` {#popup_panel_pairs}
@@ -226,12 +226,12 @@ On: Space K puts the hover in the sidebar; Space l, x and i show a diagnostic, a
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space K` | docs (sidebar) |  |
-| Space | `Space l` | diagnostic (float) |  |
+| Space | `Space K` | show docs (sidebar) |  |
+| Space | `Space l` | diagnostic (popup) |  |
 | Space | `Space L` | diagnostic (sidebar) |  |
-| Space | `Space x` | change (float) |  |
-| Space | `Space X` | change (sidebar) |  |
-| Space | `Space i` | row record (float) |  |
+| Space | `Space x` | show change (popup) |  |
+| Space | `Space X` | show change (sidebar) |  |
+| Space | `Space i` | row record (popup) |  |
 | Space | `Space I` | row record (sidebar) |  |
 
 ### `explorer_here` {#explorer_here}
@@ -253,11 +253,11 @@ On: Space Space turns a page down and Space Backspace a page up. Off: both are u
 
 ### `sidebars` {#sidebars}
 
-On: C-w e and C-w i show or hide the left and right sidebar, C-w E and C-w I go into it. Off: unbound.
+On: C-w e and C-w i show or hide the left and right sidebars, C-w E and C-w I go into them. Off: unbound.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| region | `C-w e / C-w i` | toggle the left / right bar |  |
+| region | `C-w e / C-w i` | toggle the left / right sidebar |  |
 | region | `C-w E / C-w I` | go into the left / right sidebar |  |
 
 ### `goto_extras` {#goto_extras}
@@ -268,29 +268,29 @@ Under helix:
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| g goto | `gL` | follow the link |  |
-| g goto | `gx` | open the web address |  |
-| g goto | `gz` | two letters to locate a word |  |
-| g goto | `gZ` | more letters to locate a char |  |
+| g goto | `gL` | follow link |  |
+| g goto | `gx` | open URL in browser |  |
+| g goto | `gz` | jump to a word by two letters |  |
+| g goto | `gZ` | jump to a character by reading |  |
 | g goto | `g/` | search the selection |  |
 
 Under vim:
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| g goto | `gL` | follow the link |  |
-| g goto | `gW` | go to a place on this screen |  |
-| g goto | `gz` | two letters to locate a word |  |
-| g goto | `gZ` | more letters to locate a char |  |
+| g goto | `gL` | follow link |  |
+| g goto | `gW` | jump to a spot on screen |  |
+| g goto | `gz` | jump to a word by two letters |  |
+| g goto | `gZ` | jump to a character by reading |  |
 | g goto | `g/` | search the selection |  |
 
 ### `split_join` {#split_join}
 
-On: gS puts the items in the brackets round the cursor one per line, and back onto one line when pressed again. Off: gS is unbound; :split-join still works.
+On: gS puts the items in the brackets around the cursor one per line, and back onto one line when pressed again. Off: gS is unbound; :split-join still works.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| g goto | `gS` | split or join the brackets' items |  |
+| g goto | `gS` | split or join items in brackets |  |
 
 ### `insert_extras` {#insert_extras}
 
@@ -298,9 +298,9 @@ On: in Insert mode C-a and C-e go to the line's start and end, C-n completes, C-
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Insert mode | `C-a` | the start of the line |  |
+| Insert mode | `C-a` | start of line |  |
 | Insert mode | `C-e` | to the end of the line, after its last character |  |
-| Insert mode | `C-g` | break the undo here |  |
+| Insert mode | `C-g` | start a new undo step |  |
 
 ### `insert_ctrl_c` {#insert_ctrl_c}
 
@@ -308,7 +308,7 @@ On: in Insert mode C-c goes back to Normal mode, as Esc does. Off: unbound.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Insert mode | `C-c` | leave Select mode and put away what was shown for a moment |  |
+| Insert mode | `C-c` | leave Select mode and dismiss anything shown briefly |  |
 
 ### `x_selects_upward` {#x_selects_upward}
 
@@ -316,7 +316,7 @@ On: X selects the line above, one more each press, as x does downward. Off: heli
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `X` | select the line above, or one more line upward | grow the selection to whole lines |
+| Normal mode | `X` | select the line above, or one more line upward | extend the selection to whole lines |
 
 ### `bare_g_last_line` {#bare_g_last_line}
 
@@ -324,7 +324,7 @@ On: G with no count goes to the start of the last line; with a count, to that li
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `G` | go to line N, or with no count to the last line | to line N (the count) |
+| Normal mode | `G` | go to line N, or with no count to the last line | go to line N (count) |
 
 ### `move_lines` {#move_lines}
 
@@ -341,8 +341,8 @@ On: 0 and ^ go to the line's start and its first character, as in vim; the line'
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `0` | the start of the line |  |
-| Normal mode | `^` | the first character that is not a space |  |
+| Normal mode | `0` | start of line |  |
+| Normal mode | `^` | first non-blank character |  |
 
 ### `d_to_line_end` {#d_to_line_end}
 
@@ -351,11 +351,11 @@ On: D deletes to the end of the line into the register, A-D without filling it. 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
 | Normal mode | `D` | delete to the end of the line |  |
-| Normal mode | `A-D` | delete to the end of the line, leaving the register as it is |  |
+| Normal mode | `A-D` | delete to the end of the line without yanking |  |
 
 ### `block_comment_lines` {#block_comment_lines}
 
-On: Space C over several whole lines in Markdown, Typst or HTML puts <!-- and --> on lines of their own. Off: helix's, the marks at the first line's start and the last line's end.
+On: Space C over several whole lines in Markdown, Typst or HTML puts <!-- and --> on lines of their own. Off: as in helix, the marks go at the first line's start and the last line's end.
 
 It changes what its keys do, not which command they run.
 
@@ -371,9 +371,9 @@ On: vim's za, zR and zM under helix (open or close a fold, open all, close all);
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| view | `za` | open or close a fold |  |
-| view | `zR` | open every fold |  |
-| view | `zM` | close every fold |  |
+| view | `za` | toggle fold |  |
+| view | `zR` | open all folds |  |
+| view | `zM` | close all folds |  |
 | view | `zf` | fold the selected lines |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
@@ -382,7 +382,7 @@ On: under the vim keymap gc with a motion, gcc and Visual gc comment the lines, 
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| g goto | `gc` | comment out (then a motion) |  |
+| g goto | `gc` | comment (then a motion) |  |
 
 ### `vim_space_menu` {#vim_space_menu}
 
@@ -390,7 +390,7 @@ On: under vim, Space opens the Space menu. Off: Space moves right as in vim, and
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `Space` | the Space menu | one character right |
+| Normal mode | `Space` | Space menu | one character right |
 
 ### `helix_keys_under_vim` {#helix_keys_under_vim}
 
@@ -398,41 +398,41 @@ On: under vim, helix's keys on the keys vim leaves free: the Alt keys, C-s, Z, g
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `Z` | the view group, staying open |  |
-| Normal mode | `C-s` | save this place in the jump list |  |
+| Normal mode | `Z` | view group (sticky) |  |
+| Normal mode | `C-s` | save this position to the jump list |  |
 | Normal mode | `A-!` | append a command's output after the selection |  |
 | Normal mode | `A-(` | rotate the selections' contents backward |  |
 | Normal mode | `A-)` | rotate the selections' contents forward |  |
-| Normal mode | `A-*` | look for what is selected, exactly as written |  |
+| Normal mode | `A-*` | search for the selection exactly |  |
 | Normal mode | `A-,` | remove the primary selection |  |
-| Normal mode | `A--` | merge every selection into one |  |
+| Normal mode | `A--` | merge all selections into one |  |
 | Normal mode | `A-.` | repeat the last f or t |  |
 | Normal mode | `A-:` | make every selection face forward |  |
 | Normal mode | `A-;` | move the cursor to the other end of the selection |  |
-| Normal mode | `A-_` | merge the selections that touch |  |
+| Normal mode | `A-_` | merge adjacent selections |  |
 | Normal mode | `` A-` `` | to uppercase |  |
-| Normal mode | `A-a` | select every node beside this one |  |
-| Normal mode | `A-b` | to the start of the node around the cursor, then of its parent |  |
-| Normal mode | `A-c` | change the selection, leaving the register |  |
-| Normal mode | `A-C` | copy the selection onto the previous line |  |
-| Normal mode | `A-d` | delete the selection, leaving the register |  |
-| Normal mode | `A-e` | to the end of the node around the cursor |  |
+| Normal mode | `A-a` | select every sibling node |  |
+| Normal mode | `A-b` | to the start of the enclosing node, then of its parent |  |
+| Normal mode | `A-c` | change the selection without yanking |  |
+| Normal mode | `A-C` | add a selection on the previous line |  |
+| Normal mode | `A-d` | delete the selection without yanking |  |
+| Normal mode | `A-e` | to the end of the enclosing node |  |
 | Normal mode | `A-i` | shrink the selection back, or to its first child node |  |
-| Normal mode | `A-I` | select every node inside this one |  |
+| Normal mode | `A-I` | select every child node |  |
 | Normal mode | `A-J` | join lines and select where they meet |  |
-| Normal mode | `A-K` | remove the selections that match a pattern |  |
-| Normal mode | `A-n` | select the next syntax node |  |
-| Normal mode | `A-o` | grow the selection to the syntax node around it |  |
-| Normal mode | `A-p` | select the previous syntax node |  |
+| Normal mode | `A-K` | remove selections matching a regex |  |
+| Normal mode | `A-n` | select the next sibling node |  |
+| Normal mode | `A-o` | expand the selection to the parent syntax node |  |
+| Normal mode | `A-p` | select the previous sibling node |  |
 | Normal mode | `A-s` | split the selection into its lines |  |
-| Normal mode | `A-u` | undo, as u does |  |
-| Normal mode | `A-U` | redo, as U does |  |
+| Normal mode | `A-u` | undo (same as u) |  |
+| Normal mode | `A-U` | redo (same as U) |  |
 | Normal mode | `A-x` | shrink the selection to whole lines |  |
 | Normal mode | `A-\|` | pipe the selection to a command, keeping the text |  |
 | Insert mode | `A-d` | delete the word after the cursor |  |
 | Insert mode | `C-k` | delete to the end of the line, never the line break (vim) |  |
-| g goto | `gy` | go to the type definition |  |
-| g goto | `g.` | back to the last change |  |
+| g goto | `gy` | go to type definition |  |
+| g goto | `g.` | last change |  |
 | g goto | `gb` | screen top / middle / bottom |  |
 | next… | `]g / ]G` | a change (capital: the first / the last) |  |
 | next… | `]e` | an entry |  |
@@ -449,11 +449,11 @@ It changes what its keys do, not which command they run.
 
 ### `esc_collapses` {#esc_collapses}
 
-On: in Normal mode Esc also collapses the selections to one cursor. Off: helix's Esc only leaves select mode.
+On: in Normal mode Esc also collapses the selections to one cursor. Off: as in helix, Esc only leaves Select mode.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `Esc` | leave select mode, or collapse to one cursor | leave Select mode and put away what was shown for a moment |
+| Normal mode | `Esc` | leave Select mode, or collapse to one cursor | leave Select mode and dismiss anything shown briefly |
 
 ### `shift_tab_other_indent` {#shift_tab_other_indent}
 
