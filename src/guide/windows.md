@@ -124,11 +124,11 @@ left sidebar holds five panels, and `Tab` steps through them:
 
 | Panel | Shows | Opened with |
 | --- | --- | --- |
-| Explorer | the project's files, as a tree | `:sidebar explorer` |
-| Buffers | the open files; a changed one is marked `+` | `:sidebar buffers` |
-| Outline | the headings of the current file | `:sidebar outline` |
-| Search | the search panel | `Space /`, `:sidebar search` |
-| Links | the links into and out of the current file (see [Links](../writing/links.md)) | `:links`, `:sidebar links` |
+| Explorer | the project's files, as a tree | `:sidebar-explorer` |
+| Buffers | the open files; a changed one is marked `+` | `:sidebar-buffers` |
+| Outline | the headings of the current file | `:sidebar-outline` |
+| Search | the search panel | `Space /`, `:sidebar-search` |
+| Links | the links into and out of the current file (see [Links](../writing/links.md)) | `:links`, `:sidebar-links` |
 
 The right sidebar holds one panel, **Info**, described below.
 
@@ -138,9 +138,11 @@ is open, gold when the keys are in it. `[editor] sidebar_buttons = false` takes
 the blocks away; there are none while the tab line is hidden. A sidebar opened
 again, by its block or by `C-w e` and `C-w i`, shows the panel it was closed on.
 
-`:sidebar` on its own says what is open, `:sidebar off` closes both, and
-`:sidebar info` opens the right one. `Space e` and `Space f` are pickers, not
-the Explorer panel; see [Pickers](./search.md#pickers).
+Each panel's command opens it, and closes it when it is already showing. The
+five on the left take the keys when they open. `:sidebar-info` opens the right
+sidebar and leaves the keys in the text, as `C-w i` does; `C-w I` moves into
+it. `Space e` and `Space f` are pickers, not the Explorer panel; see
+[Pickers](./search.md#pickers).
 
 ### Keys in a sidebar
 
@@ -190,7 +192,10 @@ A window narrower than 36 columns has no room for a sidebar at all.
 
 ## The outline
 
-`:sidebar outline` opens the outline in the sidebar. To jump to a heading
+`:sidebar-outline` opens the outline in the sidebar. `:outline 2` lists
+headings down to level 2 only, `:outline 0` closes the outline, and `:outline`
+on its own says whether it is open, how deep it lists and how many headings
+that is. To jump to a heading
 without opening a sidebar, `Space s` lists the same headings in a picker
 (see [Pickers](./search.md#pickers)).
 
@@ -217,7 +222,7 @@ an upper-case key that puts the same answer in the sidebar:
 | diagnostics | `Space l` | `Space L` |
 | the change here: what this block was before | `Space x` | `Space X` |
 | the record (table row details) | `Space i` | `Space I` |
-| the wiki entry for the name under the cursor | | `:wiki-panel` |
+| the wiki entry for the name under the cursor | | `:sidebar-info` |
 
 None of these take the keys: the cursor stays in the text and you keep
 typing. When an answer is too long to read at a glance, `C-w w` walks into the

@@ -58,7 +58,6 @@
 | `:links` | `list｜graph｜off` | 鏈接面板：哪些文件 [[鏈接]] 到這裏、這裏鏈接到哪裏；list 列表、graph 圖、off 關閉 |
 | `:links-export` |  | 將項目鏈接圖導出爲 .yumete/graph.html 並在瀏覽器中打開 |
 | `:links-reindex` |  | 重新讀取項目的 [[鏈接]] |
-| `:wiki-panel` | `on｜off｜toggle` | 把詞條固定在側欄，打開時不再彈出浮窗 |
 | `:wiki-mark` | `color｜line｜off` | 正文中詞條名的標記：金色、下劃線或不標 |
 | `:wiki-where` |  | 百科來源：讀取了哪些文件、各有幾條、哪些無法標記 |
 | `:wiki-reload` |  | 重新讀取百科及其引用的所有文件 |
@@ -157,7 +156,12 @@
 | `:search-buffers` `:sb` |  | 在所有打開的文件中搜索 |
 | `:search-working` `:sw` |  | 在工作目録中搜索 |
 | `:search-project` `:sp` |  | 在項目中搜索 |
-| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | 側欄：不帶參數列出已打開的面板，`off` 關閉，給出名稱則打開該面板 |
+| `:sidebar-explorer` |  | 打開或關閉左側欄的文件樹，打開時光標移過去 |
+| `:sidebar-buffers` |  | 打開或關閉左側欄的緩衝區列表，打開時光標移過去 |
+| `:sidebar-outline` |  | 打開或關閉左側欄的大綱，打開時光標移過去 |
+| `:sidebar-search` |  | 打開或關閉左側欄的搜索，打開時光標移過去 |
+| `:sidebar-links` |  | 打開或關閉左側欄的鏈接，打開時光標移過去 |
+| `:sidebar-info` |  | 打開或關閉右側欄的信息面板，光標留在正文 |
 | `:table-detail` | `on｜off｜toggle` | 記録面板：開、關或指定寬度 |
 | `:table-numbers` | `on｜off｜toggle` | 列號行：␣t3/、␣t20,20g 用的就是它 |
 | `:table-header` | `on｜off｜toggle` | 首行是表頭還是數據 |
@@ -194,7 +198,7 @@
 | `:lsp-rename` | `<新名>` | 通過語言服務器重命名光標下的符號(各處一起改) |
 | `:git-show` | `<提交>` | 在另一個窗口以只讀方式打開已提交的版本 |
 | `:git-diff` | `<提交>` | 與 git 中的版本逐詞比較，默認比 HEAD |
-| `:toc` `:outline` | `<第幾條>` | 列出標題；`:toc 3` 跳到第三條 |
+| `:outline` | `<級>` | 大綱只列到第幾級；`0` 關閉；不帶參數報告狀態 |
 | `:ruby` |  | 編輯此處注音 |
 | `:ruby-render` | `off｜basic｜full` | 注音顯示：源碼、着色、夾行；不帶參數顯示當前模式 |
 | `:ruby-auto` |  | 按詞自動注音(選區或整個文件) |

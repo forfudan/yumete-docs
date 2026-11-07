@@ -58,7 +58,6 @@
 | `:links` | `list｜graph｜off` | links panel: what [[links]] here and what this links to; list, graph or off |
 | `:links-export` |  | export the project's link graph to .yumete/graph.html and open it in the browser |
 | `:links-reindex` |  | reread the project's [[links]] |
-| `:wiki-panel` | `on｜off｜toggle` | pin the entry in the sidebar; no popup while it is open |
 | `:wiki-mark` | `color｜line｜off` | how wiki names are marked in the text: gold, underline, or none |
 | `:wiki-where` |  | wiki sources: files read, entries in each, and what cannot be marked |
 | `:wiki-reload` |  | reload the wiki and every file it includes |
@@ -157,7 +156,12 @@
 | `:search-buffers` `:sb` |  | search every open buffer |
 | `:search-working` `:sw` |  | search the working directory |
 | `:search-project` `:sp` |  | search the project |
-| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | sidebar: no argument lists open panels; `off` closes it; a name opens that panel |
+| `:sidebar-explorer` |  | show or hide the file tree in the left sidebar; the cursor goes into it |
+| `:sidebar-buffers` |  | show or hide the open files in the left sidebar; the cursor goes into it |
+| `:sidebar-outline` |  | show or hide the outline in the left sidebar; the cursor goes into it |
+| `:sidebar-search` |  | show or hide search in the left sidebar; the cursor goes into it |
+| `:sidebar-links` |  | show or hide the links in the left sidebar; the cursor goes into it |
+| `:sidebar-info` |  | show or hide the info panel in the right sidebar; the cursor stays in the text |
 | `:table-detail` | `on｜off｜toggle` | the record panel: on, off, or a width |
 | `:table-numbers` | `on｜off｜toggle` | the row of column numbers — what ␣t3/ and ␣t20,20g count with |
 | `:table-header` | `on｜off｜toggle` | whether the first row is a header or data |
@@ -194,7 +198,7 @@
 | `:lsp-rename` | `<新名>` | rename the symbol under the cursor everywhere, via the language server |
 | `:git-show` | `<提交>` | open a committed version read-only in the other window |
 | `:git-diff` | `<提交>` | compare with git word by word; HEAD unless a commit is named |
-| `:toc` `:outline` | `<第幾條>` | list the headings; `:toc 3` goes to the third |
+| `:outline` | `<級>` | how many heading levels the outline lists; `0` closes it; bare reports |
 | `:ruby` |  | edit the reading here |
 | `:ruby-render` | `off｜basic｜full` | ruby display: source, coloured, or beside the text; no argument shows the current one |
 | `:ruby-auto` |  | add readings by word (the selection or the whole file) |
