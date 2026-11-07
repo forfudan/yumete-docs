@@ -9,7 +9,8 @@
 | `:vnew` |  | a blank window beside this one (as C-w n v) |
 | `:hnew` |  | a blank window below this one (as C-w n s) |
 | `:open` `:o` `:e` `:edit` | `<path>` | open a file |
-| `:new` `:enew` |  | start an empty buffer |
+| `:new` `:enew` `:ene` |  | start an empty buffer |
+| `:tabnew` `:tabe` `:tabedit` | `<path>` | vim's :tabnew: a new scratch, or the file it names |
 | `:write` `:w` | `<path>` | save; a path writes a copy, `:write-as` moves to it |
 | `:write-all` `:wa` |  | save every file that changed |
 | `:write-as` | `<path>` | save under a new name and edit that one (`:w <path>` only copies) |
@@ -100,6 +101,8 @@
 | `:yume-installed` |  | use the 碼表 the system has installed (builtin's other half) |
 | `:yume-builtin` |  | use the built-in table of this scheme, whatever else is installed |
 | `:yume-table` | `<path>` | use your own table (a Rime .dict.yaml will do) |
+| `:set` `:se` | `<選項>` | vim's :set, for what a modeline takes: ft, ts, sw, et, tw; bare, the settings panel |
+| `:setfiletype` `:setf` | `<文件類型>` | vim's :setf, as :set ft= |
 | `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | which markup this file is written in (with no argument, which one it is now) |
 | `:pipe` | `<命令>` | send the selection through a terminal command and take back its output |
 | `:sh` | `<命令>` | run a command and keep its output in a buffer |
@@ -134,7 +137,7 @@
 | `:reflow` | `<幾欄>` | refill the selection to a width (80 columns by default) |
 | `:auto-pairs` | `off｜basic｜full` | type an opening bracket and its closer comes too: off, basic, full; bare says which it is now |
 | `:indent-hint` | `none｜color｜symbol` | what is drawn in a paragraph's opening squares |
-| `:table` | `<行>x<欄>` | an empty table: `:table 3 4` is three rows by four columns, the first row the headings; only on a blank line |
+| `:table` `:ta` `:tab` | `<行>x<欄>` | an empty table: `:table 3 4` is three rows by four columns, the first row the headings; only on a blank line |
 | `:table-render` | `off｜basic｜window` | how much of a table is drawn: the source, basic, or window view; bare says which it is now |
 | `:table-check` |  | look the whole table over: repeated row names, rows of the wrong width, characters outside the standards |
 | `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | column rules: how the columns are told apart |
@@ -178,7 +181,7 @@
 | `:run` | `<名字>` | run the command this language names in the config |
 | `:markdown-footnote` |  | a footnote: the next free number, and its note opened with it |
 | `:markdown-footnote-inline` |  | an inline note ^[…], which does not go to the foot |
-| `:settings` `:set` |  | a full page of settings, each with a name and a note; :w saves |
+| `:settings` |  | a full page of settings, each with a name and a note; :w saves |
 | `:resume` |  | take up this directory's last session — adds, closes nothing |
 | `:recent-files` |  | files opened under this project, newest first |
 | `:recent-files-global` |  | files opened anywhere, newest first |

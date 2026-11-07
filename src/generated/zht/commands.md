@@ -9,7 +9,8 @@
 | `:vnew` |  | 旁邊開一個空白窗口（同 C-w n v） |
 | `:hnew` |  | 下面開一個空白窗口（同 C-w n s） |
 | `:open` `:o` `:e` `:edit` | `<路徑>` | 打開一個文件 |
-| `:new` `:enew` |  | 開一個空的緩衝區 |
+| `:new` `:enew` `:ene` |  | 開一個空的緩衝區 |
+| `:tabnew` `:tabe` `:tabedit` | `<路徑>` | vim 的 :tabnew：新的草稿，給了文件名就打開那個文件 |
 | `:write` `:w` | `<路徑>` | 保存；給路徑存一份副本，`:write-as` 纔換過去 |
 | `:write-all` `:wa` |  | 存下所有改過的文件 |
 | `:write-as` | `<路徑>` | 另存成新文件並改編輯它(`:w <文件名>` 只抄一份，人還在這邊) |
@@ -100,6 +101,8 @@
 | `:yume-installed` |  | 改用系統裝的那份碼表(builtin 的反面) |
 | `:yume-builtin` |  | 改用出廠自帶的碼表，不管裝了什麼 |
 | `:yume-table` | `<路徑>` | 用你自己的碼表(Rime 的 .dict.yaml 也行) |
+| `:set` `:se` | `<選項>` | vim 的 :set，只認 modeline 認的幾項：ft、ts、sw、et、tw；不帶參數打開設置面板 |
+| `:setfiletype` `:setf` | `<文件類型>` | vim 的 :setf，同 :set ft= |
 | `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 這個文件是哪種標記(不給參數就説現在是哪個) |
 | `:pipe` | `<命令>` | 將選區發送爲終端命令，且使用其輸出替換選區 |
 | `:sh` | `<命令>` | 跑一條命令，輸出收進一個緩衝區 |
@@ -134,7 +137,7 @@
 | `:reflow` | `<幾欄>` | 選區按寬度重排（默認 80 欄） |
 | `:auto-pairs` | `off｜basic｜full` | 輸入左括號時自動補上右括號：關、基本、完整。無參數時，報告當前檔位 |
 | `:indent-hint` | `none｜color｜symbol` | 縮進的那兩格上畫什麼 |
-| `:table` | `<行>x<欄>` | 一張空表：`:table 3 4` 是三行四欄，首行是欄名。只能在空行上用 |
+| `:table` `:ta` `:tab` | `<行>x<欄>` | 一張空表：`:table 3 4` 是三行四欄，首行是欄名。只能在空行上用 |
 | `:table-render` | `off｜basic｜window` | 表格渲染模式：源碼視圖、基本視圖、全窗視圖。無參數時，報告當前模式名 |
 | `:table-check` |  | 檢查整張表：行名重複、欄數不對、字不在字集裡 |
 | `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | 欄線：欄與欄之間怎麼分開 |
@@ -178,7 +181,7 @@
 | `:run` | `<名字>` | 跑這種文件在配置裏自己起名的那條命令 |
 | `:markdown-footnote` |  | 腳注：號碼自己找空的，註也一併開好 |
 | `:markdown-footnote-inline` |  | 行內註 ^[…]，不去文末 |
-| `:settings` `:set` |  | 整頁一扇設置：每一項有名字有説明，改完 :w 存盤 |
+| `:settings` |  | 整頁一扇設置：每一項有名字有説明，改完 :w 存盤 |
 | `:resume` |  | 接着上次：把這個目錄上次開着的那幾個加進來 |
 | `:recent-files` |  | 最近開過的檔(這個項目) |
 | `:recent-files-global` |  | 最近開過的檔(全部項目) |
