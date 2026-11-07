@@ -58,7 +58,6 @@
 | `:links` | `list｜graph｜off` | 链接面板：哪些文件 [[链接]] 到这里、这里链接到哪里；list 列表、graph 图、off 关闭 |
 | `:links-export` |  | 将项目链接图导出为 .yumete/graph.html 并在浏览器中打开 |
 | `:links-reindex` |  | 重新读取项目的 [[链接]] |
-| `:wiki-panel` | `on｜off｜toggle` | 把词条固定在侧栏，打开时不再弹出浮窗 |
 | `:wiki-mark` | `color｜line｜off` | 正文中词条名的标记：金色、下划线或不标 |
 | `:wiki-where` |  | 百科来源：读取了哪些文件、各有几条、哪些无法标记 |
 | `:wiki-reload` |  | 重新读取百科及其引用的所有文件 |
@@ -157,7 +156,12 @@
 | `:search-buffers` `:sb` |  | 在所有打开的文件中搜索 |
 | `:search-working` `:sw` |  | 在工作目录中搜索 |
 | `:search-project` `:sp` |  | 在项目中搜索 |
-| `:sidebar` | `off｜explorer｜buffers｜outline｜search｜links｜info` | 侧栏：不带参数列出已打开的面板，`off` 关闭，给出名称则打开该面板 |
+| `:sidebar-explorer` |  | 打开或关闭左侧栏的文件树，打开时光标移过去 |
+| `:sidebar-buffers` |  | 打开或关闭左侧栏的缓冲区列表，打开时光标移过去 |
+| `:sidebar-outline` |  | 打开或关闭左侧栏的大纲，打开时光标移过去 |
+| `:sidebar-search` |  | 打开或关闭左侧栏的搜索，打开时光标移过去 |
+| `:sidebar-links` |  | 打开或关闭左侧栏的链接，打开时光标移过去 |
+| `:sidebar-info` |  | 打开或关闭右侧栏的信息面板，光标留在正文 |
 | `:table-detail` | `on｜off｜toggle` | 记录面板：开、关或指定宽度 |
 | `:table-numbers` | `on｜off｜toggle` | 列号行：␣t3/、␣t20,20g 用的就是它 |
 | `:table-header` | `on｜off｜toggle` | 首行是表头还是数据 |
@@ -194,7 +198,7 @@
 | `:lsp-rename` | `<新名>` | 通过语言服务器重命名光标下的符号(各处一起改) |
 | `:git-show` | `<提交>` | 在另一个窗口以只读方式打开已提交的版本 |
 | `:git-diff` | `<提交>` | 与 git 中的版本逐词比较，默认比 HEAD |
-| `:toc` `:outline` | `<第幾條>` | 列出标题；`:toc 3` 跳到第三条 |
+| `:outline` | `<級>` | 大纲只列到第几级；`0` 关闭；不带参数报告状态 |
 | `:ruby` |  | 编辑此处注音 |
 | `:ruby-render` | `off｜basic｜full` | 注音显示：源码、着色、夹行；不带参数显示当前模式 |
 | `:ruby-auto` |  | 按词自动注音(选区或整个文件) |

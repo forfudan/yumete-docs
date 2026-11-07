@@ -51,7 +51,7 @@ jump.
 
 ## Chapters in the outline
 
-The outline sidebar (`:sidebar outline`) lists the headings of the current file, each with
+The outline sidebar (`:sidebar-outline`) lists the headings of the current file, each with
 its count. In a Typst main file, every `#include` is read open, and its
 chapter titles are listed in place of the file name:
 
@@ -165,7 +165,7 @@ What the wiki does:
   a dotted underline, `:wiki-mark off` nothing. Names inside code or notes are
   not marked.
 - **The entry floats beside the cursor** when you stand on a name, and folds
-  away when you leave. `:wiki-panel on` shows it in the right sidebar instead;
+  away when you leave. `:sidebar-info` shows it in the right sidebar instead;
   `C-w l` moves into the sidebar to scroll it, and `q` comes back.
 - **`gd` on a name** opens the file the entry lives in, at its heading. `C-o`
   comes back.

@@ -376,7 +376,7 @@ paragraph you are in is the one thing at full ink.
 ## The count as you write
 
 The status line shows how long the file is, after the cursor position, and the
-outline sidebar (`:sidebar outline`) shows each heading's count. See
+outline sidebar (`:sidebar-outline`) shows each heading's count. See
 [Checks and counts](checks.md#the-count-on-the-status-line) for how words are
 counted and where the count is shown.
 
