@@ -366,7 +366,18 @@ to a real typesetter and shows the result beside the text, or in your browser.
 | Markdown | an HTML export goes to a temporary file, and the browser opens it |
 
 The preview window is a window like any other: `C-w` moves into it, and `:q`
-closes it. It shows the page the cursor is on and follows the cursor, and it is
+closes it. Inside it, the keys are a PDF reader's under vim:
+
+| Key | Action |
+| --- | --- |
+| `j` `k` | scroll a little |
+| `C-d` `C-u` | half a screen |
+| `C-f` `C-b` | a screen |
+| `gg` `G` | the top, the bottom of the page |
+| `J` `K` | the next, the previous page |
+| `5G` | page 5 |
+
+It shows the page the cursor is on and follows the cursor, and it is
 drawn again a moment after you stop typing, without saving. It needs a terminal
 that draws pictures (Ghostty or kitty) and tinymist 0.13.30 or later; without
 them, `:view-preview` opens the browser instead and says why. The page is shown
