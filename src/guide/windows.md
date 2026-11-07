@@ -138,8 +138,9 @@ is open, gold when the keys are in it. `[editor] sidebar_buttons = false` takes
 the blocks away; there are none while the tab line is hidden. A sidebar opened
 again, by its block or by `C-w e` and `C-w i`, shows the panel it was closed on.
 
-Each panel's command opens it, and closes it when it is already showing. The
-five on the left take the keys when they open. `:sidebar-info` opens the right
+Each panel's command opens it, and closes it when it is already showing;
+`on` and `off` after it say which you want. The five on the left take the keys
+when they open. `:sidebar-info` opens the right
 sidebar and leaves the keys in the text, as `C-w i` does; `C-w I` moves into
 it. `Space e` and `Space f` are pickers, not the Explorer panel; see
 [Pickers](./search.md#pickers).

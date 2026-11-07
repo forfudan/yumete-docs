@@ -92,8 +92,9 @@ and the text they fence stands forward. Annotations to yourself, written
 words are never hidden, and export leaves them out.
 
 A fenced code block is coloured by the grammar its fence names (```` ```rust ````,
-```` ```python ````), with the theme's code colours. `:view-code` turns this
-off or on again; turning it on says why a block is not coloured. The list of languages is on the
+```` ```python ````), with the theme's code colours. `:view-code off` turns this
+off, `:view-code` alone turns it round, and turning it on says why a block is
+not coloured. The list of languages is on the
 [Language servers](../guide/languages.md) page.
 
 A line longer than 50,000 characters is left plain, so a one-line data file
@@ -154,7 +155,9 @@ default, because a Chinese paragraph is often one line of several hundred
 characters.
 
 ```
-:view-wrap             wrap or not; unwrapped, the page scrolls sideways
+:view-wrap off         one line per paragraph; the page scrolls sideways
+:view-wrap on          wrap at the window's edge
+:view-wrap             turn it round
 :view-wrap-width 50    wrap at column 50: a measure (below)
 :view-wrap-width 0     drop the measure and wrap at the window again
 :view-wrap-width       say which width it wraps at
@@ -362,8 +365,8 @@ quit. The file must have a name; save a new buffer first.
 ## Focus and typewriter
 
 ```
-:view-focus             the paragraph you are in stays lit; the rest steps back
-:view-typewriter        the row you are writing stays in the middle of the screen
+:view-focus on          the paragraph you are in stays lit; the rest steps back
+:view-typewriter on     the row you are writing stays in the middle of the screen
 ```
 
 Focus works by paragraph, not by row: a paragraph wrapped over three rows is

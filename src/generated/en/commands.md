@@ -20,8 +20,8 @@
 | `:reload-config` `:config-reload` |  | reload config.toml without restarting |
 | `:config-open` |  | open the global config.toml |
 | `:config-open-workspace` |  | open this project's .yumete/config.toml |
-| `:reload-auto` |  | reload when the file changes on disk; only warn if you have unsaved changes |
-| `:readonly` `:ro` |  | read-only: lock this file against editing |
+| `:reload-auto` | `on｜off` | reload when the file changes on disk; only warn if you have unsaved changes |
+| `:readonly` `:ro` | `on｜off` | read-only: lock this file against editing |
 | `:goto` | `<行號>` | go to a line (`:42` also works) |
 | `:count` `:wc` |  | word count; `:count-progress` for today, `:count-target` for a daily goal |
 | `:count-progress` |  | today's word count, and how far to the target |
@@ -82,9 +82,9 @@
 | `:info` |  | file info: path, size, lines and characters, language, attached language servers |
 | `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | info: which of record / diagnostics / dictionary / wiki / docs follows the cursor (none given: by file type) |
 | `:rules` | `<欄>…｜off` | column rulers: :rules 80 100 120; bare is 80 and 100, off clears them |
-| `:theme-fill` |  | whether code and quotations get a background (off by default) |
+| `:theme-fill` | `on｜off` | whether code and quotations get a background (off by default) |
 | `:shot` | `screen｜png｜html｜txt <path>` | screenshot: to the clipboard by default, or a file in Downloads with `png`/`html`/`txt` |
-| `:yume` `:y` |  | Yume input method: take the keyboard or hand it back |
+| `:yume` `:y` | `on｜off` | Yume input method: on or off |
 | `:yume-where` |  | where the table and other data are looked for, in order |
 | `:yume-which` |  | the current scheme and where its table came from |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | start typing: load a scheme (with no name, the configured one) |
@@ -96,7 +96,7 @@
 | `:yume-panel` | `box｜bottom｜inline` | where the candidates go: box by the cursor, bottom on the last line, inline under the cursor |
 | `:yume-inline-preedit` | `off｜composition｜preview` | where the composition shows: off in the candidate bar, composition or preview in the text |
 | `:yume-menu-size` | `<1–9>` | candidates per page (1-9, 6 by default) |
-| `:yume-autocompletion` |  | autocompletion: offer candidates before the code is finished |
+| `:yume-autocompletion` | `on｜off` | autocompletion: offer candidates before the code is finished |
 | `:yume-installed` |  | use the installed table (the opposite of builtin) |
 | `:yume-builtin` |  | use this scheme's built-in table, ignoring installed ones |
 | `:yume-table` | `<path>` | use your own table (a Rime .dict.yaml will do) |
@@ -108,25 +108,25 @@
 | `:!command` |  | hand the terminal to a command and watch it run (vi's spelling) |
 | `:which-wrap` | `<字母>` | which keys cross a line end (vim keymap): b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | line numbers: absolute, relative to the cursor, or none; no argument shows the current one |
-| `:view-wrap` |  | soft wrap, on or off; `:view-wrap-width` sets the width |
+| `:view-wrap` | `on｜off` | soft wrap, on or off; `:view-wrap-width` sets the width |
 | `:view-wrap-width` | `0｜<幾欄>` | text width in columns; `0` follows the window |
 | `:view-wrap-height` | `0｜<幾字>` | characters per vertical column; `0` follows the window |
 | `:view-margin` | `never｜dense｜loose｜always` | margin: whether to leave room for readings, hanging punctuation, emphasis dots and tones |
 | `:view-pages-horizontal` | `<1–4>` | pages, horizontal: columns side by side, the text flowing left to right |
 | `:view-pages-vertical` | `<1–4>` | pages, vertical: divide the vertical page across — top right to top left, then bottom right to bottom left |
-| `:view-sentence` |  | one sentence per column: display only, the file is unchanged |
-| `:view-hanging` |  | hanging punctuation: stops and commas sit in the margin |
-| `:view-numbers-fill` |  | whether the line-number gutter has its own background (off by default, both layouts) |
+| `:view-sentence` | `on｜off` | one sentence per column: display only, the file is unchanged |
+| `:view-hanging` | `on｜off` | hanging punctuation: stops and commas sit in the margin |
+| `:view-numbers-fill` | `on｜off` | whether the line-number gutter has its own background (off by default, both layouts) |
 | `:view-diagnostics` | `hint｜info｜warning｜error｜off` | end-of-line diagnostics: hint, info, warning, error or off |
-| `:view-diff` |  | change bar: marks lines that differ from git, beside the line number |
-| `:view-typewriter` |  | typewriter: the cursor line stays centred |
-| `:view-focus` |  | focus: the current paragraph stays bright, the rest dims |
-| `:view-meter` |  | 平仄: the tone class of every character in the margin, and rhymes at line ends |
-| `:view-punct` |  | punctuation hints: show the full-width mark next to a half-width one |
-| `:view-code` |  | code highlighting: fenced code coloured by its language |
+| `:view-diff` | `on｜off` | change bar: marks lines that differ from git, beside the line number |
+| `:view-typewriter` | `on｜off` | typewriter: the cursor line stays centred |
+| `:view-focus` | `on｜off` | focus: the current paragraph stays bright, the rest dims |
+| `:view-meter` | `on｜off` | 平仄: the tone class of every character in the margin, and rhymes at line ends |
+| `:view-punct` | `on｜off` | punctuation hints: show the full-width mark next to a half-width one |
+| `:view-code` | `on｜off` | code highlighting: fenced code coloured by its language |
 | `:view-long-line` | `off｜<幾字>` | stop colouring a line past this many characters |
 | `:view-hud` | `off｜basic｜full` | cursor hint: off, pill, panel |
-| `:view-preview` | `on｜off｜toggle` | typeset with a real typesetter and preview in a browser |
+| `:view-preview` | `on｜off` | typeset with a real typesetter and preview in a browser |
 | `:render` | `off｜basic｜full` | how much is rendered: source, coloured, WYSIWYG |
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | first-line indent: `off` / `basic` (blank lines kept) / `full` (blank lines hidden), or a width |
 | `:indent-tab` | `spaces｜tab` | what Tab types: spaces or a tab (Shift-Tab types the other) |
@@ -157,15 +157,15 @@
 | `:search-buffers` `:sb` |  | search every open buffer |
 | `:search-working` `:sw` |  | search the working directory |
 | `:search-project` `:sp` |  | search the project |
-| `:sidebar-explorer` |  | show or hide the file tree in the left sidebar; the cursor goes into it |
-| `:sidebar-buffers` |  | show or hide the open files in the left sidebar; the cursor goes into it |
-| `:sidebar-outline` |  | show or hide the outline in the left sidebar; the cursor goes into it |
-| `:sidebar-search` |  | show or hide search in the left sidebar; the cursor goes into it |
-| `:sidebar-links` |  | show or hide the links in the left sidebar; the cursor goes into it |
-| `:sidebar-info` |  | show or hide the info panel in the right sidebar; the cursor stays in the text |
-| `:table-detail` |  | the record panel: show or hide it |
-| `:table-numbers` |  | the row of column numbers — what ␣t3/ and ␣t20,20g count with |
-| `:table-header` |  | whether the first row is a header or data |
+| `:sidebar-explorer` | `on｜off` | show or hide the file tree in the left sidebar; the cursor goes into it |
+| `:sidebar-buffers` | `on｜off` | show or hide the open files in the left sidebar; the cursor goes into it |
+| `:sidebar-outline` | `on｜off` | show or hide the outline in the left sidebar; the cursor goes into it |
+| `:sidebar-search` | `on｜off` | show or hide search in the left sidebar; the cursor goes into it |
+| `:sidebar-links` | `on｜off` | show or hide the links in the left sidebar; the cursor goes into it |
+| `:sidebar-info` | `on｜off` | show or hide the info panel in the right sidebar; the cursor stays in the text |
+| `:table-detail` | `on｜off` | the record panel: show or hide it |
+| `:table-numbers` | `on｜off` | the row of column numbers — what ␣t3/ and ␣t20,20g count with |
+| `:table-header` | `on｜off` | whether the first row is a header or data |
 | `:table-schema` | `write` | show the table schema; write saves it to datapackage.json next to the data |
 | `:table-delimiter` | `<分隔符>` | read this file as a table split on that delimiter, and remember it (tab, space, comma, semicolon or a character) |
 | `:table-hide` | `<欄號>` | hide column N (not drawn, still read and written), and remember it |
@@ -204,7 +204,7 @@
 | `:ruby-render` | `off｜basic｜full` | ruby display: source, coloured, or beside the text; no argument shows the current one |
 | `:ruby-auto` |  | add readings by word (the selection or the whole file) |
 | `:ruby-auto-rare` |  | annotate only characters missing from the mainland, Taiwan and Hong Kong common lists |
-| `:ruby-html` |  | recognise `<ruby>` |
-| `:ruby-typst` |  | recognise `#ruby(…)` |
+| `:ruby-html` | `on｜off` | recognise `<ruby>` |
+| `:ruby-typst` | `on｜off` | recognise `#ruby(…)` |
 | `:ruby-format` | `html｜typst` | rewrite the readings in another syntax |
 | `:s/pat/rep/` |  | substitute in the selection; `%s` the file, `1-40s` a range, `1,5,9s` listed lines; flags g i f c n t y j |
