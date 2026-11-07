@@ -156,6 +156,12 @@ this setting, which is off unless you turn it on:
 yank_flash = true
 ```
 
+If your `lazyvim.json` lists the `coding.mini-surround` extra, `ye --import lazyvim`
+also puts its keys on yumete's surround: `gsa`, `gsd` and `gsr` play vim-surround's
+`ys`, `ds` and `cs` (written `"@ys"` and so on under `[keys.normal]`), and `gsa` in
+Visual mode wraps the selection (`surround_add` under `[keys.select]`). The extra's
+`gsf`, `gsF`, `gsh` and `gsn` have no counterpart.
+
 ## What the config moves
 
 LazyVim's groups sit on letters yumete uses for single commands: `Space b`,
