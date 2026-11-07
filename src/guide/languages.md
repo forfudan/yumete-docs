@@ -187,6 +187,11 @@ pressed again, as mini.splitjoin's `gS`. Commas inside nested brackets and strin
 where they are, and no comma is added. `gS` is a flavour key; with the flavour `off`
 only the command is left.
 
+`:align` lines up the selected lines on a sign, `=` when you give none, as mini.align's
+`=` does: the parts before it are padded to one width, with one space on either side
+of the sign, and a run such as `+=` or `=>` counts as one sign. `:align :` lines them up
+on a colon. Under helix's keys `s=` followed by `&` does the same with keys.
+
 `=` asks the language server to format the selection, as helix's does; one
 selection at a time, and only a server that formats a range answers.
 
