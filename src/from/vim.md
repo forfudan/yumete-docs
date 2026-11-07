@@ -207,9 +207,12 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
   left, as in vim. `C-w n` opens a blank window above at once, as in vim; `:new` is helix's: a new empty buffer in this window,
   and the split versions are `:hnew` and `:vnew`. `:q` closes the window you
   are in, and quits in the last one, as vim's `:q` does.
-- `:set` opens the settings panel. It does not take `option=value`; each
-  option is its own command or config key. See
-  [Settings](../reference/settings.md).
+- `:set` takes what a modeline takes, for this file: `ft`, `ts`, `sw`, `et`
+  and `tw`, as in `:set ft=python ts=2 sw=2 et`; `:setf python` is `:set
+  ft=python`. Other options are their own commands or config keys, and `:set`
+  on its own opens the settings panel. See [Settings](../reference/settings.md).
+- `:tabnew` opens a new empty buffer, or the file it names, since a tab here
+  is a file; `:ene` is `:new`.
 - There is no `:g` and no `:normal`.
 - A range is written with `-`, and `,` lists single lines: `:3-6s` is lines 3
   to 6, while `:3,6s` is lines 3 and 6 only. `:'<,'>` and `:.,+2` are not
