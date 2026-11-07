@@ -28,7 +28,7 @@
 | --- | --- | --- |
 | `[editor] line_numbers` | `"absolute"` | **行号** — 左边那一栏画第几行。相对行号数的是「离光标几行」，跳行时好按 (`absolute` 绝对, `relative` 相对, `none` 不画) |
 | `[editor] line_number_fill` | `false` | **行号铺底** — 行号那一格用淡底色铺满，而不是只写一个数 |
-| `[editor] diff_gutter` | `true` | **改动条** — 行号旁边那一格用底色説哪几行跟 git 里的不一样 |
+| `[editor] diff_gutter` | `true` | **改动条** — 行号旁边那一格用底色说哪几行跟 git 里的不一样 |
 | `[editor] end_of_line_diagnostics` | `"hint"` | **行末诊断** — 语言服务器的提示写在行末，从哪一级起写 (`disable` 不显示, `hint` 建议及以上, `info` 说明及以上, `warning` 警告及以上, `error` 只显示错误) |
 | `[editor] modeline` | `true` | **读 vim 的 modeline** — 文件头尾五行里的 vim: set ft=… ts=…: 定这个文件的类型、缩进和硬换行宽度 |
 | `[editor] maths_preview` | `true` | **公式预览** — 光标在公式里时，在下面浮出排好的公式；要 Ghostty 或 kitty，和 typst 命令 |
@@ -37,14 +37,14 @@
 | `[editor] indent_guides_character` | `"│"` | **参考线字符** — 画参考线用的字符，要占一格 |
 | `[editor] indent_guides_skip_levels` | `0` | **跳过外层** — 最外面几级缩进不画参考线 (0–8) |
 | `[editor] indent_guides_scope` | `true` | **标出当前块** — 光标所在那一块的参考线画得深一些 |
-| `[editor] word_level` | `"balanced"` | **分词松紧** — 多容易把几个字并成一个词。严：只认没争议的；松：词典説是就是 (`strict` 严格, `balanced` 适中, `full` 宽松) |
+| `[editor] word_level` | `"balanced"` | **分词松紧** — 多容易把几个字并成一个词。严：只认没争议的；松：词典说是就是 (`strict` 严格, `balanced` 适中, `full` 宽松) |
 | `[editor] word_mark` | `"color"` | **分词标记** — 分词标记用哪一种画法 (`off` 不画, `color` 不同颜色, `ink` 不同明度, `tint` 不同底色, `line` 下划线) |
 | `[editor] code_highlight` | `true` | **代码上色** — 围栏里的代码按它自己的语法上色；关掉则整块一种紫 |
 | `[editor] show_ruby` | `false` | **排出注音** — 把注音排在字的旁边。默认关：文件里是什么，画面上就是什么 |
 | `[editor] indent_hint` | `"none"` | **段首记号** — 竖排时段落开头画一个记号，长段落里找得到分段在哪 (`none` 不画, `symbol` 画符号, `color` 换颜色) |
 | `[editor] indent_symbol` | `"↵"` | **段首那个符号** — 段首记号画成什么字。段首记号设成「画符号」时才用得上 |
 | `[editor] table_rules` | `"line dash"` | **表格的栏线** — 表格里那些竖线画成什么样 (`line dash` 实线加虚线, `line` 只有实线, `line double` 实线加双线, `color` 靠颜色分, `off` 不画) |
-| `[editor] char_info` | `true` | **字的码位** — 状态栏右端説出光标下那个字的 Unicode 码位和区块名 |
+| `[editor] char_info` | `true` | **字的码位** — 状态栏右端说出光标下那个字的 Unicode 码位和区块名 |
 | `[editor] status_count` | `"text"` | **状态栏字数** — 在状态栏显示全文的字数，有选区时也显示选区的 (`text` 文本文件, `all` 所有文件, `off` 关) |
 | `[editor] unicode_alarm` | `true` | **可疑字符** — 零宽字符、双向控制符后面那一格和非普通空格铺上琥珀底色 |
 
@@ -65,7 +65,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[theme] name` | `"ink"` | **主题** — 用哪一套墨。十个内置主题，写名字就行(「墨香」和 moxiang 一样) (`ink` 墨香：黑墨、白金墨、金墨、红墨，其余的色阶都算出来, `one-dark` One Dark：VS Code 里最常见的那一套配色，只有深色, `github` GitHub：GitHub 网站与 VS Code 里的那一套配色，深浅都有, `monokai` Monokai：Sublime Text 的经典配色，只有深色, `dracula` Dracula：紫调的暗色配色，只有深色, `tokyo-night` Tokyo Night：柔和的蓝紫调，深浅都有, `catppuccin` Catppuccin：粉彩色，深色 Mocha，浅色 Latte, `gruvbox` Gruvbox：暖棕底的复古配色，深浅都有, `bw` 黑白：只有黑、白和灰——轻重説话，颜色不説, `morandi` 莫兰迪：灰调的柔和配色，深浅都有) |
+| `[theme] name` | `"ink"` | **主题** — 用哪一套墨。十个内置主题，写名字就行(「墨香」和 moxiang 一样) (`ink` 墨香：黑墨、白金墨、金墨、红墨，其余的色阶都算出来, `one-dark` One Dark：VS Code 里最常见的那一套配色，只有深色, `github` GitHub：GitHub 网站与 VS Code 里的那一套配色，深浅都有, `monokai` Monokai：Sublime Text 的经典配色，只有深色, `dracula` Dracula：紫调的暗色配色，只有深色, `tokyo-night` Tokyo Night：柔和的蓝紫调，深浅都有, `catppuccin` Catppuccin：粉彩色，深色 Mocha，浅色 Latte, `gruvbox` Gruvbox：暖棕底的复古配色，深浅都有, `bw` 黑白：只有黑、白和灰——轻重说话，颜色不说, `morandi` 莫兰迪：灰调的柔和配色，深浅都有) |
 | `[theme] mode` | `"auto"` | **深色浅色** — 用深色那一套还是浅色那一套。「问终端」是去问终端底色是什么 (`auto` 问终端, `dark` 深色, `light` 浅色) |
 | `[theme] ground` | `"paint"` | **纸面** — 编辑器自己画出纸的底色，还是把底色还给终端(终端设了透明就用这个) (`paint` 自己画纸, `terminal` 还给终端) |
 | `[theme] status_bar` | `"sunken"` | **状态栏的底** — 底下那两行比纸更沉，还是往墨的方向抬一阶 (`sunken` 比纸更沉, `raised` 往墨抬一阶) |

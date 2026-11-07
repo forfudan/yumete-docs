@@ -33,9 +33,9 @@
 | `p` | 向後粘貼 | `paste_after` |
 | `P` | 向前粘貼 | `paste_before` |
 | `q` | 回放宏 | `replay_macro` |
-| `Q` | 開始或停止錄宏 | `record_macro` |
+| `Q` | 開始或停止録宏 | `record_macro` |
 | `r` | 把選中的每個字換成另一個字 | `replace` |
-| `R` | 用寄存器內容替換選區 | `replace_with_yanked` |
+| `R` | 用寄存器内容替換選區 | `replace_with_yanked` |
 | `s` | 在選區裏按正則選出 | `select_regex` |
 | `S` | 按正則把選區拆開 | `split_selection` |
 | `t` | 往後找一個字，選到它前面 | `find_till_char` |
@@ -48,7 +48,7 @@
 | `x` | 選中當前行 | `extend_line_below` |
 | `X` | 把選區撑到整行邊界 | `extend_to_line_bounds` |
 | `y` | 複製 | `yank` |
-| `z` | 視圖組：放光標行、滾屏、摺疊 | `view_mode` |
+| `z` | 視圖組：放光標行、滚屏、摺疊 | `view_mode` |
 | `Z` | 視圖組(按完不收) | `sticky_view_mode` |
 | `Space` | 空格菜單 | `space_mode` |
 | `!` | 把外部命令的輸出插在選區前 | `shell_insert_output` |
@@ -89,8 +89,8 @@
 | `C-x` | 光標處的數字減一 | `decrement` |
 | `C-z` | 暫停，回到終端；fg 回來 | `suspend` |
 | `A-!` | 把外部命令的輸出接在選區後 | `shell_append_output` |
-| `A-(` | 各選區的內容往前輪換 | `rotate_selection_contents_backward` |
-| `A-)` | 各選區的內容往後輪換 | `rotate_selection_contents_forward` |
+| `A-(` | 各選區的内容往前輪換 | `rotate_selection_contents_backward` |
+| `A-)` | 各選區的内容往後輪換 | `rotate_selection_contents_forward` |
 | `A-*` | 找選中的那段(原樣) | `search_selection_exact` |
 | `A-,` | 去掉主選區 | `remove_primary_selection` |
 | `A--` | 把所有選區合成一個 | `merge_selections` |
@@ -152,13 +152,13 @@
 | --- | --- | --- |
 | `Esc` | 退出延伸模式，收起臨時顯示的東西 | `normal_mode` |
 | `Enter` `C-j` | 換行(帶上縮進、列表記號) | `insert_newline` |
-| `Backspace` `C-h` | 刪除光標前的一個字 | `delete_char_backward` |
-| `Delete` `C-d` | 刪除光標後的一個字 | `delete_char_forward` |
-| `A-d` | 刪除光標後的一個詞 | `delete_word_forward` |
-| `C-w` | 刪除光標前的一個詞 | `delete_word_backward` |
-| `C-u` | 刪到行首 | `kill_to_line_start` |
-| `C-k` | 刪到行尾(插入模式) | `kill_to_line_end` |
-| `C-r` | 插入寄存器的內容(再按一個字母) | `insert_register` |
+| `Backspace` `C-h` | 删除光標前的一個字 | `delete_char_backward` |
+| `Delete` `C-d` | 删除光標後的一個字 | `delete_char_forward` |
+| `A-d` | 删除光標後的一個詞 | `delete_word_forward` |
+| `C-w` | 删除光標前的一個詞 | `delete_word_backward` |
+| `C-u` | 删到行首 | `kill_to_line_start` |
+| `C-k` | 删到行尾(插入模式) | `kill_to_line_end` |
+| `C-r` | 插入寄存器的内容(再按一個字母) | `insert_register` |
 | `Left` | 左一個字 | `move_char_left` |
 | `Right` | 右一個字 | `move_char_right` |
 | `Up` | 上一行(屏幕上的) | `move_visual_line_up` |
@@ -194,9 +194,9 @@
 | `Space h` | 選中本檔裏的每一處 |
 | `Space a` | 代碼動作 |
 | `Space w` | 工作區域操作 |
-| `Space c` | 行注釋 |
-| `Space C` | 塊注釋 |
-| `Space A-c` | 只用行注釋 |
+| `Space c` | 行註釋 |
+| `Space C` | 塊註釋 |
+| `Space A-c` | 只用行註釋 |
 | `Space /` | 搜索面板 |
 | `Space ?` | 命令一覽 |
 
@@ -273,9 +273,9 @@
 | `zz / zc` | 中間 |
 | `zt` | 頂上 |
 | `zb` | 底下 |
-| `zm` | 橫向居中 |
-| `zj / z↓` | 往下滾一行 |
-| `zk / z↑` | 往上滾一行 |
+| `zm` | 横向居中 |
+| `zj / z↓` | 往下滚一行 |
+| `zk / z↑` | 往上滚一行 |
 | `zC-d / z␣` | 往下翻半頁 |
 | `zC-u / z⌫` | 往上翻半頁 |
 | `zC-f / zPgDn` | 往下翻一頁 |

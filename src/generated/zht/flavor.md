@@ -15,7 +15,7 @@
 | [`registers_menu`](#registers_menu) | `Space "` | `Space "` | 寄存器菜單 |
 | [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | 詞典 |
 | [`popup_panel_pairs`](#popup_panel_pairs) | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | 浮窗與側欄 |
-| [`explorer_here`](#explorer_here) | `Space E` | `Space E` | 從當前文件的目錄瀏覽 |
+| [`explorer_here`](#explorer_here) | `Space E` | `Space E` | 從當前文件的目録瀏覽 |
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | 翻頁 |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | 側欄 |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | 跳轉、搜這個詞、鏈接 |
@@ -26,11 +26,11 @@
 | [`bare_g_last_line`](#bare_g_last_line) | `G` | — | 到末行 |
 | [`move_lines`](#move_lines) | `A-j` `A-k` | `A-j` `A-k` | 上下移動行 |
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | 行首、首字 |
-| [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 刪到行尾 |
-| [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | 塊注釋標記各占一行 |
+| [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 删到行尾 |
+| [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | 塊註釋標記各佔一行 |
 | [`heading_folds`](#heading_folds) |  |  | 按標題摺疊 |
 | [`helix_fold_keys`](#helix_fold_keys) | `za` `zR` `zM` `zf` | — | helix 下的摺疊鍵 |
-| [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim 的 gc 注釋 |
+| [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim 的 gc 註釋 |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | 空格菜單 |
 | [`helix_keys_under_vim`](#helix_keys_under_vim) | — | `g.` `;` `,` `A-C` `A-,` `A--` `A-_` `A-:` `A-x` `A-s` `A-(` `A-)` `A-K` `A-d` `A-c` `A-u` `A-U` `A-!` `A-\|` `A-J` `A-;` `A-*` `A-.` `` A-` `` `A-o` `A-i` `A-I` `A-p` `A-n` `A-e` `A-b` `A-a` `C-s` `Z` `gb` `gy` `]g` `[g` `]e` `[e` `]x` `[x` | 借用 helix 的鍵 |
 
@@ -38,7 +38,7 @@
 
 | Item | helix | vim | What it does |
 | --- | --- | --- | --- |
-| [`delete_keeps_register`](#delete_keeps_register) | `d` `c` `A-d` `A-c` | — | 刪除不進寄存器 |
+| [`delete_keeps_register`](#delete_keeps_register) | `d` `c` `A-d` `A-c` | — | 删除不進寄存器 |
 | [`esc_collapses`](#esc_collapses) | `Esc` | — | 收成一個光標 |
 | [`shift_tab_other_indent`](#shift_tab_other_indent) | `S-Tab` | `S-Tab` | 插另一種縮進 |
 
@@ -86,7 +86,7 @@ Under vim:
 
 ### `sentences_on_h_l` {#sentences_on_h_l}
 
-開：H、L 到上一句、下一句。關：helix 沒有綁這兩個鍵。
+開：H、L 到上一句、下一句。關：helix 没有綁這兩個鍵。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
@@ -137,11 +137,11 @@ Under vim:
 | ␣t 表格 | `Space t 1s / Space t 1S` | 按列升序/降序排列(␣t1s; 1a2d8as 多列排序) |  |
 | ␣t 表格 | `Space t < / Space t = / Space t >` | 這欄靠左/居中/靠右 |  |
 | ␣t 表格 | `Space t F` | 重排對齊 |  |
-| ␣t 表格 | `Space t i` | 該行記錄 |  |
-| ␣t 表格 | `Space t H` | 表格第一行是否為標題 |  |
-| 轉換表格格式(分隔符) | `Space t x p / Space t x P` | pipe(轉換/貼上) |  |
-| 轉換表格格式(分隔符) | `Space t x c / Space t x C` | csv(轉換/貼上) |  |
-| 轉換表格格式(分隔符) | `Space t x t / Space t x T` | tsv(轉換/貼上) |  |
+| ␣t 表格 | `Space t i` | 該行記録 |  |
+| ␣t 表格 | `Space t H` | 表格第一行是否爲標題 |  |
+| 轉換表格格式(分隔符) | `Space t x p / Space t x P` | pipe(轉換/粘貼) |  |
+| 轉換表格格式(分隔符) | `Space t x c / Space t x C` | csv(轉換/粘貼) |  |
+| 轉換表格格式(分隔符) | `Space t x t / Space t x T` | tsv(轉換/粘貼) |  |
 
 ### `merge_conflicts` {#merge_conflicts}
 
@@ -185,8 +185,8 @@ Under vim:
 | 輸入法 | `Space z 0` | 字集過濾 |  |
 | 輸入法 | `Space z s` | 字集排序 |  |
 | 輸入法 | `Space z g` | 整句字集軌 |  |
-| 輸入法 | `Space z b` | 切到內置方案 |  |
-| 輸入法 | `Space z /` | 候選旁的注解，換下一個 |  |
+| 輸入法 | `Space z b` | 切到内置方案 |  |
+| 輸入法 | `Space z /` | 候選旁的註解，換下一個 |  |
 | 輸入法 | `Space z t` | 改用安裝版碼表 |  |
 | 輸入法 | `Space z w` | 查看碼表源 |  |
 | 輸入法 | `Space z W` | 查看數據位置 |  |
@@ -222,7 +222,7 @@ Under vim:
 
 ### `popup_panel_pairs` {#popup_panel_pairs}
 
-開：空格 K 把說明放進側欄；空格 l、x、i 在浮窗裏看診斷、改動、表格記錄，大寫在側欄裏看。關：這些鍵空着。
+開：空格 K 把説明放進側欄；空格 l、x、i 在浮窗裏看診斷、改動、表格記録，大寫在側欄裏看。關：這些鍵空着。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
@@ -231,12 +231,12 @@ Under vim:
 | 空格 | `Space L` | 顯示診斷信息(邊欄) |  |
 | 空格 | `Space x` | 顯示改動(浮窗) |  |
 | 空格 | `Space X` | 顯示改動(邊欄) |  |
-| 空格 | `Space i` | 顯示表格行記錄(浮窗) |  |
-| 空格 | `Space I` | 顯示表格行記錄(邊欄) |  |
+| 空格 | `Space i` | 顯示錶格行記録(浮窗) |  |
+| 空格 | `Space I` | 顯示錶格行記録(邊欄) |  |
 
 ### `explorer_here` {#explorer_here}
 
-開：空格 E 從當前文件所在的目錄瀏覽文件。關：這個鍵空着。
+開：空格 E 從當前文件所在的目録瀏覽文件。關：這個鍵空着。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
@@ -346,16 +346,16 @@ Under vim:
 
 ### `d_to_line_end` {#d_to_line_end}
 
-開：D 刪到行尾並放進寄存器，A-D 刪到行尾不進寄存器。關：這兩個鍵空着。
+開：D 删到行尾並放進寄存器，A-D 删到行尾不進寄存器。關：這兩個鍵空着。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Normal mode | `D` | 刪到行尾 |  |
-| Normal mode | `A-D` | 刪到行尾，不進寄存器 |  |
+| Normal mode | `D` | 删到行尾 |  |
+| Normal mode | `A-D` | 删到行尾，不進寄存器 |  |
 
 ### `block_comment_lines` {#block_comment_lines}
 
-開：在 Markdown、Typst、HTML 裏用 空格 C 注釋多整行時，<!-- 與 --> 各占一行。關：照 helix，標記寫在首行開頭與末行結尾。
+開：在 Markdown、Typst、HTML 裏用 空格 C 註釋多整行時，<!-- 與 --> 各佔一行。關：照 helix，標記寫在首行開頭與末行結尾。
 
 It changes what its keys do, not which command they run.
 
@@ -367,22 +367,22 @@ It changes what its keys do, not which command they run.
 
 ### `helix_fold_keys` {#helix_fold_keys}
 
-開：helix 下也有 vim 的 za 開合摺疊、zR 全開、zM 全合；zf 把選中的行做成摺疊。關：這幾個鍵空着，只能用命令摺疊。
+開：helix 下也有 vim 的 za 開合折疊、zR 全開、zM 全合；zf 把選中的行做成摺疊。關：這幾個鍵空着，只能用命令摺疊。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| 視圖 | `za` | 開合摺疊 |  |
+| 視圖 | `za` | 開合折疊 |  |
 | 視圖 | `zR` | 打開所有摺疊 |  |
 | 視圖 | `zM` | 合上所有摺疊 |  |
 | 視圖 | `zf` | 把選中的行做成摺疊 |  |
 
 ### `vim_comment_keys` {#vim_comment_keys}
 
-開：vim 鍵位下 gc 接動作、gcc、可視模式的 gc 注釋所在的行，同 vim 9.1 自帶的包與 Neovim。關：只有空格選單裏的 c。
+開：vim 鍵位下 gc 接動作、gcc、可視模式的 gc 註釋所在的行，同 vim 9.1 自帶的包與 Neovim。關：只有空格菜單裏的 c。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| g 前往 | `gc` | 注釋（等一個動作） |  |
+| g 前往 | `gc` | 註釋（等一個動作） |  |
 
 ### `vim_space_menu` {#vim_space_menu}
 
@@ -394,15 +394,15 @@ It changes what its keys do, not which command they run.
 
 ### `helix_keys_under_vim` {#helix_keys_under_vim}
 
-開：vim 下借用 helix 的鍵，只用 vim 空着的鍵：Alt 鍵、C-s、Z、gb、gy 等。關：這些鍵什麼都不做，同 vim。
+開：vim 下借用 helix 的鍵，只用 vim 空着的鍵：Alt 鍵、C-s、Z、gb、gy 等。關：這些鍵什麽都不做，同 vim。
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
 | Normal mode | `Z` | 視圖組(按完不收) |  |
 | Normal mode | `C-s` | 把這裏記進跳轉表 |  |
 | Normal mode | `A-!` | 把外部命令的輸出接在選區後 |  |
-| Normal mode | `A-(` | 各選區的內容往前輪換 |  |
-| Normal mode | `A-)` | 各選區的內容往後輪換 |  |
+| Normal mode | `A-(` | 各選區的内容往前輪換 |  |
+| Normal mode | `A-)` | 各選區的内容往後輪換 |  |
 | Normal mode | `A-*` | 找選中的那段(原樣) |  |
 | Normal mode | `A-,` | 去掉主選區 |  |
 | Normal mode | `A--` | 把所有選區合成一個 |  |
@@ -429,8 +429,8 @@ It changes what its keys do, not which command they run.
 | Normal mode | `A-U` | 重做(和 U 一樣) |  |
 | Normal mode | `A-x` | 把選區縮到整行 |  |
 | Normal mode | `A-\|` | 把選區交給外部命令，不改文本 |  |
-| Insert mode | `A-d` | 刪除光標後的一個詞 |  |
-| Insert mode | `C-k` | 刪到行尾，不刪換行(vim) |  |
+| Insert mode | `A-d` | 删除光標後的一個詞 |  |
+| Insert mode | `C-k` | 删到行尾，不删換行(vim) |  |
 | g 前往 | `gy` | 跳到類型定義 |  |
 | g 前往 | `g.` | 回到最後改動的地方 |  |
 | g 前往 | `gb` | 光標移至屏幕頂部/中部/底部 |  |
@@ -443,7 +443,7 @@ It changes what its keys do, not which command they run.
 
 ### `delete_keeps_register` {#delete_keeps_register}
 
-開：d、c 刪除時不進寄存器，A-d、A-c 才剪。關：helix 的 d、c 剪。
+開：d、c 删除時不進寄存器，A-d、A-c 才剪。關：helix 的 d、c 剪。
 
 It changes what its keys do, not which command they run.
 

@@ -29,7 +29,7 @@
 | `:check-usage` |  | 查用字：全文写了两种写法的(里/裡、为/爲、你自己配的人名)，列出少数那一边 |
 | `:check-config` |  | 查配置档：哪一行让整份失效，哪一行写了没人读 |
 | `:check-names` |  | 查专名：文件里把百科的名字写错了一个同音字的地方(醉翁亭写成醉翁停) |
-| `:diagnostics-all` |  | 语言服务器説过的全部问题，排成一张 gf 跳得了的单子 |
+| `:diagnostics-all` |  | 语言服务器说过的全部问题，排成一张 gf 跳得了的单子 |
 | `:check-charset` |  | 查字集：不在通用规范/台湾/香港/古籍里的字，排版社的字体多半也没有 |
 | `:check-merge` |  | 列出这份文件里的合并冲突 |
 | `:check-punct` |  | 查标点：中文里的半角逗号句号、`...`、还有开了口没收尾的「」()《》 |
@@ -70,7 +70,7 @@
 | `:word-discover` |  | 挖掘这一篇的用户词语：人名地名，字典里没有的 |
 | `:word-discover-working` |  | 在工作路径中挖掘用户词语 |
 | `:word-discover-project` |  | 在项目路径中挖掘用户词语 |
-| `:word-habit` |  | 口头禅：这一篇比别人多説的那些词 |
+| `:word-habit` |  | 口头禅：这一篇比别人多说的那些词 |
 | `:vertical` |  | 把这一页转成竖排 |
 | `:horizontal` |  | 把这一页转成横排 |
 | `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | 竖排的 hjkl 走行文还是走版面 |
@@ -103,7 +103,7 @@
 | `:yume-table` | `<路径>` | 用你自己的码表(Rime 的 .dict.yaml 也行) |
 | `:set` `:se` | `<選項>` | vim 的 :set，只认 modeline 认的几项：ft、ts、sw、et、tw；不带参数打开设置面板 |
 | `:setfiletype` `:setf` | `<文件類型>` | vim 的 :setf，同 :set ft= |
-| `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 这个文件是哪种标记(不给参数就説现在是哪个) |
+| `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 这个文件是哪种标记(不给参数就说现在是哪个) |
 | `:pipe` | `<命令>` | 将选区发送为终端命令，且使用其输出替换选区 |
 | `:sh` | `<命令>` | 跑一条命令，输出收进一个缓冲区 |
 | `:!command` |  | 让出终端跑一条命令，直接看它跑(vi 的写法) |
@@ -118,7 +118,7 @@
 | `:view-hanging` | `on｜off｜toggle` | 标点旁置：句读挂在边栏 |
 | `:view-numbers-fill` | `on｜off｜toggle` | 行号那一条有没有自己的底色(默认没有，横排竖排一样) |
 | `:view-diagnostics` | `hint｜info｜warning｜error｜off` | 行末诊断：hint、info、warning、error 或 off |
-| `:view-diff` | `on｜off｜toggle` | 改动条：行号旁边那一格用底色説哪几行跟 git 那一份不一样 |
+| `:view-diff` | `on｜off｜toggle` | 改动条：行号旁边那一格用底色说哪几行跟 git 那一份不一样 |
 | `:view-typewriter` | `on｜off｜toggle` | 打字机：光标那一行一直停在画面中间，纸往上走 |
 | `:view-focus` | `on｜off｜toggle` | 焦点：正在写的那一段留在纸上，其余的退后一级 |
 | `:view-meter` | `on｜off｜toggle` | 平仄：每个字的平仄画在旁边，句末画韵脚(今音，入声已派入三声) |
@@ -177,7 +177,7 @@
 | `:buffer-next` `:bn` |  | 下一个 |
 | `:buffer-previous` `:bp` |  | 上一个 |
 | `:buffer-close` `:bc` |  | 关掉这个文件(`buffer-close!` 不管改动) |
-| `:format` `:fmt` |  | 照这种文件在配置里説的那样格式化([language.markdown] format = …) |
+| `:format` `:fmt` |  | 照这种文件在配置里说的那样格式化([language.markdown] format = …) |
 | `:run` | `<名字>` | 跑这种文件在配置里自己起名的那条命令 |
 | `:markdown-footnote` |  | 脚注：号码自己找空的，注也一并开好 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不去文末 |
