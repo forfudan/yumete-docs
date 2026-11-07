@@ -12,6 +12,10 @@ the same one helix and VS Code use.
 Each language below has a grammar compiled into yumete. A grammar gives you:
 
 - syntax colours, in code files and in Markdown code fences (```` ```py ````, ```` ```rust ````)
+- tags in comments in the diagnostics' colours, with helix's words: `TODO`, `NOTE` and
+  `PERF` blue, `HACK` and `WARN` amber, `FIXME`, `BUG` and `XXX` red, `TIP` and `HINT`
+  grey, and a `(name)` before the colon. Markdown and Typst comments (`<!-- -->`,
+  `%%…%%`, `//`) get them too; a `Note:` in a sentence does not.
 - indentation after an opener, on `Enter` and on `o`
 - comments, as in helix: `Space c` or `C-c` comments the lines (and takes off a block
   comment already round them), `Space A-c` uses line comments only, and `Space C` wraps
