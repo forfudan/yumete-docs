@@ -52,8 +52,8 @@ Each letter you type narrows the list at once without asking the server again. W
 you type `(` or `,` inside a call, the signature appears beside the cursor with the
 parameter you are filling in highlighted.
 
-While a float is open, `PageUp`, `PageDown`, `C-u` and `C-d` scroll it instead of the
-page.
+While a float with more than it shows is open, `PageUp`, `PageDown`, `C-u` and `C-d`
+scroll it instead of the page. A float that shows all of it leaves them to the page.
 
 Diagnostics wait until you leave Insert mode, since a half-typed line is always broken.
 In code files they show in a two-cell column in the gutter: a solid red cell for an
