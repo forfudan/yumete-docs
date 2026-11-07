@@ -33,6 +33,10 @@
 | `[editor] modeline` | `true` | **读 vim 的 modeline** — 文件头尾五行里的 vim: set ft=… ts=…: 定这个文件的类型、缩进和硬换行宽度 |
 | `[editor] maths_preview` | `true` | **公式预览** — 光标在公式里时，在下面浮出排好的公式；要 Ghostty 或 kitty，和 typst 命令 |
 | `[editor] yank_flash` | `false` | **复制高亮** — 复制之后，复制的范围亮一下 |
+| `[editor] indent_guides` | `false` | **缩进参考线** — 代码行首的空白里，每一级缩进画一条竖线，同 helix；只用于代码文件 |
+| `[editor] indent_guides_character` | `"│"` | **参考线字符** — 画参考线用的字符，要占一格 |
+| `[editor] indent_guides_skip_levels` | `0` | **跳过外层** — 最外面几级缩进不画参考线 (0–8) |
+| `[editor] indent_guides_scope` | `true` | **标出当前块** — 光标所在那一块的参考线画得深一些 |
 | `[editor] word_level` | `"balanced"` | **分词松紧** — 多容易把几个字并成一个词。严：只认没争议的；松：词典説是就是 (`strict` 严格, `balanced` 适中, `full` 宽松) |
 | `[editor] word_mark` | `"color"` | **分词标记** — 分词标记用哪一种画法 (`off` 不画, `color` 不同颜色, `ink` 不同明度, `tint` 不同底色, `line` 下划线) |
 | `[editor] code_highlight` | `true` | **代码上色** — 围栏里的代码按它自己的语法上色；关掉则整块一种紫 |

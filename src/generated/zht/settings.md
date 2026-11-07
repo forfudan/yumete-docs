@@ -33,6 +33,10 @@
 | `[editor] modeline` | `true` | **讀 vim 的 modeline** — 文件頭尾五行裏的 vim: set ft=… ts=…: 定這個文件的類型、縮進和硬換行寬度 |
 | `[editor] maths_preview` | `true` | **公式預覽** — 光標在公式裏時，在下面浮出排好的公式；要 Ghostty 或 kitty，和 typst 命令 |
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製之後，複製的範圍亮一下 |
+| `[editor] indent_guides` | `false` | **縮進參考線** — 代碼行首的空白裏，每一級縮進畫一條豎線，同 helix；只用於代碼文件 |
+| `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
+| `[editor] indent_guides_skip_levels` | `0` | **跳過外層** — 最外面幾級縮進不畫參考線 (0–8) |
+| `[editor] indent_guides_scope` | `true` | **標出當前塊** — 光標所在那一塊的參考線畫得深一些 |
 | `[editor] word_level` | `"balanced"` | **分詞鬆緊** — 多容易把幾個字併成一個詞。嚴：只認没爭議的；松：詞典説是就是 (`strict` 嚴格, `balanced` 適中, `full` 寬松) |
 | `[editor] word_mark` | `"color"` | **分詞標記** — 分詞標記用哪一種畫法 (`off` 不畫, `color` 不同顔色, `ink` 不同明度, `tint` 不同底色, `line` 下劃線) |
 | `[editor] code_highlight` | `true` | **代碼上色** — 圍欄裏的代碼按它自己的語法上色；關掉則整塊一種紫 |
