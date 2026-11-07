@@ -129,6 +129,7 @@
 | `:indent-tab` | `spaces｜tab` | what Tab types: spaces or a tab (Shift-Tab types the other) |
 | `:indent-width` | `<幾格，1–16>` | indent width: the spaces Tab types, and how far > and < shift |
 | `:hard-wrap` | `<幾欄>` | re-fill to a width without changing meaning: the selection or the unit under the cursor; 0 joins each into one line; bare uses the hard_wrap setting |
+| `:align` | `<符號>` | line up the selected lines on a sign, = when none is given |
 | `:split-join` |  | put the items in the brackets round the cursor one per line, or back onto one line |
 | `:reflow` | `<幾欄>` | refill the selection to a width (80 columns by default) |
 | `:auto-pairs` | `off｜basic｜full` | type an opening bracket and its closer comes too: off, basic, full; bare says which it is now |
