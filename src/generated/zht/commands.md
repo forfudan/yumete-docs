@@ -20,8 +20,8 @@
 | `:reload-config` `:config-reload` |  | 重新載入 config.toml，無需重啓 |
 | `:config-open` |  | 打開全局 config.toml |
 | `:config-open-workspace` |  | 打開本項目的 .yumete/config.toml |
-| `:reload-auto` | `on｜off｜toggle` | 文件在外部被修改時自動重新載入；有未保存的改動時只提醒 |
-| `:readonly` `:ro` | `on｜off｜toggle` | 只讀：禁止編輯此文件 |
+| `:reload-auto` |  | 文件在外部被修改時自動重新載入；有未保存的改動時只提醒 |
+| `:readonly` `:ro` |  | 只讀：禁止編輯此文件 |
 | `:goto` | `<行號>` | 跳轉到某行(直接 `:42` 也行) |
 | `:count` `:wc` |  | 字數統計；`progress` 看今天，`target` 設每日目標 |
 | `:count-progress` |  | 寫作進度：今天寫了多少，離目標還有多少 |
@@ -82,9 +82,9 @@
 | `:info` |  | 文件信息：路徑、大小、行數字數、語言、關聯的語言服務器 |
 | `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息欄隨光標顯示哪一種(record/diagnostics/dictionary/wiki/docs；不寫則按文件類型) |
 | `:rules` | `<欄>…｜off` | 在指定列加標尺：`:rules 80 100 120`；不帶數字爲 80 和 100，`off` 關閉 |
-| `:theme-fill` | `on｜off｜toggle` | 代碼和引用是否加底色(默認不加) |
+| `:theme-fill` |  | 代碼和引用是否加底色(默認不加) |
 | `:shot` | `screen｜png｜html｜txt <路徑>` | 截圖：默認複製到剪貼板；png/html/txt 則保存到下載文件夾 |
-| `:yume` `:y` | `on｜off` | 宇夢輸入引擎開關：on 打開、off 關閉 |
+| `:yume` `:y` |  | 宇夢輸入引擎開關：接管鍵盤或交還系統 |
 | `:yume-where` |  | 碼表和數據的查找位置及順序 |
 | `:yume-which` |  | 當前方案及碼表來源 |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始輸入：載入方案(不寫名稱則用配置中的) |
@@ -96,7 +96,7 @@
 | `:yume-panel` | `box｜bottom｜inline` | 候選位置：box 光標旁的框，bottom 窗口底行，inline 光標下一行 |
 | `:yume-inline-preedit` | `off｜composition｜preview` | 編碼顯示位置：off 候選欄，composition 正文顯示編碼，preview 正文顯示首選 |
 | `:yume-menu-size` | `<1–9>` | 每頁候選數(1–9，默認 6) |
-| `:yume-autocompletion` | `on｜off｜toggle` | 輸入預測：編碼未打完就給出候選 |
+| `:yume-autocompletion` |  | 輸入預測：編碼未打完就給出候選 |
 | `:yume-installed` |  | 改用系統安裝的碼表(與 builtin 相對) |
 | `:yume-builtin` |  | 改用内置碼表，忽略已安裝的 |
 | `:yume-table` | `<路徑>` | 用你自己的碼表(Rime 的 .dict.yaml 也行) |
@@ -108,21 +108,22 @@
 | `:!command` |  | 在終端裏直接運行命令並查看輸出(vi 寫法) |
 | `:which-wrap` | `<字母>` | 哪些鍵可以跨越行尾(vim 鍵位)。只能是 b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | 行號：absolute 絶對、relative 相對光標、none 不顯示；不帶參數顯示當前模式 |
-| `:view-wrap` | `on｜off｜0｜<幾欄>` | 自動換行；`:view-wrap 50` 設寬度，`off` 關閉 |
-| `:view-wrap-vertical` | `0｜<幾字>` | 豎排每列字數；`:view-wrap-vertical 30` 設長度，`0` 跟隨窗口 |
+| `:view-wrap` |  | 自動換行開關；寬度用 `:view-wrap-width` 設 |
+| `:view-wrap-width` | `0｜<幾欄>` | 正文寬度(列數)；`:view-wrap-width 50` 設寬度，`0` 跟隨窗口 |
+| `:view-wrap-height` | `0｜<幾字>` | 豎排每列字數；`:view-wrap-height 30` 設長度，`0` 跟隨窗口 |
 | `:view-margin` | `never｜dense｜loose｜always` | 頁邊：是否爲注音、懸掛標點、着重號、平仄留出位置 |
 | `:view-pages-horizontal` | `<1–4>` | 分欄：横排時分成多欄並排，文字從左欄接到右欄 |
 | `:view-pages-vertical` | `<1–4>` | 段組：把豎排的頁面横着分成幾條，右上讀到左上，再右下讀到左下 |
-| `:view-sentence` | `on｜off｜toggle` | 一句一縱：豎排時每句另起一縱，只改顯示，不改文件 |
-| `:view-hanging` | `on｜off｜toggle` | 標點懸掛：句讀掛在頁邊 |
-| `:view-numbers-fill` | `on｜off｜toggle` | 行號欄是否加底色(默認不加，横排豎排一樣) |
+| `:view-sentence` |  | 一句一縱：豎排時每句另起一縱，只改顯示，不改文件 |
+| `:view-hanging` |  | 標點懸掛：句讀掛在頁邊 |
+| `:view-numbers-fill` |  | 行號欄是否加底色(默認不加，横排豎排一樣) |
 | `:view-diagnostics` | `hint｜info｜warning｜error｜off` | 行末診斷：hint、info、warning、error 或 off |
-| `:view-diff` | `on｜off｜toggle` | 改動條：行號旁用底色標出與 git 版本不同的行 |
-| `:view-typewriter` | `on｜off｜toggle` | 打字機模式：光標所在行始終居中 |
-| `:view-focus` | `on｜off｜toggle` | 專注：正在寫的段落保持清晰，其餘變淡 |
-| `:view-meter` | `on｜off｜toggle` | 平仄：字旁標平仄，句末標韻腳(今音，入派三聲) |
-| `:view-punct` | `on｜off｜toggle` | 標點提示：在半角標點和 ... 旁顯示應使用的全角標點 |
-| `:view-code` | `on｜off｜toggle` | 代碼着色：代碼塊按其語言着色 |
+| `:view-diff` |  | 改動條：行號旁用底色標出與 git 版本不同的行 |
+| `:view-typewriter` |  | 打字機模式：光標所在行始終居中 |
+| `:view-focus` |  | 專注：正在寫的段落保持清晰，其餘變淡 |
+| `:view-meter` |  | 平仄：字旁標平仄，句末標韻腳(今音，入派三聲) |
+| `:view-punct` |  | 標點提示：在半角標點和 ... 旁顯示應使用的全角標點 |
+| `:view-code` |  | 代碼着色：代碼塊按其語言着色 |
 | `:view-long-line` | `off｜<幾字>` | 行長超過此字數時停止着色 |
 | `:view-hud` | `off｜basic｜full` | 光標提示：不顯示、膠囊、面板 |
 | `:view-preview` | `on｜off｜toggle` | 交給排版器排版，在瀏覽器中查看 |
@@ -162,9 +163,9 @@
 | `:sidebar-search` |  | 打開或關閉左側欄的搜索，打開時光標移過去 |
 | `:sidebar-links` |  | 打開或關閉左側欄的鏈接，打開時光標移過去 |
 | `:sidebar-info` |  | 打開或關閉右側欄的信息面板，光標留在正文 |
-| `:table-detail` | `on｜off｜toggle` | 記録面板：開、關或指定寬度 |
-| `:table-numbers` | `on｜off｜toggle` | 列號行：␣t3/、␣t20,20g 用的就是它 |
-| `:table-header` | `on｜off｜toggle` | 首行是表頭還是數據 |
+| `:table-detail` |  | 記録面板：顯示或隱藏 |
+| `:table-numbers` |  | 列號行：␣t3/、␣t20,20g 用的就是它 |
+| `:table-header` |  | 首行是表頭還是數據 |
 | `:table-schema` | `write` | 顯示錶格結構；write 寫入同目録的 datapackage.json |
 | `:table-delimiter` | `<分隔符>` | 按此分隔符把文件讀成表格並記住(tab、space、comma、semicolon 或該字符) |
 | `:table-hide` | `<欄號>` | 隱藏第 N 列(只是不顯示，照常讀寫)，並記住 |
@@ -203,7 +204,7 @@
 | `:ruby-render` | `off｜basic｜full` | 注音顯示：源碼、着色、夾行；不帶參數顯示當前模式 |
 | `:ruby-auto` |  | 按詞自動注音(選區或整個文件) |
 | `:ruby-auto-rare` |  | 只注陸、臺、港常用字表都没有的字 |
-| `:ruby-html` | `on｜off｜toggle` | 識别 `<ruby>` |
-| `:ruby-typst` | `on｜off｜toggle` | 識别 `#ruby(…)` |
+| `:ruby-html` |  | 識别 `<ruby>` |
+| `:ruby-typst` |  | 識别 `#ruby(…)` |
 | `:ruby-format` | `html｜typst` | 把注音改寫成另一種寫法 |
 | `:s/pat/rep/` |  | 替換：默認在選區内；`%s` 全文、`1-40s` 指定範圍、`1,5,9s` 指定行；標誌 g i f c n t y j；分隔符可換 |

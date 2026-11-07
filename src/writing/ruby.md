@@ -63,10 +63,9 @@ to edit, as with any other Markdown mark. To start in `full`, set
 `show_ruby = true` under `[editor]`. `:render full` (see [The page](page.md))
 lays out readings along with all the other markup.
 
-To stop reading one kind of markup, `:ruby-html off` or `:ruby-typst off`.
-`:ruby-html on` or `:ruby-typst on` reads it again and lays it out. With no
-word after it, either command says which kinds are being read. Both kinds are
-read from the start.
+To stop reading one kind of markup, `:ruby-html` or `:ruby-typst`; the same
+command reads it again and lays it out. Either one says which kinds are being
+read afterwards. Both kinds are read from the start.
 
 ### On a horizontal page
 
@@ -218,10 +217,7 @@ character at a time. `:view-meter` marks it for you, in the notation 詞譜 use:
 ```
 
 ```text
-:view-meter on
-:view-meter off
-:view-meter toggle
-:view-meter             say whether it is on
+:view-meter             turn it on or off, and say which it is now
 ```
 
 | Mark | Means |
@@ -238,7 +234,7 @@ the 句 around it.
 
 On a vertical page the marks are in the margin; on a horizontal page they are
 on the row above. The command needs a margin; if `:view-margin` is `never`,
-write `:view-meter! on` to turn the margin on as well.
+write `:view-meter!` to turn the margin on as well.
 
 The tone of each character is looked up by word, from the same 拆分表 that
 `:ruby-auto` uses. Without it, there is nothing to look up, and the status line
@@ -269,10 +265,7 @@ reading:
 ```
 
 ```text
-:view-punct on
-:view-punct off
-:view-punct toggle
-:view-punct             say whether it is on
+:view-punct             turn it on or off, and say which it is now
 ```
 
 The hint is drawn in the colour the editor uses to point at things, not in
