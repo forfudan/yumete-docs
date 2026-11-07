@@ -92,9 +92,8 @@ and the text they fence stands forward. Annotations to yourself, written
 words are never hidden, and export leaves them out.
 
 A fenced code block is coloured by the grammar its fence names (```` ```rust ````,
-```` ```python ````), with the theme's code colours. `:view-code off` turns this
-off; `:view-code` alone tells you whether it is on and why a block is not
-coloured. The list of languages is on the
+```` ```python ````), with the theme's code colours. `:view-code` turns this
+off or on again; turning it on says why a block is not coloured. The list of languages is on the
 [Language servers](../guide/languages.md) page.
 
 A line longer than 50,000 characters is left plain, so a one-line data file
@@ -155,10 +154,10 @@ default, because a Chinese paragraph is often one line of several hundred
 characters.
 
 ```
-:view-wrap off       one line per paragraph; the page scrolls sideways
-:view-wrap on        wrap at the window's edge (also :view-wrap alone)
-:view-wrap 50        wrap at column 50: a measure (below)
-:view-wrap 0         drop the measure and wrap at the window again
+:view-wrap             wrap or not; unwrapped, the page scrolls sideways
+:view-wrap-width 50    wrap at column 50: a measure (below)
+:view-wrap-width 0     drop the measure and wrap at the window again
+:view-wrap-width       say which width it wraps at
 ```
 
 With wrapping off the page follows the cursor sideways. vim's `zh` `zl` (a column),
@@ -173,7 +172,7 @@ lines in the file. Under the vim keymap it is the other way round, as in vim.
 The line number is printed only on the first row of a paragraph.
 
 Wrap is for horizontal layout. A vertical column has its own length, set with
-`:view-wrap-vertical`; see [Vertical layout](vertical.md).
+`:view-wrap-height`; see [Vertical layout](vertical.md).
 
 ## Line numbers: `:line-numbers`
 
@@ -248,7 +247,7 @@ nothing of the text, for when that is what you want.
 
 ## The measure
 
-A measure writes the page narrow. `:view-wrap 50` wraps every line at column 50
+A measure writes the page narrow. `:view-wrap-width 50` wraps every line at column 50
 and tints everything to the right of it. On a wide monitor this
 keeps lines at a length the eye can follow. If the window is narrower than the
 measure, the window wins.
@@ -363,8 +362,8 @@ quit. The file must have a name; save a new buffer first.
 ## Focus and typewriter
 
 ```
-:view-focus on          the paragraph you are in stays lit; the rest steps back
-:view-typewriter on     the row you are writing stays in the middle of the screen
+:view-focus             the paragraph you are in stays lit; the rest steps back
+:view-typewriter        the row you are writing stays in the middle of the screen
 ```
 
 Focus works by paragraph, not by row: a paragraph wrapped over three rows is

@@ -159,9 +159,9 @@ A file whose time changed but whose bytes did not, as after a `touch` or a
 sync that rewrote the same content, does not count as changed. A file that
 was deleted does.
 
-Reading changed files back by itself is on by default. `:reload-auto off`
-turns it off for this run and `:reload-auto` on its own says which it is. To
-turn it off for good:
+Reading changed files back by itself is on by default. `:reload-auto` turns
+it off for this run, or on again, and says which it is now. To turn it off for
+good:
 
 ```toml
 [editor]
@@ -260,7 +260,7 @@ A file outside git, or one git does not track, is compared with its saved
 copy instead, so the bar shows what you changed since the last save.
 
 The bar follows the buffer, unsaved changes included, and updates a moment
-after you stop typing. It is on by default; `:view-diff off` hides it, and
+after you stop typing. It is on by default; `:view-diff` hides it, and
 `[editor] diff_gutter = false` turns it off for good.
 
 | Key | Action |

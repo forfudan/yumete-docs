@@ -52,7 +52,7 @@ Each right-hand side says which of three kinds it is.
 | Written as | Kind | Example |
 | --- | --- | --- |
 | a bare name | an action | `"delete_selection"` |
-| `:` in front | a command line, run as if typed after `:` | `":write"`, `":view-wrap 40"` |
+| `:` in front | a command line, run as if typed after `:` | `":write"`, `":view-wrap-width 40"` |
 | `@` in front | a run of keys, played as if you pressed them | `"@kJ"` |
 | a list | each of the above, run in order | `["select_all", ":write"]` |
 
