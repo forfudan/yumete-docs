@@ -148,12 +148,14 @@ L = ":buffer-next"
 "C-s" = ":write"
 ```
 
-LazyVim also lights up what you yank for a moment. yumete does the same with
-this setting, which is off unless you turn it on:
+LazyVim also lights up what you yank for a moment, and draws indent guides in
+code. yumete does both with these settings, which are off unless you turn them
+on:
 
 ```toml
 [editor]
 yank_flash = true
+indent_guides = true
 ```
 
 If your `lazyvim.json` lists the `coding.mini-surround` extra, `ye --import lazyvim`
