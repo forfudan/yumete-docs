@@ -56,7 +56,7 @@ The name in the first column is the one you write in `[lsp.<name>]` and
 | `:diagnostics-all` | every diagnostic from every file, as a `path:line:` listing; `gf` on a line goes there |
 
 In Insert mode, completion opens by itself as you type a word or after `.` and `:`.
-`C-n` and `C-p` (or the arrows) move through it, `Tab` takes an item and `Esc` closes it.
+`C-n` and `C-p` (or the arrows) move through it and `Tab` takes an item. `Esc` closes it and leaves Insert mode in one press, as in helix and vim.
 Each letter you type narrows the list at once without asking the server again. When
 you type `(` or `,` inside a call, the signature appears beside the cursor with the
 parameter you are filling in highlighted.
