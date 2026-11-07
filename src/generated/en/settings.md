@@ -33,6 +33,10 @@
 | `[editor] modeline` | `true` | **read vim modelines** — vim: set ft=… ts=…: in the first or last five lines of a file sets its type, indentation and hard-wrap width |
 | `[editor] maths_preview` | `true` | **maths preview** — while the cursor is in a formula, a float under it shows it typeset; needs Ghostty or kitty, and the typst command |
 | `[editor] yank_flash` | `false` | **yank flash** — after a yank, what was copied lights up for a moment |
+| `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
+| `[editor] indent_guides_character` | `"│"` | **guide character** — the character the guides are drawn with, one cell wide |
+| `[editor] indent_guides_skip_levels` | `0` | **skip levels** — how many outer levels go without a guide (0–8) |
+| `[editor] indent_guides_scope` | `true` | **mark the current block** — the guide of the block the cursor is in is drawn darker |
 | `[editor] word_level` | `"balanced"` | **word level** — how readily characters are joined into a word: strict takes only the certain ones, loose whatever the dictionary has (`strict` strict, `balanced` balanced, `full` full (loose)) |
 | `[editor] word_mark` | `"color"` | **word mark** — how word boundaries are shown (`off` none, `color` colour, `ink` brightness, `tint` tint, `line` underline) |
 | `[editor] code_highlight` | `true` | **code highlight** — code in a fence is coloured by its own language; off, the whole block is one colour |

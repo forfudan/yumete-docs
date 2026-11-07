@@ -17,6 +17,11 @@ Each language below has a grammar compiled into yumete. A grammar gives you:
   grey, and a `(name)` before the colon. Markdown and Typst comments (`<!-- -->`,
   `%%…%%`, `//`) get them too; a `Note:` in a sentence does not.
 - indentation after an opener, on `Enter` and on `o`
+- indent guides, off unless you turn them on: `[editor] indent_guides = true` draws a
+  rule at each level of a line's leading blanks, as helix's `[editor.indent-guides]`
+  does, with `indent_guides_character` and `indent_guides_skip_levels` for helix's
+  `character` and `skip-levels`. The rule of the block the cursor is in is drawn darker
+  (`indent_guides_scope`, on). Code files only.
 - comments, as in helix: `Space c` or `C-c` comments the lines (and takes off a block
   comment already round them), `Space A-c` uses line comments only, and `Space C` wraps
   exactly what is selected in a block comment, half a line included. In a fenced block
