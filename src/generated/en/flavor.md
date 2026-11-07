@@ -19,6 +19,7 @@
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | turn a page |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | sidebars |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | jumps, word search, links |
+| [`split_join`](#split_join) | `gS` | `gS` | split and join brackets |
 | [`insert_extras`](#insert_extras) | `C-a` `C-e` `C-n` `C-g` | — | Insert: line ends, completion, undo step |
 | [`insert_ctrl_c`](#insert_ctrl_c) | `C-c` | — | Insert: leave |
 | [`x_selects_upward`](#x_selects_upward) | `X` | — | select the line above |
@@ -282,6 +283,14 @@ Under vim:
 | g goto | `gz` | two letters to locate a word |  |
 | g goto | `gZ` | more letters to locate a char |  |
 | g goto | `g/` | search the selection |  |
+
+### `split_join` {#split_join}
+
+On: gS puts the items in the brackets round the cursor one per line, and back onto one line when pressed again. Off: gS is unbound; :split-join still works.
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| g goto | `gS` | split or join the brackets' items |  |
 
 ### `insert_extras` {#insert_extras}
 

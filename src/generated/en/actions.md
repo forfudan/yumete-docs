@@ -207,6 +207,7 @@
 | `jump_prev_long_word_end` | the cursor back to the previous long word's end, selecting nothing |  | `gE` |  |
 | `goto_word` | go to a place on this screen | `gw` | `gW` |  |
 | `goto_word_by_letters` | two letters to locate a word | `gz` | `gz` |  |
+| `split_join` | split or join the brackets' items | `gS` | `gS` |  |
 | `goto_char_by_pinyin` | more letters to locate a char | `gZ` | `gZ` |  |
 | `goto_last_accessed_file` | back to the buffer before this one | `ga` | `` |  |
 | `goto_reference` | every place it is used | `gr` |  |  |

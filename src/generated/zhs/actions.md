@@ -207,6 +207,7 @@
 | `jump_prev_long_word_end` | 光标跳到上一个大词尾(不选中) |  | `gE` |  |
 | `goto_word` | 跳到当前屏幕某位置 | `gw` | `gW` |  |
 | `goto_word_by_letters` | 两字母定位单词 | `gz` | `gz` |  |
+| `split_join` | 拆开/合并括号里的各项 | `gS` | `gS` |  |
 | `goto_char_by_pinyin` | 多字母定位汉字 | `gZ` | `gZ` |  |
 | `goto_last_accessed_file` | 回到最近打开的缓冲区 | `ga` | `` |  |
 | `goto_reference` | 用到它的每一处 | `gr` |  |  |

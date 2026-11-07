@@ -176,6 +176,12 @@ code says so.
 
 ## Formatting and other commands
 
+`gS` (or `:split-join`) puts the items in the brackets around the cursor on lines of
+their own, one indent in from the opening line, and joins them back onto one line when
+pressed again, as mini.splitjoin's `gS`. Commas inside nested brackets and strings stay
+where they are, and no comma is added. `gS` is a flavour key; with the flavour `off`
+only the command is left.
+
 `=` asks the language server to format the selection, as helix's does; one
 selection at a time, and only a server that formats a range answers.
 
