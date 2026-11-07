@@ -104,6 +104,21 @@ args = ["--stdio"]
 directly, not through a shell. Writing a language replaces its whole factory entry, and
 `command = ""` turns the language's server off.
 
+`config` is any table, as in helix's `[language-server]` tables. It is sent to the server
+as its initialization options, sent again once the server is ready, and used to answer
+the settings the server asks for:
+
+```toml
+[lsp.json]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+config = { provideFormatter = true, json = { validate = { enable = true } } }
+```
+
+The factory entries for the CSS, HTML and JSON servers carry helix's `config` already
+(formatting on). Since writing a language replaces its list, an entry you write has only
+the `config` written on it.
+
 A language can list several servers, as an array of tables:
 
 ```toml
