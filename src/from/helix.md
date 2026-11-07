@@ -157,6 +157,8 @@ yumete does not know stops the whole file. See
   covers the Chinese brackets. See [Match mode](../reference/match.md).
 - [Tables](../writing/tables.md), [vertical text](../writing/vertical.md) and
   [ruby](../writing/ruby.md).
+- `gS` puts the items in a pair of brackets one per line, and back. See
+  [Formatting and other commands](../guide/languages.md#formatting-and-other-commands).
 - `:keymap vim` switches to vim's keys for this session. See
   [Coming from vim](vim.md).
 - vim modelines (`vim: set ts=2 ft=python:`) are read under either keymap.

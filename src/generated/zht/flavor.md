@@ -19,6 +19,7 @@
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | 翻頁 |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | 側欄 |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | 跳轉、搜這個詞、鏈接 |
+| [`split_join`](#split_join) | `gS` | `gS` | 拆開/合併括號 |
 | [`insert_extras`](#insert_extras) | `C-a` `C-e` `C-n` `C-g` | — | 插入態的行首行尾、補全、斷撤銷點 |
 | [`insert_ctrl_c`](#insert_ctrl_c) | `C-c` | — | 插入態退出 |
 | [`x_selects_upward`](#x_selects_upward) | `X` | — | 往上選行 |
@@ -282,6 +283,14 @@ Under vim:
 | g 前往 | `gz` | 兩字母定位單詞 |  |
 | g 前往 | `gZ` | 多字母定位漢字 |  |
 | g 前往 | `g/` | 搜索所選内容 |  |
+
+### `split_join` {#split_join}
+
+開：gS 把光標所在括號裏的各項拆成每項一行，再按一次合回一行。關：gS 空着，命令 :split-join 照樣能用。
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| g 前往 | `gS` | 拆開/合併括號裏的各項 |  |
 
 ### `insert_extras` {#insert_extras}
 
