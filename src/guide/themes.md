@@ -123,7 +123,8 @@ gold text is brighter than the body text, and red is brighter still.
 | `status_bar` | `sunken`, `raised` | `"sunken"` | `sunken` sets the status line further from the text colour than the page; `raised` sets it one step toward the text |
 | `fill` | `true`, `false` | `false` | put a background behind code and quotations |
 
-`:theme-fill` turns `fill` on or off for the session and says which it is now.
+`fill` can also be changed for the session with `:theme-fill on` or `:theme-fill off`;
+`:theme-fill` alone turns it round.
 
 With `ground = "terminal"`, yumete cannot promise any contrast, because it does not know
 your background. Use it if you have tuned your terminal's colours and want to keep them.

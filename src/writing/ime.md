@@ -123,10 +123,11 @@ There are two separate questions, and each has its own switch.
 
 **Is the input method in use at all?** This is on or off.
 
-- `:yume` (or `:y`) and `Space z z` flip between on and off: off becomes
-  Chinese, and Chinese or English becomes off, handing the keyboard back to the
-  system. If no table is loaded yet, turning it on loads the scheme named in the
-  config first.
+- `:yume on` turns it on, in Chinese. If no table is loaded yet, this loads
+  the scheme named in the config first.
+- `:yume off` turns it off and hands the keyboard back to the system.
+- `:yume` (or `:y`) and `Space z z` flip between the two: off becomes Chinese,
+  and Chinese or English becomes off.
 
 **Chinese or English, while it is on?** This is a tap of Shift on its own.
 
@@ -377,8 +378,8 @@ leave it out, or write `"default"`, to let each scheme decide.
 ### Prediction
 
 Prediction (輸入預測) offers candidates before the code is complete.
-`:yume-autocompletion` and `Space z y` turn it on or off and say which it is
-now.
+`:yume-autocompletion on` and `:yume-autocompletion off` set it,
+and `:yume-autocompletion` alone flips it. `Space z y` flips it.
 
 ### Character sets
 
@@ -663,7 +664,7 @@ In Normal mode every letter is a command, so the system input method always
 stands aside. Where you type text, it stands aside only when yumete itself is
 typing for you.
 
-The bottom row is how you use a system input method in yumete. Turn yume off with `:yume`
+The bottom row is how you use a system input method in yumete. Run `:yume off`
 (or never load a table: with the default `[ime] start = false`, nothing is
 loaded until you ask). Then in Insert mode the system input method works as
 usual, and in Normal mode it still stands aside so your commands work. This is
@@ -797,7 +798,9 @@ page_size = 6
 
 | Command | What it does |
 | --- | --- |
-| `:yume`, `:y` | Turn the input method on, in Chinese, loading the table if needed; or turn it off and give the keyboard back to the system. |
+| `:yume`, `:y` | Turn the input method on or off. |
+| `:yume on` | Turn it on, in Chinese. Loads the table if needed. |
+| `:yume off` | Turn it off and give the keyboard back to the system. |
 | `:yume-scheme [name]` | Load a scheme; with no name, the one in the config. |
 | `:yume-builtin` | Use the built-in table of the current scheme. |
 | `:yume-installed` | Use the installed table for the current scheme. |
@@ -810,7 +813,7 @@ page_size = 6
 | `:yume-inline-preedit [mode]` | Set or show where the code is shown. |
 | `:yume-menu-size [1–9]` | Set or show the candidates on a page. |
 | `:yume-annotation [off\|next\|mode]` | Set or show the annotation beside candidates. |
-| `:yume-autocompletion` | Turn prediction on or off. |
+| `:yume-autocompletion [on\|off]` | Set prediction; with no word, flip it. |
 | `:yume-which` | Say which scheme and table are in use. |
 | `:yume-where` | Open a report of where tables are searched for and found. |
 

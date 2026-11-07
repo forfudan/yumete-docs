@@ -20,8 +20,8 @@
 | `:reload-config` `:config-reload` |  | 重新载入 config.toml，无需重启 |
 | `:config-open` |  | 打开全局 config.toml |
 | `:config-open-workspace` |  | 打开本项目的 .yumete/config.toml |
-| `:reload-auto` |  | 文件在外部被修改时自动重新载入；有未保存的改动时只提醒 |
-| `:readonly` `:ro` |  | 只读：禁止编辑此文件 |
+| `:reload-auto` | `on｜off` | 文件在外部被修改时自动重新载入；有未保存的改动时只提醒 |
+| `:readonly` `:ro` | `on｜off` | 只读：禁止编辑此文件 |
 | `:goto` | `<行號>` | 跳转到某行(直接 `:42` 也行) |
 | `:count` `:wc` |  | 字数统计；`progress` 看今天，`target` 设每日目标 |
 | `:count-progress` |  | 写作进度：今天写了多少，离目标还有多少 |
@@ -82,9 +82,9 @@
 | `:info` |  | 文件信息：路径、大小、行数字数、语言、关联的语言服务器 |
 | `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息栏随光标显示哪一种(record/diagnostics/dictionary/wiki/docs；不写则按文件类型) |
 | `:rules` | `<欄>…｜off` | 在指定列加标尺：`:rules 80 100 120`；不带数字为 80 和 100，`off` 关闭 |
-| `:theme-fill` |  | 代码和引用是否加底色(默认不加) |
+| `:theme-fill` | `on｜off` | 代码和引用是否加底色(默认不加) |
 | `:shot` | `screen｜png｜html｜txt <路径>` | 截图：默认复制到剪贴板；png/html/txt 则保存到下载文件夹 |
-| `:yume` `:y` |  | 宇梦输入引擎开关：接管键盘或交还系统 |
+| `:yume` `:y` | `on｜off` | 宇梦输入引擎开关：on 打开、off 关闭 |
 | `:yume-where` |  | 码表和数据的查找位置及顺序 |
 | `:yume-which` |  | 当前方案及码表来源 |
 | `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 开始输入：载入方案(不写名称则用配置中的) |
@@ -96,7 +96,7 @@
 | `:yume-panel` | `box｜bottom｜inline` | 候选位置：box 光标旁的框，bottom 窗口底行，inline 光标下一行 |
 | `:yume-inline-preedit` | `off｜composition｜preview` | 编码显示位置：off 候选栏，composition 正文显示编码，preview 正文显示首选 |
 | `:yume-menu-size` | `<1–9>` | 每页候选数(1–9，默认 6) |
-| `:yume-autocompletion` |  | 输入预测：编码未打完就给出候选 |
+| `:yume-autocompletion` | `on｜off` | 输入预测：编码未打完就给出候选 |
 | `:yume-installed` |  | 改用系统安装的码表(与 builtin 相对) |
 | `:yume-builtin` |  | 改用内置码表，忽略已安装的 |
 | `:yume-table` | `<路径>` | 用你自己的码表(Rime 的 .dict.yaml 也行) |
@@ -108,25 +108,25 @@
 | `:!command` |  | 在终端里直接运行命令并查看输出(vi 写法) |
 | `:which-wrap` | `<字母>` | 哪些键可以跨越行尾(vim 键位)。只能是 b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | 行号：absolute 绝对、relative 相对光标、none 不显示；不带参数显示当前模式 |
-| `:view-wrap` |  | 自动换行开关；宽度用 `:view-wrap-width` 设 |
+| `:view-wrap` | `on｜off` | 自动换行开关；宽度用 `:view-wrap-width` 设 |
 | `:view-wrap-width` | `0｜<幾欄>` | 正文宽度(列数)；`:view-wrap-width 50` 设宽度，`0` 跟随窗口 |
 | `:view-wrap-height` | `0｜<幾字>` | 竖排每列字数；`:view-wrap-height 30` 设长度，`0` 跟随窗口 |
 | `:view-margin` | `never｜dense｜loose｜always` | 页边：是否为注音、悬挂标点、着重号、平仄留出位置 |
 | `:view-pages-horizontal` | `<1–4>` | 分栏：横排时分成多栏并排，文字从左栏接到右栏 |
 | `:view-pages-vertical` | `<1–4>` | 段组：把竖排的页面横着分成几条，右上读到左上，再右下读到左下 |
-| `:view-sentence` |  | 一句一纵：竖排时每句另起一纵，只改显示，不改文件 |
-| `:view-hanging` |  | 标点悬挂：句读挂在页边 |
-| `:view-numbers-fill` |  | 行号栏是否加底色(默认不加，横排竖排一样) |
+| `:view-sentence` | `on｜off` | 一句一纵：竖排时每句另起一纵，只改显示，不改文件 |
+| `:view-hanging` | `on｜off` | 标点悬挂：句读挂在页边 |
+| `:view-numbers-fill` | `on｜off` | 行号栏是否加底色(默认不加，横排竖排一样) |
 | `:view-diagnostics` | `hint｜info｜warning｜error｜off` | 行末诊断：hint、info、warning、error 或 off |
-| `:view-diff` |  | 改动条：行号旁用底色标出与 git 版本不同的行 |
-| `:view-typewriter` |  | 打字机模式：光标所在行始终居中 |
-| `:view-focus` |  | 专注：正在写的段落保持清晰，其余变淡 |
-| `:view-meter` |  | 平仄：字旁标平仄，句末标韵脚(今音，入派三声) |
-| `:view-punct` |  | 标点提示：在半角标点和 ... 旁显示应使用的全角标点 |
-| `:view-code` |  | 代码着色：代码块按其语言着色 |
+| `:view-diff` | `on｜off` | 改动条：行号旁用底色标出与 git 版本不同的行 |
+| `:view-typewriter` | `on｜off` | 打字机模式：光标所在行始终居中 |
+| `:view-focus` | `on｜off` | 专注：正在写的段落保持清晰，其余变淡 |
+| `:view-meter` | `on｜off` | 平仄：字旁标平仄，句末标韵脚(今音，入派三声) |
+| `:view-punct` | `on｜off` | 标点提示：在半角标点和 ... 旁显示应使用的全角标点 |
+| `:view-code` | `on｜off` | 代码着色：代码块按其语言着色 |
 | `:view-long-line` | `off｜<幾字>` | 行长超过此字数时停止着色 |
 | `:view-hud` | `off｜basic｜full` | 光标提示：不显示、胶囊、面板 |
-| `:view-preview` | `on｜off｜toggle` | 交给排版器排版，在浏览器中查看 |
+| `:view-preview` | `on｜off` | 交给排版器排版，在浏览器中查看 |
 | `:render` | `off｜basic｜full` | 渲染程度：源码、着色、所见即所得 |
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行缩进：`off`/`basic`(保留段间空行)/`full`(隐藏段间空行)，或格数 |
 | `:indent-tab` | `spaces｜tab` | Tab 键输入空格还是制表符(Shift-Tab 输入另一种) |
@@ -157,15 +157,15 @@
 | `:search-buffers` `:sb` |  | 在所有打开的文件中搜索 |
 | `:search-working` `:sw` |  | 在工作目录中搜索 |
 | `:search-project` `:sp` |  | 在项目中搜索 |
-| `:sidebar-explorer` |  | 打开或关闭左侧栏的文件树，打开时光标移过去 |
-| `:sidebar-buffers` |  | 打开或关闭左侧栏的缓冲区列表，打开时光标移过去 |
-| `:sidebar-outline` |  | 打开或关闭左侧栏的大纲，打开时光标移过去 |
-| `:sidebar-search` |  | 打开或关闭左侧栏的搜索，打开时光标移过去 |
-| `:sidebar-links` |  | 打开或关闭左侧栏的链接，打开时光标移过去 |
-| `:sidebar-info` |  | 打开或关闭右侧栏的信息面板，光标留在正文 |
-| `:table-detail` |  | 记录面板：显示或隐藏 |
-| `:table-numbers` |  | 列号行：␣t3/、␣t20,20g 用的就是它 |
-| `:table-header` |  | 首行是表头还是数据 |
+| `:sidebar-explorer` | `on｜off` | 打开或关闭左侧栏的文件树，打开时光标移过去 |
+| `:sidebar-buffers` | `on｜off` | 打开或关闭左侧栏的缓冲区列表，打开时光标移过去 |
+| `:sidebar-outline` | `on｜off` | 打开或关闭左侧栏的大纲，打开时光标移过去 |
+| `:sidebar-search` | `on｜off` | 打开或关闭左侧栏的搜索，打开时光标移过去 |
+| `:sidebar-links` | `on｜off` | 打开或关闭左侧栏的链接，打开时光标移过去 |
+| `:sidebar-info` | `on｜off` | 打开或关闭右侧栏的信息面板，光标留在正文 |
+| `:table-detail` | `on｜off` | 记录面板：显示或隐藏 |
+| `:table-numbers` | `on｜off` | 列号行：␣t3/、␣t20,20g 用的就是它 |
+| `:table-header` | `on｜off` | 首行是表头还是数据 |
 | `:table-schema` | `write` | 显示表格结构；write 写入同目录的 datapackage.json |
 | `:table-delimiter` | `<分隔符>` | 按此分隔符把文件读成表格并记住(tab、space、comma、semicolon 或该字符) |
 | `:table-hide` | `<欄號>` | 隐藏第 N 列(只是不显示，照常读写)，并记住 |
@@ -204,7 +204,7 @@
 | `:ruby-render` | `off｜basic｜full` | 注音显示：源码、着色、夹行；不带参数显示当前模式 |
 | `:ruby-auto` |  | 按词自动注音(选区或整个文件) |
 | `:ruby-auto-rare` |  | 只注陆、台、港常用字表都没有的字 |
-| `:ruby-html` |  | 识别 `<ruby>` |
-| `:ruby-typst` |  | 识别 `#ruby(…)` |
+| `:ruby-html` | `on｜off` | 识别 `<ruby>` |
+| `:ruby-typst` | `on｜off` | 识别 `#ruby(…)` |
 | `:ruby-format` | `html｜typst` | 把注音改写成另一种写法 |
 | `:s/pat/rep/` |  | 替换：默认在选区内；`%s` 全文、`1-40s` 指定范围、`1,5,9s` 指定行；标志 g i f c n t y j；分隔符可换 |

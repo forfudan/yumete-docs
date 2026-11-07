@@ -143,7 +143,7 @@ English sentences are left alone. Inline code and code blocks are skipped. A
 quote that runs over several paragraphs, opening `「` again at the head of each,
 is not counted as unclosed. Brackets must close in the same paragraph.
 
-`:view-punct` shows the same hint on the page as you write: the right mark is
+`:view-punct on` shows the same hint on the page as you write: the right mark is
 drawn beside the half-width one.
 
 ## Characters a font may not have: `:check-charset`

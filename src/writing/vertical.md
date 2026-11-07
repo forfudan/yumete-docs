@@ -60,7 +60,7 @@ By default a column is as long as the window is tall. To set your own length:
 
 The length can be 8 to 64; a smaller number is raised to 8 and a larger one lowered to 64. The setting is
 `zong_length` under `[editor]` (`0` follows the window). A column never runs
-past the bottom of the window, whatever number you give. `:view-wrap` is the
+past the bottom of the window, whatever number you give. `:view-wrap-width` is the
 horizontal measure and does nothing to a vertical page.
 
 Two more settings shape the columns:
@@ -147,7 +147,7 @@ Each paragraph's number stands above its first column, two digits to a row, so
 other number is a step dimmer. Odd and even follow the paragraph number, so the
 pattern does not crawl as you scroll. The number of the paragraph the cursor is
 in has the theme's accent colour. A `~` marks the empty line at the end of the
-file. `:view-numbers-fill` gives the number band a ground of its own.
+file. `:view-numbers-fill on` gives the number band a ground of its own.
 
 ## What the page does on its own
 
@@ -237,12 +237,14 @@ in the margin beside the character they belong to, and the text runs on
 unbroken. A page of dialogue then stops looking half empty.
 
 ```text
-:view-hanging            turn it on or off, and say which it is now
+:view-hanging on
+:view-hanging off
+:view-hanging            turn it round
 ```
 
 The setting is `hanging_punctuation = true` under `[editor]`. It needs a
 vertical page and a margin. If either is missing, the command says so; write
-`:view-hanging!` to turn them on with it.
+`:view-hanging! on` to turn them on with it.
 
 ```text
    off      on
@@ -287,7 +289,8 @@ reading moves up to the rows above its character.
 When you proofread, you read one sentence at a time.
 
 ```text
-:view-sentence          one sentence to a column, or full columns again
+:view-sentence on       one sentence to a column
+:view-sentence off      full columns again
 ```
 
 Every sentence then starts at the head of a new column. A sentence ends at
@@ -310,7 +313,7 @@ The breaks are the same ones the sentence motions jump between (`H` and `L`,
 or `(` and `)` under the vim keymap), so the head of every column is a place
 the cursor can jump to.
 
-Nothing in the file changes. It needs a vertical page; `:view-sentence!`
+Nothing in the file changes. It needs a vertical page; `:view-sentence! on`
 turns that on too.
 
 ## See also

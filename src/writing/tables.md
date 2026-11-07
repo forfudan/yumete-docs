@@ -138,7 +138,7 @@ things to the screen; it never hides or replaces a character you typed.
 
 - **A row of column numbers** sits above the heading. These are the numbers that
   the `Space t` keys count with (see [Sorting](#sorting) and
-  [Searching and jumping](#searching-and-jumping)). `:table-numbers` hides it.
+  [Searching and jumping](#searching-and-jumping)). `:table-numbers off` hides it.
 - **Table rows do not wrap.** One row is one line on screen, however long.
 - **`Tab` and `S-Tab` move by cell.** Every other key keeps its ordinary meaning:
   `h` `j` `k` `l` move by character, and `j` on the last row walks out into the
@@ -399,9 +399,9 @@ with only its heading; `o`, `O`, `p` and `Space t r` add a row again.
 ### Headings
 
 A table file normally has a heading row. A code table often does not: it is data
-from the first line. `Space t H` (or `:table-header`) makes the first row an
-ordinary data row, and the columns are named by number instead. Press it again to
-change back.
+from the first line. `Space t H` (or `:table-header off`) makes the first row an
+ordinary data row, and the columns are named by number instead. Press it again (or
+`:table-header on`) to change back.
 
 This is also how you edit the column names of a CSV without a `datapackage.json`: turn the
 heading off, edit row 1 like any other row, and turn it back on.
@@ -755,7 +755,7 @@ written beside the data:
 ```
 :table-delimiter space    read this file cut by spaces (also tab, comma,
                           semicolon, or the character itself)
-:table-header             the first row is data, or a heading again
+:table-header off         the first row is data (Space t H flips it)
 :table-hide 7             column 7 takes no space and is stepped over
 :table-show 7             and is drawn again
 ```
@@ -822,13 +822,13 @@ the replacement.
 | `:table-render off\|basic\|window` | choose the view; with no word, say which one |
 | `:table <rows> <columns>` | write a new pipe table on a blank line |
 | `:table-rules <style>` | how the window view separates columns |
-| `:table-numbers` | show or hide the row of column numbers |
-| `:table-header` | the first row is a heading, or data |
+| `:table-numbers on\|off` | the row of column numbers |
+| `:table-header on\|off` | whether the first row is a heading |
 | `:table-sort 1 a 2 d` | sort by columns and directions |
 | `:table-find row\|column <pattern>` | search across rows or down columns |
 | `:table-jump <name>` | go to the row with this name |
 | `:table-check` | list problems in the table |
-| `:table-detail` | show or hide the record panel |
+| `:table-detail on\|off` | the record panel |
 | `:table-schema [write]` | say how this table is read, or write it into `datapackage.json` |
 | `:table-delimiter <name>` | read this file cut by that character, and remember it |
 | `:table-hide <n>` / `:table-show <n>` | hide a column, or draw it again; remembered |

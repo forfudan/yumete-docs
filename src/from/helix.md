@@ -140,7 +140,8 @@ show their panel there, and `:sidebar-explorer` shows the project's files as a
 tree. `Space e` is a picker, as in helix, not this panel.
 `C-w e` and `C-w i` show or hide the left and right sidebar, and `C-w E` and
 `C-w I` move into it. Each panel has a command that opens and closes it,
-`:sidebar-explorer`, `:sidebar-outline`, `:sidebar-info` and so on. See [Windows and the sidebar](../guide/windows.md).
+`:sidebar-explorer`, `:sidebar-outline`, `:sidebar-info` and so on, and takes
+`on` or `off` when you want one of the two. See [Windows and the sidebar](../guide/windows.md).
 
 ## Your helix config
 
