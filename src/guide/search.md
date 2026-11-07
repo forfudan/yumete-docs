@@ -330,7 +330,9 @@ project one, the worst first on each line. `Enter` goes to the place.
 
 `Space e` shows one folder at a time, folders first, with `../` at the top.
 `Enter` on a folder opens it in the same picker; `Enter` on a file opens the
-file. The preview shows what a folder holds.
+file. The preview shows what a folder holds. Unlike `Space f`, it shows hidden
+and ignored files at first, as helix's explorer does; `A-h` steps what is
+skipped, and the choice lasts as you move between folders.
 
 ## From the shell: `ye --grep`
 
