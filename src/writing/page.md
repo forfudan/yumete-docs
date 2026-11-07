@@ -349,18 +349,34 @@ In config: `[editor] margin = "dense"`.
 ## Preview in a real typesetter: `:view-preview`
 
 `:render full` is the most this screen can show. `:view-preview` hands the file
-to a real typesetter and shows the result in your browser.
+to a real typesetter and shows the result beside the text, or in your browser.
+
+```
+:view-preview on          the page in a window beside the text, or the browser
+:view-preview off         put away whichever preview is up
+:view-preview             turn it round
+:view-preview-window      the window only; says why when it cannot be drawn
+:view-preview-browser     the browser only
+:view-preview-fit page    show the whole page in the window (width is the default)
+```
 
 | File | What happens |
 | --- | --- |
-| Typst | `tinymist preview` starts, and the browser opens its page |
+| Typst | tinymist draws the page into a window beside the text |
 | Markdown | an HTML export goes to a temporary file, and the browser opens it |
 
-The Typst preview follows your typing without saving: each keystroke is sent to
-the typesetter, which recompiles only what changed. The first compile of a long
-book can take a while, and the page stays grey until it finishes. The preview
-stops when you close that file, when you type `:view-preview off`, or when you
-quit. The file must have a name; save a new buffer first.
+The preview window is a window like any other: `C-w` moves into it, and `:q`
+closes it. It shows the page the cursor is on and follows the cursor, and it is
+drawn again a moment after you stop typing, without saving. It needs a terminal
+that draws pictures (Ghostty or kitty) and tinymist 0.13.30 or later; without
+them, `:view-preview` opens the browser instead and says why. The page is shown
+as it prints, also under a dark theme.
+
+In the browser, the Typst preview follows your typing too: each keystroke is
+sent to the typesetter, which recompiles only what changed. The first compile of
+a long book can take a while, and the page stays grey until it finishes. The
+browser preview stops when you close that file, when you type `:view-preview
+off`, or when you quit. The file must have a name; save a new buffer first.
 
 ## Focus and typewriter
 

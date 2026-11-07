@@ -126,7 +126,10 @@
 | `:view-code` | `on｜off` | 代码着色：代码块按其语言着色 |
 | `:view-long-line` | `off｜<幾字>` | 行长超过此字数时停止着色 |
 | `:view-hud` | `off｜basic｜full` | 光标提示：不显示、胶囊、面板 |
-| `:view-preview` | `on｜off` | 交给排版器排版，在浏览器中查看 |
+| `:view-preview` | `on｜off` | 打开或关闭排版后的页面：先在旁边开页面窗口，开不了就用浏览器 |
+| `:view-preview-window` | `on｜off` | 在旁边的窗口中显示排好的页面，跟随光标(需要 tinymist，以及 Ghostty 或 kitty) |
+| `:view-preview-browser` | `on｜off` | 交给排版器排版，在浏览器中查看 |
+| `:view-preview-fit` | `width｜page` | 页面窗口中页面的大小：页宽或整页 |
 | `:render` | `off｜basic｜full` | 渲染程度：源码、着色、所见即所得 |
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行缩进：`off`/`basic`(保留段间空行)/`full`(隐藏段间空行)，或格数 |
 | `:indent-tab` | `spaces｜tab` | Tab 键输入空格还是制表符(Shift-Tab 输入另一种) |
