@@ -26,7 +26,7 @@ The tabs along the top are the open files and a window shows one of them, as
 in helix and vim. Closing a window closes no file: with the window split,
 `:q`, `:q!`, `:wq` and `:x` close only the window you are in, and the file
 stays open with its changes. In the last window they quit the editor; a
-sidebar does not count as a window here.
+sidebar, or a window showing a preview, does not count as a window here.
 
 Quitting with a file unsaved, in any tab, stops, says so and shows that file.
 A `!` after `:q` or `:qa` quits anyway and throws the unsaved changes away.

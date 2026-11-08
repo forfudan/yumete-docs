@@ -130,6 +130,7 @@
 | `:view-preview-window` | `on｜off` | the typeset page in a window beside the text, following the cursor (needs tinymist, and Ghostty or kitty) |
 | `:view-preview-browser` | `on｜off` | typeset with a real typesetter and preview in a browser |
 | `:view-preview-fit` | `width｜page` | how big the page window draws the page: as wide as the window, or whole |
+| `:view-preview-theme` | `on｜off` | draw the preview's page in the theme's colours, the paper as the background and black as the text colour, or as printed |
 | `:render` | `off｜basic｜full` | how much is rendered: source, coloured, WYSIWYG |
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | first-line indent: `off` / `basic` (blank lines kept) / `full` (blank lines hidden), or a width |
 | `:indent-tab` | `spaces｜tab` | what Tab types: spaces or a tab (Shift-Tab types the other) |

@@ -33,6 +33,7 @@
 | `[editor] modeline` | `true` | **读 vim 的 modeline** — 文件首尾五行内的 vim: set ft=… ts=…: 可设置文件类型、缩进和硬换行宽度 |
 | `[editor] maths_preview` | `true` | **公式预览** — 光标在公式中时，在下方浮窗显示排版结果；需要 Ghostty 或 kitty，Typst 公式还需要 typst 命令 |
 | `[editor] preview_fit` | `"width"` | **页面窗口大小** — 页面窗口中页面的大小：页宽适应窗口并随光标滚动，或整页放进窗口 (`width` 页宽, `page` 整页) |
+| `[editor] preview_theme` | `false` | **页面窗口用主题配色** — 预览页面的纸用背景色、黑字用文字色，深色主题下也一样；关闭则按印刷原样 |
 | `[editor] yank_flash` | `false` | **复制高亮** — 复制后，被复制的范围闪一下 |
 | `[editor] indent_guides` | `false` | **缩进参考线** — 在代码行首每级缩进画一条竖线，同 helix；仅用于代码文件 |
 | `[editor] indent_guides_character` | `"│"` | **参考线字符** — 画参考线用的字符，要占一格 |

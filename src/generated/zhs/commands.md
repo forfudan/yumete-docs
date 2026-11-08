@@ -130,6 +130,7 @@
 | `:view-preview-window` | `on｜off` | 在旁边的窗口中显示排好的页面，跟随光标(需要 tinymist，以及 Ghostty 或 kitty) |
 | `:view-preview-browser` | `on｜off` | 交给排版器排版，在浏览器中查看 |
 | `:view-preview-fit` | `width｜page` | 页面窗口中页面的大小：页宽或整页 |
+| `:view-preview-theme` | `on｜off` | 用主题配色显示预览页面：纸为背景色，黑字为文字色；关闭则按印刷原样 |
 | `:render` | `off｜basic｜full` | 渲染程度：源码、着色、所见即所得 |
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行缩进：`off`/`basic`(保留段间空行)/`full`(隐藏段间空行)，或格数 |
 | `:indent-tab` | `spaces｜tab` | Tab 键输入空格还是制表符(Shift-Tab 输入另一种) |
