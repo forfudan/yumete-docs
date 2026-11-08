@@ -14,6 +14,7 @@ typesetter, with its own settings for each of them.
 :export! html              write over a file that is already there
 :export csv                the table under the cursor, comma separated
 :export tsv                the table under the cursor, tab separated
+:export-as-preview         the file as its preview draws it (see below)
 ```
 
 With no path, the export takes the file's name and changes the extension. An
@@ -215,6 +216,12 @@ All three formats carry:
 - pipe tables, with their column alignment and a caption;
 - pictures alone in a paragraph, as figures with a caption (HTML and EPUB);
 - TeX formulas in Markdown, drawn as pictures in HTML and EPUB;
+- GitHub alerts (`> [!NOTE]`, `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]`,
+  `[!CAUTION]`) and `:::` containers, as callouts (HTML and EPUB);
+- front matter (`---` … `---` at the head of the file), in a frame;
+- a fenced code block naming a language, in syntax colours;
+- links, as links;
+- task lists, `- [ ]` and `- [x]`, with their boxes (☐ or ☑ in Typst);
 - rules (`---`, `* * *`);
 - ruby, in all three kinds of markup; the brace form only from a Markdown
   file.
@@ -273,3 +280,60 @@ beside the text: a Typst page set by tinymist, or a Markdown file set by
 yumete itself. The Markdown preview draws readings by the same three
 `[export] ruby_*` settings as the export. See
 [The page](page.md#preview-in-a-real-typesetter-view-preview).
+
+## Exporting what the preview shows
+
+`:export-as-preview` writes the file the way its preview draws it, so what
+you see is what you get.
+
+```
+:export-as-preview              chapter.md → chapter.html, book.typ → book.pdf
+:export-as-preview html         a Markdown file's preview, as a web page
+:export-as-preview pdf          a Typst file's preview, as a PDF
+:export-as-preview out/a.html   a name of your own
+:export-as-preview!             write over a file that is already there
+```
+
+**A Markdown file** becomes the same HTML page `:export html` writes, with
+its look taken from the Markdown preview rather than from `[export]`:
+
+- the preview's fonts: `[export] font_family`, then the CJK face of the
+  document's writing system (Simplified, Traditional or Japanese, from its
+  text or its front matter's `lang`); emphasised Chinese in a Kai face;
+- the preview's type sizes, GitHub's: 16 px body, headings at 2, 1.5 and 1.25
+  em, code at 0.85 em;
+- the colours of your theme, in the mood it is shown in now, light or dark:
+  the page's ground, headings, links, code, quotes, tables, callouts and task
+  boxes; formulas are drawn in the colour of the text around them, a
+  quotation's or a footnote's included;
+- vertical exactly when the preview is: the text window vertical and
+  `[editor] preview_vertical` on. `[export] vertical` does not decide it here;
+  `[export] vertical_latin`, `hanging` and the `ruby_*` settings apply as the
+  preview reads them.
+
+Formulas are pictures inside the page; images are referenced by the path the
+source uses, as `:export html` references them, so keep the page beside the
+source.
+
+**A Typst file** becomes the PDF of the document its preview typesets: the
+file itself, or, for a chapter, the book that includes it (the main file of
+an open preview tab, else an open file that `#include`s or `#import`s it).
+It is compiled by the [Typst](https://typst.app) compiler (`brew install
+typst`) on the project root a language server would use, so `#include` and
+images resolve as in the preview. The compiler runs in the background: you go
+on writing, the status line says "typesetting book.typ…", and then where the
+PDF went, or the compiler's first line of complaint. One PDF is typeset at a
+time; asking again meanwhile says so. Without `typst` nothing is written. The
+compiler reads the files on disk: unsaved changes are not in the PDF, and the
+message says how many open files have them.
+
+The path rules are `:export`'s: without a path the file's name with the
+extension changed (the book's name for a chapter), `!` to write over an
+existing file, and never over a file open in the editor. `html` on a Typst
+file, `pdf` on a Markdown file, and any other word say which format the
+file's preview has.
+
+The page is a browser's, so it is as close to the preview as CSS allows, not
+the same picture: lines may break a character earlier or later, punctuation
+squeezing follows the browser and the font, and hanging punctuation shows
+only in Safari.

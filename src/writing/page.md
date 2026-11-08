@@ -457,6 +457,12 @@ in a Japanese face; front matter `lang: zh-Hant` or `lang: ja`, or
 Adjacent full-width punctuation gives up its blank half, as Chinese
 typesetting squeezes `。」` and `（「`.
 
+Across the page, a table's caption (`Table: …` or `: …`, just above or
+below it) stands over the table, and a picture alone in its paragraph is a
+figure with its text as a caption under it. `:export-as-preview` writes the
+preview as an HTML page, in its fonts and colours; see
+[Export](export.md#exporting-what-the-preview-shows).
+
 #### Set vertically
 
 While the text window is vertical (`:vertical`), the Markdown preview is
