@@ -110,10 +110,10 @@ line before the closing `$$`, is not maths, so prices stay prices.
 
 In Ghostty and kitty, and in either one inside tmux with `allow-passthrough
 on`, the formula under the cursor is also typeset: a float under the cursor
-shows it as maths and follows it as you type. The picture is made by the
-`typst` command, which has to be on your `PATH`. Markdown's LaTeX goes through
-the MiTeX package, which comes with yumete, so nothing is downloaded. Other
-terminals show the coloured source only. `[editor] maths_preview = false`
+shows it as maths and follows it as you type. Markdown's LaTeX is drawn inside
+yumete, with nothing to install; Chinese in `\text{}` needs a CJK font on the
+system. A Typst formula is drawn by the `typst` command, which has to be on
+your `PATH`. Other terminals show the coloured source only. `[editor] maths_preview = false`
 turns the float off.
 
 ### Following a link

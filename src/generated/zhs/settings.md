@@ -31,7 +31,7 @@
 | `[editor] diff_gutter` | `true` | **改动条** — 在行号旁用底色标出与 git 不同的行(不在 git 中则对比已保存的文件) |
 | `[editor] end_of_line_diagnostics` | `"hint"` | **行末诊断** — 在行末显示语言服务器诊断，从哪一级起显示 (`disable` 不显示, `hint` 建议及以上, `info` 说明及以上, `warning` 警告及以上, `error` 只显示错误) |
 | `[editor] modeline` | `true` | **读 vim 的 modeline** — 文件首尾五行内的 vim: set ft=… ts=…: 可设置文件类型、缩进和硬换行宽度 |
-| `[editor] maths_preview` | `true` | **公式预览** — 光标在公式中时，在下方浮窗显示排版结果；需要 Ghostty 或 kitty 以及 typst 命令 |
+| `[editor] maths_preview` | `true` | **公式预览** — 光标在公式中时，在下方浮窗显示排版结果；需要 Ghostty 或 kitty，Typst 公式还需要 typst 命令 |
 | `[editor] preview_fit` | `"width"` | **页面窗口大小** — 页面窗口中页面的大小：页宽适应窗口并随光标滚动，或整页放进窗口 (`width` 页宽, `page` 整页) |
 | `[editor] yank_flash` | `false` | **复制高亮** — 复制后，被复制的范围闪一下 |
 | `[editor] indent_guides` | `false` | **缩进参考线** — 在代码行首每级缩进画一条竖线，同 helix；仅用于代码文件 |

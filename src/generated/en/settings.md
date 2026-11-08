@@ -31,7 +31,7 @@
 | `[editor] diff_gutter` | `true` | **diff gutter** — mark lines that differ from git (or from the saved file) beside the line numbers |
 | `[editor] end_of_line_diagnostics` | `"hint"` | **end-of-line diagnostics** — show language-server diagnostics at line end, from which level up (`disable` off, `hint` hints and up, `info` info and up, `warning` warnings and up, `error` errors only) |
 | `[editor] modeline` | `true` | **read vim modelines** — vim: set ft=… ts=…: in the first or last five lines of a file sets its type, indentation and hard-wrap width |
-| `[editor] maths_preview` | `true` | **maths preview** — while the cursor is in a formula, a popup below shows it typeset; needs Ghostty or kitty, and the typst command |
+| `[editor] maths_preview` | `true` | **maths preview** — while the cursor is in a formula, a popup below shows it typeset; needs Ghostty or kitty, and the typst command for Typst formulas |
 | `[editor] preview_fit` | `"width"` | **page window fit** — how the page window draws the page: as wide as the window and scrolled to the cursor, or the whole page (`width` width, `page` whole page) |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
 | `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
