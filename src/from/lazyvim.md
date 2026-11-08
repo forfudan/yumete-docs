@@ -164,6 +164,22 @@ also puts its keys on yumete's surround: `gsa`, `gsd` and `gsr` play vim-surroun
 Visual mode wraps the selection (`surround_add` under `[keys.select]`). The extra's
 `gsf`, `gsF`, `gsh` and `gsn` have no counterpart.
 
+## Your own keys and options
+
+`ye --import lazyvim` also runs your Neovim headless, on a copy of its
+config, and once more with LazyVim alone, and carries what you changed on top
+of the config above: your maps from `lua/config/keymaps.lua` and from the
+`keys` of your plugin specs, under `[keys.vim.normal]` and its Space groups; a
+LazyVim key you deleted (`vim.keymap.del`, or `{ "<leader>bd", false }`) as
+`no_op`; the options you set in `lua/config/options.lua` that differ from
+LazyVim's own, in the same `[editor]` table; and your colour scheme when it
+is not LazyVim's tokyonight. Your config, plugins and `lazy-lock.json` are
+never written to; see
+[Bringing a config](../guide/configuration.md#bringing-a-config-from-helix-vim-neovim-or-lazyvim).
+If Neovim cannot be run, or takes more than 10 seconds, the file holds the
+config above alone and says why. `ye --import nvim` on a LazyVim config does
+the same.
+
 ## What the config moves
 
 LazyVim's groups sit on letters yumete uses for single commands: `Space b`,
