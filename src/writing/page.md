@@ -352,21 +352,44 @@ In config: `[editor] margin = "dense"`.
 to a real typesetter and shows the result beside the text, or in your browser.
 
 ```
-:view-preview on          the page in a window beside the text, or the browser
-:view-preview off         put away whichever preview is up
-:view-preview             turn it round
-:view-preview-window      the window only; says why when it cannot be drawn
-:view-preview-browser     the browser only
-:view-preview-fit page    show the whole page in the window (width is the default)
+:view-preview on           this document's preview beside the text, or the browser
+:view-preview off          close this document's preview
+:view-preview              turn it round
+:view-preview-window       the preview tab only; says why when it cannot be drawn
+:view-preview-browser      the browser only
+:view-preview-fit page     show the whole page (width is the default)
+:view-preview-theme on     draw the page in the theme's colours
 ```
 
 | File | What happens |
 | --- | --- |
-| Typst | tinymist draws the page into a window beside the text |
-| Markdown | an HTML export goes to a temporary file, and the browser opens it |
+| Typst | tinymist draws the page in a preview tab beside the text |
+| Markdown | yumete sets the file itself in a preview tab beside the text |
+| Markdown, no pictures | an HTML export goes to a temporary file, and the browser opens it |
 
-The preview window is a window like any other: `C-w` moves into it, and `:q`
-closes it. Inside it, the keys are a PDF reader's under vim:
+A Typst preview is a tab, like an open file. It is listed in the tab line as
+"Preview main.typ", in `:b` and the buffer picker, and `gn`, `gp` and `ga`
+reach it. `:view-preview on` opens it in a new window to the right of the
+text and leaves you where you were; if the preview is already on the screen,
+it says so. Open another file in the preview's window and that file shows
+there; the preview stays open as a tab, and `:b`, `ga`, `C-o` or
+`:view-preview` bring it back.
+
+Each preview belongs to one document: the Typst file it was opened from, and
+the Typst files in that file's folder, which is how a book's chapters are
+included. Opened from a chapter, it typesets the open file that includes the
+chapter with `#include` or `#import`, since a chapter alone lacks what its
+book sets up; with no such file open, it typesets the chapter. It shows the page the cursor is on while you are in that document,
+and keeps its place while you work anywhere else. Each document can have its
+own preview, and several can be open at once.
+
+`:q` in a preview's window closes the window; the tab stays open. `:bc` on the
+preview tab, or `:view-preview off`, closes the preview. A preview's window
+does not count as a window when you quit: `:q` in the last text window quits,
+whatever previews are beside it. A session keeps its preview tabs, and which
+window showed one.
+
+Inside a preview, the keys are a PDF reader's under vim:
 
 | Key | Action |
 | --- | --- |
@@ -376,18 +399,65 @@ closes it. Inside it, the keys are a PDF reader's under vim:
 | `gg` `G` | the top, the bottom of the page |
 | `J` `K` | the next, the previous page |
 | `5G` | page 5 |
+| `gn` `gp` `ga` | the next, the previous, the last tab |
 
-It shows the page the cursor is on and follows the cursor, and it is
-drawn again a moment after you stop typing, without saving. It needs a terminal
-that draws pictures (Ghostty or kitty) and tinymist 0.13.30 or later; without
-them, `:view-preview` opens the browser instead and says why. The page is shown
-as it prints, also under a dark theme.
+`:`, `C-w`, `Space`, `C-o` and `C-i` work as anywhere else, and so do `ZZ`
+and `ZQ` under the vim keys. A preview holds no text: nothing in it can be
+typed into or searched, `:w` and `:wq` there say there is no file to write,
+and `:x` closes its window as `:q` does. The status line shows only the
+preview's name, and the buffer picker says which file it typesets.
+
+The page is drawn again a moment after you stop typing, without saving. It
+needs a terminal that draws pictures (Ghostty or kitty) and tinymist 0.13.30
+or later; without them, `:view-preview` opens the browser instead and says
+why.
+
+The page is shown as it prints, also under a dark theme. `:view-preview-theme
+on` draws it in the theme's colours instead: the paper in the background colour
+and black text in the text colour, coloured parts keeping their hue. In
+config: `[editor] preview_theme = true`.
 
 In the browser, the Typst preview follows your typing too: each keystroke is
 sent to the typesetter, which recompiles only what changed. The first compile of
 a long book can take a while, and the page stays grey until it finishes. The
 browser preview stops when you close that file, when you type `:view-preview
 off`, or when you quit. The file must have a name; save a new buffer first.
+
+### The Markdown preview
+
+A Markdown file's preview is set by yumete itself, as VS Code's Markdown
+preview is: proportional type in your system's fonts, real heading sizes,
+tables with lines, code in its language's colours, formulas, images (paths
+from the file's folder), footnotes at the end, task lists, quotes, `:::`
+containers and GitHub alerts. It is drawn in your theme's colours, light or
+dark, and follows `:theme` and `:theme-mode`.
+
+It is a preview tab like a Typst file's, "Preview notes.md": `:view-preview
+on` opens it to the right of the text, `:q` in its window closes the window,
+`:bc` on it or `:view-preview off` closes it, a session keeps it, and each
+Markdown file can have its own.
+
+It shows the unsaved text, laid out again a moment after you stop typing,
+and follows the cursor: the line you are on stays a third of the way down
+the preview while you are in that file, and the preview keeps its place
+while you are anywhere else.
+
+Inside it, `j` `k` scroll a line of the terminal, `C-d` `C-u` half a screen,
+`C-f` `C-b` (and `PageDown` `PageUp`) a screen, `gg` `G` the top and the end.
+A Markdown page is one long page, so `J`, `K` and `5G` do nothing there.
+`:`, `C-w`, `Space`, `C-o` and `C-i` work as anywhere else.
+
+The type is set to the terminal's: a cell 20 pixels tall gives a 16-pixel
+body, a Retina terminal twice that. A document written in Traditional Chinese
+is set in a Traditional face (PingFang TC, Noto Sans CJK TC), one in Japanese
+in a Japanese face; front matter `lang: zh-Hant` or `lang: ja`, or
+`<span lang="ja">…</span>` around a phrase, says so where the text cannot.
+Adjacent full-width punctuation gives up its blank half, as Chinese
+typesetting squeezes `。」` and `（「`.
+
+It needs a terminal that draws pictures (Ghostty or kitty). Elsewhere
+`:view-preview on` opens the browser's HTML preview and says why;
+`:view-preview-window` says why and opens nothing.
 
 ## Focus and typewriter
 

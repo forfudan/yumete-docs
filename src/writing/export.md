@@ -106,6 +106,7 @@ ruby settings apply, as they do in the editor.
 
 ## Seeing it before you export
 
-`:view-preview` shows the typeset result while you write: a Typst page in a
-window beside the text, or an HTML export of a Markdown file in a browser. See
+`:view-preview` shows the typeset result while you write, in a preview tab
+beside the text: a Typst page set by tinymist, or a Markdown file set by
+yumete itself. See
 [The page](page.md#preview-in-a-real-typesetter-view-preview).

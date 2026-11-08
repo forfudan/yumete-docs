@@ -33,6 +33,7 @@
 | `[editor] modeline` | `true` | **read vim modelines** — vim: set ft=… ts=…: in the first or last five lines of a file sets its type, indentation and hard-wrap width |
 | `[editor] maths_preview` | `true` | **maths preview** — while the cursor is in a formula, a popup below shows it typeset; needs Ghostty or kitty, and the typst command for Typst formulas |
 | `[editor] preview_fit` | `"width"` | **page window fit** — how the page window draws the page: as wide as the window and scrolled to the cursor, or the whole page (`width` width, `page` whole page) |
+| `[editor] preview_theme` | `false` | **page window in theme colours** — the preview's paper in the background colour and its black in the text colour, in dark themes too; off, the page as printed |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
 | `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
 | `[editor] indent_guides_character` | `"│"` | **guide character** — the character the guides are drawn with, one cell wide |
