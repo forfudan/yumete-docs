@@ -151,7 +151,7 @@ language server's `config`, for the servers yumete starts, written as that langu
 whole server list; the rest of that file is listed as not carried over. Pasting the file as it is
 does not work, because helix's `[editor]` names are not yumete's and a name
 yumete does not know stops the whole file. See
-[Bringing a config from helix or LazyVim](../guide/configuration.md#bringing-a-config-from-helix-or-lazyvim).
+[Bringing a config from helix, vim, Neovim or LazyVim](../guide/configuration.md#bringing-a-config-from-helix-vim-neovim-or-lazyvim).
 
 ## What yumete adds
 

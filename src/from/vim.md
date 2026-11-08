@@ -188,6 +188,52 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 `Backspace`, is on by default. `:which-wrap hl` sets it for this session and
 `:which-wrap off` clears it.
 
+## Your vim or Neovim config
+
+`ye --import vim` reads your vimrc, and `ye --import nvim` your Neovim
+config, by running the editor headless on a copy of it (see
+[Bringing a config](../guide/configuration.md#bringing-a-config-from-helix-vim-neovim-or-lazyvim)).
+What comes over:
+
+- **Settings you changed**: `number` and `relativenumber` (as
+  `line_numbers`), `tabstop`, `shiftwidth`, `expandtab`, `textwidth`, the
+  first `colorcolumn` (as `ruler`, `+1` counted from `textwidth`),
+  `scrolloff`, `wrap`, `ignorecase` with `smartcase`, `whichwrap`,
+  `modeline`, `fixendofline`, `autoread`, `ambiwidth`, `pumheight` and
+  Neovim's `mousescroll`. A setting left at the editor's default is not
+  written, even where yumete's default differs.
+- **The colour scheme**, when yumete has its family (tokyonight, catppuccin,
+  gruvbox, github, onedark, dracula, monokai), light or dark from its name or
+  from `background`.
+- **`yank_flash`**, when a `TextYankPost` autocommand mentions yanking (the
+  line says so), and `indent_guides` when indent-blankline is loaded.
+- **Maps**, under `[keys.vim.normal]`, `[keys.vim.select]` (vim's Visual
+  mode) and `[keys.vim.insert]`, so they hold under the vim keys only. A map
+  whose right side is a run of keys becomes an `@` run; one to an Ex command
+  yumete has becomes that command (`:sp` becomes `:hsplit`, `:bd`
+  `:buffer-close`); `:Telescope find_files`, `:Neotree toggle`, the
+  language-server functions (`vim.lsp.buf.definition`) and a few dozen more
+  become yumete's own action. With a Space leader, `<leader>ff` becomes
+  `[keys.vim.normal.space.f] f`, its description the menu's label. A group
+  key that was one of yumete's (`Space f`, the file picker) is taken over, as
+  in Neovim, and listed under `# Takes over yumete's keys:` with what yumete
+  had there (`Space w` is the window group, which stays on `C-w`). With
+  another leader the map is a run, `",w" = ":write"`, its description a
+  comment.
+- A deleted Neovim `Y` brings vim's `Y` back (`"@yy"`).
+
+What is listed instead, one line a map: a map to a Lua function of your
+own, an expression map, a plugin's own key (`<Plug>`), keys yumete cannot
+bind (`<Esc>`, `<F5>`), a run of keys in Insert mode, Operator-pending,
+command-line and terminal maps, per-language `FileType` settings, and any
+option yumete has no counterpart for. A map that already does in yumete what
+it does in vim is counted, not written.
+
+An `@` run presses yumete's vim keys, not your own maps: a `nmap` that relied
+on another map of yours loses it. A `[keys.vim.normal]` line holds in Visual
+mode too, as every Normal-mode line does, so an imported `nnoremap Q <Nop>`
+also takes Visual `Q` away.
+
 ## What is not there
 
 - A macro is written in its register as helix writes it: `"ap` after `qaihello<Esc>q`

@@ -94,25 +94,36 @@ so at startup. `[language.*]` and `[lsp.*]` are allowed in a project file:
 they never pass through a shell, and each placeholder such as `{file}` is handed
 to the program as a single argument.
 
-## Bringing a config from helix or LazyVim
+## Bringing a config from helix, vim, Neovim or LazyVim
 
 `ye --import` writes another editor's config into yumete's, once:
 
 | Command | What it writes |
 | --- | --- |
 | `ye --import helix` | your helix `config.toml`: the keys, the `[editor]` settings yumete has, and the theme when yumete has one like it |
-| `ye --import lazyvim` | LazyVim's `Space` menu, the config on [Coming from LazyVim](../from/lazyvim.md) |
+| `ye --import vim` | your vimrc: the settings, colour scheme and maps that translate for certain (see [Coming from vim](../from/vim.md#your-vim-or-neovim-config)) |
+| `ye --import nvim` | your Neovim config, the same way; a LazyVim config gets the LazyVim import |
+| `ye --import lazyvim` | LazyVim's `Space` menu, the config on [Coming from LazyVim](../from/lazyvim.md), with your own maps and options on top |
 
-Nothing of the other editor runs. helix's file is read as it is written, and
-LazyVim is only recognised, by its `lazyvim.json`, its `lazy-lock.json` or the
-starter's `lua/config/lazy.lua`; your own Lua is not read.
+helix's file is read as it is written, and nothing runs. vim, Neovim and
+LazyVim can only say what a config sets by running it, so for those yumete
+starts your own editor headless, on a copy of its config in a temporary
+directory, reads what it set, and removes the copy. Any code in your config
+runs there, as it does each time you open that editor, but your config, your
+plugins and their lock files are never written to. Whatever your editor starts
+while it runs, such as a plugin manager's `git fetch`, is stopped with it (on
+Windows only the editor itself is stopped). It needs Neovim 0.9 or Vim 9.0,
+and gives up after 10 seconds: a config that asks a question, or a plugin
+manager that starts downloading, would otherwise never end.
 
 If you have no global config yet, the import becomes it. If you have one, the
 import is written beside it as `config.imported.toml`, and you copy what you
 want across. The file starts with where it came from, and ends with a
 `# Not carried over:` list: each key, setting or file that did not come
 over, and why, such as a helix command yumete does not have or a key it
-cannot bind. Nothing reads the other editor's files again after this.
+cannot bind. Only what you changed from your editor's own defaults comes
+over, and only what yumete can do the same way: when in doubt a line is
+listed, not written. Nothing reads the other editor's files again after this.
 
 ## The settings panel
 
