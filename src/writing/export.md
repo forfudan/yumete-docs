@@ -111,6 +111,7 @@ A page is vertical when `[export] vertical` is on, or with the word
 | `50%` | turned as one | turned as one |
 | `$x$`, `$\frac12$` | turned | upright |
 | `$x^2+1$` | turned | turned |
+| `` `count` ``, `` `取值(x)` `` (code) | turned whole | turned whole |
 
 `turn` turns every run of half-width letters and digits on its side, with
 the marks joined to it, so `5%` and `don’t` turn as one piece. `jlreq` follows
@@ -132,7 +133,14 @@ on one line; a long one wraps, so the table is never taller than a column.
 **A picture alone in its paragraph is a figure**. The picture stays upright,
 and its text becomes a caption beside it.
 
-**Code blocks stay horizontal.**
+**Code is turned on its side whole**, Chinese in it too: it is
+verbatim, so nothing in it stands upright and its columns stay lined up.
+Inline code turns as one word under `turn` and `jlreq` alike. In a code
+block each line runs down the page and the next is to its left; a line
+longer than the column wraps at the foot of the column and goes on two
+characters in, after a small hook. The page has no fixed column length,
+so where a line wraps follows the window, as the columns of text do.
+Copying from the page gives the code exactly as written.
 
 ## Formulas
 
