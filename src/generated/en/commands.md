@@ -191,7 +191,7 @@
 | `:run` | `<名字>` | run the command configured for this language |
 | `:markdown-footnote` |  | footnote: next free number, with its note created |
 | `:markdown-footnote-inline` |  | an inline note ^[…], kept in place |
-| `:settings` |  | settings page, each item explained; :w saves |
+| `:settings` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it |
 | `:resume` |  | resume this directory's last session (adds files, closes none) |
 | `:recent-files` |  | recent files in this project |
 | `:recent-files-global` |  | recent files in all projects |

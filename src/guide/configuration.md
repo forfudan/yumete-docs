@@ -129,76 +129,93 @@ listed, not written. Nothing reads the other editor's files again after this.
 
 `:settings` (short: `:set`) opens every setting on one full page, each with its
 name and a line saying what it does. You do not need to know what a key is
-called, or which section it lives in.
+called, or which section it lives in. `:settings editor.scrolloff` opens it on
+that setting; `Tab` on the `:` line completes the names.
 
 ```text
- settings [global]                               ~/.config/yumete/config.toml
+ settings   global   project                    ~/.config/yumete/config.toml
 ──────────────┬───────────────────────────────────────────────────────────────
-  layout      │ layout                        [across]
-  marks       │ column length                 0
-  interface   │ indent                        2
-  colours     │ measure                       0
-  input       │ ruler                         40
-  editing     │ soft wrap                     [x]
-  files       │ hanging punctuation           [ ]
-  keys        │
-              ├───────────────────────────────────────────────────────────────
-              │  cells at the head of a paragraph; the Chinese convention is 2
+  layout      │layout
+  marks       │ layout                    [across]                     factory
+  interface   │*column length             32                            global
+  colours     │ column gap                0                            factory
+  input       │ indent                    2               project (global too)
+  editing     │ …
+  files       ├─ ↓ 79 more ────────────────────────────────────────────────────
+  keys        │  characters in a vertical column; about 32 reads well in prose
+              │  a number, 0, or 8 to 64; factory 0 (0 = as tall as the window)
               │
               │  factory 0
-              │  global  2   ← in force
+              │  global  32   ← in force
               │  project unset
 ──────────────┴───────────────────────────────────────────────────────────────
-  hl left/right, jk move, space toggle, i edit, c retype, d drop, e open it,
-  Tab which file, :w save, :q leave
-
+  jk move, / search, Enter change, Space toggle, r reset, u undo, C-r redo,
+  p paste, y copy, Tab global/project, e open file, q close
 ```
 
-The bottom row is the command line: `:w` and `:q` are typed there, and what
-the panel says appears there, so the key hints above it stay in view.
+The settings are one list; the group names are headings in it, and the column
+on the left shows which group you are in (click a group to go to it). The
+groups follow what a setting changes on screen, not the TOML section it lives
+in. Each row ends with where its value comes from — factory, global or
+project — and says so when the other file sets it too. A `*` marks the rows
+the file you are editing sets.
 
-The groups on the left follow what a setting changes on screen, not the TOML
-section it lives in.
+Under the list, the line for the setting under the cursor says what it does,
+what it takes (a switch, a number and its range, the choices, or text), its
+factory value, and what `0` means where it means something; then its three
+layers. The key row at the bottom lists only the keys that work at that moment.
 
 | Key | What it does |
 | --- | --- |
-| `h` `l` | move between the groups on the left and the settings on the right |
-| `j` `k` | move up and down. `g` and `G` go to the top and bottom |
-| `Space` | flip a switch, step to the next choice, or add one to a number |
-| `i` | type a value, starting from the one there. `Enter` keeps it, `Esc` leaves the old one, `Backspace` deletes a character |
-| `c` | type a value from empty |
-| `d` | remove this setting from the file, so the layer below applies again |
-| `Tab` | switch the file your edits go to: global or project |
-| `e` | open that file in the editor |
-| `:w` | save |
-| `:q` | close the panel. `:wq` saves first |
+| `j` `k` | move down and up, through every group. `gg` and `G` go to the top and bottom |
+| `/` | search every setting by its name, its description or its TOML key; the list narrows as you type. `Enter` keeps the search, `Esc` in the list clears it |
+| `Enter` | change the setting: a switch flips; a choice opens a list with what each value means (`j` `k`, `Enter`, `Esc`), and a theme is shown as you move through the list; a number or text opens the editor on the bottom row |
+| `Space` | flip a switch or step to the next choice; on a number or text, the same as `Enter` |
+| `r` | reset: remove this setting from the file, so the layer below applies again |
+| `u` / `C-r` | undo / redo a change; undo writes the file back |
+| `p` | put the register in place of the value, in the editor, for `Enter` to keep. `"a` names a register, `"+p` is the system clipboard. A paste from the terminal (⌘V) does the same |
+| `y` | copy the value |
+| `Tab` | switch the file your changes go to: global or project |
+| `e` | open that file in the editor, at the setting's line |
+| `q` | close the panel. `Esc` closes it too, once it has nothing else to close: a list, a page, a search |
+
+The editor on the bottom row is the `:` line's own: the arrow keys, `Home`,
+`End`, `C-a`, `C-e`, `C-w`, `C-u`, a paste at the caret, and `C-^` for the
+input method. `Enter` keeps the value when it is one yumete takes, and writes
+it; otherwise the value stays on the line and the reason, with the values or
+the range it takes, appears under the setting. `Esc` leaves the old value.
+
+The panel takes no `:` commands: `:` only says so.
 
 ### Which file, which layer
 
-The title says which file an edit goes to, global or project, and the path on
-the right is that file. A `+` after the path means the file does not exist yet;
-saving creates it. The panel opens on the global file; press `Tab` for the
-project one.
+Both files are tabs at the top; the lit one is where changes go, and the path
+on the right is that file. A `+` after the path means the file does not exist
+yet; the first change creates it. The panel opens on the global file; press
+`Tab` for the project one.
 
-The block under the list explains the setting under the cursor and shows its
-three layers: the factory default, the global file, and the project file. The
-one in force is marked. If the project file sets a value and you change it in
-the global file, the line on screen does not move, because the project value
-still wins. The panel says so under the setting.
+If the project file sets a value and you change it in the global file, the row
+does not move, because the project value still wins. The panel says so under
+the setting.
 
 ### Saving
 
-Nothing takes effect until you save with `:w`. Saving writes the file and
-applies it at once.
+There is nothing to save: every change you confirm is written to the file at
+once and takes effect, and the bottom row names the file. `u` takes a change
+back by writing the file as it was, and `C-r` writes it again.
 
 The panel changes only the lines it needs to. Your comments, the order of your
-settings and your blank lines stay as they were, so a config kept in git shows
-a one-line diff. If the file changed on disk while the panel was open, `:w`
-edits the current copy on disk, so it does not undo someone else's change.
+settings, your blank lines and keys the panel does not know stay as they were,
+so a config kept in git shows a one-line diff. Taking away the last setting of
+a table takes its `[table]` line too. If the file changed on disk while the
+panel was open, the change is made on the copy on disk, so it does not undo
+someone else's.
 
-When the file holds a key yumete does not know, saving comments that line out
-and leaves a note beside it. An unknown key would otherwise stop the whole file
-from applying (see [below](#when-the-config-is-wrong)).
+When a file cannot be read — a TOML mistake, or a key yumete does not take —
+the panel says so at the top, with the line and the parser's message. Its
+settings are shown as unknown, since none of them is in force, and the panel
+does not write it: press `e` to open it and fix it (see
+[below](#when-the-config-is-wrong)).
 
 ### What the panel does not show
 
@@ -206,8 +223,8 @@ Some settings are not on the panel: the theme colours, `[keys.normal]`,
 `[syntax]`, `[language.*]`, `[lsp.*]`, `[ime] data_dirs`,
 `[editor] usage_groups` and `[editor] screenshot`. Write those by hand;
 [Settings](../reference/settings.md#not-on-the-panel) says which page explains
-each. `e` on the panel opens the file it is editing, so you do
-not have to remember where it lives.
+each. `e` on the panel opens the file it is editing at the setting's line, so you
+do not have to remember where it lives.
 
 ## Reloading
 
