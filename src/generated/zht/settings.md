@@ -114,6 +114,14 @@
 | `[editor] autosave` | `true` | **自動備份** — 未保存時在文件旁保留副本，崩潰後可恢復 |
 | `[editor] session` | `false` | **恢復會話** — 不帶文件名啓動時：打開空白文檔，還是恢復上次的文件 |
 | `[editor] remember` | `true` | **記住打開過的文件和位置** — 關閉後不再記録或讀取：各文件上次的位置、最近的文件和項目、上次的會話 |
+| `[export] vertical` | `false` | **豎排導出** — HTML 與 EPUB 豎排，從右往左；與編輯區是否豎排無關 |
+| `[export] hanging` | `false` | **導出標點懸掛** — 句讀落在行末時掛到版心外 |
+| `[export] ruby_html` | `true` | **導出 HTML 注音** — 稿子裏的 `<ruby>` 注音導出爲注音 |
+| `[export] ruby_typst` | `true` | **導出 Typst 注音** — 稿子裏的 `#ruby` 注音導出爲注音 |
+| `[export] ruby_markdown` | `true` | **導出 Markdown 注音** — Markdown 稿子裏的 `{這些\|zhèxiē}` 導出爲注音 |
+| `[export] page` | `"a5"` | **導出紙張** — 打印用的紙：a4 a5 a6 b5 b6 letter 16開 32開 大32開，或 130x184 這樣的毫米數 |
+| `[export] vertical_latin` | `"turn"` | **豎排導出的西文** — 豎排的 HTML 與 EPUB 裏，半角字母與數字怎麽排；不影響終端裏的豎排 (`turn` 一律轉向, `jlreq` 照 JLREQ 與 clreq) |
+| `[export] font_family` | `'-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif'` | **導出字體** — HTML 與 EPUB 導出要的字體，寫法同 VS Code 的 markdown.preview.fontFamily |
 
 ### 鍵位
 

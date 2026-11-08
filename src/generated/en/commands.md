@@ -198,7 +198,7 @@
 | `:recent-projects` |  | recent projects |
 | `:tutor` |  | tutorial: copies the lesson into a file of your own to learn by editing |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | keys and commands, opened as a searchable file |
-| `:export` `:ex` | `html｜typst｜csv｜tsv <path>` | export as html or typst, keeping the layout |
+| `:export` `:ex` | `html｜typst｜epub｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<path>` | export as html, typst or epub |
 | `:diff` | `<path>` | show changes, by word rather than by line |
 | `:lsp-rename` | `<新名>` | rename the symbol under the cursor everywhere, via the language server |
 | `:git-show` | `<提交>` | open a committed version read-only in the other window |
@@ -210,5 +210,6 @@
 | `:ruby-auto-rare` |  | annotate only characters missing from the mainland, Taiwan and Hong Kong common lists |
 | `:ruby-html` | `on｜off` | recognise `<ruby>` |
 | `:ruby-typst` | `on｜off` | recognise `#ruby(…)` |
-| `:ruby-format` | `html｜typst` | rewrite the readings in another syntax |
+| `:ruby-markdown` | `on｜off` | recognise `{漢字\|かんじ}` |
+| `:ruby-format` | `html｜typst｜markdown` | rewrite the readings in another syntax |
 | `:s/pat/rep/` |  | substitute in the selection; `%s` the file, `1-40s` a range, `1,5,9s` listed lines; flags g i f c n t y j |

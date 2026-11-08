@@ -198,7 +198,7 @@
 | `:recent-projects` |  | 最近打開的項目 |
 | `:tutor` |  | 教程：把課文複製成你自己的文件，邊改邊學 |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | 以可搜索的文件打開按鍵與命令列表 |
-| `:export` `:ex` | `html｜typst｜csv｜tsv <路徑>` | 導出爲 html 或 typst，保留排版 |
+| `:export` `:ex` | `html｜typst｜epub｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<路徑>` | 導出爲 html、typst 或 epub |
 | `:diff` | `<路徑>` | 查看改動：按詞比較，而非按行 |
 | `:lsp-rename` | `<新名>` | 通過語言服務器重命名光標下的符號(各處一起改) |
 | `:git-show` | `<提交>` | 在另一個窗口以只讀方式打開已提交的版本 |
@@ -210,5 +210,6 @@
 | `:ruby-auto-rare` |  | 只注陸、臺、港常用字表都没有的字 |
 | `:ruby-html` | `on｜off` | 識别 `<ruby>` |
 | `:ruby-typst` | `on｜off` | 識别 `#ruby(…)` |
-| `:ruby-format` | `html｜typst` | 把注音改寫成另一種寫法 |
+| `:ruby-markdown` | `on｜off` | 識别 `{這些\|zhèxiē}` |
+| `:ruby-format` | `html｜typst｜markdown` | 把注音改寫成另一種寫法 |
 | `:s/pat/rep/` |  | 替換：默認在選區内；`%s` 全文、`1-40s` 指定範圍、`1,5,9s` 指定行；標誌 g i f c n t y j；分隔符可換 |

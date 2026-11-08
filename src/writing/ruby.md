@@ -18,22 +18,30 @@ drawn in the text, beside the mark they correct. See
 
 ## Writing a reading
 
-A reading is written into the file as markup. yumete reads two kinds. HTML
+A reading is written into the file as markup. yumete reads three kinds. HTML
 ruby, for Markdown, HTML and plain text:
 
 ```html
 <ruby>漢<rt>hàn</rt></ruby>
 ```
 
-and Typst's `ruby` call, for Typst:
+Typst's `ruby` call, for Typst:
 
 ```typst
 #ruby("漢", "hàn")
 ```
 
-A browser shows the HTML form as ruby, and Typst's compiler typesets the Typst
-form, so the file stays useful outside yumete. Both kinds are read in every
-file, and one file may mix them.
+and, in Markdown, the brace form that Denden Markdown, Vivliostyle (VFM) and
+markdown-it-ruby use:
+
+```markdown
+{漢字|hàn zì}
+```
+
+A browser shows the HTML form as ruby, Typst's compiler typesets the Typst
+form, and Markdown tools that know the brace form turn it into HTML ruby, so
+the file stays useful outside yumete. The HTML and Typst kinds are read in
+every file, the brace form in Markdown files; one file may mix them.
 
 One reading can cover a whole word, or each character can have its own:
 
@@ -41,6 +49,19 @@ One reading can cover a whole word, or each character can have its own:
 <ruby>漢字<rt>hàn zì</rt></ruby>
 <ruby>漢<rt>hàn</rt></ruby><ruby>字<rt>zì</rt></ruby>
 ```
+
+```markdown
+{漢字|hàn zì}
+{漢字|hàn|zì}
+```
+
+In the brace form, bars give each character its own reading when there are
+exactly as many readings as characters. With any other count the parts are
+read together as one reading over the word. To write a brace or a bar as
+text, put a backslash before it: `\{`, `\|`. Nothing inside backticks or
+inside `$…$` is read as a reading, and `{|` never starts one, so
+`foo{|bar| bar.buz}` stays as it is. In a table, a reading's bar does not
+split the cell: `| {雨|yǔ} | 76 |` has two cells.
 
 The second form, one group per character, is how Chinese ruby is usually set.
 
@@ -63,10 +84,11 @@ to edit, as with any other Markdown mark. To start in `full`, set
 `show_ruby = true` under `[editor]`. `:render full` (see [The page](page.md))
 lays out readings along with all the other markup.
 
-To stop reading one kind of markup, `:ruby-html off` or `:ruby-typst off`.
-`:ruby-html on` or `:ruby-typst on` reads it again and lays it out; with no
-word, either command turns its kind round. Each says which kinds are being read. Both kinds are
-read from the start.
+To stop reading one kind of markup, `:ruby-html off`, `:ruby-typst off` or
+`:ruby-markdown off`. `on` reads it again and lays it out; with no word, the
+command turns its kind round. Each says which kinds are being read. HTML and
+Typst are read from the start, and the brace form in Markdown files only;
+`:ruby-markdown on` reads it in any file until the next `:ruby-render`.
 
 ### On a horizontal page
 
@@ -128,6 +150,9 @@ To give each character its own reading, split the reading with `|`, one part
 per character: `hàn|zì` on 漢字 writes two groups, while `hàn zì` writes one
 reading for the word.
 
+A reading is corrected in the kind of markup it was written in. A brace
+reading with one reading per character opens as `hàn|zì`.
+
 `:ruby` has no key of its own. Its action name is `ruby`, so you can bind it to
 one; see [Key remapping](../guide/remapping.md).
 
@@ -136,6 +161,7 @@ one; see [Key remapping](../guide/remapping.md).
 ```text
 :ruby-format html       rewrite every reading in the file as HTML
 :ruby-format typst      rewrite every reading as Typst
+:ruby-format markdown   rewrite every reading as braces, {漢字|hàn zì}
 ```
 
 Fenced code blocks and the front matter at the top of the file are left as
@@ -151,7 +177,8 @@ be rewritten.
 
 `:ruby-auto` goes through the selection word by word, or the whole file when
 nothing is selected, and writes in every reading it can find. It writes Typst
-markup in a `.typ` file and HTML everywhere else, one group per character. The
+markup in a `.typ` file and HTML everywhere else, or braces in a Markdown
+file where only `:ruby-markdown` is on, one group per character. The
 status line says how many words it annotated, and one `u` takes them all back.
 
 It needs Yume's 拆分表, the table `:yume-scheme` loads (see
