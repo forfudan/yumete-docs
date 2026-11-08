@@ -1,8 +1,8 @@
 # Settings
 
 Settings live in `~/.config/yumete/config.toml`, and a project can override them in
-`.yumete/config.toml`. `:settings` opens all of them as a page you can edit and save
-with `:w`; `:reload-config` reads the files again after you edit them by hand. See
+`.yumete/config.toml`. `:settings` opens all of them as a page you can edit, each change
+saved as you make it; `:reload-config` reads the files again after you edit them by hand. See
 [Configuration](../guide/configuration.md) for how the files work.
 
 The sections below explain the settings that need more than a line. The list of every
