@@ -479,8 +479,13 @@ so `:render`, `tatechuyoko` and the column length do not reach it.
   head. A table is read as columns from the right, the header row on the
   right, its caption (`Table: …` just above or below) beside it. A picture
   alone in its paragraph stands upright with its text as a caption to its
-  left. A reading in ruby is drawn to the right of its characters. Code stays
-  horizontal, in boxes as tall as the column.
+  left. A reading in ruby is drawn to the right of its characters. Code is
+  turned on its side whole, Chinese in it too: inline code as a turned
+  word, never upright, under `turn` and `jlreq` alike; a code block in its
+  colours and on its ground, each line running down the page and the next
+  to its left. A line longer than the column goes on in the next one, two
+  characters in, after a small hook (↳ turned with the line), so nothing is
+  cut off and nothing has to be scrolled.
 
 It follows the cursor, the line you are on a third of the way from the right.
 `j` `k`, `C-d` `C-u` and `C-f` `C-b` move along the page (`j` to the left),
