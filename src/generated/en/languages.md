@@ -23,4 +23,5 @@
 | toml | `toml` | `taplo`, `tombi` |
 | tsx | `tsx` | `typescript-language-server` |
 | typescript | `typescript` | `typescript-language-server` |
+| typst | `typst` | `tinymist` |
 | yaml | `yaml` | `yaml-language-server`, `ansible-language-server` |
