@@ -78,7 +78,7 @@ zong_length = 24     # characters to a column
 | `[syntax]` | which markup a file is read as, by extension or by file name |
 | `[language.<name>]` | the programs that format or preview a kind of file |
 | `[lsp.<name>]` | the language server for a kind of file. See [Language servers](./languages.md) |
-| `[export]` | the paper size for printing |
+| `[export]` | how an export is set: the paper, vertical or not, ruby, fonts. See [Export](../writing/export.md) |
 
 ### What a project file cannot set
 
@@ -192,7 +192,7 @@ from applying (see [below](#when-the-config-is-wrong)).
 ### What the panel does not show
 
 Some settings are not on the panel: the theme colours, `[keys.normal]`,
-`[syntax]`, `[language.*]`, `[lsp.*]`, `[export] page`, `[ime] data_dirs`,
+`[syntax]`, `[language.*]`, `[lsp.*]`, `[ime] data_dirs`,
 `[editor] usage_groups` and `[editor] screenshot`. Write those by hand;
 [Settings](../reference/settings.md#not-on-the-panel) says which page explains
 each. `e` on the panel opens the file it is editing, so you do

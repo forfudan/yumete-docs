@@ -114,6 +114,14 @@
 | `[editor] autosave` | `true` | **autosave** — keep a copy beside unsaved files to recover from a crash |
 | `[editor] session` | `false` | **session** — when started with no file: a blank page, or the files that were open last time |
 | `[editor] remember` | `true` | **remember files and places** — when off, none of this is saved or read: the line each file was left on, recent files and projects, the last session |
+| `[export] vertical` | `false` | **vertical export** — HTML and EPUB set vertically, right to left, whatever the editing window shows |
+| `[export] hanging` | `false` | **hanging punctuation in export** — a stop at the end of a line hangs outside the text block |
+| `[export] ruby_html` | `true` | **HTML ruby in export** — `<ruby>` in the source is exported as ruby |
+| `[export] ruby_typst` | `true` | **Typst ruby in export** — `#ruby` in the source is exported as ruby |
+| `[export] ruby_markdown` | `true` | **Markdown ruby in export** — `{漢字\|かんじ}` in a Markdown source is exported as ruby |
+| `[export] page` | `"a5"` | **export paper** — the paper a print is set on: a4 a5 a6 b5 b6 letter 16開 32開 大32開, or millimetres such as 130x184 |
+| `[export] vertical_latin` | `"turn"` | **Latin in vertical export** — how half-width letters and digits are set in a vertical HTML or EPUB export; the terminal's vertical page is not affected (`turn` all turned, `jlreq` as JLREQ and clreq) |
+| `[export] font_family` | `'-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif'` | **export fonts** — the fonts an HTML or EPUB export asks for, written as VS Code's markdown.preview.fontFamily |
 
 ### keys
 

@@ -174,6 +174,11 @@ The vertical forms live at U+FE10–FE48. Fonts with CJK coverage have them:
 Source Han and Noto CJK, Sarasa Gothic, LXGW WenKai Mono. A font with only Latin
 glyphs shows boxes instead.
 
+An HTML or EPUB export does not follow `:render`. It leaves the punctuation
+as you wrote it and lets the font turn it, except the curly quotes on a
+Chinese page, which become `『』` and `「」` there. See
+[Export](export.md#a-vertical-page).
+
 ### Line breaking
 
 A column does not begin with a mark that closes something (`。` `，` `、` `」`
@@ -209,6 +214,9 @@ The default is `4`, which covers years (`1997`) and chapter numbers
 
 The cursor still moves one character at a time. Press `j` on `1997` and Heng
 and Chr move four times while the cell stays boxed whole.
+
+This setting is for the screen. The HTML and EPUB exports set Latin text by
+`[export] vertical_latin` instead. See [Export](export.md#a-vertical-page).
 
 ### Paper ticks
 
