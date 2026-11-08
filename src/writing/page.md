@@ -359,6 +359,7 @@ to a real typesetter and shows the result beside the text, or in your browser.
 :view-preview-browser      the browser only
 :view-preview-fit page     show the whole page (width is the default)
 :view-preview-theme on     draw the page in the theme's colours
+:view-preview-vertical off keep the Markdown preview horizontal when the text is vertical
 ```
 
 | File | What happens |
@@ -397,6 +398,7 @@ Inside a preview, the keys are a PDF reader's under vim:
 | `C-d` `C-u` | half a screen |
 | `C-f` `C-b` | a screen |
 | `gg` `G` | the top, the bottom of the page |
+| `h` `l` | a column left, right (a vertical Markdown preview) |
 | `J` `K` | the next, the previous page |
 | `5G` | page 5 |
 | `gn` `gp` `ga` | the next, the previous, the last tab |
@@ -454,6 +456,38 @@ in a Japanese face; front matter `lang: zh-Hant` or `lang: ja`, or
 `<span lang="ja">…</span>` around a phrase, says so where the text cannot.
 Adjacent full-width punctuation gives up its blank half, as Chinese
 typesetting squeezes `。」` and `（「`.
+
+#### Set vertically
+
+While the text window is vertical (`:vertical`), the Markdown preview is
+vertical too: columns from the right, the page going on to the left. It is set
+as the vertical export sets a page, not as the editing window shows the draft,
+so `:render`, `tatechuyoko` and the column length do not reach it.
+
+- Chinese characters stand upright, punctuation in its vertical forms; in a
+  Chinese text `“”` become `『』` and `‘’` become `「」`.
+- Latin letters and digits go as `[export] vertical_latin` says. `turn` (the
+  default) turns every run on its side with the marks joined to it (`5%`,
+  `don’t`), and every inline formula. `jlreq` turns words, stands capitals and
+  single letters upright one to a square, one digit upright, two digits across
+  in one square, longer numbers turned; `$x$` and `$\frac12$` stand upright.
+- No stop or closing bracket begins a column, no opening bracket ends one, and
+  `——` or `……` is never split. A stop that does not fit takes the character
+  before it to the next column, or hangs below the column under `[export]
+  hanging`. Every column of a paragraph but its last reaches the foot.
+- A display formula is turned, on a column of its own, two characters from its
+  head. A table is read as columns from the right, the header row on the
+  right, its caption (`Table: …` just above or below) beside it. A picture
+  alone in its paragraph stands upright with its text as a caption to its
+  left. A reading in ruby is drawn to the right of its characters. Code stays
+  horizontal, in boxes as tall as the column.
+
+It follows the cursor, the line you are on a third of the way from the right.
+`j` `k`, `C-d` `C-u` and `C-f` `C-b` move along the page (`j` to the left),
+`h` `l` a column to the left and to the right, `gg` `G` the start and the end.
+
+`:view-preview-vertical off`, or `[editor] preview_vertical = false`, keeps
+the preview horizontal whatever the text window does.
 
 It needs a terminal that draws pictures (Ghostty or kitty). Elsewhere
 `:view-preview on` opens the browser's HTML preview and says why;

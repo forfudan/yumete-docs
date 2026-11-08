@@ -131,6 +131,7 @@
 | `:view-preview-browser` | `on｜off` | 交給排版器排版，在瀏覽器中查看 |
 | `:view-preview-fit` | `width｜page` | 頁面窗口中頁面的大小：頁寬或整頁 |
 | `:view-preview-theme` | `on｜off` | 用主題配色顯示預覽頁面：紙爲背景色，黑字爲文字色；關閉則按印刷原樣 |
+| `:view-preview-vertical` | `on｜off` | 文字窗口豎排時，Markdown 預覽也豎排：從右往左一列一列，像豎排導出那樣 |
 | `:render` | `off｜basic｜full` | 渲染程度：源碼、着色、所見即所得 |
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行縮進：`off`/`basic`(保留段間空行)/`full`(隱藏段間空行)，或格數 |
 | `:indent-tab` | `spaces｜tab` | Tab 鍵輸入空格還是製表符(Shift-Tab 輸入另一種) |
