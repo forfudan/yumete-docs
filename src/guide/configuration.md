@@ -132,7 +132,9 @@ runs there, as it does each time you open that editor, but your config, your
 plugins and their lock files are never written to. git run by your config or
 a plugin manager stays inside the copy too: the copy has no `.git`, and git
 is not let climb to a repository the temporary directory happens to sit in.
-It needs Neovim 0.9 or Vim 9.0.
+A `NVIM_APPNAME` that Neovim would refuse (an absolute path, `..`, a
+leading `~`) is refused before anything is copied. It needs Neovim 0.9 or
+Vim 9.0.
 
 The copy follows links, with two exceptions so that it is always one finite
 tree. A link to a folder the config is already inside, such as
@@ -175,32 +177,38 @@ listed, not written. Nothing reads the other editor's files again after this.
 name and a line saying what it does. You do not need to know what a key is
 called, or which section it lives in. `:settings editor.scrolloff` opens it on
 that setting, and so does its name as the panel shows it, spaces and all, in
-either Chinese script (`:settings 首行缩进`); `Tab` on the `:` line completes
-the names.
+any of the interface's languages (`:settings first-line indent`,
+`:settings 首行缩进`); `Tab` on the `:` line completes the TOML paths.
 
 ```text
  settings   global   project                    ~/.config/yumete/config.toml
-──────────────┬───────────────────────────────────────────────────────────────
+──────────────┬─────────────────────────────────────────────────────────────────
   layout      │layout
-  marks       │ layout                    [across]                     factory
-  interface   │*column length             32                            global
-  colours     │ column gap                0                            factory
-  input       │ indent                    2               project (global too)
-  editing     │ …
-  files       ├─ ↓ 79 more ────────────────────────────────────────────────────
-  keys        │  characters in a vertical column; about 32 reads well in prose
+  marks       │ layout                 [horizontal]                     factory
+  interface   │ hjkl in vertical layo… [visual]                         factory
+  colours     │*column length          32                                global
+  input method│ column gap             0                                factory
+  editing     │ pages, vertical        1                                factory
+  files       │ pages, horizontal      1                                factory
+  keys        │*first-line indent      2                   project (global too)
+              │ text width             0                                factory
+              │ hard-wrap width        0                                factory
+              ├─ ↓ 87 more ─────────────────────────────────────────────────────
+              │  characters per column in vertical layout; prose reads well up
+              │  to about 32
               │  a number, 0, or 8 to 64; factory 0 (0 = as tall as the window)
               │
               │  factory 0
               │  global  32   ← in force
               │  project unset
-──────────────┴───────────────────────────────────────────────────────────────
-  jk move, / search, Enter change, Space toggle, r reset, u undo, C-r redo,
-  p paste, y copy, Tab global/project, e open file, q close
+──────────────┴─────────────────────────────────────────────────────────────────
+  jk move, hl group, / search, Enter change, Space toggle, r reset, u undo,
+  C-r redo, p paste, y copy, Tab global/project, e open file, q close
 ```
 
 The settings are one list; the group names are headings in it, and the column
-on the left shows which group you are in (click a group to go to it). The
+on the left shows which group you are in (`h` and `l`, or a click, go to
+another). The
 groups follow what a setting changes on screen, not the TOML section it lives
 in. Each row ends with where its value comes from — factory, global or
 project — and says so when the other file sets it too. A `*` marks the rows
@@ -209,12 +217,19 @@ the file you are editing sets.
 Under the list, the line for the setting under the cursor says what it does,
 what it takes (a switch, a number and its range, the choices, or text), its
 factory value, and what `0` means where it means something; then its three
-layers. The key row at the bottom lists only the keys that work at that moment.
+layers. The key row at the bottom changes with what you are doing: the list,
+a choice's list, a search, a value being typed.
+
+The mouse works too: a click on a group goes to it, a click on a row moves to
+it, a click on a value in a choice's list picks it (a click elsewhere puts
+the list away), and the wheel moves through the list. Nothing reaches the
+document behind the panel.
 
 | Key | What it does |
 | --- | --- |
 | `j` `k` | move down and up, through every group. `gg` and `G` go to the top and bottom |
-| `/` | search every setting by its name, its description or its TOML key; the list narrows as you type. `Enter` keeps the search, `Esc` in the list clears it |
+| `h` `l` | go to the group before or after, as the column on the left lists them; a search's groups only, while it is in force |
+| `/` | search every setting by its name, its description or its TOML key; the list narrows as you type, and the cursor lands on the setting the search names (`/theme` is the theme). `Enter` keeps the search, `Esc` in the list clears it |
 | `Enter` | change the setting: a switch flips; a choice opens a list with what each value means (`j` `k`, `Enter`, `Esc`), and a theme is shown as you move through the list; a number or text opens the editor on the bottom row |
 | `Space` | flip a switch or step to the next choice; on a number or text, the same as `Enter` |
 | `r` | reset: remove this setting from the file, so the layer below applies again |
@@ -223,11 +238,11 @@ layers. The key row at the bottom lists only the keys that work at that moment.
 | `y` | copy the value |
 | `Tab` | switch the file your changes go to: global or project |
 | `e` | open that file in the editor, at the setting's line |
-| `q` | close the panel. `Esc` closes it too, once it has nothing else to close: a list, a page, a search |
+| `q` | close the panel. `Esc` puts away a list, a page or a search, but never closes the panel |
 
 The editor on the bottom row is the `:` line's own: the arrow keys, `Home`,
 `End`, `C-a`, `C-e`, `C-w`, `C-u`, a paste at the caret, and `C-^` for the
-input method. The input method's 中/英 tag stands at the right of the row with room of
+input method. The input method's `[中 …]` or `[ABC]` tag stands at the right of the row with room of
 its own: a long value scrolls and the setting's name gives way before the
 tag would cover the value or the caret. `Enter` keeps the value when it is one yumete takes, and writes
 it; otherwise the value stays on the line and the reason, with the values or
@@ -270,7 +285,11 @@ settings, your blank lines and keys the panel does not know stay as they were,
 so a config kept in git shows a one-line diff. Taking away the last setting of
 a table takes its `[table]` line too. If the file changed on disk while the
 panel was open, the change is made on the copy on disk, so it does not undo
-someone else's.
+someone else's. Windows line endings and a byte-order mark are kept, the
+comment over a key that `r` takes out stays, and an inline table such as
+`flavor_items = { … }` is changed where it stands. A config that is a link
+to a file no longer there is not replaced by a file of its own: the panel
+says so and writes nothing.
 
 When a file cannot be read — a TOML mistake, or a key yumete does not take —
 the panel says so at the top, with the line and the parser's message. Its

@@ -85,10 +85,13 @@ to edit, as with any other Markdown mark. To start in `full`, set
 lays out readings along with all the other markup.
 
 To stop reading one kind of markup, `:ruby-html off`, `:ruby-typst off` or
-`:ruby-markdown off`. `on` reads it again and lays it out; with no word, the
-command turns its kind round. Each says which kinds are being read. HTML and
-Typst are read from the start, and the brace form in Markdown files only;
-`:ruby-markdown on` reads it in any file until the next `:ruby-render`.
+`:ruby-markdown off`. `on` reads it again and lays it out. With no word, the
+command turns round whether that kind is read: where it is read, at `basic`
+too, a bare `:ruby-markdown` stops reading it, and a second one reads it
+again and lays the readings out. Each says which kinds are being read. HTML
+and Typst are read from the start, and the brace form in Markdown files only;
+`:ruby-markdown on` reads it in any file until the next `:render` or
+`:ruby-render`.
 
 ### On a horizontal page
 

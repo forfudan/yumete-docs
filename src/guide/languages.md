@@ -204,7 +204,8 @@ only the command is left.
 
 `:align` lines up the selected lines on a sign, `=` when you give none, as mini.align's
 `=` does: the parts before it are padded to one width, with one space on either side
-of the sign, and a run such as `+=` or `=>` counts as one sign. `:align :` lines them up
+of the sign, or none round a full-width sign such as `：`, which is padded with
+full-width spaces, and a run such as `+=` or `=>` counts as one sign. `:align :` lines them up
 on a colon. Under helix's keys `s=` followed by `&` does the same with keys.
 
 `=` asks the language server to format the selection, as helix's does; one
@@ -221,14 +222,15 @@ format = { run = "rumdl check --fix {file}" }
 preview = { run = "tinymist preview --no-open {file}", kind = "server" }
 ```
 
-`format` is used by `:format`, `preview` by `:view-preview`, and any other name you give
+`format` is used by `:format`, `preview` by the browser preview (`:preview-browser`, or
+`:preview` where the page cannot be drawn beside the text), and any other name you give
 by `:run <name>`. `{file}`, `{dir}` and `{name}` are replaced with the file's path, its
 folder and its name. `kind` says how the command runs:
 
 | `kind` | Effect |
 | --- | --- |
 | `once` (default) | run it, then read the file again |
-| `server` | keep it running; `:view-preview off` stops it |
+| `server` | keep it running; `:preview off` stops it |
 | `filter` | send the text on standard input and replace it with the output; `u` undoes it |
 
 As with servers, the command is not passed to a shell.

@@ -158,6 +158,9 @@ yank_flash = true
 indent_guides = true
 ```
 
+`ye --import lazyvim` writes both, and writes one `false` when your own
+config turns LazyVim's off.
+
 If your `lazyvim.json` lists the `coding.mini-surround` extra, `ye --import lazyvim`
 also puts its keys on yumete's surround: `gsa`, `gsd` and `gsr` play vim-surround's
 `ys`, `ds` and `cs` (written `"@ys"` and so on under `[keys.normal]`), and `gsa` in

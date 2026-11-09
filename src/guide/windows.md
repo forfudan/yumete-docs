@@ -93,11 +93,12 @@ others share its room; the file stays open, changes and all. The keys go back to
 before this one, as in VS Code and tmux. If that window has closed too, they
 go to the window that takes the room, as in vim. In the last window `:q` works as usual (see
 [Saving and quitting](./files.md#saving-and-quitting)); a window showing a
-preview does not count, so `:q` in the last text window quits. `C-w o` keeps the
+preview is a window like any other, so beside one `:q` and `␣wq` close only
+the window you are in. `C-w o` keeps the
 window you are in and closes the rest.
 
 The tabs along the top are the open files, one each, whatever the windows show,
-and the previews (see [Preview in a real typesetter](../writing/page.md#preview-in-a-real-typesetter-view-preview)).
+and the previews (see [Preview in a real typesetter](../writing/page.md#preview-in-a-real-typesetter-preview)).
 The file of the window you are in is lit; a file another window shows is
 underlined. `:bc` closes a file: a window that was showing it goes back to the
 file it showed before (a new window starts with the history of the one it
