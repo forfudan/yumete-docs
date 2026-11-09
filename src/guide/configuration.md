@@ -129,11 +129,36 @@ LazyVim can only say what a config sets by running it, so for those yumete
 starts your own editor headless, on a copy of its config in a temporary
 directory, reads what it set, and removes the copy. Any code in your config
 runs there, as it does each time you open that editor, but your config, your
-plugins and their lock files are never written to. Whatever your editor starts
-while it runs, such as a plugin manager's `git fetch`, is stopped with it (on
-Windows only the editor itself is stopped). It needs Neovim 0.9 or Vim 9.0,
-and gives up after 10 seconds: a config that asks a question, or a plugin
-manager that starts downloading, would otherwise never end.
+plugins and their lock files are never written to. git run by your config or
+a plugin manager stays inside the copy too: the copy has no `.git`, and git
+is not let climb to a repository the temporary directory happens to sit in.
+It needs Neovim 0.9 or Vim 9.0.
+
+The copy follows links, with two exceptions so that it is always one finite
+tree. A link to a folder the config is already inside, such as
+`lua/loop -> ..`, is made again as a link inside the copy, so your config
+reads what it always reads. A link to a folder outside the config, such as
+`lua/shared -> ~/dotfiles/shared`, is left out, and the import names it on
+the terminal (`left out of the copy it runs on: …`): copied, it could be your
+whole home, and as a link your editor could write through it to your own
+files. A link to a file is copied wherever it points, so a stowed `init.lua`
+works. The config itself may be a link (`~/.config/nvim -> ~/dotfiles/nvim`).
+
+The import gives up after 10 seconds, counted for the copy and again for each
+run of your editor: a config that asks a question, or a plugin manager that
+starts downloading, would otherwise never end, and a config too big to copy
+in that time, more than 200,000 files and folders or deeper than 40, is
+reported as such. Whatever your editor starts while it runs, such as a plugin
+manager's `git fetch` or a language server, is stopped with it, a job started
+with `detach` too. Ctrl-C, `kill` or closing the terminal while the import
+runs does the same: your editor and what it started are stopped, the copy is
+removed, and then yumete ends.
+
+What can still escape: a process your config starts that leaves your
+editor's process group, clears its environment and changes to a folder
+outside the copy, all three, is not found. On Windows only the editor itself
+is stopped at the time limit, what it started may run on, and Ctrl-C ends
+yumete without removing the copy from the temporary folder.
 
 If you have no global config yet, the import becomes it. If you have one, the
 import is written beside it as `config.imported.toml`, and you copy what you
