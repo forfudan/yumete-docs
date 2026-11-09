@@ -470,22 +470,27 @@ vertical too: columns from the right, the page going on to the left. It is set
 as the vertical export sets a page, not as the editing window shows the draft,
 so `:render`, `tatechuyoko` and the column length do not reach it.
 
-- Chinese characters stand upright, punctuation in its vertical forms; in a
-  Chinese text `“”` become `『』` and `‘’` become `「」`.
+- Chinese characters stand upright, punctuation in its vertical forms; quotes
+  round Chinese become corner brackets, `“”` as `『』` and `‘’` as `「」`, and
+  quotes round Western words keep their own marks, as in the export. A
+  half-width mark on its own stands as the export's page sets it: `×` and
+  `±` upright, `·` and `/` turned.
 - Latin letters and digits go as `[export] vertical_latin` says. `turn` (the
   default) turns every run on its side with the marks joined to it (`5%`,
   `don’t`), and every inline formula. `jlreq` turns words, stands capitals and
-  single letters upright one to a square, one digit upright, two digits across
-  in one square, longer numbers turned; `$x$` and `$\frac12$` stand upright.
+  single letters, small ones too, upright one to a square, one digit upright,
+  two digits across in one square, longer numbers turned; `$x$` and `$\frac12$` stand upright.
 - No stop or closing bracket begins a column, no opening bracket ends one, and
   `——` or `……` is never split. A stop that does not fit takes the character
   before it to the next column, or hangs below the column under `[export]
   hanging`. Every column of a paragraph but its last reaches the foot.
 - A display formula is turned, on a column of its own, two characters from its
   head. A table is read as columns from the right, the header row on the
-  right, its caption (`Table: …` just above or below) beside it. A picture
-  alone in its paragraph stands upright with its text as a caption to its
-  left. A reading in ruby is drawn to the right of its characters. Code is
+  right, its caption (`Table: …` just above or below) beside it. A long
+  cell wraps so the table is never longer than the column; a table with more
+  columns than the page holds even at a character each goes on in a second
+  band to the left, each band with every row. A picture alone in its
+  paragraph stands upright with its text as a caption to its left. A reading in ruby is drawn to the right of its characters. Code is
   turned on its side whole, Chinese in it too: inline code as a turned
   word, never upright, under `turn` and `jlreq` alike; a code block in its
   colours and on its ground, each line running down the page and the next

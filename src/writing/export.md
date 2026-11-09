@@ -52,12 +52,15 @@ path, in any order:
 | `ruby-markdown`, `no-ruby-markdown` | `ruby_markdown` |
 | `turn`, `jlreq` | `vertical_latin` |
 | `page=A5`, `page=130x184` | `page` |
-| `font="Songti SC", serif` | `font_family` |
+| `font=Songti`, `font='"Songti SC", serif'` | `font_family` |
 
-A font list keeps its spaces: a word goes on past a space inside quotes or
-after a comma. A word yumete does not know is reported, not taken as a file
-name. A path has a `/`, an extension, or quotes; write a file called
-`vertical` as `./vertical`.
+A word runs to the next space. A font list with a space or a comma in it is
+quoted whole: `font='"Songti SC", serif'`, or `font="Songti SC, serif"`. A
+word that ends in a comma is reported, not read on into the next one, so
+`font=Songti, book.html` is a mistake said, not a font named `book.html`. A
+word yumete does not know is reported, not taken as a file name. A path has
+a `/`, an extension, or quotes; write a file called `vertical` as
+`./vertical`.
 
 ## HTML
 
@@ -104,7 +107,7 @@ A page is vertical when `[export] vertical` is on, or with the word
 | | `turn` (default) | `jlreq` |
 | --- | --- | --- |
 | `Python`, `don’t worry` | turned | turned |
-| `GPS`, `A` | turned | upright, one to a square |
+| `GPS`, `A`, `x` | turned | upright, one to a square |
 | `3` | turned | upright |
 | `12` | turned | across in one square |
 | `1997` | turned | turned |
@@ -116,12 +119,19 @@ A page is vertical when `[export] vertical` is on, or with the word
 
 `turn` turns every run of half-width letters and digits on its side, with
 the marks joined to it, so `5%` and `don’t` turn as one piece. `jlreq` follows
-the W3C requirements for Japanese and Chinese layout (JLREQ and clreq).
+the W3C requirements for Japanese and Chinese layout (JLREQ and clreq). A
+single letter stands upright under `jlreq`, a small one as a capital does,
+as `$x$` does.
 
-**Curly quotes become corner brackets** on a Chinese page: `“”` as `『』`
-and `‘’` as `「」`. They are real characters, so a copy from the page is
-still Chinese. An apostrophe inside an English word stays an apostrophe.
-Other punctuation is left as you wrote it, and the font turns it.
+**Curly quotes round Chinese become corner brackets** on a Chinese page:
+`“”` as `『』` and `‘’` as `「」`. They are real characters, so a copy from the
+page is still Chinese. Quotes round Western words keep their own marks, as
+clreq has quoted Western text keep them: in `他说“go”`, `“go”` stays. A quote
+whose partner is in another paragraph (a quotation running on over several)
+goes by the text beside it. An apostrophe inside an English word stays an
+apostrophe. Other punctuation is left as you wrote it, and the font turns it;
+a half-width mark on its own, such as `×` or `±`, stands as the browser's
+vertical text sets it (upright for those two, turned for `·` or `/`).
 
 **A formula on a line of its own** is turned on its side and starts two
 characters below the top of its column.
@@ -179,9 +189,15 @@ A picture alone in its paragraph is a figure, and its text is the caption:
 ![The weather station](station.png)
 ```
 
+A picture among words, `文中有图 ![小图](a.png) 在此`, is a picture in the
+line, no longer than the line; two pictures on one line are two such
+pictures, not a figure. A path with a space in it is written in angle
+brackets, `![图](<my pic.png>)`, or with `%20`, `![图](my%20pic.png)`.
+
 The HTML page refers to the picture where the Markdown file does. An EPUB
-carries the picture inside the book; one it cannot read, or one on the web,
-is left out and its caption kept. The Typst export writes a table's caption
+carries every picture inside the book, a figure's and one in a line; one it
+cannot read, or one on the web, is left out, a figure keeping its caption and
+a picture in a line its text. The Typst export writes a table's caption
 as a `#figure`, and a figure as its caption's words.
 
 ## Typst
@@ -196,12 +212,17 @@ change.
 
 `:export epub` writes an EPUB 3 book with the same text and look as the HTML
 page. A vertical page becomes a vertical book that turns from right to left,
-as a Chinese or Japanese book does. Formulas and figures go in as pictures,
+as a Chinese or Japanese book does, whatever language the page is in.
+Formulas, figures and pictures in a line go in as pictures,
 and the headings become the table of contents. The book's title is the first
 heading, or the file's name.
 
 Open it in Apple Books, Thorium or any EPUB 3 reader. How a reader sets
 vertical text is up to the reader; older ones set every book horizontally.
+
+Control characters an XML page cannot hold (a form feed, say) are left out,
+so a strict reader opens the book. The book's language is read from its
+prose; code and links are not counted.
 
 ## What carries over
 
@@ -215,13 +236,16 @@ All three formats carry:
 - footnotes, numbered in the order they appear: a list at the end of the HTML
   page, `#footnote[…]` at the mark in Typst;
 - pipe tables, with their column alignment and a caption;
-- pictures alone in a paragraph, as figures with a caption (HTML and EPUB);
+- pictures alone in a paragraph, as figures with a caption, and pictures in
+  a line as pictures (HTML and EPUB);
 - TeX formulas in Markdown, drawn as pictures in HTML and EPUB;
 - GitHub alerts (`> [!NOTE]`, `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]`,
   `[!CAUTION]`) and `:::` containers, as callouts (HTML and EPUB);
 - front matter (`---` … `---` at the head of the file), in a frame;
-- a fenced code block naming a language, in syntax colours;
-- links, as links;
+- fenced code blocks, with three or more backticks or tildes as CommonMark
+  reads them (closed only by the same character, at least as many), in syntax
+  colours when they name a language;
+- links, as links, a target in angle brackets with its spaces;
 - task lists, `- [ ]` and `- [x]`, with their boxes (☐ or ☑ in Typst);
 - rules (`---`, `* * *`);
 - ruby, in all three kinds of markup; the brace form only from a Markdown
@@ -326,7 +350,9 @@ on writing, the status line says "typesetting book.typ…", and then where the
 PDF went, or the compiler's first line of complaint. One PDF is typeset at a
 time; asking again meanwhile says so. Without `typst` nothing is written. The
 compiler reads the files on disk: unsaved changes are not in the PDF, and the
-message says how many open files have them.
+message says how many open files have them. Quitting while it typesets stops
+the compiler and leaves no half-written file; a half-written file a crash left
+is removed by the next export to the same PDF.
 
 The path rules are `:export`'s: without a path the file's name with the
 extension changed (the book's name for a chapter), `!` to write over an
