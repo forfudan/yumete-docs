@@ -149,7 +149,9 @@ listed, not written. Nothing reads the other editor's files again after this.
 `:settings` (or `:set` with nothing after it) opens every setting on one full page, each with its
 name and a line saying what it does. You do not need to know what a key is
 called, or which section it lives in. `:settings editor.scrolloff` opens it on
-that setting; `Tab` on the `:` line completes the names.
+that setting, and so does its name as the panel shows it, spaces and all, in
+either Chinese script (`:settings 首行缩进`); `Tab` on the `:` line completes
+the names.
 
 ```text
  settings   global   project                    ~/.config/yumete/config.toml
@@ -204,7 +206,11 @@ input method. `Enter` keeps the value when it is one yumete takes, and writes
 it; otherwise the value stays on the line and the reason, with the values or
 the range it takes, appears under the setting. `Esc` leaves the old value.
 
-The panel takes no `:` commands: `:` only says so.
+The panel takes no `:` commands. `:` opens a line that takes what you type up to
+`Enter`: `:q`, `:wq` and `:x` close the panel, as habit expects, and anything
+else is answered that the panel takes no commands. A config file changed or
+deleted by something else while the panel is open is read again, and the panel
+says so once; `u` then keeps that change.
 
 ### Which file, which layer
 
