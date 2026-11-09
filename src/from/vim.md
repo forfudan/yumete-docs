@@ -191,8 +191,15 @@ takes vim's `whichwrap` letters (`b` `h` `l` `<` `>` `~`); only `b`, for
 ## Your vim or Neovim config
 
 `ye --import vim` reads your vimrc, and `ye --import nvim` your Neovim
-config, by running the editor headless on a copy of it (see
+config, by running the editor headless on a copy of it in a temporary
+directory (see
 [Bringing a config](../guide/configuration.md#bringing-a-config-from-helix-vim-neovim-or-lazyvim)).
+Nothing your config does reaches your own files: it writes into the copy, git
+stays inside it, and what your editor starts is stopped with it, also when
+you press Ctrl-C. A link in your config to a folder outside it is left out of
+the copy, and the import says which, so a config that sources files from
+elsewhere through such a link may come over without them; links that stay
+inside the config work as they do at home. It gives up after 10 seconds.
 What comes over:
 
 - **Settings you changed**: `number` and `relativenumber` (as
