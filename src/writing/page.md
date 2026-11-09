@@ -512,8 +512,8 @@ It needs a terminal that draws pictures (Ghostty or kitty). Elsewhere
 ```
 
 Focus works by paragraph, not by row: a paragraph wrapped over three rows is
-lit as a whole. Both take `on`, `off` and `toggle`; typed alone, each says
-whether it is on. How far the rest steps back is `[theme] focus`, the percent
+lit as a whole. Both take `on` and `off`; typed alone, each turns round and
+says which way it went. How far the rest steps back is `[theme] focus`, the percent
 of ink it keeps: 50 by default. The other windows step back as far, so the
 paragraph you are in is the one thing at full ink.
 

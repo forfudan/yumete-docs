@@ -28,7 +28,7 @@ level, `off` and `basic` included: in the example, every item is on but
 `:settings`, the keys group's "flavour items" row opens a page with the
 level at the top and one tick per item, each with its keys and, on the
 right, the file that set it or the binding that took its keys. Ticking an
-item back to what the level gives removes its line, and `d` does the same.
+item back to what the level gives removes its line, and `r` does the same.
 
 Your own `[keys.normal]` lines come before the flavour, and the flavour
 before the keymap. `:keymap-yumete-flavor full` sets the level for this

@@ -94,6 +94,25 @@ so at startup. `[language.*]` and `[lsp.*]` are allowed in a project file:
 they never pass through a shell, and each placeholder such as `{file}` is handed
 to the program as a single argument.
 
+### Screenshots: `[editor] screenshot`
+
+`:shot png` (and `:shot` to the clipboard) runs the shell line in
+`[editor] screenshot`. On macOS the default takes yumete's own window with
+`screencapture`:
+
+```toml
+[editor]
+screenshot = 'screencapture -x -o -l"$YUMETE_WINDOW" "${YUMETE_SHOT:--c}"'
+```
+
+yumete finds its terminal window itself and hands the line `$YUMETE_WINDOW`
+(the window's number), `$YUMETE_WINDOW_RECT` (`x,y,w,h` on the screen) and
+`$YUMETE_SHOT` (the file to write; empty means the clipboard). Nothing the line
+prints reaches the screen; a failure is one sentence on the status line.
+macOS asks for one permission: Screen Recording for your terminal app, under
+System Settings › Privacy & Security › Screen & System Audio Recording.
+Without it, `:shot` says so and takes nothing.
+
 ## Bringing a config from helix, vim, Neovim or LazyVim
 
 `ye --import` writes another editor's config into yumete's, once:
@@ -127,7 +146,7 @@ listed, not written. Nothing reads the other editor's files again after this.
 
 ## The settings panel
 
-`:settings` (short: `:set`) opens every setting on one full page, each with its
+`:settings` (or `:set` with nothing after it) opens every setting on one full page, each with its
 name and a line saying what it does. You do not need to know what a key is
 called, or which section it lives in. `:settings editor.scrolloff` opens it on
 that setting; `Tab` on the `:` line completes the names.
