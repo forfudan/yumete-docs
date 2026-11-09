@@ -24,8 +24,10 @@ editor is never written over. A new buffer needs a path.
 ## Settings and words
 
 An export does not follow the editing window. `:vertical`, `:view-hanging`,
-`zong_length`, `:ruby-html`, `tatechuyoko` and `:render` change how you see
-the draft; how the exported page is set comes from `[export]` alone:
+`zong_length`, `:ruby-html`, `:ruby-typst`, `:ruby-markdown`, `tatechuyoko`
+and `:render` change how you see the draft; how the exported page is set
+comes from `[export]` alone (`:export-as-preview` is the exception: it is
+vertical when the preview is):
 
 ```toml
 [export]
@@ -90,8 +92,19 @@ Chinese book in a serif face, name one:
 font_family = '"Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", serif'
 ```
 
-The Markdown preview beside the text (`:view-preview on`) is set in the same
-fonts, followed by the Chinese or Japanese face that suits the document.
+The Markdown preview beside the text (`:preview on`) is set in the same
+fonts, followed by the Chinese or Japanese face that suits the document. To
+read in one face and print in another, give the preview its own list in
+`[editor] preview_font_family`, written the same way. Left empty, as it is
+at first, the preview follows `[export] font_family`. `:export` and
+`ye --export` never read it.
+
+```toml
+[editor]
+preview_font_family = '"LXGW WenKai Screen", "Kaiti SC", serif'
+```
+
+The Typst export asks for the same fonts; see [Typst](#typst).
 
 For vertical text, pick a face that turns punctuation, such as Source Han
 Serif, Noto Serif CJK or Songti. Otherwise `，` may not sit in the corner of
@@ -217,7 +230,13 @@ as a `#figure`, and a figure as its caption's words.
 
 `:export typst` writes Typst source, always horizontal, because Typst has no
 vertical layout; a vertical export says so at the top of the file.
-`[export] font_family` and `page` do not reach it: Typst sets its own. Ruby becomes
+It is set on the paper `[export] page` names, and in the fonts
+`font_family` names; CSS's words for the system's fonts (`serif`,
+`system-ui`, `-apple-system`…) mean nothing to Typst and are left out,
+and the default list names none, so Typst sets its own type and falls
+back to the fonts you have. `vertical`, `hanging` and `jlreq` do not
+apply, and an export with them on says so. Front matter goes in a frame,
+as on the page. Ruby becomes
 `#ruby(base, reading)`, with a definition at the top of the file that you can
 change.
 A code block left open in Markdown, which ends with the file or the
@@ -248,7 +267,9 @@ a tag, one left open (`<span>` with no `</span>`), closing nothing, or a
 block such as `<div>` typed in a line of text goes in as the words it
 was typed as, and a picture written as
 `<img src="a.png">` goes inside the book like any other, or leaves its
-`alt` when it cannot be read. The book's
+`alt` when it cannot be read. HTML's `align`, which a book's XHTML does not
+have, goes in as the style it means. A heading that is only a picture is
+named in the table of contents by the picture's words. The book's
 language is read from its prose; code and links are not counted.
 
 ## What carries over
@@ -263,20 +284,28 @@ All three formats carry:
   asterisks;
 - lists, nested, numbered or not;
 - block quotes;
-- footnotes, numbered in the order they appear: a list at the end of the HTML
-  page, `#footnote[…]` at the mark in Typst;
-- pipe tables, with their column alignment and a caption;
+- footnotes, numbered in the order they appear, a footnote cited twice
+  linking to one note: a list at the end of the HTML page, `#footnote[…]` at
+  the mark in Typst;
+- pipe tables, with their column alignment and a caption, as wide as their
+  header row (extra cells are dropped, as in GFM);
 - pictures alone in a paragraph, as figures with a caption, and pictures in
   a line as pictures (HTML and EPUB);
 - TeX formulas in Markdown, drawn as pictures in HTML and EPUB;
 - GitHub alerts (`> [!NOTE]`, `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]`,
   `[!CAUTION]`) and `:::` containers, as callouts (HTML and EPUB);
 - front matter (`---` … `---` at the head of the file), in a frame;
+- HTML blocks, a line opening with a block's tag (`<details>`, `<div>`,
+  `<p align="center">`) up to the next blank line, as they were written
+  (HTML and EPUB; their words in Typst);
+- entities such as `&nbsp;`, `&hellip;` and `&#x4E00;`, as the
+  characters they name, except in code;
 - fenced code blocks, with three or more backticks or tildes as CommonMark
   reads them (closed only by the same character, at least as many), in syntax
   colours when they name a language, and code blocks indented four spaces or
   a tab (a fence written inside one is part of its code);
-- links, as links, a target in angle brackets with its spaces;
+- links, as links, a target in angle brackets with its spaces (HTML and
+  EPUB; the Typst export keeps their words);
 - task lists, `- [ ]` and `- [x]`, with their boxes (☐ or ☑ in Typst);
 - rules (`---`, `* * *`);
 - ruby, in all three kinds of markup; the brace form only from a Markdown
@@ -323,7 +352,10 @@ layout for that run and does not make the export vertical; the word
 `vertical` does.
 
 The path written is printed, one a line, so a script can pick it up; several
-files may be named at once. `pdf` needs the [Typst](https://typst.app)
+files may be named at once. A file whose output would land on another file
+named on the line, or on another's output (`a.md` and `a.typ` both making
+`a.html`), is refused before anything is written, and the rest are
+exported; use `--out` for one of them. `pdf` needs the [Typst](https://typst.app)
 compiler on the PATH (`brew install typst`): a `.typ` file is compiled as it
 is, with `#include` and images resolved from its own folder; a Markdown file
 goes through the Typst export above first. Your config's `[export]` settings
@@ -331,11 +363,11 @@ apply, as they do to `:export`.
 
 ## Seeing it before you export
 
-`:view-preview` shows the typeset result while you write, in a preview tab
+`:preview` shows the typeset result while you write, in a preview tab
 beside the text: a Typst page set by tinymist, or a Markdown file set by
 yumete itself. The Markdown preview draws readings by the same three
 `[export] ruby_*` settings as the export. See
-[The page](page.md#preview-in-a-real-typesetter-view-preview).
+[The page](page.md#preview-in-a-real-typesetter-preview).
 
 ## Exporting what the preview shows
 
@@ -353,7 +385,8 @@ you see is what you get.
 **A Markdown file** becomes the same HTML page `:export html` writes, with
 its look taken from the Markdown preview rather than from `[export]`:
 
-- the preview's fonts: `[export] font_family`, then the CJK face of the
+- the preview's fonts: `[editor] preview_font_family`, or `[export]
+  font_family` while that is empty, then the CJK face of the
   document's writing system (Simplified, Traditional or Japanese, from its
   text or its front matter's `lang`); emphasised Chinese in a Kai face;
 - the preview's type sizes, GitHub's: 16 px body, headings at 2, 1.5 and 1.25

@@ -26,7 +26,7 @@ The tabs along the top are the open files and a window shows one of them, as
 in helix and vim. Closing a window closes no file: with the window split,
 `:q`, `:q!`, `:wq` and `:x` close only the window you are in, and the file
 stays open with its changes. In the last window they quit the editor; a
-sidebar, or a window showing a preview, does not count as a window here.
+window showing a preview counts as a window, a sidebar does not.
 
 Quitting with a file unsaved, in any tab, stops, says so and shows that file.
 A `!` after `:q` or `:qa` quits anyway and throws the unsaved changes away.
@@ -200,10 +200,10 @@ If yumete, the terminal or the machine stops before you saved, the next time
 you open the file it asks:
 
 ```
-a draft was kept
+unsaved draft found
 
-《chapter.md》 has a draft from 10-29 23:56, left by a run that ended
-before it saved; the file itself was saved at 10-29 23:55.
+'chapter.md' has a draft from 10-29 23:56, left when the last session ended
+without saving; the file itself was saved at 10-29 23:55.
 
 y  recover
 d  throw the draft away
@@ -211,7 +211,7 @@ n  leave it for now
 ```
 
 The draft is never loaded without asking. `y` asks once more, with
-`y` recover it, `d` open the comparison, `n` cancel, so no single key replaces
+`y` recover it, `d` compare, `n` cancel, so no single key replaces
 your text. After recovering, `u` goes back to the version on disk, and `:w`
 keeps the draft.
 

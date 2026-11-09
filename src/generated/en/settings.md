@@ -35,6 +35,7 @@
 | `[editor] preview_fit` | `"width"` | **page window fit** — how the page window draws the page: as wide as the window and scrolled to the cursor, or the whole page (`width` width, `page` whole page) |
 | `[editor] preview_theme` | `false` | **page window in theme colours** — the preview's paper in the background colour and its black in the text colour, in dark themes too; off, the page as printed |
 | `[editor] preview_vertical` | `true` | **vertical preview** — while the text window is vertical, the Markdown preview runs in columns from the right, its Latin letters and digits set as the export sets them |
+| `[editor] preview_font_family` | `""` | **preview fonts** — the fonts the Markdown preview and :export-as-preview are set in, written as the export fonts are; empty, the export fonts |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
 | `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
 | `[editor] indent_guides_character` | `"│"` | **guide character** — the character the guides are drawn with, one cell wide |
@@ -132,6 +133,6 @@
 | `[editor] language_key` | `"C-^"` | **language key** — the key that switches Chinese/ABC on a terminal that cannot report a lone Shift |
 | `[keys] preset` | `"helix"` | **keymap** — whether the keys follow helix or vim (`helix` helix, `vim` vim) |
 | `[keys] flavor` | `"basic"` | **Yumete keymap flavour** — what yumete changes over helix or vim. basic: the changes you can see, such as menus and new keys; full: also the items that change what a familiar key does, such as `d` and `c` deleting without cutting (`A-d` and `A-c` cut). `[keys.normal]` overrides it (`off` off, `basic` basic, `full` full) |
-| `[keys] flavor_items` | `{}` | **flavour items** — each item of the Yumete flavour, one tick each. l or Space opens it |
+| `[keys] flavor_items` | `{}` | **flavour items** — each item of the Yumete flavour, one tick each. Enter or Space opens it |
 | `[keys] inherit` | `true` | **sidebars and prompts use my keys** — a one-key command bound in `[keys.normal]` also works in a sidebar that has it, and one in `[keys.insert]` in the command line and pickers. `[keys.sidebar]` and `[keys.prompt]` override it |
 

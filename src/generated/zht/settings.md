@@ -35,6 +35,7 @@
 | `[editor] preview_fit` | `"width"` | **頁面窗口大小** — 頁面窗口中頁面的大小：頁寬適應窗口並隨光標滚動，或整頁放進窗口 (`width` 頁寬, `page` 整頁) |
 | `[editor] preview_theme` | `false` | **頁面窗口用主題配色** — 預覽頁面的紙用背景色、黑字用文字色，深色主題下也一樣；關閉則按印刷原樣 |
 | `[editor] preview_vertical` | `true` | **預覽跟着豎排** — 文字窗口豎排時，Markdown 預覽也從右往左豎排，拉丁字母和數字按導出的設置 |
+| `[editor] preview_font_family` | `""` | **預覽字體** — Markdown 預覽與 :export-as-preview 用的字體，寫法同導出字體；留空則跟着導出字體 |
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製後，被複制的範圍閃一下 |
 | `[editor] indent_guides` | `false` | **縮進參考線** — 在代碼行首每級縮進畫一條豎線，同 helix；僅用於代碼文件 |
 | `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
@@ -132,6 +133,6 @@
 | `[editor] language_key` | `"C-^"` | **中英切換鍵** — 在無法識别單獨 Shift 的終端上，用此鍵切換中文/ABC |
 | `[keys] preset` | `"helix"` | **鍵位** — 鍵位沿用 helix 還是 vim (`helix` helix, `vim` vim) |
 | `[keys] flavor` | `"basic"` | **Yumete 鍵位風味** — 在 helix/vim 鍵位之上的改動。基本：看得見的改動，如菜單、新鍵；完整：再加上改變熟悉鍵行爲的幾項，如 `d` `c` 只删不剪，剪切用 `A-d` `A-c`。`[keys.normal]` 優先於它 (`off` 關閉, `basic` 基本, `full` 完整) |
-| `[keys] flavor_items` | `{}` | **風味各項** — 逐項開關 Yumete 風味。按 l 或空格進入 |
+| `[keys] flavor_items` | `{}` | **風味各項** — 逐項開關 Yumete 風味。按 Enter 或空格進入 |
 | `[keys] inherit` | `true` | **側欄與命令行沿用我的改鍵** — [keys.normal] 裏單鍵綁定的命令，側欄也有時在側欄生效；[keys.insert] 同理用於命令行與選擇器。[keys.sidebar] 與 [keys.prompt] 優先於它 |
 

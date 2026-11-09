@@ -54,7 +54,8 @@ vim, `w` `W` `b` `B` stop on an empty line, and `e` passes it by.
 `gUU` raises the whole line. `gUgU`, `gugu`, `g~g~` and `gqgq` are the line
 too, as in vim.
 
-`gq` fills lines to 79 columns, as vim's `gq` does with its factory settings
+`gq` fills lines to 79 columns, as vim's `gq` does with its factory settings,
+or to the file's `tw` (`:set tw=60` or a modeline), as vim's `textwidth`
 (for a filler that knows what Markdown, Typst and code comments mean, see
 [`:hard-wrap`](../writing/page#hard-wrap-hard-wrap)):
 `gqip` a paragraph, `gqq` a line, `gq` on a visual selection. A blank line
@@ -200,6 +201,8 @@ you press Ctrl-C. A link in your config to a folder outside it is left out of
 the copy, and the import says which, so a config that sources files from
 elsewhere through such a link may come over without them; links that stay
 inside the config work as they do at home. It gives up after 10 seconds.
+If your config stops at an error part way, what it sets after the error is
+never read; the file says so at the top, under what the editor said.
 What comes over:
 
 - **Settings you changed**: `number` and `relativenumber` (as
@@ -213,10 +216,13 @@ What comes over:
   gruvbox, github, onedark, dracula, monokai), light or dark from its name or
   from `background`.
 - **`yank_flash`**, when a `TextYankPost` autocommand mentions yanking (the
-  line says so), and `indent_guides` when indent-blankline is loaded.
+  line says so), and `indent_guides` when indent-blankline is loaded; one
+  that says nothing of a yank is listed. A LazyVim config that takes
+  either away has it written `false`.
 - **Maps**, under `[keys.vim.normal]`, `[keys.vim.select]` (vim's Visual
   mode) and `[keys.vim.insert]`, so they hold under the vim keys only. A map
-  whose right side is a run of keys becomes an `@` run; one to an Ex command
+  whose right side is a run of keys becomes an `@` run; Visual `>gv` and
+  `<gv` become `indent` and `unindent`, which keep the selection; one to an Ex command
   yumete has becomes that command (`:sp` becomes `:hsplit`, `:bd`
   `:buffer-close`); `:Telescope find_files`, `:Neotree toggle`, the
   language-server functions (`vim.lsp.buf.definition`) and a few dozen more
@@ -231,7 +237,9 @@ What comes over:
 
 What is listed instead, one line a map: a map to a Lua function of your
 own, an expression map, a plugin's own key (`<Plug>`), keys yumete cannot
-bind (`<Esc>`, `<F5>`), a run of keys in Insert mode, Operator-pending,
+bind (`<Esc>`, `<F5>`), a run of keys in Insert mode, an Ex map that uses
+`%`, `#` or a shell command (`:w !sudo tee %`, `:e #`), a map of the Space
+key itself (the Space menu stays), Operator-pending,
 command-line and terminal maps, per-language `FileType` settings, and any
 option yumete has no counterpart for. A map that already does in yumete what
 it does in vim is counted, not written.
@@ -262,10 +270,13 @@ also takes Visual `Q` away.
   are in, and quits in the last one, as vim's `:q` does.
 - `:set` takes what a modeline takes, for this file: `ft`, `ts`, `sw`, `et`
   and `tw`, as in `:set ft=python ts=2 sw=2 et`; `:setf python` is `:set
-  ft=python`. Other options are their own commands or config keys, and `:set`
-  on its own opens the settings panel. See [Settings](../reference/settings.md).
+  ft=python`. `:set ts?`, or `:set ts` alone for an option with a value,
+  says its value, as in vim. `tw` is the width `gq`, `gw` and `:hard-wrap`
+  fill to; lines are not broken while you type. Other options are their own
+  commands or config keys, and `:set` on its own opens the settings panel. See [Settings](../reference/settings.md).
 - `:tabnew` opens a new empty buffer, or the file it names, since a tab here
-  is a file; `:ene` is `:new`.
+  is a file; `:ene` is `:new`. vim's `tabn` and `tabp` are not there; typed,
+  they point to `:buffer-next` and `:buffer-previous`.
 - There is no `:g` and no `:normal`.
 - A range is written with `-`, and `,` lists single lines: `:3-6s` is lines 3
   to 6, while `:3,6s` is lines 3 and 6 only. `:'<,'>` and `:.,+2` are not
