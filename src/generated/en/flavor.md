@@ -19,6 +19,7 @@
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | turn a page |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | sidebars |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | jumps, word search, links |
+| [`window_sides`](#window_sides) | `C-w n h` `C-w n j` `C-w n k` `C-w n l` `C-w n H` `C-w n J` `C-w n K` `C-w n L` | — | new window on a side |
 | [`split_join`](#split_join) | `gS` | `gS` | split and join brackets |
 | [`insert_extras`](#insert_extras) | `C-a` `C-e` `C-n` `C-g` | — | Insert: line ends, completion, undo step |
 | [`insert_ctrl_c`](#insert_ctrl_c) | `C-c` | — | Insert: leave |
@@ -283,6 +284,21 @@ Under vim:
 | g goto | `gz` | jump to a word by two letters |  |
 | g goto | `gZ` | jump to a character by reading |  |
 | g goto | `g/` | search the selection |  |
+
+### `window_sides` {#window_sides}
+
+On: in the C-w n (Space w n) group, h j k l open a blank window on the left, below, above or on the right, and H J K L open one with the buffer picker. Off: the eight keys are unbound.
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| new blank window | `C-w n h` | new blank window on the left |  |
+| new blank window | `C-w n j` | new blank window below |  |
+| new blank window | `C-w n k` | new blank window above |  |
+| new blank window | `C-w n l` | new blank window on the right |  |
+| new blank window | `C-w n H` | new window on the left, picking a buffer |  |
+| new blank window | `C-w n J` | new window below, picking a buffer |  |
+| new blank window | `C-w n K` | new window above, picking a buffer |  |
+| new blank window | `C-w n L` | new window on the right, picking a buffer |  |
 
 ### `split_join` {#split_join}
 

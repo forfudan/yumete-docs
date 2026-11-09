@@ -283,7 +283,7 @@
 | `C-w :` | command line |
 | `C-w h / C-w j / C-w k / C-w l` | go in that direction |
 | `C-w v` | split left |
-| `C-w n` | new blank window |
+| `C-w n` | new blank window above |
 | `C-w q` | close window |
 | `C-w o` | keep only this window |
 

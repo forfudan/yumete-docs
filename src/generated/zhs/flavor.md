@@ -19,6 +19,7 @@
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | 翻页 |
 | [`sidebars`](#sidebars) | `C-w e` `C-w i` `C-w E` `C-w I` | `C-w e` `C-w i` `C-w E` `C-w I` | 侧栏 |
 | [`goto_extras`](#goto_extras) | `gz` `gZ` `g/` `gL` `gx` | `gz` `gZ` `g/` `gL` `gW` | 跳转、搜索当前词、链接 |
+| [`window_sides`](#window_sides) | `C-w n h` `C-w n j` `C-w n k` `C-w n l` `C-w n H` `C-w n J` `C-w n K` `C-w n L` | — | 朝一边新建窗口 |
 | [`split_join`](#split_join) | `gS` | `gS` | 拆开/合并括号 |
 | [`insert_extras`](#insert_extras) | `C-a` `C-e` `C-n` `C-g` | — | 插入模式：行首行尾、补全、撤销点 |
 | [`insert_ctrl_c`](#insert_ctrl_c) | `C-c` | — | 插入模式：退出 |
@@ -283,6 +284,21 @@ Under vim:
 | g 转到 | `gz` | 两字母定位单词 |  |
 | g 转到 | `gZ` | 按读音定位汉字 |  |
 | g 转到 | `g/` | 搜索选中内容 |  |
+
+### `window_sides` {#window_sides}
+
+开：C-w n（␣wn）组里 h j k l 在左下上右新建空白窗口，H J K L 新建窗口并打开缓冲区选择器。关：这八个键未绑定。
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| 新建空白窗口 | `C-w n h` | 左侧新建空白窗口 |  |
+| 新建空白窗口 | `C-w n j` | 下方新建空白窗口 |  |
+| 新建空白窗口 | `C-w n k` | 上方新建空白窗口 |  |
+| 新建空白窗口 | `C-w n l` | 右侧新建空白窗口 |  |
+| 新建空白窗口 | `C-w n H` | 左侧新建窗口并选择缓冲区 |  |
+| 新建空白窗口 | `C-w n J` | 下方新建窗口并选择缓冲区 |  |
+| 新建空白窗口 | `C-w n K` | 上方新建窗口并选择缓冲区 |  |
+| 新建空白窗口 | `C-w n L` | 右侧新建窗口并选择缓冲区 |  |
 
 ### `split_join` {#split_join}
 
