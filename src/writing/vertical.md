@@ -14,7 +14,7 @@ that reads like a printed page.
 | To | Type |
 | --- | --- |
 | set this page vertically | `:vertical` |
-| set it across again | `:horizontal` |
+| set it across again | `:vertical off` (or `:vertical` alone, which turns it round) |
 | open a file vertically | `ye --vertical file.md` |
 | open it across, whatever the config says | `ye --horizontal file.md` |
 | make vertical the default | `layout = "vertical"` under `[editor]` |
