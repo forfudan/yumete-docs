@@ -83,7 +83,7 @@ The words are positions, not directions: on a vertical page, where the text
 itself runs down the columns, "beside" still means side by side and "below"
 still means under. A window opened beside the one you are in goes to its
 right, on a vertical page too (with vim's keys, to its left, as in vim), and
-switching the layout never moves a window. In helix's `␣wn` group, `h` `j`
+switching the layout never moves a window. A click in a window gives it the keys, a preview too. In helix's `␣wn` group, `h` `j`
 `k` `l` open a blank window on that side, and `H` `J` `K` `L` open one with
 the buffer picker in it. A preview always opens on the
 right.
