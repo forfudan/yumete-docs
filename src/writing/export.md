@@ -187,7 +187,8 @@ as a `#figure`, and a figure as its caption's words.
 ## Typst
 
 `:export typst` writes Typst source, always horizontal, because Typst has no
-vertical layout. The file says so at the top. Ruby becomes
+vertical layout; a vertical export says so at the top of the file.
+`[export] font_family` and `page` do not reach it: Typst sets its own. Ruby becomes
 `#ruby(base, reading)`, with a definition at the top of the file that you can
 change.
 
@@ -232,7 +233,7 @@ Anything else comes out as text. Annotations to yourself, written
 ## Language and line breaks
 
 The page's language comes from the text. A file with more Latin words than
-Chinese characters is set as English: `lang="en"`, a Latin serif, and
+Chinese characters is set as English: `lang="en"`, and
 paragraphs spaced apart instead of indented. Kana make it Japanese. Otherwise it
 is set as Chinese, with a first-line indent.
 

@@ -79,7 +79,7 @@ A few keys are not on the settings panel. Each is explained on the page that own
 | --- | --- |
 | `[ime] data_dirs` | [The input method](../writing/ime.md) |
 | `[editor] usage_groups` | [Checks and counts](../writing/checks.md#two-spellings-of-one-word-check-usage) |
-| `[editor] screenshot` | [Configuration](../guide/configuration.md#what-a-project-file-cannot-set) |
+| `[editor] screenshot` | [Configuration](../guide/configuration.md#screenshots-editor-screenshot) |
 | `[syntax]`, `[editor] syntax` | [The page](../writing/page.md#markdown-typst-or-plain-text-syntax) |
 | `[language.*]` and `[lsp.*]` | [Language servers](../guide/languages.md) |
 | `[keys.normal]` | [Key remapping](../guide/remapping.md) |
