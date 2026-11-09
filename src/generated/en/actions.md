@@ -293,11 +293,21 @@
 | `toggle_right_sidebar` | open or close the right sidebar | `C-w i` | `C-w i` |  |
 | `goto_left_sidebar` | go to the left sidebar | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | go to the right sidebar | `C-w I` | `C-w I` |  |
-| `hsplit` | split below | `C-w s` | `C-w S` `C-w s` |  |
-| `vsplit` | split right | `C-w v` | `C-w v` |  |
-| `hsplit_new` | new blank window below | `C-w n s` | `C-w n` `C-w n s` |  |
+| `hsplit` | split below | `C-w s` |  |  |
+| `hsplit_above` | split above |  | `C-w S` `C-w s` |  |
+| `vsplit_left` | split left |  | `C-w v` |  |
+| `vsplit` | split right | `C-w v` |  |  |
+| `hsplit_new` | new blank window below | `C-w n s` | `C-w n s` |  |
 | `vsplit_new` | new blank window on the right | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | blank-window group: s below, v beside | `C-w n` |  |  |
+| `new_window_left` | new blank window on the left | `C-w n h` |  |  |
+| `new_window_down` | new blank window below | `C-w n j` |  |  |
+| `new_window_up` | new blank window above | `C-w n k` | `C-w n` |  |
+| `new_window_right` | new blank window on the right | `C-w n l` |  |  |
+| `new_window_left_pick` | new window on the left, picking a buffer | `C-w n H` |  |  |
+| `new_window_down_pick` | new window below, picking a buffer | `C-w n J` |  |  |
+| `new_window_up_pick` | new window above, picking a buffer | `C-w n K` |  |  |
+| `new_window_right_pick` | new window on the right, picking a buffer | `C-w n L` |  |  |
 | `wclose` | close window | `C-w q` | `C-w q` |  |
 | `wonly` | keep only this window | `C-w o` | `C-w o` |  |
 | `transpose_view` | flip the split: beside / below | `C-w t` |  |  |
@@ -305,8 +315,9 @@
 | `swap_view_down` | swap with the region below | `C-w J` |  |  |
 | `swap_view_up` | swap with the region above | `C-w K` |  |  |
 | `swap_view_right` | swap with the region on the right | `C-w L` |  |  |
-| `goto_file_hsplit` | open file under cursor below | `C-w f` | `C-w F` `C-w f` |  |
+| `goto_file_hsplit` | open file under cursor below | `C-w f` |  |  |
 | `goto_file_vsplit` | open file under cursor beside | `C-w F` |  |  |
+| `goto_file_hsplit_above` | open file under cursor above |  | `C-w F` `C-w f` |  |
 | `create_fold` | create a fold over a motion | `zf` `Zf` | `zf` |  |
 | `create_fold_lines` | fold N lines |  | `zF` |  |
 | `open_fold` | open fold |  | `zo` |  |

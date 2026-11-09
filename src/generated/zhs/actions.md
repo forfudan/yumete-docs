@@ -293,11 +293,21 @@
 | `toggle_right_sidebar` | 开关右侧栏 | `C-w i` | `C-w i` |  |
 | `goto_left_sidebar` | 进入左侧栏 | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | 进入右侧栏 | `C-w I` | `C-w I` |  |
-| `hsplit` | 向下拆分 | `C-w s` | `C-w S` `C-w s` |  |
-| `vsplit` | 向右拆分 | `C-w v` | `C-w v` |  |
-| `hsplit_new` | 下方新建空白窗口 | `C-w n s` | `C-w n` `C-w n s` |  |
+| `hsplit` | 向下拆分 | `C-w s` |  |  |
+| `hsplit_above` | 向上拆分 |  | `C-w S` `C-w s` |  |
+| `vsplit_left` | 向左拆分 |  | `C-w v` |  |
+| `vsplit` | 向右拆分 | `C-w v` |  |  |
+| `hsplit_new` | 下方新建空白窗口 | `C-w n s` | `C-w n s` |  |
 | `vsplit_new` | 右侧新建空白窗口 | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | 空白窗口组：s 下面，v 旁边 | `C-w n` |  |  |
+| `new_window_left` | 左侧新建空白窗口 | `C-w n h` |  |  |
+| `new_window_down` | 下方新建空白窗口 | `C-w n j` |  |  |
+| `new_window_up` | 上方新建空白窗口 | `C-w n k` | `C-w n` |  |
+| `new_window_right` | 右侧新建空白窗口 | `C-w n l` |  |  |
+| `new_window_left_pick` | 左侧新建窗口并选择缓冲区 | `C-w n H` |  |  |
+| `new_window_down_pick` | 下方新建窗口并选择缓冲区 | `C-w n J` |  |  |
+| `new_window_up_pick` | 上方新建窗口并选择缓冲区 | `C-w n K` |  |  |
+| `new_window_right_pick` | 右侧新建窗口并选择缓冲区 | `C-w n L` |  |  |
 | `wclose` | 关闭窗口 | `C-w q` | `C-w q` |  |
 | `wonly` | 只保留此窗口 | `C-w o` | `C-w o` |  |
 | `transpose_view` | 并排与上下互换 | `C-w t` |  |  |
@@ -305,8 +315,9 @@
 | `swap_view_down` | 和下面那一区对调 | `C-w J` |  |  |
 | `swap_view_up` | 和上面那一区对调 | `C-w K` |  |  |
 | `swap_view_right` | 和右边那一区对调 | `C-w L` |  |  |
-| `goto_file_hsplit` | 下方打开光标处文件 | `C-w f` | `C-w F` `C-w f` |  |
+| `goto_file_hsplit` | 下方打开光标处文件 | `C-w f` |  |  |
 | `goto_file_vsplit` | 旁边打开光标处文件 | `C-w F` |  |  |
+| `goto_file_hsplit_above` | 上方打开光标处文件 |  | `C-w F` `C-w f` |  |
 | `create_fold` | 创建折叠，后接移动 | `zf` `Zf` | `zf` |  |
 | `create_fold_lines` | 折叠 N 行(用计数) |  | `zF` |  |
 | `open_fold` | 展开 |  | `zo` |  |
