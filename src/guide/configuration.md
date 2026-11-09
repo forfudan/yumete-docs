@@ -229,7 +229,7 @@ document behind the panel.
 | --- | --- |
 | `j` `k` | move down and up, through every group. `gg` and `G` go to the top and bottom |
 | `h` `l` | go to the group before or after, as the column on the left lists them; a search's groups only, while it is in force |
-| `/` | search every setting by its name, its description or its TOML key; the list narrows as you type, and the cursor lands on the setting the search names (`/theme` is the theme). `Enter` keeps the search, `Esc` in the list clears it |
+| `/` | search every setting by its name, its description or its TOML key, in either Chinese script or by its full pinyin (`yulan` finds 预览); the list narrows as you type, and the cursor lands on the setting the search names (`/theme` is the theme). `Enter` keeps the search, `Esc` in the list clears it |
 | `Enter` | change the setting: a switch flips; a choice opens a list with what each value means (`j` `k`, `Enter`, `Esc`), and a theme is shown as you move through the list; a number or text opens the editor on the bottom row |
 | `Space` | flip a switch or step to the next choice; on a number or text, the same as `Enter` |
 | `r` | reset: remove this setting from the file, so the layer below applies again |
