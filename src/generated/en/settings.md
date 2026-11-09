@@ -18,7 +18,7 @@
 | `[editor] soft_wrap` | `true` | **soft wrap** — long lines wrap on a horizontal page; off, they run past the right edge |
 | `[editor] hanging_punctuation` | `false` | **hanging punctuation** — 。，、？！：；「」 hang in the margin instead of taking a cell |
 | `[editor] margin` | `"dense"` | **margin** — when to show the lane for readings, emphasis and 平仄 (`never` never, `dense` when dense, `loose` when loose, `always` always) |
-| `[editor] tatechuyoko` | `4` | **tatechuyoko** — half-width characters set across inside one cell, so a year is not one digit to a row (2–8) |
+| `[editor] tatechuyoko` | `0` | **tatechuyoko** — half-width characters set across inside one cell, so a year is not one digit to a row (2–8) |
 | `[editor] paper_ticks` | `0` | **paper ticks** — a faint tick in the margin every few cells, like manuscript paper (0–64) |
 | `[editor] ambiguous_width` | `"auto"` | **ambiguous width** — whether East Asian ambiguous-width characters (— …) take one cell or two; change it if the cursor is misaligned (`auto` ask the terminal, `wide` two cells, `narrow` one cell) |
 

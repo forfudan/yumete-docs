@@ -192,16 +192,16 @@ between two columns. The horizontal page follows the same rules.
 Latin letters and digits stand one to a row, against the right side of the
 cell, so they line up with the right edge of the Chinese characters.
 
-A short run of them is set across inside one cell instead, so a year reads as
-one number and not as a stack of digits. This is tatechuyoko (縱中橫):
+A short run of them can be set across inside one cell instead, so a year reads
+as one number and not as a stack of digits. This is tatechuyoko (縱中橫):
 
 ```toml
 [editor]
 tatechuyoko = 4    # 0 is off; 2 to 8 is the longest run set across
 ```
 
-The default is `4`, which covers years (`1997`) and chapter numbers
-(`第12章`).
+It is off by default, so every run is set the same way; `4` covers years
+(`1997`) and chapter numbers (`第12章`).
 
 - **A run is set across whole, or not at all.** Half of `1997` in one cell and
   half in the next would read as `19` and `97`.

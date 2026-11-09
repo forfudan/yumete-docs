@@ -18,7 +18,7 @@
 | `[editor] soft_wrap` | `true` | **自动换行** — 横排时长行自动换行；关闭则超出右边界 |
 | `[editor] hanging_punctuation` | `false` | **标点旁置** — 。，、？！：；「」 悬挂在页边，不占正文的格 |
 | `[editor] margin` | `"dense"` | **夹行** — 何时显示夹行(注音、着重号、平仄等) (`never` 从不, `dense` 挤的时候, `loose` 松的时候, `always` 总是) |
-| `[editor] tatechuyoko` | `4` | **纵中横** — 竖排时一格内横排几个半角字符，年份、页码就不会一位占一行 (2–8) |
+| `[editor] tatechuyoko` | `0` | **纵中横** — 竖排时一格内横排几个半角字符，年份、页码就不会一位占一行 (2–8) |
 | `[editor] paper_ticks` | `0` | **稿纸刻度** — 竖排时每隔几个字在页边画一个淡刻度，像稿纸一样 (0–64) |
 | `[editor] ambiguous_width` | `"auto"` | **歧义宽度** — 东亚歧义宽度字符占一格还是两格。显示错位时改这里 (`auto` 问终端, `wide` 两格, `narrow` 一格) |
 
