@@ -100,9 +100,10 @@ window you are in and closes the rest.
 The tabs along the top are the open files, one each, whatever the windows show,
 and the previews (see [Preview in a real typesetter](../writing/page.md#preview-in-a-real-typesetter-preview)).
 The file of the window you are in is lit; a file another window shows is
-underlined. `:bc` closes a file: a window that was showing it goes back to the
-file it showed before (a new window starts with the history of the one it
-was split from), or closes when it has none to go back to. `:bc` on a preview
+underlined. `:bc` closes a file: every window that was showing it, the one you
+are in too, goes back to the file it showed before (a new window starts with
+the history of the one it was split from); with none to go back to, the one
+you are in shows the next file, and another window closes. `:bc` on a preview
 closes the preview the same way.
 
 The rule between two windows one above the other carries the name of the
