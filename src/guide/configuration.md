@@ -231,11 +231,16 @@ input method. `Enter` keeps the value when it is one yumete takes, and writes
 it; otherwise the value stays on the line and the reason, with the values or
 the range it takes, appears under the setting. `Esc` leaves the old value.
 
-The panel takes no `:` commands. `:` opens a line that takes what you type up to
-`Enter`: `:q`, `:wq` and `:x` close the panel, as habit expects, and anything
-else is answered that the panel takes no commands. A config file changed or
-deleted by something else while the panel is open is read again, and the panel
-says so once; `u` then keeps that change.
+The panel takes no other `:` commands. `:` opens a line that takes what you type
+up to `Enter`, with no input method, as the editor's own `:` line: `:q`, `:wq`
+and `:x` close the panel, as habit expects, `:settings editor.scrolloff` (or
+`:set editor.scrolloff`, or a setting's name as the panel shows it) goes to
+that setting, and anything else is answered that the panel takes no commands.
+A config file changed or deleted by something else while the panel is open is
+read again, and the panel says so once; `u` then keeps that change.
+
+With `[editor] command_line = false` there is no command row, and what the
+panel says appears on its own bottom row, over the key row, until it goes.
 
 ### Which file, which layer
 
@@ -252,7 +257,11 @@ the setting.
 
 There is nothing to save: every change you confirm is written to the file at
 once and takes effect, and the bottom row names the file. `u` takes a change
-back by writing the file as it was, and `C-r` writes it again.
+back by writing the file as it was, and `C-r` writes it again. If the file was
+changed by something else in between, `u` sets the setting back on what the
+file holds now, keeping that change, and `C-r` then puts your change back on
+what `u` wrote. When `u` takes away a file your change created, the bottom row
+says it was removed.
 
 The panel changes only the lines it needs to. Your comments, the order of your
 settings, your blank lines and keys the panel does not know stay as they were,
