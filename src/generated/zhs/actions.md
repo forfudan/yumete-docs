@@ -294,9 +294,9 @@
 | `goto_left_sidebar` | 进入左侧栏 | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | 进入右侧栏 | `C-w I` | `C-w I` |  |
 | `hsplit` | 向下拆分 | `C-w s` | `C-w S` `C-w s` |  |
-| `vsplit` | 并排拆分 | `C-w v` | `C-w v` |  |
+| `vsplit` | 向右拆分 | `C-w v` | `C-w v` |  |
 | `hsplit_new` | 下方新建空白窗口 | `C-w n s` | `C-w n` `C-w n s` |  |
-| `vsplit_new` | 旁边新建空白窗口 | `C-w n v` | `C-w n v` |  |
+| `vsplit_new` | 右侧新建空白窗口 | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | 空白窗口组：s 下面，v 旁边 | `C-w n` |  |  |
 | `wclose` | 关闭窗口 | `C-w q` | `C-w q` |  |
 | `wonly` | 只保留此窗口 | `C-w o` | `C-w o` |  |

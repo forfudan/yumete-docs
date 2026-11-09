@@ -81,10 +81,10 @@ tag keys.
 
 The words are positions, not directions: on a vertical page, where the text
 itself runs down the columns, "beside" still means side by side and "below"
-still means under. On a vertical page, where reading runs right to left,
-a window opened beside the one you are in goes to its left, and stays there
-when you switch the page back to horizontal: switching the layout never
-moves a window. A preview always opens on the right.
+still means under. A window opened beside the one you are in goes to its
+right, on a vertical page too (with vim's keys, to its left, as in vim), and
+switching the layout never moves a window. A preview always opens on the
+right.
 
 Windows side by side, or one above another, share the room equally, as in
 vim and helix, and you may go on splitting until a window would be too
