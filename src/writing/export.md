@@ -108,6 +108,7 @@ A page is vertical when `[export] vertical` is on, or with the word
 | --- | --- | --- |
 | `Python`, `don’t worry` | turned | turned |
 | `GPS`, `A`, `x` | turned | upright, one to a square |
+| `x.`, `(x)`, `x, y` | turned | each letter upright, its marks beside it |
 | `3` | turned | upright |
 | `12` | turned | across in one square |
 | `1997` | turned | turned |
@@ -121,14 +122,21 @@ A page is vertical when `[export] vertical` is on, or with the word
 the marks joined to it, so `5%` and `don’t` turn as one piece. `jlreq` follows
 the W3C requirements for Japanese and Chinese layout (JLREQ and clreq). A
 single letter stands upright under `jlreq`, a small one as a capital does,
-as `$x$` does.
+as `$x$` does, and so does a letter with a mark joined to it: in `x.` and
+`(x)` the letter stands and the marks are set as marks on their own are.
+`x, y` is two letters, each upright, not a phrase.
 
 **Curly quotes round Chinese become corner brackets** on a Chinese page:
 `“”` as `『』` and `‘’` as `「」`. They are real characters, so a copy from the
 page is still Chinese. Quotes round Western words keep their own marks, as
-clreq has quoted Western text keep them: in `他说“go”`, `“go”` stays. A quote
-whose partner is in another paragraph (a quotation running on over several)
-goes by the text beside it. An apostrophe inside an English word stays an
+clreq has quoted Western text keep them: in `他说“go”`, `“go”` stays — a pair
+stays curly when it holds a Latin letter and no Chinese. A pair that holds no
+letter at all, only marks, digits or code (`“……”`, `“——”`, `“1949”`,
+``“`走`”``), follows the text round it, so in a Chinese sentence it becomes
+`『』`. A quote whose partner is in another paragraph (a quotation running on
+over several) goes by the first letter inside it. A page is Chinese when its
+prose is, as its `lang` says (see [Language and line breaks](#language-and-line-breaks));
+the vertical Markdown preview asks the same question. An apostrophe inside an English word stays an
 apostrophe. Other punctuation is left as you wrote it, and the font turns it;
 a half-width mark on its own, such as `×` or `±`, stands as the browser's
 vertical text sets it (upright for those two, turned for `·` or `/`).
@@ -139,7 +147,8 @@ characters below the top of its column.
 **A table is a vertical table**, like a chronology in an old Chinese book.
 Each row of the source becomes a column, read from right to left, with the
 header row on the right. The caption runs down beside it. A short cell stays
-on one line; a long one wraps, so the table is never taller than a column.
+on one line; a long one wraps, and a long word or address in it breaks
+anywhere, so the table is never taller than a column.
 
 **A picture alone in its paragraph is a figure**. The picture stays upright,
 and its text becomes a caption beside it.
@@ -193,6 +202,7 @@ A picture among words, `文中有图 ![小图](a.png) 在此`, is a picture in t
 line, no longer than the line; two pictures on one line are two such
 pictures, not a figure. A path with a space in it is written in angle
 brackets, `![图](<my pic.png>)`, or with `%20`, `![图](my%20pic.png)`.
+A picture written with no words, `![](a.png)`, is drawn too.
 
 The HTML page refers to the picture where the Markdown file does. An EPUB
 carries every picture inside the book, a figure's and one in a line; one it
@@ -221,8 +231,11 @@ Open it in Apple Books, Thorium or any EPUB 3 reader. How a reader sets
 vertical text is up to the reader; older ones set every book horizontally.
 
 Control characters an XML page cannot hold (a form feed, say) are left out,
-so a strict reader opens the book. The book's language is read from its
-prose; code and links are not counted.
+so a strict reader opens the book. A picture shown more than once is in the
+book once. A link to a file beside the manuscript, `[第二章](ch2.html)`, which
+the book does not hold, keeps its words with the target as their tooltip;
+links to the web, mail addresses and footnotes stay links. The book's
+language is read from its prose; code and links are not counted.
 
 ## What carries over
 
@@ -244,7 +257,8 @@ All three formats carry:
 - front matter (`---` … `---` at the head of the file), in a frame;
 - fenced code blocks, with three or more backticks or tildes as CommonMark
   reads them (closed only by the same character, at least as many), in syntax
-  colours when they name a language;
+  colours when they name a language, and code blocks indented four spaces or
+  a tab (a fence written inside one is part of its code);
 - links, as links, a target in angle brackets with its spaces;
 - task lists, `- [ ]` and `- [x]`, with their boxes (☐ or ☑ in Typst);
 - rules (`---`, `* * *`);
