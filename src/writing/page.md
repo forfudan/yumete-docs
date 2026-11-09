@@ -360,7 +360,12 @@ to a real typesetter and shows the result beside the text, or in your browser.
 :preview-fit page     show a whole Typst page (width is the default)
 :preview-theme on     draw a Typst page in the theme's colours
 :preview-vertical off keep the Markdown preview horizontal when the text is vertical
+:preview-redraw       draw the previews again at their windows' size now
 ```
+
+The preview tab opens beside a horizontal text window and below a vertical
+one, where the columns leave room. If a picture is left at its old size
+after you move its window, `:preview-redraw` draws it again.
 
 | File | What happens |
 | --- | --- |
