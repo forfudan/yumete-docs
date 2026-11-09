@@ -70,8 +70,7 @@
 | `:word-discover-working` |  | 在工作目録中挖掘用户詞語 |
 | `:word-discover-project` |  | 在項目中挖掘用户詞語 |
 | `:word-habit` |  | 口頭禪：本文比一般文本多用的詞 |
-| `:vertical` |  | 把這一頁改爲豎排 |
-| `:horizontal` |  | 把這一頁改爲横排 |
+| `:vertical` | `on｜off` | 豎排開關：on 豎排，off 横排，單用則切換 |
 | `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | 豎排時 hjkl 按文字方向還是按屏幕方向移動 |
 | `:theme` | `ink｜one-dark｜github｜monokai｜dracula｜tokyo-night｜catppuccin｜gruvbox｜bw｜morandi｜<主題名>` | 主題(深淺色用 :theme-mode) |
 | `:theme-mode` | `system｜dark｜light` | 深色或淺色(system 跟隨終端) |

@@ -70,8 +70,7 @@
 | `:word-discover-working` |  | mine the working directory's own words |
 | `:word-discover-project` |  | mine the project's own words |
 | `:word-habit` |  | habit words: those this text uses far more than usual |
-| `:vertical` |  | lay this page out vertically |
-| `:horizontal` |  | lay this page out horizontally |
+| `:vertical` | `on｜off` | vertical layout: on, off for across, alone to turn it round |
 | `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | in vertical text, whether hjkl follow the text or the screen |
 | `:theme` | `ink｜one-dark｜github｜monokai｜dracula｜tokyo-night｜catppuccin｜gruvbox｜bw｜morandi｜<主題名>` | colour theme (light or dark: :theme-mode) |
 | `:theme-mode` | `system｜dark｜light` | dark or light (system follows the terminal) |
