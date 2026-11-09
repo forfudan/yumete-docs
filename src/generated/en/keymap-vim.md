@@ -282,7 +282,7 @@
 | `C-w ^` | previous file, above |
 | `C-w :` | command line |
 | `C-w h / C-w j / C-w k / C-w l` | go in that direction |
-| `C-w v` | split beside |
+| `C-w v` | split left |
 | `C-w n` | new blank window |
 | `C-w q` | close window |
 | `C-w o` | keep only this window |
@@ -292,5 +292,5 @@
 | Key | What it does |
 | --- | --- |
 | `C-w n s` | new blank window below |
-| `C-w n v` | new blank window beside |
+| `C-w n v` | new blank window on the right |
 

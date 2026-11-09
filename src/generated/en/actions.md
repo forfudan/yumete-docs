@@ -294,9 +294,9 @@
 | `goto_left_sidebar` | go to the left sidebar | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | go to the right sidebar | `C-w I` | `C-w I` |  |
 | `hsplit` | split below | `C-w s` | `C-w S` `C-w s` |  |
-| `vsplit` | split beside | `C-w v` | `C-w v` |  |
+| `vsplit` | split right | `C-w v` | `C-w v` |  |
 | `hsplit_new` | new blank window below | `C-w n s` | `C-w n` `C-w n s` |  |
-| `vsplit_new` | new blank window beside | `C-w n v` | `C-w n v` |  |
+| `vsplit_new` | new blank window on the right | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | blank-window group: s below, v beside | `C-w n` |  |  |
 | `wclose` | close window | `C-w q` | `C-w q` |  |
 | `wonly` | keep only this window | `C-w o` | `C-w o` |  |
