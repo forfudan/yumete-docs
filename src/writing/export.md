@@ -124,7 +124,9 @@ the W3C requirements for Japanese and Chinese layout (JLREQ and clreq). A
 single letter stands upright under `jlreq`, a small one as a capital does,
 as `$x$` does, and so does a letter with a mark joined to it: in `x.` and
 `(x)` the letter stands and the marks are set as marks on their own are.
-`x, y` is two letters, each upright, not a phrase.
+A letter with an accent typed apart from it (`e` and a combining acute)
+stands whole, as `é` does. `x, y` is two letters, each upright, not a
+phrase.
 
 **Curly quotes round Chinese become corner brackets** on a Chinese page:
 `“”` as `『』` and `‘’` as `「」`. They are real characters, so a copy from the
@@ -148,7 +150,8 @@ characters below the top of its column.
 Each row of the source becomes a column, read from right to left, with the
 header row on the right. The caption runs down beside it. A short cell stays
 on one line; a long one wraps, and a long word or address in it breaks
-anywhere, so the table is never taller than a column.
+anywhere, and a formula in it is held to the cell, so the table is never
+taller than a column.
 
 **A picture alone in its paragraph is a figure**. The picture stays upright,
 and its text becomes a caption beside it.
@@ -217,6 +220,9 @@ vertical layout; a vertical export says so at the top of the file.
 `[export] font_family` and `page` do not reach it: Typst sets its own. Ruby becomes
 `#ruby(base, reading)`, with a definition at the top of the file that you can
 change.
+A code block left open in Markdown, which ends with the file or the
+quotation it stands in, is closed in the Typst source, before the end of
+its `#quote` when it is in one.
 
 ## EPUB
 
@@ -233,15 +239,26 @@ vertical text is up to the reader; older ones set every book horizontally.
 Control characters an XML page cannot hold (a form feed, say) are left out,
 so a strict reader opens the book. A picture shown more than once is in the
 book once. A link to a file beside the manuscript, `[第二章](ch2.html)`, which
-the book does not hold, keeps its words with the target as their tooltip;
-links to the web, mail addresses and footnotes stay links. The book's
+the book does not hold, keeps its words with the target as their tooltip,
+and so does a link in any scheme but `http`, `https` and `mailto`
+(`file:///…`), which a reader cannot follow from inside a book; links to
+the web, mail addresses, footnotes and headings stay links. HTML typed
+into the text goes into the book as XML: a tag closed in its place stays
+a tag, one left open (`<span>` with no `</span>`), closing nothing, or a
+block such as `<div>` typed in a line of text goes in as the words it
+was typed as, and a picture written as
+`<img src="a.png">` goes inside the book like any other, or leaves its
+`alt` when it cannot be read. The book's
 language is read from its prose; code and links are not counted.
 
 ## What carries over
 
 All three formats carry:
 
-- headings and paragraphs;
+- headings and paragraphs; in HTML and EPUB each heading takes the anchor
+  GitHub gives it, so `[第二章](#第二章)` and `[see](#hello-world)` lead
+  to `# 第二章` and `## Hello, World!` (its words in small letters, a space
+  as `-`, other marks left out; the same words again take `-1`, `-2`);
 - `**bold**`, `*italic*` and the other inline marks, as real formatting, not as
   asterisks;
 - lists, nested, numbered or not;
