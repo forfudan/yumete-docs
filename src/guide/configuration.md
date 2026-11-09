@@ -227,7 +227,9 @@ layers. The key row at the bottom lists only the keys that work at that moment.
 
 The editor on the bottom row is the `:` line's own: the arrow keys, `Home`,
 `End`, `C-a`, `C-e`, `C-w`, `C-u`, a paste at the caret, and `C-^` for the
-input method. `Enter` keeps the value when it is one yumete takes, and writes
+input method. The input method's 中/英 tag stands at the right of the row with room of
+its own: a long value scrolls and the setting's name gives way before the
+tag would cover the value or the caret. `Enter` keeps the value when it is one yumete takes, and writes
 it; otherwise the value stays on the line and the reason, with the values or
 the range it takes, appears under the setting. `Esc` leaves the old value.
 

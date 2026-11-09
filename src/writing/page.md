@@ -490,8 +490,9 @@ so `:render`, `tatechuyoko` and the column length do not reach it.
 - A display formula is turned, on a column of its own, two characters from its
   head. A table is read as columns from the right, the header row on the
   right, its caption (`Table: …` just above or below) beside it. A long
-  cell wraps, and a long word or address in it is broken to fit, so the table
-  is never longer than the column; a table with more
+  cell wraps, a long word or address in it is broken to fit, and a turned
+  formula in it is scaled down to its cell, so the table is never longer
+  than the column; a table with more
   columns than the page holds even at a character each goes on in a second
   band to the left, each band with every row. A picture alone in its
   paragraph stands upright with its text as a caption to its left. A reading in ruby is drawn to the right of its characters. Code is
