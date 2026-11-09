@@ -390,7 +390,7 @@ window like any other: `:q` in the last text window closes it and leaves the
 preview, and `:q` in the last window of all quits. A session keeps its preview tabs, and which
 window showed one.
 
-A preview is drawn in a frame, thick and gold while the keys are in it and thin otherwise, and the status line says `PRV` there. Inside a preview, the keys are a PDF reader's under vim:
+A preview is drawn in a frame, thick and gold while the keys are in it and thin otherwise, and the status line says `PRV` there. On a Markdown preview's frame, arrows mark where the cursor's line is: `▶` `◀` on the side walls, or `▼` `▲` on the top and bottom walls of a vertical page. Inside a preview, the keys are a PDF reader's under vim:
 
 | Key | Action |
 | --- | --- |
