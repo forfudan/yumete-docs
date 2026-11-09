@@ -390,7 +390,7 @@ window like any other: `:q` in the last text window closes it and leaves the
 preview, and `:q` in the last window of all quits. A session keeps its preview tabs, and which
 window showed one.
 
-Inside a preview, the keys are a PDF reader's under vim:
+While the keys are in a preview, the status line says `PRV.NOR`. Inside a preview, the keys are a PDF reader's under vim:
 
 | Key | Action |
 | --- | --- |
