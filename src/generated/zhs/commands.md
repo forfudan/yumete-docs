@@ -131,6 +131,7 @@
 | `:preview-fit` | `width｜page` | 页面窗口中页面的大小：页宽或整页 |
 | `:preview-theme` | `on｜off` | 用主题配色显示预览页面：纸为背景色，黑字为文字色；关闭则按印刷原样 |
 | `:preview-vertical` | `on｜off` | 文字窗口竖排时，Markdown 预览也竖排：从右往左一列一列，像竖排导出那样 |
+| `:preview-redraw` |  | 按窗口现在的大小重画预览 |
 | `:render` | `off｜basic｜full` | 渲染程度：源码、着色、所见即所得 |
 | `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行缩进：`off`/`basic`(保留段间空行)/`full`(隐藏段间空行)，或格数 |
 | `:indent-tab` | `spaces｜tab` | Tab 键输入空格还是制表符(Shift-Tab 输入另一种) |
