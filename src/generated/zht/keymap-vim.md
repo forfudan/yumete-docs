@@ -60,7 +60,7 @@
 | `#` | 反向搜索光標下的詞 | `search_word_backward` |
 | `$` `End` | 行尾(vim 的 $：往下走也留在行尾) | `vim_goto_line_end` |
 | `%` | 跳到匹配的括號，不在括號上則找本行下一個(vim 的 %) | `vim_match_brackets` |
-| `'` `` ` `` | 回到標記(再按一個字母) | `goto_mark` |
+| `'` | 回到標記(再按一個字母) | `goto_mark` |
 | `(` | 跳到上一句(不選中) | `jump_prev_sentence` |
 | `)` | 跳到下一句(不選中) | `jump_next_sentence` |
 | `*` | 搜索選中内容 | `search_selection` |
@@ -80,6 +80,7 @@
 | `]` | ] 組：跳到下一個 | `right_bracket_mode` |
 | `^` | as `gs` | `@gs` |
 | `_` | 第一個非空白字符(帶數字時下移幾行) | `vim_goto_first_nonwhitespace` |
+| `` ` `` | 回到標記所在的那個字(再按一個字母) | `goto_mark_exact` |
 | `{` | 跳到上一段(不選中) | `jump_prev_paragraph` |
 | `\|` | 到本行第 N 列(用計數) | `goto_column` |
 | `}` | 跳到下一段(不選中) | `jump_next_paragraph` |
@@ -209,7 +210,7 @@
 | `gu / gU / g~` | 小寫/大寫/大小寫互換，後接動作 |
 | `gq` | 按寬度重排，後接動作 |
 | `gJ` | 合併下一行(不加空格) |
-| `` g` `` | 回到標記(再按一個字母) |
+| `` g` `` | 回到標記所在的那個字(再按一個字母) |
 
 ## 下一個 (`]`)
 

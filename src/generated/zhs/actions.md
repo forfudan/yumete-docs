@@ -119,7 +119,8 @@
 | `jump_prev_sentence` | 跳到上一句(不选中) |  | `(` |  |
 | `jump_next_sentence` | 跳到下一句(不选中) |  | `)` |  |
 | `add_mark` | 设标记(再按一个字母) | `M` | `m` |  |
-| `goto_mark` | 回到标记(再按一个字母) | `'` | `` ` `` `'` |  |
+| `goto_mark` | 回到标记(再按一个字母) | `'` | `'` |  |
+| `goto_mark_exact` | 回到标记所在的那个字(再按一个字母) |  | `` ` `` |  |
 | `view_mode` | 视图组：定位光标行、滚屏、折叠 | `z` | `z` |  |
 | `sticky_view_mode` | 视图组(常驻) | `Z` | `Z` |  |
 | `right_bracket_mode` | ] 组：跳到下一个 | `]` | `]` |  |

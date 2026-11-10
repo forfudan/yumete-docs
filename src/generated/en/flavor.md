@@ -71,7 +71,7 @@ Under vim:
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| g goto | `` g` `` | case group: upper/lower, traditional/simplified | go to a mark (then a letter) |
+| g goto | `` g` `` | case group: upper/lower, traditional/simplified | go to the very place of a mark (then a letter) |
 | convert | `` g`l `` | to lowercase |  |
 | convert | `` g`u `` | to uppercase |  |
 | convert | ``` g`` ``` | switch case |  |
