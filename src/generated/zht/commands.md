@@ -100,6 +100,7 @@
 | `:yume-builtin` |  | 改用内置碼表，忽略已安裝的 |
 | `:yume-table` | `<路徑>` | 用你自己的碼表(Rime 的 .dict.yaml 也行) |
 | `:set` `:se` | `<選項>` | vim 的 :set，支持 modeline 的幾項：ft、ts、sw、et、tw；不帶參數則打開設置面板 |
+| `:setlocal` `:setl` | `<選項>` | vim 的 :setlocal，同 :set 那幾項，只設當前緩衝區；不帶參數則顯示它們的值 |
 | `:setfiletype` `:setf` | `<文件類型>` | vim 的 :setf，同 :set ft= |
 | `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 文件的標記語言(不帶參數顯示當前值) |
 | `:pipe` | `<命令>` | 將選區傳給終端命令，用輸出替換選區 |

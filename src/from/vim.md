@@ -274,6 +274,8 @@ also takes Visual `Q` away.
   says its value, as in vim. `tw` is the width `gq`, `gw` and `:hard-wrap`
   fill to; lines are not broken while you type. Other options are their own
   commands or config keys, and `:set` on its own opens the settings panel. See [Settings](../reference/settings.md).
+  `:setl` (`:setlocal`) is the same, since these options are the file's
+  anyway; on its own it says their values.
 - `:tabnew` opens a new empty buffer, or the file it names, since a tab here
   is a file; `:ene` is `:new`. vim's `tabn` and `tabp` are not there; typed,
   they point to `:buffer-next` and `:buffer-previous`.
