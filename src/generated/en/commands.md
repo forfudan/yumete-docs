@@ -100,6 +100,7 @@
 | `:yume-builtin` |  | use this scheme's built-in table, ignoring installed ones |
 | `:yume-table` | `<path>` | use your own table (a Rime .dict.yaml will do) |
 | `:set` `:se` | `<選項>` | vim's :set for modeline options: ft, ts, sw, et, tw; no argument opens the settings panel |
+| `:setlocal` `:setl` | `<選項>` | vim's :setlocal: the same options as :set, for this buffer; no argument shows their values |
 | `:setfiletype` `:setf` | `<文件類型>` | vim's :setf, as :set ft= |
 | `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | the markup this file uses (no argument shows the current one) |
 | `:pipe` | `<命令>` | pipe the selection through a shell command and replace it with the output |
