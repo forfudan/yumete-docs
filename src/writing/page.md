@@ -395,7 +395,7 @@ window like any other: `:q` in the last text window closes it and leaves the
 preview, and `:q` in the last window of all quits. A session keeps its preview tabs, and which
 window showed one.
 
-A preview is drawn in a frame, thick and gold while the keys are in it and thin otherwise, and the status line says `PRV` there. In a Markdown preview, the page keeps the cursor's part of a long paragraph in view, and a gold bar stands beside the whole line the cursor is in (a paragraph, one list item, one line of code), in the left margin or along the top of a vertical page; when that paragraph is out of view, arrows on the frame (`▶` `◀`, or `▼` `▲`) point the way to it. In a Typst preview, the bar stands beside the page on the one line tinymist says the cursor's text is on, with the same arrows when that line is out of view. Inside a preview, the keys are a PDF reader's under vim:
+A preview is drawn in a frame, thick and gold while the keys are in it and thin otherwise, and the status line says `PRV` there. In a Markdown preview, the page keeps the cursor's part of a long paragraph in view, and a gold bar stands beside the whole line the cursor is in (a paragraph, one list item, one line of code), in the left margin or along the top of a vertical page; when that paragraph is out of view, one arrow on the frame points the way to it: `▲` on its top or `▼` on its bottom, or on a vertical page `▶` on its right or `◀` on its left. A Typst preview marks the one line tinymist says the cursor's text is on with `▶` `◀` on the frame's two sides, and points the way with `▲` or `▼` when that line is out of view. Inside a preview, the keys are a PDF reader's under vim:
 
 | Key | Action |
 | --- | --- |
