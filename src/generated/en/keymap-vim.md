@@ -60,7 +60,7 @@
 | `#` | search backward for the word under the cursor | `search_word_backward` |
 | `$` `End` | the end of the line (vim's $: moving down keeps to line ends) | `vim_goto_line_end` |
 | `%` | the matching bracket, or the next one on the line (vim's %) | `vim_match_brackets` |
-| `'` `` ` `` | go to a mark (then a letter) | `goto_mark` |
+| `'` | go to a mark (then a letter) | `goto_mark` |
 | `(` | to the previous sentence, no selection | `jump_prev_sentence` |
 | `)` | to the next sentence, no selection | `jump_next_sentence` |
 | `*` | search for the selection | `search_selection` |
@@ -80,6 +80,7 @@
 | `]` | ] group: go to next | `right_bracket_mode` |
 | `^` | as `gs` | `@gs` |
 | `_` | first non-blank character (a count moves that many lines down) | `vim_goto_first_nonwhitespace` |
+| `` ` `` | go to the very place of a mark (then a letter) | `goto_mark_exact` |
 | `{` | to the previous paragraph, no selection | `jump_prev_paragraph` |
 | `\|` | go to column N of the line (count) | `goto_column` |
 | `}` | to the next paragraph, no selection | `jump_next_paragraph` |
@@ -209,7 +210,7 @@
 | `gu / gU / g~` | lowercase / uppercase / swap case, then a motion |
 | `gq` | reflow to the width, then a motion |
 | `gJ` | join the next line without a space |
-| `` g` `` | go to a mark (then a letter) |
+| `` g` `` | go to the very place of a mark (then a letter) |
 
 ## next… (`]`)
 

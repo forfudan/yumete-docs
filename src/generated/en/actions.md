@@ -119,7 +119,8 @@
 | `jump_prev_sentence` | to the previous sentence, no selection |  | `(` |  |
 | `jump_next_sentence` | to the next sentence, no selection |  | `)` |  |
 | `add_mark` | set a mark (then a letter) | `M` | `m` |  |
-| `goto_mark` | go to a mark (then a letter) | `'` | `` ` `` `'` |  |
+| `goto_mark` | go to a mark (then a letter) | `'` | `'` |  |
+| `goto_mark_exact` | go to the very place of a mark (then a letter) |  | `` ` `` |  |
 | `view_mode` | view group: place the cursor line, scroll, fold | `z` | `z` |  |
 | `sticky_view_mode` | view group (sticky) | `Z` | `Z` |  |
 | `right_bracket_mode` | ] group: go to next | `]` | `]` |  |
