@@ -119,10 +119,12 @@ Without it, `:shot` says so and takes nothing.
 
 | Command | What it writes |
 | --- | --- |
-| `ye --import helix` | your helix `config.toml`: the keys, the `[editor]` settings yumete has, and the theme when yumete has one like it |
-| `ye --import vim` | your vimrc: the settings, colour scheme and maps that translate for certain (see [Coming from vim](../from/vim.md#your-vim-or-neovim-config)) |
+| `ye --import helix` | your helix `config.toml`: the keys and the `[editor]` settings yumete has |
+| `ye --import vim` | your vimrc: the settings and maps that translate for certain (see [Coming from vim](../from/vim.md#your-vim-or-neovim-config)) |
 | `ye --import nvim` | your Neovim config, the same way; a LazyVim config gets the LazyVim import |
 | `ye --import lazyvim` | LazyVim's `Space` menu, the config on [Coming from LazyVim](../from/lazyvim.md), with your own maps and options on top |
+
+No theme is carried over from any of them, since their themes are not yumete's; pick one with `:theme`.
 
 helix's file is read as it is written, and nothing runs. vim, Neovim and
 LazyVim can only say what a config sets by running it, so for those yumete
