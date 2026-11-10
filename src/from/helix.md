@@ -24,6 +24,9 @@ for paragraphs, changes and diagnostics.
 `.` is helix's `.`: it repeats the last insert, not the last change. Under the
 vim keymap it is vim's `.` instead (see [Coming from vim](vim.md)).
 
+Enter on an empty `:` line runs the last command again, as in helix. Under the
+vim keymap it does nothing, as in vim.
+
 `J` joins lines as helix does, except across Chinese text: two lines that meet
 between two Chinese characters are joined with no space.
 
