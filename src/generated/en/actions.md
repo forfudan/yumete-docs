@@ -689,4 +689,3 @@ Rules are the editing model: the keymap chooses them as a set, not one by one.
 | `undo_at_typing_start` | an undo point starts where typing began | ✓ |  |
 | `yank_every_selection` | y with several cursors copies every selection | ✓ |  |
 | `delete_stays_in_line` | a character delete stays on its line |  | ✓ |
-| `empty_command_repeats` | Enter on an empty : line runs the last command again | ✓ |  |
