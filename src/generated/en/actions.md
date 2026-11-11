@@ -15,7 +15,8 @@
 | `goto_line_start` | start of line | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
 | `goto_line_end` | end of line | `End` `gl` `g Down` |  |  |
 | `goto_first_nonwhitespace` | first non-blank character | `^` `gs` | `^` |  |
-| `goto_file_start` | start of file | `gg` | `gg` |  |
+| `goto_file_start` | start of file | `gg` |  |  |
+| `vim_goto_file_start` | start of file, keeping the column (vim's gg) |  | `gg` |  |
 | `goto_file_end` | end of file |  |  |  |
 | `goto_last_line` | last line | `ge` |  |  |
 | `goto_prev_sentence` | previous sentence | `H` |  |  |
@@ -179,7 +180,8 @@
 | `shell_append_output` | append a command's output after the selection | `A-!` | `A-!` |  |
 | `shell_pipe_to` | pipe the selection to a command, keeping the text | `A-\|` | `A-\|` |  |
 | `shell_keep_pipe` | keep the selections a shell command succeeds on | `$` |  |  |
-| `command_mode` | command line | `:` | `:` `C-w :` |  |
+| `command_mode` | command line | `:` |  |  |
+| `vim_command_mode` | command line, over the Visual area when opened from Visual mode (vim's :) |  | `:` `C-w :` |  |
 | `match_mode` | match group: brackets, quotes, objects | `m` |  |  |
 | `replace` | replace each selected character with another | `r` | `r` |  |
 | `select_register` | pick a register (then a letter) | `"` | `"` |  |
@@ -319,7 +321,8 @@
 | `goto_file_hsplit` | open file under cursor below | `C-w f` |  |  |
 | `goto_file_vsplit` | open file under cursor beside | `C-w F` |  |  |
 | `goto_file_hsplit_above` | open file under cursor above |  | `C-w F` `C-w f` |  |
-| `create_fold` | create a fold over a motion | `zf` `Zf` | `zf` |  |
+| `create_fold` | fold the selected lines | `zf` `Zf` |  |  |
+| `vim_create_fold` | create a fold over a motion |  | `zf` |  |
 | `create_fold_lines` | fold N lines |  | `zF` |  |
 | `open_fold` | open fold |  | `zo` |  |
 | `open_folds_recursively` | open folds recursively |  | `zO` |  |
@@ -496,7 +499,7 @@
 | `extend_prev_char` | extend backward to a character | `F` | `F` |  |
 | `extend_to_line_start` | extend to the start of the line | `Home` | `Home` |  |
 | `extend_to_line_end` | extend to the end of the line | `End` |  |  |
-| `extend_to_file_start` | extend to the start of the file | `gg` | `gg` |  |
+| `extend_to_file_start` | extend to the start of the file | `gg` |  |  |
 | `extend_to_file_end` | extend to the end of the file |  |  |  |
 | `extend_to_last_line` | extend to the last line | `ge` |  |  |
 | `extend_to_word` | extend to a jump label | `gw` |  |  |

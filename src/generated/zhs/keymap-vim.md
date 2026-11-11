@@ -69,7 +69,7 @@
 | `-` | as `kgs` | `@kgs` |
 | `.` | 用新的计数再做一次刚才的改动 | `vim_repeat_last_change` |
 | `/` | 搜索 | `search` |
-| `:` | 命令行 | `command_mode` |
+| `:` | 命令行，从可视模式打开时作用于选区(vim 的 :) | `vim_command_mode` |
 | `;` | 再找一次刚才那个字 | `repeat_find_char` |
 | `<` | 减少缩进(再按一个动作) | `operator_unindent` |
 | `>` | 增加缩进(再按一个动作) | `operator_indent` |
