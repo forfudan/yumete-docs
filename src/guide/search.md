@@ -34,7 +34,7 @@ To find a character that means something in a regex, such as `.` `*` `(` or
 
 The last pattern you searched for waits on an empty prompt in grey. `Enter`
 on its own searches for it again, and `Tab` turns it into text you can edit.
-`C-p` and `C-n` (or `Up` and `Down`) walk your search history.
+`C-p` and `C-n` (or `Up` and `Down`) walk your search history. It is kept from one session to the next, as the `:` lines are, the last thousand of each, in `history.txt` in yumete's data folder; a private session (`--private`) keeps none.
 
 ### Case
 
