@@ -296,16 +296,16 @@
 | `toggle_right_sidebar` | 开关右侧栏 | `C-w i` | `C-w i` |  |
 | `goto_left_sidebar` | 进入左侧栏 | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | 进入右侧栏 | `C-w I` | `C-w I` |  |
-| `hsplit` | 向下拆分 | `C-w s` |  |  |
-| `hsplit_above` | 向上拆分 |  | `C-w S` `C-w s` |  |
-| `vsplit_left` | 向左拆分 |  | `C-w v` |  |
-| `vsplit` | 向右拆分 | `C-w v` |  |  |
+| `hsplit` | 向下拆分 | `C-w s` | `C-w S` `C-w s` |  |
+| `hsplit_above` | 向上拆分 |  |  |  |
+| `vsplit_left` | 向左拆分 |  |  |  |
+| `vsplit` | 向右拆分 | `C-w v` | `C-w v` |  |
 | `hsplit_new` | 下方新建空白窗口 | `C-w n s` | `C-w n s` |  |
 | `vsplit_new` | 右侧新建空白窗口 | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | 空白窗口组：s 下面，v 旁边 | `C-w n` |  |  |
 | `new_window_left` | 左侧新建空白窗口 | `C-w n h` |  |  |
-| `new_window_down` | 下方新建空白窗口 | `C-w n j` |  |  |
-| `new_window_up` | 上方新建空白窗口 | `C-w n k` | `C-w n` |  |
+| `new_window_down` | 下方新建空白窗口 | `C-w n j` | `C-w n` |  |
+| `new_window_up` | 上方新建空白窗口 | `C-w n k` |  |  |
 | `new_window_right` | 右侧新建空白窗口 | `C-w n l` |  |  |
 | `new_window_left_pick` | 左侧新建窗口并选择缓冲区 | `C-w n H` |  |  |
 | `new_window_down_pick` | 下方新建窗口并选择缓冲区 | `C-w n J` |  |  |
@@ -318,9 +318,9 @@
 | `swap_view_down` | 和下面那一区对调 | `C-w J` |  |  |
 | `swap_view_up` | 和上面那一区对调 | `C-w K` |  |  |
 | `swap_view_right` | 和右边那一区对调 | `C-w L` |  |  |
-| `goto_file_hsplit` | 下方打开光标处文件 | `C-w f` |  |  |
+| `goto_file_hsplit` | 下方打开光标处文件 | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | 旁边打开光标处文件 | `C-w F` |  |  |
-| `goto_file_hsplit_above` | 上方打开光标处文件 |  | `C-w F` `C-w f` |  |
+| `goto_file_hsplit_above` | 上方打开光标处文件 |  |  |  |
 | `create_fold` | 折叠选中的行 | `zf` `Zf` |  |  |
 | `vim_create_fold` | 创建折叠，后接移动 |  | `zf` |  |
 | `create_fold_lines` | 折叠 N 行(用计数) |  | `zF` |  |
@@ -371,7 +371,7 @@
 | `move_view_far_up` | 移到最上方 |  | `C-w K` |  |
 | `move_view_far_right` | 移到最右侧 |  | `C-w L` |  |
 | `vim_close_window` | 关闭窗口但不退出 |  | `C-w c` |  |
-| `goto_last_accessed_file_hsplit` | 上方打开上一个文件 |  | `C-w ^` |  |
+| `goto_last_accessed_file_hsplit` | 下方打开上一个文件 |  | `C-w ^` |  |
 | `switch_to_lowercase` | 转小写 | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | 转大写 | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | 繁→简 | `` `s `` | `` g`s `` |  |
@@ -681,13 +681,11 @@
 | `vim_text_objects` | 文本对象按 vim 的规矩 |  | ✓ |
 | `vim_registers` | vim 的寄存器：0 号存最后一次复制，1–9 号存删掉的行，大写名字往寄存器里追加 |  | ✓ |
 | `vim_scrolling` | 页面照 vim 的方式跟随光标：scrolloff、远跳居中、zt zz zb 带计数 |  | ✓ |
-| `vim_jump_list` | vim 的跳转表：一行只留一条，关掉的文件会重新打开 |  | ✓ |
 | `vim_indent_keys` | 缩进里的退格和 Tab 按 shiftwidth 走，离开插入模式时去掉空着的缩进 |  | ✓ |
 | `search_moves_caret` | 搜索把光标移到匹配开头，而不是选中匹配 |  | ✓ |
 | `step_back_after_insert` | 离开插入模式时光标退一格 |  | ✓ |
 | `replace_from_caret` | r 从光标起替换计数个字 |  | ✓ |
-| `read_below_the_line` | :r 把文件放在光标所在行的下面 |  | ✓ |
-| `undo_restores_every_cursor` | 撤销时恢复所有光标 | ✓ |  |
+| `restores_every_selection` | 撤销与 C-o 恢复所有选区，而不只是光标 | ✓ |  |
 | `undo_at_typing_start` | 撤销点从开始打字处算 | ✓ |  |
 | `yank_every_selection` | 多光标时 y 复制每一段选区 | ✓ |  |
 | `delete_stays_in_line` | 删字不跨行 |  | ✓ |

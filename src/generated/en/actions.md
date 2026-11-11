@@ -296,16 +296,16 @@
 | `toggle_right_sidebar` | open or close the right sidebar | `C-w i` | `C-w i` |  |
 | `goto_left_sidebar` | go to the left sidebar | `C-w E` | `C-w E` |  |
 | `goto_right_sidebar` | go to the right sidebar | `C-w I` | `C-w I` |  |
-| `hsplit` | split below | `C-w s` |  |  |
-| `hsplit_above` | split above |  | `C-w S` `C-w s` |  |
-| `vsplit_left` | split left |  | `C-w v` |  |
-| `vsplit` | split right | `C-w v` |  |  |
+| `hsplit` | split below | `C-w s` | `C-w S` `C-w s` |  |
+| `hsplit_above` | split above |  |  |  |
+| `vsplit_left` | split left |  |  |  |
+| `vsplit` | split right | `C-w v` | `C-w v` |  |
 | `hsplit_new` | new blank window below | `C-w n s` | `C-w n s` |  |
 | `vsplit_new` | new blank window on the right | `C-w n v` | `C-w n v` |  |
 | `window_new_mode` | blank-window group: s below, v beside | `C-w n` |  |  |
 | `new_window_left` | new blank window on the left | `C-w n h` |  |  |
-| `new_window_down` | new blank window below | `C-w n j` |  |  |
-| `new_window_up` | new blank window above | `C-w n k` | `C-w n` |  |
+| `new_window_down` | new blank window below | `C-w n j` | `C-w n` |  |
+| `new_window_up` | new blank window above | `C-w n k` |  |  |
 | `new_window_right` | new blank window on the right | `C-w n l` |  |  |
 | `new_window_left_pick` | new window on the left, picking a buffer | `C-w n H` |  |  |
 | `new_window_down_pick` | new window below, picking a buffer | `C-w n J` |  |  |
@@ -318,9 +318,9 @@
 | `swap_view_down` | swap with the region below | `C-w J` |  |  |
 | `swap_view_up` | swap with the region above | `C-w K` |  |  |
 | `swap_view_right` | swap with the region on the right | `C-w L` |  |  |
-| `goto_file_hsplit` | open file under cursor below | `C-w f` |  |  |
+| `goto_file_hsplit` | open file under cursor below | `C-w f` | `C-w F` `C-w f` |  |
 | `goto_file_vsplit` | open file under cursor beside | `C-w F` |  |  |
-| `goto_file_hsplit_above` | open file under cursor above |  | `C-w F` `C-w f` |  |
+| `goto_file_hsplit_above` | open file under cursor above |  |  |  |
 | `create_fold` | fold the selected lines | `zf` `Zf` |  |  |
 | `vim_create_fold` | create a fold over a motion |  | `zf` |  |
 | `create_fold_lines` | fold N lines |  | `zF` |  |
@@ -371,7 +371,7 @@
 | `move_view_far_up` | move this window to the very top |  | `C-w K` |  |
 | `move_view_far_right` | move this window to the far right |  | `C-w L` |  |
 | `vim_close_window` | close window, don't quit |  | `C-w c` |  |
-| `goto_last_accessed_file_hsplit` | previous file, above |  | `C-w ^` |  |
+| `goto_last_accessed_file_hsplit` | previous file, below |  | `C-w ^` |  |
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | traditional → simplified | `` `s `` | `` g`s `` |  |
@@ -681,13 +681,11 @@ Rules are the editing model: the keymap chooses them as a set, not one by one.
 | `vim_text_objects` | text objects follow vim's rules |  | ✓ |
 | `vim_registers` | vim's registers: 0 holds the last yank, 1 to 9 the deleted lines, an upper-case name adds to its register |  | ✓ |
 | `vim_scrolling` | the page follows the cursor as vim's does: scrolloff, a far jump centred, zt zz zb with a count |  | ✓ |
-| `vim_jump_list` | vim's jump list: one entry for a line, a closed file opened again |  | ✓ |
 | `vim_indent_keys` | Backspace and Tab in the indent go by shiftwidth, and an indent left empty goes when Insert ends |  | ✓ |
 | `search_moves_caret` | a search moves the caret to the match's start rather than selecting the match |  | ✓ |
 | `step_back_after_insert` | leaving Insert mode puts the caret back one |  | ✓ |
 | `replace_from_caret` | r replaces count characters from the caret |  | ✓ |
-| `read_below_the_line` | :r puts the file under the cursor's line |  | ✓ |
-| `undo_restores_every_cursor` | undo puts back every cursor | ✓ |  |
+| `restores_every_selection` | undo and C-o put back every selection, not only the cursor | ✓ |  |
 | `undo_at_typing_start` | an undo point starts where typing began | ✓ |  |
 | `yank_every_selection` | y with several cursors copies every selection | ✓ |  |
 | `delete_stays_in_line` | a character delete stays on its line |  | ✓ |

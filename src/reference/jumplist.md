@@ -13,12 +13,10 @@ the jumplist, and it works across files.
 Each window has its own list, and a new window starts with a copy of the one it was
 split from. A place moves with what you write before it, so after typing a paragraph
 above it `C-o` still lands on the same sentence. The list keeps the last 100 places.
+A line is kept once, the places ahead of you stay when you jump after going back, and
+a place in a file you have since closed opens that file again, under either keymap.
 Under the helix keymap the whole selection comes back, and `C-s` then `C-o` goes to
 the place before; under the vim keymap the cursor does.
-
-Under the helix keymap a new jump after going back drops the places ahead of you, and
-a place in a file you have since closed is forgotten. Under the vim keymap the places
-ahead stay, a line is kept once, and a closed file is opened again.
 
 ## What makes a jump
 

@@ -56,10 +56,10 @@ C-w n s, :hnew    a blank window below, on a new empty buffer
 C-w n v, :vnew    a blank window beside, on a new empty buffer
 ```
 
-With the vim key preset a new window opens above or to the left of this
-one, as vim's does; with helix's, below or to the right. `C-w n` (or
-`C-w C-n`) opens the blank window at once, above, as vim does. `C-w t`, `C-w F` and `C-w H` `J` `K` `L` are
-vim's, and these are added:
+A new window opens below or to the right of this one under either keymap
+(see [What follows your keymap](../reference/keymaps-and-yumete.md)). With the
+vim key preset `C-w n` (or `C-w C-n`) opens the blank window at once, below.
+`C-w t`, `C-w F` and `C-w H` `J` `K` `L` are vim's, and these are added:
 
 | Key | Action |
 | --- | --- |
@@ -72,7 +72,7 @@ vim's, and these are added:
 | `C-w H` `C-w J` `C-w K` `C-w L` | move this window to that edge of the screen, taking the whole of it |
 | `C-w c` | close the region you are in, but never the last window; *N* `C-w c` closes window *N* |
 | `C-w S` `C-w F` | the same as `C-w s` and `C-w f` |
-| `C-w ^` | open the file before this one in a new window above |
+| `C-w ^` | open the file before this one in a new window below |
 | `C-w :` | the command line |
 
 vim's size keys (`=` `+` `-` `<` `>` `_` `|`) are not there, since the

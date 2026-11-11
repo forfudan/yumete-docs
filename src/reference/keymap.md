@@ -16,6 +16,8 @@ Each layer has its own page:
 - [vim keymap](keymap-vim.md): vim's keys, the same way.
 - [The Yumete flavour](flavor.md): each item yumete adds, its level, and
   every key it changes under each keymap.
+- [What follows your keymap](keymaps-and-yumete.md): which behaviours follow
+  helix or vim, and which are yumete's under either.
 
 [Bindable commands](actions.md) goes the other way round: every command by
 name, with the keys that reach it under both keymaps with the flavour as it
