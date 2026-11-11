@@ -43,7 +43,6 @@ end, and so does [Bindable commands](actions.md):
 | Searching | moves the caret to the match's first character; in Visual mode it grows the one selection | selects the match; in select mode it adds the match as another selection |
 | The page | follows the cursor as vim's does: `scrolloff` kept, a far jump centred, `zt` `zz` `zb` with a count, `C-d` remembering its count | helix's |
 | Backspace and Tab in Insert mode | Backspace in the indent takes back a level, Tab in the indent goes to the next `shiftwidth` when tabs are typed, and an indent left empty goes when Insert ends | Backspace takes one character, and an indent left empty stays |
-| Enter on an empty `:` line | does nothing | runs the last command again |
 
 ## The same under every keymap
 
@@ -57,6 +56,7 @@ These are yumete's, whichever keymap you use:
   going back, and opens a closed file again when `C-o` reaches it
   ([Jumplist](jumplist.md)).
 - **`:read`** puts the file on new lines below the cursor's line.
+- **Enter on an empty `:` line** runs the last command again, as helix's does.
 - **`:s`** leaves the cursor on the last line it changed.
 - **A count before `C-w w`** goes to that window.
 - **Closed folds**: `r` and `gJ` act on the line the cursor is hidden on, a sideways

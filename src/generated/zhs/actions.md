@@ -689,4 +689,3 @@
 | `undo_at_typing_start` | 撤销点从开始打字处算 | ✓ |  |
 | `yank_every_selection` | 多光标时 y 复制每一段选区 | ✓ |  |
 | `delete_stays_in_line` | 删字不跨行 |  | ✓ |
-| `empty_command_repeats` | 空的 : 行按 Enter 重跑上一条命令 | ✓ |  |
