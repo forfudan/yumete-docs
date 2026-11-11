@@ -665,3 +665,30 @@
 | `prev_field` | previous field | `S-Tab` |
 | `move_line_down` | field below | `Down` |
 | `move_line_up` | field above | `Up` |
+
+### Rules
+
+Rules are the editing model: the keymap chooses them as a set, not one by one.
+
+| Rule | description | helix | vim |
+| --- | --- | --- | --- |
+| `vim_tables` | vim's own Normal and Insert tables, over helix's |  | ✓ |
+| `caret_off_newline` | the caret never stands on a line's break; h and l stop at the line's ends |  | ✓ |
+| `find_in_line` | f and t look on this line only |  | ✓ |
+| `till_stands_still` | t stands still when it is already against its character |  | ✓ |
+| `find_moves_caret` | f and t move the caret without selecting what they cross |  | ✓ |
+| `vim_text_motions` | words, sentences and paragraphs move by vim's rules |  | ✓ |
+| `vim_text_objects` | text objects follow vim's rules |  | ✓ |
+| `vim_registers` | vim's registers: 0 holds the last yank, 1 to 9 the deleted lines, an upper-case name adds to its register |  | ✓ |
+| `vim_scrolling` | the page follows the cursor as vim's does: scrolloff, a far jump centred, zt zz zb with a count |  | ✓ |
+| `vim_jump_list` | vim's jump list: one entry for a line, a closed file opened again |  | ✓ |
+| `vim_indent_keys` | Backspace and Tab in the indent go by shiftwidth, and an indent left empty goes when Insert ends |  | ✓ |
+| `search_moves_caret` | a search moves the caret to the match's start rather than selecting the match |  | ✓ |
+| `step_back_after_insert` | leaving Insert mode puts the caret back one |  | ✓ |
+| `replace_from_caret` | r replaces count characters from the caret |  | ✓ |
+| `read_below_the_line` | :r puts the file under the cursor's line |  | ✓ |
+| `undo_restores_every_cursor` | undo puts back every cursor | ✓ |  |
+| `undo_at_typing_start` | an undo point starts where typing began | ✓ |  |
+| `yank_every_selection` | y with several cursors copies every selection | ✓ |  |
+| `delete_stays_in_line` | a character delete stays on its line |  | ✓ |
+| `empty_command_repeats` | Enter on an empty : line runs the last command again | ✓ |  |
