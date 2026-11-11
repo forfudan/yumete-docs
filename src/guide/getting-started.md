@@ -65,8 +65,9 @@ A number in front repeats a key: `3w` moves three words, `10j` ten lines. Type
 
 ## Selecting and changing
 
-yumete follows helix: you select first, then say what to do with the
-selection. The cursor is a selection one character wide.
+Every command acts on a selection, and the cursor is a selection one
+character wide. With the default helix keys you select first, then say what
+to do with the selection:
 
 | Keys | What it does |
 | --- | --- |
@@ -78,8 +79,9 @@ selection. The cursor is a selection one character wide.
 | `u` `U` | undo, redo |
 | `.` | repeat the last insert (under the vim keymap, the last change) |
 
-So `w` then `d` deletes a word, and `x` then `c` rewrites a paragraph. If your
-hands know vim instead, see [Vim keys](#vim-keys) below.
+So `w` then `d` deletes a word, and `x` then `c` rewrites a paragraph. With
+the vim keymap you say what to do first and then how far, as in vim: `dw`
+deletes a word. See [Vim keys](#vim-keys) below.
 
 ## Typing Chinese
 
@@ -197,8 +199,10 @@ If your fingers know vim, switch the keymap:
 ```
 
 `d`, `c` and `y` then wait for a motion (`dw`, `cc`, `y$`), `x` deletes a
-character, and `V` selects a line. `:keymap helix` switches back, and `:keymap`
-alone says which one is in use.
+character, `V` selects a line, and the caret, `f`, the registers and the page
+behave as vim's do. It is a whole keymap, not a few keys changed: [What follows
+your keymap](../reference/keymaps-and-yumete.md) lists what changes with it.
+`:keymap helix` switches back, and `:keymap` alone says which one is in use.
 
 `:keymap` lasts for this session. To keep it, set it in the
 [configuration](./configuration.md):
