@@ -25,7 +25,7 @@ for paragraphs, changes and diagnostics.
 vim keymap it is vim's `.` instead (see [Coming from vim](vim.md)).
 
 Enter on an empty `:` line runs the last command again, as in helix, under
-either keymap.
+either keymap; the empty line shows it in grey first.
 
 `J` joins lines as helix does, except across Chinese text: two lines that meet
 between two Chinese characters are joined with no space.
