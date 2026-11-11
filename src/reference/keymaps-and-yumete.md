@@ -56,7 +56,8 @@ These are yumete's, whichever keymap you use:
   going back, and opens a closed file again when `C-o` reaches it
   ([Jumplist](jumplist.md)).
 - **`:read`** puts the file on new lines below the cursor's line.
-- **Enter on an empty `:` line** runs the last command again, as helix's does.
+- **Enter on an empty `:` line** runs the last command again, as helix's does;
+  the empty line shows it in grey first.
 - **`:s`** leaves the cursor on the last line it changed.
 - **A count before `C-w w`** goes to that window.
 - **Closed folds**: `r` and `gJ` act on the line the cursor is hidden on, a sideways
