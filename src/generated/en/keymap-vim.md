@@ -69,7 +69,7 @@
 | `-` | as `kgs` | `@kgs` |
 | `.` | repeat the last change with a new count | `vim_repeat_last_change` |
 | `/` | search forward | `search` |
-| `:` | command line | `command_mode` |
+| `:` | command line, over the Visual area when opened from Visual mode (vim's :) | `vim_command_mode` |
 | `;` | find that character again | `repeat_find_char` |
 | `<` | unindent (then a motion) | `operator_unindent` |
 | `>` | indent (then a motion) | `operator_indent` |

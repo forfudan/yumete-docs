@@ -15,7 +15,8 @@
 | `goto_line_start` | 行首 | `0` `Home` `gh` `g Up` | `Home` `0` | `Home` `C-a` |
 | `goto_line_end` | 行尾 | `End` `gl` `g Down` |  |  |
 | `goto_first_nonwhitespace` | 第一個非空白字符 | `^` `gs` | `^` |  |
-| `goto_file_start` | 文件開頭 | `gg` | `gg` |  |
+| `goto_file_start` | 文件開頭 | `gg` |  |  |
+| `vim_goto_file_start` | 文件開頭，保留光標所在的列(vim 的 gg) |  | `gg` |  |
 | `goto_file_end` | 文件末尾 |  |  |  |
 | `goto_last_line` | 最後一行 | `ge` |  |  |
 | `goto_prev_sentence` | 上一句 | `H` |  |  |
@@ -179,7 +180,8 @@
 | `shell_append_output` | 把外部命令的輸出接在選區後 | `A-!` | `A-!` |  |
 | `shell_pipe_to` | 把選區傳給外部命令，不改文本 | `A-\|` | `A-\|` |  |
 | `shell_keep_pipe` | 只保留終端命令執行成功的選區 | `$` |  |  |
-| `command_mode` | 命令行 | `:` | `:` `C-w :` |  |
+| `command_mode` | 命令行 | `:` |  |  |
+| `vim_command_mode` | 命令行，從可視模式打開時作用於選區(vim 的 :) |  | `:` `C-w :` |  |
 | `match_mode` | 配對組：括號、引號、對象 | `m` |  |  |
 | `replace` | 把選中的每個字換成另一個字 | `r` | `r` |  |
 | `select_register` | 選寄存器(再按一個字母) | `"` | `"` |  |
@@ -319,7 +321,8 @@
 | `goto_file_hsplit` | 下方打開光標處文件 | `C-w f` |  |  |
 | `goto_file_vsplit` | 旁邊打開光標處文件 | `C-w F` |  |  |
 | `goto_file_hsplit_above` | 上方打開光標處文件 |  | `C-w F` `C-w f` |  |
-| `create_fold` | 創建摺疊，後接移動 | `zf` `Zf` | `zf` |  |
+| `create_fold` | 摺疊選中的行 | `zf` `Zf` |  |  |
+| `vim_create_fold` | 創建摺疊，後接移動 |  | `zf` |  |
 | `create_fold_lines` | 摺疊 N 行(用計數) |  | `zF` |  |
 | `open_fold` | 展開 |  | `zo` |  |
 | `open_folds_recursively` | 遞歸展開 |  | `zO` |  |
@@ -496,7 +499,7 @@
 | `extend_prev_char` | 選區向前擴到某個字 | `F` | `F` |  |
 | `extend_to_line_start` | 選區擴到行首 | `Home` | `Home` |  |
 | `extend_to_line_end` | 選區擴到行尾 | `End` |  |  |
-| `extend_to_file_start` | 選區擴到文件開頭 | `gg` | `gg` |  |
+| `extend_to_file_start` | 選區擴到文件開頭 | `gg` |  |  |
 | `extend_to_file_end` | 選區擴到文件末尾 |  |  |  |
 | `extend_to_last_line` | 選到最後一行 | `ge` |  |  |
 | `extend_to_word` | 選區擴到某個跳轉標籤 | `gw` |  |  |
