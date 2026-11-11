@@ -11,8 +11,8 @@ There are two kinds:
 
 - **Heading folds.** In Markdown and Typst every heading is a fold over its section,
   the heading line and everything under it down to the next heading of the same level
-  or higher. They are all open when a file is opened. This is the flavour's
-  `heading_folds` item, on at `basic`; with it off there are only the folds you make.
+  or higher. They are all open when a file is opened. This is the
+  `[editor] heading_folds` setting, on by default; with it off there are only the folds you make.
 - **Folds you make**, with `zf` under the vim keymap. They are kept with the text as it
   changes: lines written inside a fold are in it, lines above push it down, and a fold
   whose lines are all deleted goes. `u` brings back a fold that an edit took away.

@@ -26,8 +26,8 @@ Each language below has a grammar compiled into yumete. A grammar gives you:
   comment already round them), `Space A-c` uses line comments only, and `Space C` wraps
   exactly what is selected in a block comment, half a line included. In a fenced block
   the comment is the block's language. In Markdown, Typst and HTML, `Space C` over
-  several whole lines puts `<!--` and `-->` on lines of their own (the flavour's
-  `block_comment_lines`). Under the vim keymap `gc{motion}`, `gcc` and Visual `gc` comment
+  several whole lines puts `<!--` and `-->` on lines of their own (the
+  `[editor] block_comment_lines` setting, on by default). Under the vim keymap `gc{motion}`, `gcc` and Visual `gc` comment
   lines, as in Neovim (the flavour's `vim_comment_keys`).
 - the symbol picker (`Space s`) without a server, and `]f` `[f` to the next or previous function, `]t` `[t` to
   the next or previous class

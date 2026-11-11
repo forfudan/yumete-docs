@@ -36,6 +36,7 @@
 | `[editor] preview_theme` | `false` | **page window in theme colours** — the preview's paper in the background colour and its black in the text colour, in dark themes too; off, the page as printed |
 | `[editor] preview_vertical` | `true` | **vertical preview** — while the text window is vertical, the Markdown preview runs in columns from the right, its Latin letters and digits set as the export sets them |
 | `[editor] preview_font_family` | `""` | **preview fonts** — the fonts the Markdown preview and :export-as-preview are set in, written as the export fonts are; empty, the export fonts |
+| `[editor] heading_folds` | `true` | **folds by heading** — On: each Markdown or Typst heading folds its section; all start open. Off: vim's, only folds made with zf. |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
 | `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
 | `[editor] indent_guides_character` | `"│"` | **guide character** — the character the guides are drawn with, one cell wide |
@@ -99,6 +100,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
+| `[editor] block_comment_lines` | `true` | **block comment marks on their own lines** — On: Space C over several whole lines in Markdown, Typst or HTML puts <!-- and --> on lines of their own. Off: as in helix, the marks go at the first line's start and the last line's end. |
 | `[editor] word_completion` | `4` | **word completion** — after this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20) |
 | `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it (`off` off, `basic` basic, `full` full) |
 | `[editor] completion_page_size` | `6` | **completion page size** — how many items the word, code and shell completion lists show at once (1–20) |
