@@ -665,3 +665,30 @@
 | `prev_field` | 上一格 | `S-Tab` |
 | `move_line_down` | 下面那一格 | `Down` |
 | `move_line_up` | 上面那一格 | `Up` |
+
+### 规则
+
+规则是编辑模型：由键位整组选定，不逐条开关。
+
+| 规则 | 作用 | helix | vim |
+| --- | --- | --- | --- |
+| `vim_tables` | 用 vim 自己的 Normal 与插入模式键表，盖在 helix 的之上 |  | ✓ |
+| `caret_off_newline` | 光标不停在换行符上，h、l 在行首行尾停住 |  | ✓ |
+| `find_in_line` | f、t 只在本行找 |  | ✓ |
+| `till_stands_still` | t 已贴着目标字时不动 |  | ✓ |
+| `find_moves_caret` | f、t 只挪光标，不选中经过的字 |  | ✓ |
+| `vim_text_motions` | 词、句、段按 vim 的规矩移动 |  | ✓ |
+| `vim_text_objects` | 文本对象按 vim 的规矩 |  | ✓ |
+| `vim_registers` | vim 的寄存器：0 号存最后一次复制，1–9 号存删掉的行，大写名字往寄存器里追加 |  | ✓ |
+| `vim_scrolling` | 页面照 vim 的方式跟随光标：scrolloff、远跳居中、zt zz zb 带计数 |  | ✓ |
+| `vim_jump_list` | vim 的跳转表：一行只留一条，关掉的文件会重新打开 |  | ✓ |
+| `vim_indent_keys` | 缩进里的退格和 Tab 按 shiftwidth 走，离开插入模式时去掉空着的缩进 |  | ✓ |
+| `search_moves_caret` | 搜索把光标移到匹配开头，而不是选中匹配 |  | ✓ |
+| `step_back_after_insert` | 离开插入模式时光标退一格 |  | ✓ |
+| `replace_from_caret` | r 从光标起替换计数个字 |  | ✓ |
+| `read_below_the_line` | :r 把文件放在光标所在行的下面 |  | ✓ |
+| `undo_restores_every_cursor` | 撤销时恢复所有光标 | ✓ |  |
+| `undo_at_typing_start` | 撤销点从开始打字处算 | ✓ |  |
+| `yank_every_selection` | 多光标时 y 复制每一段选区 | ✓ |  |
+| `delete_stays_in_line` | 删字不跨行 |  | ✓ |
+| `empty_command_repeats` | 空的 : 行按 Enter 重跑上一条命令 | ✓ |  |
