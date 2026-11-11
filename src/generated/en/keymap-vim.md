@@ -278,15 +278,17 @@
 | `C-w R` | rotate this row back |
 | `C-w H / C-w J / C-w K / C-w L` | move to that edge |
 | `C-w c` | close window, don't quit |
-| `C-w S / C-w s` | split above |
-| `C-w F / C-w f` | open file under cursor above |
-| `C-w ^` | previous file, above |
+| `C-w S` | split below |
+| `C-w F` | open file under cursor below |
+| `C-w ^` | previous file, below |
 | `C-w :` | command line |
 | `C-w h / C-w j / C-w k / C-w l` | go in that direction |
-| `C-w v` | split left |
-| `C-w n` | new blank window above |
+| `C-w s` | split below |
+| `C-w v` | split right |
+| `C-w n` | new blank window below |
 | `C-w q` | close window |
 | `C-w o` | keep only this window |
+| `C-w f` | open file under cursor below |
 
 ## new blank window (`C-w n`, `\wn`)
 

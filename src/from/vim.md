@@ -264,8 +264,8 @@ also takes Visual `Q` away.
 - vim-surround's visual `S` is not there. Use `ys` with a motion.
 - `gh` and `gl` do nothing; use `0` and `$`.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
-  side by side with `C-w v` or `:vsplit`; new windows open above and to the
-  left, as in vim. `C-w n` opens a blank window above at once, as in vim; `:new` is helix's: a new empty buffer in this window,
+  side by side with `C-w v` or `:vsplit`; new windows open below and to the
+  right, as with vim's `splitbelow` and `splitright`, under either keymap. `C-w n` opens a blank window below at once; `:new` is helix's: a new empty buffer in this window,
   and the split versions are `:hnew` and `:vnew`. `:q` closes the window you
   are in, and quits in the last one, as vim's `:q` does.
 - `:set` takes what a modeline takes, for this file: `ft`, `ts`, `sw`, `et`
