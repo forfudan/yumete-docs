@@ -36,6 +36,7 @@
 | `[editor] preview_theme` | `false` | **頁面窗口用主題配色** — 預覽頁面的紙用背景色、黑字用文字色，深色主題下也一樣；關閉則按印刷原樣 |
 | `[editor] preview_vertical` | `true` | **預覽跟着豎排** — 文字窗口豎排時，Markdown 預覽也從右往左豎排，拉丁字母和數字按導出的設置 |
 | `[editor] preview_font_family` | `""` | **預覽字體** — Markdown 預覽與 :export-as-preview 用的字體，寫法同導出字體；留空則跟着導出字體 |
+| `[editor] heading_folds` | `true` | **按標題摺疊** — 開：Markdown 和 Typst 每個標題下的一節可以摺疊，初始全部展開。關：同 vim，只有 zf 建的摺疊。 |
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製後，被複制的範圍閃一下 |
 | `[editor] indent_guides` | `false` | **縮進參考線** — 在代碼行首每級縮進畫一條豎線，同 helix；僅用於代碼文件 |
 | `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
@@ -99,6 +100,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
+| `[editor] block_comment_lines` | `true` | **塊註釋標記各佔一行** — 開：在 Markdown、Typst、HTML 中用 空格 C 註釋多行時，<!-- 和 --> 各佔一行。關：同 helix，標記放在首行開頭和末行結尾。 |
 | `[editor] word_completion` | `4` | **詞語補全** — 輸入幾個西文字母后列出已打開文件中出現過的詞，漢字爲一半(向上取整)。C-n 隨時列出 (0–20) |
 | `[editor] auto_pairs` | `"basic"` | **自動配對** — 輸入左括號或引號時自動補上右半邊；再輸入右半邊會跳過 (`off` 關, `basic` 基本, `full` 完整) |
 | `[editor] completion_page_size` | `6` | **補全每頁條數** — 單詞、代碼和終端命令的補全列表一次顯示幾條 (1–20) |

@@ -28,8 +28,6 @@
 | [`move_lines`](#move_lines) | `A-j` `A-k` | `A-j` `A-k` | move lines up and down |
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | line start, first character |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | delete to the line's end |
-| [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | block comment marks on their own lines |
-| [`heading_folds`](#heading_folds) |  |  | folds by heading |
 | [`helix_fold_keys`](#helix_fold_keys) | `za` `zR` `zM` `zf` | — | fold keys under helix |
 | [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim's gc comments |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | the Space menu |
@@ -368,18 +366,6 @@ On: D deletes to the end of the line into the register, A-D without filling it. 
 | --- | --- | --- | --- |
 | Normal mode | `D` | delete to the end of the line |  |
 | Normal mode | `A-D` | delete to the end of the line without yanking |  |
-
-### `block_comment_lines` {#block_comment_lines}
-
-On: Space C over several whole lines in Markdown, Typst or HTML puts <!-- and --> on lines of their own. Off: as in helix, the marks go at the first line's start and the last line's end.
-
-It changes what its keys do, not which command they run.
-
-### `heading_folds` {#heading_folds}
-
-On: each Markdown or Typst heading folds its section; all start open. Off: vim's, only folds made with zf.
-
-It changes what its keys do, not which command they run.
 
 ### `helix_fold_keys` {#helix_fold_keys}
 

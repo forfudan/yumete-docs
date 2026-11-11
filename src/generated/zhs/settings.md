@@ -36,6 +36,7 @@
 | `[editor] preview_theme` | `false` | **页面窗口用主题配色** — 预览页面的纸用背景色、黑字用文字色，深色主题下也一样；关闭则按印刷原样 |
 | `[editor] preview_vertical` | `true` | **预览跟着竖排** — 文字窗口竖排时，Markdown 预览也从右往左竖排，拉丁字母和数字按导出的设置 |
 | `[editor] preview_font_family` | `""` | **预览字体** — Markdown 预览与 :export-as-preview 用的字体，写法同导出字体；留空则跟着导出字体 |
+| `[editor] heading_folds` | `true` | **按标题折叠** — 开：Markdown 和 Typst 每个标题下的一节可以折叠，初始全部展开。关：同 vim，只有 zf 建的折叠。 |
 | `[editor] yank_flash` | `false` | **复制高亮** — 复制后，被复制的范围闪一下 |
 | `[editor] indent_guides` | `false` | **缩进参考线** — 在代码行首每级缩进画一条竖线，同 helix；仅用于代码文件 |
 | `[editor] indent_guides_character` | `"│"` | **参考线字符** — 画参考线用的字符，要占一格 |
@@ -99,6 +100,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
+| `[editor] block_comment_lines` | `true` | **块注释标记各占一行** — 开：在 Markdown、Typst、HTML 中用 空格 C 注释多行时，<!-- 和 --> 各占一行。关：同 helix，标记放在首行开头和末行结尾。 |
 | `[editor] word_completion` | `4` | **词语补全** — 输入几个西文字母后列出已打开文件中出现过的词，汉字为一半(向上取整)。C-n 随时列出 (0–20) |
 | `[editor] auto_pairs` | `"basic"` | **自动配对** — 输入左括号或引号时自动补上右半边；再输入右半边会跳过 (`off` 关, `basic` 基本, `full` 完整) |
 | `[editor] completion_page_size` | `6` | **补全每页条数** — 单词、代码和终端命令的补全列表一次显示几条 (1–20) |

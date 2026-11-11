@@ -28,8 +28,6 @@
 | [`move_lines`](#move_lines) | `A-j` `A-k` | `A-j` `A-k` | 上下移動行 |
 | [`line_start_keys`](#line_start_keys) | `0` `^` | — | 行首、首字 |
 | [`d_to_line_end`](#d_to_line_end) | `D` `A-D` | — | 删到行尾 |
-| [`block_comment_lines`](#block_comment_lines) | `Space C` | `Space C` | 塊註釋標記各佔一行 |
-| [`heading_folds`](#heading_folds) |  |  | 按標題摺疊 |
 | [`helix_fold_keys`](#helix_fold_keys) | `za` `zR` `zM` `zf` | — | helix 下的摺疊鍵 |
 | [`vim_comment_keys`](#vim_comment_keys) | — | `gc` | vim 的 gc 註釋 |
 | [`vim_space_menu`](#vim_space_menu) | — | `Space` | 空格菜單 |
@@ -368,18 +366,6 @@ Under vim:
 | --- | --- | --- | --- |
 | Normal mode | `D` | 删到行尾 |  |
 | Normal mode | `A-D` | 删到行尾(不進寄存器) |  |
-
-### `block_comment_lines` {#block_comment_lines}
-
-開：在 Markdown、Typst、HTML 中用 空格 C 註釋多行時，<!-- 和 --> 各佔一行。關：同 helix，標記放在首行開頭和末行結尾。
-
-It changes what its keys do, not which command they run.
-
-### `heading_folds` {#heading_folds}
-
-開：Markdown 和 Typst 每個標題下的一節可以摺疊，初始全部展開。關：同 vim，只有 zf 建的摺疊。
-
-It changes what its keys do, not which command they run.
 
 ### `helix_fold_keys` {#helix_fold_keys}
 
