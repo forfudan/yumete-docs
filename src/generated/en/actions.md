@@ -160,8 +160,8 @@
 | `operator_yank` | yank (then a motion) |  | `y` `zy` |  |
 | `operator_indent` | indent (then a motion) |  | `>` |  |
 | `operator_unindent` | unindent (then a motion) |  | `<` |  |
-| `delete_to_line_end` | delete to the end of the line | `D` |  |  |
-| `delete_to_line_end_noyank` | delete to the end of the line without yanking | `A-D` |  |  |
+| `delete_to_line_end` | delete to the end of the line | `A-D` `D` |  |  |
+| `delete_to_line_end_noyank` | delete to the end of the line without yanking | `D` `A-D` |  |  |
 | `vim_delete_char_forward` | delete the character under the cursor, never the line break (vim's x) |  | `x` |  |
 | `extend_line_above` | select the line above, or one more line upward | `X` |  |  |
 | `move_selected_lines_down` | move the selected lines down | `A-j` | `A-j` |  |

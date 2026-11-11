@@ -461,7 +461,14 @@ It changes what its keys do, not which command they run.
 
 开：d、c 删除时不进寄存器，A-d、A-c 才剪切。关：同 helix，d、c 剪切。
 
-It changes what its keys do, not which command they run.
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| Normal mode | `c` | 改写选区(不进寄存器) | 剪切后改写 |
+| Normal mode | `d` | 删除选区(不进寄存器) | 剪切选区 |
+| Normal mode | `D` | 删到行尾(不进寄存器) | 删到行尾 |
+| Normal mode | `A-c` | 剪切后改写 | 改写选区(不进寄存器) |
+| Normal mode | `A-d` | 剪切选区 | 删除选区(不进寄存器) |
+| Normal mode | `A-D` | 删到行尾 | 删到行尾(不进寄存器) |
 
 ### `esc_collapses` {#esc_collapses}
 

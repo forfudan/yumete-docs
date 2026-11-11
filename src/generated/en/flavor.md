@@ -461,7 +461,14 @@ On: under vim, helix's keys on the keys vim leaves free: the Alt keys, C-s, Z, g
 
 On: d and c delete without filling the register, and A-d and A-c cut. Off: helix's d and c cut.
 
-It changes what its keys do, not which command they run.
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| Normal mode | `c` | change the selection without yanking | cut into the register, then change |
+| Normal mode | `d` | delete the selection without yanking | cut the selection |
+| Normal mode | `D` | delete to the end of the line without yanking | delete to the end of the line |
+| Normal mode | `A-c` | cut into the register, then change | change the selection without yanking |
+| Normal mode | `A-d` | cut the selection | delete the selection without yanking |
+| Normal mode | `A-D` | delete to the end of the line | delete to the end of the line without yanking |
 
 ### `esc_collapses` {#esc_collapses}
 

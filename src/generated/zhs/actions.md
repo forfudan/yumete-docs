@@ -160,8 +160,8 @@
 | `operator_yank` | 复制(再按一个动作) |  | `y` `zy` |  |
 | `operator_indent` | 增加缩进(再按一个动作) |  | `>` |  |
 | `operator_unindent` | 减少缩进(再按一个动作) |  | `<` |  |
-| `delete_to_line_end` | 删到行尾 | `D` |  |  |
-| `delete_to_line_end_noyank` | 删到行尾(不进寄存器) | `A-D` |  |  |
+| `delete_to_line_end` | 删到行尾 | `A-D` `D` |  |  |
+| `delete_to_line_end_noyank` | 删到行尾(不进寄存器) | `D` `A-D` |  |  |
 | `vim_delete_char_forward` | 删掉光标下的字，不删换行(vim 的 x) |  | `x` |  |
 | `extend_line_above` | 往上选行 | `X` |  |  |
 | `move_selected_lines_down` | 把选中的行往下移 | `A-j` | `A-j` |  |
