@@ -2,8 +2,10 @@
 
 yumete's default keys are helix's: you select first and act second. Under them
 some vim habits change the wrong text: `x` selects a line, and `dd` deletes
-two characters. The vim keymap puts vim's way of pressing onto yumete's own
-commands.
+two characters. The vim keymap is a whole keymap of its own: vim's way of
+pressing on yumete's commands, and vim's caret, `f`, registers and page. [What
+follows your keymap](../reference/keymaps-and-yumete.md) lists what changes
+with it.
 
 Turn it on in the config:
 
