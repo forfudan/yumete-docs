@@ -230,7 +230,8 @@ TOML section it lives in. A `*` marks the rows the file you are editing sets.
 The foot is the text's own: a status line with `TBL.NOR` where `NOR` stands,
 the file a change is written into (`Tab` turns it from global to project),
 and how far down the list you are; under it the command row, where what is
-said and what you type appear. The list scrolls as the text does, keeping
+said and what you type appear (`/` reads `search settings:` there, and
+the status line keeps the search). The list scrolls as the text does, keeping
 `scrolloff` rows around the cursor.
 
 Under the list, the line for the setting under the cursor says what it does,
