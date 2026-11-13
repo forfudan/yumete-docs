@@ -159,8 +159,9 @@
 | `:keep-pipe` | `<命令>` | keep the selections a shell command succeeds on |
 | `:git-lazygit` `:lazygit` |  | look at changes, stage and commit in lazygit; q comes back |
 | `:files-yazi` `:yazi` |  | browse files in yazi; Enter opens the chosen files here |
-| `:decimo` | `<表達式>` | evaluate an expression with decimo and insert the result after the selection |
-| `:decimo-replace` | `<表達式>` | evaluate an expression with decimo (the selection when none is written) and replace the selection with the result |
+| `:decimo` | `<表達式>` | evaluate an expression with decimo and put the result at the cursor |
+| `:decimo-replace` | `<選項>` | evaluate the selected text with decimo and replace it with the result |
+| `:decimo-append` | `<選項>` | evaluate the selected text with decimo and write = and the result after it |
 | `:pipe-to` | `<命令>` | pipe the selection to a shell command, ignoring the output |
 | `:yuhao` |  | open the Yuhao input method website |
 | `:search` `:s` `:grep` | `<path>` | open the search panel: across files, with more options |

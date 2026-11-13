@@ -159,8 +159,9 @@
 | `:keep-pipe` | `<命令>` | 只保留终端命令执行成功的选区 |
 | `:git-lazygit` `:lazygit` |  | 在 lazygit 里看改动、暂存、提交，按 q 回来 |
 | `:files-yazi` `:yazi` |  | 在 yazi 里浏览文件，Enter 把选中的文件在这里打开 |
-| `:decimo` | `<表達式>` | 用 decimo 计算表达式，结果插在选区之后 |
-| `:decimo-replace` | `<表達式>` | 用 decimo 计算表达式（不写则计算选区），结果替换选区 |
+| `:decimo` | `<表達式>` | 用 decimo 计算表达式，结果放在光标处 |
+| `:decimo-replace` | `<選項>` | 用 decimo 计算选中的文字，结果替换它 |
+| `:decimo-append` | `<選項>` | 用 decimo 计算选中的文字，在它后面写上「= 结果」 |
 | `:pipe-to` | `<命令>` | 把选区交给终端命令，不收回输出 |
 | `:yuhao` |  | 打开宇浩输入法官网 |
 | `:search` `:s` `:grep` | `<路径>` | 打开搜索面板：可跨文件，选项更多 |
