@@ -47,13 +47,29 @@ key.
 | `:sh <command>` | runs it and opens the output in a buffer you can search and copy from |
 | `:!<command>` | hands the terminal to the command so you can watch it run, then asks for a key to come back |
 | `:pipe <command>` | sends the selection through the command and replaces it with the output |
-| `:pipe-before` / `:pipe-after` | puts the command's output before or after the selection |
+| `:pipe-before` / `:pipe-after` | puts the command's output before or after the selection (helix's `:insert-output` and `:append-output` are the same commands) |
 | `:pipe-to <command>` | sends the selection to the command and keeps nothing back |
 
-The command goes through `$SHELL -c`, so pipes and globs work. On a shell line the
+The command goes through `$SHELL -c`, so pipes and globs work. A command that
+fails leaves the text as it was, and what it complained of is on the status line. On a shell line the
 prompt reads `Shell:`, `Tab` completes program names (the first word) and file names
 (the rest), and the last shell command waits in grey after the cursor for `Tab` to
 take.
+
+## Arbitrary-precision numbers
+
+With [decimo](https://github.com/forfudan/decimo) installed
+(`brew install forfudan/tap/decimo`), two commands put an exact value into the text:
+
+| Command | What happens |
+| --- | --- |
+| `:decimo pi -P 50` | evaluates the expression to 50 significant digits and puts the result after the selection |
+| `:decimo-replace sqrt(e) -P 50` | the same, replacing the selection |
+| `:decimo-replace -P 50` | evaluates the selected text, `sqrt(2)` for example, and replaces it with the result |
+
+The expression is written as it is, parentheses and all; `-P` (or `--precision`),
+`-R`, `-S`, `-E`, `--pad` and `--delimiter` are decimo's own options. When decimo
+cannot evaluate it, the text is left alone and the status line says why.
 
 ## Every command
 

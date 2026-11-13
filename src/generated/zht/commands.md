@@ -152,11 +152,13 @@
 | `:replace-buffers` `:rb` |  | 在所有打開的文件中替換 |
 | `:replace-working` `:rw` |  | 在工作目録中替換 |
 | `:replace-project` `:rp` |  | 在項目中替換 |
-| `:pipe-before` | `<命令>` | 運行終端命令，把輸出插在選區之前 |
-| `:pipe-after` | `<命令>` | 運行終端命令，把輸出插在選區之後 |
+| `:pipe-before` `:insert-output` | `<命令>` | 運行終端命令，把輸出插在選區之前 |
+| `:pipe-after` `:append-output` | `<命令>` | 運行終端命令，把輸出插在選區之後 |
 | `:read` | `<路徑>` | 將文件内容插入選區之後 |
 | `:view-fold` |  | 把選中的行做成摺疊 |
 | `:keep-pipe` | `<命令>` | 只保留終端命令執行成功的選區 |
+| `:decimo` | `<表達式>` | 用 decimo 計算表達式，結果插在選區之後 |
+| `:decimo-replace` | `<表達式>` | 用 decimo 計算表達式（不寫則計算選區），結果替換選區 |
 | `:pipe-to` | `<命令>` | 把選區交給終端命令，不收回輸出 |
 | `:yuhao` |  | 打開宇浩輸入法官網 |
 | `:search` `:s` `:grep` | `<路徑>` | 打開搜索面板：可跨文件，選項更多 |
