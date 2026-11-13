@@ -173,6 +173,13 @@ cannot bind. Only what you changed from your editor's own defaults comes
 over, and only what yumete can do the same way: when in doubt a line is
 listed, not written. Nothing reads the other editor's files again after this.
 
+Your own maps come over even where they take one of yumete's `Space` keys:
+they are your habits. Above that list, the file says which keys were taken
+and where what they did is now, such as `Space b  open the buffer picker:
+now Space ,`; a command left with no key is still in `Space ?`. The terminal
+prints the first few, and the next time yumete starts it opens the whole
+report in a read-only buffer, once.
+
 ## The settings panel
 
 `:settings` (or `:set` with nothing after it) opens every setting on one full page, each with its
