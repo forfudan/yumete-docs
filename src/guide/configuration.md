@@ -215,7 +215,8 @@ any of the interface's languages (`:settings first-line indent`,
               │  project unset
 ──────────────┴─────────────────────────────────────────────────────────────────────
   jk move, hl group, / search, Enter change, Space toggle, r reset, u undo,
-  C-r redo, p paste, y copy, Tab global/project, e open file, q close
+  U redo, p paste, "+p paste the clipboard, y copy, Tab global/project,
+  e open file, q close
  TBL.NOR  settings   writing to global   ~/.config/yumete/config.toml   3 of 98
 ```
 
@@ -255,8 +256,8 @@ document behind the panel.
 | `Space` | flip a switch or step to the next choice; on a number or text, the same as `Enter` |
 | `c` | on a number or text: empty the cell and type a new value (`CEL.INS`) |
 | `r` | reset: remove this setting from the file, so the layer below applies again |
-| `u` / `C-r` | undo / redo a change; undo writes the file back |
-| `p` | put the register in place of the value, in its cell, for `Esc` to write. `"a` names a register, `"+p` is the system clipboard. A paste from the terminal (⌘V) does the same |
+| `u` / `U` or `C-r` | undo / redo a change; undo writes the file back. Redo takes helix's `U` and vim's `C-r` both, and the key row names the one your keymap uses |
+| `p` `P` | put the register in place of the value, in its cell, for `Esc` to write. `"a` names a register, `"+p` is the system clipboard. A paste from the terminal (⌘V) does the same |
 | `y` | copy the value |
 | `Tab` | switch the file your changes go to: global or project |
 | `e` | open that file in the editor, at the setting's line |
