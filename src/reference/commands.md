@@ -49,12 +49,28 @@ key.
 | `:pipe <command>` | sends the selection through the command and replaces it with the output |
 | `:pipe-before` / `:pipe-after` | puts the command's output before or after the selection (helix's `:insert-output` and `:append-output` are the same commands) |
 | `:pipe-to <command>` | sends the selection to the command and keeps nothing back |
+| `:run-in-terminal <command>` | gives a program the whole terminal and comes back the moment it ends, with no key to press |
 
 The command goes through `$SHELL -c`, so pipes and globs work. A command that
 fails leaves the text as it was, and what it complained of is on the status line. On a shell line the
 prompt reads `Shell:`, `Tab` completes program names (the first word) and file names
 (the rest), and the last shell command waits in grey after the cursor for `Tab` to
 take.
+
+## lazygit and yazi
+
+Two programs get the terminal and give it back when you leave them, if they are
+installed (`brew install lazygit yazi`, or `scoop install lazygit yazi`):
+
+| Command | What happens |
+| --- | --- |
+| `:git-lazygit` (`:lazygit`) | [lazygit](https://github.com/jesseduffield/lazygit) in the current file's repository: look at the changes, stage, commit; `q` comes back |
+| `:files-yazi` (`:yazi`) | [yazi](https://github.com/sxyazi/yazi) opened on the current file; `Enter` on a file (or on several selected) opens them here, `q` comes back with nothing opened |
+
+lazygit sees what is on disk, so with unsaved changes `:git-lazygit` asks you to save
+first (`:wa`); `:git-lazygit!` opens it anyway. When either comes back, files that
+changed on disk (after a checkout or a stash, say) are read again, unless you have
+unsaved changes in them, in which case the status line says so.
 
 ## Arbitrary-precision numbers
 

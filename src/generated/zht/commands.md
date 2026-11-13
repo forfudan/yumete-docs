@@ -157,6 +157,8 @@
 | `:read` | `<路徑>` | 將文件内容插入選區之後 |
 | `:view-fold` |  | 把選中的行做成摺疊 |
 | `:keep-pipe` | `<命令>` | 只保留終端命令執行成功的選區 |
+| `:git-lazygit` `:lazygit` |  | 在 lazygit 裏看改動、暫存、提交，按 q 回來 |
+| `:files-yazi` `:yazi` |  | 在 yazi 裏瀏覽文件，Enter 把選中的文件在這裏打開 |
 | `:decimo` | `<表達式>` | 用 decimo 計算表達式，結果插在選區之後 |
 | `:decimo-replace` | `<表達式>` | 用 decimo 計算表達式（不寫則計算選區），結果替換選區 |
 | `:pipe-to` | `<命令>` | 把選區交給終端命令，不收回輸出 |
@@ -192,6 +194,7 @@
 | `:buffer-close` `:bc` |  | 關閉這個文件(`buffer-close!` 放棄改動) |
 | `:format` `:fmt` |  | 按配置格式化此文件([language.markdown] format = …) |
 | `:run` | `<名字>` | 運行配置中爲該語言定義的命令 |
+| `:run-in-terminal` | `<命令>` | 把終端交給一個程序，它結束後回到編輯器 |
 | `:markdown-footnote` |  | 腳註：自動編號並創建註釋 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
 | `:settings` | `<設置項>` | 設置頁：每項附有説明，改了就寫入並生效，u 撤銷 |

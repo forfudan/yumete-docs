@@ -157,6 +157,8 @@
 | `:read` | `<path>` | put a file's contents after the selection |
 | `:view-fold` |  | make a fold of the selected lines |
 | `:keep-pipe` | `<命令>` | keep the selections a shell command succeeds on |
+| `:git-lazygit` `:lazygit` |  | look at changes, stage and commit in lazygit; q comes back |
+| `:files-yazi` `:yazi` |  | browse files in yazi; Enter opens the chosen files here |
 | `:decimo` | `<表達式>` | evaluate an expression with decimo and insert the result after the selection |
 | `:decimo-replace` | `<表達式>` | evaluate an expression with decimo (the selection when none is written) and replace the selection with the result |
 | `:pipe-to` | `<命令>` | pipe the selection to a shell command, ignoring the output |
@@ -192,6 +194,7 @@
 | `:buffer-close` `:bc` |  | close this file (`buffer-close!` discards changes) |
 | `:format` `:fmt` |  | format this file as configured ([language.markdown] format = …) |
 | `:run` | `<名字>` | run the command configured for this language |
+| `:run-in-terminal` | `<命令>` | give a program the terminal, and come back when it ends |
 | `:markdown-footnote` |  | footnote: next free number, with its note created |
 | `:markdown-footnote-inline` |  | an inline note ^[…], kept in place |
 | `:settings` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it |
