@@ -251,23 +251,26 @@ document behind the panel.
 | `j` `k` | move down and up, through every group. `gg` and `G` go to the top and bottom |
 | `h` `l` | go to the group before or after, as the column on the left lists them; a search's groups only, while it is in force |
 | `/` | search every setting by its name, its description or its TOML key, in either Chinese script or by its full pinyin (`yulan` finds 预览); the list narrows as you type, and the cursor lands on the setting the search names (`/theme` is the theme). `Enter` keeps the search, `Esc` in the list clears it |
-| `Enter` | change the setting: a switch flips; a choice opens a list with what each value means (`j` `k`, `Enter`, `Esc`), and a theme is shown as you move through the list; a number or text opens the editor on the bottom row |
+| `Enter` | change the setting: a switch flips; a choice opens a list with what each value means (`j` `k`, `Enter`, `Esc`), and a theme is shown as you move through the list; a number or text is edited in its cell (`CEL.NOR`) |
 | `Space` | flip a switch or step to the next choice; on a number or text, the same as `Enter` |
+| `c` | on a number or text: empty the cell and type a new value (`CEL.INS`) |
 | `r` | reset: remove this setting from the file, so the layer below applies again |
 | `u` / `C-r` | undo / redo a change; undo writes the file back |
-| `p` | put the register in place of the value, in the editor, for `Enter` to keep. `"a` names a register, `"+p` is the system clipboard. A paste from the terminal (⌘V) does the same |
+| `p` | put the register in place of the value, in its cell, for `Esc` to write. `"a` names a register, `"+p` is the system clipboard. A paste from the terminal (⌘V) does the same |
 | `y` | copy the value |
 | `Tab` | switch the file your changes go to: global or project |
 | `e` | open that file in the editor, at the setting's line |
 | `q` | close the panel. `Esc` puts away a list, a page or a search, but never closes the panel |
 
-The editor on the bottom row is the `:` line's own: the arrow keys, `Home`,
-`End`, `C-a`, `C-e`, `C-w`, `C-u`, a paste at the caret, and `C-^` for the
-input method. The input method's `[中 …]` or `[ABC]` tag stands at the right of the row with room of
-its own: a long value scrolls and the setting's name gives way before the
-tag would cover the value or the caret. `Enter` keeps the value when it is one yumete takes, and writes
-it; otherwise the value stays on the line and the reason, with the values or
-the range it takes, appears under the setting. `Esc` leaves the old value.
+A cell is edited with every key of the text, under the keymap you use: `w`
+`b` `e`, `d` `c` `y` `p`, `i` `a`, selections and `u` all work, and the input
+method types in it as in the text; the status line says `CEL.NOR`,
+`CEL.INS` or `CEL.SEL`. A value longer than the cell slides to keep the caret
+in sight. `Esc` in Normal, with nothing left to cancel, writes the value and
+goes back to the row, and so does `Enter`; a value left as it was writes
+nothing. A value yumete does not take stays in the cell, and the reason, with
+the values or the range it takes, appears under the setting. Whatever you did
+in a cell is one `u` on the rows.
 
 The panel takes no other `:` commands. `:` opens a line that takes what you type
 up to `Enter`, with no input method, as the editor's own `:` line: `:q`, `:wq`
