@@ -80,10 +80,11 @@ With [decimo](https://github.com/forfudan/decimo) installed
 | Command | What happens |
 | --- | --- |
 | `:decimo pi -P 50` | evaluates the expression to 50 significant digits and puts the result at the cursor, on the same line |
-| `:decimo-replace sqrt(e) -P 50` | the same, replacing the selection |
 | `:decimo-replace -P 50` | evaluates the selected text, `sqrt(2)` for example, and replaces it with the result |
+| `:decimo-append -P 50` | evaluates the selected text and keeps it, writing ` = ` and the result after it: `sqrt(2) = 1.414…` |
 
-The expression is written as it is, parentheses and all; `-P` (or `--precision`),
+After `:decimo` the expression is written as it is, parentheses and all; the other
+two take the selection, and only options after them. `-P` (or `--precision`),
 `-R`, `-S`, `-E`, `--pad` and `--delimiter` are decimo's own options. When decimo
 cannot evaluate it, the text is left alone and the status line says why.
 
