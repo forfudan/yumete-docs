@@ -152,11 +152,13 @@
 | `:replace-buffers` `:rb` |  | replace across every open buffer |
 | `:replace-working` `:rw` |  | search and replace in the working directory |
 | `:replace-project` `:rp` |  | search and replace in the project |
-| `:pipe-before` | `<命令>` | run a shell command and insert its output before the selection |
-| `:pipe-after` | `<命令>` | run a shell command and insert its output after the selection |
+| `:pipe-before` `:insert-output` | `<命令>` | run a shell command and insert its output before the selection |
+| `:pipe-after` `:append-output` | `<命令>` | run a shell command and insert its output after the selection |
 | `:read` | `<path>` | put a file's contents after the selection |
 | `:view-fold` |  | make a fold of the selected lines |
 | `:keep-pipe` | `<命令>` | keep the selections a shell command succeeds on |
+| `:decimo` | `<表達式>` | evaluate an expression with decimo and insert the result after the selection |
+| `:decimo-replace` | `<表達式>` | evaluate an expression with decimo (the selection when none is written) and replace the selection with the result |
 | `:pipe-to` | `<命令>` | pipe the selection to a shell command, ignoring the output |
 | `:yuhao` |  | open the Yuhao input method website |
 | `:search` `:s` `:grep` | `<path>` | open the search panel: across files, with more options |
