@@ -216,7 +216,7 @@ any of the interface's languages (`:settings first-line indent`,
 ──────────────┴─────────────────────────────────────────────────────────────────────
   jk move, hl group, / search, Enter change, Space toggle, r reset, u undo,
   U redo, p paste, "+p paste the clipboard, y copy, Tab global/project,
-  e open file, q close
+  e open the config file, q close
  TBL.NOR  settings   writing to global   ~/.config/yumete/config.toml   3 of 98
 ```
 
