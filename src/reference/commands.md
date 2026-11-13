@@ -79,7 +79,7 @@ With [decimo](https://github.com/forfudan/decimo) installed
 
 | Command | What happens |
 | --- | --- |
-| `:decimo pi -P 50` | evaluates the expression to 50 significant digits and puts the result after the selection |
+| `:decimo pi -P 50` | evaluates the expression to 50 significant digits and puts the result at the cursor, on the same line |
 | `:decimo-replace sqrt(e) -P 50` | the same, replacing the selection |
 | `:decimo-replace -P 50` | evaluates the selected text, `sqrt(2)` for example, and replaces it with the result |
 
