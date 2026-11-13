@@ -190,44 +190,55 @@ any of the interface's languages (`:settings first-line indent`,
 `:settings 首行缩进`); `Tab` on the `:` line completes the TOML paths.
 
 ```text
- settings   global   project                    ~/.config/yumete/config.toml
-──────────────┬─────────────────────────────────────────────────────────────────
+                Setting                 ┆Value                             ┆From
+──────────────┬─────────────────────────────────────────────────────────────────────
   layout      │layout
-  marks       │ layout                 [horizontal]                     factory
-  interface   │ hjkl in vertical layo… [visual]                         factory
-  colours     │*column length          32                                global
-  input method│ column gap             0                                factory
-  editing     │ pages, vertical        1                                factory
-  files       │ pages, horizontal      1                                factory
-  keys        │*first-line indent      2                   project (global too)
-              │ text width             0                                factory
-              │ hard-wrap width        0                                factory
-              ├─ ↓ 87 more ─────────────────────────────────────────────────────
-              │  characters per column in vertical layout; prose reads well up
-              │  to about 32
+  marks       │ layout                  ┆[horizontal]                      ┆factory
+  interface   │ hjkl in vertical layout ┆[visual]                          ┆factory
+  colours     │*column length           ┆32                                ┆global
+  input method│ column gap              ┆0                                 ┆factory
+  editing     │ pages, vertical         ┆1                                 ┆factory
+  files       │ pages, horizontal       ┆1                                 ┆factory
+  keys        │*first-line indent       ┆2                                 ┆global
+              │ text width              ┆0                                 ┆factory
+              │ hard-wrap width         ┆0                                 ┆factory
+              │ ruler                   ┆0                                 ┆factory
+              │ add a final newline     ┆[x]                               ┆factory
+              │ soft wrap               ┆[x]                               ┆factory
+              ├─ ↓ 86 more ─────────────────────────────────────────────────────────
+              │  characters per column in vertical layout; prose reads well up to
+              │  about 32
               │  a number, 0, or 8 to 64; factory 0 (0 = as tall as the window)
               │
               │  factory 0
               │  global  32   ← in force
               │  project unset
-──────────────┴─────────────────────────────────────────────────────────────────
+──────────────┴─────────────────────────────────────────────────────────────────────
   jk move, hl group, / search, Enter change, Space toggle, r reset, u undo,
   C-r redo, p paste, y copy, Tab global/project, e open file, q close
+ TBL.NOR  settings   writing to global   ~/.config/yumete/config.toml   3 of 98
 ```
 
-The settings are one list; the group names are headings in it, and the column
-on the left shows which group you are in (`h` and `l`, or a click, go to
-another). The
-groups follow what a setting changes on screen, not the TOML section it lives
-in. Each row ends with where its value comes from — factory, global or
-project — and says so when the other file sets it too. A `*` marks the rows
-the file you are editing sets.
+The settings are a table of three columns: the setting, its value, and where
+the value comes from — factory, global or project, saying so when the other
+file sets it too. The group names are headings in it, and the column on the
+left shows which group you are in (`h` and `l`, or a click, go to another);
+in a window narrower than 80 columns that column goes, and `h` `l` still
+walk the groups. The groups follow what a setting changes on screen, not the
+TOML section it lives in. A `*` marks the rows the file you are editing sets.
+
+The foot is the text's own: a status line with `TBL.NOR` where `NOR` stands,
+the file a change is written into (`Tab` turns it from global to project),
+and how far down the list you are; under it the command row, where what is
+said and what you type appear. The list scrolls as the text does, keeping
+`scrolloff` rows around the cursor.
 
 Under the list, the line for the setting under the cursor says what it does,
 what it takes (a switch, a number and its range, the choices, or text), its
 factory value, and what `0` means where it means something; then its three
-layers. The key row at the bottom changes with what you are doing: the list,
-a choice's list, a search, a value being typed.
+layers. The keys above the status line change with what you are doing: the
+list, a choice's list, a search, a value being typed. In a window under 24
+rows they take one row, and `?` shows them all.
 
 The mouse works too: a click on a group goes to it, a click on a row moves to
 it, a click on a value in a choice's list picks it (a click elsewhere puts
