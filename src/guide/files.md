@@ -48,7 +48,8 @@ kept out of the text you edit, and saving puts it back.
 A file in GB18030 (which also reads GBK and GB2312), Big5 or Shift-JIS is
 opened in it and saved back in it. A few rare byte forms, such as the NEC
 and IBM duplicates in Shift-JIS, are written back in their standard form. The
-status line says which, as `[Big5]`, and `:info` lists it. yumete tells the
+status line says which, as `[Big5]`, a file whose lines end in CRLF says
+`[CRLF]`, and `:info` lists them. yumete tells the
 three apart by the bytes. When a file is too short to be sure, a picker lists
 the encodings that read it, each previewed as the file would read, and the one
 you choose is remembered for that file; saving it keeps the memory, and a

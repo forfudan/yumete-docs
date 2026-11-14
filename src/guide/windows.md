@@ -126,6 +126,22 @@ Some commands use another window to show you something without moving you:
 
 They use the window next to yours, opening one below if there is none.
 
+### Status lines
+
+Every window has its own status line at its foot. The window with the keys
+shows the whole line: mode, input method, file name, `[+]`, the file's marks,
+position, count and code point; with more than one selection it adds `2/5`,
+and after `/`, `n` or `N` the match the cursor is in, `[3/17]`. The other
+windows show only their file name, `[+]` and `[read-only]`, in faded ink, with
+the mode's place left blank so the name stays put as the keys move. Windows
+one above another have no rule between them: the upper window's status line
+is the boundary. Windows side by side have a `│` between them, running through
+the status-line row. `[editor] inactive_status = "rule"` draws the other
+windows' lines as a thin rule with the name and `[+]` in it. A sidebar has no
+status line; its frame reaches the command line. The command line stays one,
+across the screen; its right end shows the keys typed so far, `@q` while a
+macro is being recorded, and `[preview]` while a preview server runs.
+
 ## Sidebars
 
 There is one sidebar on each side, and each holds one panel at a time. The
@@ -156,8 +172,8 @@ it. `Space e` and `Space f` are pickers, not the Explorer panel; see
 
 ### Keys in a sidebar
 
-When a sidebar has the keys, the status line lists the keys it takes,
-including how to get back.
+When a sidebar has the keys, the command line lists the keys it takes (the
+status line, with `command_line = false`), including how to get back.
 
 | Key | Action |
 | --- | --- |

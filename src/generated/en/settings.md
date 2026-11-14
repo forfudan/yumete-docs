@@ -65,7 +65,8 @@
 | `[editor] tabs` | `"auto"` | **tabs** — the bar along the top that lists the open files (`auto` two or more, `always` always, `never` never) |
 | `[editor] command_line` | `true` | **command line** — a line under the status line for commands, messages and key hints |
 | `[editor] status_count` | `"text"` | **count on the status line** — the file's character count on the status line, and the selection's when there is one (`text` text files, `all` all files, `off` off) |
-| `[editor] char_info` | `true` | **character info** — show the code point and Unicode block of the character under the cursor at the right of the status line |
+| `[editor] inactive_status` | `"line"` | **status line of other windows** — a window without the keys: a faded status line, or a thin rule with only the file name (`line` faded line, `rule` thin rule) |
+| `[editor] char_info` | `true` | **character info** — show the code point of the character under the cursor at the right of the status line |
 | `[editor] signature` | `true` | **name in the corner** — a quiet yumete at the right end of the command line while it is empty |
 | `[editor] sidebar_buttons` | `true` | **sidebar buttons** — a block at each end of the tab line; a click opens or closes that side's sidebar |
 | `[panel] rounded` | `true` | **rounded corners** — whether panel corners are round or square |

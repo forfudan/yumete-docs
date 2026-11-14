@@ -202,15 +202,17 @@ or `j`; under the vim keymap the group is ``g` ``.
 
 ## What is the character under the cursor
 
-The right end of the status line names the character under the cursor:
+The right end of the status line gives the code point of the character under
+the cursor:
 
 ```
-螭 U+87ED · CJK Unified Ideographs
+U+87ED
 ```
 
 When a rare character shows as a box, this tells you whether the character is
-wrong or the font is missing it. When the line is crowded, the block name goes
-first, then the code point. `[editor] char_info = false` turns it off.
+wrong or the font is missing it; `Space n` tells you more about it, its
+Unicode block included. On a narrow window the code point gives way before the
+position does. `[editor] char_info = false` turns it off.
 
 ## Invisible characters
 

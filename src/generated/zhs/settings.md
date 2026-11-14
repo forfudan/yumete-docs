@@ -65,7 +65,8 @@
 | `[editor] tabs` | `"auto"` | **标签栏** — 顶部列出已打开文件的横条 (`auto` 两个及以上时显示, `always` 总是显示, `never` 不显示) |
 | `[editor] command_line` | `true` | **命令行** — 状态栏下方加一行，用于输入命令、显示消息和按键提示 |
 | `[editor] status_count` | `"text"` | **状态栏字数** — 在状态栏显示全文字数，有选区时也显示选区字数 (`text` 文本文件, `all` 所有文件, `off` 关) |
-| `[editor] char_info` | `true` | **字符信息** — 在状态栏右端显示光标处字符的 Unicode 码位和区块名 |
+| `[editor] inactive_status` | `"line"` | **非焦点窗口的状态栏** — 没有焦点的窗口：整条变淡的状态栏，或一条只写文件名的细线 (`line` 变淡的整条, `rule` 细线) |
+| `[editor] char_info` | `true` | **字符信息** — 在状态栏右端显示光标处字符的 Unicode 码位 |
 | `[editor] signature` | `true` | **右下角署名** — 命令行为空时，右端淡色显示 yumete |
 | `[editor] sidebar_buttons` | `true` | **侧栏开关** — 标签栏两端各有一个色块，点击可开关该侧的侧栏 |
 | `[panel] rounded` | `true` | **面板圆角** — 面板的四个角是圆的还是方的 |

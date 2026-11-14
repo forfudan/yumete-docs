@@ -136,8 +136,8 @@ follow:
   "do it this many times". `10` then `gg` goes to line 10, for example.
 - Under the vim keys, `d`, `c` and `y` list the motions they accept.
 
-What you have typed so far shows at the right end of the status line and beside
-the cursor. `:view-hud basic` makes the one beside the cursor smaller, and
+What you have typed so far shows at the right end of the command line (on the
+status line when `command_line = false`) and beside the cursor. `:view-hud basic` makes the one beside the cursor smaller, and
 `:view-hud off` removes it.
 
 The line below the status line answers in words: what just happened, why a key
