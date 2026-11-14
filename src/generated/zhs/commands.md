@@ -122,6 +122,7 @@
 | `:view-meter` | `on｜off` | 平仄：字旁标平仄，句末标韵脚(今音，入派三声) |
 | `:view-punct` | `on｜off` | 标点提示：在半角标点和 ... 旁显示应使用的全角标点 |
 | `:view-code` | `on｜off` | 代码着色：代码块按其语言着色 |
+| `:view-line-breaks` | `on｜off` | 换行符：在每个以换行结束的行尾画一个淡色 ␊ |
 | `:view-long-line` | `off｜<幾字>` | 行长超过此字数时停止着色 |
 | `:view-hud` | `off｜basic｜full` | 光标提示：不显示、胶囊、面板 |
 | `:preview` | `on｜off` | 打开或关闭排版后的页面：先在旁边开页面窗口，开不了就用浏览器 |

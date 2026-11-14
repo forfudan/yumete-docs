@@ -122,6 +122,7 @@
 | `:view-meter` | `on｜off` | 平仄：字旁標平仄，句末標韻腳(今音，入派三聲) |
 | `:view-punct` | `on｜off` | 標點提示：在半角標點和 ... 旁顯示應使用的全角標點 |
 | `:view-code` | `on｜off` | 代碼着色：代碼塊按其語言着色 |
+| `:view-line-breaks` | `on｜off` | 換行符：在每個以換行結束的行尾畫一個淡色 ␊ |
 | `:view-long-line` | `off｜<幾字>` | 行長超過此字數時停止着色 |
 | `:view-hud` | `off｜basic｜full` | 光標提示：不顯示、膠囊、面板 |
 | `:preview` | `on｜off` | 打開或關閉排版後的頁面：先在旁邊開頁面窗口，開不了就用瀏覽器 |

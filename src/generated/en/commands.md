@@ -122,6 +122,7 @@
 | `:view-meter` | `on｜off` | 平仄: the tone class of every character in the margin, and rhymes at line ends |
 | `:view-punct` | `on｜off` | punctuation hints: show the full-width mark next to a half-width one |
 | `:view-code` | `on｜off` | code highlighting: fenced code coloured by its language |
+| `:view-line-breaks` | `on｜off` | line breaks: a faint ␊ after every line that ends in a line break |
 | `:view-long-line` | `off｜<幾字>` | stop colouring a line past this many characters |
 | `:view-hud` | `off｜basic｜full` | cursor hint: off, pill, panel |
 | `:preview` | `on｜off` | show or hide the typeset page: in a window beside the text, or in a browser when a window cannot be drawn |

@@ -37,6 +37,7 @@
 | `[editor] word_level` | `"balanced"` | **分词松紧** — 把几个字合成一个词的倾向。严格：只认没有争议的；宽松：词典里有就算 (`strict` 严格, `balanced` 适中, `full` 宽松) |
 | `[editor] word_mark` | `"color"` | **分词标记** — 分词标记的显示方式 (`off` 不画, `color` 不同颜色, `ink` 不同明度, `tint` 不同底色, `line` 下划线) |
 | `[editor] code_highlight` | `true` | **代码高亮** — 代码块按其语言高亮；关闭则整块为紫色 |
+| `[editor] show_line_breaks` | `false` | **显示换行符** — 在每个以换行结束的行尾画一个淡色 ␊，开着自动折行时能分清真换行和折出来的行 |
 | `[editor] show_ruby` | `false` | **显示注音** — 在字旁显示注音。默认关闭，按文件原样显示 |
 | `[editor] indent_hint` | `"none"` | **段首记号** — 竖排时在段首画记号，便于在长文中找到分段 (`none` 不画, `symbol` 画符号, `color` 换颜色) |
 | `[editor] indent_symbol` | `"↵"` | **段首符号** — 段首记号用的字符，仅在段首记号为「画符号」时生效 |

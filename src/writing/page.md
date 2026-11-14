@@ -177,6 +177,13 @@ The line number is printed only on the first row of a paragraph.
 Wrap is for horizontal layout. A vertical column has its own length, set with
 `:view-wrap-height`; see [Vertical layout](vertical.md).
 
+With soft wrap on, a wrapped row and a line you ended yourself look the same.
+`[editor] show_line_breaks = true`, or `:view-line-breaks`, draws a faint `␊`
+after every line that ends in a line break (the mark a table cell uses), on
+vertical pages under the column's last character. It takes no room: a row that
+fills the window goes without one. Off by default, as helix's
+`whitespace.render.newline` and vim's `listchars=eol:` are.
+
 ## Line numbers: `:line-numbers`
 
 The gutter can number lines three ways:

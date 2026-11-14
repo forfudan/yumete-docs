@@ -37,6 +37,7 @@
 | `[editor] word_level` | `"balanced"` | **segmentation** — how readily characters join into words: strict takes only the certain ones, loose whatever the dictionary has (`strict` strict, `balanced` balanced, `full` loose) |
 | `[editor] word_mark` | `"color"` | **word boundaries** — how word boundaries are shown (`off` none, `color` colour, `ink` brightness, `tint` tint, `line` underline) |
 | `[editor] code_highlight` | `true` | **code highlight** — highlight fenced code by its language; off, the block is one colour |
+| `[editor] show_line_breaks` | `false` | **show line breaks** — draw a faint ␊ after every line that ends in a line break, to tell it from a soft-wrapped row |
 | `[editor] show_ruby` | `false` | **show ruby** — show readings beside their characters. Off by default: the page shows the file as is |
 | `[editor] indent_hint` | `"none"` | **paragraph mark** — on a vertical page, mark each paragraph start so breaks are easy to find (`none` none, `symbol` a mark, `color` colour) |
 | `[editor] indent_symbol` | `"↵"` | **paragraph mark symbol** — the character for the paragraph mark; used when the indent hint is set to a mark |
