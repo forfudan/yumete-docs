@@ -214,6 +214,15 @@
 | `:genda-top-working` `:gtw` | `<字數>` | 跟打：工作目录下文本文件里最常用的 N 个汉字 |
 | `:genda-top-project` `:gtp` | `<字數>` | 跟打：项目里最常用的 N 个汉字 |
 | `:genda-article` | `buffer｜chars-1-500｜chars-501-1000｜chars-1001-1500` | 跟打：换文章，当前文件或宇浩字频里的常用单字 |
+| `:genda-hint` | `on｜off` | 跟打：在文章框下边显示下一个字的编码（取自当前宇浩方案），on/off，不带参数则切换 |
+| `:genda-auto` | `on｜off` | 跟打：打完一段自动换到下一段，on/off，不带参数则切换 |
+| `:genda-goal` | `off` | 跟打：说出达标条件；off 全部取消 |
+| `:genda-goal-speed` | `off｜<字/分>` | 跟打：达标条件，速度（错一罚五之后）至少多少字每分；off 或 0 取消 |
+| `:genda-goal-kps` | `off｜<鍵/秒>` | 跟打：达标条件，击键至少每秒多少键；off 或 0 取消 |
+| `:genda-goal-accuracy` | `off｜<%>` | 跟打：达标条件，键准至少百分之多少；off 或 0 取消 |
+| `:genda-goal-clean` | `on｜off` | 跟打：达标条件，一个错字都没有；on/off，不带参数则切换 |
+| `:genda-retry-wrong` |  | 跟打：把上一段打错过的字（改对了的也算）拿来单打一段 |
+| `:genda-retry-slow` |  | 跟打：把上一段最慢的十个字拿来单打一段 |
 | `:resume` |  | 恢复上次会话：打开这个目录上次开着的文件(不关闭现有的) |
 | `:recent-files` |  | 最近打开的文件(本项目) |
 | `:recent-files-global` |  | 最近打开的文件(所有项目) |

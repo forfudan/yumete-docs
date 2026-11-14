@@ -863,6 +863,35 @@ method the terminal sees only what it commits, so those fields stay empty.
 `:genda-copy` and `:genda-copy-history` do the same from the `:` line. The
 history is kept in `genda.jsonl` in the editor's data folder.
 
+With the built-in Yume holding the keys, the page also measures **当量**, the
+mean key-pair speed equivalent of the keys you pressed, by the table of 陈一凡,
+张鹿 and 周志农 (letters, `;` and Space; other pairs are left out). It sits under
+码长 in the 本段 box and after 码长 in the score line. The history shows the
+rest for the picked row: the number of pairs counted, the left/right-hand
+alternation rate with its alternating and same-hand counts (a pair with Space
+counts half to each), and the most-used key. Under the system's input method
+these read "—".
+
+The score line also gives **峰值**, the best stretch of at least ten
+characters, from the end of one commit to the end of another, and **停留**, the
+longest wait before a commit and what it brought, such as `停留[玄黄]2.00s`.
+
+`:genda-hint` (or `C-t`) shows the next character's quickest code in the
+current Yume scheme on the article box's bottom edge; a candidate other than
+the first is followed by its place (`gd 2`). `:genda-auto off` keeps a
+finished segment on screen until `Enter`. A goal holds the page on a segment
+until it is met: `:genda-goal-speed 120`, `:genda-goal-kps 6`,
+`:genda-goal-accuracy 98`, `:genda-goal-clean`; `off` takes one off,
+`:genda-goal off` all of them, and `:genda-goal` alone says the goal. A missed
+goal retypes the same segment.
+
+After a segment, `:genda-retry-wrong` (`C-e`) types the characters you got
+wrong, including ones you corrected, and `:genda-retry-slow` (`C-s`) the ten
+slowest; then the article goes on where it was. In the pad, characters that
+came in a word are drawn in gold. The 累计 box and the history's title add up
+today's characters and time, all characters and days, and the current streak
+of days.
+
 ## Troubleshooting
 
 ### Ask first: `:yume-which`

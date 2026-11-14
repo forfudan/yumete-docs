@@ -214,6 +214,15 @@
 | `:genda-top-working` `:gtw` | `<字數>` | typing trainer: the N most frequent Chinese characters in the text files under the working directory |
 | `:genda-top-project` `:gtp` | `<字數>` | typing trainer: the N most frequent Chinese characters in the project |
 | `:genda-article` | `buffer｜chars-1-500｜chars-501-1000｜chars-1001-1500` | typing trainer: another article, the current file or Yume's most frequent characters |
+| `:genda-hint` | `on｜off` | typing trainer: the next character's code under the article, from the current Yume scheme; on/off, bare flips |
+| `:genda-auto` | `on｜off` | typing trainer: a finished segment brings up the next by itself; on/off, bare flips |
+| `:genda-goal` | `off` | typing trainer: say the goal; off takes it all off |
+| `:genda-goal-speed` | `off｜<字/分>` | typing trainer: goal, speed (after five off a mistake) of at least this many characters a minute; off or 0 takes it off |
+| `:genda-goal-kps` | `off｜<鍵/秒>` | typing trainer: goal, at least this many keys a second; off or 0 takes it off |
+| `:genda-goal-accuracy` | `off｜<%>` | typing trainer: goal, key accuracy of at least this percent; off or 0 takes it off |
+| `:genda-goal-clean` | `on｜off` | typing trainer: goal, not one error; on/off, bare flips |
+| `:genda-retry-wrong` |  | typing trainer: a segment of the characters the last one got wrong, put right or not |
+| `:genda-retry-slow` |  | typing trainer: a segment of the last one's ten slowest characters |
 | `:resume` |  | resume this directory's last session (adds files, closes none) |
 | `:recent-files` |  | recent files in this project |
 | `:recent-files-global` |  | recent files in all projects |
