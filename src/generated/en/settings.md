@@ -80,7 +80,7 @@
 | `[theme] ground` | `"paint"` | **background** — whether the editor paints the background or leaves it to the terminal (use the latter with a transparent terminal) (`paint` editor, `terminal` terminal) |
 | `[theme] status_bar` | `"sunken"` | **status bar** — whether the two bottom lines look sunken or raised (`sunken` sunken, `raised` raised) |
 | `[theme] fill` | `false` | **code background** — whether code blocks and quotes get a faint background |
-| `[theme] inactive` | `95` | **inactive windows** — opacity of inactive windows, in percent: 100 does not dim, as in vim and helix (50–100) |
+| `[theme] inactive` | `100` | **inactive windows** — opacity of inactive windows, in percent: 100 does not dim, as in vim and helix (50–100) |
 | `[theme] focus` | `50` | **focus mode** — opacity of other paragraphs in focus mode, in percent (10–100) |
 
 ### input method
