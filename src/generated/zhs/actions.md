@@ -666,6 +666,47 @@
 | `move_line_down` | 下面那一格 | `Down` |
 | `move_line_up` | 上面那一格 | `Up` |
 
+### `[keys.preview]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `move_line_down` | 页面向下滚一行 | `j` `Down` `Enter` |
+| `move_line_up` | 页面向上滚一行 | `k` `Up` |
+| `move_char_left` | 页面向左滚一列 | `h` `Left` |
+| `move_char_right` | 页面向右滚一列 | `l` `Right` |
+| `half_page_down` | 向下翻半页 | `C-d` |
+| `half_page_up` | 向上翻半页 | `C-u` |
+| `page_down` | 向下翻一屏 | `C-f` `PageDown` |
+| `page_up` | 向上翻一屏 | `C-b` `PageUp` |
+| `next_page` | 下一页 | `J` |
+| `prev_page` | 上一页 | `K` |
+| `goto_file_start` | 到开头，带数字到那一页 | `Home` `gg` |
+| `goto_last_line` | 到末尾，带数字到那一页 | `G` `End` |
+| `goto_mode` | g 组：开头、换标签页 | `g` |
+| `normal_mode` | 让输入法再挂起一次 | `Esc` |
+| `command_mode` | 命令行 | `:` |
+| `space_mode` | 空格菜单 | `Space` |
+| `window_mode` | 窗口组 | `C-w` |
+| `jump_backward` | 跳转表：后退 | `C-o` |
+| `jump_forward` | 跳转表：前进 | `C-i` |
+| `jump_view_left` | 去左边那一区 |  |
+| `jump_view_down` | 去下面那一区 |  |
+| `jump_view_up` | 去上面那一区 |  |
+| `jump_view_right` | 去右边那一区 |  |
+| `rotate_view` | 下一个区域 |  |
+| `rotate_view_reverse` | 上一个 |  |
+| `wclose` | 关闭窗口 |  |
+| `goto_next_buffer` | 下一个缓冲区 | `gn` `gt` |
+| `goto_previous_buffer` | 上一个缓冲区 | `gp` `gT` |
+| `goto_last_accessed_file` | 回到刚才的缓冲区 | `ga` |
+| `file_picker` | 打开文件选择器 |  |
+| `buffer_picker` | 打开缓冲区选择器 |  |
+| `recent_file_picker` | 最近打开的文件 |  |
+| `jumplist_picker` | 跳转列表 |  |
+| `last_picker` | 重开上一个选择器 |  |
+| `command_palette` | 所有命令 |  |
+| `quit` | 关闭此区；最后一个窗口则退出编辑器 |  |
+
 ### 规则
 
 规则是编辑模型：由键位整组选定，不逐条开关。

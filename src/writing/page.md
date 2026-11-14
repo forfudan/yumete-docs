@@ -409,7 +409,10 @@ A preview is drawn in a frame, thick and gold while the keys are in it and thin 
 | `gn` `gp` `ga` | the next tab, the previous tab, the tab you were in before |
 
 `:`, `C-w`, `Space`, `C-o` and `C-i` work as anywhere else, and so do `ZZ`
-and `ZQ` under the vim keys. A preview holds no text: nothing in it can be
+and `ZQ` under the vim keys. These are the defaults of `[keys.preview]`; a line
+there, or a one-key `[keys.normal]` line naming a command a preview has
+(`"C-h" = "jump_view_left"`), takes the key
+([Remapping](../guide/remapping.md#prompts-pickers-sidebars-and-previews)). A preview holds no text: nothing in it can be
 typed into or searched, `:w` and `:wq` there say there is no file to write,
 and `:x` closes its window as `:q` does. The status line shows only the
 preview's name, and the buffer picker says which file it typesets.

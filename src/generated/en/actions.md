@@ -666,6 +666,47 @@
 | `move_line_down` | field below | `Down` |
 | `move_line_up` | field above | `Up` |
 
+### `[keys.preview]`
+
+| Command | What it does | Keys |
+| --- | --- | --- |
+| `move_line_down` | scroll the page a row down | `j` `Down` `Enter` |
+| `move_line_up` | scroll the page a row up | `k` `Up` |
+| `move_char_left` | scroll the page a column left | `h` `Left` |
+| `move_char_right` | scroll the page a column right | `l` `Right` |
+| `half_page_down` | half a page down | `C-d` |
+| `half_page_up` | half a page up | `C-u` |
+| `page_down` | a screen down | `C-f` `PageDown` |
+| `page_up` | a screen up | `C-b` `PageUp` |
+| `next_page` | the next page | `J` |
+| `prev_page` | the previous page | `K` |
+| `goto_file_start` | the top, or the page of the count | `Home` `gg` |
+| `goto_last_line` | the bottom, or the page of the count | `G` `End` |
+| `goto_mode` | g group: the top, another tab | `g` |
+| `normal_mode` | suspend the input method again | `Esc` |
+| `command_mode` | command line | `:` |
+| `space_mode` | Space menu | `Space` |
+| `window_mode` | window group | `C-w` |
+| `jump_backward` | jump back | `C-o` |
+| `jump_forward` | jump forward | `C-i` |
+| `jump_view_left` | to the region on the left |  |
+| `jump_view_down` | to the region below |  |
+| `jump_view_up` | to the region above |  |
+| `jump_view_right` | to the region on the right |  |
+| `rotate_view` | the next region |  |
+| `rotate_view_reverse` | previous |  |
+| `wclose` | close window |  |
+| `goto_next_buffer` | next buffer | `gn` `gt` |
+| `goto_previous_buffer` | previous buffer | `gp` `gT` |
+| `goto_last_accessed_file` | back to the last buffer | `ga` |
+| `file_picker` | open the file picker |  |
+| `buffer_picker` | open the buffer picker |  |
+| `recent_file_picker` | recent files |  |
+| `jumplist_picker` | jump list |  |
+| `last_picker` | reopen last picker |  |
+| `command_palette` | all commands |  |
+| `quit` | close this region; in the last window, quit |  |
+
 ### Rules
 
 Rules are the editing model: the keymap chooses them as a set, not one by one.

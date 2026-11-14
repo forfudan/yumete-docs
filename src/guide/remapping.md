@@ -203,9 +203,9 @@ are gone.
 
 `[keys.table]` groups work the same way inside a table's grid.
 
-## Prompts, pickers and sidebars
+## Prompts, pickers, sidebars and previews
 
-The keys of the command line, the pickers and the sidebars have names too,
+The keys of the command line, the pickers, the sidebars and a preview window have names too,
 which helix's do not. Each place has its own table:
 
 ```toml
@@ -223,6 +223,10 @@ e = "move_line_up"
 
 [keys.field]                # a box of the search panel
 "C-n" = "next_field"
+
+[keys.preview]              # a preview window: the typeset page
+n = "move_line_down"        # scroll a row
+"C-h" = "jump_view_left"
 ```
 
 A picker takes the prompt's keys as well, for its query, and so does a box of
@@ -232,11 +236,16 @@ Where a name is also a Normal or Insert command (`move_char_left`,
 `page_down`), it does the same thing in that place.
 
 Your own keys follow you in. A `[keys.normal]` line of one key whose command a
-sidebar also has works in the sidebar, and a `[keys.insert]` line works in the
+sidebar or a preview also has works there too, and a `[keys.insert]` line works in the
 command line and the pickers in the same way. With `n = "move_line_down"` in
-`[keys.normal]`, `n` walks the file tree as well as the text. The place's own
-table still wins, and the defaults never come over: Normal mode's `J` joins
-lines, but a sidebar's `J` still pages. `no_op` in `[keys.normal]` unbinds the
+`[keys.normal]`, `n` walks the file tree as well as the text, and with
+`"C-h" = "jump_view_left"`, `C-h` also leaves a preview window. Such a line
+takes the key from the place's defaults, as a global setting reaches every
+project until a project's own file says otherwise; the place's own table
+still wins, so `[keys.preview] J = "next_page"` gives a preview its `J` back.
+The defaults never come over: Normal mode's `J` joins lines, but a sidebar's
+`J` still pages and a preview's `J` turns a page. A line of more than one key
+(`gh`) stays in the text, so a preview's `gg` still goes to the top. `no_op` in `[keys.normal]` unbinds the
 key in the text only. To turn this off:
 
 ```toml
@@ -298,7 +307,7 @@ and each key it changes.
 A binding that yumete cannot use is reported at startup and by
 `:check-config`, and only that line is skipped: a misspelt name, a right side
 that is not a command, a list or a table, a line of `[keys.prompt]`,
-`[keys.picker]` or `[keys.sidebar]` with more than one key, or a table under
+`[keys.picker]`, `[keys.sidebar]` or `[keys.preview]` with more than one key, or a table under
 `[keys]` that yumete does not read. Opening the config file in yumete marks the line in the gutter;
 `Space l` shows why. See
 [When the config is wrong](./configuration.md#when-the-config-is-wrong).
