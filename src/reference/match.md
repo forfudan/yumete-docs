@@ -243,7 +243,9 @@ cursor would take off the pair outside it as well.
 
 Under the vim keymap (`:keymap vim`) the same work is spelled the vim and
 vim-surround way: `di(` for `mi(` then `d`, `viw` for `mi w`, `ysiw(` to wrap
-a word, `ds(` for `md(`, `cs([` for `mr([`.
+a word, `ds(` for `md(`, `cs(]` for `mr([` (`cs([` writes `[ … ]`). The
+surround keys follow vim-surround: an opening bracket puts a space inside,
+`b B r a q` are aliases, and `t` and `f` ask for a tag or a function name.
 
 After `d`, `c`, `y`, `vi` and `va`, the text objects work as above: `w`, `W`,
 `s`, `u`, `p`, `m`, `k`, and every pair. `b` and `B` are vim's names for `(`

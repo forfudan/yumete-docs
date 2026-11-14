@@ -679,6 +679,7 @@ Rules are the editing model: the keymap chooses them as a set, not one by one.
 | `find_moves_caret` | f and t move the caret without selecting what they cross |  | ✓ |
 | `vim_text_motions` | words, sentences and paragraphs move by vim's rules |  | ✓ |
 | `vim_text_objects` | text objects follow vim's rules |  | ✓ |
+| `vim_surround` | surround follows vim-surround: an opening bracket adds spaces inside and takes them off, b B r a name ) } ] >, t and f ask for a tag or a function name |  | ✓ |
 | `vim_registers` | vim's registers: 0 holds the last yank, 1 to 9 the deleted lines, an upper-case name adds to its register |  | ✓ |
 | `vim_scrolling` | the page follows the cursor as vim's does: scrolloff, a far jump centred, zt zz zb with a count |  | ✓ |
 | `vim_indent_keys` | Backspace and Tab in the indent go by shiftwidth, and an indent left empty goes when Insert ends |  | ✓ |
