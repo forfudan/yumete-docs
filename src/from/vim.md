@@ -158,6 +158,7 @@ the last insert, as helix's does.
 | `*` `#` | the word under the cursor, forward or back |
 | `n` `N`, `gn` `gN` | the next or previous match |
 | `m` *a*, `'` *a* | set mark *a*, go back to its line, across files; `` ` `` *a* does the same |
+| `` `[ `` `` `] ``, `'[` `']` | where the last change or yank began and ended |
 | *N*`\|` | go to column *N*; a Chinese character is two columns wide |
 | `H` `M` `L` | top, middle, bottom of the screen |
 | `(` `)` | previous, next sentence |
