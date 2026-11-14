@@ -832,7 +832,8 @@ do not need a table.
 when nothing longer than one character is selected. The article stands in the
 panel at the top right, cut into segments of 25 characters
 (`:genda-length 10`, `15`, `25`, `50`, `100`, `200`, `500` or `all`); you type
-it in the pad below, with the built-in input method or the system's.
+it in the pad below, with the built-in input method or the system's; under the
+pad, the **成绩** table lists the results.
 
 ```
 :genda                     the selection, or the whole file
@@ -845,11 +846,15 @@ it in the pad below, with the built-in input method or the system's.
 
 A segment ends when it is as long as the article's segment and its last
 character is right; wrong characters are counted, and each costs five
-characters of speed (错一罚五), so the speed reads `penalised/plain`. The score
-line goes to the command row and to the history: speed, 击键 (keys a second),
-码长 (keys a character), 字数, 错字, 用时, 回改, 键准, 打词 and 重打. The key counts
-need the built-in input method, which sees every key; under a system input
-method the terminal sees only what it commits, so those fields stay empty.
+characters of speed (错一罚五), so the speed reads `penalised/plain`. After a segment the command row says its number and speed (`第2段 速度85.71`),
+and `y` copies the whole score line: speed, 击键 (keys a second), 码长 (keys a
+character), 字数, 错字, 用时, 回改, 键准, 打词 and 重打. The 成绩 table under the
+pad shows this session's segments newest first, the latest in gold, then
+earlier records from the history dimmed; a narrow window drops the article,
+the time, 打词, 键准, 回改 and 当量 first, and under 24 rows the table is hidden.
+`Tab` shows the whole history. The key counts need the built-in input method,
+which sees every key; under a system input method the terminal sees only what
+it commits, so those fields stay empty.
 
 | Key | What it does |
 | --- | --- |
@@ -857,7 +862,7 @@ method the terminal sees only what it commits, so those fields stay empty.
 | `C-p`, `C-u` | the next or the previous segment |
 | `C-l` | shuffle |
 | `Tab` | the history; there `y` copies a score line and `Y` the whole history as TSV |
-| `Esc` | pause; `Enter` goes on, `Esc` again or `:q` closes |
+| `Esc` | clear the code being typed; with none, pause. Paused, `Enter` goes on, `y` copies the score line, `q` or `:q` closes; another `Esc` stays paused |
 
 `:genda-next`, `:genda-previous`, `:genda-retry`, `:genda-shuffle`,
 `:genda-copy` and `:genda-copy-history` do the same from the `:` line. The
