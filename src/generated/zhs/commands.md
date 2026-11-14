@@ -195,7 +195,7 @@
 | `:run-in-terminal` | `<命令>` | 把终端交给一个程序，它结束后回到编辑器 |
 | `:markdown-footnote` |  | 脚注：自动编号并创建注释 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
-| `:settings` `:set` `:se` | `<设置项>` | 设置页：每项附有说明，改了就写入并生效，u 撤销；也认 vim 的 ft=、ts=、sw=、et、tw= 写法 |
+| `:settings` `:set` `:se` | `<设置项>` | 设置页：每项附有说明，改了就写入并生效，u 撤销；跟 vim 的 ft=python ts=2 则只设当前文件 |
 | `:resume` |  | 恢复上次会话：打开这个目录上次开着的文件(不关闭现有的) |
 | `:recent-files` |  | 最近打开的文件(本项目) |
 | `:recent-files-global` |  | 最近打开的文件(所有项目) |

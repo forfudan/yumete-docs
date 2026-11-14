@@ -188,6 +188,10 @@ called, or which section it lives in. `:settings editor.scrolloff` opens it on
 that setting, and so does its name as the panel shows it, spaces and all, in
 any of the interface's languages (`:settings first-line indent`,
 `:settings 首行缩进`); `Tab` on the `:` line completes the TOML paths.
+vim's option words set this file's options without opening the panel:
+`:settings ft=python ts=2 sw=2 et` (or `:set …`, as in vim), and `:set ts?`
+says the value. `:settings-buffer` (`:setlocal`) takes the same words, and on
+its own lists their values.
 
 ```text
                 Setting                 ┆Value                             ┆From

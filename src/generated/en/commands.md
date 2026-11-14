@@ -195,7 +195,7 @@
 | `:run-in-terminal` | `<命令>` | give a program the terminal, and come back when it ends |
 | `:markdown-footnote` |  | footnote: next free number, with its note created |
 | `:markdown-footnote-inline` |  | an inline note ^[…], kept in place |
-| `:settings` `:set` `:se` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it; also takes vim's ft=, ts=, sw=, et, tw= |
+| `:settings` `:set` `:se` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it; vim's ft=python ts=2 set this file only |
 | `:resume` |  | resume this directory's last session (adds files, closes none) |
 | `:recent-files` |  | recent files in this project |
 | `:recent-files-global` |  | recent files in all projects |
