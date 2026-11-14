@@ -208,7 +208,7 @@
 | `:tutor` |  | 教程：把课文复制成你自己的文件，边改边学 |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | 以可搜索的文件打开按键与命令列表 |
 | `:export` `:ex` | `html｜typst｜epub｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<路径>` | 导出为 html、typst 或 epub |
-| `:export-as-preview` | `html｜pdf｜<路径>` | 照预览的样子导出：Markdown 为 html，Typst 为 pdf |
+| `:export-as-preview` | `html｜pdf｜<路径>` | 照预览的样子导出：Markdown 为 html 或 pdf，Typst 为 pdf |
 | `:diff` | `<路径>` | 查看改动：按词比较，而非按行 |
 | `:lsp-rename` | `<新名>` | 通过语言服务器重命名光标下的符号(各处一起改) |
 | `:git-show` | `<提交>` | 在另一个窗口以只读方式打开已提交的版本 |

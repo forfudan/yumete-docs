@@ -377,7 +377,7 @@ you see is what you get.
 ```
 :export-as-preview              chapter.md → chapter.html, book.typ → book.pdf
 :export-as-preview html         a Markdown file's preview, as a web page
-:export-as-preview pdf          a Typst file's preview, as a PDF
+:export-as-preview pdf          a Markdown file's preview as long PDF pages; a Typst file's, as a PDF
 :export-as-preview out/a.html   a name of your own
 :export-as-preview!             write over a file that is already there
 ```
@@ -403,6 +403,15 @@ its look taken from the Markdown preview rather than from `[export]`:
 Formulas are pictures inside the page; images are referenced by the path the
 source uses, as `:export html` references them, so keep the page beside the
 source.
+
+**As a PDF** (`:export-as-preview pdf`), a Markdown file is drawn exactly as
+the preview lays it out, with the same fonts, sizes, colours, line breaks and
+direction, as wide as the preview's window when one shows it, else an A4
+sheet's width. Its type is text in embedded fonts, so it can be selected and
+searched; formulas and images are pictures. The document is one long page,
+cut into several only where a page would pass 200 inches, which many PDF
+readers will not open: between blocks, or between the lines of a block longer
+than that.
 
 **A Typst file** becomes the PDF of the document its preview typesets: the
 file itself, or, for a chapter, the book that includes it (the main file of
