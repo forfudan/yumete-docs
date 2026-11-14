@@ -210,6 +210,7 @@
 | `:genda-copy-history` |  | typing trainer: copy the whole history as a table (TSV, with a header row) |
 | `:genda-history` |  | typing trainer: the history of scores; again goes back to typing |
 | `:genda-length` | `10｜15｜25｜50｜100｜200｜500｜all｜<字數>` | typing trainer: characters a segment; all is the whole article |
+| `:genda-whole` | `on｜off` | typing trainer: the whole article as one segment; on/off, bare flips; off goes back to the length chosen |
 | `:genda-top` `:gt` | `<字數>` | typing trainer: the N most frequent Chinese characters in this file (500 by default) |
 | `:genda-top-buffers` `:gtb` | `<字數>` | typing trainer: the N most frequent Chinese characters in every open buffer |
 | `:genda-top-working` `:gtw` | `<字數>` | typing trainer: the N most frequent Chinese characters in the text files under the working directory |

@@ -852,7 +852,10 @@ character), 字数, 错字, 用时, 回改, 键准, 打词 and 重打. The 成�
 pad shows this session's segments newest first, the latest in gold, then
 earlier records from the history dimmed; a narrow window drops the article,
 the time, 打词, 键准, 回改 and 当量 first, and under 24 rows the table is hidden.
-`Tab` shows the whole history. The key counts need the built-in input method,
+`Tab` shows the whole history. `y` copies the score line with every detail the
+history shows (pairs, alternation rate, alternating and same-hand counts, the
+most-struck key, when measured); `Y` copies the whole history as TSV with a
+column for every field, an unmeasured field left empty. The key counts need the built-in input method,
 which sees every key; under a system input method the terminal sees only what
 it commits, so those fields stay empty.
 
@@ -861,6 +864,7 @@ it commits, so those fields stay empty.
 | `F3` | type the segment again |
 | `C-p`, `C-u` | the next or the previous segment |
 | `C-l` | shuffle |
+| `C-o` | switch between the chosen segment length and the whole article as one segment (`:genda-whole`); either way the article starts again |
 | `Tab` | the history; there `y` copies a score line and `Y` the whole history as TSV |
 | `Esc` | clear the code being typed; with none, pause. Paused, `Enter` goes on, `y` copies the score line, `q` or `:q` closes; another `Esc` stays paused |
 
