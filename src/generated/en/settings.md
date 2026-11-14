@@ -14,7 +14,6 @@
 | `[editor] measure` | `0` | **text width** — lines wrap here; the rest is margin (0–400) |
 | `[editor] hard_wrap` | `0` | **hard-wrap width** — what a bare :hard-wrap fills to; it rewrites the file's line breaks, not the display (1–400) |
 | `[editor] ruler` | `0` | **ruler** — a guide, not a break: text past it changes colour (0–400) |
-| `[editor] insert_final_newline` | `true` | **add a final newline** — on save, add a missing final newline in the file's own line ending; an empty file stays empty |
 | `[editor] soft_wrap` | `true` | **soft wrap** — long lines wrap on a horizontal page; off, they run past the right edge |
 | `[editor] hanging_punctuation` | `false` | **hanging punctuation** — 。，、？！：；「」 hang in the margin instead of taking a cell |
 | `[editor] margin` | `"dense"` | **margin** — when to show the lane for readings, emphasis and 平仄 (`never` never, `dense` when dense, `loose` when loose, `always` always) |
@@ -30,13 +29,6 @@
 | `[editor] line_number_fill` | `false` | **line number background** — fill the line-number column with a faint background, not just the number |
 | `[editor] diff_gutter` | `true` | **diff gutter** — mark lines that differ from git (or from the saved file) beside the line numbers |
 | `[editor] end_of_line_diagnostics` | `"hint"` | **end-of-line diagnostics** — show language-server diagnostics at line end, from which level up (`disable` off, `hint` hints and up, `info` info and up, `warning` warnings and up, `error` errors only) |
-| `[editor] modeline` | `true` | **read vim modelines** — vim: set ft=… ts=…: in the first or last five lines of a file sets its type, indentation and hard-wrap width |
-| `[editor] maths_preview` | `true` | **maths preview** — while the cursor is in a formula, a popup below shows it typeset; needs Ghostty or kitty, and the typst command for Typst formulas |
-| `[editor] preview_fit` | `"width"` | **page window fit** — how the page window draws the page: as wide as the window and scrolled to the cursor, or the whole page (`width` width, `page` whole page) |
-| `[editor] preview_theme` | `false` | **page window in theme colours** — the preview's paper in the background colour and its black in the text colour, in dark themes too; off, the page as printed |
-| `[editor] preview_vertical` | `true` | **vertical preview** — while the text window is vertical, the Markdown preview runs in columns from the right, its Latin letters and digits set as the export sets them |
-| `[editor] preview_font_family` | `""` | **preview fonts** — the fonts the Markdown preview and :export-as-preview are set in, written as the export fonts are; empty, the export fonts |
-| `[editor] heading_folds` | `true` | **folds by heading** — On: each Markdown or Typst heading folds its section; all start open. Off: vim's, only folds made with zf. |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
 | `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
 | `[editor] indent_guides_character` | `"│"` | **guide character** — the character the guides are drawn with, one cell wide |
@@ -49,22 +41,33 @@
 | `[editor] indent_hint` | `"none"` | **paragraph mark** — on a vertical page, mark each paragraph start so breaks are easy to find (`none` none, `symbol` a mark, `color` colour) |
 | `[editor] indent_symbol` | `"↵"` | **paragraph mark symbol** — the character for the paragraph mark; used when the indent hint is set to a mark |
 | `[editor] table_rules` | `"line dash"` | **table rules** — how the column rules of a table are drawn (`line dash` lines and dashes, `line` lines, `line double` lines and double lines, `color` colour, `off` none) |
-| `[editor] char_info` | `true` | **character info** — show the code point and Unicode block of the character under the cursor at the right of the status line |
-| `[editor] status_count` | `"text"` | **count on the status line** — the file's character count on the status line, and the selection's when there is one (`text` text files, `all` all files, `off` off) |
 | `[editor] unicode_alarm` | `true` | **suspicious characters** — tint the cell after a zero-width or bidi control, and any space that is not a plain space |
+| `[editor] maths_preview` | `true` | **maths preview** — while the cursor is in a formula, a popup below shows it typeset; needs Ghostty or kitty, and the typst command for Typst formulas |
+| `[editor] heading_folds` | `true` | **folds by heading** — On: each Markdown or Typst heading folds its section; all start open. Off: vim's, only folds made with zf. |
+
+### preview
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| `[editor] preview_fit` | `"width"` | **page window fit** — how the page window draws the page: as wide as the window and scrolled to the cursor, or the whole page (`width` width, `page` whole page) |
+| `[editor] preview_theme` | `false` | **page window in theme colours** — the preview's paper in the background colour and its black in the text colour, in dark themes too; off, the page as printed |
+| `[editor] preview_vertical` | `true` | **vertical preview** — while the text window is vertical, the Markdown preview runs in columns from the right, its Latin letters and digits set as the export sets them |
+| `[editor] preview_font_family` | `""` | **preview fonts** — the fonts the Markdown preview and :export-as-preview are set in, written as the export fonts are; empty, the export fonts |
 
 ### interface
 
 | Setting | Default | What it does |
 | --- | --- | --- |
+| `[editor] language` | `"auto"` | **language** — interface language (`auto` follow system, `zht` 繁體, `zhs` 简体, `en` English) |
 | `[editor] scrolloff` | `5` | **scrolloff** — how many lines (columns, on a vertical page) to keep between the cursor and the edge (0–20) |
 | `[editor] wheel_step` | `3` | **wheel step** — how many lines one notch of the wheel moves; 1 is the terminal's own step (1–10) |
 | `[editor] tabs` | `"auto"` | **tabs** — the bar along the top that lists the open files (`auto` two or more, `always` always, `never` never) |
 | `[editor] command_line` | `true` | **command line** — a line under the status line for commands, messages and key hints |
+| `[editor] status_count` | `"text"` | **count on the status line** — the file's character count on the status line, and the selection's when there is one (`text` text files, `all` all files, `off` off) |
+| `[editor] char_info` | `true` | **character info** — show the code point and Unicode block of the character under the cursor at the right of the status line |
 | `[editor] signature` | `true` | **name in the corner** — a quiet yumete at the right end of the command line while it is empty |
 | `[editor] sidebar_buttons` | `true` | **sidebar buttons** — a block at each end of the tab line; a click opens or closes that side's sidebar |
 | `[panel] rounded` | `true` | **rounded corners** — whether panel corners are round or square |
-| `[editor] language` | `"auto"` | **language** — interface language (`auto` follow system, `zht` 繁體, `zhs` 简体, `en` English) |
 
 ### colours
 
@@ -100,15 +103,15 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] block_comment_lines` | `true` | **block comment marks on their own lines** — On: Space C over several whole lines in Markdown, Typst or HTML puts <!-- and --> on lines of their own. Off: as in helix, the marks go at the first line's start and the last line's end. |
 | `[editor] word_completion` | `4` | **word completion** — after this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20) |
-| `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it (`off` off, `basic` basic, `full` full) |
 | `[editor] completion_page_size` | `6` | **completion page size** — how many items the word, code and shell completion lists show at once (1–20) |
+| `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it (`off` off, `basic` basic, `full` full) |
 | `[editor] indent_width` | `4` | **indent width** — how many columns > adds and < takes away, and how many spaces Tab types (1–16) |
 | `[editor] tab_width` | `8` | **tab width** — a tab reaches the next multiple of this; code tables line up by it (1–16) |
 | `[editor] tab_inserts` | `"spaces"` | **Tab inserts** — what Tab types in Insert mode; Shift-Tab types the other (`spaces` spaces, `tab` tab) |
 | `[editor] smart_case` | `true` | **smart case** — when searching, ignore case unless the pattern has a capital |
 | `[editor] fuzzy_search` | `false` | **fuzzy search by default** — whether the search panel's fuzzy switch starts on |
+| `[editor] block_comment_lines` | `true` | **block comment marks on their own lines** — On: Space C over several whole lines in Markdown, Typst or HTML puts <!-- and --> on lines of their own. Off: as in helix, the marks go at the first line's start and the last line's end. |
 
 ### files
 
@@ -118,23 +121,30 @@
 | `[editor] autosave` | `true` | **autosave** — keep a copy beside unsaved files to recover from a crash |
 | `[editor] session` | `false` | **session** — when started with no file: a blank page, or the files that were open last time |
 | `[editor] remember` | `true` | **remember files and places** — when off, none of this is saved or read: the line each file was left on, recent files and projects, the last session |
+| `[editor] insert_final_newline` | `true` | **add a final newline** — on save, add a missing final newline in the file's own line ending; an empty file stays empty |
+| `[editor] modeline` | `true` | **read vim modelines** — vim: set ft=… ts=…: in the first or last five lines of a file sets its type, indentation and hard-wrap width |
+
+### export
+
+| Setting | Default | What it does |
+| --- | --- | --- |
 | `[export] vertical` | `false` | **vertical export** — HTML and EPUB set vertically, right to left, whatever the editing window shows |
+| `[export] vertical_latin` | `"turn"` | **Latin in vertical export** — how half-width letters and digits are set in a vertical HTML or EPUB export; the terminal's vertical page is not affected (`turn` all turned, `jlreq` as JLREQ and clreq) |
 | `[export] hanging` | `false` | **hanging punctuation in export** — a stop at the end of a line hangs outside the text block |
+| `[export] page` | `"a5"` | **export paper** — the paper a print is set on: a4 a5 a6 b5 b6 letter 16開 32開 大32開, or millimetres such as 130x184 |
+| `[export] font_family` | `'-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif'` | **export fonts** — the fonts an HTML or EPUB export asks for, written as VS Code's markdown.preview.fontFamily |
 | `[export] ruby_html` | `true` | **HTML ruby in export** — `<ruby>` in the source is exported as ruby |
 | `[export] ruby_typst` | `true` | **Typst ruby in export** — `#ruby` in the source is exported as ruby |
 | `[export] ruby_markdown` | `true` | **Markdown ruby in export** — `{漢字\|かんじ}` in a Markdown source is exported as ruby |
-| `[export] page` | `"a5"` | **export paper** — the paper a print is set on: a4 a5 a6 b5 b6 letter 16開 32開 大32開, or millimetres such as 130x184 |
-| `[export] vertical_latin` | `"turn"` | **Latin in vertical export** — how half-width letters and digits are set in a vertical HTML or EPUB export; the terminal's vertical page is not affected (`turn` all turned, `jlreq` as JLREQ and clreq) |
-| `[export] font_family` | `'-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif'` | **export fonts** — the fonts an HTML or EPUB export asks for, written as VS Code's markdown.preview.fontFamily |
 
 ### keys
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] which_wrap` | `"b"` | **keys that cross lines** — which keys cross a line end (vim keymap): b h l < > ~ |
-| `[editor] language_key` | `"C-^"` | **language key** — the key that switches Chinese/ABC on a terminal that cannot report a lone Shift |
 | `[keys] preset` | `"helix"` | **keymap** — whether the keys follow helix or vim (`helix` helix, `vim` vim) |
 | `[keys] flavor` | `"basic"` | **Yumete keymap flavour** — what yumete changes over helix or vim. basic: the changes you can see, such as menus and new keys; full: also the items that change what a familiar key does, such as `d` and `c` deleting without cutting (`A-d` and `A-c` cut). `[keys.normal]` overrides it (`off` off, `basic` basic, `full` full) |
 | `[keys] flavor_items` | `{}` | **flavour items** — each item of the Yumete flavour, one tick each. Enter or Space opens it |
 | `[keys] inherit` | `true` | **sidebars and prompts use my keys** — a one-key command bound in `[keys.normal]` also works in a sidebar that has it, and one in `[keys.insert]` in the command line and pickers. `[keys.sidebar]` and `[keys.prompt]` override it |
+| `[editor] language_key` | `"C-^"` | **language key** — the key that switches Chinese/ABC on a terminal that cannot report a lone Shift |
+| `[editor] which_wrap` | `"b"` | **keys that cross lines** — which keys cross a line end (vim keymap): b h l < > ~ |
 
