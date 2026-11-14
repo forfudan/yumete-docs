@@ -165,7 +165,8 @@ If your `lazyvim.json` lists the `coding.mini-surround` extra, `ye --import lazy
 also puts its keys on yumete's surround: `gsa`, `gsd` and `gsr` play vim-surround's
 `ys`, `ds` and `cs` (written `"@ys"` and so on under `[keys.normal]`), and `gsa` in
 Visual mode wraps the selection (`surround_add` under `[keys.select]`). The extra's
-`gsf`, `gsF`, `gsh` and `gsn` have no counterpart.
+`gsf`, `gsF`, `gsh` and `gsn` have no counterpart. `b` and `q`, and the `t` and `f`
+prompts, work as in mini.surround.
 
 ## Your own keys and options
 

@@ -106,9 +106,15 @@ is in [Match mode](../reference/match.md).
 
 ## Surround
 
-vim-surround's keys are built in: `ysiw(` wraps a word, `ds(` deletes the pair
-around the cursor, and `cs([` changes `(…)` to `[…]`. `ys` takes any motion or
-object, so `ys$"` quotes to the end of the line.
+vim-surround's keys are built in: `ysiw(` wraps a word as `( word )` and
+`ysiw)` as `(word)`; `ds(` deletes the pair around the cursor and the spaces
+inside it, `ds)` only the pair; `cs(]` changes `( … )` to `[…]`. `b`, `B`, `r`
+and `a` name `)`, `}`, `]` and `>`, and `q` a straight quote. `t` (or `<`)
+asks for a tag: `ysiwt` then `em` Enter gives `<em>word</em>`, `dst` takes
+tags off, `cst` changes them. `f` asks for a function name: `ysiwf` then
+`print` Enter gives `print(word)`, and `dsf` takes a call's name and brackets
+off. `.` repeats all of them, and a count reaches a pair further out (`2ds(`).
+`ys` takes any motion or object, so `ys$"` quotes to the end of the line.
 
 ## Visual mode
 

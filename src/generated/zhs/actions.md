@@ -679,6 +679,7 @@
 | `find_moves_caret` | f、t 只挪光标，不选中经过的字 |  | ✓ |
 | `vim_text_motions` | 词、句、段按 vim 的规矩移动 |  | ✓ |
 | `vim_text_objects` | 文本对象按 vim 的规矩 |  | ✓ |
+| `vim_surround` | 包围照 vim-surround：开括号在里面加空格、去掉里面的空格，b B r a 指 ) } ] >，t 和 f 问标签名和函数名 |  | ✓ |
 | `vim_registers` | vim 的寄存器：0 号存最后一次复制，1–9 号存删掉的行，大写名字往寄存器里追加 |  | ✓ |
 | `vim_scrolling` | 页面照 vim 的方式跟随光标：scrolloff、远跳居中、zt zz zb 带计数 |  | ✓ |
 | `vim_indent_keys` | 缩进里的退格和 Tab 按 shiftwidth 走，离开插入模式时去掉空着的缩进 |  | ✓ |
