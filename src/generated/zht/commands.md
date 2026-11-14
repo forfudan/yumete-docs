@@ -170,7 +170,8 @@
 | `:search-project` `:sp` |  | 在項目中搜索 |
 | `:sidebar-explorer` | `on｜off` | 打開或關閉左側欄的文件樹，打開時光標移過去 |
 | `:sidebar-buffers` | `on｜off` | 打開或關閉左側欄的緩衝區列表，打開時光標移過去 |
-| `:sidebar-outline` | `on｜off` | 打開或關閉左側欄的大綱，打開時光標移過去 |
+| `:sidebar-outline` `:outline` `:out` `:ou` | `on｜off` | 打開或關閉左側欄的大綱，打開時光標移過去 |
+| `:sidebar-outline-level` | `<級>` | 側欄大綱只列到第幾級；`0` 關閉；不帶參數報告狀態 |
 | `:sidebar-search` | `on｜off` | 打開或關閉左側欄的搜索，打開時光標移過去 |
 | `:sidebar-links` | `on｜off` | 打開或關閉左側欄的鏈接，打開時光標移過去 |
 | `:sidebar-info` | `on｜off` | 打開或關閉右側欄的信息面板，光標留在正文 |
@@ -238,7 +239,6 @@
 | `:lsp-rename` | `<新名>` | 通過語言服務器重命名光標下的符號(各處一起改) |
 | `:git-show` | `<提交>` | 在另一個窗口以只讀方式打開已提交的版本 |
 | `:git-diff` | `<提交>` | 與 git 中的版本逐詞比較，默認比 HEAD |
-| `:outline` | `<級>` | 大綱只列到第幾級；`0` 關閉；不帶參數報告狀態 |
 | `:ruby` |  | 編輯此處注音 |
 | `:ruby-render` | `off｜basic｜full` | 注音顯示：源碼、着色、夾行；不帶參數顯示當前模式 |
 | `:ruby-auto` |  | 按詞自動注音(選區或整個文件) |

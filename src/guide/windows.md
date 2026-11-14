@@ -218,10 +218,11 @@ A window narrower than 36 columns has no room for a sidebar at all.
 
 ## The outline
 
-`:sidebar-outline` opens the outline in the sidebar. `:outline 2` lists
-headings down to level 2 only, `:outline 0` closes the outline, and `:outline`
-on its own says whether it is open, how deep it lists and how many headings
-that is. To jump to a heading
+`:sidebar-outline` (or `:outline`, `:ou`) opens the outline in the sidebar,
+and closes it again. `:sidebar-outline-level 2` lists headings down to level 2
+only, `:sidebar-outline-level 0` closes the outline, and
+`:sidebar-outline-level` on its own says whether it is open, how deep it lists
+and how many headings that is. To jump to a heading
 without opening a sidebar, `Space s` lists the same headings in a picker
 (see [Pickers](./search.md#pickers)).
 

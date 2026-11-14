@@ -170,7 +170,8 @@
 | `:search-project` `:sp` |  | search the project |
 | `:sidebar-explorer` | `on｜off` | show or hide the file tree in the left sidebar; the cursor goes into it |
 | `:sidebar-buffers` | `on｜off` | show or hide the open files in the left sidebar; the cursor goes into it |
-| `:sidebar-outline` | `on｜off` | show or hide the outline in the left sidebar; the cursor goes into it |
+| `:sidebar-outline` `:outline` `:out` `:ou` | `on｜off` | show or hide the outline in the left sidebar; the cursor goes into it |
+| `:sidebar-outline-level` | `<級>` | how many heading levels the outline sidebar lists; `0` closes it; bare reports |
 | `:sidebar-search` | `on｜off` | show or hide search in the left sidebar; the cursor goes into it |
 | `:sidebar-links` | `on｜off` | show or hide the links in the left sidebar; the cursor goes into it |
 | `:sidebar-info` | `on｜off` | show or hide the info panel in the right sidebar; the cursor stays in the text |
@@ -238,7 +239,6 @@
 | `:lsp-rename` | `<新名>` | rename the symbol under the cursor everywhere, via the language server |
 | `:git-show` | `<提交>` | open a committed version read-only in the other window |
 | `:git-diff` | `<提交>` | compare with git word by word; HEAD unless a commit is named |
-| `:outline` | `<級>` | how many heading levels the outline lists; `0` closes it; bare reports |
 | `:ruby` |  | edit the reading here |
 | `:ruby-render` | `off｜basic｜full` | ruby display: source, coloured, or beside the text; no argument shows the current one |
 | `:ruby-auto` |  | add readings by word (the selection or the whole file) |

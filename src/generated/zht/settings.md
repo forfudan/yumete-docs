@@ -92,7 +92,7 @@
 | `[ime] charset` | `"all"` | **字集過濾** — 候選中只保留哪個字集的漢字 (`all` 全部漢字, `common` 僅常用漢字, `tonggui` 僅簡化漢字, `harmonic` 僅傳統漢字) |
 | `[ime] charset_sort` | `"common"` | **字集排序** — 哪個字集的字在候選中靠前，對整句方案無效 (`original` 原始順序, `common` 常用字優先, `tonggui` 簡化字優先, `harmonic` 傳統字優先) |
 | `[ime] start` | `false` | **啓動時加載碼表** — 默認關閉：分詞模型照常加載，碼表在第一次輸入中文時加載 |
-| `[ime] system` | `"auto"` | **Normal 模式下讓開系統輸入法** — Normal 模式下請系統輸入法讓開，以免按鍵被它攔截 (`auto` 自動, `keep` 不處理) |
+| `[ime] system` | `"auto"` | **Normal 模式下讓開系統宇夢輸入法** — Normal 模式下請系統宇夢輸入法讓開，以免按鍵被它攔截 (`auto` 自動, `keep` 不處理) |
 | `[ime] others` | `"off"` | **Normal 模式下讓開其他輸入法** — Normal 模式下把鼠須管、搜狗等切到英文；macOS 上切回時約三次失敗一次 (`off` 不動, `aside` 切到英文, `aside-and-back` 切到英文再切回) |
 | `[panel] display` | `"box"` | **候選位置** — 打字時候選顯示在哪：光標旁的候選框、窗口底行，還是光標下一行 (`box` 候選框, `bottom` 底行, `inline` 光標下一行) |
 | `[panel] inline_preedit` | `"off"` | **未上屏内容** — 未上屏的内容顯示在候選欄裏還是正文裏；在正文裏時顯示編碼還是首選 (`off` 候選欄裏, `composition` 正文裏寫編碼, `preview` 正文裏寫首選) |
