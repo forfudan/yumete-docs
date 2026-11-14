@@ -195,7 +195,7 @@
 | `:run-in-terminal` | `<命令>` | 把終端交給一個程序，它結束後回到編輯器 |
 | `:markdown-footnote` |  | 腳註：自動編號並創建註釋 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
-| `:settings` `:set` `:se` | `<設置項>` | 設置頁：每項附有説明，改了就寫入並生效，u 撤銷；也認 vim 的 ft=、ts=、sw=、et、tw= 寫法 |
+| `:settings` `:set` `:se` | `<設置項>` | 設置頁：每項附有説明，改了就寫入並生效，u 撤銷；跟 vim 的 ft=python ts=2 則只設當前文件 |
 | `:resume` |  | 恢復上次會話：打開這個目録上次開着的文件(不關閉現有的) |
 | `:recent-files` |  | 最近打開的文件(本項目) |
 | `:recent-files-global` |  | 最近打開的文件(所有項目) |
