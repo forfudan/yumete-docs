@@ -14,7 +14,6 @@
 | `[editor] measure` | `0` | **正文寬度** — 正文在此處換行，右側是頁邊距 (0–400) |
 | `[editor] hard_wrap` | `0` | **硬換行寬度** — :hard-wrap 不帶數字時用的寬度；改的是文件裏的換行，不是顯示 (1–400) |
 | `[editor] ruler` | `0` | **標尺** — 只畫一條線：超出此列的字變色，不換行 (0–400) |
-| `[editor] insert_final_newline` | `true` | **文末添加換行符** — 保存時在文末補上缺少的換行符，使用該文件自己的行尾(CRLF 文件補 CRLF)。空文件不補 |
 | `[editor] soft_wrap` | `true` | **自動換行** — 横排時長行自動換行；關閉則超出右邊界 |
 | `[editor] hanging_punctuation` | `false` | **標點旁置** — 。，、？！：；「」 懸掛在頁邊，不佔正文的格 |
 | `[editor] margin` | `"dense"` | **夾行** — 何時顯示夾行(注音、着重號、平仄等) (`never` 從不, `dense` 擠的時候, `loose` 松的時候, `always` 總是) |
@@ -30,13 +29,6 @@
 | `[editor] line_number_fill` | `false` | **行號底色** — 行號欄鋪滿淡底色，而不是隻顯示數字 |
 | `[editor] diff_gutter` | `true` | **改動條** — 在行號旁用底色標出與 git 不同的行(不在 git 中則對比已保存的文件) |
 | `[editor] end_of_line_diagnostics` | `"hint"` | **行末診斷** — 在行末顯示語言服務器診斷，從哪一級起顯示 (`disable` 不顯示, `hint` 建議及以上, `info` 説明及以上, `warning` 警告及以上, `error` 只顯示錯誤) |
-| `[editor] modeline` | `true` | **讀 vim 的 modeline** — 文件首尾五行内的 vim: set ft=… ts=…: 可設置文件類型、縮進和硬換行寬度 |
-| `[editor] maths_preview` | `true` | **公式預覽** — 光標在公式中時，在下方浮窗顯示排版結果；需要 Ghostty 或 kitty，Typst 公式還需要 typst 命令 |
-| `[editor] preview_fit` | `"width"` | **頁面窗口大小** — 頁面窗口中頁面的大小：頁寬適應窗口並隨光標滚動，或整頁放進窗口 (`width` 頁寬, `page` 整頁) |
-| `[editor] preview_theme` | `false` | **頁面窗口用主題配色** — 預覽頁面的紙用背景色、黑字用文字色，深色主題下也一樣；關閉則按印刷原樣 |
-| `[editor] preview_vertical` | `true` | **預覽跟着豎排** — 文字窗口豎排時，Markdown 預覽也從右往左豎排，拉丁字母和數字按導出的設置 |
-| `[editor] preview_font_family` | `""` | **預覽字體** — Markdown 預覽與 :export-as-preview 用的字體，寫法同導出字體；留空則跟着導出字體 |
-| `[editor] heading_folds` | `true` | **按標題摺疊** — 開：Markdown 和 Typst 每個標題下的一節可以摺疊，初始全部展開。關：同 vim，只有 zf 建的摺疊。 |
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製後，被複制的範圍閃一下 |
 | `[editor] indent_guides` | `false` | **縮進參考線** — 在代碼行首每級縮進畫一條豎線，同 helix；僅用於代碼文件 |
 | `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
@@ -49,22 +41,33 @@
 | `[editor] indent_hint` | `"none"` | **段首記號** — 豎排時在段首畫記號，便於在長文中找到分段 (`none` 不畫, `symbol` 畫符號, `color` 換顔色) |
 | `[editor] indent_symbol` | `"↵"` | **段首符號** — 段首記號用的字符，僅在段首記號爲「畫符號」時生效 |
 | `[editor] table_rules` | `"line dash"` | **表格豎線** — 表格豎線的樣式 (`line dash` 實線加虚線, `line` 實線, `line double` 實線加雙線, `color` 用顔色區分, `off` 不畫) |
-| `[editor] char_info` | `true` | **字符信息** — 在狀態欄右端顯示光標處字符的 Unicode 碼位和區塊名 |
-| `[editor] status_count` | `"text"` | **狀態欄字數** — 在狀態欄顯示全文字數，有選區時也顯示選區字數 (`text` 文本文件, `all` 所有文件, `off` 關) |
 | `[editor] unicode_alarm` | `true` | **可疑字符** — 零寬字符、雙向控制符後面那一格和非普通空格鋪上琥珀底色 |
+| `[editor] maths_preview` | `true` | **公式預覽** — 光標在公式中時，在下方浮窗顯示排版結果；需要 Ghostty 或 kitty，Typst 公式還需要 typst 命令 |
+| `[editor] heading_folds` | `true` | **按標題摺疊** — 開：Markdown 和 Typst 每個標題下的一節可以摺疊，初始全部展開。關：同 vim，只有 zf 建的摺疊。 |
+
+### 預覽
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| `[editor] preview_fit` | `"width"` | **頁面窗口大小** — 頁面窗口中頁面的大小：頁寬適應窗口並隨光標滚動，或整頁放進窗口 (`width` 頁寬, `page` 整頁) |
+| `[editor] preview_theme` | `false` | **頁面窗口用主題配色** — 預覽頁面的紙用背景色、黑字用文字色，深色主題下也一樣；關閉則按印刷原樣 |
+| `[editor] preview_vertical` | `true` | **預覽跟着豎排** — 文字窗口豎排時，Markdown 預覽也從右往左豎排，拉丁字母和數字按導出的設置 |
+| `[editor] preview_font_family` | `""` | **預覽字體** — Markdown 預覽與 :export-as-preview 用的字體，寫法同導出字體；留空則跟着導出字體 |
 
 ### 界面
 
 | Setting | Default | What it does |
 | --- | --- | --- |
+| `[editor] language` | `"auto"` | **界面語言** — 編輯器界面顯示語言 (`auto` 跟隨系統, `zht` 繁體, `zhs` 簡體, `en` English) |
 | `[editor] scrolloff` | `5` | **光標邊距** — 光標與邊緣之間至少保留幾行(豎排爲幾縱) (0–20) |
 | `[editor] wheel_step` | `3` | **滚輪步長** — 滚輪每格滚動的行數，1 即終端默認 (1–10) |
 | `[editor] tabs` | `"auto"` | **標籤欄** — 頂部列出已打開文件的横條 (`auto` 兩個及以上時顯示, `always` 總是顯示, `never` 不顯示) |
 | `[editor] command_line` | `true` | **命令行** — 狀態欄下方加一行，用於輸入命令、顯示消息和按鍵提示 |
+| `[editor] status_count` | `"text"` | **狀態欄字數** — 在狀態欄顯示全文字數，有選區時也顯示選區字數 (`text` 文本文件, `all` 所有文件, `off` 關) |
+| `[editor] char_info` | `true` | **字符信息** — 在狀態欄右端顯示光標處字符的 Unicode 碼位和區塊名 |
 | `[editor] signature` | `true` | **右下角署名** — 命令行爲空時，右端淡色顯示 yumete |
 | `[editor] sidebar_buttons` | `true` | **側欄開關** — 標籤欄兩端各有一個色塊，點擊可開關該側的側欄 |
 | `[panel] rounded` | `true` | **面板圓角** — 面板的四個角是圓的還是方的 |
-| `[editor] language` | `"auto"` | **界面語言** — 編輯器界面顯示語言 (`auto` 跟隨系統, `zht` 繁體, `zhs` 簡體, `en` English) |
 
 ### 配色
 
@@ -100,15 +103,15 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] block_comment_lines` | `true` | **塊註釋標記各佔一行** — 開：在 Markdown、Typst、HTML 中用 空格 C 註釋多行時，<!-- 和 --> 各佔一行。關：同 helix，標記放在首行開頭和末行結尾。 |
 | `[editor] word_completion` | `4` | **詞語補全** — 輸入幾個西文字母后列出已打開文件中出現過的詞，漢字爲一半(向上取整)。C-n 隨時列出 (0–20) |
-| `[editor] auto_pairs` | `"basic"` | **自動配對** — 輸入左括號或引號時自動補上右半邊；再輸入右半邊會跳過 (`off` 關, `basic` 基本, `full` 完整) |
 | `[editor] completion_page_size` | `6` | **補全每頁條數** — 單詞、代碼和終端命令的補全列表一次顯示幾條 (1–20) |
+| `[editor] auto_pairs` | `"basic"` | **自動配對** — 輸入左括號或引號時自動補上右半邊；再輸入右半邊會跳過 (`off` 關, `basic` 基本, `full` 完整) |
 | `[editor] indent_width` | `4` | **縮進寬度** — `>`/`<` 增減的列數，也是 Tab 輸入的空格數 (1–16) |
 | `[editor] tab_width` | `8` | **製表符寬度** — 製表符對齊到此數的倍數，碼表靠它對齊 (1–16) |
 | `[editor] tab_inserts` | `"spaces"` | **Tab 插入内容** — 插入模式下按 Tab 插入的内容；Shift-Tab 插入另一種 (`spaces` 空格, `tab` 製表符) |
 | `[editor] smart_case` | `true` | **智能大小寫** — 搜索詞全小寫時不區分大小寫，含大寫字母時區分 |
 | `[editor] fuzzy_search` | `false` | **默認模糊搜索** — 搜索面板的「模糊」開關默認是否打開 |
+| `[editor] block_comment_lines` | `true` | **塊註釋標記各佔一行** — 開：在 Markdown、Typst、HTML 中用 空格 C 註釋多行時，<!-- 和 --> 各佔一行。關：同 helix，標記放在首行開頭和末行結尾。 |
 
 ### 文件
 
@@ -118,23 +121,30 @@
 | `[editor] autosave` | `true` | **自動備份** — 未保存時在文件旁保留副本，崩潰後可恢復 |
 | `[editor] session` | `false` | **恢復會話** — 不帶文件名啓動時：打開空白文檔，還是恢復上次的文件 |
 | `[editor] remember` | `true` | **記住打開過的文件和位置** — 關閉後不再記録或讀取：各文件上次的位置、最近的文件和項目、上次的會話 |
+| `[editor] insert_final_newline` | `true` | **文末添加換行符** — 保存時在文末補上缺少的換行符，使用該文件自己的行尾(CRLF 文件補 CRLF)。空文件不補 |
+| `[editor] modeline` | `true` | **讀 vim 的 modeline** — 文件首尾五行内的 vim: set ft=… ts=…: 可設置文件類型、縮進和硬換行寬度 |
+
+### 導出
+
+| Setting | Default | What it does |
+| --- | --- | --- |
 | `[export] vertical` | `false` | **豎排導出** — HTML 與 EPUB 豎排，從右往左；與編輯區是否豎排無關 |
+| `[export] vertical_latin` | `"turn"` | **豎排導出的西文** — 豎排的 HTML 與 EPUB 裏，半角字母與數字怎麽排；不影響終端裏的豎排 (`turn` 一律轉向, `jlreq` 照 JLREQ 與 clreq) |
 | `[export] hanging` | `false` | **導出標點懸掛** — 句讀落在行末時掛到版心外 |
+| `[export] page` | `"a5"` | **導出紙張** — 打印用的紙：a4 a5 a6 b5 b6 letter 16開 32開 大32開，或 130x184 這樣的毫米數 |
+| `[export] font_family` | `'-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif'` | **導出字體** — HTML 與 EPUB 導出要的字體，寫法同 VS Code 的 markdown.preview.fontFamily |
 | `[export] ruby_html` | `true` | **導出 HTML 注音** — 稿子裏的 `<ruby>` 注音導出爲注音 |
 | `[export] ruby_typst` | `true` | **導出 Typst 注音** — 稿子裏的 `#ruby` 注音導出爲注音 |
 | `[export] ruby_markdown` | `true` | **導出 Markdown 注音** — Markdown 稿子裏的 `{這些\|zhèxiē}` 導出爲注音 |
-| `[export] page` | `"a5"` | **導出紙張** — 打印用的紙：a4 a5 a6 b5 b6 letter 16開 32開 大32開，或 130x184 這樣的毫米數 |
-| `[export] vertical_latin` | `"turn"` | **豎排導出的西文** — 豎排的 HTML 與 EPUB 裏，半角字母與數字怎麽排；不影響終端裏的豎排 (`turn` 一律轉向, `jlreq` 照 JLREQ 與 clreq) |
-| `[export] font_family` | `'-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif'` | **導出字體** — HTML 與 EPUB 導出要的字體，寫法同 VS Code 的 markdown.preview.fontFamily |
 
 ### 鍵位
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] which_wrap` | `"b"` | **哪些鍵跨行** — 哪些鍵可以跨越行尾(vim 鍵位)。只能是 b h l < > ~ |
-| `[editor] language_key` | `"C-^"` | **中英切換鍵** — 在無法識别單獨 Shift 的終端上，用此鍵切換中文/ABC |
 | `[keys] preset` | `"helix"` | **鍵位** — 鍵位沿用 helix 還是 vim (`helix` helix, `vim` vim) |
 | `[keys] flavor` | `"basic"` | **Yumete 鍵位風味** — 在 helix/vim 鍵位之上的改動。基本：看得見的改動，如菜單、新鍵；完整：再加上改變熟悉鍵行爲的幾項，如 `d` `c` 只删不剪，剪切用 `A-d` `A-c`。`[keys.normal]` 優先於它 (`off` 關閉, `basic` 基本, `full` 完整) |
 | `[keys] flavor_items` | `{}` | **風味各項** — 逐項開關 Yumete 風味。按 Enter 或空格進入 |
 | `[keys] inherit` | `true` | **側欄與命令行沿用我的改鍵** — [keys.normal] 裏單鍵綁定的命令，側欄也有時在側欄生效；[keys.insert] 同理用於命令行與選擇器。[keys.sidebar] 與 [keys.prompt] 優先於它 |
+| `[editor] language_key` | `"C-^"` | **中英切換鍵** — 在無法識别單獨 Shift 的終端上，用此鍵切換中文/ABC |
+| `[editor] which_wrap` | `"b"` | **哪些鍵跨行** — 哪些鍵可以跨越行尾(vim 鍵位)。只能是 b h l < > ~ |
 

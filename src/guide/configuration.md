@@ -194,17 +194,17 @@ any of the interface's languages (`:settings first-line indent`,
 ──────────────┬─────────────────────────────────────────────────────────────────────
   layout      │layout
   marks       │ layout                  ┆[horizontal]                      ┆factory
-  interface   │ hjkl in vertical layout ┆[visual]                          ┆factory
-  colours     │*column length           ┆32                                ┆global
-  input method│ column gap              ┆0                                 ┆factory
-  editing     │ pages, vertical         ┆1                                 ┆factory
-  files       │ pages, horizontal       ┆1                                 ┆factory
-  keys        │*first-line indent       ┆2                                 ┆global
-              │ text width              ┆0                                 ┆factory
-              │ hard-wrap width         ┆0                                 ┆factory
+  preview     │ hjkl in vertical layout ┆[visual]                          ┆factory
+  interface   │*column length           ┆32                                ┆global
+  colours     │ column gap              ┆0                                 ┆factory
+  input method│ pages, vertical         ┆1                                 ┆factory
+  editing     │ pages, horizontal       ┆1                                 ┆factory
+  files       │*first-line indent       ┆2                                 ┆global
+  export      │ text width              ┆0                                 ┆factory
+  keys        │ hard-wrap width         ┆0                                 ┆factory
               │ ruler                   ┆0                                 ┆factory
-              │ add a final newline     ┆[x]                               ┆factory
               │ soft wrap               ┆[x]                               ┆factory
+              │ hanging punctuation     ┆[ ]                               ┆factory
               ├─ ↓ 86 more ─────────────────────────────────────────────────────────
               │  characters per column in vertical layout; prose reads well up to
               │  about 32
