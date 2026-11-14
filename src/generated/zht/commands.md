@@ -6,11 +6,10 @@
 | `:pwd` |  | 顯示工作目録 |
 | `:vsplit` `:vs` | `<路徑>` | 在旁邊分出窗口（同 C-w v）；可帶文件名 |
 | `:hsplit` `:hs` `:split` | `<路徑>` | 在下方分出窗口（同 C-w s）；可帶文件名 |
-| `:vnew` |  | 在旁邊打開空白窗口（同 C-w n v） |
-| `:hnew` |  | 在下方打開空白窗口（同 C-w n s） |
+| `:vsplit-new` `:vnew` `:vne` |  | 在旁邊打開空白窗口（同 C-w n v） |
+| `:hsplit-new` `:hnew` |  | 在下方打開空白窗口（同 C-w n s） |
 | `:open` `:o` `:e` `:edit` | `<路徑>` | 打開一個文件 |
 | `:new` `:enew` `:ene` |  | 新建空緩衝區 |
-| `:tabnew` `:tabe` `:tabedit` | `<路徑>` | vim 的 :tabnew：新建空緩衝區，帶文件名則打開該文件 |
 | `:write` `:w` | `<路徑>` | 保存；帶路徑則另存副本，`:write-as` 會切換到新文件 |
 | `:write-all` `:wa` |  | 保存所有改動過的文件 |
 | `:write-as` | `<路徑>` | 另存爲新文件並切換過去(`:w <文件名>` 只保存副本，仍留在原文件) |
@@ -44,7 +43,7 @@
 | `:write-quit` `:wq` | `<路徑>` | 保存並退出(簡寫 `:wq`；`:x` 只在有改動時保存) |
 | `:write-quit-all` `:wqa` `:xa` |  | 保存所有改動過的文件並退出 |
 | `:exit` `:x` `:xit` | `<路徑>` | 有改動纔保存，然後退出(簡寫 `:x`，也可用 `:xit`) |
-| `:update` `:up` |  | 有改動纔保存，不退出(簡寫 `:up`) |
+| `:write-if-changed` `:update` `:up` |  | 有改動纔保存，不退出(簡寫 `:up`) |
 | `:undo` `:u` |  | 撤銷上一次改動 |
 | `:earlier` `:ear` | `<步數>｜<時間>` | 撤銷若干步，或回到多久以前(5m、1h) |
 | `:later` `:lat` | `<步數>｜<時間>` | 重做若干步，或前進到多久以後 |
@@ -99,12 +98,10 @@
 | `:yume-installed` |  | 改用系統安裝的碼表(與 builtin 相對) |
 | `:yume-builtin` |  | 改用内置碼表，忽略已安裝的 |
 | `:yume-table` | `<路徑>` | 用你自己的碼表(Rime 的 .dict.yaml 也行) |
-| `:set` `:se` | `<選項>` | vim 的 :set，支持 modeline 的幾項：ft、ts、sw、et、tw；不帶參數則打開設置面板 |
-| `:setlocal` `:setl` | `<選項>` | vim 的 :setlocal，同 :set 那幾項，只設當前緩衝區；不帶參數則顯示它們的值 |
-| `:setfiletype` `:setf` | `<文件類型>` | vim 的 :setf，同 :set ft= |
-| `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 文件的標記語言(不帶參數顯示當前值) |
+| `:settings-buffer` `:setlocal` `:setl` | `<選項>` | 只設當前緩衝區的 ft、ts、sw、et、tw；不帶參數則顯示它們的值 |
+| `:syntax` `:syn` `:setf` `:setfiletype` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 文件的標記語言(不帶參數顯示當前值) |
 | `:pipe` | `<命令>` | 將選區傳給終端命令，用輸出替換選區 |
-| `:sh` | `<命令>` | 運行命令，輸出放進一個緩衝區 |
+| `:run-shell-in-buffer` `:sh` | `<命令>` | 運行命令，輸出放進一個緩衝區 |
 | `:!command` |  | 在終端裏直接運行命令並查看輸出(vi 寫法) |
 | `:which-wrap` | `<字母>` | 哪些鍵可以跨越行尾(vim 鍵位)。只能是 b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | 行號：absolute 絶對、relative 相對光標、none 不顯示；不帶參數顯示當前模式 |
@@ -198,7 +195,7 @@
 | `:run-in-terminal` | `<命令>` | 把終端交給一個程序，它結束後回到編輯器 |
 | `:markdown-footnote` |  | 腳註：自動編號並創建註釋 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
-| `:settings` | `<設置項>` | 設置頁：每項附有説明，改了就寫入並生效，u 撤銷 |
+| `:settings` `:set` `:se` | `<設置項>` | 設置頁：每項附有説明，改了就寫入並生效，u 撤銷；也認 vim 的 ft=、ts=、sw=、et、tw= 寫法 |
 | `:resume` |  | 恢復上次會話：打開這個目録上次開着的文件(不關閉現有的) |
 | `:recent-files` |  | 最近打開的文件(本項目) |
 | `:recent-files-global` |  | 最近打開的文件(所有項目) |

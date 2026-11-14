@@ -6,11 +6,10 @@
 | `:pwd` |  | 显示工作目录 |
 | `:vsplit` `:vs` | `<路径>` | 在旁边分出窗口（同 C-w v）；可带文件名 |
 | `:hsplit` `:hs` `:split` | `<路径>` | 在下方分出窗口（同 C-w s）；可带文件名 |
-| `:vnew` |  | 在旁边打开空白窗口（同 C-w n v） |
-| `:hnew` |  | 在下方打开空白窗口（同 C-w n s） |
+| `:vsplit-new` `:vnew` `:vne` |  | 在旁边打开空白窗口（同 C-w n v） |
+| `:hsplit-new` `:hnew` |  | 在下方打开空白窗口（同 C-w n s） |
 | `:open` `:o` `:e` `:edit` | `<路径>` | 打开一个文件 |
 | `:new` `:enew` `:ene` |  | 新建空缓冲区 |
-| `:tabnew` `:tabe` `:tabedit` | `<路径>` | vim 的 :tabnew：新建空缓冲区，带文件名则打开该文件 |
 | `:write` `:w` | `<路径>` | 保存；带路径则另存副本，`:write-as` 会切换到新文件 |
 | `:write-all` `:wa` |  | 保存所有改动过的文件 |
 | `:write-as` | `<路径>` | 另存为新文件并切换过去(`:w <文件名>` 只保存副本，仍留在原文件) |
@@ -44,7 +43,7 @@
 | `:write-quit` `:wq` | `<路径>` | 保存并退出(简写 `:wq`；`:x` 只在有改动时保存) |
 | `:write-quit-all` `:wqa` `:xa` |  | 保存所有改动过的文件并退出 |
 | `:exit` `:x` `:xit` | `<路径>` | 有改动才保存，然后退出(简写 `:x`，也可用 `:xit`) |
-| `:update` `:up` |  | 有改动才保存，不退出(简写 `:up`) |
+| `:write-if-changed` `:update` `:up` |  | 有改动才保存，不退出(简写 `:up`) |
 | `:undo` `:u` |  | 撤销上一次改动 |
 | `:earlier` `:ear` | `<步數>｜<時間>` | 撤销若干步，或回到多久以前(5m、1h) |
 | `:later` `:lat` | `<步數>｜<時間>` | 重做若干步，或前进到多久以后 |
@@ -99,12 +98,10 @@
 | `:yume-installed` |  | 改用系统安装的码表(与 builtin 相对) |
 | `:yume-builtin` |  | 改用内置码表，忽略已安装的 |
 | `:yume-table` | `<路径>` | 用你自己的码表(Rime 的 .dict.yaml 也行) |
-| `:set` `:se` | `<選項>` | vim 的 :set，支持 modeline 的几项：ft、ts、sw、et、tw；不带参数则打开设置面板 |
-| `:setlocal` `:setl` | `<選項>` | vim 的 :setlocal，同 :set 那几项，只设当前缓冲区；不带参数则显示它们的值 |
-| `:setfiletype` `:setf` | `<文件類型>` | vim 的 :setf，同 :set ft= |
-| `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 文件的标记语言(不带参数显示当前值) |
+| `:settings-buffer` `:setlocal` `:setl` | `<選項>` | 只设当前缓冲区的 ft、ts、sw、et、tw；不带参数则显示它们的值 |
+| `:syntax` `:syn` `:setf` `:setfiletype` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 文件的标记语言(不带参数显示当前值) |
 | `:pipe` | `<命令>` | 将选区传给终端命令，用输出替换选区 |
-| `:sh` | `<命令>` | 运行命令，输出放进一个缓冲区 |
+| `:run-shell-in-buffer` `:sh` | `<命令>` | 运行命令，输出放进一个缓冲区 |
 | `:!command` |  | 在终端里直接运行命令并查看输出(vi 写法) |
 | `:which-wrap` | `<字母>` | 哪些键可以跨越行尾(vim 键位)。只能是 b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | 行号：absolute 绝对、relative 相对光标、none 不显示；不带参数显示当前模式 |
@@ -198,7 +195,7 @@
 | `:run-in-terminal` | `<命令>` | 把终端交给一个程序，它结束后回到编辑器 |
 | `:markdown-footnote` |  | 脚注：自动编号并创建注释 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
-| `:settings` | `<设置项>` | 设置页：每项附有说明，改了就写入并生效，u 撤销 |
+| `:settings` `:set` `:se` | `<设置项>` | 设置页：每项附有说明，改了就写入并生效，u 撤销；也认 vim 的 ft=、ts=、sw=、et、tw= 写法 |
 | `:resume` |  | 恢复上次会话：打开这个目录上次开着的文件(不关闭现有的) |
 | `:recent-files` |  | 最近打开的文件(本项目) |
 | `:recent-files-global` |  | 最近打开的文件(所有项目) |
