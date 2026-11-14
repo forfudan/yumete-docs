@@ -200,6 +200,20 @@
 | `:markdown-footnote` |  | footnote: next free number, with its note created |
 | `:markdown-footnote-inline` |  | an inline note ^[…], kept in place |
 | `:settings` `:set` `:se` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it; vim's ft=python ts=2 set this file only |
+| `:genda` |  | typing trainer: type the selection (or the whole file) in segments, timed, with speed, keys a second, code length and key accuracy |
+| `:genda-next` |  | typing trainer: the next segment |
+| `:genda-previous` |  | typing trainer: the previous segment |
+| `:genda-retry` |  | typing trainer: type this segment again |
+| `:genda-shuffle` |  | typing trainer: shuffle the article's characters; again puts them back |
+| `:genda-copy` |  | typing trainer: copy the latest score line (or the one picked in the history) |
+| `:genda-copy-history` |  | typing trainer: copy the whole history as a table (TSV, with a header row) |
+| `:genda-history` |  | typing trainer: the history of scores; again goes back to typing |
+| `:genda-length` | `10｜15｜25｜50｜100｜200｜500｜all｜<字數>` | typing trainer: characters a segment; all is the whole article |
+| `:genda-top` `:gt` | `<字數>` | typing trainer: the N most frequent Chinese characters in this file (500 by default) |
+| `:genda-top-buffers` `:gtb` | `<字數>` | typing trainer: the N most frequent Chinese characters in every open buffer |
+| `:genda-top-working` `:gtw` | `<字數>` | typing trainer: the N most frequent Chinese characters in the text files under the working directory |
+| `:genda-top-project` `:gtp` | `<字數>` | typing trainer: the N most frequent Chinese characters in the project |
+| `:genda-article` | `buffer｜chars-1-500｜chars-501-1000｜chars-1001-1500` | typing trainer: another article, the current file or Yume's most frequent characters |
 | `:resume` |  | resume this directory's last session (adds files, closes none) |
 | `:recent-files` |  | recent files in this project |
 | `:recent-files-global` |  | recent files in all projects |

@@ -200,6 +200,20 @@
 | `:markdown-footnote` |  | 腳註：自動編號並創建註釋 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
 | `:settings` `:set` `:se` | `<設置項>` | 設置頁：每項附有説明，改了就寫入並生效，u 撤銷；跟 vim 的 ft=python ts=2 則只設當前文件 |
+| `:genda` |  | 跟打：把選區（没有選區則整個文件）分段來打，記速度、擊鍵、碼長、鍵準 |
+| `:genda-next` |  | 跟打：下一段 |
+| `:genda-previous` |  | 跟打：上一段 |
+| `:genda-retry` |  | 跟打：重打這一段 |
+| `:genda-shuffle` |  | 跟打：打亂文章的字序，再按一次恢復 |
+| `:genda-copy` |  | 跟打：把最近一段（或歷史裏選中的那條）成績複製到剪貼板 |
+| `:genda-copy-history` |  | 跟打：把全部歷史成績複製成表格（TSV，帶表頭） |
+| `:genda-history` |  | 跟打：查看歷史成績，再按一次回到跟打 |
+| `:genda-length` | `10｜15｜25｜50｜100｜200｜500｜all｜<字數>` | 跟打：每段多少字，all 爲全文 |
+| `:genda-top` `:gt` | `<字數>` | 跟打：當前文件裏最常用的 N 個漢字（默認 500） |
+| `:genda-top-buffers` `:gtb` | `<字數>` | 跟打：所有打開的文件裏最常用的 N 個漢字 |
+| `:genda-top-working` `:gtw` | `<字數>` | 跟打：工作目録下文本文件裏最常用的 N 個漢字 |
+| `:genda-top-project` `:gtp` | `<字數>` | 跟打：項目裏最常用的 N 個漢字 |
+| `:genda-article` | `buffer｜chars-1-500｜chars-501-1000｜chars-1001-1500` | 跟打：換文章，當前文件或宇浩字頻裏的常用單字 |
 | `:resume` |  | 恢復上次會話：打開這個目録上次開着的文件(不關閉現有的) |
 | `:recent-files` |  | 最近打開的文件(本項目) |
 | `:recent-files-global` |  | 最近打開的文件(所有項目) |

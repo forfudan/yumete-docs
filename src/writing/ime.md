@@ -826,6 +826,43 @@ which method is in force. The full list of commands is in
 they need a table to be loaded. If none is, yumete says so. The panel commands
 do not need a table.
 
+## Typing practice (`:genda`)
+
+`:genda` opens a typing trainer (跟打器) on the selection, or on the whole file
+when nothing longer than one character is selected. The article stands in the
+panel at the top right, cut into segments of 25 characters
+(`:genda-length 10`, `15`, `25`, `50`, `100`, `200`, `500` or `all`); you type
+it in the pad below, with the built-in input method or the system's.
+
+```
+:genda                     the selection, or the whole file
+:genda-top 100             the 100 most frequent Chinese characters of this file
+:genda-top-buffers         … of all open files (500 when no number is given)
+:genda-top-working         … of the text files under the working directory
+:genda-top-project         … of the project
+:genda-article chars-1-500 Yume's 500 most common characters (also 501–1000, 1001–1500)
+```
+
+A segment ends when it is as long as the article's segment and its last
+character is right; wrong characters are counted, and each costs five
+characters of speed (错一罚五), so the speed reads `penalised/plain`. The score
+line goes to the command row and to the history: speed, 击键 (keys a second),
+码长 (keys a character), 字数, 错字, 用时, 回改, 键准, 打词 and 重打. The key counts
+need the built-in input method, which sees every key; under a system input
+method the terminal sees only what it commits, so those fields stay empty.
+
+| Key | What it does |
+| --- | --- |
+| `F3` | type the segment again |
+| `C-p`, `C-u` | the next or the previous segment |
+| `C-l` | shuffle |
+| `Tab` | the history; there `y` copies a score line and `Y` the whole history as TSV |
+| `Esc` | pause; `Enter` goes on, `Esc` again or `:q` closes |
+
+`:genda-next`, `:genda-previous`, `:genda-retry`, `:genda-shuffle`,
+`:genda-copy` and `:genda-copy-history` do the same from the `:` line. The
+history is kept in `genda.jsonl` in the editor's data folder.
+
 ## Troubleshooting
 
 ### Ask first: `:yume-which`
