@@ -13,6 +13,7 @@
 | `:write` `:w` | `<path>` | save; with a path, save a copy (`:write-as` switches to it) |
 | `:write-all` `:wa` |  | save every file that changed |
 | `:write-as` | `<path>` | save under a new name and switch to it (`:w <path>` only writes a copy) |
+| `:write-buffer-close` `:wbc` | `<path>` | save this file, then close it |
 | `:recover` |  | ask whether to restore unsaved changes |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | the encoding the file is saved in: utf-8, gb18030, big5 or shift-jis |
 | `:reload` |  | reload the file; ! discards your changes |
@@ -136,6 +137,7 @@
 | `:indent-width` | `<幾格，1–16>` | indent width: the spaces Tab types, and how far > and < shift |
 | `:hard-wrap` | `<幾欄>` | hard-wrap to a width without changing content: the selection or the unit at the cursor; 0 joins each into one line; no number uses the hard_wrap setting |
 | `:align` | `<符號>` | align the selected lines on a character (= by default) |
+| `:sort` | `-r｜-i` | sort the selections' texts when there are several, else the selected lines, or every line; by code point, -r reversed, -i ignoring case |
 | `:split-join` |  | put the items in the brackets around the cursor one per line, or join them back |
 | `:reflow` | `<幾欄>` | reflow the selection to a width (80 columns by default) |
 | `:auto-pairs` | `off｜basic｜full` | auto-close brackets: off, basic, full; no argument shows the current one |
@@ -190,6 +192,8 @@
 | `:buffer-next` `:bn` |  | next |
 | `:buffer-previous` `:bp` |  | previous |
 | `:buffer-close` `:bc` |  | close this file (`buffer-close!` discards changes) |
+| `:buffer-close-others` `:bco` |  | close every other file, keeping those with unsaved changes (`buffer-close-others!` discards them) |
+| `:buffer-close-all` `:bca` |  | close every file, keeping those with unsaved changes (`buffer-close-all!` discards them) |
 | `:format` `:fmt` |  | format this file as configured ([language.markdown] format = …) |
 | `:run` | `<名字>` | run the command configured for this language |
 | `:run-in-terminal` | `<命令>` | give a program the terminal, and come back when it ends |
