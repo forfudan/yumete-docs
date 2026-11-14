@@ -13,6 +13,7 @@
 | `:write` `:w` | `<路径>` | 保存；带路径则另存副本，`:write-as` 会切换到新文件 |
 | `:write-all` `:wa` |  | 保存所有改动过的文件 |
 | `:write-as` | `<路径>` | 另存为新文件并切换过去(`:w <文件名>` 只保存副本，仍留在原文件) |
+| `:write-buffer-close` `:wbc` | `<路径>` | 保存这个文件，然后关闭它 |
 | `:recover` |  | 询问是否恢复未保存的内容 |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件保存时用的编码：utf-8、gb18030、big5、shift-jis |
 | `:reload` |  | 重新载入文件；加 ! 放弃本地改动 |
@@ -136,6 +137,7 @@
 | `:indent-width` | `<幾格，1–16>` | 缩进宽度：Tab 输入的空格数，> 和 < 移动的格数 |
 | `:hard-wrap` | `<幾欄>` | 按宽度重新硬换行(选区或光标所在段)，不改内容；0 把每段合成一行；不带数字按 hard_wrap 设置 |
 | `:align` | `<符號>` | 按某个符号对齐选中的行，默认为 = |
+| `:sort` | `-r｜-i` | 排序：多个选区时排各选区的内容，否则排选中的行，无选区时排整个文件；按码位，-r 倒序，-i 不分大小写 |
 | `:split-join` |  | 把光标所在括号里的各项拆成每行一项，或合并回一行 |
 | `:reflow` | `<幾欄>` | 按宽度重排选区(默认 80 列) |
 | `:auto-pairs` | `off｜basic｜full` | 自动补上右括号：关/基本/完整；不带参数显示当前档位 |
@@ -190,6 +192,8 @@
 | `:buffer-next` `:bn` |  | 下一个 |
 | `:buffer-previous` `:bp` |  | 上一个 |
 | `:buffer-close` `:bc` |  | 关闭这个文件(`buffer-close!` 放弃改动) |
+| `:buffer-close-others` `:bco` |  | 关闭其他文件，有未保存改动的留下(`buffer-close-others!` 放弃改动) |
+| `:buffer-close-all` `:bca` |  | 关闭所有文件，有未保存改动的留下(`buffer-close-all!` 放弃改动) |
 | `:format` `:fmt` |  | 按配置格式化此文件([language.markdown] format = …) |
 | `:run` | `<名字>` | 运行配置中为该语言定义的命令 |
 | `:run-in-terminal` | `<命令>` | 把终端交给一个程序，它结束后回到编辑器 |
