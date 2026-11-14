@@ -48,7 +48,7 @@ end, and so does [Bindable commands](actions.md):
 
 These are yumete's, whichever keymap you use:
 
-- **New windows** open below or to the right: `:split`, `:vsplit`, `:hnew`, `:vnew`,
+- **New windows** open below or to the right: `:split`, `:vsplit`, `:hsplit-new`, `:vsplit-new`,
   `C-w s`, `C-w v`, `C-w n`, `C-w f`, `C-w ^` and the `Space w` keys. If you want one
   on the left or above, bind `vsplit_left` or `hsplit_above`, or use the flavour's
   `Space w n h` and `Space w n k`.

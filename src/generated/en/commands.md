@@ -6,11 +6,10 @@
 | `:pwd` |  | show the working directory |
 | `:vsplit` `:vs` | `<path>` | split a window beside (as C-w v), optionally opening a file |
 | `:hsplit` `:hs` `:split` | `<path>` | split a window below (as C-w s), optionally opening a file |
-| `:vnew` |  | open a blank window beside (as C-w n v) |
-| `:hnew` |  | open a blank window below (as C-w n s) |
+| `:vsplit-new` `:vnew` `:vne` |  | open a blank window beside (as C-w n v) |
+| `:hsplit-new` `:hnew` |  | open a blank window below (as C-w n s) |
 | `:open` `:o` `:e` `:edit` | `<path>` | open a file |
 | `:new` `:enew` `:ene` |  | new empty buffer |
-| `:tabnew` `:tabe` `:tabedit` | `<path>` | vim's :tabnew: a new scratch buffer, or the named file |
 | `:write` `:w` | `<path>` | save; with a path, save a copy (`:write-as` switches to it) |
 | `:write-all` `:wa` |  | save every file that changed |
 | `:write-as` | `<path>` | save under a new name and switch to it (`:w <path>` only writes a copy) |
@@ -44,7 +43,7 @@
 | `:write-quit` `:wq` | `<path>` | always save, then quit (short: :wq; :x saves only if changed) |
 | `:write-quit-all` `:wqa` `:xa` |  | save every file that changed, then quit |
 | `:exit` `:x` `:xit` | `<path>` | save if changed, then quit (short: :x, also :xit) |
-| `:update` `:up` |  | save if changed, and stay (short: :up) |
+| `:write-if-changed` `:update` `:up` |  | save if changed, and stay (short: :up) |
 | `:undo` `:u` |  | undo the last change |
 | `:earlier` `:ear` | `<步數>｜<時間>` | undo a number of steps, or back in time (5m, 1h) |
 | `:later` `:lat` | `<步數>｜<時間>` | redo a number of steps, or forward in time |
@@ -99,12 +98,10 @@
 | `:yume-installed` |  | use the installed table (the opposite of builtin) |
 | `:yume-builtin` |  | use this scheme's built-in table, ignoring installed ones |
 | `:yume-table` | `<path>` | use your own table (a Rime .dict.yaml will do) |
-| `:set` `:se` | `<選項>` | vim's :set for modeline options: ft, ts, sw, et, tw; no argument opens the settings panel |
-| `:setlocal` `:setl` | `<選項>` | vim's :setlocal: the same options as :set, for this buffer; no argument shows their values |
-| `:setfiletype` `:setf` | `<文件類型>` | vim's :setf, as :set ft= |
-| `:syntax` `:syn` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | the markup this file uses (no argument shows the current one) |
+| `:settings-buffer` `:setlocal` `:setl` | `<選項>` | set ft, ts, sw, et and tw for this buffer only; no argument shows their values |
+| `:syntax` `:syn` `:setf` `:setfiletype` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | the markup this file uses (no argument shows the current one) |
 | `:pipe` | `<命令>` | pipe the selection through a shell command and replace it with the output |
-| `:sh` | `<命令>` | run a command and show its output in a buffer |
+| `:run-shell-in-buffer` `:sh` | `<命令>` | run a command and show its output in a buffer |
 | `:!command` |  | hand the terminal to a command and watch it run (vi's spelling) |
 | `:which-wrap` | `<字母>` | which keys cross a line end (vim keymap): b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | line numbers: absolute, relative to the cursor, or none; no argument shows the current one |
@@ -198,7 +195,7 @@
 | `:run-in-terminal` | `<命令>` | give a program the terminal, and come back when it ends |
 | `:markdown-footnote` |  | footnote: next free number, with its note created |
 | `:markdown-footnote-inline` |  | an inline note ^[…], kept in place |
-| `:settings` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it |
+| `:settings` `:set` `:se` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it; also takes vim's ft=, ts=, sw=, et, tw= |
 | `:resume` |  | resume this directory's last session (adds files, closes none) |
 | `:recent-files` |  | recent files in this project |
 | `:recent-files-global` |  | recent files in all projects |

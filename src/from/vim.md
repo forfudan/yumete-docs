@@ -268,18 +268,19 @@ also takes Visual `Q` away.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
   side by side with `C-w v` or `:vsplit`; new windows open below and to the
   right, as with vim's `splitbelow` and `splitright`, under either keymap. `C-w n` opens a blank window below at once; `:new` is helix's: a new empty buffer in this window,
-  and the split versions are `:hnew` and `:vnew`. `:q` closes the window you
+  and the split versions are `:hsplit-new` and `:vsplit-new` (`:hnew`, `:vnew`). `:q` closes the window you
   are in, and quits in the last one, as vim's `:q` does.
-- `:set` takes what a modeline takes, for this file: `ft`, `ts`, `sw`, `et`
-  and `tw`, as in `:set ft=python ts=2 sw=2 et`; `:setf python` is `:set
-  ft=python`. `:set ts?`, or `:set ts` alone for an option with a value,
+- `:set` is `:settings`, which takes what a modeline takes, for this file: `ft`, `ts`, `sw`, `et`
+  and `tw`, as in `:set ft=python ts=2 sw=2 et`; `:setf python` is `:syntax
+  python`. `:set ts?`, or `:set ts` alone for an option with a value,
   says its value, as in vim. `tw` is the width `gq`, `gw` and `:hard-wrap`
   fill to; lines are not broken while you type. Other options are their own
   commands or config keys, and `:set` on its own opens the settings panel. See [Settings](../reference/settings.md).
-  `:setl` (`:setlocal`) is the same, since these options are the file's
+  `:setl` (`:setlocal`) is `:settings-buffer`, the same, since these options are the file's
   anyway; on its own it says their values.
-- `:tabnew` opens a new empty buffer, or the file it names, since a tab here
-  is a file; `:ene` is `:new`. vim's `tabn` and `tabp` are not there; typed,
+- There are no tab pages, so no `:tabnew`: `:ene` is `:new`, a buffer with
+  no name in this window, and a file by its name, whether it is on disk yet
+  or not, is `:e` (`:open`), or `:hsplit`/`:vsplit` in a new window. vim's `tabn` and `tabp` are not there; typed,
   they point to `:buffer-next` and `:buffer-previous`.
 - There is no `:g` and no `:normal`.
 - A range is written with `-`, and `,` lists single lines: `:3-6s` is lines 3

@@ -48,12 +48,12 @@ Explorer and the Buffers panel change the file in the window you are in and
 no other, so two windows can show two files, or two places in one.
 
 ```
-C-w v             a window beside this one
-C-w s             a window below this one
-:vsplit ch2.md    a window beside, with that file in it
-:hsplit notes.md  a window below, with that file in it
-C-w n s, :hnew    a blank window below, on a new empty buffer
-C-w n v, :vnew    a blank window beside, on a new empty buffer
+C-w v                  a window beside this one
+C-w s                  a window below this one
+:vsplit ch2.md         a window beside, with that file in it
+:hsplit notes.md       a window below, with that file in it
+C-w n s, :hsplit-new   a blank window below, on a new empty buffer
+C-w n v, :vsplit-new   a blank window beside, on a new empty buffer
 ```
 
 A new window opens below or to the right of this one under either keymap

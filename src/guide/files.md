@@ -12,7 +12,7 @@ work, and the tools that show what you have changed.
 | `:w <path>` | write a copy to `<path>`; you keep editing this file |
 | `:write-as <path>` | save under a new name and edit that one |
 | `:write-all` (`:wa`) | save every file that changed |
-| `:update` (`:up`) | save only if changed |
+| `:write-if-changed` (`:update`, `:up`) | save only if changed |
 | `:write-quit` (`:wq`) | save, then quit |
 | `:exit` (`:x`, `:xit`) | save only if changed, then quit |
 | `:write-quit-all` (`:wqa`, `:xa`) | save every file that changed, then quit |

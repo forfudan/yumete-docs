@@ -44,7 +44,7 @@ key.
 
 | Command | What happens |
 | --- | --- |
-| `:sh <command>` | runs it and opens the output in a buffer you can search and copy from |
+| `:run-shell-in-buffer <command>` (`:sh`) | runs it and opens the output in a buffer you can search and copy from |
 | `:!<command>` | hands the terminal to the command so you can watch it run, then asks for a key to come back |
 | `:pipe <command>` | sends the selection through the command and replaces it with the output |
 | `:pipe-before` / `:pipe-after` | puts the command's output before or after the selection (helix's `:insert-output` and `:append-output` are the same commands) |
