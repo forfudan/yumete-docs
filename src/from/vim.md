@@ -173,7 +173,7 @@ the last insert, as helix's does.
 | `*` `#` | the word under the cursor, forward or back |
 | `n` `N`, `gn` `gN` | the next or previous match |
 | `m` *a*, `'` *a* | set mark *a*, go back to its line, across files; `` ` `` *a* does the same |
-| `` `[ `` `` `] ``, `'[` `']` | where the last change or yank began and ended |
+| `` `[ `` `` `] ``, `'[` `']` | where the last change or yank began and ended; `>` and `<` set them as vim does |
 | *N*`\|` | go to column *N*; a Chinese character is two columns wide |
 | `H` `M` `L` | top, middle, bottom of the screen |
 | `(` `)` | previous, next sentence |
@@ -284,7 +284,11 @@ also takes Visual `Q` away.
   yumete's own indent levels (what `>>` adds) and do not re-indent with `=`. In
   a block, a line too short to reach the block is left alone.
 - `gh` and `gl` do nothing; use `0` and `$`.
-- `:r` is `:replace`, not `:read`; to put a file's text in, use `:read <file>`.
+- `:r` is `:replace`, not `:read`; to put a file's text in, use `:read <file>`,
+  or `:read !cmd` for a command's output. `:0read` and `:$read` put it above the
+  first line and after the last.
+- `:sort` takes vim's `!`, `i`, `n` and `u`, and a range in front (`:%sort`,
+  `:2-5sort`); `r /pat/` is not taken.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
   side by side with `C-w v` or `:vsplit`; new windows open below and to the
   right, as with vim's `splitbelow` and `splitright`, under either keymap. `C-w n` opens a blank window below at once; `:new` is helix's: a new empty buffer in this window,

@@ -16,7 +16,7 @@
 | `:write-buffer-close` `:wbc` | `<路徑>` | 保存這個文件，然後關閉它 |
 | `:recover` |  | 詢問是否恢復未保存的内容 |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件保存時用的編碼：utf-8、gb18030、big5、shift-jis |
-| `:reload` |  | 重新載入文件；加 ! 放棄本地改動 |
+| `:reload` `:rl` |  | 重新載入文件；加 ! 放棄本地改動 |
 | `:reload-all` `:rla` |  | 重新載入所有打開的文件；有未保存改動的不動，加 ! 一併放棄 |
 | `:reload-config` `:config-reload` |  | 重新載入 config.toml，無需重啓 |
 | `:config-open` |  | 打開全局 config.toml |
@@ -195,8 +195,8 @@
 | `:clipboard-yank` |  | 複製選區到系統剪貼板 |
 | `:clipboard-paste` |  | 從系統剪貼板粘貼 |
 | `:buffer` |  | 打開的文件：列出、切換、關閉 |
-| `:buffer-next` `:bn` |  | 下一個 |
-| `:buffer-previous` `:bp` |  | 上一個 |
+| `:buffer-next` `:bn` `:bnext` |  | 下一個 |
+| `:buffer-previous` `:bp` `:bprev` |  | 上一個 |
 | `:buffer-close` `:bc` `:bclose` `:bd` `:bdelete` `:bw` `:bwipeout` |  | 關閉這個文件(`buffer-close!` 放棄改動) |
 | `:buffer-close-others` `:bco` `:bcloseother` |  | 關閉其他文件，有未保存改動的留下(`buffer-close-others!` 放棄改動) |
 | `:buffer-close-all` `:bca` `:bcloseall` |  | 關閉所有文件，有未保存改動的留下(`buffer-close-all!` 放棄改動) |

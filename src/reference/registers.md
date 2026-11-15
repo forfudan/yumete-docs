@@ -49,12 +49,17 @@ vim:
 - `#` reads as the selection's number, so `"#P` with three cursors writes `1`, `2`
   and `3`.
 - `%` is the file's name, `:` the last command line and `/` the last search,
-  under both keymaps; they can be pasted but not written.
+  under both keymaps; they can be pasted but not written. A delete or yank into
+  one of these (or into `".` under vim) is refused whole, and the status line
+  says so. Under the helix keymap `.` is the selections' text, so `".p` puts a
+  copy after each selection, and `.`, `%` and `#` refuse writes, as in helix.
 
 Under the vim keymap, `"0` holds the last yank, as in vim: a delete fills the unnamed
 register, and `"0p` still pastes what you yanked. A delete of a line or more also
 goes into `"1`, and the older ones move down to `"2` … `"9`. A delete within one
-line goes into `"-`, and `".` holds the text the last Insert typed. `.` after
+line goes into `"-`, except that one made with `%` `(` `)` `` ` `` `{` `}` also
+goes into `"1`, as in vim; a delete of lines into a named register goes into
+`"1` too; and `".` holds the text the last Insert typed. `.` after
 `"1p` pastes from `"2`, then `"3`, so `"1p..` walks back through the deletes.
 
 Also as in vim, a capital letter adds to its register: `"Ayy` puts the line

@@ -16,7 +16,7 @@
 | `:write-buffer-close` `:wbc` | `<path>` | save this file, then close it |
 | `:recover` |  | ask whether to restore unsaved changes |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | the encoding the file is saved in: utf-8, gb18030, big5 or shift-jis |
-| `:reload` |  | reload the file; ! discards your changes |
+| `:reload` `:rl` |  | reload the file; ! discards your changes |
 | `:reload-all` `:rla` |  | reload every open file; files with unsaved changes are left alone, ! discards them too |
 | `:reload-config` `:config-reload` |  | reload config.toml without restarting |
 | `:config-open` |  | open the global config.toml |
@@ -195,8 +195,8 @@
 | `:clipboard-yank` |  | copy the selection to the system clipboard |
 | `:clipboard-paste` |  | paste from the system clipboard |
 | `:buffer` |  | open files: list, switch, close |
-| `:buffer-next` `:bn` |  | next |
-| `:buffer-previous` `:bp` |  | previous |
+| `:buffer-next` `:bn` `:bnext` |  | next |
+| `:buffer-previous` `:bp` `:bprev` |  | previous |
 | `:buffer-close` `:bc` `:bclose` `:bd` `:bdelete` `:bw` `:bwipeout` |  | close this file (`buffer-close!` discards changes) |
 | `:buffer-close-others` `:bco` `:bcloseother` |  | close every other file, keeping those with unsaved changes (`buffer-close-others!` discards them) |
 | `:buffer-close-all` `:bca` `:bcloseall` |  | close every file, keeping those with unsaved changes (`buffer-close-all!` discards them) |
