@@ -150,6 +150,6 @@
 | `[keys] flavor` | `"basic"` | **Yumete keymap flavour** — what yumete changes over helix or vim. basic: the changes you can see, such as menus and new keys; full: also the items that change what a familiar key does, such as `d` and `c` deleting without cutting (`A-d` and `A-c` cut). `[keys.normal]` overrides it (`off` off, `basic` basic, `full` full) |
 | `[keys] flavor_items` | `{}` | **flavour items** — each item of the Yumete flavour, one tick each. Enter or Space opens it |
 | `[keys] inherit` | `true` | **sidebars and prompts use my keys** — a one-key command bound in `[keys.normal]` also works in a sidebar that has it, and one in `[keys.insert]` in the command line and pickers. `[keys.sidebar]` and `[keys.prompt]` override it |
-| `[editor] language_key` | `"C-^"` | **language key** — the key that switches Chinese/ABC on a terminal that cannot report a lone Shift |
+| `[editor] language_key` | `"C-\\"` | **language key** — the key that switches Chinese/ABC on a terminal that cannot report a lone Shift |
 | `[editor] which_wrap` | `"b"` | **keys that cross lines** — which keys cross a line end (vim keymap): b h l < > ~ |
 

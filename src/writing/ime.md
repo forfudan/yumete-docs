@@ -153,17 +153,20 @@ the Kitty keyboard protocol. Ghostty, kitty, WezTerm, foot, Alacritty and
 Konsole all do. Apple's Terminal does not.
 
 When the terminal cannot report a lone Shift, yumete says so on the status line
-at start-up. In that case use the stand-in key, `C-^` (Control and `^`). It does
-exactly what a Shift tap does. Set it in the config:
+at start-up. In that case use the stand-in key, `C-\` (Control and backslash),
+the key Emacs switches its input method with. It does exactly what a Shift tap
+does. Set it in the config:
 
 ```toml
 [editor]
-language_key = "C-^"   # or "C-<char>", "A-<char>", "F1"…"F12", or "off"
+language_key = "C-\\"   # or "C-<char>", "A-<char>", "F1"…"F12", or "off"
 ```
 
-`C-^` is the default, and it works in every terminal, not only the ones without
-the protocol. Older terminals send the same byte for `C-^` and `C-6`, so on
-those the two names are one key.
+`C-\` is the default, and it works in every terminal, not only the ones without
+the protocol. Older terminals send the same byte for `C-\` and `C-4`, so on
+those the two names are one key. Under the vim keys `C-^` also switches while
+you type, as vim's Insert-mode `C-^` does; in Normal mode it is vim's previous
+file.
 
 ## Choosing a scheme
 
@@ -814,7 +817,7 @@ input method group, and all of them in the config file; `[ime] lanes` and
 | `[panel] page_size` | `6` | Candidates on a page, 1 to 9. |
 | `[panel] markers` | `"１２３４５６７８９"` | The numbers in front of candidates; each must be full width. |
 | `[panel] rounded` | `true` | Rounded corners on the box. |
-| `[editor] language_key` | `"C-^"` | Stand-in for a Shift tap, or `"off"`. |
+| `[editor] language_key` | `"C-\\"` | Stand-in for a Shift tap, or `"off"`. |
 
 The panel takes its colours from the theme. `[panel] ink` and `[panel] paper`
 are still accepted in old config files, but they have no effect.
@@ -966,7 +969,7 @@ Look at the status line.
 
 - **No sign at all.** The input method is off, or no table is loaded. Run
   `:yume` or press `Space z z`.
-- **`[ABC]`.** You are in English. Tap Shift, or press `C-^`.
+- **`[ABC]`.** You are in English. Tap Shift, or press `C-\`.
 - **`[中 …]` but no candidates.** Check where the panel is (`:yume-panel`). With
   `bottom`, the candidates are on the last line of the window. With
   `preview`, the code is not shown anywhere, only the candidate.
@@ -974,7 +977,7 @@ Look at the status line.
 ### Shift does nothing
 
 Your terminal probably does not speak the Kitty keyboard protocol. yumete said
-so on the status line when it started. Use `C-^`, or switch to a terminal such
+so on the status line when it started. Use `C-\`, or switch to a terminal such
 as Ghostty, kitty or WezTerm.
 
 A Shift tap also does nothing while the input method is off. Turn it on first.

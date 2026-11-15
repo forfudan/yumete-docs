@@ -150,6 +150,6 @@
 | `[keys] flavor` | `"basic"` | **Yumete 键位风味** — 在 helix/vim 键位之上的改动。基本：看得见的改动，如菜单、新键；完整：再加上改变熟悉键行为的几项，如 `d` `c` 只删不剪，剪切用 `A-d` `A-c`。`[keys.normal]` 优先于它 (`off` 关闭, `basic` 基本, `full` 完整) |
 | `[keys] flavor_items` | `{}` | **风味各项** — 逐项开关 Yumete 风味。按 Enter 或空格进入 |
 | `[keys] inherit` | `true` | **侧栏与命令行沿用我的改键** — [keys.normal] 里单键绑定的命令，侧栏也有时在侧栏生效；[keys.insert] 同理用于命令行与选择器。[keys.sidebar] 与 [keys.prompt] 优先于它 |
-| `[editor] language_key` | `"C-^"` | **中英切换键** — 在无法识别单独 Shift 的终端上，用此键切换中文/ABC |
+| `[editor] language_key` | `"C-\\"` | **中英切换键** — 在无法识别单独 Shift 的终端上，用此键切换中文/ABC |
 | `[editor] which_wrap` | `"b"` | **哪些键跨行** — 哪些键可以跨越行尾(vim 键位)。只能是 b h l < > ~ |
 

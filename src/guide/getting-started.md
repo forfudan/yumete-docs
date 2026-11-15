@@ -94,7 +94,7 @@ and a bar of candidates appears; `Space` takes the first.
 `Space z z` in Normal mode turns it off again.
 
 A tap of Shift needs a terminal that reports Shift on its own. On one that does
-not, `C-^` switches instead; the setting `language_key` changes which key that
+not, `C-\` switches instead; the setting `language_key` changes which key that
 is. The full story is in [The input method](../writing/ime.md).
 
 ## Saving and quitting

@@ -29,7 +29,7 @@ start = true
 
 If it is on and you still get letters, it is in English (`[ABC]`). Tap Shift on
 its own to switch between Chinese and English. Terminals that cannot report a lone
-Shift (Apple's Terminal, for one) use `C-^` instead; `[editor] language_key`
+Shift (Apple's Terminal, for one) use `C-\` instead; `[editor] language_key`
 sets that key. See [The input method](writing/ime.md).
 
 ## yumete crashed. Where is my work?
