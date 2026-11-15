@@ -73,7 +73,7 @@ T = "suspend"
 
 [keys.normal.space.g]
 label = "git"
-g = { run = ":!lazygit", label = "Lazygit (Root Dir)" }
+g = { run = ":git-lazygit", label = "Lazygit (Root Dir)" }
 G = { run = ":!lazygit", label = "Lazygit (cwd)" }
 s = "changed_file_picker"
 d = { run = ":git-diff", label = "Git Diff" }
@@ -206,5 +206,7 @@ each group as `+name`, `Backspace` goes back a level, and `Esc` closes them.
 LazyVim's plugins bring things yumete does not have: git staging, blame and
 hunk resets, a debugger, Trouble's list, a notification history, and the
 plugin and tool managers (`Space l`, `Space c m`). Their keys are left out of
-the config rather than bound to something else. `Space g g` runs `lazygit` in
-the terminal, if you have it.
+the config rather than bound to something else. `Space g g` opens lazygit
+(`:git-lazygit`) in the file's own repository, asking you to save unsaved
+files first; `Space g G` runs it in the working directory. Both need lazygit
+installed.

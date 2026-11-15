@@ -245,7 +245,9 @@ project until a project's own file says otherwise; the place's own table
 still wins, so `[keys.preview] J = "next_page"` gives a preview its `J` back.
 The defaults never come over: Normal mode's `J` joins lines, but a sidebar's
 `J` still pages and a preview's `J` turns a page. A line of more than one key
-(`gh`) stays in the text, so a preview's `gg` still goes to the top. `no_op` in `[keys.normal]` unbinds the
+(`gh`) stays in the text, so a preview's `gg` still goes to the top, except one
+that starts with Space (`"<space>j"`), which works in a preview window too: its
+second key is the line's, not the page's. `no_op` in `[keys.normal]` unbinds the
 key in the text only. To turn this off:
 
 ```toml
