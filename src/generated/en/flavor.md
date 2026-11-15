@@ -182,6 +182,7 @@ On: Space z opens the input method menu. Off: the key that switches between Chin
 | input method | `Space z n` | next scheme |  |
 | input method | `Space z 3-9` | candidates per page |  |
 | input method | `Space z 0` | charset filter |  |
+| input method | `Space z d` | single characters |  |
 | input method | `Space z s` | charset sort |  |
 | input method | `Space z g` | sentence lanes |  |
 | input method | `Space z b` | use built-in scheme |  |

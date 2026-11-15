@@ -436,6 +436,10 @@
 | `yume_builtin_pinyin` | 宇浩拼音 | `Space z b p` | `Space z b p` |  |
 | `yume_builtin_lingming` | 灵明 | `Space z b l` | `Space z b l` |  |
 | `yume_builtin_xingchen` | 星陈 | `Space z b x` | `Space z b x` |  |
+| `yume_single_char_mode` | 单字派 | `Space z d` | `Space z d` |  |
+| `yume_single_char_both` | 字词同出 | `Space z d b` | `Space z d b` |  |
+| `yume_single_char_primary` | 主单副词 | `Space z d p` | `Space z d p` |  |
+| `yume_single_char_strict` | 严格单字 | `Space z d s` | `Space z d s` |  |
 | `table_source_view` | 源码视图 | `Space t o` | `Space t o` |  |
 | `table_basic_view` | 基本视图(按列对齐) | `Space t b` | `Space t b` |  |
 | `table_window_view` | 全窗视图(表格独占窗口) | `Space t t` | `Space t t` |  |

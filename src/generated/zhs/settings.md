@@ -91,6 +91,8 @@
 | `[ime] commit` | `"default"` | **上屏方式** — 编码打完后何时上屏：等下一键、只剩一个候选时，或整句 (`default` 方案默认, `delayed` 延迟(顶字), `unique` 唯一, `fluency` 整句) |
 | `[ime] charset` | `"all"` | **字集过滤** — 候选中只保留哪个字集的汉字 (`all` 全部汉字, `common` 仅常用汉字, `tonggui` 仅简化汉字, `harmonic` 仅传统汉字) |
 | `[ime] charset_sort` | `"common"` | **字集排序** — 哪个字集的字在候选中靠前，对整句方案无效 (`original` 原始顺序, `common` 常用字优先, `tonggui` 简化字优先, `harmonic` 传统字优先) |
+| `[ime] single_char` | `"both"` | **单字派（逐字）** — 延迟上屏与唯一上屏时，候选中出不出词 (`both` 字词同出, `primary` 主单副词, `strict` 严格单字) |
+| `[ime] sentence_single_char` | `"strict"` | **单字派（整句）** — 整句上屏时，候选中出不出词 (`both` 字词同出, `primary` 主单副词, `strict` 严格单字) |
 | `[ime] start` | `false` | **启动时加载码表** — 默认关闭：分词模型照常加载，码表在第一次输入中文时加载 |
 | `[ime] system` | `"auto"` | **Normal 模式下让开系统宇梦输入法** — Normal 模式下请系统宇梦输入法让开，以免按键被它拦截 (`auto` 自动, `keep` 不处理) |
 | `[ime] others` | `"off"` | **Normal 模式下让开其他输入法** — Normal 模式下把鼠须管、搜狗等切到英文；macOS 上切回时约三次失败一次 (`off` 不动, `aside` 切到英文, `aside-and-back` 切到英文再切回) |

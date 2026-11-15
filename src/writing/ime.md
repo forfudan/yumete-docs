@@ -625,6 +625,7 @@ keys, so you do not have to remember them.
 | `Space z s` then `o` `c` `s` `t` | character sort: original, common, simplified, traditional first | `:yume-charset-sort` |
 | `Space z g` then `j` `f` `t` | put the simplified, traditional or Taiwan lane first | `:yume-lanes` |
 | `Space z b` then `p` `l` `x` | switch to the built-in 宇浩拼音, 靈明 or 星陳, whatever is installed | `:yume-builtin` |
+| `Space z d` then `b` `p` `s` | 单字派 for the current commit method: 字词同出, 主单副词, 严格单字 | `:yume-single-char` |
 | `Space z t` | use the installed table | `:yume-installed` |
 | `Space z w` | which scheme and table are in use | `:yume-which` |
 | `Space z W` | where the data is | `:yume-where` |
@@ -640,6 +641,26 @@ pick one instead of pressing again.
 them, so without a loaded 碼表 they are refused the same way the commands are.
 
 `Esc` closes the menu. A key it does not know shows the list again.
+
+## The Yume app's words
+
+If the Yume app is installed, yumete reads the words you taught it (用户词库,
+including the shared 拼音 dictionary), your 固顶 pins and your 调频 order (used
+when the scheme's adaptive ordering is on) — read only; yumete never writes
+the app's files. They are read again when the app saves them. What yumete
+learns while you type (new words, shorter codes, its own 调频 and pins) goes to
+yumete's own folder (`~/.local/share/yumete/yume/<scheme>/`), loaded after the
+app's. `:yume-where` lists which files were read and how many entries each
+holds.
+
+**单字派** works as in the app, with its own setting for each way of
+committing: `[ime] single_char` when committing character by character (延迟,
+唯一; `both` by default) and `[ime] sentence_single_char` in 整句 (`strict` by
+default, as in the app). `primary` (主单副词) still shows the words listed in
+`[ime] word_show` (any of `two`, `three`, `four`, `longer`, `whitelist`);
+your own words always show. `:yume-single-char` alone steps to the next value
+for the current way of committing; `:yume-single-char strict` names one. The
+setting is yumete's own: the app's choice is not read.
 
 ## Using a system input method instead
 

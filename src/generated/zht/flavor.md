@@ -182,6 +182,7 @@ Under vim:
 | 輸入法 | `Space z n` | 下一個方案 |  |
 | 輸入法 | `Space z 3-9` | 每頁候選數 |  |
 | 輸入法 | `Space z 0` | 字集過濾 |  |
+| 輸入法 | `Space z d` | 單字派 |  |
 | 輸入法 | `Space z s` | 字集排序 |  |
 | 輸入法 | `Space z g` | 整句字集軌 |  |
 | 輸入法 | `Space z b` | 切到内置方案 |  |

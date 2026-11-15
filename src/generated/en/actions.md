@@ -436,6 +436,10 @@
 | `yume_builtin_pinyin` | 宇浩拼音 | `Space z b p` | `Space z b p` |  |
 | `yume_builtin_lingming` | 靈明 | `Space z b l` | `Space z b l` |  |
 | `yume_builtin_xingchen` | 星陳 | `Space z b x` | `Space z b x` |  |
+| `yume_single_char_mode` | single characters | `Space z d` | `Space z d` |  |
+| `yume_single_char_both` | words and characters | `Space z d b` | `Space z d b` |  |
+| `yume_single_char_primary` | characters first | `Space z d p` | `Space z d p` |  |
+| `yume_single_char_strict` | characters only | `Space z d s` | `Space z d s` |  |
 | `table_source_view` | source view | `Space t o` | `Space t o` |  |
 | `table_basic_view` | basic view: columns aligned | `Space t b` | `Space t b` |  |
 | `table_window_view` | window view: the table fills the window | `Space t t` | `Space t t` |  |

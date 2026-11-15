@@ -86,10 +86,11 @@
 | `:yume` `:y` | `on｜off` | Yume input method: on or off |
 | `:yume-where` |  | where the table and other data are looked for, in order |
 | `:yume-which` |  | the current scheme and where its table came from |
-| `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | start typing: load a scheme (with no name, the configured one) |
+| `:yume-scheme` `:yume-s` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | start typing: load a scheme (with no name, the configured one) |
 | `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | candidate annotations: off, next, or a named mode |
 | `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | commit method: default (the scheme's own), delayed (頂字), unique, fluency (whole sentence) |
 | `:yume-charset` | `all｜common｜tonggui｜harmonic` | charset filter: all, common, simplified or traditional characters |
+| `:yume-single-char` | `both｜primary｜strict` | single characters: words and characters, characters first, or characters only; alone, the next one |
 | `:yume-charset-sort` | `original｜common｜tonggui｜harmonic` | charset sort: original, or common, simplified or traditional first |
 | `:yume-lanes` | `tonggui｜tongfan｜tai｜common｜harmonic｜guji｜gang｜default` | sentence lanes: put one first, or default for the usual order |
 | `:yume-panel` | `box｜bottom｜inline` | where the candidates go: box by the cursor, bottom on the last line, inline under the cursor |

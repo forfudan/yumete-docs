@@ -86,10 +86,11 @@
 | `:yume` `:y` | `on｜off` | 宇夢輸入引擎開關：on 打開、off 關閉 |
 | `:yume-where` |  | 碼表和數據的查找位置及順序 |
 | `:yume-which` |  | 當前方案及碼表來源 |
-| `:yume-scheme` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始輸入：載入方案(不寫名稱則用配置中的) |
+| `:yume-scheme` `:yume-s` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始輸入：載入方案(不寫名稱則用配置中的) |
 | `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | 候選註解：關、下一個，或指定模式 |
 | `:yume-commit` | `default｜delayed｜unique｜fluency｜auto` | 上屏方式：默認、延遲(頂字)、唯一、整句 |
 | `:yume-charset` | `all｜common｜tonggui｜harmonic` | 字集過濾：全部、常用、簡化、傳統 |
+| `:yume-single-char` | `both｜primary｜strict` | 單字派：字詞同出、主單副詞、嚴格單字，單用就輪換 |
 | `:yume-charset-sort` | `original｜common｜tonggui｜harmonic` | 字集排序：原始、常用、簡化、傳統字優先 |
 | `:yume-lanes` | `tonggui｜tongfan｜tai｜common｜harmonic｜guji｜gang｜default` | 整句字集軌：把一軌提到首軌，default 回到默認 |
 | `:yume-panel` | `box｜bottom｜inline` | 候選位置：box 光標旁的框，bottom 窗口底行，inline 光標下一行 |
