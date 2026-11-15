@@ -865,7 +865,7 @@ it commits, so those fields stay empty.
 | `C-p`, `C-u` | the next or the previous segment |
 | `C-l` | shuffle |
 | `C-o` | switch between the chosen segment length and the whole article as one segment (`:genda-whole`); either way the article starts again |
-| `Tab` | the history; there `y` copies a score line and `Y` the whole history as TSV |
+| `Tab` | the history; there `j`/`k` pick a row, `y` copies its score line, `Y` the whole history as TSV, `d` deletes the picked record from the history and `u` brings back what `d` deleted, latest first, until you leave the history |
 | `Esc` | clear the code being typed; with none, pause. Paused, `Enter` goes on, `y` copies the score line, `q` or `:q` closes; another `Esc` stays paused |
 
 `:genda-next`, `:genda-previous`, `:genda-retry`, `:genda-shuffle`,
