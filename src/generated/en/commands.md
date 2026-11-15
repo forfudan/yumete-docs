@@ -17,6 +17,7 @@
 | `:recover` |  | ask whether to restore unsaved changes |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | the encoding the file is saved in: utf-8, gb18030, big5 or shift-jis |
 | `:reload` |  | reload the file; ! discards your changes |
+| `:reload-all` `:rla` |  | reload every open file; files with unsaved changes are left alone, ! discards them too |
 | `:reload-config` `:config-reload` |  | reload config.toml without restarting |
 | `:config-open` |  | open the global config.toml |
 | `:config-open-workspace` |  | open this project's .yumete/config.toml |
@@ -41,6 +42,7 @@
 | `:quit-window` `:close` `:clo` |  | close this region, but never the last window (vim's `:close`, short: `:clo`) |
 | `:quit-others` `:only` `:on` |  | keep only this window; close other windows and sidebars (vim's `:only`, short: `:on`) |
 | `:quit-all` `:qa` |  | close all files and quit (short: :qa) |
+| `:quit-error` `:cquit` `:cq` | `<0–255>` | quit with an exit status (1 if not given), so the program that opened yumete gives up — git aborts the commit; ! discards changes |
 | `:write-quit` `:wq` | `<path>` | always save, then quit (short: :wq; :x saves only if changed) |
 | `:write-quit-all` `:wqa` `:xa` |  | save every file that changed, then quit |
 | `:exit` `:x` `:xit` | `<path>` | save if changed, then quit (short: :x, also :xit) |

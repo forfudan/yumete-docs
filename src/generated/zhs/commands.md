@@ -17,6 +17,7 @@
 | `:recover` |  | 询问是否恢复未保存的内容 |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件保存时用的编码：utf-8、gb18030、big5、shift-jis |
 | `:reload` |  | 重新载入文件；加 ! 放弃本地改动 |
+| `:reload-all` `:rla` |  | 重新载入所有打开的文件；有未保存改动的不动，加 ! 一并放弃 |
 | `:reload-config` `:config-reload` |  | 重新载入 config.toml，无需重启 |
 | `:config-open` |  | 打开全局 config.toml |
 | `:config-open-workspace` |  | 打开本项目的 .yumete/config.toml |
@@ -41,6 +42,7 @@
 | `:quit-window` `:close` `:clo` |  | 关闭当前区域，但不关闭最后一个窗口(vim 的 `:close`，简写 `:clo`) |
 | `:quit-others` `:only` `:on` |  | 只保留当前窗口，关闭其他窗口和侧栏(vim 的 `:only`，简写 `:on`) |
 | `:quit-all` `:qa` |  | 关闭所有文件并退出(简写 `:qa`) |
+| `:quit-error` `:cquit` `:cq` | `<0–255>` | 退出并返回错误码(默认 1)，让调用的程序放弃，如 git 提交；加 ! 放弃改动 |
 | `:write-quit` `:wq` | `<路径>` | 保存并退出(简写 `:wq`；`:x` 只在有改动时保存) |
 | `:write-quit-all` `:wqa` `:xa` |  | 保存所有改动过的文件并退出 |
 | `:exit` `:x` `:xit` | `<路径>` | 有改动才保存，然后退出(简写 `:x`，也可用 `:xit`) |

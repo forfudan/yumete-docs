@@ -20,6 +20,7 @@ work, and the tools that show what you have changed.
 | `:quit-window` (`:close`) | close this region, but never the last window |
 | `:quit-others` (`:only`) | keep this window; close the other windows and the sidebars |
 | `:quit-all` (`:qa`) | quit |
+| `:quit-error` (`:cquit`, `:cq`) | quit with exit status 1, or the one given (`:cq 2`); git takes it as "abort the commit". Unsaved files stop it; `:cq!` quits anyway |
 | `:buffer-close` (`:bc`) | close this file; the windows stay |
 
 The tabs along the top are the open files and a window shows one of them, as
@@ -154,6 +155,8 @@ the file changed on disk — `:reload!` takes its version, `:w!` keeps yours
 | --- | --- |
 | `:reload` | read the file again; refuses when you have unsaved changes |
 | `:reload!` | read the file again and throw away your changes |
+| `:reload-all` (`:rla`) | read every open file again; files with unsaved changes are left alone and counted |
+| `:reload-all!` | read every open file again and throw away all unsaved changes |
 | `:w!` | write your version over the one on disk |
 
 A file whose time changed but whose bytes did not, as after a `touch` or a
