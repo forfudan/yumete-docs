@@ -648,7 +648,7 @@ them, so without a loaded 碼表 they are refused the same way the commands are.
 If the Yume app is installed, yumete reads the words you taught it (用户词库,
 including the shared 拼音 dictionary), your 固顶 pins and your 调频 order (used
 when the scheme's adaptive ordering is on) — read only; yumete never writes
-the app's files. They are read again when the app saves them. yumete never writes the app's files. What yumete itself learns (new words,
+the app's files. They are read again when the app saves them. What yumete itself learns (new words,
 shorter codes, the choices it counts, pins set in yumete) is kept only when
 `[ime] learn = true` (off by default), in yumete's own folder
 (`~/.local/share/yumete/yume/<scheme>/`), and holds only what yumete learned.
