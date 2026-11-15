@@ -113,7 +113,9 @@ on`, the formula under the cursor is also typeset: a float under the cursor
 shows it as maths and follows it as you type. Markdown's LaTeX is drawn inside
 yumete, with nothing to install; Chinese in `\text{}` needs a CJK font on the
 system. A Typst formula is drawn by the `typst` command, which has to be on
-your `PATH`. Other terminals show the coloured source only. `[editor] maths_preview = false`
+your `PATH`; a formula that imports a package (`#import "@preview/…"`)
+downloads it the first time, as Typst does, and the status line names the
+package while it comes. Other terminals show the coloured source only. `[editor] maths_preview = false`
 turns the float off.
 
 ### Following a link
@@ -427,7 +429,8 @@ preview's name, and the buffer picker says which file it typesets.
 The page is drawn again a moment after you stop typing, without saving. It
 needs a terminal that draws pictures (Ghostty or kitty) and tinymist 0.13.30
 or later. In another terminal, or with an older tinymist, `:preview` opens
-tinymist's preview in the browser instead and says why.
+tinymist's preview in the browser instead and says why. tinymist downloads the
+packages a document imports by itself; yumete does not see those downloads.
 
 The page is shown as it prints, also under a dark theme. `:preview-theme
 on` draws it in the theme's colours instead: the paper in the background colour
