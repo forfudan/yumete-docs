@@ -198,8 +198,8 @@
 | `:buffer-next` `:bn` |  | next |
 | `:buffer-previous` `:bp` |  | previous |
 | `:buffer-close` `:bc` `:bclose` `:bd` `:bdelete` `:bw` `:bwipeout` |  | close this file (`buffer-close!` discards changes) |
-| `:buffer-close-others` `:bco` |  | close every other file, keeping those with unsaved changes (`buffer-close-others!` discards them) |
-| `:buffer-close-all` `:bca` |  | close every file, keeping those with unsaved changes (`buffer-close-all!` discards them) |
+| `:buffer-close-others` `:bco` `:bcloseother` |  | close every other file, keeping those with unsaved changes (`buffer-close-others!` discards them) |
+| `:buffer-close-all` `:bca` `:bcloseall` |  | close every file, keeping those with unsaved changes (`buffer-close-all!` discards them) |
 | `:format` `:fmt` |  | format this file as configured ([language.markdown] format = …) |
 | `:run` | `<name>` | run the command configured for this language |
 | `:run-in-terminal` | `<command>` | give a program the terminal, and come back when it ends |

@@ -115,7 +115,9 @@ letter, in every mode:
 | nothing | off | types itself, and the system input method is free to work |
 
 In Normal mode the sign tells you which one you will land in when you press
-`i`, before you type the wrong thing.
+`i`, before you type the wrong thing. In a narrow window the sign is the last
+thing the status line gives up: the scheme's name goes first (`[中]`), after
+the code point, the count and the position's third number.
 
 ### Two switches
 
@@ -665,8 +667,9 @@ dictionary. `Tab` also shows the app's entries, greyed and read only. `d`
 deletes yumete's copy of the row under the cursor (a whole word in 词库), in
 its file and in the input method at once; an entry the app also has stays, as
 the app's. `u` puts deletions back, latest first, until the page closes. `y`
-copies the row, `Y` the list as TSV, `/` searches, `s` switches to the next
-scheme, `q` closes.
+copies the row, `Y` the list as TSV, `/` searches, typed in whichever of 中
+and ABC you were in; `s` shows the next scheme's entries without changing the
+scheme you type with; `q` closes.
 
 **单字派** works as in the app, with its own setting for each way of
 committing: `[ime] single_char` when committing character by character (延迟,

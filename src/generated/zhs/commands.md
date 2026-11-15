@@ -198,8 +198,8 @@
 | `:buffer-next` `:bn` |  | 下一个 |
 | `:buffer-previous` `:bp` |  | 上一个 |
 | `:buffer-close` `:bc` `:bclose` `:bd` `:bdelete` `:bw` `:bwipeout` |  | 关闭这个文件(`buffer-close!` 放弃改动) |
-| `:buffer-close-others` `:bco` |  | 关闭其他文件，有未保存改动的留下(`buffer-close-others!` 放弃改动) |
-| `:buffer-close-all` `:bca` |  | 关闭所有文件，有未保存改动的留下(`buffer-close-all!` 放弃改动) |
+| `:buffer-close-others` `:bco` `:bcloseother` |  | 关闭其他文件，有未保存改动的留下(`buffer-close-others!` 放弃改动) |
+| `:buffer-close-all` `:bca` `:bcloseall` |  | 关闭所有文件，有未保存改动的留下(`buffer-close-all!` 放弃改动) |
 | `:format` `:fmt` |  | 按配置格式化此文件([language.markdown] format = …) |
 | `:run` | `<名字>` | 运行配置中为该语言定义的命令 |
 | `:run-in-terminal` | `<命令>` | 把终端交给一个程序，它结束后回到编辑器 |
