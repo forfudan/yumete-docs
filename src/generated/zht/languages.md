@@ -1,6 +1,6 @@
 <!-- Written by `ye --docgen`. Do not edit: change the editor and regenerate. -->
 
-| Language | `[lsp.…]` key | Server at the factory |
+| 語言 | `[lsp.…]` 鍵 | 出廠服務器 |
 | --- | --- | --- |
 | ada | `ada` | `ada_language_server` |
 | bash | `bash` | `bash-language-server` |

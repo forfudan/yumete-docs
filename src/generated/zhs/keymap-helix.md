@@ -1,8 +1,8 @@
 <!-- Written by `ye --docgen`. Do not edit: change the editor and regenerate. -->
 
-## Normal mode
+## 普通模式
 
-| Key | What it does | Command |
+| 键 | 作用 | 命令 |
 | --- | --- | --- |
 | `a` | 在选区后插入 | `append_mode` |
 | `A` | 在行尾插入 | `insert_at_line_end` |
@@ -121,9 +121,9 @@
 | `Home` | 行首 | `goto_line_start` |
 | `End` | 行尾 | `goto_line_end` |
 
-## Select mode
+## 选择模式
 
-| Key | What it does | Command |
+| 键 | 作用 | 命令 |
 | --- | --- | --- |
 | `b` | 选区扩到上一个词首 | `extend_prev_word_start` |
 | `B` | 选区扩到上一个大词首 | `extend_prev_long_word_start` |
@@ -146,9 +146,9 @@
 | `Home` | 选区扩到行首 | `extend_to_line_start` |
 | `End` | 选区扩到行尾 | `extend_to_line_end` |
 
-## Insert mode
+## 插入模式
 
-| Key | What it does | Command |
+| 键 | 作用 | 命令 |
 | --- | --- | --- |
 | `Esc` | 退出选择模式，收起临时显示的内容 | `normal_mode` |
 | `Enter` `C-j` | 换行(延续缩进和列表符号) | `insert_newline` |
@@ -171,7 +171,7 @@
 
 ## 空格 (`Space`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `Space f` | 文件选择器(项目目录) |
 | `Space F` | 文件选择器(工作目录) |
@@ -202,7 +202,7 @@
 
 ## g 转到 (`g`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `gg` | 文件开头 |
 | `g<N>g` | 前往第 N 行 |
@@ -225,7 +225,7 @@
 
 ## m (`m`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `mm` | 跳到配对符号的另一半 |
 | `mi` | 选中配对符号内的内容 |
@@ -236,7 +236,7 @@
 
 ## 下一个 (`]`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `]g / ]G` | 改动(大写：第一处/最后一处) |
 | `]d / ]D` | 诊断(大写：第一个/最后一个) |
@@ -252,7 +252,7 @@
 
 ## 上一个 (`[`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `[g / [G` | 改动(大写：第一处/最后一处) |
 | `[d / [D` | 诊断(大写：第一个/最后一个) |
@@ -268,7 +268,7 @@
 
 ## 视图 (`z`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `zz / zc` | 居中 |
 | `zt` | 顶部 |
@@ -287,7 +287,7 @@
 
 ## 区域 (`C-w`, `Space w`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `C-w w` | 下一个 |
 | `C-w h / C-w j / C-w k / C-w l` | 按方向切换 |
@@ -303,7 +303,7 @@
 
 ## 新建空白窗口 (`C-w n`, `Space w n`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `C-w n s` | 下方新建空白窗口 |
 | `C-w n v` | 右侧新建空白窗口 |

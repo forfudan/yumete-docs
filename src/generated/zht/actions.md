@@ -1,6 +1,6 @@
 <!-- Written by `ye --docgen`. Do not edit: change the editor and regenerate. -->
 
-| Command | What it does | helix | vim | Insert |
+| 命令 | 作用 | helix | vim | 插入模式 |
 | --- | --- | --- | --- | --- |
 | `move_char_left` | 左一個字 | `h` `Left` | `h` `Left` `Backspace` | `Left` |
 | `move_char_right` | 右一個字 | `l` `Right` | `l` `Right` | `Right` |
@@ -554,9 +554,9 @@
 | `vim_replay_last_macro` | 回放上次録的宏(vim 的 Q) |  | `Q` |  |
 | `vim_goto_first_nonwhitespace` | 第一個非空白字符(帶數字時下移幾行) |  | `_` |  |
 
-### vim keys that play other keys
+### vim 中等於另一串鍵的鍵
 
-| Key | Plays |
+| 鍵 | 等於 |
 | --- | --- |
 | `+` | `@jgs` |
 | `-` | `@kgs` |
@@ -566,9 +566,9 @@
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
 
-### In a table's grid (`[keys.table]`)
+### 表格網格中（`[keys.table]`）
 
-| Key | Command |
+| 鍵 | 命令 |
 | --- | --- |
 | `h` | `move_char_left` |
 | `l` | `move_char_right` |
@@ -605,7 +605,7 @@
 
 ### `[keys.prompt]`
 
-| Command | What it does | Keys |
+| 命令 | 作用 | 按鍵 |
 | --- | --- | --- |
 | `normal_mode` | 關閉命令行、搜索框或選擇器 | `Esc` |
 | `confirm` | 執行；在選擇器中打開選中項 | `Enter` |
@@ -625,7 +625,7 @@
 
 ### `[keys.picker]`
 
-| Command | What it does | Keys |
+| 命令 | 作用 | 按鍵 |
 | --- | --- | --- |
 | `next_entry` | 下一項 | `Tab` `C-n` `Down` |
 | `prev_entry` | 上一項 | `S-Tab` `C-p` `Up` |
@@ -637,7 +637,7 @@
 
 ### `[keys.sidebar]`
 
-| Command | What it does | Keys |
+| 命令 | 作用 | 按鍵 |
 | --- | --- | --- |
 | `move_line_down` | 下一行 | `j` `Down` |
 | `move_line_up` | 上一行 | `k` `Up` |
@@ -663,7 +663,7 @@
 
 ### `[keys.field]`
 
-| Command | What it does | Keys |
+| 命令 | 作用 | 按鍵 |
 | --- | --- | --- |
 | `next_field` | 下一格；有灰字時先接受灰字 | `Tab` |
 | `prev_field` | 上一格 | `S-Tab` |
@@ -672,7 +672,7 @@
 
 ### `[keys.preview]`
 
-| Command | What it does | Keys |
+| 命令 | 作用 | 按鍵 |
 | --- | --- | --- |
 | `move_line_down` | 頁面向下滚一行 | `j` `Down` `Enter` |
 | `move_line_up` | 頁面向上滚一行 | `k` `Up` |

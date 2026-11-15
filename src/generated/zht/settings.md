@@ -2,7 +2,7 @@
 
 ### 版面
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[editor] layout` | `"horizontal"` | **排版方向** — 横排還是豎排 (`horizontal` 横排, `vertical` 豎排) |
 | `[editor] vertical_keys` | `"visual"` | **豎排的 hjkl** — 豎排時 hjkl 依照行文邏輯還是視覺方向 (`logical` 行文邏輯：h l 跨字、j k 跨行, `visual` 視覺方向：j k 下上、h l 左右) |
@@ -23,7 +23,7 @@
 
 ### 標記
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[editor] line_numbers` | `"absolute"` | **行號** — 左側顯示行號。相對行號顯示與光標相隔幾行，方便跳行 (`absolute` 絶對, `relative` 相對, `none` 不畫) |
 | `[editor] line_number_fill` | `false` | **行號底色** — 行號欄鋪滿淡底色，而不是隻顯示數字 |
@@ -48,7 +48,7 @@
 
 ### 預覽
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[editor] preview_fit` | `"width"` | **頁面窗口大小** — 頁面窗口中頁面的大小：頁寬適應窗口並隨光標滚動，或整頁放進窗口 (`width` 頁寬, `page` 整頁) |
 | `[editor] preview_theme` | `false` | **頁面窗口用主題配色** — 預覽頁面的紙用背景色、黑字用文字色，深色主題下也一樣；關閉則按印刷原樣 |
@@ -57,7 +57,7 @@
 
 ### 界面
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[editor] language` | `"auto"` | **界面語言** — 編輯器界面顯示語言 (`auto` 跟隨系統, `zht` 繁體, `zhs` 簡體, `en` English) |
 | `[editor] scrolloff` | `5` | **光標邊距** — 光標與邊緣之間至少保留幾行(豎排爲幾縱) (0–20) |
@@ -73,7 +73,7 @@
 
 ### 配色
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[theme] name` | `"ink"` | **主題** — 用哪一套主題。内置十個，寫名字即可(「墨香」與 moxiang 相同) (`ink` 墨香：黑、白金、金、紅四色墨，其餘色階自動推算, `one-dark` One Dark：VS Code 中最常見的配色，只有深色, `github` GitHub：GitHub 網站與 VS Code 中的配色，深淺都有, `monokai` Monokai：Sublime Text 的經典配色，只有深色, `dracula` Dracula：紫調的暗色配色，只有深色, `tokyo-night` Tokyo Night：柔和的藍紫調，深淺都有, `catppuccin` Catppuccin：粉彩色，深色 Mocha，淺色 Latte, `gruvbox` Gruvbox：暖棕底的復古配色，深淺都有, `bw` 黑白：只用黑、白、灰，以輕重區分, `morandi` 莫蘭迪：灰調的柔和配色，深淺都有) |
 | `[theme] mode` | `"auto"` | **深色/淺色** — 用深色還是淺色主題；「問終端」按終端背景色決定 (`auto` 問終端, `dark` 深色, `light` 淺色) |
@@ -85,7 +85,7 @@
 
 ### 輸入法
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[ime] scheme` | `"pinyin"` | **輸入方案** — 用哪套輸入方案。拼音、靈明、星陳爲内置，其他方案需安裝 (`lingming` 靈明, `xingchen` 星陳, `qingyun` 卿雲, `riyue` 日月, `pinyin` 宇浩拼音) |
 | `[ime] commit` | `"default"` | **上屏方式** — 編碼打完後何時上屏：等下一鍵、只剩一個候選時，或整句 (`default` 方案默認, `delayed` 延遲(頂字), `unique` 唯一, `fluency` 整句) |
@@ -106,7 +106,7 @@
 
 ### 編輯
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[editor] word_completion` | `4` | **詞語補全** — 輸入幾個西文字母后列出已打開文件中出現過的詞，漢字爲一半(向上取整)。C-n 隨時列出 (0–20) |
 | `[editor] completion_page_size` | `6` | **補全每頁條數** — 單詞、代碼和終端命令的補全列表一次顯示幾條 (1–20) |
@@ -120,7 +120,7 @@
 
 ### 文件
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[editor] reload_auto` | `true` | **自動重載** — 文件被外部修改時自動重新加載 |
 | `[editor] autosave` | `true` | **自動備份** — 未保存時在文件旁保留副本，崩潰後可恢復 |
@@ -131,7 +131,7 @@
 
 ### 導出
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[export] vertical` | `false` | **豎排導出** — HTML 與 EPUB 豎排，從右往左；與編輯區是否豎排無關 |
 | `[export] vertical_latin` | `"turn"` | **豎排導出的西文** — 豎排的 HTML 與 EPUB 裏，半角字母與數字怎麽排；不影響終端裏的豎排 (`turn` 一律轉向, `jlreq` 照 JLREQ 與 clreq) |
@@ -144,7 +144,7 @@
 
 ### 鍵位
 
-| Setting | Default | What it does |
+| 設置 | 默認值 | 作用 |
 | --- | --- | --- |
 | `[keys] preset` | `"helix"` | **鍵位** — 鍵位沿用 helix 還是 vim (`helix` helix, `vim` vim) |
 | `[keys] flavor` | `"basic"` | **Yumete 鍵位風味** — 在 helix/vim 鍵位之上的改動。基本：看得見的改動，如菜單、新鍵；完整：再加上改變熟悉鍵行爲的幾項，如 `d` `c` 只删不剪，剪切用 `A-d` `A-c`。`[keys.normal]` 優先於它 (`off` 關閉, `basic` 基本, `full` 完整) |

@@ -1,6 +1,6 @@
 <!-- Written by `ye --docgen`. Do not edit: change the editor and regenerate. -->
 
-| Command | Arguments | What it does |
+| 命令 | 參數 | 作用 |
 | --- | --- | --- |
 | `:cd` | `<路徑>` | 切換工作目録 |
 | `:pwd` |  | 顯示工作目録 |
@@ -52,7 +52,7 @@
 | `:later` `:lat` | `<步數>｜<時間>` | 重做若干步，或前進到多久以後 |
 | `:redo` `:red` |  | 重做 |
 | `:word` `:wd` |  | 分詞：詞表、標記、粒度 |
-| `:word-mark` | `off｜color｜ink｜tint｜line｜字色｜墨色` | 分詞標記 |
+| `:word-mark` | `off｜color｜ink｜tint｜line｜顔色｜字色｜底色｜線` | 分詞標記 |
 | `:wiki` | `<詞條名>` | 按名稱查詞條，拼錯或順序顛倒也能找到 |
 | `:wiki-edit` |  | 打開本項目的 .yumete/wiki.md，不存在則新建 |
 | `:wiki-global` |  | 打開全局 wiki.md(整個系列共用的設定) |
@@ -73,7 +73,7 @@
 | `:word-discover-project` |  | 在項目中挖掘用户詞語 |
 | `:word-habit` |  | 口頭禪：本文比一般文本多用的詞 |
 | `:vertical` | `on｜off` | 豎排開關：on 豎排，off 横排，單用則切換 |
-| `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | 豎排時 hjkl 按文字方向還是按屏幕方向移動 |
+| `:vertical-keys` `:vk` | `logical｜visual｜邏輯｜視覺` | 豎排時 hjkl 按文字方向還是按屏幕方向移動 |
 | `:theme` | `ink｜one-dark｜github｜monokai｜dracula｜tokyo-night｜catppuccin｜gruvbox｜bw｜morandi｜<主題名>` | 主題(深淺色用 :theme-mode) |
 | `:theme-mode` | `system｜dark｜light` | 深色或淺色(system 跟隨終端) |
 | `:language` `:lang` | `zht｜zhs｜en｜<語言>` | 界面語言：`zht` 繁體/`zhs` 简体/`en` English |
@@ -186,7 +186,7 @@
 | `:table-delimiter` | `<分隔符>` | 按此分隔符把文件讀成表格並記住(tab、space、comma、semicolon 或該字符) |
 | `:table-hide` | `<欄號>` | 隱藏第 N 列(只是不顯示，照常讀寫)，並記住 |
 | `:table-show` | `<欄號>` | 重新顯示被隱藏的第 N 列 |
-| `:table-jump` | `<列名>` | 跳到表格中該名稱所在的行(`:table-jump 木`) |
+| `:table-jump` | `<行名>` | 跳到表格中該名稱所在的行(`:table-jump 木`) |
 | `:table-find` | `row｜column｜<字符串> <字符串>` | 查找：`row` 按行(同 `/`)，`column` 按列(同表格裏的 t/ t?) |
 | `:paste-table` | `<格式> [<格式>]` | 將剪貼板中的表格粘貼爲目標格式；兩個參數時第一個爲源格式 |
 | `:convert-table` | `<格式> [<格式>]` | 轉爲目標格式(csv、tsv、pipe)；兩個參數時第一個爲源格式 |
@@ -240,7 +240,7 @@
 | `:export` `:ex` | `html｜typst｜epub｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<路徑>` | 導出爲 html、typst 或 epub |
 | `:export-as-preview` | `html｜pdf｜<路徑>` | 照預覽的樣子導出：Markdown 爲 html 或 pdf，Typst 爲 pdf |
 | `:diff` | `<路徑>` | 查看改動：按詞比較，而非按行 |
-| `:lsp-rename` | `<新名>` | 通過語言服務器重命名光標下的符號(各處一起改) |
+| `:lsp-rename` | `<新名字>` | 通過語言服務器重命名光標下的符號(各處一起改) |
 | `:git-show` | `<提交>` | 在另一個窗口以只讀方式打開已提交的版本 |
 | `:git-diff` | `<提交>` | 與 git 中的版本逐詞比較，默認比 HEAD |
 | `:ruby` |  | 編輯此處注音 |

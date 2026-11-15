@@ -1,17 +1,17 @@
 <!-- Written by `ye --docgen`. Do not edit: change the editor and regenerate. -->
 
-## Normal mode
+## 普通模式
 
-| Key | What it does | Command |
+| 键 | 作用 | 命令 |
 | --- | --- | --- |
 | `a` | 在光标后插入(vim 的 a) | `vim_append_mode` |
 | `A` | 在行尾插入(vim 的 A) | `vim_insert_at_line_end` |
 | `b` | 跳到上一个词首(不选中) | `jump_prev_word_start` |
 | `B` | 跳到上一个大词首(不选中) | `jump_prev_long_word_start` |
 | `c` | 改写(再按一个动作) | `operator_change` |
-| `C` | as `c$` | `@c$` |
+| `C` | 同 `c$` | `@c$` |
 | `d` | 删除(再按一个动作) | `operator_delete` |
-| `D` | as `d$` | `@d$` |
+| `D` | 同 `d$` | `@d$` |
 | `e` | 跳到下一个词尾(不选中) | `jump_next_word_end` |
 | `E` | 跳到下一个大词尾(不选中) | `jump_next_long_word_end` |
 | `f` | 往后找一个字，选到它 | `find_next_char` |
@@ -40,8 +40,8 @@
 | `Q` | 回放上次录的宏(vim 的 Q) | `vim_replay_last_macro` |
 | `r` | 把选中的每个字换成另一个字 | `replace` |
 | `R` | 替换模式：输入覆盖原文 | `replace_mode` |
-| `s` | as `cl` | `@c{n}l` |
-| `S` | as `cc` | `@cc` |
+| `s` | 同 `cl` | `@c{n}l` |
+| `S` | 同 `cc` | `@cc` |
 | `t` | 往后找一个字，选到它前面 | `find_till_char` |
 | `T` | 往前找一个字，选到它后面 | `till_prev_char` |
 | `u` | 撤销 | `undo` |
@@ -53,9 +53,9 @@
 | `x` | 删掉光标下的字，不删换行(vim 的 x) | `vim_delete_char_forward` |
 | `X` | 删除光标前的一个字 | `delete_char_backward` |
 | `y` | 复制(再按一个动作) | `operator_yank` |
-| `Y` | as `y$` | `@y$` |
+| `Y` | 同 `y$` | `@y$` |
 | `z` | 视图组：定位光标行、滚屏、折叠 | `view_mode` |
-| `0` | as `gh` | `@gh` |
+| `0` | 同 `gh` | `@gh` |
 | `"` | 选寄存器(再按一个字母) | `select_register` |
 | `#` | 反向搜索光标下的词 | `search_word_backward` |
 | `$` `End` | 行尾(vim 的 $：往下走也留在行尾) | `vim_goto_line_end` |
@@ -64,9 +64,9 @@
 | `(` | 跳到上一句(不选中) | `jump_prev_sentence` |
 | `)` | 跳到下一句(不选中) | `jump_next_sentence` |
 | `*` | 搜索选中内容 | `search_selection` |
-| `+` | as `jgs` | `@jgs` |
+| `+` | 同 `jgs` | `@jgs` |
 | `,` | 反向再找一次刚才那个字 | `repeat_find_char_reverse` |
-| `-` | as `kgs` | `@kgs` |
+| `-` | 同 `kgs` | `@kgs` |
 | `.` | 用新的计数再做一次刚才的改动 | `vim_repeat_last_change` |
 | `/` | 搜索 | `search` |
 | `:` | 命令行，从可视模式打开时作用于选区(vim 的 :) | `vim_command_mode` |
@@ -78,7 +78,7 @@
 | `[` | [ 组：跳到上一个 | `left_bracket_mode` |
 | `\` | 空格菜单 | `space_mode` |
 | `]` | ] 组：跳到下一个 | `right_bracket_mode` |
-| `^` | as `gs` | `@gs` |
+| `^` | 同 `gs` | `@gs` |
 | `_` | 第一个非空白字符(带数字时下移几行) | `vim_goto_first_nonwhitespace` |
 | `` ` `` | 回到标记所在的那个字(再按一个字母) | `goto_mark_exact` |
 | `{` | 跳到上一段(不选中) | `jump_prev_paragraph` |
@@ -106,9 +106,9 @@
 | `ZQ` | `:quit!` | `:quit!` |
 | `ZZ` | `:x` | `:x` |
 
-## Visual mode
+## 可视模式
 
-| Key | What it does | Command |
+| 键 | 作用 | 命令 |
 | --- | --- | --- |
 | `a` | 选中整个对象(再按对象键) | `select_around_object` |
 | `c` `s` | 剪切后改写 | `change_selection` |
@@ -132,9 +132,9 @@
 | `A-e` | 选区扩到所在节点末尾 | `extend_parent_node_end` |
 | `Home` | 选区扩到行首 | `extend_to_line_start` |
 
-## Insert mode
+## 插入模式
 
-| Key | What it does | Command |
+| 键 | 作用 | 命令 |
 | --- | --- | --- |
 | `Esc` `C-c` | 退出选择模式，收起临时显示的内容 | `normal_mode` |
 | `Enter` `C-j` | 换行(延续缩进和列表符号) | `insert_newline` |
@@ -160,7 +160,7 @@
 
 ## 空格 (`\`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `\f` | 文件选择器(项目目录) |
 | `\F` | 文件选择器(工作目录) |
@@ -191,7 +191,7 @@
 
 ## g 转到 (`g`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `gg` | 文件开头 |
 | `g<N>g` | 前往第 N 行 |
@@ -215,7 +215,7 @@
 
 ## 下一个 (`]`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `]d / ]D` | 诊断(大写：第一个/最后一个) |
 | `]c` | 改动 |
@@ -226,7 +226,7 @@
 
 ## 上一个 (`[`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `[d / [D` | 诊断(大写：第一个/最后一个) |
 | `[c` | 改动 |
@@ -236,7 +236,7 @@
 
 ## 视图 (`z`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `zz` | 居中 |
 | `zf` | 创建折叠，后接移动 |
@@ -267,7 +267,7 @@
 
 ## 区域 (`C-w`, `\w`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `C-w w` | 下一个 |
 | `C-w W` | 上一个 |
@@ -293,7 +293,7 @@
 
 ## 新建空白窗口 (`C-w n`, `\wn`)
 
-| Key | What it does |
+| 键 | 作用 |
 | --- | --- |
 | `C-w n s` | 下方新建空白窗口 |
 | `C-w n v` | 右侧新建空白窗口 |

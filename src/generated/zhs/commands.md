@@ -1,6 +1,6 @@
 <!-- Written by `ye --docgen`. Do not edit: change the editor and regenerate. -->
 
-| Command | Arguments | What it does |
+| 命令 | 参数 | 作用 |
 | --- | --- | --- |
 | `:cd` | `<路径>` | 切换工作目录 |
 | `:pwd` |  | 显示工作目录 |
@@ -23,10 +23,10 @@
 | `:config-open-workspace` |  | 打开本项目的 .yumete/config.toml |
 | `:reload-auto` | `on｜off` | 文件在外部被修改时自动重新载入；有未保存的改动时只提醒 |
 | `:readonly` `:ro` | `on｜off` | 只读：禁止编辑此文件 |
-| `:goto` | `<行號>` | 跳转到某行(直接 `:42` 也行) |
+| `:goto` | `<行号>` | 跳转到某行(直接 `:42` 也行) |
 | `:count` `:wc` |  | 字数统计；`progress` 看今天，`target` 设每日目标 |
 | `:count-progress` |  | 写作进度：今天写了多少，离目标还有多少 |
-| `:count-target` | `<字數>｜off` | 每日字数目标；`:count-target off` 取消 |
+| `:count-target` | `<字数>｜off` | 每日字数目标；`:count-target off` 取消 |
 | `:check-usage` |  | 检查用字：同一个词有两种写法时(里/裡、为/爲、自定义的人名)，列出较少的那种 |
 | `:check-config` |  | 检查配置：哪一行导致整个文件失效，哪些键无人读取 |
 | `:check-names` |  | 检查专名：找出百科词条名写错同音字的地方(醉翁亭写成醉翁停) |
@@ -48,12 +48,12 @@
 | `:exit` `:x` `:xit` | `<路径>` | 有改动才保存，然后退出(简写 `:x`，也可用 `:xit`) |
 | `:write-if-changed` `:update` `:up` |  | 有改动才保存，不退出(简写 `:up`) |
 | `:undo` `:u` |  | 撤销上一次改动 |
-| `:earlier` `:ear` | `<步數>｜<時間>` | 撤销若干步，或回到多久以前(5m、1h) |
-| `:later` `:lat` | `<步數>｜<時間>` | 重做若干步，或前进到多久以后 |
+| `:earlier` `:ear` | `<步数>｜<时间>` | 撤销若干步，或回到多久以前(5m、1h) |
+| `:later` `:lat` | `<步数>｜<时间>` | 重做若干步，或前进到多久以后 |
 | `:redo` `:red` |  | 重做 |
 | `:word` `:wd` |  | 分词：词表、标记、粒度 |
-| `:word-mark` | `off｜color｜ink｜tint｜line｜字色｜墨色` | 分词标记 |
-| `:wiki` | `<詞條名>` | 按名称查词条，拼错或顺序颠倒也能找到 |
+| `:word-mark` | `off｜color｜ink｜tint｜line｜颜色｜字色｜底色｜线` | 分词标记 |
+| `:wiki` | `<词条名>` | 按名称查词条，拼错或顺序颠倒也能找到 |
 | `:wiki-edit` |  | 打开本项目的 .yumete/wiki.md，不存在则新建 |
 | `:wiki-global` |  | 打开全局 wiki.md(整个系列共用的设定) |
 | `:keymap-yumete-flavor` | `off｜basic｜full` | Yumete 键位风味：在 helix/vim 键位上的少量改动；不带参数显示当前状态 |
@@ -73,16 +73,16 @@
 | `:word-discover-project` |  | 在项目中挖掘用户词语 |
 | `:word-habit` |  | 口头禅：本文比一般文本多用的词 |
 | `:vertical` | `on｜off` | 竖排开关：on 竖排，off 横排，单用则切换 |
-| `:vertical-keys` `:vk` | `logical｜visual｜<logical｜visual>` | 竖排时 hjkl 按文字方向还是按屏幕方向移动 |
-| `:theme` | `ink｜one-dark｜github｜monokai｜dracula｜tokyo-night｜catppuccin｜gruvbox｜bw｜morandi｜<主題名>` | 主题(深浅色用 :theme-mode) |
+| `:vertical-keys` `:vk` | `logical｜visual｜逻辑｜视觉` | 竖排时 hjkl 按文字方向还是按屏幕方向移动 |
+| `:theme` | `ink｜one-dark｜github｜monokai｜dracula｜tokyo-night｜catppuccin｜gruvbox｜bw｜morandi｜<主题名>` | 主题(深浅色用 :theme-mode) |
 | `:theme-mode` | `system｜dark｜light` | 深色或浅色(system 跟随终端) |
-| `:language` `:lang` | `zht｜zhs｜en｜<語言>` | 界面语言：`zht` 繁体/`zhs` 简体/`en` English |
+| `:language` `:lang` | `zht｜zhs｜en｜<语言>` | 界面语言：`zht` 繁体/`zhs` 简体/`en` English |
 | `:version` `:ver` |  | 版本号，以及配置、数据、日志的位置 |
 | `:keymap` | `helix｜vim` | 键位预设：helix(默认)或 vim(支持 vim 的 x s dd ^ $ 等) |
 | `:keymap-actions` |  | 列出所有可绑定的动作名 |
 | `:info` |  | 文件信息：路径、大小、行数字数、语言、关联的语言服务器 |
 | `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息栏随光标显示哪一种(record/diagnostics/dictionary/wiki/docs；不写则按文件类型) |
-| `:rules` | `<欄>…｜off` | 在指定列加标尺：`:rules 80 100 120`；不带数字为 80 和 100，`off` 关闭 |
+| `:rules` | `<栏>…｜off` | 在指定列加标尺：`:rules 80 100 120`；不带数字为 80 和 100，`off` 关闭 |
 | `:theme-fill` | `on｜off` | 代码和引用是否加底色(默认不加) |
 | `:shot` | `screen｜png｜html｜txt <路径>` | 截图：默认复制到剪贴板；png/html/txt 则保存到下载文件夹 |
 | `:yume` `:y` | `on｜off` | 宇梦输入引擎开关：on 打开、off 关闭 |
@@ -103,16 +103,16 @@
 | `:yume-installed` |  | 改用系统安装的码表(与 builtin 相对) |
 | `:yume-builtin` |  | 改用内置码表，忽略已安装的 |
 | `:yume-table` | `<路径>` | 用你自己的码表(Rime 的 .dict.yaml 也行) |
-| `:settings-buffer` `:setlocal` `:setl` | `<選項>` | 只设当前缓冲区的 ft、ts、sw、et、tw；不带参数则显示它们的值 |
-| `:syntax` `:syn` `:setf` `:setfiletype` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<語法>` | 文件的标记语言(不带参数显示当前值) |
+| `:settings-buffer` `:setlocal` `:setl` | `<选项>` | 只设当前缓冲区的 ft、ts、sw、et、tw；不带参数则显示它们的值 |
+| `:syntax` `:syn` `:setf` `:setfiletype` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<语法>` | 文件的标记语言(不带参数显示当前值) |
 | `:pipe` | `<命令>` | 将选区传给终端命令，用输出替换选区 |
 | `:run-shell-in-buffer` `:sh` | `<命令>` | 运行命令，输出放进一个缓冲区 |
 | `:!command` |  | 在终端里直接运行命令并查看输出(vi 写法) |
 | `:which-wrap` | `<字母>` | 哪些键可以跨越行尾(vim 键位)。只能是 b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | 行号：absolute 绝对、relative 相对光标、none 不显示；不带参数显示当前模式 |
 | `:view-wrap` | `on｜off` | 自动换行开关；宽度用 `:view-wrap-width` 设 |
-| `:view-wrap-width` | `0｜<幾欄>` | 正文宽度(列数)；`:view-wrap-width 50` 设宽度，`0` 跟随窗口 |
-| `:view-wrap-height` | `0｜<幾字>` | 竖排每列字数；`:view-wrap-height 30` 设长度，`0` 跟随窗口 |
+| `:view-wrap-width` | `0｜<几栏>` | 正文宽度(列数)；`:view-wrap-width 50` 设宽度，`0` 跟随窗口 |
+| `:view-wrap-height` | `0｜<几字>` | 竖排每列字数；`:view-wrap-height 30` 设长度，`0` 跟随窗口 |
 | `:view-margin` | `never｜dense｜loose｜always` | 页边：是否为注音、悬挂标点、着重号、平仄留出位置 |
 | `:view-pages-horizontal` | `<1–4>` | 分栏：横排时分成多栏并排，文字从左栏接到右栏 |
 | `:view-pages-vertical` | `<1–4>` | 段组：把竖排的页面横着分成几条，右上读到左上，再右下读到左下 |
@@ -127,7 +127,7 @@
 | `:view-punct` | `on｜off` | 标点提示：在半角标点和 ... 旁显示应使用的全角标点 |
 | `:view-code` | `on｜off` | 代码着色：代码块按其语言着色 |
 | `:view-line-breaks` | `on｜off` | 换行符：在每个以换行结束的行尾画一个淡色 ␊ |
-| `:view-long-line` | `off｜<幾字>` | 行长超过此字数时停止着色 |
+| `:view-long-line` | `off｜<几字>` | 行长超过此字数时停止着色 |
 | `:view-hud` | `off｜basic｜full` | 光标提示：不显示、胶囊、面板 |
 | `:preview` | `on｜off` | 打开或关闭排版后的页面：先在旁边开页面窗口，开不了就用浏览器 |
 | `:preview-window` | `on｜off` | 在旁边的窗口中显示排好的页面，跟随光标(需要 tinymist，以及 Ghostty 或 kitty) |
@@ -137,21 +137,21 @@
 | `:preview-vertical` | `on｜off` | 文字窗口竖排时，Markdown 预览也竖排：从右往左一列一列，像竖排导出那样 |
 | `:preview-redraw` |  | 按窗口现在的大小重画预览 |
 | `:render` | `off｜basic｜full` | 渲染程度：源码、着色、所见即所得 |
-| `:indent` | `off｜basic｜full｜<幾格，至多 8>` | 首行缩进：`off`/`basic`(保留段间空行)/`full`(隐藏段间空行)，或格数 |
+| `:indent` | `off｜basic｜full｜<几格，至多 8>` | 首行缩进：`off`/`basic`(保留段间空行)/`full`(隐藏段间空行)，或格数 |
 | `:indent-tab` | `spaces｜tab` | Tab 键输入空格还是制表符(Shift-Tab 输入另一种) |
-| `:indent-width` | `<幾格，1–16>` | 缩进宽度：Tab 输入的空格数，> 和 < 移动的格数 |
-| `:hard-wrap` | `<幾欄>` | 按宽度重新硬换行(选区或光标所在段)，不改内容；0 把每段合成一行；不带数字按 hard_wrap 设置 |
-| `:align` | `<符號>` | 按某个符号对齐选中的行，默认为 = |
+| `:indent-width` | `<几格，1–16>` | 缩进宽度：Tab 输入的空格数，> 和 < 移动的格数 |
+| `:hard-wrap` | `<几栏>` | 按宽度重新硬换行(选区或光标所在段)，不改内容；0 把每段合成一行；不带数字按 hard_wrap 设置 |
+| `:align` | `<符号>` | 按某个符号对齐选中的行，默认为 = |
 | `:sort` | `-r｜-i` | 排序：多个选区时排各选区的内容，否则排选中的行，无选区时排整个文件；按码位，-r 倒序，-i 不分大小写 |
 | `:split-join` |  | 把光标所在括号里的各项拆成每行一项，或合并回一行 |
-| `:reflow` | `<幾欄>` | 按宽度重排选区(默认 80 列) |
+| `:reflow` | `<几栏>` | 按宽度重排选区(默认 80 列) |
 | `:auto-pairs` | `off｜basic｜full` | 自动补上右括号：关/基本/完整；不带参数显示当前档位 |
 | `:indent-hint` | `none｜color｜symbol` | 缩进的两格显示什么 |
-| `:table` `:ta` `:tab` | `<行>x<欄>` | 插入空表：`:table 3 4` 为三行四列，首行为表头；只能在空行使用 |
+| `:table` `:ta` `:tab` | `<行>x<栏>` | 插入空表：`:table 3 4` 为三行四列，首行为表头；只能在空行使用 |
 | `:table-render` | `off｜basic｜window` | 表格显示：源码、基本、全窗；不带参数显示当前模式 |
 | `:table-check` |  | 检查整张表：行名重复、列数不对、字不在字集里 |
-| `:table-rules` | `off｜color｜line｜<樣式> solid｜dash｜double` | 列线：列与列之间的分隔方式 |
-| `:table-sort` | `<欄> a｜d …` | 按列排序：`sort 1 a 2 d` 先按第一列升序，再按第二列降序 |
+| `:table-rules` | `off｜color｜line｜<样式> solid｜dash｜double` | 列线：列与列之间的分隔方式 |
+| `:table-sort` | `<栏> a｜d …` | 按列排序：`sort 1 a 2 d` 先按第一列升序，再按第二列降序 |
 | `:replace` `:r` | `<路径>` | 搜索与替换 |
 | `:replace-buffers` `:rb` |  | 在所有打开的文件中替换 |
 | `:replace-working` `:rw` |  | 在工作目录中替换 |
@@ -163,9 +163,9 @@
 | `:keep-pipe` | `<命令>` | 只保留终端命令执行成功的选区 |
 | `:git-lazygit` `:lazygit` |  | 在 lazygit 里看改动、暂存、提交，按 q 回来 |
 | `:files-yazi` `:yazi` |  | 在 yazi 里浏览文件，Enter 把选中的文件在这里打开 |
-| `:decimo` | `<表達式>` | 用 decimo 计算表达式，结果放在光标处 |
-| `:decimo-replace` | `<選項>` | 用 decimo 计算选中的文字，结果替换它 |
-| `:decimo-append` | `<選項>` | 用 decimo 计算选中的文字，在它后面写上「= 结果」 |
+| `:decimo` | `<表达式>` | 用 decimo 计算表达式，结果放在光标处 |
+| `:decimo-replace` | `<选项>` | 用 decimo 计算选中的文字，结果替换它 |
+| `:decimo-append` | `<选项>` | 用 decimo 计算选中的文字，在它后面写上「= 结果」 |
 | `:pipe-to` | `<命令>` | 把选区交给终端命令，不收回输出 |
 | `:yuhao` |  | 打开宇浩输入法官网 |
 | `:search` `:s` `:grep` | `<路径>` | 打开搜索面板：可跨文件，选项更多 |
@@ -175,7 +175,7 @@
 | `:sidebar-explorer` | `on｜off` | 打开或关闭左侧栏的文件树，打开时光标移过去 |
 | `:sidebar-buffers` | `on｜off` | 打开或关闭左侧栏的缓冲区列表，打开时光标移过去 |
 | `:sidebar-outline` `:outline` `:out` `:ou` | `on｜off` | 打开或关闭左侧栏的大纲，打开时光标移过去 |
-| `:sidebar-outline-level` | `<級>` | 侧栏大纲只列到第几级；`0` 关闭；不带参数报告状态 |
+| `:sidebar-outline-level` | `<级>` | 侧栏大纲只列到第几级；`0` 关闭；不带参数报告状态 |
 | `:sidebar-search` | `on｜off` | 打开或关闭左侧栏的搜索，打开时光标移过去 |
 | `:sidebar-links` | `on｜off` | 打开或关闭左侧栏的链接，打开时光标移过去 |
 | `:sidebar-info` | `on｜off` | 打开或关闭右侧栏的信息面板，光标留在正文 |
@@ -184,13 +184,13 @@
 | `:table-header` | `on｜off` | 首行是表头还是数据 |
 | `:table-schema` | `write` | 显示表格结构；write 写入同目录的 datapackage.json |
 | `:table-delimiter` | `<分隔符>` | 按此分隔符把文件读成表格并记住(tab、space、comma、semicolon 或该字符) |
-| `:table-hide` | `<欄號>` | 隐藏第 N 列(只是不显示，照常读写)，并记住 |
-| `:table-show` | `<欄號>` | 重新显示被隐藏的第 N 列 |
-| `:table-jump` | `<列名>` | 跳到表格中该名称所在的行(`:table-jump 木`) |
+| `:table-hide` | `<栏号>` | 隐藏第 N 列(只是不显示，照常读写)，并记住 |
+| `:table-show` | `<栏号>` | 重新显示被隐藏的第 N 列 |
+| `:table-jump` | `<行名>` | 跳到表格中该名称所在的行(`:table-jump 木`) |
 | `:table-find` | `row｜column｜<字符串> <字符串>` | 查找：`row` 按行(同 `/`)，`column` 按列(同表格里的 t/ t?) |
 | `:paste-table` | `<格式> [<格式>]` | 将剪贴板中的表格粘贴为目标格式；两个参数时第一个为源格式 |
 | `:convert-table` | `<格式> [<格式>]` | 转为目标格式(csv、tsv、pipe)；两个参数时第一个为源格式 |
-| `:wheel` | `<幾行，1–10>` | 滚轮每格滚动的行数；`:wheel 1` 为终端默认 |
+| `:wheel` | `<几行，1–10>` | 滚轮每格滚动的行数；`:wheel 1` 为终端默认 |
 | `:clipboard` `:reg` |  | 粘贴菜单：从剪贴板和复制过的内容里选一项粘贴(也可先按 ␣ 再按双引号) |
 | `:clipboard-yank` |  | 复制选区到系统剪贴板 |
 | `:clipboard-paste` |  | 从系统剪贴板粘贴 |
@@ -214,18 +214,18 @@
 | `:genda-copy` |  | 跟打：把最近一段（或历史里选中的那条）成绩复制到剪贴板 |
 | `:genda-copy-history` |  | 跟打：把全部历史成绩复制成表格（TSV，带表头） |
 | `:genda-history` |  | 跟打：查看历史成绩，再按一次回到跟打 |
-| `:genda-length` | `10｜15｜25｜50｜100｜200｜500｜all｜<字數>` | 跟打：每段多少字，all 为全文 |
+| `:genda-length` | `10｜15｜25｜50｜100｜200｜500｜all｜<字数>` | 跟打：每段多少字，all 为全文 |
 | `:genda-whole` | `on｜off` | 跟打：整篇文章作为一段，on/off，不带参数则切换；关掉回到原来的段长 |
-| `:genda-top` `:gt` | `<字數>` | 跟打：当前文件里最常用的 N 个汉字（默认 500） |
-| `:genda-top-buffers` `:gtb` | `<字數>` | 跟打：所有打开的文件里最常用的 N 个汉字 |
-| `:genda-top-working` `:gtw` | `<字數>` | 跟打：工作目录下文本文件里最常用的 N 个汉字 |
-| `:genda-top-project` `:gtp` | `<字數>` | 跟打：项目里最常用的 N 个汉字 |
+| `:genda-top` `:gt` | `<字数>` | 跟打：当前文件里最常用的 N 个汉字（默认 500） |
+| `:genda-top-buffers` `:gtb` | `<字数>` | 跟打：所有打开的文件里最常用的 N 个汉字 |
+| `:genda-top-working` `:gtw` | `<字数>` | 跟打：工作目录下文本文件里最常用的 N 个汉字 |
+| `:genda-top-project` `:gtp` | `<字数>` | 跟打：项目里最常用的 N 个汉字 |
 | `:genda-article` | `buffer｜chars-1-500｜chars-501-1000｜chars-1001-1500` | 跟打：换文章，当前文件或宇浩字频里的常用单字 |
 | `:genda-hint` | `on｜off` | 跟打：在文章框下边显示下一个字的编码（取自当前宇浩方案），on/off，不带参数则切换 |
 | `:genda-auto` | `on｜off` | 跟打：打完一段自动换到下一段，on/off，不带参数则切换 |
 | `:genda-goal` | `off` | 跟打：说出达标条件；off 全部取消 |
 | `:genda-goal-speed` | `off｜<字/分>` | 跟打：达标条件，速度（错一罚五之后）至少多少字每分；off 或 0 取消 |
-| `:genda-goal-kps` | `off｜<鍵/秒>` | 跟打：达标条件，击键至少每秒多少键；off 或 0 取消 |
+| `:genda-goal-kps` | `off｜<键/秒>` | 跟打：达标条件，击键至少每秒多少键；off 或 0 取消 |
 | `:genda-goal-accuracy` | `off｜<%>` | 跟打：达标条件，键准至少百分之多少；off 或 0 取消 |
 | `:genda-goal-clean` | `on｜off` | 跟打：达标条件，一个错字都没有；on/off，不带参数则切换 |
 | `:genda-retry-wrong` |  | 跟打：把上一段打错过的字（改对了的也算）拿来单打一段 |
@@ -236,11 +236,11 @@
 | `:changed-files` |  | 改动过的文件：git 中有改动的与未保存的(同 Space g) |
 | `:recent-projects` |  | 最近打开的项目 |
 | `:tutor` |  | 教程：把课文复制成你自己的文件，边改边学 |
-| `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | 以可搜索的文件打开按键与命令列表 |
+| `:help` `:h` | `chinese｜vertical｜table｜commands｜<题目>` | 以可搜索的文件打开按键与命令列表 |
 | `:export` `:ex` | `html｜typst｜epub｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<路径>` | 导出为 html、typst 或 epub |
 | `:export-as-preview` | `html｜pdf｜<路径>` | 照预览的样子导出：Markdown 为 html 或 pdf，Typst 为 pdf |
 | `:diff` | `<路径>` | 查看改动：按词比较，而非按行 |
-| `:lsp-rename` | `<新名>` | 通过语言服务器重命名光标下的符号(各处一起改) |
+| `:lsp-rename` | `<新名字>` | 通过语言服务器重命名光标下的符号(各处一起改) |
 | `:git-show` | `<提交>` | 在另一个窗口以只读方式打开已提交的版本 |
 | `:git-diff` | `<提交>` | 与 git 中的版本逐词比较，默认比 HEAD |
 | `:ruby` |  | 编辑此处注音 |
