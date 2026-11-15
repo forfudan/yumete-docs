@@ -21,7 +21,10 @@ editing, rows and columns, sorting, searching, checking, and converting.
 ## When table mode turns on
 
 **Opening a `.csv` or `.tsv` file** opens it as a table, filling the window. You
-do not have to ask.
+do not have to ask. The table belongs to the window it is drawn in: move the
+keys to another window and this one still shows the grid, with its own scroll
+and the cell you left it on; come back and you are in the same cell, at the
+same level. Two windows on one file each keep their own place.
 
 **Opening any other file whose lines all split the same way** opens it in the
 basic table view. yumete tries tab, comma and semicolon, and takes the

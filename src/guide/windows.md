@@ -108,11 +108,12 @@ the history of the one it was split from); with none to go back to, the one
 you are in shows the next file, and another window closes. `:bc` on a preview
 closes the preview the same way.
 
-The rule between two windows one above the other carries the name of the
-file in the window you are not in. A window you are not in keeps 95% of its
-ink, a little dimmer than the one you are in; `[theme] inactive` sets it, and
-100 does not dim at all, as in vim and helix. Each window keeps its own scroll, and
-long lines fold to each window's own width.
+Every window names its file on its own status line (see [Status lines](#status-lines)).
+A window you are not in keeps all of its ink, as in vim and helix;
+`[theme] inactive` below 100 dims it. Each window keeps its own scroll, and
+long lines fold to each window's own width. A window showing a table keeps it
+as a table, with its own scroll and the cell you left it on (see
+[Tables](../writing/tables.md)).
 
 The session remembers the windows and the sidebars, so `ye -r` opens them as
 you left them (see "Sessions" in [Files](./files.md)).
