@@ -292,7 +292,9 @@ also takes Visual `Q` away.
   python`. `:set ts?`, or `:set ts` alone for an option with a value,
   says its value, as in vim. `tw` is the width `gq`, `gw` and `:hard-wrap`
   fill to; lines are not broken while you type. Other options are their own
-  commands or config keys, and `:set` on its own opens the settings panel. See [Settings](../reference/settings.md).
+  commands or config keys: `:set nu` or `:set nowrap` is refused on the status
+  line, saying what `:set` takes. `:set` on its own opens the settings panel,
+  and `:set` with a setting's name opens it on that row. See [Settings](../reference/settings.md).
   `:setl` (`:setlocal`) is `:settings-buffer`, the same, since these options are the file's
   anyway; on its own it says their values.
 - There are no tab pages, so no `:tabnew`: `:ene` is `:new`, a buffer with
