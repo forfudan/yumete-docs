@@ -8,6 +8,7 @@ typesetter, with its own settings for each of them.
 :export html               chapter.md → chapter.html
 :export typst              chapter.md → chapter.typ
 :export epub               chapter.md → chapter.epub
+:export docx               chapter.md → chapter.docx
 :export html out/ch1.html  a name of your own
 :export epub vertical jlreq page=A5 book.epub
                            words for this one export, then the path
@@ -278,6 +279,52 @@ have, goes in as the style it means. A heading that is only a picture is
 named in the table of contents by the picture's words. The book's
 language is read from its prose; code and links are not counted.
 
+## Word
+
+`:export docx` writes a Word document that Word, Pages, WPS and LibreOffice
+open. Headings are in Word's own Heading 1–6 styles, so the navigation pane and
+a table of contents see them. Paragraphs are Body Text, their first line
+indented two characters on a Chinese or Japanese page. Bold, italic,
+strikethrough, highlight, code and links keep their look. Lists are Word's
+bullets and numbers, nested, starting where yours start. Quotations use the
+Quote style and code blocks Source Code. Tables repeat their heading row on each
+page. Footnotes are Word footnotes, and readings, `{漢字|hàn zì}` or `<ruby>`, are
+Word's phonetic guide. A PNG, JPEG or GIF picture beside the file goes in, no
+wider than the text. The front matter's title, author and date become the
+file's properties (File ▸ Properties) and are not printed. The paper is
+`page=`, and `font=` names the face; without it Word's SimSun and Times New
+Roman are used. A formula goes in as the TeX you typed. Vertical layout and
+hanging punctuation are not set in a Word file yet; the export says so when
+they are on.
+
+## Importing Word files
+
+```
+ye --import-word 文章.docx           文章.docx → 文章.md, beside it
+ye --import-word 旧稿.doc            a Word 97–2003 file
+ye --import-word 稿件/ --out md/     every .doc and .docx under 稿件, into md/ in the same tree
+ye --import-word 稿件/ --overwrite   write over .md files already there
+```
+
+Each Word file becomes a Markdown file. Nothing is guessed. A heading is a
+paragraph in one of Word's Heading styles and nothing else: a bold first line
+stays a bold paragraph, and large type stays a paragraph. Each Word paragraph
+stays one paragraph, however short, and an indented paragraph is a paragraph,
+not a quotation. A paragraph in Word's Quote style is a quotation. Lists,
+tables, footnotes, links, bold, italic and readings (Word's phonetic guide,
+written `{漢字|hàn zì}`) carry over. The file's title, author, created and
+modified dates, and its own name as `source`, go in front matter at the top,
+only those that have a value. Pictures go in a `NAME.assets` folder beside the
+`.md`.
+
+It needs [pandoc](https://pandoc.org) on the PATH (`brew install pandoc`). A
+`.doc` is made a `.docx` first by LibreOffice if it is installed, otherwise by
+macOS's `textutil`. `textutil` keeps the words, bold, italic and the properties
+but not Word's styles, so headings and lists from a `.doc` come through
+LibreOffice only. The Word files are only read. An `.md` that is already there
+is left alone unless you add `--overwrite`, and the paths written are printed
+one a line.
+
 ## What carries over
 
 All three formats carry:
@@ -345,6 +392,7 @@ file that is already there, as a compiler would:
 ye --export html ch1.md            ch1.md → ch1.html, beside it
 ye --export typst ch1.md           ch1.md → ch1.typ
 ye --export epub ch1.md            ch1.md → ch1.epub
+ye --export docx ch1.md            ch1.md → ch1.docx
 ye --export epub vertical jlreq page=A5 ch1.md
 ye --export pdf book.typ           book.typ → book.pdf
 ye --export pdf ch1.md             Markdown → Typst → PDF

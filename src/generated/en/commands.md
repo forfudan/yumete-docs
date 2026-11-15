@@ -237,7 +237,7 @@
 | `:recent-projects` |  | recent projects |
 | `:tutor` |  | tutorial: copies the lesson into a file of your own to learn by editing |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<topic>` | keys and commands, opened as a searchable file |
-| `:export` `:ex` | `html｜typst｜epub｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<path>` | export as html, typst or epub |
+| `:export` `:ex` | `html｜typst｜epub｜docx｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<path>` | export as html, typst, epub or docx |
 | `:export-as-preview` | `html｜pdf｜<path>` | export as the preview draws it: html or pdf for Markdown, pdf for Typst |
 | `:diff` | `<path>` | show changes, by word rather than by line |
 | `:lsp-rename` | `<new name>` | rename the symbol under the cursor everywhere, via the language server |
