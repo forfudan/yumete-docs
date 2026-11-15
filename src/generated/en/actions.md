@@ -103,7 +103,8 @@
 | `paste_clipboard_after` | paste from the system clipboard | `Space p` | `Space p` |  |
 | `move_line_up` | one line up, in the file | `gk` `g Up` | `C-p` `k` `Up` |  |
 | `move_line_down` | one line down, in the file | `gj` `g Down` | `C-n` `j` `Down` |  |
-| `goto_next_line_nonwhitespace` | next line's first non-blank character |  | `Enter` |  |
+| `goto_next_line_nonwhitespace` | next line's first non-blank character |  | `+` `Enter` |  |
+| `goto_prev_line_nonwhitespace` | previous line's first non-blank character |  | `-` |  |
 | `jump_next_word_start` | to the start of the next word, no selection |  | `w` |  |
 | `jump_next_long_word_start` | to the start of the next long word, no selection |  | `W` |  |
 | `jump_prev_word_start` | to the start of the previous word, no selection |  | `b` |  |
@@ -558,8 +559,6 @@
 
 | Key | Plays |
 | --- | --- |
-| `+` | `@jgs` |
-| `-` | `@kgs` |
 | `D` | `@d$` |
 | `C` | `@c$` |
 | `Y` | `@y$` |

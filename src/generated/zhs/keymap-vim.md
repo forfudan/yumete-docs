@@ -64,9 +64,9 @@
 | `(` | 跳到上一句(不选中) | `jump_prev_sentence` |
 | `)` | 跳到下一句(不选中) | `jump_next_sentence` |
 | `*` | 搜索选中内容 | `search_selection` |
-| `+` | 同 `jgs` | `@jgs` |
+| `+` `Enter` | 下一行的第一个非空白字符 | `goto_next_line_nonwhitespace` |
 | `,` | 反向再找一次刚才那个字 | `repeat_find_char_reverse` |
-| `-` | 同 `kgs` | `@kgs` |
+| `-` | 上一行的第一个非空白字符 | `goto_prev_line_nonwhitespace` |
 | `.` | 用新的计数再做一次刚才的改动 | `vim_repeat_last_change` |
 | `/` | 搜索 | `search` |
 | `:` | 命令行，从可视模式打开时作用于选区(vim 的 :) | `vim_command_mode` |
@@ -101,7 +101,6 @@
 | `C-y` | 向上滚动一行(光标位置不变) | `scroll_up` |
 | `C-z` | 挂起到终端；fg 返回 | `suspend` |
 | `Esc` | 回到普通模式(退出可视模式时选区收成光标) | `vim_normal_mode` |
-| `Enter` | 下一行的第一个非空白字符 | `goto_next_line_nonwhitespace` |
 | `Home` | 行首 | `goto_line_start` |
 | `ZQ` | `:quit!` | `:quit!` |
 | `ZZ` | `:x` | `:x` |

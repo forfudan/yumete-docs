@@ -108,7 +108,9 @@ is in [Match mode](../reference/match.md).
 
 vim-surround's keys are built in: `ysiw(` wraps a word as `( word )` and
 `ysiw)` as `(word)`; `ds(` deletes the pair around the cursor and the spaces
-inside it, `ds)` only the pair; `cs(]` changes `( … )` to `[…]`. `b`, `B`, `r`
+inside it, `ds)` only the pair; `cs(]` changes `( … )` to `[…]`. With no pair
+around the cursor, `ds` and `cs` take the next one on the line, as vim's `a(`
+does. `b`, `B`, `r`
 and `a` name `)`, `}`, `]` and `>`, and `q` a straight quote. `t` (or `<`)
 asks for a tag: `ysiwt` then `em` Enter gives `<em>word</em>`, `dst` takes
 tags off, `cst` changes them. `f` asks for a function name: `ysiwf` then

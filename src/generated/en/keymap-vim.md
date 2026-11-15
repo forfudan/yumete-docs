@@ -64,9 +64,9 @@
 | `(` | to the previous sentence, no selection | `jump_prev_sentence` |
 | `)` | to the next sentence, no selection | `jump_next_sentence` |
 | `*` | search for the selection | `search_selection` |
-| `+` | as `jgs` | `@jgs` |
+| `+` `Enter` | next line's first non-blank character | `goto_next_line_nonwhitespace` |
 | `,` | find that character again, in reverse | `repeat_find_char_reverse` |
-| `-` | as `kgs` | `@kgs` |
+| `-` | previous line's first non-blank character | `goto_prev_line_nonwhitespace` |
 | `.` | repeat the last change with a new count | `vim_repeat_last_change` |
 | `/` | search forward | `search` |
 | `:` | command line, over the Visual area when opened from Visual mode (vim's :) | `vim_command_mode` |
@@ -101,7 +101,6 @@
 | `C-y` | scroll up a line, the cursor keeping its place | `scroll_up` |
 | `C-z` | suspend to the shell; fg brings it back | `suspend` |
 | `Esc` | back to Normal mode (vim: leaving Visual mode collapses the selection) | `vim_normal_mode` |
-| `Enter` | next line's first non-blank character | `goto_next_line_nonwhitespace` |
 | `Home` | start of line | `goto_line_start` |
 | `ZQ` | `:quit!` | `:quit!` |
 | `ZZ` | `:x` | `:x` |

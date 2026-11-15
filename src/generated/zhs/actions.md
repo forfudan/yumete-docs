@@ -103,7 +103,8 @@
 | `paste_clipboard_after` | 从系统剪贴板粘贴 | `Space p` | `Space p` |  |
 | `move_line_up` | 上一行(文件里的) | `gk` `g Up` | `C-p` `k` `Up` |  |
 | `move_line_down` | 下一行(文件里的) | `gj` `g Down` | `C-n` `j` `Down` |  |
-| `goto_next_line_nonwhitespace` | 下一行的第一个非空白字符 |  | `Enter` |  |
+| `goto_next_line_nonwhitespace` | 下一行的第一个非空白字符 |  | `+` `Enter` |  |
+| `goto_prev_line_nonwhitespace` | 上一行的第一个非空白字符 |  | `-` |  |
 | `jump_next_word_start` | 跳到下一个词首(不选中) |  | `w` |  |
 | `jump_next_long_word_start` | 跳到下一个大词首(不选中) |  | `W` |  |
 | `jump_prev_word_start` | 跳到上一个词首(不选中) |  | `b` |  |
@@ -558,8 +559,6 @@
 
 | 键 | 等于 |
 | --- | --- |
-| `+` | `@jgs` |
-| `-` | `@kgs` |
 | `D` | `@d$` |
 | `C` | `@c$` |
 | `Y` | `@y$` |

@@ -48,10 +48,14 @@ vim:
   editor, and `"+p`, `"+P` and `"+R` paste or replace from it.
 - `#` reads as the selection's number, so `"#P` with three cursors writes `1`, `2`
   and `3`.
+- `%` is the file's name, `:` the last command line and `/` the last search,
+  under both keymaps; they can be pasted but not written.
 
 Under the vim keymap, `"0` holds the last yank, as in vim: a delete fills the unnamed
 register, and `"0p` still pastes what you yanked. A delete of a line or more also
-goes into `"1`, and the older ones move down to `"2` … `"9`.
+goes into `"1`, and the older ones move down to `"2` … `"9`. A delete within one
+line goes into `"-`, and `".` holds the text the last Insert typed. `.` after
+`"1p` pastes from `"2`, then `"3`, so `"1p..` walks back through the deletes.
 
 Also as in vim, a capital letter adds to its register: `"Ayy` puts the line
 after what `"a` holds, and text added to lines, or lines to text, makes lines.
