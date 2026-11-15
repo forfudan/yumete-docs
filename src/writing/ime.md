@@ -541,9 +541,10 @@ appear in several places at once.
 ### How the panel looks
 
 - **Colours** come from the theme, the same way the completion menu's do: the
-  same background and border, the code in grey, the highlighted candidate in
-  reverse. Change the theme and the panel follows. See
-  [Themes](../guide/themes.md).
+  same background and border. The code, the numbers and the annotations are
+  grey, the keys still owed after a candidate are gold, and the highlighted
+  candidate is a gold bar across the whole panel. Change the theme and the
+  panel follows. See [Themes](../guide/themes.md).
 - **Numbers** are the full-width digits `１２３…` by default. `[panel] markers`
   sets your own, in order. Each must be full width (two cells), or the columns
   come apart: `１２３` and `㊀㊁㊂` work; `123` and `①②③` do not.
