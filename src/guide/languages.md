@@ -158,6 +158,15 @@ A server starts when you first open a saved file of its language. If none of the
 configured programs can be found, the status line says so once. `:diagnostics-all`
 names each running server and where its program is.
 
+The cell right of the mode word says how the file's server is doing. While a server
+starts or works, a spinner turns there. Once it is ready, the cell carries the file's
+loudest diagnostic in the gutter's own marks: a red cell for errors, `!` for warnings,
+`i` for information or hints. It is blank when there is nothing to say, and in prose
+files that have no server. A dim `?` means a server is configured for this language
+(Typst counts, for its preview) but is not running: not installed, failed to start, or
+exited. `:info` says which, which commands it looked for, and counts the errors,
+warnings and information.
+
 A project's own `.yumete/config.toml` can set `[lsp.<name>]` too, so a repository can
 choose its servers for everyone who opens it.
 

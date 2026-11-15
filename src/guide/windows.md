@@ -130,7 +130,8 @@ They use the window next to yours, opening one below if there is none.
 ### Status lines
 
 Every window has its own status line at its foot. The window with the keys
-shows the whole line: mode, input method, file name, `[+]`, the file's marks,
+shows the whole line: mode, the language-server cell (see
+[Language servers](languages.md)), input method, file name, `[+]`, the file's marks,
 position, count and code point; with more than one selection it adds `2/5`,
 and after `/`, `n` or `N` the match the cursor is in, `[3/17]`. The other
 windows show only their file name, `[+]` and `[read-only]`, in faded ink, with
