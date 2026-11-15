@@ -114,7 +114,14 @@ asks for a tag: `ysiwt` then `em` Enter gives `<em>word</em>`, `dst` takes
 tags off, `cst` changes them. `f` asks for a function name: `ysiwf` then
 `print` Enter gives `print(word)`, and `dsf` takes a call's name and brackets
 off. `.` repeats all of them, and a count reaches a pair further out (`2ds(`).
-`ys` takes any motion or object, so `ys$"` quotes to the end of the line.
+`ys` takes any motion or object, so `ys$"` quotes to the end of the line, and a
+count before it is the motion's (`2ysw(` wraps two words). `yss` wraps the line.
+Over whole lines (`ysj`, `ysip`) the marks go on lines of their own. `yS` does
+the same over any motion and indents what it wraps: `ySS{` puts the line
+between `{` and `}` on lines of their own, and `ySiw(` keeps the `(` where the
+word was. In Visual mode `S` wraps the selection: `veS)` gives `(word)`, `VS{`
+puts the lines inside braces on lines of their own, indented, and in a block
+`S` wraps each line's piece. The menu after `ys`, `ds` and `cs` lists every key.
 
 ## Visual mode
 
@@ -270,7 +277,10 @@ also takes Visual `Q` away.
   the commands that open and close folds over a range are not there.
 - The code objects (functions, parameters, tests, HTML elements) have no vim
   spelling, and neither has vim's tag object `it`.
-- vim-surround's visual `S` is not there. Use `ys` with a motion.
+- vim-surround's `cS`, visual `gS`, the `C-]` `C-t` `C-f` replacements and
+  Insert mode's `C-g s` are not there. `yS`, `ySS` and `VS` indent by one of
+  yumete's own indent levels (what `>>` adds) and do not re-indent with `=`. In
+  a block, a line too short to reach the block is left alone.
 - `gh` and `gl` do nothing; use `0` and `$`.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
   side by side with `C-w v` or `:vsplit`; new windows open below and to the

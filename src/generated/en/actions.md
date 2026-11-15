@@ -285,7 +285,7 @@
 | `match_brackets` | go to the other half of the pair | `mm` |  |  |
 | `select_textobject_inner` | select inside the pair | `mi` |  |  |
 | `select_textobject_around` | select the pair and its contents | `ma` |  |  |
-| `surround_add` | surround the selection with a pair | `ms` |  |  |
+| `surround_add` | surround the selection with a pair | `ms` | `S` |  |
 | `surround_delete` | remove the pair | `md` |  |  |
 | `surround_replace` | replace the pair | `mr` |  |  |
 | `jump_view_left` | to the region on the left | `C-w h` `C-w Left` | `C-w h` `C-w Left` |  |
@@ -562,7 +562,6 @@
 | `D` | `@d$` |
 | `C` | `@c$` |
 | `Y` | `@y$` |
-| `S` | `@cc` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
 

@@ -120,6 +120,7 @@
 | `l` `Right` | extend the selection one character right | `extend_char_right` |
 | `o` | to the other end of the selection (vim's Visual o) | `vim_flip_selections` |
 | `R` | replace the selection with the register | `replace_with_yanked` |
+| `S` | surround the selection with a pair | `surround_add` |
 | `t` | extend forward to just before a character | `extend_till_char` |
 | `T` | extend backward to just after a character | `extend_till_prev_char` |
 | `u` | the selection to lowercase, leaving Visual mode (vim's u) | `vim_switch_to_lowercase` |

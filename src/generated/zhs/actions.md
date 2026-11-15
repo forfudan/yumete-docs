@@ -285,7 +285,7 @@
 | `match_brackets` | 跳到配对符号的另一半 | `mm` |  |  |
 | `select_textobject_inner` | 选中配对符号内的内容 | `mi` |  |  |
 | `select_textobject_around` | 选中配对符号及其内容 | `ma` |  |  |
-| `surround_add` | 用配对符号包围选区 | `ms` |  |  |
+| `surround_add` | 用配对符号包围选区 | `ms` | `S` |  |
 | `surround_delete` | 移除配对符号 | `md` |  |  |
 | `surround_replace` | 替换配对符号 | `mr` |  |  |
 | `jump_view_left` | 去左边那一区 | `C-w h` `C-w Left` | `C-w h` `C-w Left` |  |
@@ -562,7 +562,6 @@
 | `D` | `@d$` |
 | `C` | `@c$` |
 | `Y` | `@y$` |
-| `S` | `@cc` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
 

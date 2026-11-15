@@ -246,6 +246,8 @@ vim-surround way: `di(` for `mi(` then `d`, `viw` for `mi w`, `ysiw(` to wrap
 a word, `ds(` for `md(`, `cs(]` for `mr([` (`cs([` writes `[ … ]`). The
 surround keys follow vim-surround: an opening bracket puts a space inside,
 `b B r a q` are aliases, and `t` and `f` ask for a tag or a function name.
+`yS` and `ySS` put the text on lines of their own, indented, and Visual mode's
+`S` wraps the selection (on lines of their own after `V`, each line after `C-v`).
 
 After `d`, `c`, `y`, `vi` and `va`, the text objects work as above: `w`, `W`,
 `s`, `u`, `p`, `m`, `k`, and every pair. `b` and `B` are vim's names for `(`

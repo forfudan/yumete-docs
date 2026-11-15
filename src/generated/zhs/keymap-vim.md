@@ -120,6 +120,7 @@
 | `l` `Right` | 选区向右扩一个字 | `extend_char_right` |
 | `o` | 换到选区的另一头(vim 可视模式的 o) | `vim_flip_selections` |
 | `R` | 用寄存器内容替换选区 | `replace_with_yanked` |
+| `S` | 用配对符号包围选区 | `surround_add` |
 | `t` | 选区向后扩到某个字之前 | `extend_till_char` |
 | `T` | 选区向前扩到某个字之后 | `extend_till_prev_char` |
 | `u` | 选区转小写并退出可视模式(vim 的 u) | `vim_switch_to_lowercase` |
