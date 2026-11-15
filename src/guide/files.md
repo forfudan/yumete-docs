@@ -31,6 +31,9 @@ window showing a preview counts as a window, a sidebar does not.
 
 Quitting with a file unsaved, in any tab, stops, says so and shows that file.
 A `!` after `:q` or `:qa` quits anyway and throws the unsaved changes away.
+A file is unsaved when writing it would produce other bytes than it had when
+last read or saved; a change made to the file outside yumete does not count
+either way.
 
 In a sidebar there is no file to write: `:x` and `ZZ` close the sidebar and
 `:wq` refuses.

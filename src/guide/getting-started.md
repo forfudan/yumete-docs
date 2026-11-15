@@ -112,8 +112,9 @@ is. The full story is in [The input method](../writing/ime.md).
 | `:qa` | close every file and leave |
 
 `:q` refuses while there are unsaved changes, and says so on the line under the
-status line. A `[+]` after the file name on the status line means unsaved
-changes.
+status line. A `[+]` after the file name on the status line means saving
+would change the file: type a character and erase it, or undo back to the last
+save, and the `[+]` goes; change only the encoding (`:encoding`) and it stays.
 
 With the window split (`C-w s`), `:q` closes only the region you are in, and
 the file stays open. See [Windows and the sidebar](./windows.md).
