@@ -80,7 +80,8 @@ In insert mode, start a reference and a list opens under the cursor:
 | --- | --- |
 | `[^` | this file's footnotes, each with its first words, and a new unused number |
 | `](#` | this file's headings, written as anchors |
-| `[[` | the files in this file's folder and its subfolders |
+| `[[` | the files of the project, the ones nearest this file first |
+| `[[name#` | the headings of the file `[[name` opens, found the way `gd` finds it |
 | `[@` | citation keys from the bibliography beside the file |
 
 `Tab` writes the next entry into the text, `Shift-Tab` goes back. The closing
@@ -88,8 +89,7 @@ brackets are added for you. Nothing changes until you press `Tab`, so you can
 type the whole reference by hand and ignore the list. `Enter` and `Esc` keep
 their usual meaning.
 
-`[[` searches only this file's folder and below, not the whole book, so the
-list stays short. What you type matches the whole path, so `rain` finds
+`[[` lists the files nearest this one first. What you type matches the whole path, so `rain` finds
 `part-2/rain`. A file of the same kind as this one is written as its title,
 without the extension.
 

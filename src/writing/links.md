@@ -21,6 +21,8 @@ file; `[[雨夜#雪]]` opens it at that heading.
 
 Typing `[[` offers every file of the project, the ones in this folder first;
 a name no other file shares is offered bare, a shared one with its path.
+Type `#` after the name (`[[雨夜#`) and the list turns to that file's headings,
+written the way `[[雨夜#雪]]` is followed; `[[#` lists this file's.
 `gd` on a link opens the file; `C-o` comes back. `gr` on a link lists the files
 that link **to** it; `gr` anywhere else in a Markdown file lists what links to
 the file you are in.
@@ -73,7 +75,8 @@ to find one. Larger dots have more links.
 ## Links and the wiki
 
 The wiki marks *names* in running text; links are *brackets*. The two meet
-when a file is named like an entry: inside `[[ ]]` the link's colour wins, and
-in prose the name is gold. A folder of entries is itself a folder of notes —
+when a file is named like an entry: nothing inside a link takes the wiki's
+gold (not the page, the alias or the `#heading` of a `[[ ]]`, nor either half
+of `[text](url)`); in prose the name is gold. A folder of entries is itself a folder of notes —
 see [The book's wiki](book#the-books-wiki-wiki) for how a wiki can be a
 folder, or the whole project.
