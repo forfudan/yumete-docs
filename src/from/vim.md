@@ -192,7 +192,7 @@ the last insert, as helix's does.
 | `gD` | the declaration, asked of the language server |
 | `C-e` `C-y` | scroll a line down, up |
 | `''` | back where the last jump came from; again, forward |
-| `C-y` `C-e` in insert mode | type the character above, below the cursor |
+| `C-y` `C-e` in insert mode | type the character above, below the cursor; while the completion list is open, keep / cancel the entry, as in vim's popup menu |
 | `]c` `[c` | next, previous change |
 | `C-c` `C-d` `C-g u` in insert mode | leave Insert, take an indent off the line, start a new undo step |
 

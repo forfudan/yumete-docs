@@ -22,7 +22,10 @@ file; `[[雨夜#雪]]` opens it at that heading.
 Typing `[[` offers every file of the project, the ones in this folder first;
 a name no other file shares is offered bare, a shared one with its path.
 Type `#` after the name (`[[雨夜#`) and the list turns to that file's headings,
-written the way `[[雨夜#雪]]` is followed; `[[#` lists this file's.
+written the way `[[雨夜#雪]]` is followed; `[[#` lists this file's. Beside each
+file the list shows its folder, and beside each heading its level and the heading
+above it (`### 渡口 ›`). The keys are those of
+[Completing references](book.md#completing-references).
 `gd` on a link opens the file; `C-o` comes back. `gr` on a link lists the files
 that link **to** it; `gr` anywhere else in a Markdown file lists what links to
 the file you are in.
