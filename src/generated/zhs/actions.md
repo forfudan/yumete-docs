@@ -408,6 +408,7 @@
 | `yume_installed_table` | 改用安装版码表 | `Space z t` | `Space z t` |  |
 | `yume_table_source` | 查看码表来源 | `Space z w` | `Space z w` |  |
 | `yume_data_location` | 查看数据位置 | `Space z W` | `Space z W` |  |
+| `yume_words` | yumete 学到的词 | `Space z u` | `Space z u` |  |
 | `yume_commit_default` | 默认(由方案决定) | `Space z m 0` | `Space z m 0` |  |
 | `yume_commit_delayed` | 顶字 | `Space z m d` | `Space z m d` |  |
 | `yume_commit_unique` | 唯一 | `Space z m u` | `Space z m u` |  |

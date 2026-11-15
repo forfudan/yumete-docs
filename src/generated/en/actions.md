@@ -408,6 +408,7 @@
 | `yume_installed_table` | use the installed code table | `Space z t` | `Space z t` |  |
 | `yume_table_source` | where the code table came from | `Space z w` | `Space z w` |  |
 | `yume_data_location` | where the data is | `Space z W` | `Space z W` |  |
+| `yume_words` | what yumete learned | `Space z u` | `Space z u` |  |
 | `yume_commit_default` | default (scheme decides) | `Space z m 0` | `Space z m 0` |  |
 | `yume_commit_delayed` | delayed | `Space z m d` | `Space z m d` |  |
 | `yume_commit_unique` | unique | `Space z m u` | `Space z m u` |  |

@@ -87,6 +87,7 @@
 | `:shot` | `screen｜png｜html｜txt <path>` | screenshot: to the clipboard by default, or a file in Downloads with `png`/`html`/`txt` |
 | `:yume` `:y` | `on｜off` | Yume input method: on or off |
 | `:yume-where` |  | where the table and other data are looked for, in order |
+| `:yume-words` |  | the words, order and pins yumete learned: look and delete |
 | `:yume-which` |  | the current scheme and where its table came from |
 | `:yume-scheme` `:yume-s` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | start typing: load a scheme (with no name, the configured one) |
 | `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | candidate annotations: off, next, or a named mode |

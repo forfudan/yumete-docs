@@ -94,6 +94,7 @@
 | `[ime] single_char` | `"both"` | **單字派（逐字）** — 延遲上屏與唯一上屏時，候選中出不出詞 (`both` 字詞同出, `primary` 主單副詞, `strict` 嚴格單字) |
 | `[ime] sentence_single_char` | `"strict"` | **單字派（整句）** — 整句上屏時，候選中出不出詞 (`both` 字詞同出, `primary` 主單副詞, `strict` 嚴格單字) |
 | `[ime] start` | `false` | **啓動時加載碼表** — 默認關閉：分詞模型照常加載，碼表在第一次輸入中文時加載 |
+| `[ime] learn` | `false` | **記住在 yumete 裏學到的** — 默認關閉：只讀宇夢 App 的詞庫、調頻、固頂，學到的不寫盤。打開後另存一份在 yumete 自己的文件夾，不碰 App 的文件；:yume-words 查看和删除 |
 | `[ime] system` | `"auto"` | **Normal 模式下讓開系統宇夢輸入法** — Normal 模式下請系統宇夢輸入法讓開，以免按鍵被它攔截 (`auto` 自動, `keep` 不處理) |
 | `[ime] others` | `"off"` | **Normal 模式下讓開其他輸入法** — Normal 模式下把鼠須管、搜狗等切到英文；macOS 上切回時約三次失敗一次 (`off` 不動, `aside` 切到英文, `aside-and-back` 切到英文再切回) |
 | `[panel] display` | `"box"` | **候選位置** — 打字時候選顯示在哪：光標旁的候選框、窗口底行，還是光標下一行 (`box` 候選框, `bottom` 底行, `inline` 光標下一行) |

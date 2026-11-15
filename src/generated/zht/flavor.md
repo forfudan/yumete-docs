@@ -190,6 +190,7 @@ Under vim:
 | 輸入法 | `Space z t` | 改用安裝版碼表 |  |
 | 輸入法 | `Space z w` | 查看碼表來源 |  |
 | 輸入法 | `Space z W` | 查看數據位置 |  |
+| 輸入法 | `Space z u` | yumete 學到的詞 |  |
 
 ### `recent_files` {#recent_files}
 

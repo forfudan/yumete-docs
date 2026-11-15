@@ -87,6 +87,7 @@
 | `:shot` | `screen｜png｜html｜txt <路徑>` | 截圖：默認複製到剪貼板；png/html/txt 則保存到下載文件夾 |
 | `:yume` `:y` | `on｜off` | 宇夢輸入引擎開關：on 打開、off 關閉 |
 | `:yume-where` |  | 碼表和數據的查找位置及順序 |
+| `:yume-words` |  | yumete 學到的詞、調頻、固頂：查看和删除 |
 | `:yume-which` |  | 當前方案及碼表來源 |
 | `:yume-scheme` `:yume-s` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 開始輸入：載入方案(不寫名稱則用配置中的) |
 | `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | 候選註解：關、下一個，或指定模式 |

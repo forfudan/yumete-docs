@@ -190,6 +190,7 @@ On: Space z opens the input method menu. Off: the key that switches between Chin
 | input method | `Space z t` | use the installed code table |  |
 | input method | `Space z w` | where the code table came from |  |
 | input method | `Space z W` | where the data is |  |
+| input method | `Space z u` | what yumete learned |  |
 
 ### `recent_files` {#recent_files}
 

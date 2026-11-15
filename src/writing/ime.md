@@ -647,11 +647,25 @@ them, so without a loaded 碼表 they are refused the same way the commands are.
 If the Yume app is installed, yumete reads the words you taught it (用户词库,
 including the shared 拼音 dictionary), your 固顶 pins and your 调频 order (used
 when the scheme's adaptive ordering is on) — read only; yumete never writes
-the app's files. They are read again when the app saves them. What yumete
-learns while you type (new words, shorter codes, its own 调频 and pins) goes to
-yumete's own folder (`~/.local/share/yumete/yume/<scheme>/`), loaded after the
-app's. `:yume-where` lists which files were read and how many entries each
-holds.
+the app's files. They are read again when the app saves them. yumete never writes the app's files. What yumete itself learns (new words,
+shorter codes, the choices it counts, pins set in yumete) is kept only when
+`[ime] learn = true` (off by default), in yumete's own folder
+(`~/.local/share/yumete/yume/<scheme>/`), and holds only what yumete learned.
+The two are combined while you type without either overwriting the other:
+words from both, 调频 counts added together (the app's 5 and yumete's 2 count
+as 7), and yumete's pins after the app's. A change made in the app shows at
+once. With learning off, yumete's existing files are still read. `:yume-where`
+lists which files were read, how many entries each holds, and whether learning
+is on.
+
+`:yume-words` (or `Space z u`, like the app's ⌃⇧U) opens a page of what yumete
+learned: 词库, 调频, 固顶, and 拼音调频 for schemes with a shared pinyin
+dictionary. `Tab` also shows the app's entries, greyed and read only. `d`
+deletes yumete's copy of the row under the cursor (a whole word in 词库), in
+its file and in the input method at once; an entry the app also has stays, as
+the app's. `u` puts deletions back, latest first, until the page closes. `y`
+copies the row, `Y` the list as TSV, `/` searches, `s` switches to the next
+scheme, `q` closes.
 
 **单字派** works as in the app, with its own setting for each way of
 committing: `[ime] single_char` when committing character by character (延迟,

@@ -87,6 +87,7 @@
 | `:shot` | `screen｜png｜html｜txt <路径>` | 截图：默认复制到剪贴板；png/html/txt 则保存到下载文件夹 |
 | `:yume` `:y` | `on｜off` | 宇梦输入引擎开关：on 打开、off 关闭 |
 | `:yume-where` |  | 码表和数据的查找位置及顺序 |
+| `:yume-words` |  | yumete 学到的词、调频、固顶：查看和删除 |
 | `:yume-which` |  | 当前方案及码表来源 |
 | `:yume-scheme` `:yume-s` | `lingming｜xingchen｜qingyun｜riyue｜pinyin` | 开始输入：载入方案(不写名称则用配置中的) |
 | `:yume-annotation` | `off｜next｜multi｜double｜<模式名>` | 候选注解：关、下一个，或指定模式 |
