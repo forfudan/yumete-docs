@@ -20,7 +20,7 @@ work, and the tools that show what you have changed.
 | `:quit-window` (`:close`) | close this region, but never the last window |
 | `:quit-others` (`:only`) | keep this window; close the other windows and the sidebars |
 | `:quit-all` (`:qa`) | quit |
-| `:quit-error` (`:cquit`, `:cq`) | quit with exit status 1, or the one given (`:cq 2`); git takes it as "abort the commit". Unsaved files stop it; `:cq!` quits anyway |
+| `:quit-error` (`:cquit`, `:cq`) | quit with exit status 1, or the one given (`:cq 2`); git takes it as "abort the commit". **It discards every unsaved change without asking**, as vim's does |
 | `:buffer-close` (`:bc`) | close this file; the windows stay |
 
 The tabs along the top are the open files and a window shows one of them, as

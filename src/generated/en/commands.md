@@ -42,7 +42,7 @@
 | `:quit-window` `:close` `:clo` |  | close this region, but never the last window (vim's `:close`, short: `:clo`) |
 | `:quit-others` `:only` `:on` |  | keep only this window; close other windows and sidebars (vim's `:only`, short: `:on`) |
 | `:quit-all` `:qa` |  | close all files and quit (short: :qa) |
-| `:quit-error` `:cquit` `:cq` | `<0–255>` | quit with an exit status (1 if not given), so the program that opened yumete gives up — git aborts the commit; ! discards changes |
+| `:quit-error` `:cquit` `:cq` | `<0–255>` | quit with an exit status (1 if not given), so the program that opened yumete gives up — git aborts the commit; every unsaved change is discarded |
 | `:write-quit` `:wq` | `<path>` | always save, then quit (short: :wq; :x saves only if changed) |
 | `:write-quit-all` `:wqa` `:xa` |  | save every file that changed, then quit |
 | `:exit` `:x` `:xit` | `<path>` | save if changed, then quit (short: :x, also :xit) |
