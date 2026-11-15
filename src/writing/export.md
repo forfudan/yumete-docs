@@ -249,8 +249,14 @@ its `#quote` when it is in one.
 page. A vertical page becomes a vertical book that turns from right to left,
 as a Chinese or Japanese book does, whatever language the page is in.
 Formulas, figures and pictures in a line go in as pictures,
-and the headings become the table of contents. The book's title is the first
-heading, or the file's name.
+and the headings become the table of contents. Each chapter is a page of its
+own, so a reader opens a long book quickly: a chapter starts at each heading of
+the highest level the file uses, but when one such heading comes first and the
+rest are lower (`# 书名`, then `## 第一章`…), it is the book's title and the
+chapters are the `##` headings. Links to a heading in another chapter still
+lead there, and a footnote stays at the end of the chapter that first cites
+it, with its number in the whole book. The book's title is the first heading,
+or the file's name.
 
 Open it in Apple Books, Thorium or any EPUB 3 reader. How a reader sets
 vertical text is up to the reader; older ones set every book horizontally.
