@@ -366,6 +366,8 @@ compiler on the PATH (`brew install typst`): a `.typ` file is compiled as it
 is, with `#include` and images resolved from its own folder; a Markdown file
 goes through the Typst export above first. Your config's `[export]` settings
 apply, as they do to `:export`.
+A `.typ` file sets its own page and fonts, so `page=`, `font=` and the other
+words do not apply to it; the run says they were left out.
 
 ## Seeing it before you export
 
