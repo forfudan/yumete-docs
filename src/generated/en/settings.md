@@ -108,7 +108,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] word_completion` | `7` | **word completion** — after this many characters, Latin letters or Chinese alike, list words that appear in the open files. C-n lists them at any time (0–20) |
+| `[editor] word_completion` | `7` | **word completion** — after this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20) |
 | `[editor] completion_page_size` | `6` | **completion page size** — how many items the word, code and shell completion lists show at once (1–20) |
 | `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it (`off` off, `basic` basic, `full` full) |
 | `[editor] indent_width` | `4` | **indent width** — how many columns > adds and < takes away, and how many spaces Tab types (1–16) |
