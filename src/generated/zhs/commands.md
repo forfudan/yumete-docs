@@ -220,7 +220,7 @@
 | `:genda-top-buffers` `:gtb` | `<字数>` | 跟打：所有打开的文件里最常用的 N 个汉字 |
 | `:genda-top-working` `:gtw` | `<字数>` | 跟打：工作目录下文本文件里最常用的 N 个汉字 |
 | `:genda-top-project` `:gtp` | `<字数>` | 跟打：项目里最常用的 N 个汉字 |
-| `:genda-article` | `buffer｜chars-1-500｜chars-501-1000｜chars-1001-1500` | 跟打：换文章，当前文件或宇浩字频里的常用单字 |
+| `:genda-top-chars` `:gtc` | `<N>｜<M-N>` | 跟打：宇浩字频里的常用单字，N 取第 1 到第 N 个，M-N 取第 M 到第 N 个（默认 1-500） |
 | `:genda-hint` | `on｜off` | 跟打：在文章框下边显示下一个字的编码（取自当前宇浩方案），on/off，不带参数则切换 |
 | `:genda-auto` | `on｜off` | 跟打：打完一段自动换到下一段，on/off，不带参数则切换 |
 | `:genda-goal` | `off` | 跟打：说出达标条件；off 全部取消 |

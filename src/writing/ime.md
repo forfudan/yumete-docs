@@ -883,8 +883,13 @@ pad, the **成绩** table lists the results.
 :genda-top-buffers         … of all open files (500 when no number is given)
 :genda-top-working         … of the text files under the working directory
 :genda-top-project         … of the project
-:genda-article chars-1-500 Yume's 500 most common characters (also 501–1000, 1001–1500)
+:genda-top-chars 500       Yume's 500 most common characters, by Yume's own frequencies
+:genda-top-chars 501-1000  … ranks 501 to 1000 (gtc for short; 1-500 when no number is given)
 ```
+
+`:genda-top` counts this file's own characters; `:genda-top-chars` takes ranks
+of Yume's frequency list, and says how many characters the list has when the
+ranks go past its end.
 
 A segment ends when it is as long as the article's segment and its last
 character is right; wrong characters are counted, and each costs five
@@ -909,6 +914,10 @@ it commits, so those fields stay empty.
 | `C-o` | switch between the chosen segment length and the whole article as one segment (`:genda-whole`); either way the article starts again |
 | `Tab` | the history; there `j`/`k` pick a row, `y` copies its score line, `Y` the whole history as TSV, `d` deletes the picked record from the history and `u` brings back what `d` deleted, latest first, until you leave the history |
 | `Esc` | clear the code being typed; with none, pause. Paused, `Enter` goes on, `y` copies the score line, `q` or `:q` closes; another `Esc` stays paused |
+
+`:` opens the command line while you type too; the clock stops while it is open
+and runs on when it closes. Where the next character to type is a colon (`:` or
+`：`), or while a code is being composed, `:` types instead: press `Esc` first.
 
 `:genda-next`, `:genda-previous`, `:genda-retry`, `:genda-shuffle`,
 `:genda-copy` and `:genda-copy-history` do the same from the `:` line. The

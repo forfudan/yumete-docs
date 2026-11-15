@@ -220,7 +220,7 @@
 | `:genda-top-buffers` `:gtb` | `<number of characters>` | typing trainer: the N most frequent Chinese characters in every open buffer |
 | `:genda-top-working` `:gtw` | `<number of characters>` | typing trainer: the N most frequent Chinese characters in the text files under the working directory |
 | `:genda-top-project` `:gtp` | `<number of characters>` | typing trainer: the N most frequent Chinese characters in the project |
-| `:genda-article` | `buffer｜chars-1-500｜chars-501-1000｜chars-1001-1500` | typing trainer: another article, the current file or Yume's most frequent characters |
+| `:genda-top-chars` `:gtc` | `<N>｜<M-N>` | typing trainer: Yume's common characters, by Yume's own frequencies: ranks 1 to N, or M-N (1-500 by default) |
 | `:genda-hint` | `on｜off` | typing trainer: the next character's code under the article, from the current Yume scheme; on/off, bare flips |
 | `:genda-auto` | `on｜off` | typing trainer: a finished segment brings up the next by itself; on/off, bare flips |
 | `:genda-goal` | `off` | typing trainer: say the goal; off takes it all off |
