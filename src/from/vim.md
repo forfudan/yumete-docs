@@ -282,6 +282,7 @@ also takes Visual `Q` away.
   yumete's own indent levels (what `>>` adds) and do not re-indent with `=`. In
   a block, a line too short to reach the block is left alone.
 - `gh` and `gl` do nothing; use `0` and `$`.
+- `:r` is `:replace`, not `:read`; to put a file's text in, use `:read <file>`.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
   side by side with `C-w v` or `:vsplit`; new windows open below and to the
   right, as with vim's `splitbelow` and `splitright`, under either keymap. `C-w n` opens a blank window below at once; `:new` is helix's: a new empty buffer in this window,
