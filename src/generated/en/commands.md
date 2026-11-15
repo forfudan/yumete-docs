@@ -197,7 +197,7 @@
 | `:buffer` |  | open files: list, switch, close |
 | `:buffer-next` `:bn` |  | next |
 | `:buffer-previous` `:bp` |  | previous |
-| `:buffer-close` `:bc` |  | close this file (`buffer-close!` discards changes) |
+| `:buffer-close` `:bc` `:bclose` `:bd` `:bdelete` `:bw` `:bwipeout` |  | close this file (`buffer-close!` discards changes) |
 | `:buffer-close-others` `:bco` |  | close every other file, keeping those with unsaved changes (`buffer-close-others!` discards them) |
 | `:buffer-close-all` `:bca` |  | close every file, keeping those with unsaved changes (`buffer-close-all!` discards them) |
 | `:format` `:fmt` |  | format this file as configured ([language.markdown] format = …) |

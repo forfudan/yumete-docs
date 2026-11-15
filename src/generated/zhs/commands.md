@@ -197,7 +197,7 @@
 | `:buffer` |  | 打开的文件：列出、切换、关闭 |
 | `:buffer-next` `:bn` |  | 下一个 |
 | `:buffer-previous` `:bp` |  | 上一个 |
-| `:buffer-close` `:bc` |  | 关闭这个文件(`buffer-close!` 放弃改动) |
+| `:buffer-close` `:bc` `:bclose` `:bd` `:bdelete` `:bw` `:bwipeout` |  | 关闭这个文件(`buffer-close!` 放弃改动) |
 | `:buffer-close-others` `:bco` |  | 关闭其他文件，有未保存改动的留下(`buffer-close-others!` 放弃改动) |
 | `:buffer-close-all` `:bca` |  | 关闭所有文件，有未保存改动的留下(`buffer-close-all!` 放弃改动) |
 | `:format` `:fmt` |  | 按配置格式化此文件([language.markdown] format = …) |
