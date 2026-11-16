@@ -38,9 +38,6 @@
 | `:check-merge` |  | list the merge conflicts in this file |
 | `:check-punct` |  | check punctuation: half-width marks in Chinese, `...` for ……, and unclosed 「」()《》 |
 | `:convert` | `s｜t｜tw｜hk｜jp｜c｜g s｜t｜tw｜hk｜jp｜c｜g` | simplified/traditional conversion via opencc; :convert lists the pairs |
-| `:convert-opencc` |  | whether opencc is installed, where, and which version |
-| `:convert-opencc-install` |  | install opencc (runs on macOS; elsewhere prints the command) |
-| `:convert-opencc-update` |  | update opencc |
 | `:quit` `:q` |  | close this region; in the last window, quit the editor (`quit!` discards changes) |
 | `:quit-window` `:close` `:clo` |  | close this region, but never the last window (vim's `:close`, short: `:clo`) |
 | `:quit-others` `:only` `:on` |  | keep only this window; close other windows and sidebars (vim's `:only`, short: `:on`) |

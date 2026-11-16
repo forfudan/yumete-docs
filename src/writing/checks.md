@@ -166,15 +166,14 @@ are never reported.
 
 ## Simplified and traditional: `:convert`
 
-`:convert` converts the whole file between simplified and traditional forms. It
-runs [OpenCC](https://github.com/BYVoid/OpenCC), which needs to be installed and
-on `PATH`.
+`:convert` converts the whole file between simplified and traditional forms,
+using [OpenCC](https://github.com/BYVoid/OpenCC)'s conversion and dictionaries,
+which are built into yumete: nothing needs to be installed.
 
 ```
 :convert s t        simplified to traditional
 :convert t s        traditional to simplified
 :convert            list the codes and which pairs work
-:convert-opencc     is opencc installed, where, which version
 ```
 
 | Code | Form |
@@ -187,15 +186,14 @@ on `PATH`.
 | `c` | mainland standard traditional forms |
 | `g` | standard forms for classical texts |
 
-`:convert!` also converts vocabulary where OpenCC can (`:convert! s tw` turns
-mainland computer terms into Taiwan ones). This changes the word count and
-cannot be reversed by converting back, so it needs the `!`.
+`:convert!` also converts vocabulary between simplified and Taiwan
+(`:convert! s tw` turns mainland computer terms into Taiwan ones, `:convert! tw s`
+the other way). This changes the word count and cannot be reversed by converting
+back, so it needs the `!`. Between simplified and Hong Kong only characters are
+converted.
 
 One conversion is one undo: press `u` to get the file back. Converting back the
 other way is not an undo, since the round trip is not exact.
-
-On macOS, `:convert-opencc-install` runs `brew install opencc`. On other systems
-it prints the command for you to run.
 
 To convert only the selection, use the case group: under the helix keymap
 `` ` `` then `s` (to simplified), `t`, `w` (Taiwan), `k` (Hong Kong), `c`, `g`,

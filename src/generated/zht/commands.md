@@ -38,9 +38,6 @@
 | `:check-merge` |  | 列出這份文件裏的合併衝突 |
 | `:check-punct` |  | 檢查標點：中文裏的半角逗號句號、`...`，以及未閉合的「」()《》 |
 | `:convert` | `s｜t｜tw｜hk｜jp｜c｜g s｜t｜tw｜hk｜jp｜c｜g` | 簡繁轉換(用 opencc)；:convert 列出可用的轉換 |
-| `:convert-opencc` |  | opencc 是否已安裝、安裝位置、版本 |
-| `:convert-opencc-install` |  | 安裝 opencc(macOS 上直接運行，其他系統只打印命令) |
-| `:convert-opencc-update` |  | 把 opencc 升級到最新版 |
 | `:quit` `:q` |  | 關閉當前區域；若是最後一個窗口則退出編輯器(`quit!` 放棄改動) |
 | `:quit-window` `:close` `:clo` |  | 關閉當前區域，但不關閉最後一個窗口(vim 的 `:close`，簡寫 `:clo`) |
 | `:quit-others` `:only` `:on` |  | 只保留當前窗口，關閉其他窗口和側欄(vim 的 `:only`，簡寫 `:on`) |
