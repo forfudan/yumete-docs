@@ -142,7 +142,7 @@
 | `:indent-width` | `<width, 1–16>` | indent width: the spaces Tab types, and how far > and < shift |
 | `:hard-wrap` | `<columns>` | hard-wrap to a width without changing content: the selection or the unit at the cursor; 0 joins each into one line; no number uses the hard_wrap setting |
 | `:align` | `<character>` | align the selected lines on a character (= by default) |
-| `:sort` | `-r｜-i` | sort the selections' texts when there are several, else the selected lines, or every line; by code point, -r reversed, -i ignoring case |
+| `:sort` | `-r｜-i｜n｜u …` | sort several selections' texts, else the selected lines or every line; by code point, -r reversed, -i ignoring case, n by number, u unique |
 | `:split-join` |  | put the items in the brackets around the cursor one per line, or join them back |
 | `:reflow` | `<columns>` | reflow the selection to a width (80 columns by default) |
 | `:auto-pairs` | `off｜basic｜full` | auto-close brackets: off, basic, full; no argument shows the current one |
@@ -158,7 +158,7 @@
 | `:replace-project` `:rp` |  | search and replace in the project |
 | `:pipe-before` `:insert-output` | `<command>` | run a shell command and insert its output before the selection |
 | `:pipe-after` `:append-output` | `<command>` | run a shell command and insert its output after the selection |
-| `:read` | `<path>` | put a file's contents after the selection |
+| `:read` | `<path>` | put a file's contents, or a shell command's output (`!cmd`), below the cursor's line |
 | `:view-fold` |  | make a fold of the selected lines |
 | `:keep-pipe` | `<command>` | keep the selections a shell command succeeds on |
 | `:git-lazygit` `:lazygit` |  | look at changes, stage and commit in lazygit; q comes back |
