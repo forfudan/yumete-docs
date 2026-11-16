@@ -174,6 +174,7 @@ characters.
 :view-wrap-width 0     drop the measure and wrap at the window again
 :view-wrap-width       say which width it wraps at
 :view-centre           centre a page written to a measure, or not
+:view-scrollbar        a column at each window's right for the scrollbar, or not
 ```
 
 With wrapping off the page follows the cursor sideways. vim's `zh` `zl` (a column),
@@ -194,8 +195,18 @@ With soft wrap on, a wrapped row and a line you ended yourself look the same.
 `[editor] show_line_breaks = true`, or `:view-line-breaks`, draws a faint `␊`
 after every line that ends in a line break (the mark a table cell uses), on
 vertical pages under the column's last character. It takes no room: a row that
-fills the window goes without one. Off by default, as helix's
+fills the window puts its mark in the scrollbar's column past it (or in the gap
+between two pages), and goes without one only when there is no such column
+(`:view-scrollbar off`). Off by default, as helix's
 `whitespace.render.newline` and vim's `listchars=eol:` are.
+
+Every window keeps its rightmost column for a scrollbar: a tinted run of cells
+showing where the page is in the file, measured by characters, as tall as the
+share of the file on screen. While the whole file fits, the column is a blank
+margin, so the text does not re-wrap as it grows. The cursor after a row that
+fills the window stands in that column. Markdown and Typst previews draw the bar
+on their frame's right wall. `:view-scrollbar off` (or `[editor] scrollbar =
+false`) gives the column back to the text. Vertical pages have none.
 
 ## Line numbers: `:line-numbers`
 
@@ -285,6 +296,7 @@ To keep it, set `measure` in the config:
 [editor]
 measure = 50   # wrap here; 0 is the window's width
 centre_measure = true   # the measured page stands in the middle; false keeps it at the left
+scrollbar = true        # a column at each window's right for the scrollbar
 ruler = 80     # only a cue: tint whatever runs past column 80
 ```
 
