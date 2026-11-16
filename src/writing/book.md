@@ -196,7 +196,22 @@ lists those with their line numbers.
 
 ### Names written wrong: `:check-names`
 
-`:check-names` uses the wiki to find a name written with a homophone in one
-place, the kind of slip an input method makes when the wrong candidate is
-taken. It needs the reading table from the input method's data; without it, it
-reports nothing.
+`:check-names` compares the file against the book's names: the wiki's entries
+and every word in `.yumete/words.txt`. It lists each place a name is written
+another way, and why: **同音**, one character replaced by a homophone, the slip an
+input method makes when the wrong candidate is taken (醉翁停 for 醉翁亭);
+**繁简**, 简体 for 繁體 or the reverse, in any number of characters (瀋鶴年 for
+沈鹤年); **异体**, a variant form of the same character (説 for 說); and
+**兼容字**, a compatibility ideograph or Kangxi radical in place of the ordinary
+character. Characters that only look alike are not reported. `:check-names book`
+checks every file of the book (the Markdown files the links panel reads, not the
+wiki's own pages), and each row names its file so `gf` goes there. Homophones
+need the reading table from the input method's data; without it the other three
+are still checked and the status line says so. To keep a variant on purpose,
+list that spelling in `words.txt` too: a spelling that is on the list is never
+reported. It runs only when you ask.
+
+```
+:check-names        this file
+:check-names book   every file of the book
+```
