@@ -741,3 +741,4 @@
 | `undo_at_typing_start` | 撤销点从开始打字处算 | ✓ |  |
 | `yank_every_selection` | 多光标时 y 复制每一段选区 | ✓ |  |
 | `delete_stays_in_line` | 删字不跨行 |  | ✓ |
+| `records_paste` | 录宏时粘贴进来的文字也录进去，和打出来的一样 |  | ✓ |

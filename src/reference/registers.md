@@ -103,7 +103,7 @@ plays the last one recorded.
 The keys are written as helix writes them, under both keymaps: a character as
 itself, any other key in angle brackets, so `ihello` then `Esc` is
 `ihello<esc>`. `"ap` pastes a macro to read or change, and a line yanked into
-a register plays as keys. A line break in it is `Enter`, as in vim.
+a register plays as keys. A line break in it is `Enter`, as in vim. Chinese typed through the built-in input method is recorded as the characters it committed, so the macro types them back with no input method; under the vim keymap a paste from the terminal in Insert mode or at a prompt is recorded the same way.
 
 | Key | Written |
 | --- | --- |
