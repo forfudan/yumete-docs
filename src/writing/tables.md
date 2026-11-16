@@ -223,7 +223,9 @@ three ways to draw it, and works only in the window view:
     ┆   ┆thirty-two columns of width     ┆
   ```
 
-- **Folded**: the cell is cut at the column width, and a `>` marks the cut.
+- **Folded**: the cell is cut at the column width, and a `>` marks the cut. When
+  the whole table fits the window with room to spare, the cut columns share that
+  room, so a wide window shows more of each, never more than the widest cell.
 
   ```
   1 ┆1  ┆short                           ┆
