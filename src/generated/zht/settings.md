@@ -126,6 +126,7 @@
 | `[editor] autosave` | `true` | **自動備份** — 未保存時在文件旁保留副本，崩潰後可恢復 |
 | `[editor] session` | `false` | **恢復會話** — 不帶文件名啓動時：打開空白文檔，還是恢復上次的文件 |
 | `[editor] remember` | `true` | **記住打開過的文件和位置** — 關閉後不再記録或讀取：各文件上次的位置、最近的文件和項目、上次的會話 |
+| `[editor] history` | `true` | **保存時留下歷史版本** — 每次保存在書的 .yumete/history/ 裏留一份（書外的文件留在數據目録裏）：當天的全留，七天内每小時一份，六十天内每天一份，起了名字的一直留。--private 或不記住打開過的文件時不留 |
 | `[editor] insert_final_newline` | `true` | **文末添加換行符** — 保存時在文末補上缺少的換行符，使用該文件自己的行尾(CRLF 文件補 CRLF)。空文件不補 |
 | `[editor] modeline` | `true` | **讀 vim 的 modeline** — 文件首尾五行内的 vim: set ft=… ts=…: 可設置文件類型、縮進和硬換行寬度 |
 

@@ -126,6 +126,7 @@
 | `[editor] autosave` | `true` | **autosave** — keep a copy beside unsaved files to recover from a crash |
 | `[editor] session` | `false` | **session** — when started with no file: a blank page, or the files that were open last time |
 | `[editor] remember` | `true` | **remember files and places** — when off, none of this is saved or read: the line each file was left on, recent files and projects, the last session |
+| `[editor] history` | `true` | **keep a version at each save** — every save keeps a copy in the book's .yumete/history/ (files outside a book: in the data directory): all of today, one an hour for a week, one a day for sixty days, named ones for good. Nothing is kept with --private or when remember is off |
 | `[editor] insert_final_newline` | `true` | **add a final newline** — on save, add a missing final newline in the file's own line ending; an empty file stays empty |
 | `[editor] modeline` | `true` | **read vim modelines** — vim: set ft=… ts=…: in the first or last five lines of a file sets its type, indentation and hard-wrap width |
 

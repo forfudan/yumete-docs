@@ -633,6 +633,7 @@
 | `first_entry` | 第一項 |  |
 | `last_entry` | 最後一項 |  |
 | `cycle_hidden_files` | 切換跳過的文件：隱藏/忽略 | `A-h` |
+| `restore_version` | 歷史版本裏：把選中的版本整份換回來 | `A-r` |
 
 ### `[keys.sidebar]`
 

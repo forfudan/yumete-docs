@@ -15,6 +15,8 @@
 | `:write-as` | `<path>` | save under a new name and switch to it (`:w <path>` only writes a copy) |
 | `:write-buffer-close` `:wbc` | `<path>` | save this file, then close it |
 | `:recover` |  | ask whether to restore unsaved changes |
+| `:history` |  | this file's earlier versions, one per save |
+| `:history-label` | `<name>` | name this file's newest version |
 | `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | the encoding the file is saved in: utf-8, gb18030, big5 or shift-jis |
 | `:reload` `:rl` |  | reload the file; ! discards your changes |
 | `:reload-all` `:rla` |  | reload every open file; files with unsaved changes are left alone, ! discards them too |

@@ -250,6 +250,44 @@ To turn recovery copies off altogether:
 autosave = false
 ```
 
+## Local history
+
+Every save keeps a copy of what it wrote, so you can go back to what a chapter
+said on Tuesday, before you cut that scene. A save that changes nothing keeps
+nothing, and saves less than ten minutes apart count as one: the later one
+replaces the earlier.
+
+In a book, a folder with `.yumete/` in it, the copies are kept in
+`.yumete/history/`, so they travel with the manuscript. A file outside any book
+keeps them in yumete's data directory, under `history/`. A `.gitignore` in that
+folder keeps the copies out of git. Renaming a chapter outside yumete keeps its
+history: the first save under the new name finds it.
+
+Old copies are thinned as you go: everything from today, one an hour for the
+last seven days, one a day for the last sixty days. Older ones are removed. A
+copy you have named is kept for good.
+
+`:history` lists this file's copies, newest first, each with its time, how many
+characters it added or removed, and its name. The preview beside the list
+shows, word by word as in `:diff`, how that copy differs from what you have now.
+
+| Key | Action |
+| --- | --- |
+| `Enter` | open that copy read-only in the other window, to read or yank from |
+| `A-r` | put that whole copy back into the buffer; `u` takes it back |
+
+`:history-label <name>` names the newest copy, for example
+`:history-label sent to the editor`. With unsaved changes, the name goes to the
+last save.
+
+`--private` and `[editor] remember = false` keep no history. To turn it off by
+itself:
+
+```toml
+[editor]
+history = false
+```
+
 ## Seeing what changed
 
 ### The change bar
@@ -350,7 +388,7 @@ session = true
 Then `ye --new` starts on an empty buffer.
 
 `[editor] remember = false` keeps no memory at all: no session, no recent
-files, no line to return to. `--private` does the same for one run. Recovery
+files, no line to return to, no local history. `--private` does the same for one run. Recovery
 copies are kept either way.
 
 ## Copying to and from other programs

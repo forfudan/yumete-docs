@@ -633,6 +633,7 @@
 | `first_entry` | first entry |  |
 | `last_entry` | last entry |  |
 | `cycle_hidden_files` | cycle which files are skipped: hidden, ignored | `A-h` |
+| `restore_version` | in history: put the highlighted version back whole | `A-r` |
 
 ### `[keys.sidebar]`
 
