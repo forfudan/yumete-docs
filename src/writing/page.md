@@ -206,6 +206,12 @@ Every window keeps its rightmost column for a scrollbar: a tinted run of cells
 showing where the page is in the file. Its length is the window's share of the
 file's rows, estimated from each line's width at the wrap width, so it stays the
 same while you scroll; it is at the top after `gg` and at the bottom after `G`.
+Drag the thumb to scroll: it stays under the pointer where you took it, and the
+cursor stays where it is while it is on the page, pushed in from the edge
+otherwise, as `C-e` does. Click elsewhere in the column to jump the thumb there,
+centred on the click; at the foot of the column the page ends on the file's last
+line. Two pages scroll together; in a split, clicking another window's bar gives
+that window the keys.
 While the whole file fits, the column is a blank
 margin, so the text does not re-wrap as it grows. The cursor after a row that
 fills the window stands in that column. Markdown and Typst previews draw the bar
