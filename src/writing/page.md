@@ -173,6 +173,7 @@ characters.
 :view-wrap-width 50    wrap at column 50: a measure (below)
 :view-wrap-width 0     drop the measure and wrap at the window again
 :view-wrap-width       say which width it wraps at
+:view-centre           centre a page written to a measure, or not
 ```
 
 With wrapping off the page follows the cursor sideways. vim's `zh` `zl` (a column),
@@ -270,15 +271,20 @@ nothing of the text, for when that is what you want.
 ## The measure
 
 A measure writes the page narrow. `:view-wrap-width 50` wraps every line at column 50
-and tints everything to the right of it. On a wide monitor this
-keeps lines at a length the eye can follow. If the window is narrower than the
-measure, the window wins.
+and stands the page in the middle of the window, with equal margins left and right
+(an odd cell goes to the right) and the line numbers beside the text. On a wide
+monitor this keeps lines at a length the eye can follow. If the window is narrower
+than the measure, the window wins and there is no margin. `:view-centre off` keeps
+the page at the left edge, with the margin tinted on the right. Side-by-side pages
+(`:view-pages-horizontal`) are centred as one spread, and each window of a split
+centres within its own width.
 
 To keep it, set `measure` in the config:
 
 ```toml
 [editor]
 measure = 50   # wrap here; 0 is the window's width
+centre_measure = true   # the measured page stands in the middle; false keeps it at the left
 ruler = 80     # only a cue: tint whatever runs past column 80
 ```
 

@@ -12,6 +12,7 @@
 | `[editor] pages_horizontal` | `1` | **pages, horizontal** — how many columns the horizontal page is cut into, side by side (1–4) |
 | `[editor] indent` | `0` | **first-line indent** — cells at the head of a paragraph; the Chinese convention is 2 (0–8) |
 | `[editor] measure` | `0` | **text width** — lines wrap here; the rest is margin (0–400) |
+| `[editor] centre_measure` | `true` | **centre the text** — with a text width set, the text and its line numbers stand in the middle of the window, equal margins either side; off keeps them at the left |
 | `[editor] hard_wrap` | `0` | **hard-wrap width** — what a bare :hard-wrap fills to; it rewrites the file's line breaks, not the display (1–400) |
 | `[editor] ruler` | `0` | **ruler** — a guide, not a break: text past it changes colour (0–400) |
 | `[editor] soft_wrap` | `true` | **soft wrap** — long lines wrap on a horizontal page; off, they run past the right edge |

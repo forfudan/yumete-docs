@@ -114,6 +114,7 @@
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | line numbers: absolute, relative to the cursor, or none; no argument shows the current one |
 | `:view-wrap` | `on｜off` | soft wrap, on or off; `:view-wrap-width` sets the width |
 | `:view-wrap-width` | `0｜<columns>` | text width in columns; `0` follows the window |
+| `:view-centre` | `on｜off` | centred page: with a text width set, the text stands in the middle of the window, equal margins either side |
 | `:view-wrap-height` | `0｜<characters>` | characters per vertical column; `0` follows the window |
 | `:view-margin` | `never｜dense｜loose｜always` | margin: whether to leave room for readings, hanging punctuation, emphasis dots and tones |
 | `:view-pages-horizontal` | `<1–4>` | pages, horizontal: columns side by side, the text flowing left to right |
