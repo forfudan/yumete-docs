@@ -83,7 +83,8 @@
 | `:keymap` | `helix｜vim` | 鍵位預設：helix(默認)或 vim(支持 vim 的 x s dd ^ $ 等) |
 | `:keymap-actions` |  | 列出所有可綁定的動作名 |
 | `:info` |  | 文件信息：路徑、大小、行數字數、語言、關聯的語言服務器 |
-| `:instant-info` | `dictionary｜wiki｜record｜docs｜diagnostics｜change` | 信息欄隨光標顯示哪一種(record/diagnostics/dictionary/wiki/docs；不寫則按文件類型) |
+| `:character-info` `:char` |  | 字符信息：光標處字符的碼位、名稱、UTF-8 字節、區塊，漢字另有拆分(同空格 n) |
+| `:instant-info` | `character｜wiki｜record｜docs｜diagnostics｜change` | 信息欄隨光標顯示哪一種(record/diagnostics/character/wiki/docs；不寫則按文件類型) |
 | `:rules` | `<欄>…｜off` | 在指定列加標尺：`:rules 80 100 120`；不帶數字爲 80 和 100，`off` 關閉 |
 | `:theme-fill` | `on｜off` | 代碼和引用是否加底色(默認不加) |
 | `:shot` | `screen｜png｜html｜txt <路徑>` | 截圖：默認複製到剪貼板；png/html/txt 則保存到下載文件夾 |

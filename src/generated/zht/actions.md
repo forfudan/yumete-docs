@@ -73,7 +73,7 @@
 | `buffer_picker` | 打開緩衝區選擇器 | `Space b` | `Space b` |  |
 | `goto_next_buffer` | 下一個緩衝區 | `gn` |  |  |
 | `goto_previous_buffer` | 上一個緩衝區 | `gp` |  |  |
-| `dictionary` | 字典：光標處漢字的拆分 | `Space n` | `Space n` |  |
+| `dictionary` | 字符信息：光標處字符的碼位、名稱、字節，漢字另有拆分 | `Space n` | `Space n` |  |
 | `rotate_view` | 下一個區域 | `C-w w` | `C-w w` |  |
 | `global_search` | 高級搜索面板 | `Space /` | `Space /` |  |
 | `command_palette` | 所有命令 | `Space ?` | `Space ?` |  |
@@ -237,7 +237,7 @@
 | `replace_selections_with_clipboard` | 用系統剪貼板替換選區 | `Space R` | `Space R` |  |
 | `lsp_or_syntax_symbol_picker` | 符號選擇器 | `Space s` | `Space s` |  |
 | `lsp_or_syntax_workspace_symbol_picker` | 項目符號選擇器 | `Space S` | `Space S` |  |
-| `dictionary_panel` | 顯示漢字信息(側欄) | `Space N` | `Space N` |  |
+| `dictionary_panel` | 顯示字符信息(側欄) | `Space N` | `Space N` |  |
 | `hover` | 顯示文檔(浮窗) | `Space k` | `K` `Space k` |  |
 | `hover_panel` | 顯示文檔(側欄) | `Space K` | `Space K` |  |
 | `diagnostics_picker` | 診斷選擇器 | `Space d` | `Space d` |  |
@@ -650,7 +650,7 @@
 | `open_entry` | 進入：打開文件、跳到那一行 | `Enter` |
 | `toggle_links_graph` | 鏈接面板：列表/圖 | `v` |
 | `restore_change` | 還原此處改動 | `u` |
-| `yank_old_text` | 複製改動前的文本 | `y` |
+| `yank_old_text` | 複製改動前的文本；在字符信息裏複製整份信息 | `y` |
 | `refresh_sidebar` | 刷新 | `R` |
 | `cycle_sidebar_width` | 切換寬度：窄、中、寬 | `w` |
 | `next_sidebar_view` | 下一個面板 | `Tab` |

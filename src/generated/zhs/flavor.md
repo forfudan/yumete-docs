@@ -13,7 +13,7 @@
 | [`input_method_menu`](#input_method_menu) | `Space z` | `Space z` | 输入法菜单 |
 | [`recent_files`](#recent_files) | `Space o` | `Space o` | 最近的文件和项目 |
 | [`registers_menu`](#registers_menu) | `Space "` | `Space "` | 寄存器菜单 |
-| [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | 词典 |
+| [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | 字符信息 |
 | [`popup_panel_pairs`](#popup_panel_pairs) | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | 浮窗与侧栏 |
 | [`explorer_here`](#explorer_here) | `Space E` | `Space E` | 从当前文件的目录浏览 |
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | 翻页 |
@@ -214,12 +214,12 @@ vim 键位下：
 
 ### `dictionary` {#dictionary}
 
-开：空格 n 在浮窗里查光标处的字，空格 N 在侧栏里查。关：未绑定。
+开：空格 n 在浮窗里显示光标处字符的信息，空格 N 在侧栏里显示。关：未绑定。
 
 | 位置 | 键 | 开启此项 | 关闭此项 |
 | --- | --- | --- | --- |
-| 空格 | `Space n` | 显示汉字信息(浮窗) |  |
-| 空格 | `Space N` | 显示汉字信息(侧栏) |  |
+| 空格 | `Space n` | 显示字符信息(浮窗) |  |
+| 空格 | `Space N` | 显示字符信息(侧栏) |  |
 
 ### `popup_panel_pairs` {#popup_panel_pairs}
 

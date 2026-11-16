@@ -73,7 +73,7 @@
 | `buffer_picker` | open the buffer picker | `Space b` | `Space b` |  |
 | `goto_next_buffer` | next buffer | `gn` |  |  |
 | `goto_previous_buffer` | previous buffer | `gp` |  |  |
-| `dictionary` | dictionary: the division of the character under the cursor | `Space n` | `Space n` |  |
+| `dictionary` | character info: about the character under the cursor | `Space n` | `Space n` |  |
 | `rotate_view` | the next region | `C-w w` | `C-w w` |  |
 | `global_search` | search panel | `Space /` | `Space /` |  |
 | `command_palette` | all commands | `Space ?` | `Space ?` |  |
@@ -237,7 +237,7 @@
 | `replace_selections_with_clipboard` | replace with clipboard | `Space R` | `Space R` |  |
 | `lsp_or_syntax_symbol_picker` | symbol picker | `Space s` | `Space s` |  |
 | `lsp_or_syntax_workspace_symbol_picker` | project symbol picker | `Space S` | `Space S` |  |
-| `dictionary_panel` | char info (sidebar) | `Space N` | `Space N` |  |
+| `dictionary_panel` | character info (sidebar) | `Space N` | `Space N` |  |
 | `hover` | show docs (popup) | `Space k` | `K` `Space k` |  |
 | `hover_panel` | show docs (sidebar) | `Space K` | `Space K` |  |
 | `diagnostics_picker` | diagnostics picker | `Space d` | `Space d` |  |
@@ -650,7 +650,7 @@
 | `open_entry` | go to the entry: open the file, or jump to the line | `Enter` |
 | `toggle_links_graph` | links panel: list or graph | `v` |
 | `restore_change` | restore this change | `u` |
-| `yank_old_text` | copy the old text | `y` |
+| `yank_old_text` | copy the old text; in the character info, copy the whole answer | `y` |
 | `refresh_sidebar` | refresh | `R` |
 | `cycle_sidebar_width` | cycle width: narrow, medium, wide | `w` |
 | `next_sidebar_view` | next panel | `Tab` |

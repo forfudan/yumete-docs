@@ -13,7 +13,7 @@
 | [`input_method_menu`](#input_method_menu) | `Space z` | `Space z` | input method menu |
 | [`recent_files`](#recent_files) | `Space o` | `Space o` | recent files and projects |
 | [`registers_menu`](#registers_menu) | `Space "` | `Space "` | registers menu |
-| [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | dictionary |
+| [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | character info |
 | [`popup_panel_pairs`](#popup_panel_pairs) | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | `Space K` `Space l` `Space L` `Space x` `Space X` `Space i` `Space I` | popups and their sidebars |
 | [`explorer_here`](#explorer_here) | `Space E` | `Space E` | browse from this file's folder |
 | [`space_paging`](#space_paging) | `Space Space` `Space Backspace` | `Space Space` `Space Backspace` | turn a page |
@@ -214,12 +214,12 @@ On: Space then the double quote opens the registers menu. Off: unbound.
 
 ### `dictionary` {#dictionary}
 
-On: Space n looks up the character under the cursor in a popup, Space N in the sidebar. Off: both are unbound.
+On: Space n shows information about the character under the cursor in a popup, Space N in the sidebar. Off: both are unbound.
 
 | Where | Key | With the item | Without it |
 | --- | --- | --- | --- |
-| Space | `Space n` | char info (popup) |  |
-| Space | `Space N` | char info (sidebar) |  |
+| Space | `Space n` | character info (popup) |  |
+| Space | `Space N` | character info (sidebar) |  |
 
 ### `popup_panel_pairs` {#popup_panel_pairs}
 

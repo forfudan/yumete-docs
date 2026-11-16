@@ -246,7 +246,7 @@ an upper-case key that puts the same answer in the sidebar:
 
 | Kind | Float | Sidebar |
 | --- | --- | --- |
-| dictionary: the character's decomposition, readings, code point | `Space n` | `Space N` |
+| character info: code point, Unicode name, UTF-8 bytes, block; for a Chinese character also its decomposition and readings | `Space n` or `:character-info` (`:char`) | `Space N` |
 | documentation from the language server; on writing, the wiki entry | `Space k` | `Space K` |
 | diagnostics | `Space l` | `Space L` |
 | the change here: what this block was before | `Space x` | `Space X` |
@@ -256,9 +256,10 @@ an upper-case key that puts the same answer in the sidebar:
 None of these take the keys: the cursor stays in the text and you keep
 typing. When an answer is too long to read at a glance, `C-w w` walks into the
 sidebar, and `j` `k` `J` `K` `g` `G` scroll it. In the change view, `u` puts
-back what the block was before and `y` copies the old text.
+back what the block was before and `y` copies the old text. In the character
+info, `y` copies the whole answer as text, both in the popup and in the sidebar.
 
-A dictionary answer is about the character you asked about. Move the cursor
+A character info answer is about the character you asked about. Move the cursor
 off it and the answer goes away.
 
 ## Related

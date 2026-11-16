@@ -275,7 +275,7 @@ number.
 | `Backspace` | delete the last letter of the code |
 | `Enter` | commit the code itself, as letters |
 | `Esc` | cancel the code |
-| `Tab` | show the dictionary entry for the highlighted candidate |
+| `Tab` | show the character info for the highlighted candidate |
 | a `Shift` tap | commit the code as letters, then switch to English |
 
 A digit with no candidate under it on this page is swallowed. It does not type
@@ -305,9 +305,9 @@ The opposite keys go back. Moving past the last candidate on a page goes on to
 the first one on the next page. `Space` then commits whichever candidate is
 highlighted.
 
-### The dictionary on `Tab`
+### The character info on `Tab`
 
-`Tab` while a code is open shows the dictionary entry for the highlighted
+`Tab` while a code is open shows the character info for the highlighted
 candidate: its 拆分 (how it splits into components), its code and more. For a
 word, it shows the first character. The entry floats beside the text, or appears
 in the sidebar if the sidebar's information panel is already open. It does not
