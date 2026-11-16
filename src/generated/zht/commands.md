@@ -187,7 +187,7 @@
 | `:table-numbers` | `on｜off` | 列號行：␣t3/、␣t20,20g 用的就是它 |
 | `:table-header` | `on｜off` | 首行是表頭還是數據 |
 | `:table-schema` | `write` | 顯示錶格結構；write 寫入同目録的 datapackage.json |
-| `:table-delimiter` | `<分隔符>` | 按此分隔符把文件讀成表格並記住(tab、space、comma、semicolon 或該字符) |
+| `:table-delimiter` | `<分隔符>` | 按此分隔符把文件讀成表格並記住；文檔裏只讀光標所在的那段；auto 忘掉(tab、space、comma、semicolon 或該字符) |
 | `:table-hide` | `<欄號>` | 隱藏第 N 列(只是不顯示，照常讀寫)，並記住 |
 | `:table-show` | `<欄號>` | 重新顯示被隱藏的第 N 列 |
 | `:table-jump` | `<行名>` | 跳到表格中該名稱所在的行(`:table-jump 木`) |

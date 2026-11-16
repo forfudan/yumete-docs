@@ -11,7 +11,7 @@ yumete reads four kinds of table the same way:
   the same number of fields.
 - **A Markdown pipe table**: rows written between `|` marks, with a `| --- |` row
   under the heading.
-- **A delimited stretch inside a document**: a few comma- or tab-separated lines
+- **A delimited stretch inside a document**: a few comma-, tab- or `|`-separated lines
   pasted into a chapter, or the entries of a code table.
 - **A new table you make** with `:table`.
 
@@ -27,9 +27,9 @@ and the cell you left it on; come back and you are in the same cell, at the
 same level. Two windows on one file each keep their own place.
 
 **Opening any other file whose lines all split the same way** opens it in the
-basic table view. yumete tries tab, comma and semicolon, and takes the
+basic table view. yumete tries tab, comma, semicolon and `|`, and takes the
 first one that appears the same number of times on every line and gives at least
-two columns. The status line says what it guessed:
+two columns. A Markdown table is never read as `|`-separated text. The status line says what it guessed:
 
 ```
 this file looks Tab-delimited, so it opens as a table; ␣t o for the source
@@ -45,6 +45,12 @@ guess it:
 ```sh
 ye --table prices.txt
 ```
+
+**`:table-delimiter <c>`** reads the file as a table cut by that character
+(`tab`, `space`, `comma`, `semicolon`, or the character itself) and remembers it
+for that file. In a Markdown or Typst document it reads only the stretch under
+the cursor and remembers nothing, so the chapter stays prose.
+`:table-delimiter auto` forgets the choice.
 
 **A Markdown pipe table** turns on by itself when the cursor reaches one of its
 rows. In Markdown, only a table that parses counts: it needs its `| --- |` row,
@@ -541,10 +547,11 @@ More text.
 
 yumete finds the table like this:
 
-- **The delimiter is the one under the cursor**, if it is one of tab, comma,
-  semicolon or `&`. If you selected some lines first, it is the character that
-  appears the same number of times on each. Otherwise it tries those four in that
-  order.
+- **The delimiter is the mark under the cursor**, any punctuation such as `^`,
+  `|` or `、`, as long as the rows agree about it. If you selected some lines
+  first, it is the character that appears the same number of times on each.
+  Otherwise it tries tab, comma, semicolon, `&` and `|` in that order (a line of
+  a Markdown table never counts as a row).
 - **The table runs up and down from the cursor** until a line without that
   delimiter. A blank line ends it, and so does a heading.
 - **The rows must agree.** Two or three lines must all have the same number of

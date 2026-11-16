@@ -187,7 +187,7 @@
 | `:table-numbers` | `on｜off` | the row of column numbers — what ␣t3/ and ␣t20,20g count with |
 | `:table-header` | `on｜off` | whether the first row is a header or data |
 | `:table-schema` | `write` | show the table schema; write saves it to datapackage.json next to the data |
-| `:table-delimiter` | `<delimiter>` | read this file as a table split on that delimiter, and remember it (tab, space, comma, semicolon or a character) |
+| `:table-delimiter` | `<delimiter>` | read this file as a table split on that delimiter, and remember it; in a document, only the lines under the cursor; auto forgets (tab, space, comma, semicolon or a character) |
 | `:table-hide` | `<column number>` | hide column N (not drawn, still read and written), and remember it |
 | `:table-show` | `<column number>` | show hidden column N again |
 | `:table-jump` | `<row name>` | go to the row with this name (`:table-jump 木`) |

@@ -187,7 +187,7 @@
 | `:table-numbers` | `on｜off` | 列号行：␣t3/、␣t20,20g 用的就是它 |
 | `:table-header` | `on｜off` | 首行是表头还是数据 |
 | `:table-schema` | `write` | 显示表格结构；write 写入同目录的 datapackage.json |
-| `:table-delimiter` | `<分隔符>` | 按此分隔符把文件读成表格并记住(tab、space、comma、semicolon 或该字符) |
+| `:table-delimiter` | `<分隔符>` | 按此分隔符把文件读成表格并记住；文档里只读光标所在的那段；auto 忘掉(tab、space、comma、semicolon 或该字符) |
 | `:table-hide` | `<栏号>` | 隐藏第 N 列(只是不显示，照常读写)，并记住 |
 | `:table-show` | `<栏号>` | 重新显示被隐藏的第 N 列 |
 | `:table-jump` | `<行名>` | 跳到表格中该名称所在的行(`:table-jump 木`) |
