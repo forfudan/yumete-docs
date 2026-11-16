@@ -11,6 +11,7 @@ work, and the tools that show what you have changed.
 | `:write` (`:w`) | save this file |
 | `:w <path>` | write a copy to `<path>`; you keep editing this file |
 | `:write-as <path>` | save under a new name and edit that one |
+| `:file-rename <path>` (`:mv`) | rename or move this file on disk and keep editing it; `!` replaces an existing file |
 | `:write-all` (`:wa`) | save every file that changed |
 | `:write-if-changed` (`:update`, `:up`) | save only if changed |
 | `:write-quit` (`:wq`) | save, then quit |
@@ -22,6 +23,15 @@ work, and the tools that show what you have changed.
 | `:quit-all` (`:qa`) | quit |
 | `:quit-error` (`:cquit`, `:cq`) | quit with exit status 1, or the one given (`:cq 2`); git takes it as "abort the commit". **It discards every unsaved change without asking**, as vim's does |
 | `:buffer-close` (`:bc`) | close this file; the windows stay |
+
+`:file-rename` (`:mv`) renames the file on disk and keeps it open under the new
+name. A relative name is read from the file's own folder, so `:mv 第二章.md`
+renames it where it lies; folders that do not exist are made, and naming an
+existing folder (or ending the name with `/`) moves the file into it under its
+own name. An existing file is replaced only with `:mv!`, and never one that is
+open in another tab. Unsaved changes stay unsaved, and the recovery copy, the
+local history and the recent-files list follow the new name. Links to the file
+from other files are not changed.
 
 The tabs along the top are the open files and a window shows one of them, as
 in helix and vim. Closing a window closes no file: with the window split,

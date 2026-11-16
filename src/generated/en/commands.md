@@ -13,6 +13,7 @@
 | `:write` `:w` | `<path>` | save; with a path, save a copy (`:write-as` switches to it) |
 | `:write-all` `:wa` |  | save every file that changed |
 | `:write-as` | `<path>` | save under a new name and switch to it (`:w <path>` only writes a copy) |
+| `:file-rename` `:mv` | `<path>` | rename or move this file and go on editing it (a relative name is read from its folder) |
 | `:write-buffer-close` `:wbc` | `<path>` | save this file, then close it |
 | `:recover` |  | ask whether to restore unsaved changes |
 | `:history` |  | this file's earlier versions, one per save |
