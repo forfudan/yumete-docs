@@ -44,6 +44,7 @@
 | `[editor] table_rules` | `"line dash"` | **table rules** — how the column rules of a table are drawn (`line dash` lines and dashes, `line` lines, `line double` lines and double lines, `color` colour, `off` none) |
 | `[editor] unicode_alarm` | `true` | **suspicious characters** — tint the cell after a zero-width or bidi control, and any space that is not a plain space |
 | `[editor] maths_preview` | `true` | **maths preview** — while the cursor is in a formula, a popup below shows it typeset; needs Ghostty or kitty, and the typst command for Typst formulas |
+| `[editor] maths_in_place` | `true` | **maths in place** — under :render full, a display formula on lines of its own shows typeset where it stands, and its source while the cursor is in it; needs Ghostty or kitty |
 | `[editor] heading_folds` | `true` | **folds by heading** — On: each Markdown or Typst heading folds its section; all start open. Off: vim's, only folds made with zf. |
 
 ### preview

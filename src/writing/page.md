@@ -118,6 +118,16 @@ downloads it the first time, as Typst does, and the status line names the
 package while it comes. Other terminals show the coloured source only. `[editor] maths_preview = false`
 turns the float off.
 
+Under `:render full`, in the same terminals, display maths set on lines of its
+own (a `$$` line, the formula, a `$$` line; in Typst a `$` line, the formula, a
+`$` line) is drawn typeset where it stands, in the rows its source takes. A
+formula too big for those rows is scaled down to fit. When the cursor or a
+selection enters the block, its source comes back, as markup does under `full`;
+nothing above or below moves. Search, yank and substitute work on the source as
+always. A formula that does not parse, or one Typst is still drawing, shows its
+source. `[editor] maths_in_place = false` keeps the source. The preview and
+exports are not affected.
+
 ### Following a link
 
 Put the cursor anywhere on a link and press `gL`, or hold Ctrl and click it.
