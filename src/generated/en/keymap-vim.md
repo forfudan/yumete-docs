@@ -217,6 +217,7 @@
 | Key | What it does |
 | --- | --- |
 | `]d / ]D` | a diagnostic (capital: the first / the last) |
+| `]q / ]Q` | a result in the last listing (capital: the first / the last) |
 | `]c` | a change |
 | `]p` | paste after, indented like this line (vim's ]p) |
 | `]P` | paste before, indented like this line (vim's [p) |
@@ -228,6 +229,7 @@
 | Key | What it does |
 | --- | --- |
 | `[d / [D` | a diagnostic (capital: the first / the last) |
+| `[q / [Q` | a result in the last listing (capital: the first / the last) |
 | `[c` | a change |
 | `[p / [P` | paste before, indented like this line (vim's [p) |
 | `[z` | start of this fold |

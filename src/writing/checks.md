@@ -6,7 +6,9 @@ spellings of one word, a quote mark that never closes, a character the printer's
 font will not have. It also tells you what the character under the cursor is.
 
 Each check opens its findings as a read-only list, one line each. Press `gf` on
-a line to go to that place in the manuscript.
+a line to go to that place in the manuscript, or stay in the manuscript and press
+`]q` / `[q` for the next / previous finding (`]Q` / `[Q` the last / first). They
+walk the last list opened, from any file, and stop at its end.
 
 ## How words are counted
 

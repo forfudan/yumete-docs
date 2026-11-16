@@ -27,7 +27,7 @@ Under either keymap:
 - `gg`, a count before `G` (`20G`), and `:<line>`
 - confirming a search with `/` or `?`
 - `gd` and the places `gr` lists
-- `]d` `[d`, `]f` `[f` and the other `]` `[` jumps to a diagnostic, function, change or conflict
+- `]d` `[d`, `]q` `[q`, `]f` `[f` and the other `]` `[` jumps to a diagnostic, result, function, change or conflict
 - `gw`, `gz` and `gZ` (the cursor jumps, the view does not move)
 - going to a mark with `'`, and to a change with `g.`
 

@@ -50,6 +50,7 @@ The name in the first column is the one you write in `[lsp.<name>]` and
 | `Space d` / `Space D` | the diagnostics of this file / of the project, in a picker |
 | `Space l` / `Space L` | the diagnostics on this line, in a float / in the sidebar |
 | `]d` / `[d` | the next / previous diagnostic; `]D` / `[D` the last / first |
+| `]q` / `[q` | the next / previous row of the last listing (`:diagnostics-all`, a `:check-…`, `:git-diff`), from any file; `]Q` / `[Q` the last / first |
 | `Space r` | rename the name everywhere: opens `:lsp-rename` with the old name typed in. Edit it and press `Enter` |
 | `Space a` | code actions for the selection: quick fixes, refactors. Pick one from the list |
 | `C-n` or `C-x` (Insert) | open the completion list by hand |

@@ -262,6 +262,10 @@
 | `goto_prev_diag` | previous diagnostic | `[d` | `[d` |  |
 | `goto_last_diag` | last diagnostic | `]D` | `]D` |  |
 | `goto_first_diag` | first diagnostic | `[D` | `[D` |  |
+| `goto_next_result` | next result | `]q` | `]q` |  |
+| `goto_prev_result` | previous result | `[q` | `[q` |  |
+| `goto_last_result` | last result | `]Q` | `]Q` |  |
+| `goto_first_result` | first result | `[Q` | `[Q` |  |
 | `goto_next_function` | next function | `]f` |  |  |
 | `goto_prev_function` | previous function | `[f` |  |  |
 | `goto_next_class` | next class | `]t` |  |  |

@@ -214,7 +214,8 @@ input method makes when the wrong candidate is taken (醉翁停 for 醉翁亭);
 **兼容字**, a compatibility ideograph or Kangxi radical in place of the ordinary
 character. Characters that only look alike are not reported. `:check-names book`
 checks every file of the book (the Markdown files the links panel reads, not the
-wiki's own pages), and each row names its file so `gf` goes there. Homophones
+wiki's own pages), and each row names its file so `gf` goes there, and `]q` /
+`[q` walk them from the chapter you are fixing. Homophones
 need the reading table from the input method's data; without it the other three
 are still checked and the status line says so. To keep a variant on purpose,
 list that spelling in `words.txt` too: a spelling that is on the list is never

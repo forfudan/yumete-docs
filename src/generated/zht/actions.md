@@ -262,6 +262,10 @@
 | `goto_prev_diag` | 上一條診斷 | `[d` | `[d` |  |
 | `goto_last_diag` | 最後一條診斷 | `]D` | `]D` |  |
 | `goto_first_diag` | 第一條診斷 | `[D` | `[D` |  |
+| `goto_next_result` | 下一個結果 | `]q` | `]q` |  |
+| `goto_prev_result` | 上一個結果 | `[q` | `[q` |  |
+| `goto_last_result` | 最後一個結果 | `]Q` | `]Q` |  |
+| `goto_first_result` | 第一個結果 | `[Q` | `[Q` |  |
 | `goto_next_function` | 下一個函數 | `]f` |  |  |
 | `goto_prev_function` | 上一個函數 | `[f` |  |  |
 | `goto_next_class` | 下一個類 | `]t` |  |  |

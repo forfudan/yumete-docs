@@ -240,6 +240,7 @@
 | --- | --- |
 | `]g / ]G` | a change (capital: the first / the last) |
 | `]d / ]D` | a diagnostic (capital: the first / the last) |
+| `]q / ]Q` | a result in the last listing (capital: the first / the last) |
 | `]f` | a function |
 | `]t` | a class |
 | `]c` | a comment |
@@ -256,6 +257,7 @@
 | --- | --- |
 | `[g / [G` | a change (capital: the first / the last) |
 | `[d / [D` | a diagnostic (capital: the first / the last) |
+| `[q / [Q` | a result in the last listing (capital: the first / the last) |
 | `[f` | a function |
 | `[t` | a class |
 | `[c` | a comment |

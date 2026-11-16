@@ -262,6 +262,10 @@
 | `goto_prev_diag` | 上一条诊断 | `[d` | `[d` |  |
 | `goto_last_diag` | 最后一条诊断 | `]D` | `]D` |  |
 | `goto_first_diag` | 第一条诊断 | `[D` | `[D` |  |
+| `goto_next_result` | 下一个结果 | `]q` | `]q` |  |
+| `goto_prev_result` | 上一个结果 | `[q` | `[q` |  |
+| `goto_last_result` | 最后一个结果 | `]Q` | `]Q` |  |
+| `goto_first_result` | 第一个结果 | `[Q` | `[Q` |  |
 | `goto_next_function` | 下一个函数 | `]f` |  |  |
 | `goto_prev_function` | 上一个函数 | `[f` |  |  |
 | `goto_next_class` | 下一个类 | `]t` |  |  |
