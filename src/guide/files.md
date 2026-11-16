@@ -284,14 +284,21 @@ Old copies are thinned as you go: everything from today, one an hour for the
 last seven days, one a day for the last sixty days. Older ones are removed. A
 copy you have named is kept for good.
 
-`:history` lists this file's copies, newest first, each with its time, how many
-characters it added or removed, and its name. The preview beside the list
-shows, word by word as in `:diff`, how that copy differs from what you have now.
+`:history` lists, first, the changes you have made since the last save (or since
+opening the file), newest first, one row a minute: the time, how many characters
+it added or removed, whether it is the current state, the text on disk or
+unsaved, and the first line it changed. Below them come this file's saved
+copies, newest first, each with its time, how many characters it added or
+removed, and its name. The preview beside the list shows, word by word as in
+`:diff`, how the highlighted row differs from what you have now.
 
 | Key | Action |
 | --- | --- |
-| `Enter` | open that copy read-only in the other window, to read or yank from |
-| `A-r` | put that whole copy back into the buffer; `u` takes it back |
+| `Enter` | on an unsaved change: go back (or forward) to it through undo, so undo and redo still reach the rest; on a saved copy: open it read-only in the other window, to read or yank from |
+| `A-r` | put that whole text back into the buffer as one edit; `u` takes it back |
+
+The unsaved rows are kept in memory only, so they are listed even with
+`--private` or `history = false`, and they are gone when yumete closes.
 
 `:history-label <name>` names the newest copy, for example
 `:history-label sent to the editor`. With unsaved changes, the name goes to the
