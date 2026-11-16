@@ -71,17 +71,19 @@ error, and a pale cell marked `!` for a warning, `i` for information or `·` for
 The column is drawn in code files, and in a text file a server checks, only while
 line numbers are on.
 
-The loudest message of a line is also written after it, as helix's
-end-of-line diagnostics: two cells after the text, in the colour of its column,
+With end-of-line diagnostics on, the loudest message of a line is also written
+after it: two cells after the text, in the colour of its column,
 cut with `…` at the window's edge, and never in the way of the cursor. In
 Markdown a line is a paragraph, so the message follows the paragraph's last
 row, as in helix and nvim. It is
 left off the line you are typing on in Insert mode, and it moves with its line
 as you add and remove lines, until the server speaks again.
-`:view-diagnostics warning` (or `error`, `info`, `hint`, `off`) sets how loud a
-message must be, for this session; `[editor] end_of_line_diagnostics` sets it
-for good, with helix's words (`disable`, `hint`, `info`, `warning`, `error`), and
-`hint`, every message, is the default.
+`:view-diagnostics basic` (errors and warnings), `full` (every level) or `off`
+sets them for this session, and the bare command says which is on;
+`[editor] end_of_line_diagnostics` sets them for good. They are off by default,
+as in helix and Zed: a grammar checker has something to say on nearly every line
+of prose. helix's words are read too: `disable` is off, `error` and `warning` are
+basic, `info` and `hint` are full.
 
 Rename and code actions can change files you have not opened. Those files are opened,
 each gets one undo step, and nothing is saved until you save it.

@@ -30,7 +30,7 @@
 | `[editor] line_numbers` | `"absolute"` | **line numbers** — line numbers on the left; relative numbers count from the cursor, making jumps easy (`absolute` absolute, `relative` relative, `none` none) |
 | `[editor] line_number_fill` | `false` | **line number background** — fill the line-number column with a faint background, not just the number |
 | `[editor] diff_gutter` | `true` | **diff gutter** — mark lines that differ from git (or from the saved file) beside the line numbers |
-| `[editor] end_of_line_diagnostics` | `"hint"` | **end-of-line diagnostics** — show language-server diagnostics at line end, from which level up (`disable` off, `hint` hints and up, `info` info and up, `warning` warnings and up, `error` errors only) |
+| `[editor] end_of_line_diagnostics` | `"off"` | **end-of-line diagnostics** — show language-server diagnostics at line end: off, basic (errors and warnings) or full (every level) (`off` off, `basic` basic: errors and warnings, `full` full: every level (errors, warnings, info, hints)) |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
 | `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
 | `[editor] indent_guides_character` | `"│"` | **guide character** — the character the guides are drawn with, one cell wide |

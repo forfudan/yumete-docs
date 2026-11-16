@@ -123,7 +123,7 @@
 | `:view-sentence` | `on｜off` | 一句一纵：竖排时每句另起一纵，只改显示，不改文件 |
 | `:view-hanging` | `on｜off` | 标点悬挂：句读挂在页边 |
 | `:view-numbers-fill` | `on｜off` | 行号栏是否加底色(默认不加，横排竖排一样) |
-| `:view-diagnostics` | `hint｜info｜warning｜error｜off` | 行末诊断：hint、info、warning、error 或 off |
+| `:view-diagnostics` | `off｜basic｜full` | 行末诊断：off、basic 或 full |
 | `:view-diff` | `on｜off` | 改动条：行号旁用底色标出与 git 版本不同的行 |
 | `:view-typewriter` | `on｜off` | 打字机模式：光标所在行始终居中 |
 | `:view-focus` | `on｜off` | 专注：正在写的段落保持清晰，其余变淡 |

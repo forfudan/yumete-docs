@@ -30,7 +30,7 @@
 | `[editor] line_numbers` | `"absolute"` | **行号** — 左侧显示行号。相对行号显示与光标相隔几行，方便跳行 (`absolute` 绝对, `relative` 相对, `none` 不画) |
 | `[editor] line_number_fill` | `false` | **行号底色** — 行号栏铺满淡底色，而不是只显示数字 |
 | `[editor] diff_gutter` | `true` | **改动条** — 在行号旁用底色标出与 git 不同的行(不在 git 中则对比已保存的文件) |
-| `[editor] end_of_line_diagnostics` | `"hint"` | **行末诊断** — 在行末显示语言服务器诊断，从哪一级起显示 (`disable` 不显示, `hint` 建议及以上, `info` 说明及以上, `warning` 警告及以上, `error` 只显示错误) |
+| `[editor] end_of_line_diagnostics` | `"off"` | **行末诊断** — 在行末显示语言服务器的诊断：关闭、基本(错误和警告)或完整(所有级别) (`off` 关闭, `basic` 基本：错误和警告, `full` 完整：所有级别(错误、警告、说明、建议)) |
 | `[editor] yank_flash` | `false` | **复制高亮** — 复制后，被复制的范围闪一下 |
 | `[editor] indent_guides` | `false` | **缩进参考线** — 在代码行首每级缩进画一条竖线，同 helix；仅用于代码文件 |
 | `[editor] indent_guides_character` | `"│"` | **参考线字符** — 画参考线用的字符，要占一格 |
