@@ -150,7 +150,9 @@ Chinese back. When it is off, yumete lets the system input method work. See
 
 A Shift tap on its own is only visible to a program when the terminal speaks
 the Kitty keyboard protocol. Ghostty, kitty, WezTerm, foot, Alacritty and
-Konsole all do. Apple's Terminal does not.
+Konsole all do. Apple's Terminal does not. On Windows, yumete reads the
+console's own key records instead, so a lone Shift works in Windows Terminal
+and the classic console without the protocol.
 
 When the terminal cannot report a lone Shift, yumete says so on the status line
 at start-up. In that case use the stand-in key, `C-\` (Control and backslash),
@@ -987,7 +989,9 @@ Look at the status line.
 
 Your terminal probably does not speak the Kitty keyboard protocol. yumete said
 so on the status line when it started. Use `C-\`, or switch to a terminal such
-as Ghostty, kitty or WezTerm.
+as Ghostty, kitty or WezTerm. On Windows, use Windows Terminal or the classic
+console; a terminal that only sends text through the console may not pass a
+lone Shift on.
 
 A Shift tap also does nothing while the input method is off. Turn it on first.
 
