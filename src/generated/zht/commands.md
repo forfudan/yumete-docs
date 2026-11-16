@@ -116,6 +116,7 @@
 | `:view-wrap-width` | `0｜<幾欄>` | 正文寬度(列數)；`:view-wrap-width 50` 設寬度，`0` 跟隨窗口 |
 | `:view-centre` | `on｜off` | 正文居中：定了正文寬度時，正文立在窗口中間，左右留出一樣寬的邊 |
 | `:view-scrollbar` | `on｜off` | 滚動條：每個窗口右邊留一格，標出這一頁在文件裏的位置 |
+| `:view-scrollbar-marks` | `search｜listing｜changes｜problems on｜off` | 滚動條標記：在滚動條上標出搜索命中、清單各行、改動或報錯所在的行 |
 | `:view-wrap-height` | `0｜<幾字>` | 豎排每列字數；`:view-wrap-height 30` 設長度，`0` 跟隨窗口 |
 | `:view-margin` | `never｜dense｜loose｜always` | 頁邊：是否爲注音、懸掛標點、着重號、平仄留出位置 |
 | `:view-pages-horizontal` | `<1–4>` | 分欄：横排時分成多欄並排，文字從左欄接到右欄 |

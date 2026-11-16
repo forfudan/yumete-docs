@@ -175,6 +175,8 @@ characters.
 :view-wrap-width       say which width it wraps at
 :view-centre           centre a page written to a measure, or not
 :view-scrollbar        a column at each window's right for the scrollbar, or not
+:view-scrollbar-marks           say which kinds of mark the scrollbar shows
+:view-scrollbar-marks changes   turn one kind on or off: search, listing, changes, problems
 ```
 
 With wrapping off the page follows the cursor sideways. vim's `zh` `zl` (a column),
@@ -209,6 +211,25 @@ margin, so the text does not re-wrap as it grows. The cursor after a row that
 fills the window stands in that column. Markdown and Typst previews draw the bar
 on their frame's right wall. `:view-scrollbar off` (or `[editor] scrollbar =
 false`) gives the column back to the text. Vertical pages have none.
+
+The scrollbar also marks lines elsewhere in the file: a thin `▐` at the right of
+a cell, drawn over the thumb without hiding it. A line's mark goes where its rows
+fall, measured the same way as the thumb, so the mark of a line on screen sits on
+the thumb. Out of the box it shows only what you have just asked for:
+
+| Colour | Marks | Shown while |
+| --- | --- | --- |
+| pale gold, as a search hit | a line with a search hit | the status line counts the hits (`[3/17]`): gone once the cursor leaves the hit or the text changes |
+| gold | a line the last listing points at (`:check-…`, `:diagnostics-all`, `:grep`) | the listing is open; like `]q`, its line numbers do not follow later edits |
+| red | a language server's error | `problems` is on |
+| amber | a language server's warning | `problems` is on |
+| green / blue | a line added / changed since `HEAD` (a cut counts as changed) | `changes` is on and `:view-diff` is on |
+
+Where several fall in one cell, one is drawn: an error, then a search hit, then a
+listing's row, then a warning, then a change. Nothing is marked while the whole
+file fits. `:view-scrollbar-marks problems on`, or
+`[editor] scrollbar_marks = ["search", "listing", "problems"]`, chooses the
+kinds; `:view-scrollbar-marks` alone says which are on.
 
 ## Line numbers: `:line-numbers`
 
@@ -299,6 +320,7 @@ To keep it, set `measure` in the config:
 measure = 50   # wrap here; 0 is the window's width
 centre_measure = true   # the measured page stands in the middle; false keeps it at the left
 scrollbar = true        # a column at each window's right for the scrollbar
+scrollbar_marks = ["search", "listing"]   # marks on the scrollbar: search, listing, changes, problems
 ruler = 80     # only a cue: tint whatever runs past column 80
 ```
 
