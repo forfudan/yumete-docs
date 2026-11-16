@@ -208,13 +208,17 @@ table_rules = "off"
 
 #### Wide cells
 
-A column grows to fit its widest cell, up to 32 terminal columns. A longer cell is
-still kept whole in the file; only its display changes. `Space t w` cycles between
+A column grows to fit its widest cell, up to 32 terminal columns. When the whole
+table fits the window with room to spare, the columns that hit that limit share
+the rest of the window's width, never more than their widest cell; a narrower
+window draws exactly as before. A longer cell is still kept whole in the file;
+only its display changes. `Space t w` cycles between
 three ways to draw it, and works only in the window view:
 
 - **Wrapped** (the default): the rest of the cell continues on the lines below,
   inside its own column. A row is as tall as its tallest cell, and the row number
-  appears on its first line only.
+  appears on its first line only. In a wide window a wrapped column takes the
+  spare width too, so it wraps onto fewer lines.
 
   ```
   1 ┆1  ┆short                           ┆
@@ -223,9 +227,7 @@ three ways to draw it, and works only in the window view:
     ┆   ┆thirty-two columns of width     ┆
   ```
 
-- **Folded**: the cell is cut at the column width, and a `>` marks the cut. When
-  the whole table fits the window with room to spare, the cut columns share that
-  room, so a wide window shows more of each, never more than the widest cell.
+- **Folded**: the cell is cut at the column width, and a `>` marks the cut.
 
   ```
   1 ┆1  ┆short                           ┆
@@ -317,7 +319,8 @@ as the walls:
   the end of a row goes to the first cell of the next row; `h` at the start goes
   to the last character of the cell before.
 - `j` and `k` step through the lines of a cell that has several (a wrapped cell,
-  or one with a line break in it), and leave the cell at its last line.
+  or one with a line break in it), and leave the cell at its last line. On a
+  wrapped cell they land at the start of each line as it is drawn, between words.
 - `o` and `O` open a new line inside the cell, not a new row.
 - `t` is till again, as outside a table. To reach the table menu from inside, use
   `Space t`.
