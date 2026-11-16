@@ -369,12 +369,14 @@ to a real typesetter and shows the result beside the text, or in your browser.
 :preview-fit page     show a whole Typst page (width is the default)
 :preview-theme on     draw a Typst page in the theme's colours
 :preview-vertical off keep the Markdown preview horizontal when the text is vertical
-:preview-redraw       draw the previews again at their windows' size now
+:redraw              clear the terminal and draw it all again, the previews too
 ```
 
 The preview tab opens beside a horizontal text window and below a vertical
-one, where the columns leave room. If a picture is left at its old size
-after you move its window, `:preview-redraw` draws it again.
+one, where the columns leave room. The screen is drawn again by itself whenever a
+window, a sidebar or a preview opens, closes or moves, and when the terminal is
+resized; `:redraw` (also `:preview-redraw`) does it on demand, for instance
+after another program's output was left on the screen.
 
 | File | What happens |
 | --- | --- |
