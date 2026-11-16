@@ -380,11 +380,11 @@
 | `switch_to_lowercase` | to lowercase | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | to uppercase | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | traditional → simplified | `` `s `` | `` g`s `` |  |
-| `convert_to_traditional` | simplified → traditional | `` `t `` | `` g`t `` |  |
-| `convert_to_taiwan_traditional` | simplified → Taiwan traditional | `` `w `` | `` g`w `` |  |
-| `convert_to_hong_kong_traditional` | simplified → Hong Kong traditional | `` `k `` | `` g`k `` |  |
-| `convert_to_mainland_traditional` | simplified → mainland traditional | `` `c `` | `` g`c `` |  |
-| `convert_to_classical_traditional` | simplified → classical traditional | `` `g `` | `` g`g `` |  |
+| `convert_to_traditional` | simplified → traditional (OpenCC) | `` `t `` | `` g`t `` |  |
+| `convert_to_taiwan_traditional` | simplified → traditional (Taiwan) | `` `w `` | `` g`w `` |  |
+| `convert_to_hong_kong_traditional` | simplified → traditional (Hong Kong) | `` `k `` | `` g`k `` |  |
+| `convert_to_mainland_traditional` | simplified → traditional (mainland standard) | `` `c `` | `` g`c `` |  |
+| `convert_to_classical_traditional` | simplified → traditional (classical standard) | `` `g `` | `` g`g `` |  |
 | `convert_to_japanese` | traditional → Japanese shinjitai | `` `j `` | `` g`j `` |  |
 | `switch_to_halfwidth` | to halfwidth | `` `h `` | `` g`h `` |  |
 | `switch_to_fullwidth` | to fullwidth | `` `f `` | `` g`f `` |  |

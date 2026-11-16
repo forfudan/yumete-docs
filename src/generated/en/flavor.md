@@ -55,14 +55,14 @@ Under helix:
 | convert | `` `l `` | to lowercase |  |
 | convert | `` `u `` | to uppercase |  |
 | convert | ``` `` ``` | switch case |  |
-| convert | `` `s `` | traditional → simplified |  |
-| convert | `` `t `` | simplified → traditional |  |
-| convert | `` `w `` | simplified → Taiwan traditional |  |
 | convert | `` `f `` | to fullwidth |  |
 | convert | `` `h `` | to halfwidth |  |
-| convert | `` `k `` | simplified → Hong Kong traditional |  |
-| convert | `` `c `` | simplified → mainland traditional |  |
-| convert | `` `g `` | simplified → classical traditional |  |
+| convert | `` `s `` | traditional → simplified |  |
+| convert | `` `t `` | simplified → traditional (OpenCC) |  |
+| convert | `` `c `` | simplified → traditional (mainland standard) |  |
+| convert | `` `g `` | simplified → traditional (classical standard) |  |
+| convert | `` `w `` | simplified → traditional (Taiwan) |  |
+| convert | `` `k `` | simplified → traditional (Hong Kong) |  |
 | convert | `` `j `` | traditional → Japanese shinjitai |  |
 
 Under vim:
@@ -73,14 +73,14 @@ Under vim:
 | convert | `` g`l `` | to lowercase |  |
 | convert | `` g`u `` | to uppercase |  |
 | convert | ``` g`` ``` | switch case |  |
-| convert | `` g`s `` | traditional → simplified |  |
-| convert | `` g`t `` | simplified → traditional |  |
-| convert | `` g`w `` | simplified → Taiwan traditional |  |
 | convert | `` g`f `` | to fullwidth |  |
 | convert | `` g`h `` | to halfwidth |  |
-| convert | `` g`k `` | simplified → Hong Kong traditional |  |
-| convert | `` g`c `` | simplified → mainland traditional |  |
-| convert | `` g`g `` | simplified → classical traditional |  |
+| convert | `` g`s `` | traditional → simplified |  |
+| convert | `` g`t `` | simplified → traditional (OpenCC) |  |
+| convert | `` g`c `` | simplified → traditional (mainland standard) |  |
+| convert | `` g`g `` | simplified → traditional (classical standard) |  |
+| convert | `` g`w `` | simplified → traditional (Taiwan) |  |
+| convert | `` g`k `` | simplified → traditional (Hong Kong) |  |
 | convert | `` g`j `` | traditional → Japanese shinjitai |  |
 
 ### `sentences_on_h_l` {#sentences_on_h_l}

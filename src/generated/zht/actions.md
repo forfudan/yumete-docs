@@ -380,12 +380,12 @@
 | `switch_to_lowercase` | 轉小寫 | `` `l `` | `` g`l `` |  |
 | `switch_to_uppercase` | 轉大寫 | `` A-` `` `` `u `` | `` A-` `` `` g`u `` |  |
 | `convert_to_simplified` | 繁→簡 | `` `s `` | `` g`s `` |  |
-| `convert_to_traditional` | 簡→繁 | `` `t `` | `` g`t `` |  |
-| `convert_to_taiwan_traditional` | 簡→臺灣繁 | `` `w `` | `` g`w `` |  |
-| `convert_to_hong_kong_traditional` | 簡→香港繁 | `` `k `` | `` g`k `` |  |
-| `convert_to_mainland_traditional` | 簡→大陸繁 | `` `c `` | `` g`c `` |  |
-| `convert_to_classical_traditional` | 簡→古籍繁 | `` `g `` | `` g`g `` |  |
-| `convert_to_japanese` | 繁→日文新字體 | `` `j `` | `` g`j `` |  |
+| `convert_to_traditional` | 簡→繁(OpenCC) | `` `t `` | `` g`t `` |  |
+| `convert_to_taiwan_traditional` | 簡→繁(臺灣) | `` `w `` | `` g`w `` |  |
+| `convert_to_hong_kong_traditional` | 簡→繁(香港) | `` `k `` | `` g`k `` |  |
+| `convert_to_mainland_traditional` | 簡→繁(大陸通規) | `` `c `` | `` g`c `` |  |
+| `convert_to_classical_traditional` | 簡→繁(古籍通規) | `` `g `` | `` g`g `` |  |
+| `convert_to_japanese` | 繁→日本新字體 | `` `j `` | `` g`j `` |  |
 | `switch_to_halfwidth` | 轉半角 | `` `h `` | `` g`h `` |  |
 | `switch_to_fullwidth` | 轉全角 | `` `f `` | `` g`f `` |  |
 | `conflict_keep_ours` | 保留我方 | `Space m o` | `Space m o` |  |
