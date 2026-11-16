@@ -93,6 +93,13 @@ Nothing changes until you press `Tab`, so you can type the whole reference by
 hand and ignore the list. The bottom row shows `Tab complete · 3/12`. Word
 completion uses the same list and the same keys.
 
+In Chinese, word completion also offers what your open files repeat: type
+`长江` and press `C-n`, and `长江三角洲` is offered when it is written at least
+twice, though a dictionary cuts it in two. It completes the last characters that
+go on somewhere, so `位于长江` still finds it. While you type, the list waits for
+half of `[editor] word_completion` in characters (4 by default); one character
+alone never offers a phrase.
+
 `[[` lists the files nearest this one first. What you type matches the whole path, so `rain` finds
 `part-2/rain`. A file of the same kind as this one is written as its title,
 without the extension.
