@@ -201,8 +201,10 @@ between two pages), and goes without one only when there is no such column
 `whitespace.render.newline` and vim's `listchars=eol:` are.
 
 Every window keeps its rightmost column for a scrollbar: a tinted run of cells
-showing where the page is in the file, measured by characters, as tall as the
-share of the file on screen. While the whole file fits, the column is a blank
+showing where the page is in the file. Its length is the window's share of the
+file's rows, estimated from each line's width at the wrap width, so it stays the
+same while you scroll; it is at the top after `gg` and at the bottom after `G`.
+While the whole file fits, the column is a blank
 margin, so the text does not re-wrap as it grows. The cursor after a row that
 fills the window stands in that column. Markdown and Typst previews draw the bar
 on their frame's right wall. `:view-scrollbar off` (or `[editor] scrollbar =
