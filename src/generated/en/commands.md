@@ -2,8 +2,8 @@
 
 | Command | Arguments | What it does |
 | --- | --- | --- |
-| `:cd` | `<path>` | change the working directory |
-| `:pwd` |  | show the working directory |
+| `:cd` `:change-current-directory` | `<path>` | change the working directory |
+| `:pwd` `:show-directory` |  | show the working directory |
 | `:vsplit` `:vs` | `<path>` | split a window beside (as C-w v), optionally opening a file |
 | `:hsplit` `:hs` `:split` | `<path>` | split a window below (as C-w s), optionally opening a file |
 | `:vsplit-new` `:vnew` `:vne` |  | open a blank window beside (as C-w n v) |
@@ -104,9 +104,9 @@
 | `:yume-builtin` |  | use this scheme's built-in table, ignoring installed ones |
 | `:yume-table` | `<path>` | use your own table (a Rime .dict.yaml will do) |
 | `:settings-buffer` `:setlocal` `:setl` | `<options>` | set ft, ts, sw, et and tw for this buffer only; no argument shows their values |
-| `:syntax` `:syn` `:setf` `:setfiletype` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<syntax>` | the markup this file uses (no argument shows the current one) |
+| `:syntax` `:syn` `:setf` `:setfiletype` `:set-language` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<syntax>` | the markup this file uses (no argument shows the current one) |
 | `:pipe` | `<command>` | pipe the selection through a shell command and replace it with the output |
-| `:run-shell-in-buffer` `:sh` | `<command>` | run a command and show its output in a buffer |
+| `:run-shell-in-buffer` `:sh` `:run-shell-command` | `<command>` | run a command and show its output in a buffer |
 | `:!command` |  | hand the terminal to a command and watch it run (vi's spelling) |
 | `:which-wrap` | `<letters>` | which keys cross a line end (vim keymap): b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | line numbers: absolute, relative to the cursor, or none; no argument shows the current one |
@@ -192,8 +192,8 @@
 | `:convert-table` | `<format> [<format>]` | convert to the named format (csv, tsv, pipe); with two words the first is the source |
 | `:wheel` | `<lines, 1–10>` | lines per wheel notch; `:wheel 1` is the terminal's own step |
 | `:clipboard` `:reg` |  | paste menu: pick from the clipboard or past yanks (also Space, then a double quote) |
-| `:clipboard-yank` |  | copy the selection to the system clipboard |
-| `:clipboard-paste` |  | paste from the system clipboard |
+| `:clipboard-yank` `:clipboard-yank-join` |  | copy the selection to the system clipboard |
+| `:clipboard-paste` `:clipboard-paste-after` |  | paste from the system clipboard |
 | `:buffer` |  | open files: list, switch, close |
 | `:buffer-next` `:bn` `:bnext` |  | next |
 | `:buffer-previous` `:bp` `:bprev` |  | previous |
@@ -205,7 +205,7 @@
 | `:run-in-terminal` | `<command>` | give a program the terminal, and come back when it ends |
 | `:markdown-footnote` |  | footnote: next free number, with its note created |
 | `:markdown-footnote-inline` |  | an inline note ^[…], kept in place |
-| `:settings` `:set` `:se` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it; vim's ft=python ts=2 set this file only |
+| `:settings` `:set` `:se` `:set-option` | `<setting>` | settings page, each item explained; a change is written at once, u undoes it; vim's ft=python ts=2 set this file only |
 | `:genda` |  | typing trainer: type the selection (or the whole file) in segments, timed, with speed, keys a second, code length and key accuracy |
 | `:genda-next` |  | typing trainer: the next segment |
 | `:genda-previous` |  | typing trainer: the previous segment |

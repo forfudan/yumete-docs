@@ -2,8 +2,8 @@
 
 | 命令 | 参数 | 作用 |
 | --- | --- | --- |
-| `:cd` | `<路径>` | 切换工作目录 |
-| `:pwd` |  | 显示工作目录 |
+| `:cd` `:change-current-directory` | `<路径>` | 切换工作目录 |
+| `:pwd` `:show-directory` |  | 显示工作目录 |
 | `:vsplit` `:vs` | `<路径>` | 在旁边分出窗口（同 C-w v）；可带文件名 |
 | `:hsplit` `:hs` `:split` | `<路径>` | 在下方分出窗口（同 C-w s）；可带文件名 |
 | `:vsplit-new` `:vnew` `:vne` |  | 在旁边打开空白窗口（同 C-w n v） |
@@ -104,9 +104,9 @@
 | `:yume-builtin` |  | 改用内置码表，忽略已安装的 |
 | `:yume-table` | `<路径>` | 用你自己的码表(Rime 的 .dict.yaml 也行) |
 | `:settings-buffer` `:setlocal` `:setl` | `<选项>` | 只设当前缓冲区的 ft、ts、sw、et、tw；不带参数则显示它们的值 |
-| `:syntax` `:syn` `:setf` `:setfiletype` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<语法>` | 文件的标记语言(不带参数显示当前值) |
+| `:syntax` `:syn` `:setf` `:setfiletype` `:set-language` | `markdown｜typst｜text｜python｜javascript｜json｜yaml｜toml｜html｜css｜ada｜c｜gas｜go｜java｜nasm｜pascal｜r｜rust｜<语法>` | 文件的标记语言(不带参数显示当前值) |
 | `:pipe` | `<命令>` | 将选区传给终端命令，用输出替换选区 |
-| `:run-shell-in-buffer` `:sh` | `<命令>` | 运行命令，输出放进一个缓冲区 |
+| `:run-shell-in-buffer` `:sh` `:run-shell-command` | `<命令>` | 运行命令，输出放进一个缓冲区 |
 | `:!command` |  | 在终端里直接运行命令并查看输出(vi 写法) |
 | `:which-wrap` | `<字母>` | 哪些键可以跨越行尾(vim 键位)。只能是 b h l < > ~ |
 | `:line-numbers` `:ln` | `absolute｜relative｜none` | 行号：absolute 绝对、relative 相对光标、none 不显示；不带参数显示当前模式 |
@@ -192,8 +192,8 @@
 | `:convert-table` | `<格式> [<格式>]` | 转为目标格式(csv、tsv、pipe)；两个参数时第一个为源格式 |
 | `:wheel` | `<几行，1–10>` | 滚轮每格滚动的行数；`:wheel 1` 为终端默认 |
 | `:clipboard` `:reg` |  | 粘贴菜单：从剪贴板和复制过的内容里选一项粘贴(也可先按 ␣ 再按双引号) |
-| `:clipboard-yank` |  | 复制选区到系统剪贴板 |
-| `:clipboard-paste` |  | 从系统剪贴板粘贴 |
+| `:clipboard-yank` `:clipboard-yank-join` |  | 复制选区到系统剪贴板 |
+| `:clipboard-paste` `:clipboard-paste-after` |  | 从系统剪贴板粘贴 |
 | `:buffer` |  | 打开的文件：列出、切换、关闭 |
 | `:buffer-next` `:bn` `:bnext` |  | 下一个 |
 | `:buffer-previous` `:bp` `:bprev` |  | 上一个 |
@@ -205,7 +205,7 @@
 | `:run-in-terminal` | `<命令>` | 把终端交给一个程序，它结束后回到编辑器 |
 | `:markdown-footnote` |  | 脚注：自动编号并创建注释 |
 | `:markdown-footnote-inline` |  | 行内注 ^[…]，不放到文末 |
-| `:settings` `:set` `:se` | `<设置项>` | 设置页：每项附有说明，改了就写入并生效，u 撤销；跟 vim 的 ft=python ts=2 则只设当前文件 |
+| `:settings` `:set` `:se` `:set-option` | `<设置项>` | 设置页：每项附有说明，改了就写入并生效，u 撤销；跟 vim 的 ft=python ts=2 则只设当前文件 |
 | `:genda` |  | 跟打：把选区（没有选区则整个文件）分段来打，记速度、击键、码长、键准 |
 | `:genda-next` |  | 跟打：下一段 |
 | `:genda-previous` |  | 跟打：上一段 |
