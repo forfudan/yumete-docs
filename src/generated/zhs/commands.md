@@ -164,7 +164,7 @@
 | `:read` | `<路径>` | 将文件内容或终端命令(`!cmd`)的输出插到光标所在行下方 |
 | `:view-fold` |  | 把选中的行做成折叠 |
 | `:keep-pipe` | `<命令>` | 只保留终端命令执行成功的选区 |
-| `:git-lazygit` `:lazygit` |  | 在 lazygit 里看改动、暂存、提交，按 q 回来 |
+| `:git-lazygit` `:lazygit` `:lg` |  | 在 lazygit 里看改动、暂存、提交，按 q 回来 |
 | `:files-yazi` `:yazi` |  | 在 yazi 里浏览文件，Enter 把选中的文件在这里打开 |
 | `:decimo` | `<表达式>` | 用 decimo 计算表达式，结果放在光标处 |
 | `:decimo-replace` | `<选项>` | 用 decimo 计算选中的文字，结果替换它 |

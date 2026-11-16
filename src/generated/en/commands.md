@@ -164,7 +164,7 @@
 | `:read` | `<path>` | put a file's contents, or a shell command's output (`!cmd`), below the cursor's line |
 | `:view-fold` |  | make a fold of the selected lines |
 | `:keep-pipe` | `<command>` | keep the selections a shell command succeeds on |
-| `:git-lazygit` `:lazygit` |  | look at changes, stage and commit in lazygit; q comes back |
+| `:git-lazygit` `:lazygit` `:lg` |  | look at changes, stage and commit in lazygit; q comes back |
 | `:files-yazi` `:yazi` |  | browse files in yazi; Enter opens the chosen files here |
 | `:decimo` | `<expression>` | evaluate an expression with decimo and put the result at the cursor |
 | `:decimo-replace` | `<options>` | evaluate the selected text with decimo and replace it with the result |
