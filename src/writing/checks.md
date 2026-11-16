@@ -218,8 +218,10 @@ position does. `[editor] char_info = false` turns it off.
 ## Invisible characters
 
 Some characters take no space on screen: a zero-width space, a soft hyphen, a
-byte-order mark in the middle of the text, a joiner outside an emoji, and the
-bidi controls that can make text read differently from how it is stored. The
+byte-order mark in the middle of the text, and the bidirectional controls that
+can make text read differently from how it is stored (the "Trojan Source"
+trick): the embeddings, overrides and isolates U+202A–202E and U+2066–2069, and
+the marks U+200E, U+200F and U+061C, the set VS Code marks. The
 cell after one of them gets an amber background. A space that is not a plain
 space, such as a no-break space, has its own cell tinted. Put the cursor on the
 tinted cell and the status line names what is there:
