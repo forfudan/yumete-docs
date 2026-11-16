@@ -3,7 +3,7 @@
 yumete can count what you have written, keep a daily log against a target, and
 look over a manuscript for the slips that ordinary reading misses: two
 spellings of one word, a quote mark that never closes, a character the printer's
-font will not have. It also tells you what the character under the cursor is.
+font will not have, an English word spelt wrong. It also tells you what the character under the cursor is.
 
 Each check opens its findings as a read-only list, one line each. Press `gf` on
 a line to go to that place in the manuscript, or stay in the manuscript and press
@@ -165,6 +165,33 @@ appears, how many times in all, and its Unicode block:
 The check reads the character sets from the input method's data, so it needs a
 scheme loaded (`:yume-scheme`). Without one it says there is no data. 〇 and 々
 are never reported.
+
+## English spelling: `:check-spelling`
+
+`:check-spelling` lists the English words that the built-in American English
+dictionary (en_US, from SCOWL) does not know. `:check-spelling book` checks every
+Markdown file of the book, as `:check-names book` does.
+
+There is one line per word, not per place, with the first place it appears and
+how many times in all. `Teh` at the start of a sentence and `teh` inside one
+count as the same word, and so does `Wenlan's` with `Wenlan`:
+
+```
+12: recieve (×3)
+```
+
+Only words of Latin letters in prose are checked. Chinese text, code (inline and
+in blocks), maths, front matter, link targets, HTML tags, and web and e-mail
+addresses are skipped. So are single letters, words with a digit or with a
+capital after the first letter (`UTF8`, `JSON`, `LaTeX`), and names joined by
+`.` `/` `_` (`config.toml`). A capital at the start of a word is read as the
+start of a sentence, while a name such as `London` is known as it is written.
+
+It only lists; it does not suggest a correction. To let a word through, add it
+to `.yumete/words.txt` (`:word-list-local`), the list `:check-names` reads; every
+Latin word on a line there is accepted, in any capitalisation. Nothing runs
+while you type: the dictionary is loaded when you run the command and dropped
+after it.
 
 ## Simplified and traditional: `:convert`
 

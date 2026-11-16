@@ -33,6 +33,7 @@
 | `:check-usage` |  | check usage: where a word is spelled two ways, list the less common spelling |
 | `:check-config` |  | check the config: the line that breaks the whole file, and unused keys |
 | `:check-names` | `file｜book` | check names: names from the wiki and words.txt written with a homophone, or in another script, variant or compatibility form; book checks every file |
+| `:check-spelling` | `file｜book` | check English spelling: list the words the built-in English dictionary does not know, leaving out code, addresses and acronyms; book checks every file |
 | `:diagnostics-all` |  | list every problem the language servers report; gf jumps to each |
 | `:check-charset` |  | check the character set: characters in no standard list, which most fonts lack |
 | `:check-merge` |  | list the merge conflicts in this file |
