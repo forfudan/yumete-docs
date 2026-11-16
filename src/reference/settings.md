@@ -18,16 +18,17 @@ three lines, with the cursor on the middle one (indented one level in code).
 
 ```toml
 [editor]
-auto_pairs = "basic"   # "off" | "basic" | "full"
+auto_pairs = "basic"   # "off" | "minimal" | "basic" | "full"
 ```
 
-The same three levels are `:auto-pairs off`, `:auto-pairs basic` and
-`:auto-pairs full`; `:auto-pairs` alone says which one is on. The settings panel
+The same four levels are `:auto-pairs off`, `:auto-pairs minimal`,
+`:auto-pairs basic` and `:auto-pairs full`; `:auto-pairs` alone says which one is on. The settings panel
 has it under Editing.
 
 | Level | What pairs |
 | --- | --- |
 | `off` | nothing |
+| `minimal` | the three brackets `( )` `[ ]` `{ }`, no quotes |
 | `basic` (default) | helix's six: `( )` `[ ]` `{ }` `' '` `" "` and two backticks |
 | `full` | everything the `m` group knows as a pair, but `< >` |
 
@@ -50,6 +51,11 @@ When a pair is not written:
   before text already written is usually the start of wrapping it, so only the
   `(` goes in.
 - **A quote right after a letter or a digit.** `don't` keeps one apostrophe.
+- **A quote right after the same quote.** A run of one quote is typed as it
+  reads: `"""` gives three quotes and ```` ``` ```` three backticks, with nothing
+  after the cursor, so Enter after a fence opener starts a clean line. (`""`
+  still steps over the closer.) No language gets its fences or docstrings closed
+  for it. helix pairs here and writes four.
 
 `full` works through the input method too. With Yume, `[` commits 「 and you get
 「」; the 」 that `]` commits later steps over the one already there. `"`

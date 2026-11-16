@@ -150,7 +150,7 @@
 | `:sort` | `-r｜-i｜n｜u …` | sort several selections' texts, else the selected lines or every line; by code point, -r reversed, -i ignoring case, n by number, u unique |
 | `:split-join` |  | put the items in the brackets around the cursor one per line, or join them back |
 | `:reflow` | `<columns>` | reflow the selection to a width (80 columns by default) |
-| `:auto-pairs` | `off｜basic｜full` | auto-close brackets: off, basic, full; no argument shows the current one |
+| `:auto-pairs` | `off｜minimal｜basic｜full` | auto-close brackets: off, minimal, basic, full; no argument shows the current one |
 | `:indent-hint` | `none｜color｜symbol` | what to show in the indent cells |
 | `:table` `:ta` `:tab` | `<rows>x<columns>` | insert an empty table: `:table 3 4` is three rows by four columns, the first row headings; only on a blank line |
 | `:table-render` | `off｜basic｜window` | table display: source, basic or window view; no argument shows the current one |
