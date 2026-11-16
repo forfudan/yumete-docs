@@ -59,9 +59,15 @@ modification time. Build tools and sync programs read that time, so an idle
 Files are read and written as UTF-8. A byte-order mark at the start is
 kept out of the text you edit, and saving puts it back.
 
-A file in GB18030 (which also reads GBK and GB2312), Big5 or Shift-JIS is
-opened in it and saved back in it. A few rare byte forms, such as the NEC
-and IBM duplicates in Shift-JIS, are written back in their standard form. The
+A file in GB18030 (which also reads GBK and GB2312), Big5 (Hong Kong HKSCS
+characters included), Shift-JIS, EUC-JP or EUC-KR is opened in it and saved
+back in it. A file that starts with a UTF-16 byte-order mark, such as one saved
+as "Unicode" in Windows Notepad, opens as UTF-16 and is saved back as UTF-16
+with the mark. A few rare byte forms, such as the NEC and IBM duplicates in
+Shift-JIS and EUC-JP, are written back in their standard form. EUC-JP and
+EUC-KR are recognised only in a file long enough to be sure; a shorter one is
+offered in the picker after the Chinese and Japanese encodings, or opened with
+`:open ++enc=euc-kr`. The
 status line says which, as `[Big5]`, a file whose lines end in CRLF says
 `[CRLF]`, and `:info` lists them. yumete tells the
 three apart by the bytes. When a file is too short to be sure, a picker lists
@@ -73,7 +79,8 @@ reads the current one again in it. `ye --encoding=big5 file` answers the
 picker in advance: it is used only for files that cannot be told.
 
 `:encoding` says what the file is saved in, and `:encoding utf-8` (or
-`gb18030`, `big5`, `shift-jis`) changes it from the next save on. A character
+`gb18030`, `big5`, `shift-jis`, `euc-jp`, `euc-kr`, `utf-16le`, `utf-16be`)
+changes it from the next save on. A character
 the encoding cannot hold, such as 简 in a Big5 file, stops the save before the
 disk is touched, and a window says where the first one is and offers three
 answers: `u` saves as UTF-8, `w` writes it anyway as `&#31616;` (the text on
@@ -83,7 +90,7 @@ or `:wa`, an answer that saves goes on to quit or to save the rest.
 
 `:read` and `:diff` read another file as UTF-8 when it is, and in the
 buffer's encoding otherwise. The change bar reads the committed copy in the
-encoding the file is in on disk. Other encodings, such as Latin-1 or UTF-16, are
+encoding the file is in on disk. Other encodings, such as Latin-1 or UTF-16 without a byte-order mark, are
 refused.
 
 A saved file ends with a line break, as in vim and helix. It uses the file's

@@ -18,7 +18,7 @@
 | `:recover` |  | 詢問是否恢復未保存的内容 |
 | `:history` |  | 這個文件的歷史版本：每次保存留一份 |
 | `:history-label` | `<名字>` | 給這個文件最新的歷史版本起個名字 |
-| `:encoding` | `utf-8｜gb18030｜big5｜shift-jis` | 文件保存時用的編碼：utf-8、gb18030、big5、shift-jis |
+| `:encoding` | `utf-8｜gb18030｜big5｜shift-jis｜euc-jp｜euc-kr｜utf-16le｜utf-16be` | 文件保存時用的編碼：utf-8、gb18030、big5、shift-jis |
 | `:reload` `:rl` |  | 重新載入文件；加 ! 放棄本地改動 |
 | `:reload-all` `:rla` |  | 重新載入所有打開的文件；有未保存改動的不動，加 ! 一併放棄 |
 | `:reload-config` `:config-reload` |  | 重新載入 config.toml，無需重啓 |
