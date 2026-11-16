@@ -64,6 +64,15 @@ chapter titles are listed in place of the file name:
 So the main file works as a table of contents. Put the cursor on an `#include`
 line and press `gf` to open that chapter; it is read as Typst whatever its name.
 
+To reorder chapters, put the cursor on a heading with nothing selected and press
+`A-j` or `A-k`: the heading and everything under it, sub-sections included, moves
+below the next section or above the previous one at the same level; a count
+moves past that many. It never leaves the heading above it, and at the first or
+last section it stops and says so. One `u` undoes it, and folds go with the
+section. In the outline sidebar the same keys move the highlighted heading's
+section. Chapters read in from `#include` files do not move from the main file's
+outline. With a selection, `A-j`/`A-k` move the selected lines as before.
+
 ## Links between chapters
 
 Markdown links go between files: `[next](chapter-2.md)` with a path, or

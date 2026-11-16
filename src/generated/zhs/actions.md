@@ -651,6 +651,8 @@
 | `toggle_links_graph` | 链接面板：列表/图 | `v` |
 | `restore_change` | 还原此处改动 | `u` |
 | `yank_old_text` | 复制改动前的文本；在字符信息里复制整份信息 | `y` |
+| `move_section_down` | 把这一节连同小节往下移过同级的一节 | `A-j` |
+| `move_section_up` | 把这一节连同小节往上移过同级的一节 | `A-k` |
 | `refresh_sidebar` | 刷新 | `R` |
 | `cycle_sidebar_width` | 切换宽度：窄、中、宽 | `w` |
 | `next_sidebar_view` | 下一个面板 | `Tab` |

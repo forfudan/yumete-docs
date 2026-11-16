@@ -651,6 +651,8 @@
 | `toggle_links_graph` | links panel: list or graph | `v` |
 | `restore_change` | restore this change | `u` |
 | `yank_old_text` | copy the old text; in the character info, copy the whole answer | `y` |
+| `move_section_down` | move this section, its subsections with it, below the next one at its level | `A-j` |
+| `move_section_up` | move this section, its subsections with it, above the previous one at its level | `A-k` |
 | `refresh_sidebar` | refresh | `R` |
 | `cycle_sidebar_width` | cycle width: narrow, medium, wide | `w` |
 | `next_sidebar_view` | next panel | `Tab` |
