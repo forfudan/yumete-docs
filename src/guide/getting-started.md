@@ -14,6 +14,7 @@ does not exist yet opens empty and is created when you save it.
 | `ye ch01.md ch02.md` | both files, one buffer each |
 | `ye` | a blank, unnamed buffer |
 | `ye -r` | the files that were open last time in this project, each at the line you left |
+| `ye --readonly <(git log)` | a command's output, read-only (the editor does not read standard input, so `ye -` is refused) |
 | `ye --tutor` | the lesson (see [below](#tutor)) |
 
 The fastest way in is the lesson. If you have five minutes, type `:tutor` and
