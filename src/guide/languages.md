@@ -83,7 +83,8 @@ sets them for this session, and the bare command says which is on;
 `[editor] end_of_line_diagnostics` sets them for good. They are off by default,
 as in helix and Zed: a grammar checker has something to say on nearly every line
 of prose. helix's words are read too: `disable` is off, `error` and `warning` are
-basic, `info` and `hint` are full.
+basic, `info` and `hint` are full. Why they are off: see
+[Why it works this way](/reference/why#end-of-line-diagnostics-are-off).
 
 Rename and code actions can change files you have not opened. Those files are opened,
 each gets one undo step, and nothing is saved until you save it.

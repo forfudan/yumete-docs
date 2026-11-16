@@ -231,6 +231,9 @@ file fits. `:view-scrollbar-marks problems on`, or
 `[editor] scrollbar_marks = ["search", "listing", "problems"]`, chooses the
 kinds; `:view-scrollbar-marks` alone says which are on.
 
+Why the column is kept and why only these marks are on: see
+[Why it works this way](/reference/why#the-scrollbar-keeps-its-column).
+
 ## Line numbers: `:line-numbers`
 
 The gutter can number lines three ways:

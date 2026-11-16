@@ -42,7 +42,8 @@
       { "text": "Jumplist", "link": "/reference/jumplist" },
       { "text": "Folds", "link": "/reference/folds" },
       { "text": "Commands", "link": "/reference/commands" },
-      { "text": "Settings", "link": "/reference/settings" }
+      { "text": "Settings", "link": "/reference/settings" },
+      { "text": "Why it works this way", "link": "/reference/why" }
     ]
   },
   {

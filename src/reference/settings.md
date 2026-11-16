@@ -57,6 +57,9 @@ When a pair is not written:
   still steps over the closer.) No language gets its fences or docstrings closed
   for it. helix pairs here and writes four.
 
+Why one rule for every file, and why `minimal`: see
+[Why it works this way](/reference/why#auto-pairs-one-rule-for-every-file).
+
 `full` works through the input method too. With Yume, `[` commits 「 and you get
 「」; the 」 that `]` commits later steps over the one already there. `"`
 commits `“` the first time and `”` the next, so a quotation typed straight
