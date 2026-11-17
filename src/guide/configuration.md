@@ -192,7 +192,11 @@ interface's language (typed in any of the three).
 vim's option words set this file's options without opening the panel:
 `:settings ft=python ts=2 sw=2 et` (or `:set …`, as in vim), and `:set ts?`
 says the value. `:settings-buffer` (`:setlocal`) takes the same words, and on
-its own lists their values.
+its own lists their values. `:set key value` (helix's `:set-option`) sets one
+setting for this run without opening the panel or writing a file: a TOML path
+or a key in yumete's or helix's spelling (`:set scrolloff 3`,
+`:set end-of-line-diagnostics warning`, `:set auto-pairs false`), checked as
+the panel checks it.
 
 ```text
                 Setting                 ┆Value                             ┆From

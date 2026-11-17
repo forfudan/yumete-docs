@@ -92,7 +92,8 @@ it. Each key goes where it points:
 `j` at the foot of a column carries on at the head of the next one, so you can
 walk a whole paragraph with one key.
 
-The mouse wheel turns the page sideways, three columns a notch. `:wheel 5`
+The mouse wheel turns the page sideways, three columns a notch, and leaves the
+cursor where it is until scrolloff pushes it along. `:wheel 5`
 changes how many.
 
 ### Keys that follow the text instead

@@ -53,7 +53,7 @@ The name in the first column is the one you write in `[lsp.<name>]` and
 | `]q` / `[q` | the next / previous row of the last listing (`:diagnostics-all`, a `:check-…`, `:git-diff`), from any file; `]Q` / `[Q` the last / first |
 | `Space r` | rename the name everywhere: opens `:lsp-rename` with the old name typed in. Edit it and press `Enter` |
 | `Space a` | code actions for the selection: quick fixes, refactors. Pick one from the list |
-| `C-n` or `C-x` (Insert) | open the completion list by hand |
+| `C-n` `C-p` or `C-x` (Insert) | open the completion list by hand: `C-n` writes the first item in and `C-p` the last, as in vim; `C-x` only opens it |
 | `:diagnostics-all` | every diagnostic from every file, as a `path:line:` listing; `gf` on a line goes there |
 
 In Insert mode, completion opens by itself as you type a word or after `.` and `:`.
@@ -81,8 +81,8 @@ as you add and remove lines, until the server speaks again.
 `:view-diagnostics basic` (errors and warnings), `full` (every level) or `off`
 sets them for this session, and the bare command says which is on;
 `[editor] end_of_line_diagnostics` sets them for good. They are off by default,
-as in helix and Zed: a grammar checker has something to say on nearly every line
-of prose. helix's words are read too: `disable` is off, `error` and `warning` are
+as in helix 25.07 and Zed: a grammar checker has something to say on nearly every line
+of prose. helix's words are read too, in the setting and in `:view-diagnostics`: `disable` is off, `error` and `warning` are
 basic, `info` and `hint` are full. Why they are off: see
 [Why it works this way](/reference/why#end-of-line-diagnostics-are-off).
 

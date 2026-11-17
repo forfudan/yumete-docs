@@ -181,6 +181,8 @@ the last insert, as helix's does.
 | `gi` | insert again where the last Insert stopped |
 | `C-o` in insert mode | run one Normal command and come back |
 | `C-u` `C-w` in insert mode | delete to the start of the line, the word before; each first stops where this Insert began |
+| `C-v` in insert mode | write the next character, `Tab` or `Enter` as it is: no closing pair, no completion list |
+| `C-n` `C-p` in insert mode | open the completion list with the first or the last entry written in |
 | `K` | the documentation for the thing under the cursor |
 | `q`*a*, `@`*a*, `@@`, `Q` | record a macro into register *a* (`q` again stops; `q`*A* adds to it), play it, play the last one played, play the last one recorded |
 | `C-n` `C-p` `_` | down, up a line; the first non-blank character, a count of lines down |

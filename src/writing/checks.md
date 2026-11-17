@@ -225,7 +225,7 @@ One conversion is one undo: press `u` to get the file back. Converting back the
 other way is not an undo, since the round trip is not exact.
 
 To convert only the selection, use the case group: under the helix keymap
-`` ` `` then `s` (to simplified), `t`, `w` (Taiwan), `k` (Hong Kong), `c`, `g`,
+`` ` `` then `s` (to simplified), `t`, `c`, `g`, `w` (Taiwan), `k` (Hong Kong)
 or `j`; under the vim keymap the group is ``g` ``.
 
 ## What is the character under the cursor

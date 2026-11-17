@@ -610,7 +610,7 @@
 
 | 命令 | 作用 | 按鍵 |
 | --- | --- | --- |
-| `normal_mode` | 關閉命令行、搜索框或選擇器 | `Esc` |
+| `normal_mode` | 關閉命令行、搜索框或選擇器 | `Esc` `C-c` |
 | `confirm` | 執行；在選擇器中打開選中項 | `Enter` |
 | `completion_next` | 補全：下一個 | `Tab` |
 | `completion_prev` | 補全：上一個 | `S-Tab` |
@@ -638,6 +638,9 @@
 | `last_entry` | 最後一項 |  |
 | `cycle_hidden_files` | 切換跳過的文件：隱藏/忽略 | `A-h` |
 | `restore_version` | 歷史版本裏：把選中的版本整份換回來 | `A-r` |
+| `open_entry_hsplit` | 在下方分出的窗口裏打開選中的一項 | `C-s` |
+| `open_entry_vsplit` | 在右側分出的窗口裏打開選中的一項 | `C-v` |
+| `toggle_preview` | 收起或放出預覽 | `C-t` |
 
 ### `[keys.sidebar]`
 

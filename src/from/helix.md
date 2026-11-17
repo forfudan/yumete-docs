@@ -59,9 +59,10 @@ With the flavour at `basic`, these keys are yumete's:
 | `C-n` `C-p` | not bound | two-thirds of a page down and up |
 | `0` `^` | not bound | the line's start, its first character |
 | `D` `A-D` | not bound | delete to the line's end; `A-D` leaves the register alone |
-| `A-j` `A-k` | not bound | move the selected lines (in prose, paragraphs) down and up |
+| `A-j` `A-k` | not bound | move the selected lines (in prose, paragraphs; on a heading, its whole section) down and up |
 | `C-w e` `i` `E` `I` | not bound | show or hide the left and right sidebar, go into it |
 | Insert `C-a` `C-e` `C-n` `C-g` `C-c` | not bound | line start, line end, completion, an undo checkpoint (helix's `C-s`, which a terminal takes), back to Normal mode (with the completion list open, `C-e` and `C-c` cancel the entry instead, as helix's `C-c` does) |
+| Insert `Enter` with the completion list open | accepts the entry | keeps the entry and starts a new line; `C-y` keeps it without one |
 
 With the flavour off, `` ` `` lowercases and `` A-` `` uppercases, as in helix.
 At `full`, three more: `d` and `c` delete without filling the register and

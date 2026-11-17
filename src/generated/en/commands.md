@@ -18,7 +18,7 @@
 | `:recover` |  | ask whether to restore unsaved changes |
 | `:history` |  | this file's earlier versions, one per save |
 | `:history-label` | `<name>` | name this file's newest version |
-| `:encoding` | `utf-8｜gb18030｜big5｜shift-jis｜euc-jp｜euc-kr｜utf-16le｜utf-16be` | the encoding the file is saved in: utf-8, gb18030, big5 or shift-jis |
+| `:encoding` | `utf-8｜gb18030｜big5｜shift-jis｜euc-jp｜euc-kr｜utf-16le｜utf-16be` | the encoding the file is saved in: utf-8, gb18030, big5, shift-jis, euc-jp, euc-kr, utf-16le or utf-16be |
 | `:reload` `:rl` |  | reload the file; ! discards your changes |
 | `:reload-all` `:rla` |  | reload every open file; files with unsaved changes are left alone, ! discards them too |
 | `:reload-config` `:config-reload` |  | reload config.toml without restarting |

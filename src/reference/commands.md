@@ -64,7 +64,7 @@ installed (`brew install lazygit yazi`, or `scoop install lazygit yazi`):
 
 | Command | What happens |
 | --- | --- |
-| `:git-lazygit` (`:lazygit`) | [lazygit](https://github.com/jesseduffield/lazygit) in the current file's repository: look at the changes, stage, commit; `q` comes back |
+| `:git-lazygit` (`:lazygit`, `:lg`) | [lazygit](https://github.com/jesseduffield/lazygit) in the current file's repository: look at the changes, stage, commit; `q` comes back |
 | `:files-yazi` (`:yazi`) | [yazi](https://github.com/sxyazi/yazi) opened on the current file; `Enter` on a file (or on several selected) opens them here, `q` comes back with nothing opened. A chosen picture (png, jpg, gif, webp, svg, avif, bmp, tiff) is not opened but put in at the cursor as a reference relative to the current file: `![](pic.png)` in Markdown, `#image("pic.png")` in Typst, the path alone elsewhere; several go in one a line, as one undo step |
 
 lazygit sees what is on disk, so with unsaved changes `:git-lazygit` asks you to save

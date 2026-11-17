@@ -610,7 +610,7 @@
 
 | Command | What it does | Keys |
 | --- | --- | --- |
-| `normal_mode` | close the prompt, search or picker | `Esc` |
+| `normal_mode` | close the prompt, search or picker | `Esc` `C-c` |
 | `confirm` | run the line; in a picker, open the selected entry | `Enter` |
 | `completion_next` | next completion | `Tab` |
 | `completion_prev` | previous completion | `S-Tab` |
@@ -638,6 +638,9 @@
 | `last_entry` | last entry |  |
 | `cycle_hidden_files` | cycle which files are skipped: hidden, ignored | `A-h` |
 | `restore_version` | in history: put the highlighted version back whole | `A-r` |
+| `open_entry_hsplit` | open the highlighted entry in a window split below | `C-s` |
+| `open_entry_vsplit` | open the highlighted entry in a window split beside | `C-v` |
+| `toggle_preview` | hide or show the preview | `C-t` |
 
 ### `[keys.sidebar]`
 

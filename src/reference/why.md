@@ -48,7 +48,7 @@ A language server's messages are marked in the gutter and listed by
 `:diagnostics-all`, but not written at the end of the line unless you ask for
 them ([Languages](/guide/languages)).
 
-- helix ships them off ([helix docs](https://docs.helix-editor.com/editor.html)),
+- helix 25.07 ships them off ([helix docs](https://docs.helix-editor.com/editor.html)),
   and so does Zed ([Zed docs](https://zed.dev/docs/diagnostics)).
 - A VS Code extension's maintainer: "quite a few people would prefer not to
   have it enabled by default"

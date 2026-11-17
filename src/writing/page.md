@@ -214,8 +214,10 @@ line. Two pages scroll together; in a split, clicking another window's bar gives
 that window the keys.
 The column has a track of its own, a shade off the paper, under the thumb and
 the marks; while the whole file fits it is that track alone, so the text does
-not re-wrap as it grows. The mouse wheel scrolls the window under the pointer,
-and the keys stay where they are. The cursor after a row that
+not re-wrap as it grows. The mouse wheel moves the page of the window under the
+pointer, three rows a notch (`:wheel N`), and the keys stay where they are; as
+with `C-e` and `C-y`, the cursor stays put until scrolloff would leave it
+behind, then rides along the edge. The cursor after a row that
 fills the window stands in that column. Markdown and Typst previews draw the bar
 on their frame's right wall. `:view-scrollbar off` (or `[editor] scrollbar =
 false`) gives the column back to the text. Vertical pages have none.
@@ -227,7 +229,7 @@ the thumb. Out of the box it shows only what you have just asked for:
 
 | Colour | Marks | Shown while |
 | --- | --- | --- |
-| pale gold, as a search hit | a line with a search hit | the status line counts the hits (`[3/17]`): gone once the cursor leaves the hit or the text changes |
+| azure | a line with a search hit | the status line counts the hits (`[3/17]`): gone once the cursor leaves the hit or the text changes |
 | gold | a line the last listing points at (`:check-…`, `:diagnostics-all`, `:grep`) | the listing is open; like `]q`, its line numbers do not follow later edits |
 | red | a language server's error | `problems` is on |
 | amber | a language server's warning | `problems` is on |

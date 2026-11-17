@@ -230,7 +230,10 @@ n = "move_line_down"        # scroll a row
 ```
 
 A picker takes the prompt's keys as well, for its query, and so does a box of
-the search panel; their own win where both bind a key. A line binds one key, to a command from that place's list, a
+the search panel; their own win where both bind a key. Under the helix keymap a
+picker's `Home`/`End` go to the first/last entry and `C-d`/`C-u` page, as in
+helix; under vim they stay the query's. `C-s`/`C-v` open the entry in a split
+below/beside, and `C-t` hides or shows the preview. A line binds one key, to a command from that place's list, a
 command line (`":write"`) or keys (`"@hello"`), and `no_op` unbinds a key.
 Where a name is also a Normal or Insert command (`move_char_left`,
 `page_down`), it does the same thing in that place.
