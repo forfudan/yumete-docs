@@ -95,9 +95,10 @@ In insert mode, start a reference and a list opens under the cursor:
 
 `Tab` (or `C-n`, `Down`) writes the next entry into the text and `Shift-Tab`
 (or `C-p`, `Up`) the one before, closing brackets and all. Typing on keeps it;
-`Enter` keeps it and closes the list without starting a new line; `Esc` keeps it
-and leaves Insert mode; `C-c` takes it back out and restores what you typed.
-While the list is open, `C-y` and `C-e` do what `Enter` and `C-c` do, as in vim.
+`Enter` keeps it, closes the list and starts a new line, as it always does;
+`C-y` keeps it and closes the list without one; `Esc` keeps it and leaves
+Insert mode; `C-c` (or `C-e`, as in vim) takes it back out and restores what
+you typed.
 Nothing changes until you press `Tab`, so you can type the whole reference by
 hand and ignore the list. The bottom row shows `Tab complete · 3/12`. Word
 completion uses the same list and the same keys.
