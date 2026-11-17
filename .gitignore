@@ -6,3 +6,5 @@ src/.vitepress/dist/
 *.log
 .book/
 .cache/
+.claude/
+/yumete-docs
