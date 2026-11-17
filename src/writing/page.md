@@ -212,8 +212,10 @@ otherwise, as `C-e` does. Click elsewhere in the column to jump the thumb there,
 centred on the click; at the foot of the column the page ends on the file's last
 line. Two pages scroll together; in a split, clicking another window's bar gives
 that window the keys.
-While the whole file fits, the column is a blank
-margin, so the text does not re-wrap as it grows. The cursor after a row that
+The column has a track of its own, a shade off the paper, under the thumb and
+the marks; while the whole file fits it is that track alone, so the text does
+not re-wrap as it grows. The mouse wheel scrolls the window under the pointer,
+and the keys stay where they are. The cursor after a row that
 fills the window stands in that column. Markdown and Typst previews draw the bar
 on their frame's right wall. `:view-scrollbar off` (or `[editor] scrollbar =
 false`) gives the column back to the text. Vertical pages have none.

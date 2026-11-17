@@ -159,9 +159,13 @@ left sidebar holds five panels, and `Tab` steps through them:
 
 The right sidebar holds one panel, **Info**, described below.
 
-With the mouse, the block at each end of the tab line opens or closes that
-side's sidebar: grey when the side is closed, the panel's frame colour when it
-is open, gold when the keys are in it. `[editor] sidebar_buttons = false` takes
+With the mouse, the cell at each end of the tab line opens or closes that
+side's sidebar. Its arrow says which way the edge will move: `>` on the left
+and `<` on the right open a closed side, and the reverse closes an open one.
+The cell is grey when the side is closed, the panel's frame colour when it is
+open, and gold when the keys are in it; the cell beside it takes a click too. A
+click inside an open sidebar gives it the keys; on a row of a list it moves
+the highlight there, and `Enter` opens it. `[editor] sidebar_buttons = false` takes
 the blocks away; there are none while the tab line is hidden. A sidebar opened
 again, by its block or by `C-w e` and `C-w i`, shows the panel it was closed on.
 
@@ -206,9 +210,13 @@ walks, for example `Tab Explorer>Buffers>Outline>Search`.
 
 ### Width
 
-`w` in a sidebar steps its width through four sizes: 2/10, 3/10, 4/10 and
-5/10 of the window, then back to 2/10. The default is 3/10. The status line
+`w` in a sidebar steps its width through five sizes: 1/10, 2/10, 3/10, 4/10
+and 5/10 of the window, then back to 1/10. The default is 3/10. The status line
 shows the fraction after each press.
+
+With the mouse, drag the sidebar's inner border, marked `⣿`. The width jumps
+between the same five steps as you drag, to the one that would come out
+nearest; it stops at 1/10 and never closes the sidebar.
 
 The width belongs to the side, not to the panel. Switching panels with `Tab`,
 or closing and reopening the sidebar, keeps it.

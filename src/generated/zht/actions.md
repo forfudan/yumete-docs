@@ -658,7 +658,7 @@
 | `move_section_down` | 把這一節連同小節往下移過同級的一節 | `A-j` |
 | `move_section_up` | 把這一節連同小節往上移過同級的一節 | `A-k` |
 | `refresh_sidebar` | 刷新 | `R` |
-| `cycle_sidebar_width` | 切換寬度：窄、中、寬 | `w` |
+| `cycle_sidebar_width` | 切換寬度：窄、窄中、中、中寬、寬 | `w` |
 | `next_sidebar_view` | 下一個面板 | `Tab` |
 | `prev_sidebar_view` | 上一個面板 | `S-Tab` |
 | `normal_mode` | 讓輸入法再掛起一次 | `Esc` |

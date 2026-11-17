@@ -658,7 +658,7 @@
 | `move_section_down` | move this section, its subsections with it, below the next one at its level | `A-j` |
 | `move_section_up` | move this section, its subsections with it, above the previous one at its level | `A-k` |
 | `refresh_sidebar` | refresh | `R` |
-| `cycle_sidebar_width` | cycle width: narrow, medium, wide | `w` |
+| `cycle_sidebar_width` | cycle width: narrow, narrow-medium, medium, medium-wide, wide | `w` |
 | `next_sidebar_view` | next panel | `Tab` |
 | `prev_sidebar_view` | previous panel | `S-Tab` |
 | `normal_mode` | suspend the input method again | `Esc` |
