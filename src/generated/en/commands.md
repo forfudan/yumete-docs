@@ -172,7 +172,7 @@
 | `:decimo-replace` | `<options>` | evaluate the selected text with decimo and replace it with the result |
 | `:decimo-append` | `<options>` | evaluate the selected text with decimo and write = and the result after it |
 | `:pipe-to` | `<command>` | pipe the selection to a shell command, ignoring the output |
-| `:manual` |  | open the yumete manual website in the browser |
+| `:manual` |  | open the user manual in the browser |
 | `:yuhao` |  | open the Yuhao input method website |
 | `:search` `:s` `:grep` | `<path>` | open the search panel: across files, with more options |
 | `:search-buffers` `:sb` |  | search every open buffer |
