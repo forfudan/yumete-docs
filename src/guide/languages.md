@@ -153,7 +153,9 @@ For Python and Mojo, whose servers belong to the project's own environment, yume
 looks inside the project before `PATH`. Every other language's server comes from
 `PATH`, so opening, say, a JSON file in a repository you do not trust does not run a
 program that repository contains. Starting from the file's folder and going up to the outermost git repository, it checks `.venv/bin`, `venv/bin`,
-`node_modules/.bin`, and the environments under `.pixi/envs/` and `.direnv/`. A copy
+`node_modules/.bin`, and the environments under `.pixi/envs/` and `.direnv/`. Of several
+pixi environments, the one you started yumete in (from `pixi shell`) comes first, then
+`default`, which is the one `pixi run` uses, then the rest by name. A copy
 found there wins over one on `PATH`, because it matches the project's own interpreter
 and dependencies, and the status line says so when it is used. A `command` with a `/`
 in it is taken as a path.
