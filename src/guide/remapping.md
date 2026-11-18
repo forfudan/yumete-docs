@@ -229,6 +229,11 @@ n = "move_line_down"        # scroll a row
 "C-h" = "jump_view_left"
 ```
 
+Out of the box a prompt takes helix's `A-b` `A-f` (a word back and forward), `C-k`
+(delete to the end of the line) and `C-r` followed by a register name (insert that
+register; `"` is the unnamed one), and a picker's `A-Enter` opens the highlighted
+entry while the picker stays open.
+
 A picker takes the prompt's keys as well, for its query, and so does a box of
 the search panel; their own win where both bind a key. Under the helix keymap a
 picker's `Home`/`End` go to the first/last entry and `C-d`/`C-u` page, as in

@@ -65,10 +65,12 @@
 | `[editor] language` | `"auto"` | **界面语言** — 编辑器界面显示语言 (`auto` 跟随系统, `zht` 繁体, `zhs` 简体, `en` English) |
 | `[editor] scrolloff` | `5` | **光标边距** — 光标与边缘之间至少保留几行(竖排为几纵) (0–20) |
 | `[editor] wheel_step` | `3` | **滚轮步长** — 滚轮每格滚动的行数，1 即终端默认 (1–10) |
+| `[editor] mouse` | `true` | **鼠标** — 开：点击、拖选、滚轮归 yumete。关：鼠标留给终端，可直接用终端自己的选择 |
 | `[editor] tabs` | `"auto"` | **标签栏** — 顶部列出已打开文件的横条 (`auto` 两个及以上时显示, `always` 总是显示, `never` 不显示) |
 | `[editor] command_line` | `true` | **命令行** — 状态栏下方加一行，用于输入命令、显示消息和按键提示 |
 | `[editor] status_count` | `"text"` | **状态栏字数** — 在状态栏显示全文字数，有选区时也显示选区字数 (`text` 文本文件, `all` 所有文件, `off` 关) |
 | `[editor] inactive_status` | `"line"` | **非焦点窗口的状态栏** — 没有焦点的窗口：整条变淡的状态栏，或一条只写文件名的细线 (`line` 变淡的整条, `rule` 细线) |
+| `[editor] hud` | `"full"` | **光标提示** — 光标旁显示已输入的按键。关：只在状态行右端显示；胶囊：在空白处，不遮挡文字；面板：固定在光标下方，会遮挡正文。:view-hud 只改本次 (`off` 关, `basic` 胶囊, `full` 面板) |
 | `[editor] char_info` | `true` | **字符信息** — 在状态栏右端显示光标处字符的 Unicode 码位 |
 | `[editor] signature` | `true` | **右下角署名** — 命令行为空时，右端淡色显示 yumete |
 | `[editor] sidebar_buttons` | `true` | **侧栏开关** — 标签栏两端各有一个色块，点击可开关该侧的侧栏 |
@@ -114,6 +116,7 @@
 | `[editor] word_completion` | `7` | **词语补全** — 输入几个西文字母后列出已打开文件中出现过的词，汉字为一半(向上取整)。C-n 随时列出 (0–20) |
 | `[editor] completion_page_size` | `6` | **补全每页条数** — 单词、代码和终端命令的补全列表一次显示几条 (1–20) |
 | `[editor] auto_pairs` | `"basic"` | **自动配对** — 输入左括号或引号时自动补上右半边；再输入右半边会跳过。仅括号：() [] {}；基本：再加三种英文引号；完整：所有成对符号 (`off` 关, `minimal` 仅括号, `basic` 基本, `full` 完整) |
+| `[editor] undo_steps` | `"insert"` | **撤销步长** — 一次插入：一次 u 撤回整段输入，同 vim、helix。一句：每到句末（。！？，或 . ! ? 后接空格、换行）分一步 (`insert` 一次插入, `sentence` 一句) |
 | `[editor] indent_width` | `4` | **缩进宽度** — `>`/`<` 增减的列数，也是 Tab 输入的空格数 (1–16) |
 | `[editor] tab_width` | `8` | **制表符宽度** — 制表符对齐到此数的倍数，码表靠它对齐 (1–16) |
 | `[editor] tab_inserts` | `"spaces"` | **Tab 插入内容** — 插入模式下按 Tab 插入的内容；Shift-Tab 插入另一种 (`spaces` 空格, `tab` 制表符) |
@@ -126,7 +129,7 @@
 | 设置 | 默认值 | 作用 |
 | --- | --- | --- |
 | `[editor] reload_auto` | `true` | **自动重载** — 文件被外部修改时自动重新加载 |
-| `[editor] autosave` | `true` | **自动备份** — 未保存时在文件旁保留副本，崩溃后可恢复 |
+| `[editor] autosave` | `true` | **自动备份** — 未保存时在数据目录保留副本，崩溃后可恢复 |
 | `[editor] session` | `false` | **恢复会话** — 不带文件名启动时：打开空白文档，还是恢复上次的文件 |
 | `[editor] remember` | `true` | **记住打开过的文件和位置** — 关闭后不再记录或读取：各文件上次的位置、最近的文件和项目、上次的会话 |
 | `[editor] history` | `true` | **保存时留下历史版本** — 每次保存在书的 .yumete/history/ 里留一份（书外的文件留在数据目录里）：当天的全留，七天内每小时一份，六十天内每天一份，起了名字的一直留。--private 或不记住打开过的文件时不留 |

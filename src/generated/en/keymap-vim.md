@@ -139,7 +139,8 @@
 | `Enter` `C-j` | new line, keeping the indent and list marker | `insert_newline` |
 | `Backspace` `C-h` | delete the character before the cursor | `delete_char_backward` |
 | `Delete` | delete the character after the cursor | `delete_char_forward` |
-| `C-d` | unindent | `unindent` |
+| `C-t` | indent this line one level, rounded to the indent width (vim's Insert C-t) | `vim_insert_indent` |
+| `C-d` | take one level of indent off this line, rounded to the indent width (vim's Insert C-d) | `vim_insert_unindent` |
 | `C-w` | delete the word before the cursor | `delete_word_backward` |
 | `C-u` | delete back to where this Insert began (vim's C-u) | `vim_kill_to_line_start` |
 | `C-r` | insert a register (then its letter) | `insert_register` |
@@ -200,6 +201,8 @@
 | `gw` | reflow lines, keeping the cursor (vim's gw) |
 | `gx` | open URL in browser |
 | `gn / gN` | next / previous match |
+| `gp` | paste after, the cursor just past what it put (vim's gp) |
+| `gP` | paste before, the cursor just past what it put (vim's gP) |
 | `gd` | go to definition |
 | `gD` | go to declaration |
 | `gj` | one line down, on screen |

@@ -65,10 +65,12 @@
 | `[editor] language` | `"auto"` | **language** — interface language (`auto` follow system, `zht` 繁體, `zhs` 简体, `en` English) |
 | `[editor] scrolloff` | `5` | **scrolloff** — how many lines (columns, on a vertical page) to keep between the cursor and the edge (0–20) |
 | `[editor] wheel_step` | `3` | **wheel step** — how many lines one notch of the wheel moves; 1 is the terminal's own step (1–10) |
+| `[editor] mouse` | `true` | **mouse** — on: clicks, drags and the wheel go to yumete. off: the terminal keeps the mouse, and its own selection works |
 | `[editor] tabs` | `"auto"` | **tabs** — the bar along the top that lists the open files (`auto` two or more, `always` always, `never` never) |
 | `[editor] command_line` | `true` | **command line** — a line under the status line for commands, messages and key hints |
 | `[editor] status_count` | `"text"` | **count on the status line** — the file's character count on the status line, and the selection's when there is one (`text` text files, `all` all files, `off` off) |
 | `[editor] inactive_status` | `"line"` | **status line of other windows** — a window without the keys: a faded status line, or a thin rule with only the file name (`line` faded line, `rule` thin rule) |
+| `[editor] hud` | `"full"` | **cursor hint** — what has been typed so far, beside the cursor. off: only at the right of the status line; basic: a pill in blank space, covering nothing; full: a panel under the cursor, covering the text. :view-hud changes it for this session (`off` off, `basic` basic, `full` full) |
 | `[editor] char_info` | `true` | **character info** — show the code point of the character under the cursor at the right of the status line |
 | `[editor] signature` | `true` | **name in the corner** — a quiet yumete at the right end of the command line while it is empty |
 | `[editor] sidebar_buttons` | `true` | **sidebar buttons** — a block at each end of the tab line; a click opens or closes that side's sidebar |
@@ -114,6 +116,7 @@
 | `[editor] word_completion` | `7` | **word completion** — after this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20) |
 | `[editor] completion_page_size` | `6` | **completion page size** — how many items the word, code and shell completion lists show at once (1–20) |
 | `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it. minimal: () [] {}; basic: also the three ASCII quotes; full: every paired symbol (`off` off, `minimal` minimal, `basic` basic, `full` full) |
+| `[editor] undo_steps` | `"insert"` | **undo steps** — insert: one u takes back a whole run of typing, as in vim and helix. sentence: a step at each sentence end (。！？, or . ! ? followed by a space or a line break) (`insert` insert, `sentence` sentence) |
 | `[editor] indent_width` | `4` | **indent width** — how many columns > adds and < takes away, and how many spaces Tab types (1–16) |
 | `[editor] tab_width` | `8` | **tab width** — a tab reaches the next multiple of this; code tables line up by it (1–16) |
 | `[editor] tab_inserts` | `"spaces"` | **Tab inserts** — what Tab types in Insert mode; Shift-Tab types the other (`spaces` spaces, `tab` tab) |
@@ -126,7 +129,7 @@
 | Setting | Default | What it does |
 | --- | --- | --- |
 | `[editor] reload_auto` | `true` | **auto reload** — reload the file when something outside changes it |
-| `[editor] autosave` | `true` | **autosave** — keep a copy beside unsaved files to recover from a crash |
+| `[editor] autosave` | `true` | **autosave** — keep a copy of unsaved files in the data directory to recover from a crash |
 | `[editor] session` | `false` | **session** — when started with no file: a blank page, or the files that were open last time |
 | `[editor] remember` | `true` | **remember files and places** — when off, none of this is saved or read: the line each file was left on, recent files and projects, the last session |
 | `[editor] history` | `true` | **keep a version at each save** — every save keeps a copy in the book's .yumete/history/ (files outside a book: in the data directory): all of today, one an hour for a week, one a day for sixty days, named ones for good. Nothing is kept with --private or when remember is off |

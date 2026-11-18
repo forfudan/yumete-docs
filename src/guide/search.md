@@ -300,7 +300,10 @@ preview on the right. You type straight away to narrow the list.
 | `PageDown` `PageUp` | a page at a time |
 | `A-h` | step what is skipped: hidden + ignored, hidden, ignored, nothing |
 | `Enter` | open |
-| `Esc` | close |
+| `A-Enter` | open, and keep the picker with its query |
+| `C-s` `C-v` | open in a split below / beside |
+| `C-t` | hide or show the preview |
+| `Esc` `C-c` | close |
 
 The file picker matches loosely: the letters you type must appear in order,
 so `ch63` finds `卷三/ch63.md`. It reads pinyin too, and digits and

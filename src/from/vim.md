@@ -141,7 +141,9 @@ vim. `>` and `<` keep the cursor's column, as nvim's do. `.` repeats a visual
 `J`, `>` or `<` on as many lines.
 
 `C-v` starts blockwise visual. The motions grow a rectangle, and the status
-line says `SEL`.
+line says `SEL`. As in vim, its corner can stand just past the end of a short
+line, so the rectangle's width follows the cursor: `C-v j l` from the start of
+`abc` down onto `d` is two columns wide.
 
 - `I` and `A` write before or after the block on every line. `I` skips a line
   too short to reach the block, `A` pads one with spaces, and `$A` writes at
@@ -181,7 +183,8 @@ the last insert, as helix's does.
 | `gi` | insert again where the last Insert stopped |
 | `C-o` in insert mode | run one Normal command and come back |
 | `C-u` `C-w` in insert mode | delete to the start of the line, the word before; each first stops where this Insert began |
-| `C-v` in insert mode | write the next character, `Tab` or `Enter` as it is: no closing pair, no completion list |
+| `C-v` in insert mode | write the next character or `Tab` as it is: no closing pair, no completion list. `C-v Enter` writes a carriage return (drawn `␍`), and a code writes the character it names: `C-v065` and `C-vx41` are `A`, `C-vu4e2d` is `中`, as are `o` octal and `U` with eight hex digits |
+| `gp` `gP` | put after, before, and leave the cursor just past what was put |
 | `C-n` `C-p` in insert mode | open the completion list with the first or the last entry written in |
 | `K` | the documentation for the thing under the cursor |
 | `q`*a*, `@`*a*, `@@`, `Q` | record a macro into register *a* (`q` again stops; `q`*A* adds to it), play it, play the last one played, play the last one recorded |
@@ -196,7 +199,8 @@ the last insert, as helix's does.
 | `''` | back where the last jump came from; again, forward |
 | `C-y` `C-e` in insert mode | type the character above, below the cursor; while the completion list is open, keep / cancel the entry, as in vim's popup menu |
 | `]c` `[c` | next, previous change |
-| `C-c` `C-d` `C-g u` in insert mode | leave Insert, take an indent off the line, start a new undo step |
+| `C-t` in insert mode | put one indent width on the line, rounded to a multiple of it, the cursor staying on its text |
+| `C-c` `C-d` `C-g u` in insert mode | leave Insert, take one indent width off the line (rounded, as `C-t`), start a new undo step (`undo_steps = "sentence"` does this at each sentence end by itself) |
 
 Under the vim keymap the case and conversion menu moves from `` ` `` to
 ``g` ``, since `` ` `` jumps to a mark: ``g`s`` turns traditional characters
@@ -230,7 +234,7 @@ What comes over:
   first `colorcolumn` (as `ruler`, `+1` counted from `textwidth`),
   `scrolloff`, `wrap`, `ignorecase` with `smartcase`, `whichwrap`,
   `modeline`, `fixendofline`, `autoread`, `ambiwidth`, `pumheight` and
-  Neovim's `mousescroll`. A setting left at the editor's default is not
+  Neovim's `mousescroll`, and `mouse` emptied (as `mouse = false`). A setting left at the editor's default is not
   written, even where yumete's default differs.
 - **The colour scheme**, when yumete has its family (tokyonight, catppuccin,
   gruvbox, github, onedark, dracula, monokai), light or dark from its name or
@@ -310,12 +314,16 @@ also takes Visual `Q` away.
   no name in this window, and a file by its name, whether it is on disk yet
   or not, is `:e` (`:open`), or `:hsplit`/`:vsplit` in a new window. vim's `tabn` and `tabp` are not there; typed,
   they point to `:buffer-next` and `:buffer-previous`.
-- There is no `:g` and no `:normal`.
+- There is no `:g`.
+- `:normal` (`:norm`) runs keys as typed in Normal mode: once at the cursor,
+  or at the start of each line of a range or of the selection, as
+  `:%norm A;`. A failing motion ends that line's keys and an unfinished
+  command is dropped, as in vim; the whole run is one undo step. `:normal!`
+  leaves out your own key bindings.
 - A range is written with `-`, and `,` lists single lines: `:3-6s` is lines 3
-  to 6, while `:3,6s` is lines 3 and 6 only. `:'<,'>` and `:.,+2` are not
-  spellings here, and `:s` from Visual mode works on the selection. Only `:s`
-  takes a range; `:2,4d` and the like are not there. See
-  [Search and replace](../guide/search.md).
+  to 6, while `:3,6s` is lines 3 and 6 only. `:'<,'>` is the selection; `:.,+2`
+  is not a spelling here. `:s`, `:sort` and `:normal` take a range; `:2,4d`
+  and the like are not there. See [Search and replace](../guide/search.md).
 - A long line wrapped over several rows scrolls a row at a time, as with
   Neovim's `smoothscroll`: after `G` the top row can be the tail of a line,
   and `scrolloff` counts rows.

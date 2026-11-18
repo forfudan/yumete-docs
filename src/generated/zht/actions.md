@@ -47,7 +47,7 @@
 | `replace_with_yanked` | 用寄存器内容替換選區 | `R` |  |  |
 | `join_selections` | 與下一行合併 | `J` |  |  |
 | `indent` | 增加縮進 | `>` |  |  |
-| `unindent` | 減少縮進 | `<` |  | `C-d` |
+| `unindent` | 減少縮進 | `<` |  |  |
 | `increment` | 光標處的數字加一 | `C-a` |  |  |
 | `decrement` | 光標處的數字減一 | `C-x` |  |  |
 | `switch_case` | 大小寫互換 | `~` ``` `` ``` | ``` g`` ``` |  |
@@ -542,12 +542,16 @@
 | `vim_paste_before` | 向前粘貼(vim 的 P) |  | `P` `zP` |  |
 | `vim_paste_after_indented` | 向後粘貼，縮進對齊這一行(vim 的 ]p) |  | `]p` |  |
 | `vim_paste_before_indented` | 向前粘貼，縮進對齊這一行(vim 的 [p) |  | `]P` `[p` `[P` |  |
+| `vim_paste_after_go_past` | 向後粘貼，光標停在粘貼的文字之後(vim 的 gp) |  | `gp` |  |
+| `vim_paste_before_go_past` | 向前粘貼，光標停在粘貼的文字之後(vim 的 gP) |  | `gP` |  |
 | `vim_increment` | 光標處或其後的數字加一(vim 的 C-a) |  | `C-a` |  |
 | `vim_decrement` | 光標處或其後的數字減一(vim 的 C-x) |  | `C-x` |  |
 | `vim_search_next` | 下一處(vim 的 n) |  | `n` |  |
 | `vim_search_prev` | 上一處(vim 的 N) |  | `N` |  |
 | `vim_match_brackets` | 跳到匹配的括號，不在括號上則找本行下一個(vim 的 %) |  | `%` |  |
 | `vim_kill_to_line_start` | 删到這次插入開始的地方(vim 的 C-u) |  |  | `C-u` |
+| `vim_insert_indent` | 這一行縮進一級，取整到縮進寬度(vim 插入模式的 C-t) |  |  | `C-t` |
+| `vim_insert_unindent` | 這一行退一級縮進，取整到縮進寬度(vim 插入模式的 C-d) |  |  | `C-d` |
 | `vim_kill_to_line_end` | 删到行尾，不删換行(vim) |  |  | `C-k` |
 | `vim_flip_selections` | 換到選區的另一頭(vim 可視模式的 o) |  | `o` |  |
 | `vim_switch_to_lowercase` | 選區轉小寫並退出可視模式(vim 的 u) |  | `u` |  |
@@ -624,6 +628,10 @@
 | `delete_char_forward` | 删除光標後的一個字 | `Delete` |
 | `delete_word_backward` | 删除光標前的一個詞 | `C-w` |
 | `kill_to_line_start` | 删到行首 | `C-u` |
+| `kill_to_line_end` | 删到行尾 | `C-k` |
+| `move_prev_word_start` | 上一個詞首 | `A-b` |
+| `move_next_word_start` | 下一個詞首 | `A-f` |
+| `insert_register` | 插入寄存器内容(再按一個字母) | `C-r` |
 | `toggle_wide_search` | 繁簡/拼音通配(開關) | `A-j` |
 
 ### `[keys.picker]`
@@ -640,6 +648,7 @@
 | `restore_version` | 歷史版本裏：把選中的版本整份換回來 | `A-r` |
 | `open_entry_hsplit` | 在下方分出的窗口裏打開選中的一項 | `C-s` |
 | `open_entry_vsplit` | 在右側分出的窗口裏打開選中的一項 | `C-v` |
+| `open_entry_keep_picker` | 打開選中的一項，選擇器留着 | `A-Enter` |
 | `toggle_preview` | 收起或放出預覽 | `C-t` |
 
 ### `[keys.sidebar]`

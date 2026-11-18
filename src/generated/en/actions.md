@@ -47,7 +47,7 @@
 | `replace_with_yanked` | replace the selection with the register | `R` |  |  |
 | `join_selections` | join with the next line | `J` |  |  |
 | `indent` | indent | `>` |  |  |
-| `unindent` | unindent | `<` |  | `C-d` |
+| `unindent` | unindent | `<` |  |  |
 | `increment` | increment the number under the cursor | `C-a` |  |  |
 | `decrement` | decrement the number under the cursor | `C-x` |  |  |
 | `switch_case` | switch case | `~` ``` `` ``` | ``` g`` ``` |  |
@@ -542,12 +542,16 @@
 | `vim_paste_before` | paste before (vim's P) |  | `P` `zP` |  |
 | `vim_paste_after_indented` | paste after, indented like this line (vim's ]p) |  | `]p` |  |
 | `vim_paste_before_indented` | paste before, indented like this line (vim's [p) |  | `]P` `[p` `[P` |  |
+| `vim_paste_after_go_past` | paste after, the cursor just past what it put (vim's gp) |  | `gp` |  |
+| `vim_paste_before_go_past` | paste before, the cursor just past what it put (vim's gP) |  | `gP` |  |
 | `vim_increment` | the number at or after the cursor, plus one (vim's C-a) |  | `C-a` |  |
 | `vim_decrement` | the number at or after the cursor, minus one (vim's C-x) |  | `C-x` |  |
 | `vim_search_next` | the next match (vim's n) |  | `n` |  |
 | `vim_search_prev` | the previous match (vim's N) |  | `N` |  |
 | `vim_match_brackets` | the matching bracket, or the next one on the line (vim's %) |  | `%` |  |
 | `vim_kill_to_line_start` | delete back to where this Insert began (vim's C-u) |  |  | `C-u` |
+| `vim_insert_indent` | indent this line one level, rounded to the indent width (vim's Insert C-t) |  |  | `C-t` |
+| `vim_insert_unindent` | take one level of indent off this line, rounded to the indent width (vim's Insert C-d) |  |  | `C-d` |
 | `vim_kill_to_line_end` | delete to the end of the line, never the line break (vim) |  |  | `C-k` |
 | `vim_flip_selections` | to the other end of the selection (vim's Visual o) |  | `o` |  |
 | `vim_switch_to_lowercase` | the selection to lowercase, leaving Visual mode (vim's u) |  | `u` |  |
@@ -624,6 +628,10 @@
 | `delete_char_forward` | delete the character after the cursor | `Delete` |
 | `delete_word_backward` | delete the word before the cursor | `C-w` |
 | `kill_to_line_start` | delete to the start of the line | `C-u` |
+| `kill_to_line_end` | delete to the end of the line | `C-k` |
+| `move_prev_word_start` | start of the previous word | `A-b` |
+| `move_next_word_start` | start of the next word | `A-f` |
+| `insert_register` | insert a register (then its letter) | `C-r` |
 | `toggle_wide_search` | toggle traditional/simplified and pinyin matching | `A-j` |
 
 ### `[keys.picker]`
@@ -640,6 +648,7 @@
 | `restore_version` | in history: put the highlighted version back whole | `A-r` |
 | `open_entry_hsplit` | open the highlighted entry in a window split below | `C-s` |
 | `open_entry_vsplit` | open the highlighted entry in a window split beside | `C-v` |
+| `open_entry_keep_picker` | open the highlighted entry and keep the picker open | `A-Enter` |
 | `toggle_preview` | hide or show the preview | `C-t` |
 
 ### `[keys.sidebar]`

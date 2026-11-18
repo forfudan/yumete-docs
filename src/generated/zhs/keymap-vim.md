@@ -139,7 +139,8 @@
 | `Enter` `C-j` | 换行(延续缩进和列表符号) | `insert_newline` |
 | `Backspace` `C-h` | 删除光标前的一个字 | `delete_char_backward` |
 | `Delete` | 删除光标后的一个字 | `delete_char_forward` |
-| `C-d` | 减少缩进 | `unindent` |
+| `C-t` | 这一行缩进一级，取整到缩进宽度(vim 插入模式的 C-t) | `vim_insert_indent` |
+| `C-d` | 这一行退一级缩进，取整到缩进宽度(vim 插入模式的 C-d) | `vim_insert_unindent` |
 | `C-w` | 删除光标前的一个词 | `delete_word_backward` |
 | `C-u` | 删到这次插入开始的地方(vim 的 C-u) | `vim_kill_to_line_start` |
 | `C-r` | 插入寄存器内容(再按一个字母) | `insert_register` |
@@ -200,6 +201,8 @@
 | `gw` | 重排文本，光标不动(vim 的 gw) |
 | `gx` | 用浏览器打开网址 |
 | `gn / gN` | 下一处/上一处匹配 |
+| `gp` | 向后粘贴，光标停在粘贴的文字之后(vim 的 gp) |
+| `gP` | 向前粘贴，光标停在粘贴的文字之后(vim 的 gP) |
 | `gd` | 转到定义 |
 | `gD` | 转到声明 |
 | `gj` | 下一行(屏幕上的) |

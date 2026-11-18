@@ -140,7 +140,13 @@ follow:
 
 What you have typed so far shows at the right end of the command line (on the
 status line when `command_line = false`) and beside the cursor. `:view-hud basic` makes the one beside the cursor smaller, and
-`:view-hud off` removes it.
+`:view-hud off` removes it. That lasts for this run; to keep it, set it in the
+config:
+
+```toml
+[editor]
+hud = "basic"   # "off" | "basic" | "full" (the default)
+```
 
 The line below the status line answers in words: what just happened, why a key
 was turned away, or what keys the panel you are in accepts.

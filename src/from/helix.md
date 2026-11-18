@@ -21,7 +21,8 @@ Search is `/` `?` `n` `N` `*`. The `m` group is helix's, with more objects
 (see [Match mode](../reference/match.md)), and so are `z`, `Z` and `]`/`[`
 for paragraphs, changes and diagnostics.
 
-`.` is helix's `.`: it repeats the last insert, not the last change. Under the
+`.` is helix's `.`: it repeats the last insert, not the last change, and a
+word chosen from the completion list comes back as the word chosen. Under the
 vim keymap it is vim's `.` instead (see [Coming from vim](vim.md)).
 
 Enter on an empty `:` line runs the last command of this session again, as

@@ -68,6 +68,33 @@ through comes out right.
 `full` is not the default: dialogue in a novel is typed straight through, and a
 closer waiting ahead of the cursor is one more thing to step past.
 
+## Undo steps: `undo_steps`
+
+Everything typed between entering Insert and leaving it is one undo step, as in
+vim and helix. Writing, you may stay in Insert for a whole paragraph, and then
+one `u` takes all of it back. With
+
+```toml
+[editor]
+undo_steps = "sentence"   # "insert" (the default) | "sentence"
+```
+
+each sentence becomes its own step, as if you pressed `C-g u` after it. A
+sentence ends at `。` `！` `？`, and at `.` `!` `?` when a space or a line break
+follows, so `a.b` and `x != y` in code never cut a step. Commas do not count.
+The rule is the same in every kind of file. Type `今天下雨。他没带伞。` in one go,
+and `u` takes back `他没带伞。` alone; a second `u` takes `今天下雨。`.
+
+`.` and macros replay what you typed as one step, whichever level is on.
+
+## Mouse: `mouse`
+
+`mouse = false` leaves the mouse to the terminal: yumete takes no clicks,
+wheel or drags, and dragging makes the terminal's own selection, which its
+copy key copies as the screen shows it. The name is helix's, and a helix
+config's `editor.mouse` comes over. `:set mouse false` turns it off for this
+run.
+
 ## Status-line count: `status_count`
 
 ```toml

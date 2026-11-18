@@ -146,6 +146,7 @@
 | `:indent-tab` | `spaces｜tab` | what Tab types: spaces or a tab (Shift-Tab types the other) |
 | `:indent-width` | `<width, 1–16>` | indent width: the spaces Tab types, and how far > and < shift |
 | `:hard-wrap` | `<columns>` | hard-wrap to a width without changing content: the selection or the unit at the cursor; 0 joins each into one line; no number uses the hard_wrap setting |
+| `:normal` `:norm` | `<keys>` | run keys as though typed in Normal mode; with a range, from the start of each line; ! leaves your own key bindings out |
 | `:align` | `<character>` | align the selected lines on a character (= by default) |
 | `:sort` | `-r｜-i｜n｜u …` | sort several selections' texts, else the selected lines or every line; by code point, -r reversed, -i ignoring case, n by number, u unique |
 | `:split-join` |  | put the items in the brackets around the cursor one per line, or join them back |
