@@ -111,6 +111,7 @@ warning if that directory is not on your `PATH`.
 | --- | --- |
 | `--no-data` | skip compiling the input method tables (this needs yume's source tables, which most checkouts do not have) |
 | `--no-link` | leave the global commands alone |
+| `--profile=release-termux` | build with less memory, for Termux on Android or another small machine: the full release build can stop with `LLVM ERROR: out of memory` |
 | `YUMETE_BIN_DIR=/usr/local/bin` | link there instead of `~/.local/bin` |
 
 On macOS and Linux the script never replaces a real file at either path. If `~/.local/bin/ye`
