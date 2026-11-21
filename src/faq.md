@@ -34,8 +34,9 @@ sets that key. See [The input method](writing/ime.md).
 
 ## yumete crashed. Where is my work?
 
-While a file has unsaved changes, yumete keeps a recovery copy beside it, as a
-hidden file: `chapter.md` gets `.chapter.md.<number>.yumete-swp`. It is removed when you save
+While a file has unsaved changes, yumete keeps a recovery copy in the `drafts`
+folder of its data directory, named for the file's whole path (see
+[The recovery copy](guide/files.md#the-recovery-copy)). It is removed when you save
 or quit normally. On macOS and Linux, closing the terminal window (`SIGHUP`)
 or a `SIGTERM` writes every unsaved file's copy on the way out. After a crash,
 open the file again and yumete asks whether to
