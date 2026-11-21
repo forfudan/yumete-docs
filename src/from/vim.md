@@ -40,6 +40,8 @@ motion is told so.
 | brackets | `%`: to the other half, inclusive, looking along the line when the cursor is not on one |
 | paragraphs, sentences | `{` `}`, `(` `)` |
 | find a character | `f` `F` `t` `T`, and `;` `,` to repeat the last one |
+| search | `/` `?` then the pattern and `Enter`, `n` `N`, and `gn` `gN` for the match itself: `cgn` then `.` changes one match after another |
+| marks | `` ` `` *a* and `'` *a*, and `` `< `` `` `> `` `'<` `'>` for the last selection |
 | text objects | `i` and `a` with an object: `diw`, `ci"`, `ya(`, `dap` |
 | the whole line | the operator again: `dd` `yy` `cc` `>>`, or `d_` |
 
@@ -150,7 +152,10 @@ line, so the rectangle's width follows the cursor: `C-v j l` from the start of
   the end of each line. What you type is copied to the other lines on `Esc`.
 - `c` `d` `y` `r` `~` `u` `U` `>` `<` `J` act on the block.
 - `o` and `O` move to the other corners.
-- `p` puts a block you took back as a block.
+- `p` puts a block you took back as a block. `p` `P` `gp` `gP` over a block
+  replace it: a block goes in its place, a word goes on every line of it, and
+  lines go below it (above it for `P`).
+- `gv` selects the last block again, and `` `< `` `` `> `` go to its corners.
 
 ## `.` is vim's
 
@@ -173,7 +178,8 @@ the last insert, as helix's does.
 | `0` `^` `$` | start of line, first character, end of line |
 | `%` | the matching bracket; off a bracket, the partner of the first one further along the line, and `d%` deletes from the cursor to there |
 | `*` `#` | the word under the cursor, forward or back |
-| `n` `N`, `gn` `gN` | the next or previous match |
+| `n` `N` | the next or previous match |
+| `gn` `gN` | select the next or previous match |
 | `m` *a*, `'` *a* | set mark *a*, go back to its line, across files; `` ` `` *a* does the same |
 | `` `[ `` `` `] ``, `'[` `']` | where the last change or yank began and ended; `>` and `<` set them as vim does |
 | *N*`\|` | go to column *N*; a Chinese character is two columns wide |
