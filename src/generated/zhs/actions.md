@@ -56,8 +56,8 @@
 | `repeat_last_change` | 重复上次输入(vim 键位：上次改动) | `.` |  |  |
 | `search` | 搜索 | `/` `z/` `Z/` | `/` `Z/` |  |
 | `rsearch` | 反向搜索 | `?` `z?` `Z?` | `?` `Z?` |  |
-| `search_next` | 下一处 | `n` `zn` `Zn` | `gn` `Zn` |  |
-| `search_prev` | 上一处 | `N` `zN` `ZN` | `gN` `ZN` |  |
+| `search_next` | 下一处 | `n` `zn` `Zn` | `Zn` |  |
+| `search_prev` | 上一处 | `N` `zN` `ZN` | `ZN` |  |
 | `search_selection` | 搜索选中内容 | `g/` | `*` `g/` |  |
 | `goto_definition` | 转到定义 | `gd` | `gd` |  |
 | `goto_file` | 打开本行所写的文件 | `gf` | `gf` |  |
@@ -548,6 +548,8 @@
 | `vim_decrement` | 光标处或其后的数字减一(vim 的 C-x) |  | `C-x` |  |
 | `vim_search_next` | 下一处(vim 的 n) |  | `n` |  |
 | `vim_search_prev` | 上一处(vim 的 N) |  | `N` |  |
+| `vim_select_next_match` | 选中这一处或下一处匹配(vim 的 gn) |  | `gn` |  |
+| `vim_select_prev_match` | 选中这一处或上一处匹配(vim 的 gN) |  | `gN` |  |
 | `vim_match_brackets` | 跳到匹配的括号，不在括号上则找本行下一个(vim 的 %) |  | `%` |  |
 | `vim_kill_to_line_start` | 删到这次插入开始的地方(vim 的 C-u) |  |  | `C-u` |
 | `vim_insert_indent` | 这一行缩进一级，取整到缩进宽度(vim 插入模式的 C-t) |  |  | `C-t` |

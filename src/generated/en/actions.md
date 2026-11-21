@@ -56,8 +56,8 @@
 | `repeat_last_change` | repeat the last insert (vim keymap: the last change) | `.` |  |  |
 | `search` | search forward | `/` `z/` `Z/` | `/` `Z/` |  |
 | `rsearch` | search backward | `?` `z?` `Z?` | `?` `Z?` |  |
-| `search_next` | next match | `n` `zn` `Zn` | `gn` `Zn` |  |
-| `search_prev` | previous match | `N` `zN` `ZN` | `gN` `ZN` |  |
+| `search_next` | next match | `n` `zn` `Zn` | `Zn` |  |
+| `search_prev` | previous match | `N` `zN` `ZN` | `ZN` |  |
 | `search_selection` | search for the selection | `g/` | `*` `g/` |  |
 | `goto_definition` | go to definition | `gd` | `gd` |  |
 | `goto_file` | open the file this line names | `gf` | `gf` |  |
@@ -548,6 +548,8 @@
 | `vim_decrement` | the number at or after the cursor, minus one (vim's C-x) |  | `C-x` |  |
 | `vim_search_next` | the next match (vim's n) |  | `n` |  |
 | `vim_search_prev` | the previous match (vim's N) |  | `N` |  |
+| `vim_select_next_match` | select this or the next match (vim's gn) |  | `gn` |  |
+| `vim_select_prev_match` | select this or the previous match (vim's gN) |  | `gN` |  |
 | `vim_match_brackets` | the matching bracket, or the next one on the line (vim's %) |  | `%` |  |
 | `vim_kill_to_line_start` | delete back to where this Insert began (vim's C-u) |  |  | `C-u` |
 | `vim_insert_indent` | indent this line one level, rounded to the indent width (vim's Insert C-t) |  |  | `C-t` |
