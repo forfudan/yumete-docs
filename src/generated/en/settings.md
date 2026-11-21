@@ -66,6 +66,8 @@
 | `[editor] scrolloff` | `5` | **scrolloff** — how many lines (columns, on a vertical page) to keep between the cursor and the edge (0–20) |
 | `[editor] wheel_step` | `3` | **wheel step** — how many lines one notch of the wheel moves; 1 is the terminal's own step (1–10) |
 | `[editor] mouse` | `true` | **mouse** — on: clicks, drags and the wheel go to yumete. off: the terminal keeps the mouse, and its own selection works |
+| `[editor] mouse_hover` | `true` | **mouse hover** — the pointer resting on the status line, a cut sidebar row, a problem sign or a scrollbar mark shows what that cell cannot fit; never over the text |
+| `[editor] mouse_hover_delay` | `500` | **hover delay** — how many milliseconds the pointer rests before the panel shows (0–5000) |
 | `[editor] tabs` | `"auto"` | **tabs** — the bar along the top that lists the open files (`auto` two or more, `always` always, `never` never) |
 | `[editor] command_line` | `true` | **command line** — a line under the status line for commands, messages and key hints |
 | `[editor] status_count` | `"text"` | **count on the status line** — the file's character count on the status line, and the selection's when there is one (`text` text files, `all` all files, `off` off) |

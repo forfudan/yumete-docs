@@ -196,7 +196,10 @@ its own lists their values. `:set key value` (helix's `:set-option`) sets one
 setting for this run without opening the panel or writing a file: a TOML path
 or a key in yumete's or helix's spelling (`:set scrolloff 3`,
 `:set end-of-line-diagnostics warning`, `:set auto-pairs false`), checked as
-the panel checks it.
+the panel checks it. An on/off setting named with no value is flipped for this run, as vim's
+`:set wrap!` and helix's `:toggle` do: `:set mouse` gives the mouse to the
+terminal, and again takes it back. Any other setting named on its own opens
+the panel on it.
 
 ```text
                 Setting                 ┆Value                             ┆From

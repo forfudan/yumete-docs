@@ -144,6 +144,15 @@ status line; its frame reaches the command line. The command line stays one,
 across the screen; its right end shows the keys typed so far, `@q` while a
 macro is being recorded, and `[preview]` while a preview server runs.
 
+Rest the mouse on a cell that is too narrow for what it stands for, and a small
+panel shows the rest: the file's whole path over the file name, the language
+server's command and environment over its cell, a whole message over a cut
+one. The same works on a sidebar row cut short, a problem sign in the gutter
+or at a line's end, and a mark on the scrollbar. Any key, a click or a move to
+another cell puts the panel away, and it does not come back until the mouse
+moves to another cell. `[editor] mouse_hover = false` turns this off, and
+`mouse_hover_delay` (500 ms) sets how long the mouse rests first.
+
 ## Sidebars
 
 There is one sidebar on each side, and each holds one panel at a time. The
