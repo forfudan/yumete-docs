@@ -439,7 +439,9 @@ The input method works wherever you type text:
 - the keys that wait for one character of the text: `f` and `F` (under
   the vim keys also `t` and `T`, and with an operator, as in `df` and `dt`), `r`, and the surround keys
   such as `ms` and `mr`. Type `f`, then a code, and the character you pick is
-  the one `f` looks for.
+  the one `f` looks for. A punctuation mark finds both its widths, so `f)`
+  stops on `)` or `）`, and `f"` on `"`, `“` or `”`: you need not switch to
+  English to reach a bracket in code.
 
 It does **not** work on the `:` command line, including the arguments. That line
 is always English. To open a file with a Chinese name, run `:open` with no path:
