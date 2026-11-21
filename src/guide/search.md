@@ -384,3 +384,10 @@ The other switches carry `rg`'s names: `--ignore-case`, `--case-sensitive`,
 `--color=`, plus `--chinese=both|glyphs|pinyin|off`. `--files` takes only
 `--hidden`, `--no-ignore`, `--glob=`, `--exclude=` and `--project`.
 `ye --help` lists everything.
+
+For fzf's preview pane, `ye --ansi --shot=WxH FILE` prints the file as yumete
+lays it out, in the theme's colours, with no status line or other bars:
+
+```
+$ fzf --preview 'ye --ansi --shot=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES} {}'
+```
