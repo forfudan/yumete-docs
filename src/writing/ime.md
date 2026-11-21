@@ -436,8 +436,8 @@ The input method works wherever you type text:
 - the command search, `::`, which finds a command by what it does;
 - the pickers, such as `Space f` for files and `Space b` for buffers;
 - the `:ruby` line;
-- the keys that wait for one character of the text: `f`, `F`, `t` and `T`
-  (with an operator too, as in vim's `df` and `dt`), `r`, and the surround keys
+- the keys that wait for one character of the text: `f` and `F` (under
+  the vim keys also `t` and `T`, and with an operator, as in `df` and `dt`), `r`, and the surround keys
   such as `ms` and `mr`. Type `f`, then a code, and the character you pick is
   the one `f` looks for.
 
