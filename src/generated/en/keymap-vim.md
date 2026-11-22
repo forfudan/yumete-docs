@@ -194,7 +194,6 @@
 | Key | What it does |
 | --- | --- |
 | `gg` | start of file |
-| `g<N>g` | go to line N |
 | `ge` | to the end of the previous word, no selection |
 | `gE` | to the end of the previous long word, no selection |
 | `gf` | open this file |

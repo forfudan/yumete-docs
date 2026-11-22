@@ -270,8 +270,10 @@ lines here, so `:1,40s` is two lines, not forty.
 | `t` | allow a change that breaks a table row |
 
 The separator is whatever follows `s`, so `:s#2024/01#2025/02#` needs no
-escaping. In the replacement, `$1` is the first capture group, `\n` a
-newline and `$$` a dollar sign. However many matches a substitution changes,
+escaping. In the replacement, `$1` is the first capture group, `\r` a
+line break and `$$` a dollar sign; as in vim, `\n` there puts a NUL. In the
+pattern, `\n` matches a line break, so `:%s/,\n/, /` joins lines that end
+in a comma. However many matches a substitution changes,
 one `u` undoes all of it.
 
 ## Pickers
