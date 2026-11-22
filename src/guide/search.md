@@ -30,7 +30,8 @@ changes the word you found.
 
 The pattern is a regular expression. `/第.+章` finds every chapter heading.
 To find a character that means something in a regex, such as `.` `*` `(` or
-`[`, escape it with `\`.
+`[`, escape it with `\`. As in vim, `\zs` and `\ze` mark where the match
+starts and ends: `/第\zs.+\ze章` finds only what stands between 第 and 章.
 
 The last pattern you searched for waits on an empty prompt in grey. `Enter`
 on its own searches for it again, and `Tab` turns it into text you can edit.
