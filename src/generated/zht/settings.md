@@ -32,6 +32,9 @@
 | `[editor] diff_gutter` | `true` | **改動條** — 在行號旁用底色標出與 git 不同的行(不在 git 中則對比已保存的文件) |
 | `[editor] end_of_line_diagnostics` | `"off"` | **行末診斷** — 在行末顯示語言服務器的診斷：關閉、基本(錯誤和警告)或完整(所有級别) (`off` 關閉, `basic` 基本：錯誤和警告, `full` 完整：所有級别(錯誤、警告、説明、建議)) |
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製後，被複制的範圍閃一下 |
+| `[editor] selection_highlight` | `false` | **選區高亮** — 有選區時，屏幕上同樣的文字都標出淡底色；多個選區時按主選區 |
+| `[editor] selection_highlight_case` | `"respect"` | **選區高亮的大小寫** — 選區高亮比較拉丁字母時是否區分大小寫 (`respect` 區分, `ignore` 不區分, `by_place` 代碼裏區分，正文和註釋裏不區分) |
+| `[editor] selection_highlight_glyphs` | `false` | **選區高亮認繁簡** — 選區高亮把繁體字和簡體字當作同一個字（選「書」也標出「書」），與搜索面板的開關無關 |
 | `[editor] indent_guides` | `false` | **縮進參考線** — 在代碼行首每級縮進畫一條豎線，同 helix；僅用於代碼文件 |
 | `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
 | `[editor] indent_guides_skip_levels` | `0` | **跳過外層** — 最外幾級縮進不畫參考線 (0–8) |

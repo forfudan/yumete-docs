@@ -59,6 +59,22 @@ Under the helix keymap, `*` works as in helix: it puts the selection into the se
 moving, with word boundaries when the selection is a whole word (`A-*`
 without them). Press `n` to go.
 
+### Seeing where the selection appears again
+
+With `selection_highlight` on (`:set selection_highlight`, or
+`selection_highlight = true` under `[editor]`), every other place on the
+screen where the selected text appears gets the same faint ground the search
+panel gives its other matches. It is plain text matching, so selecting 中国
+also lights the 中国 in 中国人. A selection of only blanks, one that spans
+lines, or one longer than 200 characters lights nothing. With several
+selections, the primary one's text is used.
+
+`selection_highlight_case` decides Latin letters: `respect` (the default)
+matches case, `ignore` does not, and `by_place` matches case in code and
+fenced code blocks but not in prose or comments. `selection_highlight_glyphs`
+lights simplified and traditional forms as one (書 lights 书), whatever the
+search panel's switch says.
+
 ## Chinese in a search
 
 Two kinds of matching are added on top of the plain text. Each can be on or

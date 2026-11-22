@@ -32,6 +32,9 @@
 | `[editor] diff_gutter` | `true` | **diff gutter** — mark lines that differ from git (or from the saved file) beside the line numbers |
 | `[editor] end_of_line_diagnostics` | `"off"` | **end-of-line diagnostics** — show language-server diagnostics at line end: off, basic (errors and warnings) or full (every level) (`off` off, `basic` basic: errors and warnings, `full` full: every level (errors, warnings, info, hints)) |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
+| `[editor] selection_highlight` | `false` | **selection highlight** — light every other copy of the selected text on the screen; with several selections, the primary one's |
+| `[editor] selection_highlight_case` | `"respect"` | **selection highlight case** — whether the copies lit must match the selection's case (`respect` respect, `ignore` ignore, `by_place` respected in code, ignored in prose and comments) |
+| `[editor] selection_highlight_glyphs` | `false` | **selection highlight variants** — light simplified and traditional forms as one character (書 lights 书), apart from the search panel's switch |
 | `[editor] indent_guides` | `false` | **indent guides** — a rule at each level of a code line's leading blanks, as helix draws them; code files only |
 | `[editor] indent_guides_character` | `"│"` | **guide character** — the character the guides are drawn with, one cell wide |
 | `[editor] indent_guides_skip_levels` | `0` | **skip levels** — how many outer levels go without a guide (0–8) |
