@@ -203,6 +203,8 @@
 | `search_selection_detect_word_boundaries` | search for the selection as a whole word | `*` |  |  |
 | `search_selection_exact` | search for the selection exactly | `A-*` | `A-*` |  |
 | `search_word_backward` | search backward for the word under the cursor |  | `#` |  |
+| `search_part_forward` | search forward for the word under the cursor, inside other words too (vim's g*) |  | `g*` |  |
+| `search_part_backward` | search backward for the word under the cursor, inside other words too (vim's g#) |  | `g#` |  |
 | `replace_mode` | Replace mode: typing writes over the text |  | `R` |  |
 | `goto_line` | go to line N (count) |  |  |  |
 | `vim_repeat_last_change` | repeat the last change with a new count |  | `.` |  |

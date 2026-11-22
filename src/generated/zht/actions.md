@@ -203,6 +203,8 @@
 | `search_selection_detect_word_boundaries` | 搜索選中内容(整詞) | `*` |  |  |
 | `search_selection_exact` | 搜索選中内容(原樣) | `A-*` | `A-*` |  |
 | `search_word_backward` | 反向搜索光標下的詞 |  | `#` |  |
+| `search_part_forward` | 往後找光標下的詞，詞中的也算(vim 的 g*) |  | `g*` |  |
+| `search_part_backward` | 往前找光標下的詞，詞中的也算(vim 的 g#) |  | `g#` |  |
 | `replace_mode` | 替換模式：輸入覆蓋原文 |  | `R` |  |
 | `goto_line` | 到第 N 行(用計數) |  |  |  |
 | `vim_repeat_last_change` | 用新的計數再做一次剛纔的改動 |  | `.` |  |

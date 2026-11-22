@@ -204,6 +204,8 @@
 | `gP` | paste before, the cursor just past what it put (vim's gP) |
 | `gd` | go to definition |
 | `gD` | go to declaration |
+| `g*` | search forward for the word under the cursor, inside other words too (vim's g*) |
+| `g#` | search backward for the word under the cursor, inside other words too (vim's g#) |
 | `gj` | one line down, on screen |
 | `gk` | one line up, on screen |
 | `gv` | reselect last selection |
