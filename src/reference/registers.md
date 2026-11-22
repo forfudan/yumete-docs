@@ -17,6 +17,7 @@ With no register named, these keys use the unnamed one:
 | `p` / `P` | paste after / before the selection; a count (`3p`) pastes that many copies as one piece |
 | `R` | replace the selection with the register; `2R` replaces it with two copies (helix keymap; under vim, `R` in Normal mode is vim's replace mode) |
 | `C-r "` (Insert) | insert the register's text at the cursor |
+| `C-r C-r "` / `C-r C-o "` / `C-r C-p "` (Insert, vim keymap) | insert the text literally / put it as `P` does, a block as a block / the same, fixing the indent of whole lines |
 
 If you would rather `d` and `c` left the register alone, `:keymap-yumete-flavor full`
 swaps them with `A-d` and `A-c` (helix keymap). Set `flavor = "full"` under `[keys]`
