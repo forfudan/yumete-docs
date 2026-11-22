@@ -48,6 +48,9 @@
 | `[editor] indent_symbol` | `"↵"` | **段首符号** — 段首记号用的字符，仅在段首记号为「画符号」时生效 |
 | `[editor] table_rules` | `"line dash"` | **表格竖线** — 表格竖线的样式 (`line dash` 实线加虚线, `line` 实线, `line double` 实线加双线, `color` 用颜色区分, `off` 不画) |
 | `[editor] unicode_alarm` | `true` | **可疑字符** — 零宽字符、双向控制符后面那一格和非普通空格铺上琥珀底色 |
+| `[editor] whitespace` | `"off"` | **空白记号** — 在空格和制表符的格子里画一个淡色记号；“边界”不标词与词之间的单个空格 (`off` 关闭, `boundary` 边界：行首行尾、制表符、连着的空格, `selection` 选区内, `trailing` 行尾, `all` 全部) |
+| `[editor] whitespace_space_character` | `"⋅"` | **空格记号** — 标空格用的字符，要占一格 |
+| `[editor] whitespace_tab_character` | `"⇥"` | **制表符记号** — 标制表符用的字符，画在它的第一格，要占一格 |
 | `[editor] maths_preview` | `true` | **公式预览** — 光标在公式中时，在下方浮窗显示排版结果；需要 Ghostty 或 kitty，Typst 公式还需要 typst 命令 |
 | `[editor] maths_in_place` | `true` | **公式原位显示** — :render full 时，独占几行的行间公式在原处显示排版结果，光标进入时显示源码；需要 Ghostty 或 kitty |
 | `[editor] heading_folds` | `true` | **按标题折叠** — 开：Markdown 和 Typst 每个标题下的一节可以折叠，初始全部展开。关：同 vim，只有 zf 建的折叠。 |

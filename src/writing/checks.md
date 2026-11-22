@@ -267,6 +267,29 @@ unicode_alarm = false
 
 The settings panel has it under Marks.
 
+## Spaces and tabs
+
+`[editor] whitespace` puts a faint mark in the cell of a space or a tab, as VS Code's
+`renderWhitespace` does. A space shows `⋅`; a tab shows `⇥` in its first cell and the rest
+of it stays blank. The marks take the indent guides' colour and change nothing else: the
+selection, the cursor and search hits are drawn as before. Horizontal and vertical pages both.
+
+```
+off         nothing (default)
+boundary    leading and trailing blanks, every tab, and runs of spaces;
+            not the one space between two words
+selection   blanks inside a selection, every selection
+trailing    blanks after a line's last other character (a line of blanks counts whole)
+all         every space and tab
+```
+
+In Markdown, `trailing` shows the two spaces at a line's end that make a line
+break inside a paragraph.
+
+`whitespace_space_character` and `whitespace_tab_character` change the two marks; each must
+be one character, one cell wide. Only the plain space and the tab are marked: a no-break
+space or U+3000 is the Unicode alarm's business (above). The settings panel has all three under Marks.
+
 ## The sign beside the cursor: `:view-hud`
 
 A command you have started typing, such as `3`, `2t` or `d3l`, is shown at the
