@@ -31,9 +31,9 @@
 | `extend_to_line_bounds` | extend the selection to whole lines |  |  |  |
 | `select_all` | select all | `%` |  |  |
 | `collapse_selection` | collapse the selection to the cursor | `;` |  |  |
-| `delete_selection` | cut the selection | `d` | `x` |  |
+| `delete_selection` | cut the selection | `d` | `x` `X` `D` |  |
 | `delete_selection_noyank` | delete the selection without yanking | `A-d` | `A-d` |  |
-| `change_selection` | cut into the register, then change | `c` | `s` |  |
+| `change_selection` | cut into the register, then change | `c` | `s` `C` `R` |  |
 | `change_selection_noyank` | change the selection without yanking | `A-c` | `A-c` |  |
 | `insert_mode` | insert before the selection | `i` |  |  |
 | `append_mode` | insert after the selection | `a` |  |  |
@@ -560,7 +560,7 @@
 | `vim_flip_selections` | to the other end of the selection (vim's Visual o) |  | `o` |  |
 | `vim_switch_to_lowercase` | the selection to lowercase, leaving Visual mode (vim's u) |  | `u` |  |
 | `vim_switch_to_uppercase` | the selection to uppercase, leaving Visual mode (vim's U) |  | `U` |  |
-| `vim_yank` | yank the selection, leaving Visual mode (vim's y) |  | `y` |  |
+| `vim_yank` | yank the selection, leaving Visual mode (vim's y) |  | `y` `Y` |  |
 | `vim_visual_block_mode` | select a block (vim's C-v) |  | `C-v` |  |
 | `vim_record_macro` | record a macro (then a letter) |  | `q` |  |
 | `vim_replay_macro` | replay (then a letter) |  | `@` |  |
@@ -571,9 +571,11 @@
 
 | Key | Plays |
 | --- | --- |
+| `s` | `@c{n}l` |
 | `D` | `@d$` |
 | `C` | `@c$` |
 | `Y` | `@y$` |
+| `S` | `@cc` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
 

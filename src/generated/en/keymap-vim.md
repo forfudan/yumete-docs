@@ -110,21 +110,20 @@
 | Key | What it does | Command |
 | --- | --- | --- |
 | `a` | select around an object (then its key) | `select_around_object` |
-| `c` `s` | cut into the register, then change | `change_selection` |
-| `d` `x` | cut the selection | `delete_selection` |
+| `c` `C` `R` `s` | cut into the register, then change | `change_selection` |
+| `d` `D` `x` `X` | cut the selection | `delete_selection` |
 | `f` | extend forward to a character | `extend_next_char` |
 | `F` | extend backward to a character | `extend_prev_char` |
 | `h` `Left` | extend the selection one character left | `extend_char_left` |
 | `i` | select inside an object (then its key) | `select_inner_object` |
 | `l` `Right` | extend the selection one character right | `extend_char_right` |
 | `o` | to the other end of the selection (vim's Visual o) | `vim_flip_selections` |
-| `R` | replace the selection with the register | `replace_with_yanked` |
 | `S` | surround the selection with a pair | `surround_add` |
 | `t` | extend forward to just before a character | `extend_till_char` |
 | `T` | extend backward to just after a character | `extend_till_prev_char` |
 | `u` | the selection to lowercase, leaving Visual mode (vim's u) | `vim_switch_to_lowercase` |
 | `U` | the selection to uppercase, leaving Visual mode (vim's U) | `vim_switch_to_uppercase` |
-| `y` | yank the selection, leaving Visual mode (vim's y) | `vim_yank` |
+| `y` `Y` | yank the selection, leaving Visual mode (vim's y) | `vim_yank` |
 | `<` | unindent, the cursor keeping its column (vim) | `vim_unindent` |
 | `>` | indent, the cursor keeping its column (vim) | `vim_indent` |
 | `A-b` | extend to the start of the enclosing node | `extend_parent_node_start` |

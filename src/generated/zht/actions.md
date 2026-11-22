@@ -31,9 +31,9 @@
 | `extend_to_line_bounds` | 選區擴到整行 |  |  |  |
 | `select_all` | 全選 | `%` |  |  |
 | `collapse_selection` | 選區收成光標 | `;` |  |  |
-| `delete_selection` | 剪切選區 | `d` | `x` |  |
+| `delete_selection` | 剪切選區 | `d` | `x` `X` `D` |  |
 | `delete_selection_noyank` | 删除選區(不進寄存器) | `A-d` | `A-d` |  |
-| `change_selection` | 剪切後改寫 | `c` | `s` |  |
+| `change_selection` | 剪切後改寫 | `c` | `s` `C` `R` |  |
 | `change_selection_noyank` | 改寫選區(不進寄存器) | `A-c` | `A-c` |  |
 | `insert_mode` | 在選區前插入 | `i` |  |  |
 | `append_mode` | 在選區後插入 | `a` |  |  |
@@ -560,7 +560,7 @@
 | `vim_flip_selections` | 換到選區的另一頭(vim 可視模式的 o) |  | `o` |  |
 | `vim_switch_to_lowercase` | 選區轉小寫並退出可視模式(vim 的 u) |  | `u` |  |
 | `vim_switch_to_uppercase` | 選區轉大寫並退出可視模式(vim 的 U) |  | `U` |  |
-| `vim_yank` | 複製選區並退出可視模式(vim 的 y) |  | `y` |  |
+| `vim_yank` | 複製選區並退出可視模式(vim 的 y) |  | `y` `Y` |  |
 | `vim_visual_block_mode` | 塊選擇(vim 的 C-v) |  | `C-v` |  |
 | `vim_record_macro` | 録宏(再按一個字母) |  | `q` |  |
 | `vim_replay_macro` | 回放宏(再按一個字母) |  | `@` |  |
@@ -571,9 +571,11 @@
 
 | 鍵 | 等於 |
 | --- | --- |
+| `s` | `@c{n}l` |
 | `D` | `@d$` |
 | `C` | `@c$` |
 | `Y` | `@y$` |
+| `S` | `@cc` |
 | `ZZ` | `:x` |
 | `ZQ` | `:quit!` |
 

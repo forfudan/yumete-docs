@@ -110,21 +110,20 @@
 | 键 | 作用 | 命令 |
 | --- | --- | --- |
 | `a` | 选中整个对象(再按对象键) | `select_around_object` |
-| `c` `s` | 剪切后改写 | `change_selection` |
-| `d` `x` | 剪切选区 | `delete_selection` |
+| `c` `C` `R` `s` | 剪切后改写 | `change_selection` |
+| `d` `D` `x` `X` | 剪切选区 | `delete_selection` |
 | `f` | 选区向后扩到某个字 | `extend_next_char` |
 | `F` | 选区向前扩到某个字 | `extend_prev_char` |
 | `h` `Left` | 选区向左扩一个字 | `extend_char_left` |
 | `i` | 选中对象内部(再按对象键) | `select_inner_object` |
 | `l` `Right` | 选区向右扩一个字 | `extend_char_right` |
 | `o` | 换到选区的另一头(vim 可视模式的 o) | `vim_flip_selections` |
-| `R` | 用寄存器内容替换选区 | `replace_with_yanked` |
 | `S` | 用配对符号包围选区 | `surround_add` |
 | `t` | 选区向后扩到某个字之前 | `extend_till_char` |
 | `T` | 选区向前扩到某个字之后 | `extend_till_prev_char` |
 | `u` | 选区转小写并退出可视模式(vim 的 u) | `vim_switch_to_lowercase` |
 | `U` | 选区转大写并退出可视模式(vim 的 U) | `vim_switch_to_uppercase` |
-| `y` | 复制选区并退出可视模式(vim 的 y) | `vim_yank` |
+| `y` `Y` | 复制选区并退出可视模式(vim 的 y) | `vim_yank` |
 | `<` | 减少缩进，光标留在原列(vim) | `vim_unindent` |
 | `>` | 增加缩进，光标留在原列(vim) | `vim_indent` |
 | `A-b` | 选区扩到所在节点开头 | `extend_parent_node_start` |
