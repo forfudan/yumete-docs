@@ -84,7 +84,7 @@
 | `:info` |  | file info: path, size, lines and characters, language, attached language servers |
 | `:character-info` `:char` |  | character info: the code point, name, UTF-8 bytes and block of the character under the cursor, and a 漢字's division (as Space n) |
 | `:instant-info` | `character｜wiki｜record｜docs｜diagnostics｜change` | info: which of record / diagnostics / character / wiki / docs follows the cursor (none given: by file type) |
-| `:rules` | `<column>…｜off` | column rulers: :rules 80 100 120; bare is 80 and 100, off clears them |
+| `:rulers` | `<column>…｜off` | column rulers for this session, over the setting: :rulers 80 100 120; bare is 80 and 100, off clears them |
 | `:theme-fill` | `on｜off` | whether code and quotations get a background (off by default) |
 | `:shot` | `screen｜png｜html｜txt <path>` | screenshot: to the clipboard by default, or a file in Downloads with `png`/`html`/`txt` |
 | `:yume` `:y` | `on｜off` | Yume input method: on or off |

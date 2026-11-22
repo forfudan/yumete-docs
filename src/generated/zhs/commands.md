@@ -84,7 +84,7 @@
 | `:info` |  | 文件信息：路径、大小、行数字数、语言、关联的语言服务器 |
 | `:character-info` `:char` |  | 字符信息：光标处字符的码位、名称、UTF-8 字节、区块，汉字另有拆分(同空格 n) |
 | `:instant-info` | `character｜wiki｜record｜docs｜diagnostics｜change` | 信息栏随光标显示哪一种(record/diagnostics/character/wiki/docs；不写则按文件类型) |
-| `:rules` | `<栏>…｜off` | 在指定列加标尺：`:rules 80 100 120`；不带数字为 80 和 100，`off` 关闭 |
+| `:rulers` | `<栏>…｜off` | 本次在指定列铺竖线，盖过设置：`:rulers 80 100 120`；不带数字为 80 和 100，`off` 关闭 |
 | `:theme-fill` | `on｜off` | 代码和引用是否加底色(默认不加) |
 | `:shot` | `screen｜png｜html｜txt <路径>` | 截图：默认复制到剪贴板；png/html/txt 则保存到下载文件夹 |
 | `:yume` `:y` | `on｜off` | 宇梦输入引擎开关：on 打开、off 关闭 |

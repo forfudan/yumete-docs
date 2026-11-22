@@ -45,7 +45,7 @@ See [A book of many files](../writing/book.md#the-project-and-the-working-direct
 [editor]
 line_numbers = "relative"
 indent = 2           # first-line indent of a paragraph, in cells
-ruler = 40           # mark text past column 40
+tint_past = 40       # tint text past column 40
 
 [theme]
 name = "moxiang"
@@ -216,10 +216,10 @@ on it.
   files       │*first-line indent       ┆2                                 ┆global
   export      │ text width              ┆0                                 ┆factory
   keys        │ hard-wrap width         ┆0                                 ┆factory
-              │ ruler                   ┆0                                 ┆factory
+              │ rulers                  ┆none                              ┆factory
+              │ tint past               ┆0                                 ┆factory
               │ soft wrap               ┆[x]                               ┆factory
-              │ hanging punctuation     ┆[ ]                               ┆factory
-              ├─ ↓ 86 more ─────────────────────────────────────────────────────────
+              ├─ ↓ 107 more ────────────────────────────────────────────────────────
               │  characters per column in vertical layout; prose reads well up to
               │  about 32
               │  a number, 0, or 8 to 64; factory 0 (0 = as tall as the window)

@@ -236,8 +236,8 @@ never read; the file says so at the top, under what the editor said.
 What comes over:
 
 - **Settings you changed**: `number` and `relativenumber` (as
-  `line_numbers`), `tabstop`, `shiftwidth`, `expandtab`, `textwidth`, the
-  first `colorcolumn` (as `ruler`, `+1` counted from `textwidth`),
+  `line_numbers`), `tabstop`, `shiftwidth`, `expandtab`, `textwidth`,
+  `colorcolumn` (every column, as `rulers`, `+1` counted from `textwidth`),
   `scrolloff`, `wrap`, `ignorecase` with `smartcase`, `whichwrap`,
   `modeline`, `fixendofline`, `autoread`, `ambiwidth`, `pumheight` and
   Neovim's `mousescroll`, and `mouse` emptied (as `mouse = false`). A setting left at the editor's default is not

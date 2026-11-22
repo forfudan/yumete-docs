@@ -334,12 +334,15 @@ measure = 50   # wrap here; 0 is the window's width
 centre_measure = true   # the measured page stands in the middle; false keeps it at the left
 scrollbar = true        # a column at each window's right for the scrollbar
 scrollbar_marks = ["search", "listing"]   # marks on the scrollbar: search, listing, changes, problems
-ruler = 80     # only a cue: tint whatever runs past column 80
+tint_past = 80     # only a cue: tint whatever runs past column 80
+rulers = [80, 100] # a faint stripe down each of these columns
 ```
 
-`ruler` does not wrap anything. It tints what runs past the column, which helps
-if you break long sentences by hand. With wrap off it also draws a vertical
-line there.
+`tint_past` does not wrap anything. It tints what runs past the column, blank
+cells included, which helps if you break long sentences by hand. `rulers` puts
+a faint stripe down each column it lists, without taking a column from the
+text; `:rulers 72 120` sets other columns for this session, bare `:rulers` is 80
+and 100, and `:rulers off` clears them.
 
 ## First-line indent: `:indent`
 
