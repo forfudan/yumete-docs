@@ -271,7 +271,9 @@ lines here, so `:1,40s` is two lines, not forty.
 
 The separator is whatever follows `s`, so `:s#2024/01#2025/02#` needs no
 escaping. In the replacement, `$1` is the first capture group, `\r` a
-line break and `$$` a dollar sign; as in vim, `\n` there puts a NUL. In the
+line break and `$$` a dollar sign; as in vim, `\n` there puts a NUL. Under
+the vim keymap, `&` and `\0` are the whole match, `\1` to `\9` the groups,
+`~` the previous replacement, and `\&` and `\~` the plain characters. In the
 pattern, `\n` matches a line break, so `:%s/,\n/, /` joins lines that end
 in a comma. However many matches a substitution changes,
 one `u` undoes all of it.
