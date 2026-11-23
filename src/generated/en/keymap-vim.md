@@ -60,6 +60,7 @@
 | `#` | search backward for the word under the cursor | `search_word_backward` |
 | `$` `End` | the end of the line (vim's $: moving down keeps to line ends) | `vim_goto_line_end` |
 | `%` | the matching bracket, or the next one on the line (vim's %) | `vim_match_brackets` |
+| `&` | the last :s again on this line, or a count of lines, with its flags (nvim's &) | `vim_substitute_again` |
 | `'` | go to a mark (then a letter) | `goto_mark` |
 | `(` | to the previous sentence, no selection | `jump_prev_sentence` |
 | `)` | to the next sentence, no selection | `jump_next_sentence` |
@@ -72,6 +73,7 @@
 | `:` | command line, over the Visual area when opened from Visual mode (vim's :) | `vim_command_mode` |
 | `;` | find that character again | `repeat_find_char` |
 | `<` | unindent (then a motion) | `operator_unindent` |
+| `=` | re-indent by the syntax tree (then a motion; vim's =) | `operator_reindent` |
 | `>` | indent (then a motion) | `operator_indent` |
 | `?` | search backward | `rsearch` |
 | `@` | replay (then a letter) | `vim_replay_macro` |
@@ -209,7 +211,13 @@
 | `gk` | one line up, on screen |
 | `gv` | reselect last selection |
 | `gi` | insert again where the last Insert stopped |
-| `g; / g,` | older / newer change |
+| `g;` | older / newer change |
+| `g&` | the last :s again over every line, with the last search's pattern and its flags (vim's g&) |
+| `g0` | start of the screen line, as wrapped (vim's g0) |
+| `g^` | first non-blank of the screen line (vim's g^) |
+| `gm` | half the text's width into the screen line (vim's gm) |
+| `g$` | last character of the screen line, a count going rows down (vim's g$) |
+| `g,` | older / newer change |
 | `gu / gU / g~` | lowercase / uppercase / swap case, then a motion |
 | `gq` | reflow to the width, then a motion |
 | `gJ` | join the next line without a space |

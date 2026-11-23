@@ -35,6 +35,14 @@ starts and ends: `/第\zs.+\ze章` finds only what stands between 第 and 章.
 
 The last pattern you searched for waits on an empty prompt in grey. `Enter`
 on its own searches for it again, and `Tab` turns it into text you can edit.
+Under the vim keymap a search takes vim's offsets after a second `/` (`?`
+for `?`): `/pat/e` lands on the match's last character, `/pat/e+1` one past
+it, `/pat/s-1` one before its start (`b` is `s`), `/pat/+2` two lines down at
+the line's start. `n` and `N` keep the offset; an empty `/` line keeps it too,
+and `//`, a pattern alone or `*` drop it. Write a `/` in the pattern as `\/`.
+After an operator, `e` takes the character it lands on and a line offset takes
+whole lines.
+
 `C-p` and `C-n` (or `Up` and `Down`) walk your search history. It is kept from one session to the next, as the `:` lines are, the last thousand of each, in `history.txt` in yumete's data folder; a private session (`--private`) keeps none.
 
 ### Case
@@ -271,8 +279,17 @@ changes the lines the selection covers; `:%s` changes the whole file. With a
 slash, `:s` is substitute; without one, it opens the search panel.
 
 A range goes before `s`: `:1,40s` and `:1-40s` are lines 1 to 40, as in vim,
-and `:.,$s` is this line to the end. A range has two ends; `:1,5,9s` is
-refused.
+and `:.,$s` is this line to the end. Either end may be a mark
+(`:'a,'bs`), blanks may stand around the `,`, an end left out is the
+cursor's line (`:2,s`, `:,3s`) and line 0 is the first. Of more than two
+ends the last two count (`:1,5,9s` is `:5,9s`), as in vim. A range written
+backwards (`:4,2s`) asks before it runs, as in vim: `y` swaps the ends, `n`
+runs nothing; `:sort`, `:normal`, `:read`, `:put` and `:delete` ask the same.
+Under vim a bare `:7,3` goes to line 3 without asking, and `:7,3|…` is
+refused and nothing after the `|` runs.
+
+`:s//new/` takes the last pattern searched for, and under vim a `:s` pattern
+is what `n` looks for next.
 
 | Flag | Meaning |
 | --- | --- |

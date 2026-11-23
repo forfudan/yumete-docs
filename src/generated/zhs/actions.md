@@ -160,6 +160,7 @@
 | `operator_change` | 改写(再按一个动作) |  | `c` |  |
 | `operator_yank` | 复制(再按一个动作) |  | `y` `zy` |  |
 | `operator_indent` | 增加缩进(再按一个动作) |  | `>` |  |
+| `operator_reindent` | 按语法树重新缩进(再按一个动作，vim 的 =) |  | `=` |  |
 | `operator_unindent` | 减少缩进(再按一个动作) |  | `<` |  |
 | `delete_to_line_end` | 删到行尾 | `A-D` `D` |  |  |
 | `delete_to_line_end_noyank` | 删到行尾(不进寄存器) | `D` `A-D` |  |  |
@@ -490,7 +491,7 @@
 | `paste_table_as_csv` | 从剪贴板粘贴为 csv 表格 | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | 表格转成 tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | 从剪贴板粘贴为 tsv 表格 | `Space t x T` | `Space t x T` |  |
-| `no_op` | 什么都不做(绑定它即解绑该键) |  | `&` `=` `!` `C-c` |  |
+| `no_op` | 什么都不做(绑定它即解绑该键) |  | `!` `C-c` |  |
 | `extend_char_left` | 选区向左扩一个字 | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | 选区向右扩一个字 | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | 选区扩到上一行(屏幕上的) | `k` `Up` |  |  |
@@ -566,6 +567,12 @@
 | `vim_replay_macro` | 回放宏(再按一个字母) |  | `@` |  |
 | `vim_replay_last_macro` | 回放上次录的宏(vim 的 Q) |  | `Q` |  |
 | `vim_goto_first_nonwhitespace` | 第一个非空白字符(带数字时下移几行) |  | `_` |  |
+| `vim_substitute_again` | 在这一行(带数字时往下几行)重复上一次 :s，带它的旗标(nvim 的 &) |  | `&` |  |
+| `vim_substitute_again_everywhere` | 用上一次搜索的式子在全文重复上一次 :s，带它的旗标(vim 的 g&) |  | `g&` |  |
+| `vim_goto_screen_line_start` | 屏幕上这一行(折行后的一行)的开头(vim 的 g0) |  | `g0` |  |
+| `vim_goto_screen_line_first_nonwhitespace` | 屏幕上这一行的第一个非空白字符(vim 的 g^) |  | `g^` |  |
+| `vim_goto_screen_line_middle` | 屏幕上这一行里正文宽度一半处(vim 的 gm) |  | `gm` |  |
+| `vim_goto_screen_line_end` | 屏幕上这一行的最后一个字符(带数字时往下几行，vim 的 g$) |  | `g$` |  |
 
 ### vim 中等于另一串键的键
 

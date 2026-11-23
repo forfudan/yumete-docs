@@ -166,6 +166,8 @@
 | `:pipe-before` `:insert-output` | `<command>` | run a shell command and insert its output before the selection |
 | `:pipe-after` `:append-output` | `<command>` | run a shell command and insert its output after the selection |
 | `:read` | `<path>` | put a file's contents, or a shell command's output (`!cmd`), below the cursor's line |
+| `:put` `:pu` | `<register>` | put a register's text on lines of its own below the cursor's line, :put! above it |
+| `:delete` `:d` `:de` `:del` | `<register> <count>` | delete the cursor's line or the range's lines into a register, or a count of lines |
 | `:view-fold` |  | make a fold of the selected lines |
 | `:keep-pipe` | `<command>` | keep the selections a shell command succeeds on |
 | `:git-lazygit` `:lazygit` `:lg` |  | look at changes, stage and commit in lazygit; q comes back |

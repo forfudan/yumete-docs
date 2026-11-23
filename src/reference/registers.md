@@ -54,6 +54,9 @@ vim:
   one of these (or into `".` under vim) is refused whole, and the status line
   says so. Under the helix keymap `.` is the selections' text, so `".p` puts a
   copy after each selection, and `.`, `%` and `#` refuse writes, as in helix.
+- `@:` runs the last `:` line again (a count runs it that many times), and `@@`
+  after it runs it again. `:put [x]` puts a register on lines of its own, and
+  `:delete [x]` takes lines into one, as `p` and `dd` do.
 
 Under the vim keymap, `"0` holds the last yank, as in vim: a delete fills the unnamed
 register, and `"0p` still pastes what you yanked. A delete of a line or more also

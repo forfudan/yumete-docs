@@ -45,6 +45,7 @@ A mark is a place you name, to come back to on purpose.
 | --- | --- |
 | `M` *a* | mark this place as *a* (`m` *a* under the vim keymap) |
 | `'` *a* | go back to mark *a*, opening its file if needed |
+| `` `. `` / `'.` | where the last change was made / that line (vim keymap) |
 
 A mark's name is one letter or digit. Marks are shared by all files, so `'a` can take
 you to another file. In a saved file a mark remembers the line. Marks last until you

@@ -160,6 +160,7 @@
 | `operator_change` | change (then a motion) |  | `c` |  |
 | `operator_yank` | yank (then a motion) |  | `y` `zy` |  |
 | `operator_indent` | indent (then a motion) |  | `>` |  |
+| `operator_reindent` | re-indent by the syntax tree (then a motion; vim's =) |  | `=` |  |
 | `operator_unindent` | unindent (then a motion) |  | `<` |  |
 | `delete_to_line_end` | delete to the end of the line | `A-D` `D` |  |  |
 | `delete_to_line_end_noyank` | delete to the end of the line without yanking | `D` `A-D` |  |  |
@@ -490,7 +491,7 @@
 | `paste_table_as_csv` | paste the clipboard as a csv table | `Space t x C` | `Space t x C` |  |
 | `convert_table_to_tsv` | convert the table to tsv | `Space t x t` | `Space t x t` |  |
 | `paste_table_as_tsv` | paste the clipboard as a tsv table | `Space t x T` | `Space t x T` |  |
-| `no_op` | do nothing (binding it unbinds the key) |  | `&` `=` `!` `C-c` |  |
+| `no_op` | do nothing (binding it unbinds the key) |  | `!` `C-c` |  |
 | `extend_char_left` | extend the selection one character left | `h` `Left` | `h` `Left` |  |
 | `extend_char_right` | extend the selection one character right | `l` `Right` | `l` `Right` |  |
 | `extend_visual_line_up` | extend one line up, on screen | `k` `Up` |  |  |
@@ -566,6 +567,12 @@
 | `vim_replay_macro` | replay (then a letter) |  | `@` |  |
 | `vim_replay_last_macro` | replay the last recorded macro (vim's Q) |  | `Q` |  |
 | `vim_goto_first_nonwhitespace` | first non-blank character (a count moves that many lines down) |  | `_` |  |
+| `vim_substitute_again` | the last :s again on this line, or a count of lines, with its flags (nvim's &) |  | `&` |  |
+| `vim_substitute_again_everywhere` | the last :s again over every line, with the last search's pattern and its flags (vim's g&) |  | `g&` |  |
+| `vim_goto_screen_line_start` | start of the screen line, as wrapped (vim's g0) |  | `g0` |  |
+| `vim_goto_screen_line_first_nonwhitespace` | first non-blank of the screen line (vim's g^) |  | `g^` |  |
+| `vim_goto_screen_line_middle` | half the text's width into the screen line (vim's gm) |  | `gm` |  |
+| `vim_goto_screen_line_end` | last character of the screen line, a count going rows down (vim's g$) |  | `g$` |  |
 
 ### vim keys that play other keys
 

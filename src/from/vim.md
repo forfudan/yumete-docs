@@ -284,7 +284,18 @@ also takes Visual `Q` away.
 - A macro is written in its register as helix writes it: `"ap` after `qaihello<Esc>q`
   gives `ihello<esc>`, where vim gives `ihello^[`. See
   [Registers](../reference/registers.md).
-- `gt` (no tab pages) and `gs` do nothing, and `&` and `!` do nothing yet.
+- `gt` (no tab pages) and `gs` do nothing, and `!` does nothing yet. `&` is
+  nvim's `:&&` (the last `:s` again on this line, with its flags); `g&` runs it
+  over every line with the last search's pattern. `:&` and `:s` alone run it
+  without its flags, `:&&` with them. Under helix's keymap `:s` alone still
+  opens the search panel.
+- `=` re-indents code by the syntax tree, the same levels Enter opens, in the
+  file's indent unit: `==`, `=ip`, `=G`, Visual `=`. It is not vim's indent
+  scripts, so a line can come out differently from vim; in prose, Python, Mojo
+  and the languages with no indent rules it changes nothing and says so.
+- `d<C-v>` (a forced blockwise motion) is not there; `dv` and `dV` are.
+- On the `:` and `/` lines, `C-r C-w` puts the word under the cursor, `C-r C-a`
+  the WORD and `C-r C-l` the line.
 - Folds are vim's, made with `zf` (see [Folds](../reference/folds.md)); in
   Markdown and Typst the headings fold too, all open at first. There is no
   `foldmethod`. vim's fold command is `:view-fold`, on the selected lines;
@@ -299,6 +310,11 @@ also takes Visual `Q` away.
 - `:r` is `:replace`, not `:read`; to put a file's text in, use `:read <file>`,
   or `:read !cmd` for a command's output. `:0read` and `:$read` put it above the
   first line and after the last.
+- `:put [x]` (`:pu`) puts a register on lines of its own below the cursor's
+  line, `:put!` above, `:0put` above the first line and `:$put` after the last;
+  `:put =expr` is not there. `:delete [x] [count]` (`:d`, `:de`, `:del`) takes
+  lines into a register as `dd` does: `:3,5d a`, `:d 3`. `:de` is no longer
+  `:decimo`. Neither takes a `|` after it.
 - `:sort` takes vim's `!`, `i`, `n` and `u`, and a range in front (`:%sort`,
   `:2-5sort`); `r /pat/` is not taken.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,
@@ -327,9 +343,10 @@ also takes Visual `Q` away.
   command is dropped, as in vim; the whole run is one undo step. `:normal!`
   leaves out your own key bindings.
 - A range is written with `,` as in vim, or with `-`: `:3,6s` and `:3-6s` are
-  lines 3 to 6. `:'<,'>` is the selection; `:.,+2` is not a spelling in `:s`.
-  `:s`, `:sort`, `:normal` and `:read` take a range; `:2,4d` and the like are
-  not there. See [Search and replace](../guide/search.md).
+  lines 3 to 6. `:'<,'>` is the selection and `:'a,'b` the lines between two
+  marks; `:.,+2` and `:'a+1` are not spellings in `:s`. `:s`, `:sort`,
+  `:normal`, `:read`, `:put` and `:delete` take a range. See
+  [Search and replace](../guide/search.md).
 - A long line wrapped over several rows scrolls a row at a time, as with
   Neovim's `smoothscroll`: after `G` the top row can be the tail of a line,
   and `scrolloff` counts rows.
