@@ -467,7 +467,14 @@ sheet's width. Its type is text in embedded fonts, so it can be selected and
 searched; formulas and images are pictures. The document is one long page,
 cut into several only where a page would pass 200 inches, which many PDF
 readers will not open: between blocks, or between the lines of a block longer
-than that.
+than that. Links work: a web or mail address opens, a reference link and a
+bare URL included; `[…](#heading)` goes to that heading, named as the HTML
+export names it (a second heading of the same words takes `-1`), and every
+heading can be reached from elsewhere as `book.pdf#heading`; a link to a
+file opens that path, a relative one as written, so it finds the file the
+source names when the PDF is beside the source. A link that wraps is
+clickable on each of its lines. A wiki link (`[[page]]`) is not a link in
+the PDF.
 
 **A Typst file** becomes the PDF of the document its preview typesets: the
 file itself, or, for a chapter, the book that includes it (the main file of
