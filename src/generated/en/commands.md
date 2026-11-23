@@ -137,6 +137,7 @@
 | `:preview` | `on｜off` | show or hide the typeset page: in a window beside the text, or in a browser when a window cannot be drawn |
 | `:preview-window` | `on｜off` | the typeset page in a window beside the text, following the cursor (needs tinymist, and Ghostty or kitty) |
 | `:preview-browser` | `on｜off` | typeset with a real typesetter and preview in a browser |
+| `:preview-lock` | `on｜off` | lock this document's preview to it, so it stops following the focus; off, it follows again |
 | `:preview-fit` | `width｜page` | how big the page window draws the page: as wide as the window, or whole |
 | `:preview-theme` | `on｜off` | draw the preview's page in the theme's colours, the paper as the background and black as the text colour, or as printed |
 | `:preview-vertical` | `on｜off` | set the Markdown preview vertically while the text window is vertical: columns from the right, as the vertical export sets them |

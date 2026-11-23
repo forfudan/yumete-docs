@@ -137,6 +137,7 @@
 | `:preview` | `on｜off` | 打开或关闭排版后的页面：先在旁边开页面窗口，开不了就用浏览器 |
 | `:preview-window` | `on｜off` | 在旁边的窗口中显示排好的页面，跟随光标(需要 tinymist，以及 Ghostty 或 kitty) |
 | `:preview-browser` | `on｜off` | 交给排版器排版，在浏览器中查看 |
+| `:preview-lock` | `on｜off` | 把这份文稿的预览锁定在它上面，不再跟随焦点；关闭则恢复跟随 |
 | `:preview-fit` | `width｜page` | 页面窗口中页面的大小：页宽或整页 |
 | `:preview-theme` | `on｜off` | 用主题配色显示预览页面：纸为背景色，黑字为文字色；关闭则按印刷原样 |
 | `:preview-vertical` | `on｜off` | 文字窗口竖排时，Markdown 预览也竖排：从右往左一列一列，像竖排导出那样 |

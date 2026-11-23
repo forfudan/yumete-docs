@@ -431,9 +431,10 @@ to a real typesetter and shows the result beside the text, or in your browser.
 ```
 :preview on           this document's preview beside the text, or the browser
 :preview off          close this document's preview
-:preview              turn it round
-:preview-window       the preview tab only; says why when it cannot be drawn
-:preview-browser      the browser only
+:preview              on when it has none, off otherwise
+:preview-lock on      keep this document's preview on it; off, it follows again
+:preview-window       as :preview, but says why instead of using the browser
+:preview-browser      this document's preview in the browser
 :preview-fit page     show a whole Typst page (width is the default)
 :preview-theme on     draw a Typst page in the theme's colours
 :preview-vertical off keep the Markdown preview horizontal when the text is vertical
@@ -450,7 +451,7 @@ after another program's output was left on the screen.
 | --- | --- |
 | Typst | tinymist draws the page in a preview tab beside the text |
 | Markdown | yumete sets the file itself in a preview tab beside the text |
-| Markdown, no pictures | an HTML export goes to a temporary file, and the browser opens it; it shows the text as it was then |
+| Markdown, no pictures | an HTML export goes to a temporary file and the browser opens it; it is written again a moment after you stop typing, and the page reloads itself |
 
 A Typst preview is a tab, like an open file. It is listed in the tab line as
 "Preview main.typ", in `:b` and the buffer picker, and `gn`, `gp` and `ga`
@@ -458,21 +459,43 @@ reach it. `:preview on` opens it in a new window to the right of the
 text and leaves you where you were; if the preview is already on the screen,
 it says so. Open another file in the preview's window and that file shows
 there; the preview stays open as a tab, and `:b`, `ga`, `C-o` or
-`:preview` bring it back.
+`:preview on` bring it back.
 
-Each preview belongs to one document: the Typst file it was opened from, and
-the Typst files under that file's folder, subfolders too, which is how a
-book's chapters are included. Opened from a chapter, it typesets the open file that includes the
-chapter with `#include` or `#import`, since a chapter alone lacks what its
-book sets up; with no such file open, it typesets the chapter. It shows the page the cursor is on while you are in that document, and on a blank line the page of the nearest text,
-and keeps its place while you work anywhere else. Each document can have its
-own preview, and several can be open at once.
+A preview shows a document: a Markdown file, or a Typst book. A Typst
+file's book is the file nobody includes above it: yumete reads the Typst
+files in the file's folder and the folders above it, up to the project's
+root (the folder holding `.git` or `typst.toml`, and never above your home
+folder), and follows `#include` and `#import` up to the top, whether those
+files are open or not. A chapter alone lacks what its book sets up, so a
+chapter's preview typesets the book. The answer is worked out again when you
+save a Typst file.
+
+There is one preview of each kind, the Markdown preview and the Typst
+preview, and it **follows you**: open another Markdown file and the
+Markdown preview shows that one, its name in the tab line with it. It keeps
+the last document while you are in a file of the other kind or in a file
+with nothing to preview. It shows the page the cursor is on while you are in
+its document, and on a blank line the page of the nearest text.
+
+To keep a document in view while you work in another, **lock its preview**:
+`:preview-lock` there. The tab is then "Preview main.typ (locked)" and stays
+on that document; the next document you go to gets the following preview,
+opened with `:preview`. No document is shown twice: while you are in a
+document whose preview is locked, the following preview stays where it was.
+`:preview-lock off` makes the locked preview the following one again, and
+the old following preview closes. `:preview off` in a document with a locked
+preview closes it, and the following preview, if there is one, comes to that
+document.
 
 `:q` in a preview's window closes the window; the tab stays open. `:bc` on the
-preview tab, or `:preview off`, closes the preview. A preview's window is a
-window like any other: `:q` in the last text window closes it and leaves the
-preview, and `:q` in the last window of all quits. A session keeps its preview tabs, and which
-window showed one.
+preview tab, or `:preview off`, closes the preview. When you close the last
+file of a document, a locked preview of it closes too, and the following
+preview moves to another open document of its kind, or closes when there is
+none. A file renamed with `:file-rename` or saved with `:write-as` takes its
+preview along. A preview's window is a window like any other: `:q` in the
+last text window closes it and leaves the preview, and `:q` in the last
+window of all quits. A session keeps its preview tabs, whether each is
+locked, and which window showed one.
 
 A preview has a status line like any window: `PRV` and the preview's name while the keys are in it, the name alone otherwise. In a Markdown preview, the page keeps the cursor's part of a long paragraph in view, and a gold bar stands beside the whole line the cursor is in (a paragraph, one list item, one line of code), in the left margin or along the top of a vertical page; when that paragraph is out of view, one arrow in the margin round the picture points the way to it: `▲` on its top or `▼` on its bottom, or on a vertical page `▶` on its right or `◀` on its left. A Typst preview marks the one line tinymist says the cursor's text is on with `▶` `◀` in the margin on its two sides, and points the way with `▲` or `▼` when that line is out of view. Inside a preview, the keys are a PDF reader's under vim:
 
@@ -507,11 +530,18 @@ on` draws it in the theme's colours instead: the paper in the background colour
 and black text in the text colour, coloured parts keeping their hue. In
 config: `[editor] preview_theme = true`.
 
-In the browser, the Typst preview follows your typing too: each keystroke is
-sent to the typesetter, which recompiles only what changed. The first compile of
-a long book can take a while, and the page stays grey until it finishes. The
-browser preview stops when you close that file, when you type `:preview
-off`, or when you quit. The file must have a name; save a new buffer first.
+`:preview-browser` shows the same preview in the browser: the following
+preview, which moves with you to the next document, or a locked one. The
+page already open in the browser follows to the next document by itself.
+From another document, `:preview-browser` moves the browser to that
+document's preview; `:preview-browser off` stops it and leaves the preview's
+tab. In the browser, the Typst preview follows your typing too: each
+keystroke is sent to the typesetter, which recompiles only what changed. The
+first compile of a long book can take a while, and the page stays grey until
+it finishes. A Markdown file's browser page is written again a moment after
+you stop typing and reloads itself. The browser preview stops when its
+preview closes, when you type `:preview-browser off`, or when you quit. The
+file must have a name; save a new buffer first.
 
 ### The Markdown preview
 
@@ -525,8 +555,9 @@ dark, and follows `:theme` and `:theme-mode`.
 
 It is a preview tab like a Typst file's, "Preview notes.md": `:preview
 on` opens it to the right of the text, `:q` in its window closes the window,
-`:bc` on it or `:preview off` closes it, a session keeps it, and each
-Markdown file can have its own.
+`:bc` on it or `:preview off` closes it, and a session keeps it. It follows
+you from one Markdown file to the next, and `:preview-lock` keeps it on one,
+as a Typst preview does.
 
 It shows the unsaved text, laid out again a moment after you stop typing,
 and follows the cursor: the line you are on stays a third of the way down
