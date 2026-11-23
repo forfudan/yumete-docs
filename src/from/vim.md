@@ -313,8 +313,8 @@ also takes Visual `Q` away.
 - `:put [x]` (`:pu`) puts a register on lines of its own below the cursor's
   line, `:put!` above, `:0put` above the first line and `:$put` after the last;
   `:put =expr` is not there. `:delete [x] [count]` (`:d`, `:de`, `:del`) takes
-  lines into a register as `dd` does: `:3,5d a`, `:d 3`. `:de` is no longer
-  `:decimo`. Neither takes a `|` after it.
+  lines into a register as `dd` does: `:3,5d a`, `:d 3`. `:decimo`'s short
+  name is `:dm`. Neither takes a `|` after it.
 - `:sort` takes vim's `!`, `i`, `n` and `u`, and a range in front (`:%sort`,
   `:2-5sort`); `r /pat/` is not taken.
 - `:sp` is `:search-project`, not a split. Split with `C-w s` or `:hsplit`,

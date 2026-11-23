@@ -172,7 +172,7 @@
 | `:keep-pipe` | `<命令>` | 只保留终端命令执行成功的选区 |
 | `:git-lazygit` `:lazygit` `:lg` |  | 在 lazygit 里看改动、暂存、提交，按 q 回来 |
 | `:files-yazi` `:yazi` |  | 在 yazi 里浏览文件，Enter 把选中的文件在这里打开 |
-| `:decimo` | `<表达式>` | 用 decimo 计算表达式，结果放在光标处 |
+| `:decimo` `:dm` | `<表达式>` | 用 decimo 计算表达式，结果放在光标处 |
 | `:decimo-replace` | `<选项>` | 用 decimo 计算选中的文字，结果替换它 |
 | `:decimo-append` | `<选项>` | 用 decimo 计算选中的文字，在它后面写上「= 结果」 |
 | `:pipe-to` | `<命令>` | 把选区交给终端命令，不收回输出 |

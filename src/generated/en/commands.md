@@ -172,7 +172,7 @@
 | `:keep-pipe` | `<command>` | keep the selections a shell command succeeds on |
 | `:git-lazygit` `:lazygit` `:lg` |  | look at changes, stage and commit in lazygit; q comes back |
 | `:files-yazi` `:yazi` |  | browse files in yazi; Enter opens the chosen files here |
-| `:decimo` | `<expression>` | evaluate an expression with decimo and put the result at the cursor |
+| `:decimo` `:dm` | `<expression>` | evaluate an expression with decimo and put the result at the cursor |
 | `:decimo-replace` | `<options>` | evaluate the selected text with decimo and replace it with the result |
 | `:decimo-append` | `<options>` | evaluate the selected text with decimo and write = and the result after it |
 | `:pipe-to` | `<command>` | pipe the selection to a shell command, ignoring the output |
