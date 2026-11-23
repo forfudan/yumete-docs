@@ -15,7 +15,7 @@
 | `[editor] centre_measure` | `true` | **正文居中** — 定了正文寬度時，正文和行號立在窗口中間，左右邊距一樣寬；關掉就靠左 |
 | `[editor] scrollbar` | `true` | **滚動條** — 每個窗口和預覽的右邊留一格，用一段底色標出這一頁在文件裏的位置；整個文件放得下時那一格空着。關掉就把那一格還給正文 |
 | `[editor] hard_wrap` | `0` | **硬換行寬度** — :hard-wrap 不帶數字時用的寬度；改的是文件裏的換行，不是顯示 (1–400) |
-| `[editor] rulers` | `[]` | **豎線** — 在這幾列各鋪一道底紋，如 80 100 (1–400) |
+| `[editor] rulers` | `[]` | **列標尺** — 在這幾列各鋪一道底紋，如 80 100 (1–400) |
 | `[editor] tint_past` | `0` | **超出變色** — 只作提示：超出此列的部分換底色，不換行 (0–400) |
 | `[editor] soft_wrap` | `true` | **自動換行** — 横排時長行自動換行；關閉則超出右邊界 |
 | `[editor] hanging_punctuation` | `false` | **標點旁置** — 。，、？！：；「」 懸掛在頁邊，不佔正文的格 |
@@ -35,7 +35,7 @@
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製後，被複制的範圍閃一下 |
 | `[editor] selection_highlight` | `false` | **選區高亮** — 有選區時，屏幕上同樣的文字都標出淡底色；多個選區時按主選區 |
 | `[editor] selection_highlight_case` | `"respect"` | **選區高亮的大小寫** — 選區高亮比較拉丁字母時是否區分大小寫 (`respect` 區分, `ignore` 不區分, `by_place` 代碼裏區分，正文和註釋裏不區分) |
-| `[editor] selection_highlight_glyphs` | `false` | **選區高亮認繁簡** — 選區高亮把繁體字和簡體字當作同一個字（選「書」也標出「書」），與搜索面板的開關無關 |
+| `[editor] selection_highlight_glyphs` | `false` | **選區高亮匹配繁簡** — 選區高亮把繁體字和簡體字當作同一個字（選「書」也標出「書」），與搜索面板的開關無關 |
 | `[editor] indent_guides` | `false` | **縮進參考線** — 在代碼行首每級縮進畫一條豎線，同 helix；僅用於代碼文件 |
 | `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
 | `[editor] indent_guides_skip_levels` | `0` | **跳過外層** — 最外幾級縮進不畫參考線 (0–8) |
@@ -49,7 +49,7 @@
 | `[editor] indent_symbol` | `"↵"` | **段首符號** — 段首記號用的字符，僅在段首記號爲「畫符號」時生效 |
 | `[editor] table_rules` | `"line dash"` | **表格豎線** — 表格豎線的樣式 (`line dash` 實線加虚線, `line` 實線, `line double` 實線加雙線, `color` 用顔色區分, `off` 不畫) |
 | `[editor] unicode_alarm` | `true` | **可疑字符** — 零寬字符、雙向控制符後面那一格和非普通空格鋪上琥珀底色 |
-| `[editor] whitespace` | `"off"` | **空白記號** — 在空格和製表符的格子裏畫一個淡色記號；“邊界”不標詞與詞之間的單個空格 (`off` 關閉, `boundary` 邊界：行首行尾、製表符、連着的空格, `selection` 選區内, `trailing` 行尾, `all` 全部) |
+| `[editor] whitespace` | `"off"` | **空白字符標記** — 在空格和製表符的格子裏畫一個淡色記號；“邊界”不標詞與詞之間的單個空格 (`off` 關閉, `boundary` 邊界：行首行尾、製表符、連着的空格, `selection` 選區内, `trailing` 行尾, `all` 全部) |
 | `[editor] whitespace_space_character` | `"⋅"` | **空格記號** — 標空格用的字符，要佔一格 |
 | `[editor] whitespace_tab_character` | `"⇥"` | **製表符記號** — 標製表符用的字符，畫在它的第一格，要佔一格 |
 | `[editor] maths_preview` | `true` | **公式預覽** — 光標在公式中時，在下方浮窗顯示排版結果；需要 Ghostty 或 kitty，Typst 公式還需要 typst 命令 |
