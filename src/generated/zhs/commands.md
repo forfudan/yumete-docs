@@ -259,4 +259,4 @@
 | `:ruby-typst` | `on｜off` | 识别 `#ruby(…)` |
 | `:ruby-markdown` | `on｜off` | 识别 `{这些\|zhèxiē}` |
 | `:ruby-format` | `html｜typst｜markdown` | 把注音改写成另一种写法 |
-| `:s/pat/rep/` |  | 替换：默认在选区内；`%s` 全文、`1-40s` 指定范围、`1,5,9s` 指定行；标志 g i f c n t y j；分隔符可换 |
+| `:s/pat/rep/` |  | 替换：默认在选区内；`%s` 全文、`1,40s` 或 `1-40s` 指定范围；标志 g i f c n t y j；分隔符可换 |

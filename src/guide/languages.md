@@ -16,7 +16,11 @@ Each language below has a grammar compiled into yumete. A grammar gives you:
   `PERF` blue, `HACK` and `WARN` amber, `FIXME`, `BUG` and `XXX` red, `TIP` and `HINT`
   grey, and a `(name)` before the colon. Markdown and Typst comments (`<!-- -->`,
   `%%…%%`, `//`) get them too; a `Note:` in a sentence does not.
-- indentation after an opener, on `Enter` and on `o`
+- indentation after an opener, on `Enter` and on `o`. An indent nothing is
+  typed after goes again: under vim on Enter, `Esc`, `C-o` or an arrow to
+  another line; under helix on `Esc` when the line break was all the Insert
+  wrote. Under helix, Enter with only blanks before the cursor breaks the line
+  at its start, leaving the line above empty.
 - indent guides, off unless you turn them on: `[editor] indent_guides = true` draws a
   rule at each level of a line's leading blanks, as helix's `[editor.indent-guides]`
   does, with `indent_guides_character` and `indent_guides_skip_levels` for helix's

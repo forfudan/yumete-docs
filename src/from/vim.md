@@ -187,7 +187,7 @@ the last insert, as helix's does.
 | `(` `)` | previous, next sentence |
 | `g;` `g,` | older and newer places you changed |
 | `gi` | insert again where the last Insert stopped |
-| `C-o` in insert mode | run one Normal command and come back |
+| `C-o` in insert mode | run one Normal command and come back; a `:`, `/` or `?` line comes back when it ends, by Enter or `Esc` |
 | `C-u` `C-w` in insert mode | delete to the start of the line, the word before; each first stops where this Insert began |
 | `C-v` in insert mode | write the next character or `Tab` as it is: no closing pair, no completion list. `C-v Enter` writes a carriage return (drawn `␍`), and a code writes the character it names: `C-v065` and `C-vx41` are `A`, `C-vu4e2d` is `中`, as are `o` octal and `U` with eight hex digits |
 | `gp` `gP` | put after, before, and leave the cursor just past what was put |
@@ -326,10 +326,10 @@ also takes Visual `Q` away.
   `:%norm A;`. A failing motion ends that line's keys and an unfinished
   command is dropped, as in vim; the whole run is one undo step. `:normal!`
   leaves out your own key bindings.
-- A range is written with `-`, and `,` lists single lines: `:3-6s` is lines 3
-  to 6, while `:3,6s` is lines 3 and 6 only. `:'<,'>` is the selection; `:.,+2`
-  is not a spelling here. `:s`, `:sort` and `:normal` take a range; `:2,4d`
-  and the like are not there. See [Search and replace](../guide/search.md).
+- A range is written with `,` as in vim, or with `-`: `:3,6s` and `:3-6s` are
+  lines 3 to 6. `:'<,'>` is the selection; `:.,+2` is not a spelling in `:s`.
+  `:s`, `:sort`, `:normal` and `:read` take a range; `:2,4d` and the like are
+  not there. See [Search and replace](../guide/search.md).
 - A long line wrapped over several rows scrolls a row at a time, as with
   Neovim's `smoothscroll`: after `G` the top row can be the tail of a line,
   and `scrolloff` counts rows.

@@ -149,6 +149,16 @@ width `:hard-wrap` fills to (`tw`). They hold for that file only. Everything
 else in a modeline is passed over without a word, and nothing in one is ever
 run. A type yumete has no grammar for, such as `ft=xml`, changes nothing.
 
+Without a modeline, a file's own lines decide its indent unit when it is
+opened, as helix does: the most common step from one line's indent to the
+next among the first thousand lines, a TAB counting double. A Markdown list
+indented by two gives two spaces, a TAB-indented file a TAB. `>`, `<`, Tab,
+Insert `C-t` and `C-d`, and the indent Enter carries down use it. A file with
+no clear unit, such as a page of prose, keeps `[editor] indent_width` and
+`tab_spaces`. A modeline's `sw` and `et` win over the guess, and so do a typed
+`:indent-width` and `:indent-tab`. `:info` shows the unit, and says when the
+file's own indentation chose it.
+
 `--syntax` still outranks a modeline, a typed `:indent-width` or `:indent-tab`
 outranks it for that file, and `:reload` reads it again. `:info` shows what
 the modeline said. `[editor] modeline = false` turns them off.

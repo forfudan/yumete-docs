@@ -259,4 +259,4 @@
 | `:ruby-typst` | `on｜off` | recognise `#ruby(…)` |
 | `:ruby-markdown` | `on｜off` | recognise `{漢字\|かんじ}` |
 | `:ruby-format` | `html｜typst｜markdown` | rewrite the readings in another syntax |
-| `:s/pat/rep/` |  | substitute in the selection; `%s` the file, `1-40s` a range, `1,5,9s` listed lines; flags g i f c n t y j |
+| `:s/pat/rep/` |  | substitute in the selection; `%s` the file, `1,40s` or `1-40s` a range; flags g i f c n t y j |

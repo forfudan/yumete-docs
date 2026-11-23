@@ -270,9 +270,9 @@ For a quick change in this file, vi's substitute is there. `:s/find/replace/`
 changes the lines the selection covers; `:%s` changes the whole file. With a
 slash, `:s` is substitute; without one, it opens the search panel.
 
-A range goes before `s`: `:1-40s` is lines 1 to 40, `:1,5,9s` is those three
-lines only, and `:.-$s` is this line to the end. Note that `,` lists single
-lines here, so `:1,40s` is two lines, not forty.
+A range goes before `s`: `:1,40s` and `:1-40s` are lines 1 to 40, as in vim,
+and `:.,$s` is this line to the end. A range has two ends; `:1,5,9s` is
+refused.
 
 | Flag | Meaning |
 | --- | --- |
