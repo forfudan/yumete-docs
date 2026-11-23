@@ -126,7 +126,7 @@
 | `[editor] completion_page_size` | `6` | **completion page size** — how many items the word, code and shell completion lists show at once (1–20) |
 | `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it. minimal: () [] {}; basic: also the three ASCII quotes; full: every paired symbol (`off` off, `minimal` minimal, `basic` basic, `full` full) |
 | `[editor] undo_steps` | `"insert"` | **undo steps** — insert: one u takes back a whole run of typing, as in vim and helix. sentence: a step at each sentence end (。！？, or . ! ? followed by a space or a line break) (`insert` insert, `sentence` sentence) |
-| `[editor] indent_width` | `4` | **indent width** — how many columns > adds and < takes away, and how many spaces Tab types (1–16) |
+| `[editor] indent_width` | `4` | **indent width** — how many columns > adds and < takes away, and how many spaces Tab types, when the file shows no indent unit of its own (1–16) |
 | `[editor] tab_width` | `8` | **tab width** — a tab reaches the next multiple of this; code tables line up by it (1–16) |
 | `[editor] tab_inserts` | `"spaces"` | **Tab inserts** — what Tab types in Insert mode; Shift-Tab types the other (`spaces` spaces, `tab` tab) |
 | `[editor] smart_case` | `true` | **smart case** — when searching, ignore case unless the pattern has a capital |

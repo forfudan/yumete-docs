@@ -126,7 +126,7 @@
 | `[editor] completion_page_size` | `6` | **补全每页条数** — 单词、代码和终端命令的补全列表一次显示几条 (1–20) |
 | `[editor] auto_pairs` | `"basic"` | **自动配对** — 输入左括号或引号时自动补上右半边；再输入右半边会跳过。仅括号：() [] {}；基本：再加三种英文引号；完整：所有成对符号 (`off` 关, `minimal` 仅括号, `basic` 基本, `full` 完整) |
 | `[editor] undo_steps` | `"insert"` | **撤销步长** — 一次插入：一次 u 撤回整段输入，同 vim、helix。一句：每到句末（。！？，或 . ! ? 后接空格、换行）分一步 (`insert` 一次插入, `sentence` 一句) |
-| `[editor] indent_width` | `4` | **缩进宽度** — `>`/`<` 增减的列数，也是 Tab 输入的空格数 (1–16) |
+| `[editor] indent_width` | `4` | **缩进宽度** — `>`/`<` 增减的列数，也是 Tab 输入的空格数；文件自己看得出缩进单位时，用文件的 (1–16) |
 | `[editor] tab_width` | `8` | **制表符宽度** — 制表符对齐到此数的倍数，码表靠它对齐 (1–16) |
 | `[editor] tab_inserts` | `"spaces"` | **Tab 插入内容** — 插入模式下按 Tab 插入的内容；Shift-Tab 插入另一种 (`spaces` 空格, `tab` 制表符) |
 | `[editor] smart_case` | `true` | **智能大小写** — 搜索词全小写时不区分大小写，含大写字母时区分 |
