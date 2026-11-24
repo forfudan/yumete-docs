@@ -58,7 +58,7 @@ By default a column is as long as the window is tall. To set your own length:
 :view-wrap-height           say how long a column is
 ```
 
-The length can be 8 to 64; a smaller number is raised to 8 and a larger one lowered to 64. The setting is
+The length can be 8 to 64; a smaller number is raised to 8 and a larger one lowered to 64, and the status line says so. The setting is
 `zong_length` under `[editor]` (`0` follows the window). A column never runs
 past the bottom of the window, whatever number you give. `:view-wrap-width` is the
 horizontal measure and does nothing to a vertical page.

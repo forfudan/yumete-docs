@@ -321,7 +321,8 @@ A measure writes the page narrow. `:view-wrap-width 50` wraps every line at colu
 and stands the page in the middle of the window, with equal margins left and right
 (an odd cell goes to the right) and the line numbers beside the text. On a wide
 monitor this keeps lines at a length the eye can follow. If the window is narrower
-than the measure, the window wins and there is no margin. `:view-centre off` keeps
+than the measure, the window wins and there is no margin. The measure can be 8 to 400 columns; a number outside that
+is held to the nearer bound and the status line says so. `:view-centre off` keeps
 the page at the left edge, with the margin tinted on the right. Side-by-side pages
 (`:view-pages-horizontal`) are centred as one spread, and each window of a split
 centres within its own width.
