@@ -249,10 +249,16 @@
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<题目>` | 以可搜索的文件打开按键与命令列表 |
 | `:export` `:ex` | `html｜typst｜epub｜docx｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<路径>` | 导出为 html、typst、epub 或 docx |
 | `:export-as-preview` | `html｜pdf｜<路径>` | 照预览的样子导出：Markdown 为 html 或 pdf，Typst 为 pdf |
-| `:diff` | `<路径>` | 查看改动：按词比较，而非按行 |
+| `:diff` | `<路径>` | 左右两栏对照：与已保存的文件或另一个文件并排比较；再输一次关闭 |
+| `:diff-report` | `<路径>` | 查看改动：按词比较，而非按行 |
+| `:diff-mark` `:select-for-compare` |  | 标记当前文件，再到另一个文件用 :diff-marked 对照 |
+| `:diff-marked` `:compare-with-selected` |  | 左栏放标记的文件，右栏放当前文件，并排对照 |
+| `:diff-get` |  | 对照中：把另一栏的这一处改动取过来（vim 的 do） |
+| `:diff-put` |  | 对照中：把这一栏的这一处改动送到另一栏（vim 的 dp） |
 | `:lsp-rename` | `<新名字>` | 通过语言服务器重命名光标下的符号(各处一起改) |
 | `:git-show` | `<提交>` | 在另一个窗口以只读方式打开已提交的版本 |
-| `:git-diff` | `<提交>` | 与 git 中的版本逐词比较，默认比 HEAD |
+| `:git-diff` | `<提交>` | 左右两栏对照 git 中的版本，默认 HEAD；再输一次关闭 |
+| `:git-diff-report` | `<提交>` | 与 git 中的版本逐词比较，默认比 HEAD |
 | `:ruby` |  | 编辑此处注音 |
 | `:ruby-render` | `off｜basic｜full` | 注音显示：源码、着色、夹行；不带参数显示当前模式 |
 | `:ruby-auto` |  | 按词自动注音(选区或整个文件) |

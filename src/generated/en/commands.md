@@ -249,10 +249,16 @@
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<topic>` | keys and commands, opened as a searchable file |
 | `:export` `:ex` | `html｜typst｜epub｜docx｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<path>` | export as html, typst, epub or docx |
 | `:export-as-preview` | `html｜pdf｜<path>` | export as the preview draws it: html or pdf for Markdown, pdf for Typst |
-| `:diff` | `<path>` | show changes, by word rather than by line |
+| `:diff` | `<path>` | this draft beside the file as saved, or another file, in two columns; bare again closes |
+| `:diff-report` | `<path>` | show changes, by word rather than by line |
+| `:diff-mark` `:select-for-compare` |  | mark this file; :diff-marked in another file puts the two side by side |
+| `:diff-marked` `:compare-with-selected` |  | the marked file on the left, this one on the right, side by side |
+| `:diff-get` |  | in a side-by-side view: take this change from the other column (vim's do) |
+| `:diff-put` |  | in a side-by-side view: give this change to the other column (vim's dp) |
 | `:lsp-rename` | `<new name>` | rename the symbol under the cursor everywhere, via the language server |
 | `:git-show` | `<commit>` | open a committed version read-only in the other window |
-| `:git-diff` | `<commit>` | compare with git word by word; HEAD unless a commit is named |
+| `:git-diff` | `<commit>` | this draft beside what git has, in two columns, HEAD unless a commit is named; bare again closes |
+| `:git-diff-report` | `<commit>` | compare with git word by word; HEAD unless a commit is named |
 | `:ruby` |  | edit the reading here |
 | `:ruby-render` | `off｜basic｜full` | ruby display: source, coloured, or beside the text; no argument shows the current one |
 | `:ruby-auto` |  | add readings by word (the selection or the whole file) |
