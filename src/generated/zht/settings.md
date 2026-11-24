@@ -35,7 +35,7 @@
 | `[editor] yank_flash` | `false` | **複製高亮** — 複製後，被複制的範圍閃一下 |
 | `[editor] selection_highlight` | `false` | **選區高亮** — 有選區時，屏幕上同樣的文字都標出淡底色；多個選區時按主選區 |
 | `[editor] selection_highlight_case` | `"respect"` | **選區高亮的大小寫** — 選區高亮比較拉丁字母時是否區分大小寫 (`respect` 區分, `ignore` 不區分, `by_place` 代碼裏區分，正文和註釋裏不區分) |
-| `[editor] selection_highlight_glyphs` | `false` | **選區高亮匹配繁簡** — 選區高亮把繁體字和簡體字當作同一個字（選「書」也標出「書」），與搜索面板的開關無關 |
+| `[editor] selection_highlight_glyphs` | `false` | **選區高亮匹配繁簡** — 選區高亮把繁體字和簡體字當作同一個字（選「書」也標出「书」），與搜索面板的開關無關 |
 | `[editor] indent_guides` | `false` | **縮進參考線** — 在代碼行首每級縮進畫一條豎線，同 helix；僅用於代碼文件 |
 | `[editor] indent_guides_character` | `"│"` | **參考線字符** — 畫參考線用的字符，要佔一格 |
 | `[editor] indent_guides_skip_levels` | `0` | **跳過外層** — 最外幾級縮進不畫參考線 (0–8) |
