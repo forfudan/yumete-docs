@@ -255,6 +255,8 @@
 | `:diff-marked` `:compare-with-selected` |  | the marked file on the left, this one on the right, side by side |
 | `:diff-get` |  | in a side-by-side view: take this change from the other column (vim's do) |
 | `:diff-put` |  | in a side-by-side view: give this change to the other column (vim's dp) |
+| `:diff-fold` | `on｜off` | in a side-by-side view: fold each long unchanged run to one row; bare again shows them |
+| `:diff-swap` |  | in a side-by-side view: swap the two columns |
 | `:lsp-rename` | `<new name>` | rename the symbol under the cursor everywhere, via the language server |
 | `:git-show` | `<commit>` | open a committed version read-only in the other window |
 | `:git-diff` | `<commit>` | this draft beside what git has, in two columns, HEAD unless a commit is named; bare again closes |

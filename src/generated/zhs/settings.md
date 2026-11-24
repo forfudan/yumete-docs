@@ -31,6 +31,7 @@
 | `[editor] line_numbers` | `"absolute"` | **行号** — 左侧显示行号。相对行号显示与光标相隔几行，方便跳行 (`absolute` 绝对, `relative` 相对, `none` 不画) |
 | `[editor] line_number_fill` | `false` | **行号底色** — 行号栏铺满淡底色，而不是只显示数字 |
 | `[editor] diff_gutter` | `true` | **改动条** — 在行号旁用底色标出与 git 不同的行(不在 git 中则对比已保存的文件) |
+| `[editor] diff_fold` | `false` | **对照时折叠未改动的行** — 左右对照时，把未改动的长段各折成一行，只留改动前后各三行(:diff-fold) |
 | `[editor] end_of_line_diagnostics` | `"off"` | **行末诊断** — 在行末显示语言服务器的诊断：关闭、基本(错误和警告)或完整(所有级别) (`off` 关闭, `basic` 基本：错误和警告, `full` 完整：所有级别(错误、警告、说明、建议)) |
 | `[editor] yank_flash` | `false` | **复制高亮** — 复制后，被复制的范围闪一下 |
 | `[editor] selection_highlight` | `false` | **选区高亮** — 有选区时，屏幕上同样的文字都标出淡底色；多个选区时按主选区 |

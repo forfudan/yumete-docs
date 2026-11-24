@@ -678,6 +678,8 @@
 | `expand_entry` | 展開，或進入 | `l` `Right` |
 | `open_entry` | 進入：打開文件、跳到那一行 | `Enter` |
 | `toggle_links_graph` | 鏈接面板：列表/圖 | `v` |
+| `diff_mark_entry` | 文件樹：標記這個文件，留作比較 | `m` |
+| `diff_marked_entry` | 文件樹：這個文件和標記的那個兩欄對照 | `M` |
 | `restore_change` | 還原此處改動 | `u` |
 | `yank_old_text` | 複製改動前的文本；在字符信息裏複製整份信息 | `y` |
 | `move_section_down` | 把這一節連同小節往下移過同級的一節 | `A-j` |

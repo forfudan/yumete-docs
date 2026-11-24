@@ -31,6 +31,7 @@
 | `[editor] line_numbers` | `"absolute"` | **line numbers** — line numbers on the left; relative numbers count from the cursor, making jumps easy (`absolute` absolute, `relative` relative, `none` none) |
 | `[editor] line_number_fill` | `false` | **line number background** — fill the line-number column with a faint background, not just the number |
 | `[editor] diff_gutter` | `true` | **diff gutter** — mark lines that differ from git (or from the saved file) beside the line numbers |
+| `[editor] diff_fold` | `false` | **fold unchanged lines in a diff** — in the side-by-side view, fold each long unchanged run to one row, keeping three lines either side of a change (:diff-fold) |
 | `[editor] end_of_line_diagnostics` | `"off"` | **end-of-line diagnostics** — show language-server diagnostics at line end: off, basic (errors and warnings) or full (every level) (`off` off, `basic` basic: errors and warnings, `full` full: every level (errors, warnings, info, hints)) |
 | `[editor] yank_flash` | `false` | **yank flash** — flash the copied text after copying |
 | `[editor] selection_highlight` | `false` | **selection highlight** — light every other copy of the selected text on the screen; with several selections, the primary one's |

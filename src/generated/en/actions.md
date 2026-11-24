@@ -678,6 +678,8 @@
 | `expand_entry` | expand, or go into it | `l` `Right` |
 | `open_entry` | go to the entry: open the file, or jump to the line | `Enter` |
 | `toggle_links_graph` | links panel: list or graph | `v` |
+| `diff_mark_entry` | file tree: mark this file to compare with | `m` |
+| `diff_marked_entry` | file tree: compare this file with the marked one, side by side | `M` |
 | `restore_change` | restore this change | `u` |
 | `yank_old_text` | copy the old text; in the character info, copy the whole answer | `y` |
 | `move_section_down` | move this section, its subsections with it, below the next one at its level | `A-j` |
