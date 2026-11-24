@@ -257,6 +257,7 @@
 | `:diff-put` |  | in a side-by-side view: give this change to the other column (vim's dp) |
 | `:diff-fold` | `on｜off` | in a side-by-side view: fold each long unchanged run to one row; bare again shows them |
 | `:diff-swap` |  | in a side-by-side view: swap the two columns |
+| `:diff-align` | `off` | in a side-by-side view: pin the caret's line beside a line of the other column; a selection pins both ends; off clears them |
 | `:lsp-rename` | `<new name>` | rename the symbol under the cursor everywhere, via the language server |
 | `:git-show` | `<commit>` | open a committed version read-only in the other window |
 | `:git-diff` | `<commit>` | this draft beside what git has, in two columns, HEAD unless a commit is named; bare again closes |
