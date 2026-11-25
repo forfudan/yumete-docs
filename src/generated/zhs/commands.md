@@ -115,6 +115,7 @@
 | `:view-wrap` | `on｜off` | 自动换行开关；宽度用 `:view-wrap-width` 设 |
 | `:view-wrap-width` | `0｜<几栏>` | 正文宽度(列数)；`:view-wrap-width 50` 设宽度，`0` 跟随窗口 |
 | `:view-centre` | `on｜off` | 正文居中：定了正文宽度时，正文立在窗口中间，左右留出一样宽的边 |
+| `:view-zen` | `on｜off` | 禅模式：不显示状态栏、标签栏、侧栏和行号，正文居中 |
 | `:view-scrollbar` | `on｜off` | 滚动条：每个窗口右边留一格，标出这一页在文件里的位置 |
 | `:view-scrollbar-marks` | `search｜listing｜changes｜problems on｜off` | 滚动条标记：在滚动条上标出搜索命中、清单各行、改动或报错所在的行 |
 | `:view-wrap-height` | `0｜<几字>` | 竖排每列字数；`:view-wrap-height 30` 设长度，`0` 跟随窗口 |

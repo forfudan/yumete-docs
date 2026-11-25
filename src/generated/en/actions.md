@@ -449,6 +449,29 @@
 | `yume_single_char_both` | words and characters | `Space z d b` | `Space z d b` |  |
 | `yume_single_char_primary` | characters first | `Space z d p` | `Space z d p` |  |
 | `yume_single_char_strict` | characters only | `Space z d s` | `Space z d s` |  |
+| `quick_settings_mode` | quick settings | `Space ,` | `Space ,` |  |
+| `quick_vertical` | vertical | `Space , v` | `Space , v` |  |
+| `quick_focus` | focus | `Space , f` | `Space , f` |  |
+| `quick_typewriter` | typewriter | `Space , t` | `Space , t` |  |
+| `quick_wrap` | soft wrap | `Space , w` | `Space , w` |  |
+| `quick_line_numbers_mode` | line numbers | `Space , l` | `Space , l` |  |
+| `quick_line_numbers_absolute` | absolute | `Space , l a` | `Space , l a` |  |
+| `quick_line_numbers_relative` | relative to the cursor | `Space , l r` | `Space , l r` |  |
+| `quick_line_numbers_none` | none | `Space , l n` | `Space , l n` |  |
+| `quick_render_mode` | rendering | `Space , r` | `Space , r` |  |
+| `quick_render_off` | source | `Space , r o` | `Space , r o` |  |
+| `quick_render_basic` | basic | `Space , r b` | `Space , r b` |  |
+| `quick_render_full` | full | `Space , r f` | `Space , r f` |  |
+| `quick_mood_mode` | light or dark | `Space , m` | `Space , m` |  |
+| `quick_mood_system` | follow the terminal background | `Space , m s` | `Space , m s` |  |
+| `quick_mood_dark` | dark | `Space , m d` | `Space , m d` |  |
+| `quick_mood_light` | light | `Space , m l` | `Space , m l` |  |
+| `quick_pages_1` | one page | `Space , 1` | `Space , 1` |  |
+| `quick_pages_2` | 2 pages | `Space , 2` | `Space , 2` |  |
+| `quick_pages_3` | 3 pages | `Space , 3` | `Space , 3` |  |
+| `quick_pages_4` | 4 pages | `Space , 4` | `Space , 4` |  |
+| `quick_zen` | zen | `Space , z` | `Space , z` |  |
+| `quick_settings_page` | settings page | `Space , ,` | `Space , ,` |  |
 | `table_source_view` | source view | `Space t o` | `Space t o` |  |
 | `table_basic_view` | basic view: columns aligned | `Space t b` | `Space t b` |  |
 | `table_window_view` | window view: the table fills the window | `Space t t` | `Space t t` |  |

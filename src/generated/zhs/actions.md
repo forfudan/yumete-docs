@@ -449,6 +449,29 @@
 | `yume_single_char_both` | 字词同出 | `Space z d b` | `Space z d b` |  |
 | `yume_single_char_primary` | 主单副词 | `Space z d p` | `Space z d p` |  |
 | `yume_single_char_strict` | 严格单字 | `Space z d s` | `Space z d s` |  |
+| `quick_settings_mode` | 快速设置 | `Space ,` | `Space ,` |  |
+| `quick_vertical` | 竖排 | `Space , v` | `Space , v` |  |
+| `quick_focus` | 专注 | `Space , f` | `Space , f` |  |
+| `quick_typewriter` | 打字机 | `Space , t` | `Space , t` |  |
+| `quick_wrap` | 自动换行 | `Space , w` | `Space , w` |  |
+| `quick_line_numbers_mode` | 行号 | `Space , l` | `Space , l` |  |
+| `quick_line_numbers_absolute` | 绝对行号 | `Space , l a` | `Space , l a` |  |
+| `quick_line_numbers_relative` | 相对行号 | `Space , l r` | `Space , l r` |  |
+| `quick_line_numbers_none` | 不显示 | `Space , l n` | `Space , l n` |  |
+| `quick_render_mode` | 渲染 | `Space , r` | `Space , r` |  |
+| `quick_render_off` | 源码 | `Space , r o` | `Space , r o` |  |
+| `quick_render_basic` | 基本 | `Space , r b` | `Space , r b` |  |
+| `quick_render_full` | 完整 | `Space , r f` | `Space , r f` |  |
+| `quick_mood_mode` | 深浅色 | `Space , m` | `Space , m` |  |
+| `quick_mood_system` | 跟随终端背景色 | `Space , m s` | `Space , m s` |  |
+| `quick_mood_dark` | 深色 | `Space , m d` | `Space , m d` |  |
+| `quick_mood_light` | 浅色 | `Space , m l` | `Space , m l` |  |
+| `quick_pages_1` | 不分栏 | `Space , 1` | `Space , 1` |  |
+| `quick_pages_2` | 分成 2 栏 | `Space , 2` | `Space , 2` |  |
+| `quick_pages_3` | 分成 3 栏 | `Space , 3` | `Space , 3` |  |
+| `quick_pages_4` | 分成 4 栏 | `Space , 4` | `Space , 4` |  |
+| `quick_zen` | 禅模式 | `Space , z` | `Space , z` |  |
+| `quick_settings_page` | 设置页 | `Space , ,` | `Space , ,` |  |
 | `table_source_view` | 源码视图 | `Space t o` | `Space t o` |  |
 | `table_basic_view` | 基本视图(按列对齐) | `Space t b` | `Space t b` |  |
 | `table_window_view` | 全窗视图(表格独占窗口) | `Space t t` | `Space t t` |  |

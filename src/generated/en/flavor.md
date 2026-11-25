@@ -11,6 +11,7 @@
 | [`tables`](#tables) | `Space t` | `Space t` | table menu |
 | [`merge_conflicts`](#merge_conflicts) | `Space m` `]m` `[m` | `Space m` | merge conflicts |
 | [`input_method_menu`](#input_method_menu) | `Space z` | `Space z` | input method menu |
+| [`quick_settings`](#quick_settings) | `Space ,` | `Space ,` | quick settings |
 | [`recent_files`](#recent_files) | `Space o` | `Space o` | recent files and projects |
 | [`registers_menu`](#registers_menu) | `Space "` | `Space "` | registers menu |
 | [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | character info |
@@ -191,6 +192,33 @@ On: Space z opens the input method menu. Off: the key that switches between Chin
 | input method | `Space z w` | where the code table came from |  |
 | input method | `Space z W` | where the data is |  |
 | input method | `Space z u` | what yumete learned |  |
+
+### `quick_settings` {#quick_settings}
+
+On: Space , opens the quick settings. Off: they are still set on the settings page and by command.
+
+| Where | Key | With the item | Without it |
+| --- | --- | --- | --- |
+| Space | `Space ,` | quick settings |  |
+| quick settings | `Space , v` | vertical |  |
+| quick settings | `Space , f` | focus |  |
+| quick settings | `Space , t` | typewriter |  |
+| quick settings | `Space , w` | soft wrap |  |
+| quick settings | `Space , l` | line numbers |  |
+| quick settings | `Space , r` | rendering |  |
+| quick settings | `Space , m` | light or dark |  |
+| quick settings | `Space , 1-4` | pages |  |
+| quick settings | `Space , z` | zen |  |
+| quick settings | `Space , ,` | settings page |  |
+| line numbers | `Space , l a` | absolute |  |
+| line numbers | `Space , l r` | relative to the cursor |  |
+| line numbers | `Space , l n` | none |  |
+| rendering | `Space , r o` | source |  |
+| rendering | `Space , r b` | basic |  |
+| rendering | `Space , r f` | full |  |
+| light or dark | `Space , m s` | follow the terminal background |  |
+| light or dark | `Space , m d` | dark |  |
+| light or dark | `Space , m l` | light |  |
 
 ### `recent_files` {#recent_files}
 

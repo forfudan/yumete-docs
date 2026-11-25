@@ -11,6 +11,7 @@
 | [`tables`](#tables) | `Space t` | `Space t` | 表格菜单 |
 | [`merge_conflicts`](#merge_conflicts) | `Space m` `]m` `[m` | `Space m` | 合并冲突 |
 | [`input_method_menu`](#input_method_menu) | `Space z` | `Space z` | 输入法菜单 |
+| [`quick_settings`](#quick_settings) | `Space ,` | `Space ,` | 快速设置 |
 | [`recent_files`](#recent_files) | `Space o` | `Space o` | 最近的文件和项目 |
 | [`registers_menu`](#registers_menu) | `Space "` | `Space "` | 寄存器菜单 |
 | [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | 字符信息 |
@@ -191,6 +192,33 @@ vim 键位下：
 | 输入法 | `Space z w` | 查看码表来源 |  |
 | 输入法 | `Space z W` | 查看数据位置 |  |
 | 输入法 | `Space z u` | yumete 学到的词 |  |
+
+### `quick_settings` {#quick_settings}
+
+开：空格 , 打开快速设置。关：这些设置照常在设置页和命令里改。
+
+| 位置 | 键 | 开启此项 | 关闭此项 |
+| --- | --- | --- | --- |
+| 空格 | `Space ,` | 快速设置 |  |
+| 快速设置 | `Space , v` | 竖排 |  |
+| 快速设置 | `Space , f` | 专注 |  |
+| 快速设置 | `Space , t` | 打字机 |  |
+| 快速设置 | `Space , w` | 自动换行 |  |
+| 快速设置 | `Space , l` | 行号 |  |
+| 快速设置 | `Space , r` | 渲染 |  |
+| 快速设置 | `Space , m` | 深浅色 |  |
+| 快速设置 | `Space , 1-4` | 分栏 |  |
+| 快速设置 | `Space , z` | 禅模式 |  |
+| 快速设置 | `Space , ,` | 设置页 |  |
+| 行号 | `Space , l a` | 绝对行号 |  |
+| 行号 | `Space , l r` | 相对行号 |  |
+| 行号 | `Space , l n` | 不显示 |  |
+| 渲染 | `Space , r o` | 源码 |  |
+| 渲染 | `Space , r b` | 基本 |  |
+| 渲染 | `Space , r f` | 完整 |  |
+| 深浅色 | `Space , m s` | 跟随终端背景色 |  |
+| 深浅色 | `Space , m d` | 深色 |  |
+| 深浅色 | `Space , m l` | 浅色 |  |
 
 ### `recent_files` {#recent_files}
 

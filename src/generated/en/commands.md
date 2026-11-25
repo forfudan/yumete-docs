@@ -115,6 +115,7 @@
 | `:view-wrap` | `on｜off` | soft wrap, on or off; `:view-wrap-width` sets the width |
 | `:view-wrap-width` | `0｜<columns>` | text width in columns; `0` follows the window |
 | `:view-centre` | `on｜off` | centred page: with a text width set, the text stands in the middle of the window, equal margins either side |
+| `:view-zen` | `on｜off` | zen: no status line, tab bar, sidebars or line numbers, the page centred |
 | `:view-scrollbar` | `on｜off` | scrollbar: each window keeps a column at its right showing where the page is in the file |
 | `:view-scrollbar-marks` | `search｜listing｜changes｜problems on｜off` | scrollbar marks: mark the lines of search hits, listing rows, changes or errors on the scrollbar |
 | `:view-wrap-height` | `0｜<characters>` | characters per vertical column; `0` follows the window |

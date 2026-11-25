@@ -11,6 +11,7 @@
 | [`tables`](#tables) | `Space t` | `Space t` | 表格菜單 |
 | [`merge_conflicts`](#merge_conflicts) | `Space m` `]m` `[m` | `Space m` | 合併衝突 |
 | [`input_method_menu`](#input_method_menu) | `Space z` | `Space z` | 輸入法菜單 |
+| [`quick_settings`](#quick_settings) | `Space ,` | `Space ,` | 快速設置 |
 | [`recent_files`](#recent_files) | `Space o` | `Space o` | 最近的文件和項目 |
 | [`registers_menu`](#registers_menu) | `Space "` | `Space "` | 寄存器菜單 |
 | [`dictionary`](#dictionary) | `Space n` `Space N` | `Space n` `Space N` | 字符信息 |
@@ -191,6 +192,33 @@ vim 鍵位下：
 | 輸入法 | `Space z w` | 查看碼表來源 |  |
 | 輸入法 | `Space z W` | 查看數據位置 |  |
 | 輸入法 | `Space z u` | yumete 學到的詞 |  |
+
+### `quick_settings` {#quick_settings}
+
+開：空格 , 打開快速設置。關：這些設置照常在設置頁和命令裏改。
+
+| 位置 | 鍵 | 開啓此項 | 關閉此項 |
+| --- | --- | --- | --- |
+| 空格 | `Space ,` | 快速設置 |  |
+| 快速設置 | `Space , v` | 豎排 |  |
+| 快速設置 | `Space , f` | 專注 |  |
+| 快速設置 | `Space , t` | 打字機 |  |
+| 快速設置 | `Space , w` | 自動換行 |  |
+| 快速設置 | `Space , l` | 行號 |  |
+| 快速設置 | `Space , r` | 渲染 |  |
+| 快速設置 | `Space , m` | 深淺色 |  |
+| 快速設置 | `Space , 1-4` | 分欄 |  |
+| 快速設置 | `Space , z` | 禪模式 |  |
+| 快速設置 | `Space , ,` | 設置頁 |  |
+| 行號 | `Space , l a` | 絶對行號 |  |
+| 行號 | `Space , l r` | 相對行號 |  |
+| 行號 | `Space , l n` | 不顯示 |  |
+| 渲染 | `Space , r o` | 源碼 |  |
+| 渲染 | `Space , r b` | 基本 |  |
+| 渲染 | `Space , r f` | 完整 |  |
+| 深淺色 | `Space , m s` | 跟隨終端背景色 |  |
+| 深淺色 | `Space , m d` | 深色 |  |
+| 深淺色 | `Space , m l` | 淺色 |  |
 
 ### `recent_files` {#recent_files}
 

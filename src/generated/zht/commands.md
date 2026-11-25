@@ -115,6 +115,7 @@
 | `:view-wrap` | `on｜off` | 自動換行開關；寬度用 `:view-wrap-width` 設 |
 | `:view-wrap-width` | `0｜<幾欄>` | 正文寬度(列數)；`:view-wrap-width 50` 設寬度，`0` 跟隨窗口 |
 | `:view-centre` | `on｜off` | 正文居中：定了正文寬度時，正文立在窗口中間，左右留出一樣寬的邊 |
+| `:view-zen` | `on｜off` | 禪模式：不顯示狀態欄、標籤欄、側欄和行號，正文居中 |
 | `:view-scrollbar` | `on｜off` | 滚動條：每個窗口右邊留一格，標出這一頁在文件裏的位置 |
 | `:view-scrollbar-marks` | `search｜listing｜changes｜problems on｜off` | 滚動條標記：在滚動條上標出搜索命中、清單各行、改動或報錯所在的行 |
 | `:view-wrap-height` | `0｜<幾字>` | 豎排每列字數；`:view-wrap-height 30` 設長度，`0` 跟隨窗口 |
