@@ -629,8 +629,13 @@ text obeys it: typing, pasting, `R`, the input method, `:s`, and deleting.
 - **`Backspace` will not join two cells**, and `d` on an empty cell will not delete
   the delimiter beside it.
 - **A table is always horizontal.** `:vertical` is refused while a file is in the
-  window view, and `--table` overrides `--vertical`. A pipe table inside a vertical
-  page is not affected.
+  window view, and `--table` overrides `--vertical`.
+- **A pipe table inside a vertical page is turned, and read-only there.** Each row
+  becomes a column read from the right, the header first, and each column a band
+  down the page. A table never runs past the foot of the page: short bands keep
+  their depth, and a long cell wraps inside its band, so that row takes several
+  columns side by side. The bands are measured over the whole table, so they stay
+  put as the cursor moves. To edit the table, press `Space t t`.
 
 What yumete does *not* do is refuse a broken table. A row with the wrong number of
 fields still opens; it is marked, and its missing cells are drawn empty, so you can
