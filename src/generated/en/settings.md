@@ -49,6 +49,7 @@
 | `[editor] indent_hint` | `"none"` | **paragraph mark** — on a vertical page, mark each paragraph start so breaks are easy to find (`none` none, `symbol` a mark, `color` colour) |
 | `[editor] indent_symbol` | `"↵"` | **paragraph mark symbol** — the character for the paragraph mark; used when the indent hint is set to a mark |
 | `[editor] table_rules` | `"line dash"` | **table rules** — how the column rules of a table are drawn (`line dash` lines and dashes, `line` lines, `line double` lines and double lines, `color` colour, `off` none) |
+| `[editor] table_cell` | `"wash"` | **current cell** — the cell under the cursor in a table and the settings page: a faint ground with two gold rules, or a gold ground (`wash` wash and gold rules, `fill` gold fill) |
 | `[editor] unicode_alarm` | `true` | **suspicious characters** — tint the cell after a zero-width or bidi control, and any space that is not a plain space |
 | `[editor] whitespace` | `"off"` | **whitespace marks** — a faint mark in the cells of spaces and tabs; boundary leaves out the single space between words (`off` off, `boundary` boundary: leading and trailing, tabs, runs of spaces, `selection` inside selections, `trailing` trailing, `all` all) |
 | `[editor] whitespace_space_character` | `"⋅"` | **space mark** — the character a space is marked with, one cell wide |

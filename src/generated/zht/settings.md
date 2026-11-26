@@ -49,6 +49,7 @@
 | `[editor] indent_hint` | `"none"` | **段首記號** — 豎排時在段首畫記號，便於在長文中找到分段 (`none` 不畫, `symbol` 畫符號, `color` 換顔色) |
 | `[editor] indent_symbol` | `"↵"` | **段首符號** — 段首記號用的字符，僅在段首記號爲「畫符號」時生效 |
 | `[editor] table_rules` | `"line dash"` | **表格豎線** — 表格豎線的樣式 (`line dash` 實線加虚線, `line` 實線, `line double` 實線加雙線, `color` 用顔色區分, `off` 不畫) |
+| `[editor] table_cell` | `"wash"` | **當前格** — 表格與設置頁裏光標所在那一格：淡底加兩條金線，或整格金底 (`wash` 淡底金線, `fill` 金底) |
 | `[editor] unicode_alarm` | `true` | **可疑字符** — 零寬字符、雙向控制符後面那一格和非普通空格鋪上琥珀底色 |
 | `[editor] whitespace` | `"off"` | **空白字符標記** — 在空格和製表符的格子裏畫一個淡色記號；“邊界”不標詞與詞之間的單個空格 (`off` 關閉, `boundary` 邊界：行首行尾、製表符、連着的空格, `selection` 選區内, `trailing` 行尾, `all` 全部) |
 | `[editor] whitespace_space_character` | `"⋅"` | **空格記號** — 標空格用的字符，要佔一格 |
