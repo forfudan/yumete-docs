@@ -9,6 +9,11 @@ ye notes.md
 Name several to open them all, or none to start on a blank page. A file that
 does not exist yet opens empty and is created when you save it.
 
+Each open file is held in a *buffer*: the editor's own copy of the text. You
+edit the buffer, and the file on the disk changes only when you save. A buffer
+can also have no file behind it yet, or show something that is not a file at
+all, such as the help.
+
 | Command | What it opens |
 | --- | --- |
 | `ye ch01.md ch02.md` | both files, one buffer each |
