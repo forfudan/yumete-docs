@@ -217,7 +217,9 @@ three ways to draw it, and works only in the window view:
 
 - **Wrapped** (the default): the rest of the cell continues on the lines below,
   inside its own column. A row is as tall as its tallest cell, and the row number
-  appears on its first line only. In a wide window a wrapped column takes the
+  appears on its first line only. `[editor] table_row_lines = N` caps a row at
+  N lines, the last ending in `…`; the row under the cursor still opens whole,
+  and the default `0` sets no cap. In a wide window a wrapped column takes the
   spare width too, so it wraps onto fewer lines.
 
   ```
@@ -267,7 +269,8 @@ never leaves the table.
 
 ### At the cell level
 
-The current cell is marked by its two side rules turning gold. There is no text
+The current cell is marked by a faint ground and its two side rules turning
+gold; `[editor] table_cell = "fill"` gives it a gold ground instead. There is no text
 cursor, because there is no character to stand on.
 
 | Key | What it does |

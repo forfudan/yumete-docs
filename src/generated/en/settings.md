@@ -6,22 +6,22 @@
 | --- | --- | --- |
 | `[editor] layout` | `"horizontal"` | **layout** — horizontal or vertical text (`horizontal` horizontal, `vertical` vertical) |
 | `[editor] vertical_keys` | `"visual"` | **hjkl in vertical layout** — in vertical layout, whether hjkl follow the text or the screen (`logical` logical: h l by character, j k by line, `visual` visual: j k down/up, h l left/right) |
-| `[editor] zong_length` | `0` | **column length** — characters per column in vertical layout; prose reads well up to about 32 (8–64) |
+| `[editor] zong_length` | `0` | **column length** — characters per column in vertical layout; prose reads well up to about 32 (8–64; 0 = as tall as the window) |
 | `[editor] zong_gap` | `0` | **column gap** — half-width cells between one column and the next (0–4) |
 | `[editor] pages_vertical` | `1` | **pages, vertical** — how many bands a vertical page is split into (1–4) |
 | `[editor] pages_horizontal` | `1` | **pages, horizontal** — how many columns the horizontal page is cut into, side by side (1–4) |
-| `[editor] indent` | `0` | **first-line indent** — cells at the head of a paragraph; the Chinese convention is 2 (0–8) |
-| `[editor] measure` | `0` | **text width** — lines wrap here; the rest is margin (0–400) |
+| `[editor] indent` | `0` | **first-line indent** — cells at the head of a paragraph; the Chinese convention is 2 (0–8; 0 = no indent) |
+| `[editor] measure` | `0` | **text width** — lines wrap here; the rest is margin (0–400; 0 = as wide as the window) |
 | `[editor] centre_measure` | `true` | **centre the text** — with a text width set, the text and its line numbers stand in the middle of the window, equal margins either side; off keeps them at the left |
 | `[editor] scrollbar` | `true` | **scrollbar** — each window and preview keeps a column at its right, a tinted run in it showing where the page is in the file; blank while the whole file fits. Off gives the column back to the text |
-| `[editor] hard_wrap` | `0` | **hard-wrap width** — what a bare :hard-wrap fills to; it rewrites the file's line breaks, not the display (1–400) |
+| `[editor] hard_wrap` | `0` | **hard-wrap width** — what a bare :hard-wrap fills to; it rewrites the file's line breaks, not the display (1–400; 0 = unset) |
 | `[editor] rulers` | `[]` | **rulers** — a faint stripe down each of these columns, such as 80 100 (1–400) |
-| `[editor] tint_past` | `0` | **tint past** — a guide, not a break: everything past this column is tinted (0–400) |
+| `[editor] tint_past` | `0` | **tint past** — a guide, not a break: everything past this column is tinted (0–400; 0 = no tint) |
 | `[editor] soft_wrap` | `true` | **soft wrap** — long lines wrap on a horizontal page; off, they run past the right edge |
 | `[editor] hanging_punctuation` | `false` | **hanging punctuation** — 。，、？！：；「」 hang in the margin instead of taking a cell |
 | `[editor] margin` | `"dense"` | **margin** — when to show the lane for readings, emphasis and 平仄 (`never` never, `dense` when dense, `loose` when loose, `always` always) |
-| `[editor] tatechuyoko` | `0` | **tatechuyoko** — half-width characters set across inside one cell, so a year is not one digit to a row (2–8) |
-| `[editor] paper_ticks` | `0` | **paper ticks** — a faint tick in the margin every few cells, like manuscript paper (0–64) |
+| `[editor] tatechuyoko` | `0` | **tatechuyoko** — half-width characters set across inside one cell, so a year is not one digit to a row (2–8; 0 = off) |
+| `[editor] paper_ticks` | `0` | **paper ticks** — a faint tick in the margin every few cells, like manuscript paper (0–64; 0 = off) |
 | `[editor] ambiguous_width` | `"auto"` | **ambiguous width** — whether East Asian ambiguous-width characters (— …) take one cell or two; change it if the cursor is misaligned (`auto` ask the terminal, `wide` two cells, `narrow` one cell) |
 
 ### marks
@@ -50,7 +50,7 @@
 | `[editor] indent_symbol` | `"↵"` | **paragraph mark symbol** — the character for the paragraph mark; used when the indent hint is set to a mark |
 | `[editor] table_rules` | `"line dash"` | **table rules** — how the column rules of a table are drawn (`line dash` lines and dashes, `line` lines, `line double` lines and double lines, `color` colour, `off` none) |
 | `[editor] table_cell` | `"wash"` | **current cell** — the cell under the cursor in a table and the settings page: a faint ground with two gold rules, or a gold ground (`wash` wash and gold rules, `fill` gold fill) |
-| `[editor] table_row_lines` | `0` | **row height cap** — how many lines a table row may take; the rest is cut and the last line ends in …, while the row under the cursor opens whole (1–99) |
+| `[editor] table_row_lines` | `0` | **row height cap** — how many lines a row of a table in its window view may take; the rest is cut and the last line ends in …, while the row under the cursor opens whole (1–99; 0 = no cap) |
 | `[editor] unicode_alarm` | `true` | **suspicious characters** — tint the cell after a zero-width or bidi control, and any space that is not a plain space |
 | `[editor] whitespace` | `"off"` | **whitespace marks** — a faint mark in the cells of spaces and tabs; boundary leaves out the single space between words (`off` off, `boundary` boundary: leading and trailing, tabs, runs of spaces, `selection` inside selections, `trailing` trailing, `all` all) |
 | `[editor] whitespace_space_character` | `"⋅"` | **space mark** — the character a space is marked with, one cell wide |
@@ -125,7 +125,7 @@
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `[editor] word_completion` | `7` | **word completion** — after this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20) |
+| `[editor] word_completion` | `7` | **word completion** — after this many Latin letters, list words that appear in the open files; for Chinese characters, half as many (rounded up). C-n lists them at any time (0–20; 0 = off) |
 | `[editor] completion_page_size` | `6` | **completion page size** — how many items the word, code and shell completion lists show at once (1–20) |
 | `[editor] auto_pairs` | `"basic"` | **auto-pairs** — typing an opening bracket or quote adds its closer; typing the closer then steps over it. minimal: () [] {}; basic: also the three ASCII quotes; full: every paired symbol (`off` off, `minimal` minimal, `basic` basic, `full` full) |
 | `[editor] undo_steps` | `"insert"` | **undo steps** — insert: one u takes back a whole run of typing, as in vim and helix. sentence: a step at each sentence end (。！？, or . ! ? followed by a space or a line break) (`insert` insert, `sentence` sentence) |

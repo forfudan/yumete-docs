@@ -148,7 +148,10 @@ Rest the mouse on a cell that is too narrow for what it stands for, and a small
 panel shows the rest: the file's whole path over the file name, the language
 server's command and environment over its cell, a whole message over a cut
 one. The same works on a sidebar row cut short, a problem sign in the gutter
-or at a line's end, and a mark on the scrollbar. Any key, a click or a move to
+or at a line's end, and a mark on the scrollbar. Resting on the input method's
+cell in the status line names the scheme, with its series and author when the
+scheme file gives them; resting on a change bar, in the gutter or beside a
+vertical page's text, shows what those lines said before the change. Any key, a click or a move to
 another cell puts the panel away, and it does not come back until the mouse
 moves to another cell. `[editor] mouse_hover = false` turns this off, and
 `mouse_hover_delay` (500 ms) sets how long the mouse rests first.

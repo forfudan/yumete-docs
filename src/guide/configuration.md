@@ -281,8 +281,9 @@ document behind the panel.
 A cell is edited with every key of the text, under the keymap you use: `w`
 `b` `e`, `d` `c` `y` `p`, `i` `a`, selections and `u` all work, and the input
 method types in it as in the text; the status line says `CEL.NOR`,
-`CEL.INS` or `CEL.SEL`. A value longer than the cell slides to keep the caret
-in sight. `Esc` in Normal, with nothing left to cancel, writes the value and
+`CEL.INS` or `CEL.SEL`. A value longer than the cell takes further lines of
+it, broken as a table's cell is, up to eight; a longer one moves by whole lines
+to keep the caret's line in sight. `Esc` in Normal, with nothing left to cancel, writes the value and
 goes back to the row, and so does `Enter`; a value left as it was writes
 nothing. A value yumete does not take stays in the cell, and the reason, with
 the values or the range it takes, appears under the setting. Whatever you did

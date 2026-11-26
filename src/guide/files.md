@@ -351,6 +351,8 @@ after you stop typing. It is on by default; `:view-diff off` hides it, and
 | `Space X` | the same, in the Info sidebar; there `u` puts the old text back |
 | `mi g` | select the changed lines around the cursor |
 
+Resting the mouse on a bar shows the same old text as `Space x`, without a key.
+
 ### `:diff`, word by word
 
 Most diff tools compare lines, and a Chinese paragraph is one long line:
