@@ -203,8 +203,8 @@ each group as `+name`, `Backspace` goes back a level, and `Esc` closes them.
 
 ## What is not there
 
-LazyVim's plugins bring things yumete does not have: git staging, blame and
-hunk resets, a debugger, Trouble's list, a notification history, and the
+LazyVim's plugins bring things yumete does not have: git staging and hunk
+resets, a debugger, Trouble's list, a notification history, and the
 plugin and tool managers (`Space l`, `Space c m`). Their keys are left out of
 the config rather than bound to something else. `Space g g` opens lazygit
 (`:git-lazygit`) in the file's own repository, asking you to save unsaved

@@ -353,6 +353,27 @@ after you stop typing. It is on by default; `:view-diff off` hides it, and
 
 Resting the mouse on a bar shows the same old text as `Space x`, without a key.
 
+### Who last changed a line
+
+`:view-blame` turns on inline blame: after the line the cursor is on, a dim
+note names who last committed it, how long ago, and the commit's summary:
+
+```
+她伸手去碰，指尖一涼。  Lin Qiu, 3 days ago • Plant the orchard
+```
+
+A line you have typed into, or added, since the last commit has no note; the
+change bar already marks it. Resting the mouse on a note shows the whole
+commit: its hash, the author's name and address, and the date.
+
+Git is asked when you turn the note on and again when you open, reload or
+save the file, never while you type; between those times the notes follow
+your edits. On a wrapped line the note goes after the last row when there is
+room, and is shortened or left out when there is not. It is not drawn in
+Insert mode, on vertical pages, or on a line that already shows a
+diagnostic. In a file git does not track, the switch says so and stays off.
+It is off by default; `:view-blame` again, or `:view-blame off`, hides it.
+
 ### `:diff`, word by word
 
 Most diff tools compare lines, and a Chinese paragraph is one long line:

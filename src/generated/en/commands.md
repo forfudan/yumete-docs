@@ -127,6 +127,7 @@
 | `:view-numbers-fill` | `on｜off` | whether the line-number gutter has its own background (off by default, both layouts) |
 | `:view-diagnostics` | `off｜basic｜full` | end-of-line diagnostics: off, basic or full |
 | `:view-diff` | `on｜off` | change bar: marks lines that differ from git, beside the line number |
+| `:view-blame` | `on｜off` | inline blame: after the cursor's line, who last committed it, when, and why |
 | `:view-typewriter` | `on｜off` | typewriter: the cursor line stays centred |
 | `:view-focus` | `on｜off` | focus: the current paragraph stays bright, the rest dims |
 | `:view-meter` | `on｜off` | 平仄: the tone class of every character in the margin, and rhymes at line ends |

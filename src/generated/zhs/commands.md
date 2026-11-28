@@ -127,6 +127,7 @@
 | `:view-numbers-fill` | `on｜off` | 行号栏是否加底色(默认不加，横排竖排一样) |
 | `:view-diagnostics` | `off｜basic｜full` | 行末诊断：off、basic 或 full |
 | `:view-diff` | `on｜off` | 改动条：行号旁用底色标出与 git 版本不同的行 |
+| `:view-blame` | `on｜off` | 行末提交信息：光标所在行的末尾显示最后提交它的作者、时间和说明 |
 | `:view-typewriter` | `on｜off` | 打字机模式：光标所在行始终居中 |
 | `:view-focus` | `on｜off` | 专注：正在写的段落保持清晰，其余变淡 |
 | `:view-meter` | `on｜off` | 平仄：字旁标平仄，句末标韵脚(今音，入派三声) |
