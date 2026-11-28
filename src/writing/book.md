@@ -82,10 +82,10 @@ A `#` inside a code fence or a comment is not a heading.
 
 | Flag | What it does |
 | --- | --- |
-| `-k`, `--key` | `pinyin` (the default), `unicode` (code point) or `number` (the first number in the title, `12` or 第十二章) |
+| `-k`, `--key` | `pinyin` (the default), `unicode` (code point) or `number` (the first number in the title, `12` or 第十二章, with `1.2` before `1.10`; titles with no number go last) |
 | `-l`, `--levels` | Sort only these levels: `-l 2`, `-l 2-3`. A level left out stays put while the levels under it are still sorted |
 | `-r`, `--reverse` | Last first |
-| `--under` | Only the sections under the one the cursor is in |
+| `--under` | Only the sections under the one the cursor is in, or under its parent when it has none |
 
 Pinyin counts tones (天 tiān before 田 tián) and reads a title word by word, as
 `:ruby-auto` does, so 行 in 行走 is xíng. Without the Yume tables it falls back
@@ -95,7 +95,7 @@ order. The order is read from what the heading shows: emphasis marks, a link's
 address and a Typst label do not count.
 
 A range in front (`:'<,'>sort-sections`, `:3,9sort-sections`) or a selection
-sorts only the sections inside it. The whole sort is one `u`, and the cursor
+sorts only the sections that start inside it, each taken whole. The whole sort is one `u`, and the cursor
 stays with its section. Before anything is written the result is checked:
 every line must still be there, and every heading must have the same parents.
 A sort that fails the check changes nothing.
@@ -144,7 +144,7 @@ Chinese numerals are written 十一, 二十, 一百零三; `壹` writes 壹拾�
 the line above) gets no number and does not use one up.
 
 Only a number the level's pattern could have written is replaced, so a title
-such as `2024. 回顧` keeps its year. To change the patterns, run
+such as `2024. 回顧` keeps its year. A heading that would read two numbers, or an underlined title that a number such as `1. ` would turn into a list item, is left as it is and named in the status line. To change the patterns, run
 `:heading-numbering-off` first, then edit the list and number again.
 
 ## Links between chapters
