@@ -151,7 +151,7 @@ tree. `Space e` is a picker, as in helix, not this panel.
 
 ## Your helix config
 
-`ye --import helix` writes your helix `config.toml` into yumete's: your keys
+`ye --import helix` turns your helix `config.toml` into yumete's, open for you to save with `:w`: your keys
 and the `[editor]` settings yumete has. The theme is not carried over, since
 helix's themes are not yumete's; pick one with `:theme`. From `languages.toml` it takes each
 language server's `config`, for the servers yumete starts, written as that language's

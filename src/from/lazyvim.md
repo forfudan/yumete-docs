@@ -18,7 +18,7 @@ command, `Space e` opens the explorer, and `Space w` is the window group.
 ## The config
 
 Paste this into your config file (see [Configuration](../guide/configuration.md)), or
-run `ye --import lazyvim`, which writes it for you.
+run `ye --import lazyvim`, which opens it for you to save with `:w`.
 Each `[keys.normal.space.…]` table is one of LazyVim's groups, and its `label`
 is the name the menu shows for it.
 
@@ -158,7 +158,7 @@ yank_flash = true
 indent_guides = true
 ```
 
-`ye --import lazyvim` writes both, and writes one `false` when your own
+`ye --import lazyvim` brings both, and one `false` when your own
 config turns LazyVim's off.
 
 If your `lazyvim.json` lists the `coding.mini-surround` extra, `ye --import lazyvim`

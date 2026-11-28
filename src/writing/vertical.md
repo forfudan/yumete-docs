@@ -150,6 +150,18 @@ pattern does not crawl as you scroll. The number of the paragraph the cursor is
 in has the theme's accent colour. A `~` marks the empty line at the end of the
 file. `:view-numbers-fill on` gives the number band a ground of its own.
 
+When a language server serves the file, a row above the numbers holds each
+paragraph's problem sign, over its first column; rest the mouse on it to read
+every problem of that paragraph.
+
+### The scrollbar
+
+On a vertical page the scrollbar is the bottom row, and it runs right to left:
+the start of the file is at the right, and the thumb moves left as you read on.
+It marks what the horizontal bar marks, the same marks show the same panel
+under the mouse, and dragging the thumb turns the page. It takes the row the
+page already keeps free below a full column, so no column gets shorter.
+
 ## What the page does on its own
 
 ### Punctuation turns

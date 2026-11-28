@@ -115,9 +115,13 @@ Without it, `:shot` says so and takes nothing.
 
 ## Bringing a config from helix, vim, Neovim or LazyVim
 
-`ye --import` writes another editor's config into yumete's, once:
+`ye --import` turns another editor's config into yumete's. The result opens
+in yumete as the file it would be written to, changed and not yet saved, with
+the config check marking each line it has a doubt about; `:w` writes it. That
+file is `config.toml`, or `config.imported.toml` beside one you already have.
+Beside it, a read-only buffer holds the import's report.
 
-| Command | What it writes |
+| Command | What it brings over |
 | --- | --- |
 | `ye --import helix` | your helix `config.toml`: the keys and the `[editor]` settings yumete has |
 | `ye --import vim` | your vimrc: the settings and maps that translate for certain (see [Coming from vim](../from/vim.md#your-vim-or-neovim-config)) |
