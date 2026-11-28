@@ -399,6 +399,28 @@ file. `gf` on either row goes to that place in the file you are editing.
 commit you name (`:git-diff HEAD~3`, `:git-diff v1.0`). Both compare the
 buffer, unsaved changes included.
 
+### Every file changed since a commit
+
+`Space g` (`:changed-files`) lists the files git reports as changed, plus the
+buffers with unsaved changes. Give it a commit, such as `:changed-files v0.27.0`,
+`:changed-files HEAD~3` or `:changed-files main@{yesterday}` (anything git
+reads as one revision), and it lists every file changed since then, whether the
+change is committed, not yet committed, or in a file git does not track yet:
+
+| Letter | Meaning |
+| --- | --- |
+| M | modified |
+| A | added |
+| D | deleted |
+| R | renamed |
+| U | not tracked by git |
+
+Choosing a file opens it beside its version at that commit, as
+`:git-diff <commit>` does. A renamed file is compared with the text under its
+old name, and a deleted file opens empty beside what it used to hold. A range
+such as `a..b` is not accepted. When nothing has changed since the commit, it
+says so; when git cannot read the commit, git's own message is shown.
+
 ### `:git-show`
 
 `:git-show` opens the committed copy of this file (`HEAD`, or the commit you

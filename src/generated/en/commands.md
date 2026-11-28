@@ -246,7 +246,7 @@
 | `:resume` |  | resume this directory's last session (adds files, closes none) |
 | `:recent-files` |  | recent files in this project |
 | `:recent-files-global` |  | recent files in all projects |
-| `:changed-files` |  | changed files: what git reports, and unsaved buffers (as Space g) |
+| `:changed-files` | `<commit>` | changed files: what git reports, and unsaved buffers (as Space g); with a commit, every file changed since it, each opened beside that version |
 | `:recent-projects` |  | recent projects |
 | `:tutor` |  | tutorial: copies the lesson into a file of your own to learn by editing |
 | `:heading-numbering` |  | number a Markdown file's headings, or bring their numbers up to date, by the heading-numbering list the file names |

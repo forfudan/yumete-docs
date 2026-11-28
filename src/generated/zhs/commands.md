@@ -246,7 +246,7 @@
 | `:resume` |  | 恢复上次会话：打开这个目录上次开着的文件(不关闭现有的) |
 | `:recent-files` |  | 最近打开的文件(本项目) |
 | `:recent-files-global` |  | 最近打开的文件(所有项目) |
-| `:changed-files` |  | 改动过的文件：git 中有改动的与未保存的(同 Space g) |
+| `:changed-files` | `<提交>` | 改动过的文件：git 中有改动的与未保存的(同 Space g)；给出提交则列出自该提交以来改动的全部文件，打开时与该版本左右对照 |
 | `:recent-projects` |  | 最近打开的项目 |
 | `:tutor` |  | 教程：把课文复制成你自己的文件，边改边学 |
 | `:heading-numbering` |  | 按文件里写的 heading-numbering 列表给 Markdown 标题编号或更新编号 |

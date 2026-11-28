@@ -323,7 +323,7 @@ preview on the right. You type straight away to narrow the list.
 | `Space e` | browse folders, starting at the project |
 | `Space E` | browse folders, starting at this file's folder |
 | `Space b` | open buffers |
-| `Space g` | changed files: what git reports, and the buffers with unsaved changes (`:changed-files`) |
+| `Space g` | changed files: what git reports, and the buffers with unsaved changes (`:changed-files`; `:changed-files <commit>` lists every file changed since that commit) |
 | `Space s` | the symbols of this file |
 | `Space S` | the symbols of the project |
 | `Space d` | the diagnostics of this file |
