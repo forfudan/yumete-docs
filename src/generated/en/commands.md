@@ -151,6 +151,7 @@
 | `:normal` `:norm` | `<keys>` | run keys as though typed in Normal mode; with a range, from the start of each line; ! leaves your own key bindings out |
 | `:align` | `<character>` | align the selected lines on a character (= by default) |
 | `:sort` | `-r｜-i｜n｜u …` | sort several selections' texts, else the selected lines or every line; by code point, -r reversed, -i ignoring case, n by number, u unique |
+| `:sort-sections` | `-k pinyin｜unicode｜number  -l 2-3  -r  --under` | order sibling sections by heading, each with its body and subsections; -k by pinyin (default), unicode or number, -l which levels, -r reversed, --under only the sections under the cursor's |
 | `:split-join` |  | put the items in the brackets around the cursor one per line, or join them back |
 | `:reflow` | `<columns>` | reflow the selection to a width (80 columns by default) |
 | `:auto-pairs` | `off｜minimal｜basic｜full` | auto-close brackets: off, minimal, basic, full; no argument shows the current one |
@@ -247,6 +248,8 @@
 | `:changed-files` |  | changed files: what git reports, and unsaved buffers (as Space g) |
 | `:recent-projects` |  | recent projects |
 | `:tutor` |  | tutorial: copies the lesson into a file of your own to learn by editing |
+| `:heading-numbering` |  | number a Markdown file's headings, or bring their numbers up to date, by the heading-numbering list the file names |
+| `:heading-numbering-off` |  | take off the numbers the heading-numbering list gave a Markdown file's headings |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<topic>` | keys and commands, opened as a searchable file |
 | `:export` `:ex` | `html｜typst｜epub｜docx｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<path>` | export as html, typst, epub or docx |
 | `:export-as-preview` | `html｜pdf｜<path>` | export as the preview draws it: html or pdf for Markdown, pdf for Typst |

@@ -151,6 +151,7 @@
 | `:normal` `:norm` | `<按鍵>` | 把按鍵當作在普通模式裏打的來執行；帶範圍時從每一行行首執行一遍，! 不用自己綁定的鍵 |
 | `:align` | `<符號>` | 按某個符號對齊選中的行，默認爲 = |
 | `:sort` | `-r｜-i｜n｜u …` | 排序：多個選區排各選區的内容，否則排選中的行，無選區排全文；按碼位，-r 倒序，-i 不分大小寫，n 按數值，u 去重 |
+| `:sort-sections` | `-k pinyin｜unicode｜number  -l 2-3  -r  --under` | 按標題給同級章節排序，每節帶着正文和子節走；-k 排法(pinyin 默認、unicode、number)，-l 只排哪幾級，-r 倒序，--under 只排光標所在那一節的子節 |
 | `:split-join` |  | 把光標所在括號裏的各項拆成每行一項，或合併回一行 |
 | `:reflow` | `<幾欄>` | 按寬度重排選區(默認 80 列) |
 | `:auto-pairs` | `off｜minimal｜basic｜full` | 自動補上右括號：關/僅括號/基本/完整；不帶參數顯示當前檔位 |
@@ -247,6 +248,8 @@
 | `:changed-files` |  | 改動過的文件：git 中有改動的與未保存的(同 Space g) |
 | `:recent-projects` |  | 最近打開的項目 |
 | `:tutor` |  | 教程：把課文複製成你自己的文件，邊改邊學 |
+| `:heading-numbering` |  | 按文件裏寫的 heading-numbering 列表給 Markdown 標題編號或更新編號 |
+| `:heading-numbering-off` |  | 按 heading-numbering 列表去掉 Markdown 標題的編號 |
 | `:help` `:h` | `chinese｜vertical｜table｜commands｜<題目>` | 以可搜索的文件打開按鍵與命令列表 |
 | `:export` `:ex` | `html｜typst｜epub｜docx｜csv｜tsv vertical｜horizontal｜hanging｜no-hanging｜ruby-html｜no-ruby-html｜ruby-typst｜no-ruby-typst｜ruby-markdown｜no-ruby-markdown｜turn｜jlreq｜page=｜font=｜<路徑>` | 導出爲 html、typst、epub 或 docx |
 | `:export-as-preview` | `html｜pdf｜<路徑>` | 照預覽的樣子導出：Markdown 爲 html 或 pdf，Typst 爲 pdf |

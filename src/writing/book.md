@@ -73,6 +73,80 @@ section. In the outline sidebar the same keys move the highlighted heading's
 section. Chapters read in from `#include` files do not move from the main file's
 outline. With a selection, `A-j`/`A-k` move the selected lines as before.
 
+### Sorting sections: `:sort-sections`
+
+`:sort-sections` puts sibling sections in order by their headings, in Markdown
+and Typst. Each section moves with its text and every section under it, and
+never leaves its parent; the text above the first heading stays where it is.
+A `#` inside a code fence or a comment is not a heading.
+
+| Flag | What it does |
+| --- | --- |
+| `-k`, `--key` | `pinyin` (the default), `unicode` (code point) or `number` (the first number in the title, `12` or 第十二章) |
+| `-l`, `--levels` | Sort only these levels: `-l 2`, `-l 2-3`. A level left out stays put while the levels under it are still sorted |
+| `-r`, `--reverse` | Last first |
+| `--under` | Only the sections under the one the cursor is in |
+
+Pinyin counts tones (天 tiān before 田 tián) and reads a title word by word, as
+`:ruby-auto` does, so 行 in 行走 is xíng. Without the Yume tables it falls back
+to the built-in search table, one character at a time and without tones. Titles
+that sound the same are ordered by code point, and identical titles keep their
+order. The order is read from what the heading shows: emphasis marks, a link's
+address and a Typst label do not count.
+
+A range in front (`:'<,'>sort-sections`, `:3,9sort-sections`) or a selection
+sorts only the sections inside it. The whole sort is one `u`, and the cursor
+stays with its section. Before anything is written the result is checked:
+every line must still be there, and every heading must have the same parents.
+A sort that fails the check changes nothing.
+
+### Numbering headings: `:heading-numbering`
+
+`:heading-numbering` numbers a Markdown file's headings, and running it again
+brings the numbers up to date after sections move. `:heading-numbering-off`
+takes them off. Typst numbers its headings itself with
+`#set heading(numbering: …)`, so these two leave a Typst file alone.
+
+The numbering is written in the file, in the front matter:
+
+```yaml
+---
+heading-numbering: ["-", "第一章 ", "1. ", "1.1. "]
+---
+```
+
+or in a comment above the first heading:
+
+```markdown
+<!-- heading-numbering: ["-", "第一章 ", "1. ", "1.1. "] -->
+```
+
+The front matter wins when both are there. The list has one pattern for each
+level, from `#` down; `"-"` leaves a level unnumbered, here the book title. In a
+pattern, `1`, `一`, `壹`, `a`, `A`, `i` and `I` are where numbers go, and the
+rest is written as it stands, including the space or `、` before the title.
+A pattern shows as many levels' numbers as it has number places, ending with
+its own: `"1.1. "` is the parent's number and this heading's. A level a heading
+skips reads `0`. With no list the numbering is `1. `, `1.1. `, `1.1.1. ` and so on.
+The example above gives:
+
+```markdown
+# 書
+## 第一章 出山
+### 1. 下山
+#### 1.1. 夜行
+## 第二章 入城
+```
+
+Chinese numerals are written 十一, 二十, 一百零三; `壹` writes 壹拾壹 and
+貳佰參拾陸 when the front matter says `lang: zh-Hant` (or `zh-TW`, `zh-HK`,
+`zh-MO`). A heading ending in `<!-- omit from toc -->` (or with that comment on
+the line above) gets no number and does not use one up.
+
+Only a number the level's pattern could have written is replaced, so a title
+such as `2024. 回顧` keeps its year. To change the patterns, run
+`:heading-numbering-off` first, then edit the list and number again.
+
 ## Links between chapters
 
 Markdown links go between files: `[next](chapter-2.md)` with a path, or
